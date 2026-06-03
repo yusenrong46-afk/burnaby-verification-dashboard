@@ -1,16 +1,29 @@
 {
-  "pipeline5_dir": "/Users/thomas/Documents/Capstone_prototype/w2025-data599-capstone-projects-green-metrics-technology/code/prototype_pipeline_5",
-  "notebook": "/Users/thomas/Documents/Capstone_prototype/w2025-data599-capstone-projects-green-metrics-technology/code/prototype_pipeline_5/pipeline5_rule_extraction.ipynb",
-  "final_registry": "/Users/thomas/Documents/Capstone_prototype/w2025-data599-capstone-projects-green-metrics-technology/code/prototype_pipeline_5/outputs/burnaby/rule_extraction/final_rule_registry.json",
+  "pipeline5_dir": "prototype_pipeline_5",
+  "notebook": "prototype_pipeline_5/pipeline5_rule_extraction.ipynb",
+  "final_registry": "prototype_pipeline_5/outputs/burnaby/rule_extraction/final_rule_registry.json",
   "checks": {
     "pipeline5_dir_exists": true,
     "notebook_exists": true,
     "saved_final_registry_exists": true,
-    "gemini_api_key_set": true,
-    "jupyter_module_available": true,
-    "nbconvert_available": true,
-    "google_gemini_sdk_available": true
+    "gemini_api_key_set": false,
+    "jupyter_module_available": false,
+    "nbconvert_available": false,
+    "google_gemini_sdk_available": false
   },
-  "blockers": [],
-  "can_execute": true
+  "blockers": [
+    "gemini_api_key_set",
+    "jupyter_module_available",
+    "nbconvert_available",
+    "google_gemini_sdk_available"
+  ],
+  "execution_blockers": [
+    "gemini_api_key_set",
+    "jupyter_module_available",
+    "nbconvert_available",
+    "google_gemini_sdk_available"
+  ],
+  "saved_registry_blockers": [],
+  "can_use_saved_registry": true,
+  "can_execute": false
 }

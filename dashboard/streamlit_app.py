@@ -12,7 +12,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT_DIR = ROOT / "outputs" / "burnaby_r1_slim_pipeline5_registry"
-SOURCE_DOCUMENT_URL = "https://www.burnaby.ca/sites/default/files/acquiadam/2024-11/R1%20Small-Scale%20Multi-Unit%20Housing%20District.pdf"
+SOURCE_DOCUMENT_URL = "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf"
 
 
 def load_output_data(output_dir: Path) -> dict[str, Any]:
@@ -472,11 +472,20 @@ def _preflight_tab(st: Any, preflight: dict[str, Any]) -> None:
         return
     checks = preflight.get("checks", {})
     st.table([{"check": key, "status": "OK" if value else "MISSING"} for key, value in checks.items()])
-    if preflight.get("blockers"):
-        st.error("Blocked: " + ", ".join(preflight["blockers"]))
+    if preflight.get("can_use_saved_registry"):
+        st.success("Saved Pipeline 5 registry found. The verifier can run from this saved extraction output.")
     else:
-        st.success("Pipeline 5 extraction can execute.")
-    st.json({key: preflight.get(key) for key in ("pipeline5_dir", "notebook", "final_registry", "can_execute")})
+        st.error("Saved registry missing: " + ", ".join(preflight.get("saved_registry_blockers", [])))
+
+    execution_blockers = preflight.get("execution_blockers") or preflight.get("blockers") or []
+    if execution_blockers:
+        st.warning("Full notebook execution still needs: " + ", ".join(execution_blockers))
+    else:
+        st.success("Pipeline 5 notebook execution is ready.")
+    st.json({
+        key: preflight.get(key)
+        for key in ("pipeline5_dir", "notebook", "final_registry", "can_use_saved_registry", "can_execute")
+    })
 
 
 def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> None:
