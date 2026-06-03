@@ -12,6 +12,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT_DIR = ROOT / "outputs" / "burnaby_r1_slim_pipeline5_registry"
+SOURCE_DOCUMENT_URL = "https://www.burnaby.ca/sites/default/files/acquiadam/2024-11/R1%20Small-Scale%20Multi-Unit%20Housing%20District.pdf"
 
 
 def load_output_data(output_dir: Path) -> dict[str, Any]:
@@ -26,6 +27,7 @@ def load_output_data(output_dir: Path) -> dict[str, Any]:
         "repair": _read_json(output_dir / "evidence_repair_suggestions.json", {"suggestions": []}),
         "rerun": _read_json(output_dir / "evidence_rerun_report.json", {"attempts": [], "verified_after_rerun": []}),
         "audit": _read_json(output_dir / "review_audit.json", {"items": [], "summary": {}}),
+        "evidence_units": _read_json(output_dir / "evidence_units.json", []),
         "verified": _read_json(output_dir / "verified_rules.json", []),
         "review": _read_json(output_dir / "review_needed.json", []),
         "rejected": _read_json(output_dir / "rejected_rules.json", []),
@@ -136,9 +138,9 @@ def main() -> None:
     with tabs[3]:
         _repair_tab(st, data["repair"])
     with tabs[4]:
-        _rerun_tab(st, data["rerun"])
+        _rerun_tab(st, data["rerun"], data["evidence_units"])
     with tabs[5]:
-        _audit_tab(st, data["audit"])
+        _audit_tab(st, data["audit"], data["evidence_units"])
     with tabs[6]:
         _structure_tab(st)
     with tabs[7]:
@@ -287,10 +289,19 @@ def _repair_tab(st: Any, repair: dict[str, Any]) -> None:
     if suggestions:
         selected = st.selectbox("Suggestion detail", [item["rule_id"] for item in suggestions])
         item = next(item for item in suggestions if item["rule_id"] == selected)
-        st.json(item)
+        top_evidence = item.get("top_evidence", [{}])[0] if item.get("top_evidence") else {}
+        _detail_sentence_panel(
+            st,
+            "Evidence repair in plain English",
+            _repair_detail_sentences(item, top_evidence),
+            top_evidence,
+            item,
+        )
+        with st.expander("Raw repair JSON"):
+            st.json(item)
 
 
-def _rerun_tab(st: Any, rerun: dict[str, Any]) -> None:
+def _rerun_tab(st: Any, rerun: dict[str, Any], evidence_units: list[dict[str, Any]]) -> None:
     attempts = rerun.get("attempts", [])
     verified = rerun.get("verified_after_rerun", [])
     st.subheader("Evidence Rerun")
@@ -357,10 +368,20 @@ def _rerun_tab(st: Any, rerun: dict[str, Any]) -> None:
     st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
     if visible:
         selected = st.selectbox("Rerun detail", [item["original_rule_id"] for item in visible])
-        st.json(next(item for item in visible if item["original_rule_id"] == selected))
+        item = next(item for item in visible if item["original_rule_id"] == selected)
+        evidence = _evidence_by_id(evidence_units, item.get("retry_evidence_id"))
+        _detail_sentence_panel(
+            st,
+            "Evidence rerun in plain English",
+            _rerun_detail_sentences(item),
+            evidence,
+            item,
+        )
+        with st.expander("Raw rerun JSON"):
+            st.json(item)
 
 
-def _audit_tab(st: Any, audit: dict[str, Any]) -> None:
+def _audit_tab(st: Any, audit: dict[str, Any], evidence_units: list[dict[str, Any]]) -> None:
     items = audit.get("items", [])
     st.subheader(f"Review Audit ({len(items)})")
     st.caption("Action buckets explain what kind of work should reduce review volume. They do not change verification decisions.")
@@ -393,7 +414,17 @@ def _audit_tab(st: Any, audit: dict[str, Any]) -> None:
             st.write(f"- {recommendation}")
     if items:
         selected = st.selectbox("Audit detail", [item["rule_id"] for item in items])
-        st.json(next(item for item in items if item["rule_id"] == selected))
+        item = next(item for item in items if item["rule_id"] == selected)
+        evidence = _evidence_by_id(evidence_units, item.get("best_repair_evidence_id"))
+        _detail_sentence_panel(
+            st,
+            "Review audit in plain English",
+            _audit_detail_sentences(item),
+            evidence,
+            item,
+        )
+        with st.expander("Raw audit JSON"):
+            st.json(item)
 
 
 def _structure_tab(st: Any) -> None:
@@ -646,6 +677,152 @@ def _field_comparison_rows(candidate: dict[str, Any], verified: dict[str, Any]) 
     return rows
 
 
+def _detail_sentence_panel(
+    st: Any,
+    title: str,
+    sentences: list[str],
+    evidence: dict[str, Any],
+    rule_like: dict[str, Any],
+) -> None:
+    """Render human-readable detail plus bylaw lookup instructions."""
+    st.markdown(f"### {title}")
+    html_sentences = []
+    for index, sentence in enumerate(sentences, start=1):
+        html_sentences.append(
+            "<div class='detail-sentence'>"
+            f"<b>{index}.</b><span>{html.escape(sentence)}</span>"
+            "</div>"
+        )
+    st.markdown("".join(html_sentences), unsafe_allow_html=True)
+    _bylaw_lookup_panel(st, evidence, rule_like)
+
+
+def _repair_detail_sentences(item: dict[str, Any], top_evidence: dict[str, Any]) -> list[str]:
+    """Explain one evidence repair suggestion in plain English."""
+    gaps = _list_text(item.get("support_gaps", []))
+    repair_fields = _list_text(item.get("repairable_fields", []))
+    match_reasons = _list_text(top_evidence.get("match_reasons", []))
+    evidence_id = top_evidence.get("evidence_id") or "no suggested evidence"
+    confidence = _display_value(item.get("best_repair_confidence"))
+    return [
+        f"Candidate claim: {_rule_sentence(item)}",
+        f"The original evidence `{item.get('current_evidence_id')}` kept this rule in review because of: {gaps}.",
+        f"The best suggested evidence is `{evidence_id}` with repair confidence {confidence}.",
+        f"The repair mainly targets: {repair_fields}. Match reasons: {match_reasons}.",
+        "This page suggests better evidence only; it does not itself promote the rule into verified output.",
+    ]
+
+
+def _rerun_detail_sentences(item: dict[str, Any]) -> list[str]:
+    """Explain one shadow rerun result in plain English."""
+    decision = str(item.get("retry_decision") or "unknown")
+    gaps = _list_text(item.get("retry_support_gaps", [])) or "none"
+    risk_flags = _list_text(item.get("promotion_risk_flags", [])) or "none"
+    promotion = "promotion-ready" if item.get("promotion_ready") else "not promotion-ready"
+    return [
+        f"Candidate claim: {_rule_sentence(item)}",
+        f"The rerun replaced original evidence `{item.get('original_evidence_id')}` with retry evidence `{item.get('retry_evidence_id')}`.",
+        f"The deterministic verifier returned `{decision}` with support gaps: {gaps}.",
+        f"The shadow result is {promotion}. Promotion risk flags: {risk_flags}.",
+        f"Recommendation: {item.get('promotion_recommendation') or 'inspect before promotion'}.",
+    ]
+
+
+def _audit_detail_sentences(item: dict[str, Any]) -> list[str]:
+    """Explain one review audit item in plain English."""
+    action = item.get("action_bucket") or "unclassified"
+    likely = item.get("likely_status") or "unknown"
+    score = _display_value(item.get("likely_correct_score"))
+    gaps = _list_text(item.get("support_gaps", []))
+    repair_evidence = item.get("best_repair_evidence_id") or "none"
+    action_reason = _sentence_fragment(item.get("action_reason") or "no action reason recorded")
+    next_step = _sentence_fragment(
+        item.get("next_step")
+        or "inspect the evidence and decide whether this needs evidence repair, verifier tuning, or legal review"
+    )
+    return [
+        f"Candidate claim: {_rule_sentence(item)}",
+        f"The audit bucket is `{action}` because: {action_reason}.",
+        f"The likely status is `{likely}` with score {score}. Blocking gaps: {gaps}.",
+        f"Suggested repair evidence: {repair_evidence}.",
+        f"Next human action: {next_step}.",
+    ]
+
+
+def _bylaw_lookup_panel(st: Any, evidence: dict[str, Any], rule_like: dict[str, Any]) -> None:
+    """Tell a reviewer how to find and verify the rule in the source bylaw."""
+    page = evidence.get("page") or rule_like.get("page")
+    quote = _quote_from_evidence(evidence)
+    search_phrase = _search_phrase(rule_like, quote)
+
+    st.markdown("#### How to find this in the bylaw")
+    page_text = f"page `{page}`" if page not in (None, "") else "the cited section/page from the evidence packet"
+    st.markdown(
+        f"""
+1. Open the [Burnaby R1 bylaw PDF]({SOURCE_DOCUMENT_URL}).
+2. Go to {page_text}. If the PDF page number is offset, use text search instead.
+3. Search for the phrase below, then compare the candidate's value, unit, operator, scope, and condition against the bylaw wording.
+4. If the passage contains words like `except`, `subject to`, `notwithstanding`, `unless`, or a covenant condition, keep the rule in human review unless the condition is explicitly modeled.
+"""
+    )
+    st.code(search_phrase or "Search by rule object, value, unit, and applies_to fields.", language="text")
+    if quote:
+        st.markdown("#### Evidence quote")
+        st.code(_short_display_quote(quote), language="text")
+
+
+def _quote_from_evidence(evidence: dict[str, Any]) -> str:
+    """Return the most useful evidence text available for reviewers."""
+    return str(
+        evidence.get("evidence_quote")
+        or evidence.get("evidence_text")
+        or evidence.get("source_context")
+        or ""
+    ).strip()
+
+
+def _search_phrase(rule_like: dict[str, Any], quote: str) -> str:
+    """Choose a short search phrase for the PDF find box."""
+    if quote:
+        cleaned = " ".join(quote.split())
+        words = cleaned.split()
+        return " ".join(words[:16])
+    parts = [
+        rule_like.get("rule_object"),
+        rule_like.get("applies_to"),
+        rule_like.get("value"),
+        rule_like.get("unit"),
+    ]
+    return " ".join(str(part) for part in parts if part not in (None, ""))
+
+
+def _short_display_quote(value: str, limit: int = 420) -> str:
+    """Keep bylaw evidence quotes readable inside Streamlit."""
+    text = " ".join(str(value or "").split())
+    if len(text) <= limit:
+        return text
+    return text[: limit - 3].rstrip() + "..."
+
+
+def _evidence_by_id(evidence_units: list[dict[str, Any]], evidence_id: Any) -> dict[str, Any]:
+    """Find an evidence packet by id for bylaw lookup instructions."""
+    return next((item for item in evidence_units if item.get("evidence_id") == evidence_id), {})
+
+
+def _list_text(values: Any) -> str:
+    """Format lists without exposing raw JSON syntax in summary sentences."""
+    if not values:
+        return "none"
+    if isinstance(values, str):
+        return values
+    return ", ".join(str(value) for value in values)
+
+
+def _sentence_fragment(value: Any) -> str:
+    """Return text that can be safely embedded before a final period."""
+    return str(value or "").strip().rstrip(".")
+
+
 def _bar_table(st: Any, counts: dict[str, Any]) -> None:
     rows = [{"name": key, "count": value} for key, value in counts.items()]
     _bar_rows(st, rows, "name", "count")
@@ -693,6 +870,9 @@ html, body, [class*="css"] {font-family: Inter, -apple-system, BlinkMacSystemFon
 .sentence-review {border-top:4px solid #d97706;}
 .sentence-verified {border-top:4px solid #0f766e;}
 .sentence-neutral {border-top:4px solid #64748b;}
+.detail-sentence {display:grid; grid-template-columns:28px 1fr; gap:8px; border:1px solid #d9e0e8; border-radius:8px; background:#fff; padding:11px 13px; margin:7px 0;}
+.detail-sentence b {color:#2563eb;}
+.detail-sentence span {color:#172033; line-height:1.45;}
 .bar-row {display:grid; grid-template-columns:minmax(160px,240px) 1fr 52px; gap:12px; align-items:center; margin:7px 0;}
 .bar-row span {color:#344054; font-size:14px;}
 .bar-row b {color:#172033; text-align:right;}
