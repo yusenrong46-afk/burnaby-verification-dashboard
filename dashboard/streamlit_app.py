@@ -508,13 +508,12 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
         ("Precision", f"{metrics.get('verified_precision', 0):.2f}"),
         ("False Approvals", proposal.get("false_approval_count", 0)),
     ]
-    columns = st.columns(len(cards))
-    for column, (label, value) in zip(columns, cards):
-        column.markdown(
-            f"<div class='metric'><div class='metric-label'>{html.escape(label)}</div>"
-            f"<div class='metric-value'>{html.escape(str(value))}</div></div>",
-            unsafe_allow_html=True,
-        )
+    cards_html = "".join(
+        f"<div class='metric'><div class='metric-label'>{html.escape(label)}</div>"
+        f"<div class='metric-value'>{html.escape(str(value))}</div></div>"
+        for label, value in cards
+    )
+    st.markdown(f"<div class='metric-grid'>{cards_html}</div>", unsafe_allow_html=True)
 
 
 def _render_header(st: Any) -> None:
@@ -863,8 +862,9 @@ html, body, [class*="css"] {font-family: Inter, -apple-system, BlinkMacSystemFon
 .app-header h1 {font-size:30px; line-height:1.15; margin:2px 0 6px; color:#172033; letter-spacing:0;}
 .app-header p {margin:0; color:#526070; font-size:15px;}
 .eyebrow {font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#2563eb; font-weight:700;}
-.metric {border:1px solid #d7dde5; border-radius:8px; padding:13px 14px; background:#fff; box-shadow:0 1px 2px rgba(15,23,42,.04);}
-.metric-label {font-size:11px; color:#5d6875; text-transform:uppercase; font-weight:700;}
+.metric-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr)); gap:10px; margin:12px 0 18px;}
+.metric {border:1px solid #d7dde5; border-radius:8px; padding:13px 14px; background:#fff; box-shadow:0 1px 2px rgba(15,23,42,.04); min-height:86px;}
+.metric-label {font-size:10px; line-height:1.25; color:#5d6875; text-transform:uppercase; font-weight:700; overflow-wrap:normal;}
 .metric-value {font-size:25px; font-weight:750; color:#111827;}
 .guidance-grid, .action-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:12px 0 20px;}
 .guide-card, .action-card {border:1px solid #d9e0e8; border-radius:8px; background:#fff; padding:14px 15px;}
@@ -890,6 +890,7 @@ html, body, [class*="css"] {font-family: Inter, -apple-system, BlinkMacSystemFon
 div[data-testid="stDataFrame"] {border:1px solid #d9e0e8; border-radius:8px; overflow:hidden;}
 div[data-testid="stExpander"] {border:1px solid #d9e0e8; border-radius:8px;}
 @media (max-width: 900px) {
+  .metric-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
   .guidance-grid, .action-grid {grid-template-columns:1fr;}
   .bar-row {grid-template-columns:1fr;}
 }
