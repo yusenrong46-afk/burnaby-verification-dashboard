@@ -1,0 +1,4481 @@
+{
+  "suggestion_count": 61,
+  "alternative_evidence_count": 61,
+  "retry_candidate_count": 51,
+  "suggestions": [
+    {
+      "rule_id": "burnaby_r1_019",
+      "candidate_id": "pipeline5_merged_rule_0019",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse .1",
+      "condition": "",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m²",
+      "current_evidence_id": "pipeline5_merged_rule_0019",
+      "support_gaps": [
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0061",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 13.55,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area lot area 280 m² .1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwelling..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0026",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.51,
+          "repair_confidence": 0.962,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area Lot Area 280 m² Maximum Lot Area | Lot Area | 280 m² | Maximum Lot Area .1 | 280 m2 Maximum Lot Area .1 | 280 m2"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0060",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 11.55,
+          "repair_confidence": 0.888,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "lot area 280 m² .3 Rowhouse lots may exceed 280 m² subject to Section 101.4 footnote .1. .3 Rowhouse lots may exceed 280 m² subject to Section 101.4 footnote .1."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_020",
+      "candidate_id": "pipeline5_merged_rule_0020__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse",
+      "condition": "",
+      "operator": ">=",
+      "value": "1",
+      "unit": "units",
+      "current_evidence_id": "pipeline5_merged_rule_0020__api_01",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "table_applies_to_not_supported",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0072__api_01",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.05,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "main entrance orientation 1 dwelling unit (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0073",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.05,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "main entrance orientation 1 dwelling unit per street frontage (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both fro..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0054",
+          "page": 4,
+          "evidence_type": "table_cell",
+          "raw_score": 12.51,
+          "repair_confidence": 0.962,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "3+ Bedroom Units 1 units 3+ Bedroom Units | 1 units | 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 to 3 Units Minimum 3+ Bedroom Units: 1 U..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_022",
+      "candidate_id": "pipeline5_merged_rule_0021__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
+      "condition": "",
+      "operator": ">=",
+      "value": "1",
+      "unit": "units",
+      "current_evidence_id": "pipeline5_merged_rule_0021__api_01",
+      "support_gaps": [
+        "operator_not_supported",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0072__api_01",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.55,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "main entrance orientation 1 dwelling unit (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0073",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.55,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "main entrance orientation 1 dwelling unit per street frontage (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both fro..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0054",
+          "page": 4,
+          "evidence_type": "table_cell",
+          "raw_score": 13.01,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "3+ Bedroom Units 1 units 3+ Bedroom Units | 1 units | 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 to 3 Units Minimum 3+ Bedroom Units: 1 U..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_024",
+      "candidate_id": "pipeline5_merged_rule_0022__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "condition": "",
+      "operator": ">=",
+      "value": "3",
+      "unit": "units",
+      "current_evidence_id": "pipeline5_merged_rule_0022__api_01",
+      "support_gaps": [
+        "operator_not_supported",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0054",
+          "page": 4,
+          "evidence_type": "table_cell",
+          "raw_score": 13.01,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "3+ Bedroom Units 1 units 3+ Bedroom Units | 1 units | 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 to 3 Units Minimum 3+ Bedroom Units: 1 U..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0055",
+          "page": 4,
+          "evidence_type": "table_cell",
+          "raw_score": 13.01,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "3+ Bedroom Units 2 units 3+ Bedroom Units | 2 units | 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 4 to 6 Units Minimum 3+ Bedroom Units: 2 U..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0093__api_01",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 12.55,
+          "repair_confidence": 0.965,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "child care facility comply with the development regulations under section 101.4 for 1 to 3 small-scale multi-unit dwelling units on a lot (c) comply with the development regulations under section 101.4 for 1 to 3 small-scale multi-unit dwelling units on a l..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_026",
+      "candidate_id": "pipeline5_merged_rule_0023__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (5 to 6 Units)",
+      "condition": "Frequent Transit Network Area Only",
+      "operator": ">=",
+      "value": "5",
+      "unit": "units",
+      "current_evidence_id": "pipeline5_merged_rule_0023__api_01",
+      "support_gaps": [
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0054",
+          "page": 4,
+          "evidence_type": "table_cell",
+          "raw_score": 13.01,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "3+ Bedroom Units 1 units 3+ Bedroom Units | 1 units | 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 to 3 Units Minimum 3+ Bedroom Units: 1 U..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0055",
+          "page": 4,
+          "evidence_type": "table_cell",
+          "raw_score": 13.01,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "3+ Bedroom Units 2 units 3+ Bedroom Units | 2 units | 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 4 to 6 Units Minimum 3+ Bedroom Units: 2 U..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0110",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 11.55,
+          "repair_confidence": 0.888,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "automatic sprinkler system (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprink..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_028",
+      "candidate_id": "pipeline5_merged_rule_0024",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "condition": "4 Units Only",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m²",
+      "current_evidence_id": "pipeline5_merged_rule_0024",
+      "support_gaps": [
+        "applies_to_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0018",
+          "page": 1,
+          "evidence_type": "table_cell",
+          "raw_score": 15.09,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Area Lot Area .3 Small-Scale Multi-Unit 281 m² Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0025",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.51,
+          "repair_confidence": 0.962,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Area Lot Area 281 m² Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 281 m2 Minimum Lot Area | 281 m2"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0081",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 9.05,
+          "repair_confidence": 0.696,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "lot area 560 m² (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensi..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_029",
+      "candidate_id": "pipeline5_merged_rule_0025",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (5 to 6 Units)",
+      "condition": "Frequent Transit Network Area Only",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m²",
+      "current_evidence_id": "pipeline5_merged_rule_0025",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0018",
+          "page": 1,
+          "evidence_type": "table_cell",
+          "raw_score": 15.09,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Area Lot Area .3 Small-Scale Multi-Unit 281 m² Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0024",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.81,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Area Lot Area 281 m² Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 4 Units Only: 281 m2 Minimum Lot Area | 4 Units Only: 281 m2"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0081",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 9.95,
+          "repair_confidence": 0.765,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "lot area 560 m² (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensi..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_030",
+      "candidate_id": "pipeline5_merged_rule_0026",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse",
+      "condition": "",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m²",
+      "current_evidence_id": "pipeline5_merged_rule_0026",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0061",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 13.55,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area lot area 280 m² .1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwelling..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0019",
+          "page": 1,
+          "evidence_type": "table_cell",
+          "raw_score": 13.19,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area Lot Area .3 Rowhouse .1 280 m² Maximum Lot Area | Lot Area .3 | Rowhouse .1 | 280 m² | Lot Area .3 | Maximum Lot Area | Rowhouse .1 | 280 m² Lot Area .3 | Maximum Lot Area | Rowhouse .1 | 280 m²"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0060",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 11.55,
+          "repair_confidence": 0.888,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "lot area 280 m² .3 Rowhouse lots may exceed 280 m² subject to Section 101.4 footnote .1. .3 Rowhouse lots may exceed 280 m² subject to Section 101.4 footnote .1."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_032",
+      "candidate_id": "pipeline5_merged_rule_0028",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
+      "condition": "Lots <= 567 m2",
+      "operator": "<=",
+      "value": "40",
+      "unit": "%",
+      "current_evidence_id": "pipeline5_merged_rule_0028",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0030",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.59,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings All Buildings 40 % Maximum Lot Coverage | All Buildings | 40 % | Maximum Lot Coverage | All Buildings | 40% Maximum Lot Coverage | All Buildings | 40%"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0029",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 10.49,
+          "repair_confidence": 0.807,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings All Buildings 30 % Maximum Lot Coverage | All Buildings | 30 % | Maximum Lot Coverage | All Buildings | Lots > 567 m2: 30% Maximum Lot Coverage | All Buildings | Lots > 567 m2: 30%"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0120",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.95,
+          "repair_confidence": 0.765,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage lot coverage 60 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surf..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_036",
+      "candidate_id": "pipeline5_merged_rule_0032",
+      "rule_object": "impervious_surface",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse; Small-Scale Multi-Unit (5 to 6 Units)",
+      "condition": "",
+      "operator": "<=",
+      "value": "70",
+      "unit": "%",
+      "current_evidence_id": "pipeline5_merged_rule_0032",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0120",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.05,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage lot coverage 60 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surf..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0121",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.05,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage impervious surface area 70 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impe..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0033",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.69,
+          "repair_confidence": 0.668,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Impervious Surfaces 60 % Maximum Lot Coverage | Impervious Surfaces | 60 % | Maximum Lot Coverage | Impervious Surfaces | 60% Maximum Lot Coverage | Impervious Surfaces | 60%"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_037",
+      "candidate_id": "pipeline5_merged_rule_0033",
+      "rule_object": "impervious_surface",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units)",
+      "condition": "",
+      "operator": "<=",
+      "value": "60",
+      "unit": "%",
+      "current_evidence_id": "pipeline5_merged_rule_0033",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review",
+        "cross_family_value_collision"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0120",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.05,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage lot coverage 60 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surf..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0121",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.05,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage impervious surface area 70 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impe..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0032",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.69,
+          "repair_confidence": 0.668,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Impervious Surfaces 70 % Maximum Lot Coverage | Impervious Surfaces | 70 % | Maximum Lot Coverage | Impervious Surfaces | 70% Maximum Lot Coverage | Impervious Surfaces | 70%"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_046",
+      "candidate_id": "pipeline5_merged_rule_0042",
+      "rule_object": "storeys",
+      "constraint_scope": "building",
+      "applies_to": "Accessory Buildings",
+      "condition": "",
+      "operator": "<=",
+      "value": "1",
+      "unit": "storeys",
+      "current_evidence_id": "pipeline5_merged_rule_0042",
+      "support_gaps": [
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0041",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.69,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height | Accessory Buildings | 4.0 m | 1 storey"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0036",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 9.19,
+          "repair_confidence": 0.707,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Height Front Principal Buildings Storeys (basement inclusive) 3 storeys Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 3 storeys | Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 3 storeys Max..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0037",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 9.19,
+          "repair_confidence": 0.707,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Height Front Principal Buildings Storeys (basement inclusive) 2.5 storeys Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 2.5 storeys | Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 2.5 store..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_059",
+      "candidate_id": "pipeline5_merged_rule_0053",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "All Other Buildings",
+      "condition": "",
+      "operator": ">=",
+      "value": "2.4",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0053",
+      "support_gaps": [
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0050",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.99,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Minimum Separation Of Buildings Between Front Principals Between Front Principals 2.4 m Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m Minimum Sep..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0051",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.99,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2.4 m Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separat..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0070",
+          "page": 3,
+          "evidence_type": "clause",
+          "raw_score": 13.55,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "separation from other principals between it and a side lot line 2.4 m and a minimum 2.4 m separation from any other principals between it and a side lot line. and a minimum 2.4 m separation from any other principals between it and a side lot line."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_063",
+      "candidate_id": "pipeline5_merged_rule_0057",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "ground-oriented residential dwellings",
+      "condition": "SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)",
+      "operator": "allowed",
+      "value": "",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0057",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0093__api_01",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.55,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "child care facility comply with the development regulations under section 101.4 for 1 to 3 small-scale multi-unit dwelling units on a lot (c) comply with the development regulations under section 101.4 for 1 to 3 small-scale multi-unit dwelling units on a l..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0056",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.35,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "lot 6 units This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. This District provides for the use and development of primarily ground-oriented residential dwell..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0020__api_01",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.11,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Permitted Dwelling Units Dwelling Units (including secondary suites) 1 units Permitted Dwelling Units | Dwelling Units (including secondary suites) | 1 units | Permitted Dwelling Units (including secondary suites) | 1 to 3 Units Permitted Dwelling Units (in..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_064",
+      "candidate_id": "pipeline5_merged_rule_0058",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "covenant_requirement",
+      "applies_to": "Section 219 Covenant",
+      "condition": "At the time of registration of the subdivision plan to create two or more rowhouse lots in SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0058",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0061",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 15.55,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area lot area 280 m² .1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwelling..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0064",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 15.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "condition_overlap"
+          ],
+          "evidence_quote": "interior side yard setback .3 Interior side yard setbacks are not required for rowhouse dwelling units on a lot line between two adjoining rowhouse dwellings with a shared party wall. .3 Interior side yard setbacks are not required for rowhouse dwelling uni..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0110",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.95,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "condition_overlap"
+          ],
+          "evidence_quote": "automatic sprinkler system (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprink..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_066",
+      "candidate_id": "pipeline5_merged_rule_0060",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse lots",
+      "condition": "subject to Section 101.4 footnote .1 in SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)",
+      "operator": ">",
+      "value": "280",
+      "unit": "m²",
+      "current_evidence_id": "pipeline5_merged_rule_0060",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0061",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 16.75,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area lot area 280 m² .1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwelling..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0019",
+          "page": 1,
+          "evidence_type": "table_cell",
+          "raw_score": 11.69,
+          "repair_confidence": 0.899,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area Lot Area .3 Rowhouse .1 280 m² Maximum Lot Area | Lot Area .3 | Rowhouse .1 | 280 m² | Lot Area .3 | Maximum Lot Area | Rowhouse .1 | 280 m² Lot Area .3 | Maximum Lot Area | Rowhouse .1 | 280 m²"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0081",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 11.35,
+          "repair_confidence": 0.873,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "lot area 560 m² (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensi..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_067",
+      "candidate_id": "pipeline5_merged_rule_0061",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "rowhouse dwellings",
+      "condition": "subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot",
+      "operator": ">",
+      "value": "280",
+      "unit": "m²",
+      "current_evidence_id": "pipeline5_merged_rule_0061",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0060",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "lot area 280 m² .3 Rowhouse lots may exceed 280 m² subject to Section 101.4 footnote .1. .3 Rowhouse lots may exceed 280 m² subject to Section 101.4 footnote .1."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0019",
+          "page": 1,
+          "evidence_type": "table_cell",
+          "raw_score": 14.09,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area Lot Area .3 Rowhouse .1 280 m² Maximum Lot Area | Lot Area .3 | Rowhouse .1 | 280 m² | Lot Area .3 | Maximum Lot Area | Rowhouse .1 | 280 m² Lot Area .3 | Maximum Lot Area | Rowhouse .1 | 280 m²"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0026",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.41,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area Lot Area 280 m² Maximum Lot Area | Lot Area | 280 m² | Maximum Lot Area .1 | 280 m2 Maximum Lot Area .1 | 280 m2"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_070",
+      "candidate_id": "pipeline5_merged_rule_0064",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "rowhouse dwelling units",
+      "condition": "on a lot line between two adjoining rowhouse dwellings with a shared party wall",
+      "operator": "not required",
+      "value": "",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0064",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0072__api_01",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 16.75,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "main entrance orientation 1 dwelling unit (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0073",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 16.75,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "main entrance orientation 1 dwelling unit per street frontage (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both fro..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0054",
+          "page": 4,
+          "evidence_type": "table_cell",
+          "raw_score": 16.21,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "3+ Bedroom Units 1 units 3+ Bedroom Units | 1 units | 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 to 3 Units Minimum 3+ Bedroom Units: 1 U..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_071",
+      "candidate_id": "pipeline5_merged_rule_0065",
+      "rule_object": "setback",
+      "constraint_scope": "interior_side_yard",
+      "applies_to": "end unit of a rowhouse development",
+      "condition": "end unit lots",
+      "operator": "=",
+      "value": "1.2",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0065",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0048__api_01",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 17.59,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Interior Side Yard Interior Side Yard 0 m Minimum Lot Line Setbacks | Interior Side Yard | 0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 0 m, except 1.2 m for end unit lots Minimum Lot Line Setbacks..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0048__api_02",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 17.59,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Interior Side Yard Interior Side Yard 1.2 m Minimum Lot Line Setbacks | Interior Side Yard | 1.2 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 0 m, except 1.2 m for end unit lots Minimum Lot Line Setb..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0049",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.79,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Interior Side Yard Interior Side Yard 1.2 m Minimum Lot Line Setbacks | Interior Side Yard | 1.2 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 1.2 m Minimum Lot Line Setbacks for All Buildings .2 .3 |..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_075",
+      "candidate_id": "pipeline5_merged_rule_0069",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "located between a front and rear principal on a through lot",
+      "operator": ">=",
+      "value": "6.0",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0069",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0068__api_01",
+          "page": 3,
+          "evidence_type": "clause",
+          "raw_score": 17.85,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "separation from front and rear principals 6.0 m Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals Any principal building located between a front and rear princip..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0052",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 17.49,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Separation Of Buildings Between Front & Rear Principals Between Front & Rear Principals 6.0 m Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Pr..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0050",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.49,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Separation Of Buildings Between Front Principals Between Front Principals 2.4 m Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m Minimum Sep..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_076",
+      "candidate_id": "pipeline5_merged_rule_0070",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "located between a front and rear principal",
+      "operator": ">=",
+      "value": "2.4",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0070",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0050",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 17.19,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Separation Of Buildings Between Front Principals Between Front Principals 2.4 m Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m Minimum Sep..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0051",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 17.19,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2.4 m Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separat..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0053",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.89,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Separation Of Buildings Between All Other Buildings Between All Other Buildings 2.4 m Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_077",
+      "candidate_id": "pipeline5_merged_rule_0072__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Dwelling Unit",
+      "condition": "All Dwelling Units",
+      "operator": ">=",
+      "value": "1",
+      "unit": "dwelling unit",
+      "current_evidence_id": "pipeline5_merged_rule_0072__api_01",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0073",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 15.85,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "main entrance orientation 1 dwelling unit per street frontage (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both fro..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0054",
+          "page": 4,
+          "evidence_type": "table_cell",
+          "raw_score": 15.31,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "3+ Bedroom Units 1 units 3+ Bedroom Units | 1 units | 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 to 3 Units Minimum 3+ Bedroom Units: 1 U..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0055",
+          "page": 4,
+          "evidence_type": "table_cell",
+          "raw_score": 15.31,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "3+ Bedroom Units 2 units 3+ Bedroom Units | 2 units | 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 4 to 6 Units Minimum 3+ Bedroom Units: 2 U..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_082",
+      "candidate_id": "pipeline5_merged_rule_0077",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "Rowhouse",
+      "condition": "Contiguous rowhouse lots",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0077",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0116",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.15,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "condition_overlap"
+          ],
+          "evidence_quote": "panhandle width 1 m (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0117",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.15,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "condition_overlap"
+          ],
+          "evidence_quote": "clear height 2.5 m (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0118",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.15,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "condition_overlap"
+          ],
+          "evidence_quote": "panhandle width 4.5 m (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m;"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_086",
+      "candidate_id": "pipeline5_merged_rule_0081",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Boarding House",
+      "condition": "Boarding, lodging or rooming houses",
+      "operator": ">=",
+      "value": "560",
+      "unit": "m²",
+      "current_evidence_id": "pipeline5_merged_rule_0081",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0079",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 14.05,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Boarding, lodging or rooming houses permitted (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is inc..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0080",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 14.05,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "capacity 5 persons (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehe..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0018",
+          "page": 1,
+          "evidence_type": "table_cell",
+          "raw_score": 8.69,
+          "repair_confidence": 0.668,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Area Lot Area .3 Small-Scale Multi-Unit 281 m² Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_101",
+      "candidate_id": "pipeline5_merged_rule_0096",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "projection",
+      "condition": "project into the required minimum separation between buildings on the same lot",
+      "operator": "allowed",
+      "value": "permitted",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0096",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "scope",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0066",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 16.85,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "location within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0067",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 16.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Section 101.6.1 see Section 101.6.1 for permitted projections into minimum separations. see Section 101.6.1 for permitted projections into minimum separations."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0062",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 11.55,
+          "repair_confidence": 0.888,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Sections 101.6.1 and 6.12 .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_102",
+      "candidate_id": "pipeline5_merged_rule_0097",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "projection",
+      "condition": "project into the required minimum separation between buildings on the same lot",
+      "operator": "allowed",
+      "value": "permitted",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0097",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0066",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 16.85,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "location within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0067",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 16.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Section 101.6.1 see Section 101.6.1 for permitted projections into minimum separations. see Section 101.6.1 for permitted projections into minimum separations."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0062",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 11.55,
+          "repair_confidence": 0.888,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Sections 101.6.1 and 6.12 .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_103",
+      "candidate_id": "pipeline5_merged_rule_0098",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "projection",
+      "condition": "project into the required minimum separation between buildings on the same lot; 1.0 m or less above grade",
+      "operator": "allowed",
+      "value": "permitted",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0098",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0066",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 16.85,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "location within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0067",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 16.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Section 101.6.1 see Section 101.6.1 for permitted projections into minimum separations. see Section 101.6.1 for permitted projections into minimum separations."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0062",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 11.55,
+          "repair_confidence": 0.888,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Sections 101.6.1 and 6.12 .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_105",
+      "candidate_id": "pipeline5_merged_rule_0100",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "projection",
+      "condition": "project into the required minimum separation between buildings on the same lot",
+      "operator": "<=",
+      "value": "0.9",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0100",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0101",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.85,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features 25 % of the width of a required separation (e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25%..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0068__api_01",
+          "page": 3,
+          "evidence_type": "clause",
+          "raw_score": 10.85,
+          "repair_confidence": 0.835,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "separation from front and rear principals 6.0 m Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals Any principal building located between a front and rear princip..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0099",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 10.85,
+          "repair_confidence": 0.835,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures 25 % of the width of a required separation (d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar featur..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_108",
+      "candidate_id": "pipeline5_merged_rule_0103",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "projection",
+      "condition": "project into the required minimum separation between buildings on the same lot",
+      "operator": "allowed",
+      "value": "permitted",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0103",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "scope",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0066",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 16.85,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "location within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0067",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 16.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Section 101.6.1 see Section 101.6.1 for permitted projections into minimum separations. see Section 101.6.1 for permitted projections into minimum separations."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0062",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 11.55,
+          "repair_confidence": 0.888,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Sections 101.6.1 and 6.12 .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_109",
+      "candidate_id": "pipeline5_merged_rule_0104",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "projection",
+      "condition": "project into the required minimum separation between buildings on the same lot",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0104",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0105",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.85,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "eaves 25 % of the width of a required separation (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation. (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0068__api_01",
+          "page": 3,
+          "evidence_type": "clause",
+          "raw_score": 10.85,
+          "repair_confidence": 0.835,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "separation from front and rear principals 6.0 m Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals Any principal building located between a front and rear princip..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0099",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 10.85,
+          "repair_confidence": 0.835,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures 25 % of the width of a required separation (d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar featur..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_113",
+      "candidate_id": "pipeline5_merged_rule_0107",
+      "rule_object": "setback",
+      "constraint_scope": "lane_yard",
+      "applies_to": "projection",
+      "condition": "in the R1 District",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0107",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_01",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Permitted projections into required yards subject to Section 6.12 Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequat..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_02",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards 0.8 m Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance...."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0090__api_01",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 9.05,
+          "repair_confidence": 0.696,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "accessory structure not being a building 4.6 m An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. An accessory structure not being a building, excluding a..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_117",
+      "candidate_id": "pipeline5_merged_rule_0111",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "corridor_width",
+      "applies_to": "All dwelling units",
+      "condition": "All dwelling units",
+      "operator": ">=",
+      "value": "1.0",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0111",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0112",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.85,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0108",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 8.85,
+          "repair_confidence": 0.681,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "outdoor amenity space 2.0 m An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves. An outdoor amenity space..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0109",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 8.85,
+          "repair_confidence": 0.681,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "outdoor amenity space 10.0 m² An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves. An outdoor amenity spa..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_122",
+      "candidate_id": "pipeline5_merged_rule_0116",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "panhandle lots",
+      "condition": "Lots with lane access; Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": ">=",
+      "value": "1",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0116",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0117",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "clear height 2.5 m (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0079",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 12.75,
+          "repair_confidence": 0.981,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Boarding, lodging or rooming houses permitted (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is inc..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0080",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 12.75,
+          "repair_confidence": 0.981,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "capacity 5 persons (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehe..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_123",
+      "candidate_id": "pipeline5_merged_rule_0117",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "panhandle lots",
+      "condition": "Lots with lane access; Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0117",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0116",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "panhandle width 1 m (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0118",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.95,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "panhandle width 4.5 m (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m;"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0119",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.95,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "clear height 2.5 m (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m;"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_124",
+      "candidate_id": "pipeline5_merged_rule_0118",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "panhandle lots",
+      "condition": "Lots without lane access; Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": ">=",
+      "value": "4.5",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0118",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0119",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "clear height 2.5 m (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m;"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0116",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 11.95,
+          "repair_confidence": 0.919,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "panhandle width 1 m (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0117",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 11.95,
+          "repair_confidence": 0.919,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "clear height 2.5 m (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_125",
+      "candidate_id": "pipeline5_merged_rule_0119",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "panhandle lots",
+      "condition": "Lots without lane access; Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0119",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0118",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "panhandle width 4.5 m (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m;"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0116",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.95,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "panhandle width 1 m (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0117",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.95,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "clear height 2.5 m (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and (i) lots with lane access shall have a minimum panhandle width of 1 m that is clear to a height of 2.5 m; and"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_126",
+      "candidate_id": "pipeline5_merged_rule_0120",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot",
+      "applies_to": "lots",
+      "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": "<=",
+      "value": "60",
+      "unit": "%",
+      "current_evidence_id": "pipeline5_merged_rule_0120",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "cross_family_value_collision"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0121",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.35,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage impervious surface area 70 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impe..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0033",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.09,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Impervious Surfaces 60 % Maximum Lot Coverage | Impervious Surfaces | 60 % | Maximum Lot Coverage | Impervious Surfaces | 60% Maximum Lot Coverage | Impervious Surfaces | 60%"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0027",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 10.09,
+          "repair_confidence": 0.776,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings All Buildings 55 % Maximum Lot Coverage | All Buildings | 55 % | Maximum Lot Coverage | All Buildings | 55% Maximum Lot Coverage | All Buildings | 55%"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_127",
+      "candidate_id": "pipeline5_merged_rule_0121",
+      "rule_object": "impervious_surface",
+      "constraint_scope": "lot",
+      "applies_to": "lots",
+      "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": "<=",
+      "value": "70",
+      "unit": "%",
+      "current_evidence_id": "pipeline5_merged_rule_0121",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0120",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.35,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage lot coverage 60 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surf..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0032",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.09,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Impervious Surfaces 70 % Maximum Lot Coverage | Impervious Surfaces | 70 % | Maximum Lot Coverage | Impervious Surfaces | 70% Maximum Lot Coverage | Impervious Surfaces | 70%"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0033",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 10.09,
+          "repair_confidence": 0.776,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Impervious Surfaces 60 % Maximum Lot Coverage | Impervious Surfaces | 60 % | Maximum Lot Coverage | Impervious Surfaces | 60% Maximum Lot Coverage | Impervious Surfaces | 60%"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_134",
+      "candidate_id": "pipeline5_merged_rule_0128",
+      "rule_object": "setback",
+      "constraint_scope": "heritage_parking_in_required_yards",
+      "applies_to": "parking",
+      "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": "allowed",
+      "value": "",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0128",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_01",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 16.55,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Permitted projections into required yards subject to Section 6.12 Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequat..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_02",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 16.55,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards 0.8 m Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance...."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0062",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 14.75,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Sections 101.6.1 and 6.12 .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_135",
+      "candidate_id": "pipeline5_merged_rule_0129",
+      "rule_object": "setback",
+      "constraint_scope": "heritage_existing_non_conforming_parking",
+      "applies_to": "existing parking areas",
+      "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": "allowed",
+      "value": "",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0129",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_01",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.95,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Permitted projections into required yards subject to Section 6.12 Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequat..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_02",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.95,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "condition_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards 0.8 m Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance...."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0128",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.25,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "parking within required yards (iii) parking may be provided within the required yards, and any existing parking areas on the lot that do not conform with the requirements of this Bylaw may continue to be used. (iii) parking may be provided within the requir..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_128",
+      "candidate_id": "pipeline5_merged_rule_0122",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "principal building",
+      "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": "excluded",
+      "value": "",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0122",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 0.996,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0130",
+          "page": 7,
+          "evidence_type": "clause",
+          "raw_score": 12.95,
+          "repair_confidence": 0.996,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "height lower of the average front or average rear elevation, as defined by the lower of the average natural grade or finished grade along the exterior of the building facing the respective front or rear lot line The height of a principal or accessory buildi..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0034",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 11.69,
+          "repair_confidence": 0.899,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Height Front Principal Buildings flat roof: 9.5 m 10 m Maximum Height | Front Principal Buildings | flat roof: 9.5 m | 10 m | Maximum Height | Front Principal Buildings | Height | sloping roof: 10 m | flat roof: 9.5 m Maximum Height | Front Principa..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0035",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 11.69,
+          "repair_confidence": 0.899,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Height Front Principal Buildings sloping roof: 10 m 9.5 m Maximum Height | Front Principal Buildings | sloping roof: 10 m | 9.5 m | Maximum Height | Front Principal Buildings | Height | sloping roof: 10 m | flat roof: 9.5 m Maximum Height | Front Pr..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_034",
+      "candidate_id": "pipeline5_merged_rule_0030",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "condition": "",
+      "operator": "<=",
+      "value": "40",
+      "unit": "%",
+      "current_evidence_id": "pipeline5_merged_rule_0030",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 0.976,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0028",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.69,
+          "repair_confidence": 0.976,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings All Buildings 40 % Maximum Lot Coverage | All Buildings | 40 % | Maximum Lot Coverage | All Buildings | Lots <= 567 m2: 40% Maximum Lot Coverage | All Buildings | Lots <= 567 m2: 40%"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0120",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.05,
+          "repair_confidence": 0.696,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage lot coverage 60 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surf..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0121",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.05,
+          "repair_confidence": 0.696,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage impervious surface area 70 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impe..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_094",
+      "candidate_id": "pipeline5_merged_rule_0089",
+      "rule_object": "setback",
+      "constraint_scope": "garage_carport_below_grade_min_setback",
+      "applies_to": "Parking",
+      "condition": "garage or carport constructed below grade",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0089",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 0.976,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0048__api_01",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.69,
+          "repair_confidence": 0.976,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Interior Side Yard Interior Side Yard 0 m Minimum Lot Line Setbacks | Interior Side Yard | 0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 0 m, except 1.2 m for end unit lots Minimum Lot Line Setbacks..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0048__api_02",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.69,
+          "repair_confidence": 0.976,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Interior Side Yard Interior Side Yard 1.2 m Minimum Lot Line Setbacks | Interior Side Yard | 1.2 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 0 m, except 1.2 m for end unit lots Minimum Lot Line Setb..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0049",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.69,
+          "repair_confidence": 0.976,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Interior Side Yard Interior Side Yard 1.2 m Minimum Lot Line Setbacks | Interior Side Yard | 1.2 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 1.2 m Minimum Lot Line Setbacks for All Buildings .2 .3 |..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_111",
+      "candidate_id": "pipeline5_merged_rule_0106__api_01",
+      "rule_object": "setback",
+      "constraint_scope": "projection_cross_reference_yards",
+      "applies_to": "projection",
+      "condition": "",
+      "operator": "=",
+      "value": "subject to Section 6.12",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0106__api_01",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 0.95,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0062",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 12.35,
+          "repair_confidence": 0.95,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "permitted projections Sections 101.6.1 and 6.12 .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards .2 See Sections 101.6.1 and 6.12 for permitted projections into required yards"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_02",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 12.35,
+          "repair_confidence": 0.95,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards 0.8 m Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance...."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0107",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 8.35,
+          "repair_confidence": 0.642,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards 0.8 m except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance. except that in the R1 District projections into required lane yards ar..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_081",
+      "candidate_id": "pipeline5_merged_rule_0076",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "Rowhouse",
+      "condition": "Contiguous rowhouse lots",
+      "operator": ">=",
+      "value": "1.5",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0076",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.942,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0077",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 12.25,
+          "repair_confidence": 0.942,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue"
+          ],
+          "evidence_quote": "pedestrian walkway clear height 2.5 m (b) is at least 1.5 m wide and clear to a height of at least 2.5 m; and (b) is at least 1.5 m wide and clear to a height of at least 2.5 m; and"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0046",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 10.59,
+          "repair_confidence": 0.815,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0047__api_01",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 10.59,
+          "repair_confidence": 0.815,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Interior Rear Yard Interior Rear Yard 3.0 m Minimum Lot Line Setbacks | Interior Rear Yard | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Rear Yard | 3.0 m, except 1.5 m for accessory buildings Minimum Lot L..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_129",
+      "candidate_id": "pipeline5_merged_rule_0123",
+      "rule_object": "setback",
+      "constraint_scope": "street_yard",
+      "applies_to": "street yards",
+      "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0123",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 0.876,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0043",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 11.39,
+          "repair_confidence": 0.876,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Street Yard Street Yard 3.0 m Minimum Lot Line Setbacks | Street Yard | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | 3.0 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | 3.0 m"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0044",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 11.39,
+          "repair_confidence": 0.876,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks for Al..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0045",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 11.39,
+          "repair_confidence": 0.876,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks for All Buil..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_116",
+      "candidate_id": "pipeline5_merged_rule_0110",
+      "rule_object": "automatic_sprinkler",
+      "constraint_scope": "dwelling_unit",
+      "applies_to": "Dwelling units more than 45 m from a street lot line",
+      "condition": "Dwelling units located more than 45 m from a lot line abutting a street",
+      "operator": ">",
+      "value": 45,
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0110",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 0.873,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0061",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 11.35,
+          "repair_confidence": 0.873,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area lot area 280 m² .1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwelling..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0079",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 10.55,
+          "repair_confidence": 0.812,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Boarding, lodging or rooming houses permitted (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is inc..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0080",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 10.55,
+          "repair_confidence": 0.812,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "capacity 5 persons (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehe..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_120",
+      "candidate_id": "pipeline5_merged_rule_0114",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "vertical_clearance",
+      "applies_to": "All dwelling units",
+      "condition": "All dwelling units; must be clear of any projections or obstructions",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0114",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.85,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "condition"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0111",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 11.05,
+          "repair_confidence": 0.85,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "fire access corridor width 1.0 m (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0112",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 11.05,
+          "repair_confidence": 0.85,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0076",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 10.15,
+          "repair_confidence": 0.781,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "condition_overlap"
+          ],
+          "evidence_quote": "pedestrian walkway width 1.5 m (b) is at least 1.5 m wide and clear to a height of at least 2.5 m; and (b) is at least 1.5 m wide and clear to a height of at least 2.5 m; and"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_107",
+      "candidate_id": "pipeline5_merged_rule_0102",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "projection",
+      "condition": "project into the required minimum separation between buildings on the same lot",
+      "operator": "=",
+      "value": "as per Section 6.9",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0102",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.835,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "condition"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0066",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 10.85,
+          "repair_confidence": 0.835,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "location within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0068__api_01",
+          "page": 3,
+          "evidence_type": "clause",
+          "raw_score": 10.85,
+          "repair_confidence": 0.835,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "separation from front and rear principals 6.0 m Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals Any principal building located between a front and rear princip..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0124",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 10.85,
+          "repair_confidence": 0.835,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "minimum separation between buildings reduced (e) the minimum separation between buildings on the same lot as required under Section 101.4 may be reduced; (e) the minimum separation between buildings on the same lot as required under Section 101.4 may be red..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_033",
+      "candidate_id": "pipeline5_merged_rule_0029",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
+      "condition": "Lots > 567 m2",
+      "operator": "<=",
+      "value": "30",
+      "unit": "%",
+      "current_evidence_id": "pipeline5_merged_rule_0029",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 0.807,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0028",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 10.49,
+          "repair_confidence": 0.807,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings All Buildings 40 % Maximum Lot Coverage | All Buildings | 40 % | Maximum Lot Coverage | All Buildings | Lots <= 567 m2: 40% Maximum Lot Coverage | All Buildings | Lots <= 567 m2: 40%"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0120",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.95,
+          "repair_confidence": 0.765,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage lot coverage 60 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surf..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0121",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.95,
+          "repair_confidence": 0.765,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage impervious surface area 70 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impe..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_130",
+      "candidate_id": "pipeline5_merged_rule_0124",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "buildings on the same lot",
+      "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": "allowed",
+      "value": "reduced",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0124",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 0.796,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0066",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 10.35,
+          "repair_confidence": 0.796,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "location within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0067",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 9.95,
+          "repair_confidence": 0.765,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "permitted projections Section 101.6.1 see Section 101.6.1 for permitted projections into minimum separations. see Section 101.6.1 for permitted projections into minimum separations."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0050",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 9.89,
+          "repair_confidence": 0.761,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Minimum Separation Of Buildings Between Front Principals Between Front Principals 2.4 m Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m Minimum Sep..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_093",
+      "candidate_id": "pipeline5_merged_rule_0088__api_01",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "Parking",
+      "condition": "garage or carport constructed below grade",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0088__api_01",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.788,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0087",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 10.25,
+          "repair_confidence": 0.788,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "condition_overlap"
+          ],
+          "evidence_quote": "garage or carport constructed below grade (b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be l..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0089",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 10.25,
+          "repair_confidence": 0.788,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "condition_overlap"
+          ],
+          "evidence_quote": "setback from lot line 1.2 m (b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0104",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 9.25,
+          "repair_confidence": 0.712,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue"
+          ],
+          "evidence_quote": "eaves 1.2 m (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation. (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_035",
+      "candidate_id": "pipeline5_merged_rule_0031",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (5 to 6 Units)",
+      "condition": "Frequent Transit Network Area Only",
+      "operator": "<=",
+      "value": "45",
+      "unit": "%",
+      "current_evidence_id": "pipeline5_merged_rule_0031",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_condition_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 0.765,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope",
+        "condition"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0120",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.95,
+          "repair_confidence": 0.765,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage lot coverage 60 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surf..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0121",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.95,
+          "repair_confidence": 0.765,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage impervious surface area 70 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impe..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0027",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.69,
+          "repair_confidence": 0.668,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings All Buildings 55 % Maximum Lot Coverage | All Buildings | 55 % | Maximum Lot Coverage | All Buildings | 55% Maximum Lot Coverage | All Buildings | 55%"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_087",
+      "candidate_id": "pipeline5_merged_rule_0082",
+      "rule_object": "permitted_use",
+      "constraint_scope": "use",
+      "applies_to": "Supportive Housing",
+      "condition": "as the only principal use",
+      "operator": "",
+      "value": "permitted",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0082",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 0.755,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0001",
+          "page": 1,
+          "evidence_type": "table_cell",
+          "raw_score": 9.81,
+          "repair_confidence": 0.755,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Principal Use Small-Scale Multi-Unit Housing Permitted Principal Use | Small-Scale Multi-Unit Housing | Permitted | Principal Use | Small-Scale Multi-Unit Housing | Use-Specific Regulations: - Principal Use | Small-Scale Multi-Unit Housing | Use-Specific Re..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0004",
+          "page": 1,
+          "evidence_type": "table_cell",
+          "raw_score": 9.31,
+          "repair_confidence": 0.716,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Principal Use Group Home Permitted Principal Use | Group Home | Permitted | Principal Use | Group Home | Use-Specific Regulations: - Principal Use | Group Home | Use-Specific Regulations: -"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0127",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 8.95,
+          "repair_confidence": 0.688,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "retention and continued use of non-conforming driveways (ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (ii) retention and continued use of driveways that do not otherwise..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_068",
+      "candidate_id": "pipeline5_merged_rule_0062",
+      "rule_object": "setback",
+      "constraint_scope": "required_yards_permitted_projections_cross_reference",
+      "applies_to": "required yards",
+      "condition": "",
+      "operator": "see",
+      "value": "Sections 101.6.1 and 6.12",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0062",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 0.712,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_01",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 9.25,
+          "repair_confidence": 0.712,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Permitted projections into required yards subject to Section 6.12 Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequat..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_02",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 9.25,
+          "repair_confidence": 0.712,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards 0.8 m Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance...."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0107",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 9.25,
+          "repair_confidence": 0.712,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards 0.8 m except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance. except that in the R1 District projections into required lane yards ar..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_095",
+      "candidate_id": "pipeline5_merged_rule_0090__api_01",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "accessory_structure",
+      "condition": "located outside of a required yard",
+      "operator": "<=",
+      "value": "4.6",
+      "unit": "m",
+      "current_evidence_id": "pipeline5_merged_rule_0090__api_01",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "best_repair_confidence": 0.707,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0041",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 9.19,
+          "repair_confidence": 0.707,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height | Accessory Buildings | 4.0 m | 1 storey"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0042",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 9.19,
+          "repair_confidence": 0.707,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Height Accessory Buildings 4.0 m 1 storeys Maximum Height | Accessory Buildings | 4.0 m | 1 storeys | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height | Accessory Buildings | 4.0 m | 1 storey"
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0034",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.69,
+          "repair_confidence": 0.668,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Height Front Principal Buildings flat roof: 9.5 m 10 m Maximum Height | Front Principal Buildings | flat roof: 9.5 m | 10 m | Maximum Height | Front Principal Buildings | Height | sloping roof: 10 m | flat roof: 9.5 m Maximum Height | Front Principa..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_031",
+      "candidate_id": "pipeline5_merged_rule_0027",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse",
+      "condition": "",
+      "operator": "<=",
+      "value": "55",
+      "unit": "%",
+      "current_evidence_id": "pipeline5_merged_rule_0027",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "best_repair_confidence": 0.696,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0120",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.05,
+          "repair_confidence": 0.696,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage lot coverage 60 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surf..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0121",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.05,
+          "repair_confidence": 0.696,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage impervious surface area 70 % (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious surface area up to 70%; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impe..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0028",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.69,
+          "repair_confidence": 0.668,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings All Buildings 40 % Maximum Lot Coverage | All Buildings | 40 % | Maximum Lot Coverage | All Buildings | Lots <= 567 m2: 40% Maximum Lot Coverage | All Buildings | Lots <= 567 m2: 40%"
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_073",
+      "candidate_id": "pipeline5_merged_rule_0067",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "minimum separations",
+      "condition": "",
+      "operator": "see",
+      "value": "Section 101.6.1",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0067",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 0.681,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0066",
+          "page": 2,
+          "evidence_type": "clause",
+          "raw_score": 8.85,
+          "repair_confidence": 0.681,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "location within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal buildings .4 Accessory buildings are not permitted within the minimum separations between principal..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0068__api_01",
+          "page": 3,
+          "evidence_type": "clause",
+          "raw_score": 8.85,
+          "repair_confidence": 0.681,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "separation from front and rear principals 6.0 m Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals Any principal building located between a front and rear princip..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0124",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 8.85,
+          "repair_confidence": 0.681,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "minimum separation between buildings reduced (e) the minimum separation between buildings on the same lot as required under Section 101.4 may be reduced; (e) the minimum separation between buildings on the same lot as required under Section 101.4 may be red..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_098",
+      "candidate_id": "pipeline5_merged_rule_0093__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "child_care_facility",
+      "condition": "in the R1 District",
+      "operator": "=",
+      "value": "comply with the development regulations under section 101.4 for 1 to 3 small-scale multi-unit dwelling units on a lot",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0093__api_01",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 0.658,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0084__api_01",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 8.55,
+          "repair_confidence": 0.658,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Category A Supportive Housing facilities meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units (b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units;..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0094",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 8.55,
+          "repair_confidence": 0.658,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Principal Use child care facility located on a lot that does not contain a dwelling unit or any other principal use (d) be located on a lot that does not contain a dwelling unit or any other principal use; and (d) be located on a lot that does not contain a..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0060",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 8.05,
+          "repair_confidence": 0.619,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap"
+          ],
+          "evidence_quote": "lot area 280 m² .3 Rowhouse lots may exceed 280 m² subject to Section 101.4 footnote .1. .3 Rowhouse lots may exceed 280 m² subject to Section 101.4 footnote .1."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_069",
+      "candidate_id": "pipeline5_merged_rule_0063",
+      "rule_object": "setback",
+      "constraint_scope": "vision_clearance_areas_additional_setbacks_cross_reference",
+      "applies_to": "vision clearance areas",
+      "condition": "",
+      "operator": "see",
+      "value": "Section 6.13",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0063",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 0.581,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_01",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 7.55,
+          "repair_confidence": 0.581,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Permitted projections into required yards subject to Section 6.12 Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequat..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0106__api_02",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 7.55,
+          "repair_confidence": 0.581,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards 0.8 m Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance...."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0107",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 7.55,
+          "repair_confidence": 0.581,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards 0.8 m except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance. except that in the R1 District projections into required lane yards ar..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_099",
+      "candidate_id": "pipeline5_merged_rule_0094",
+      "rule_object": "permitted_use",
+      "constraint_scope": "use",
+      "applies_to": "child_care_facility",
+      "condition": "in the R1 District",
+      "operator": "=",
+      "value": "located on a lot that does not contain a dwelling unit or any other principal use",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0094",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 0.419,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "pipeline5_merged_rule_0085",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 5.45,
+          "repair_confidence": 0.419,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Category A Supportive Housing facilities included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply (c) the use shall be included as part of a comprehensive development plan to which the prov..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0006",
+          "page": 1,
+          "evidence_type": "table_cell",
+          "raw_score": 5.19,
+          "repair_confidence": 0.399,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Principal Use Child Care Facilities Child Care Facilities 101.5.6 Principal Use | Child Care Facilities | 101.5.6 | Principal Use | Child Care Facilities | Use-Specific Regulations: 101.5.6 Principal Use | Child Care Facilities | Use-Specific Regulations: 1..."
+        },
+        {
+          "evidence_id": "pipeline5_merged_rule_0056",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 4.95,
+          "repair_confidence": 0.381,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "scope_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "lot 6 units This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. This District provides for the use and development of primarily ground-oriented residential dwell..."
+        }
+      ]
+    }
+  ]
+}

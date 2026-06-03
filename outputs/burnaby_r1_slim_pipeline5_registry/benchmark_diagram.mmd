@@ -1,0 +1,14 @@
+flowchart LR
+  A[Burnaby R1 PDF] --> B[Extraction Pipeline]
+  B --> C[Rule Candidates]
+  C --> D[Verification Layer]
+  D --> E[GIS Rule Contract]
+  D --> F[Review Queue]
+  G[Gold Rule Benchmark] --> H[Benchmark Evaluator]
+  C --> H
+  D --> H
+  I[Proposal Cases] --> J[Tri-state Compliance Checker]
+  E --> J
+  F --> J
+  J --> H
+  H --> K[benchmark_report.md]
