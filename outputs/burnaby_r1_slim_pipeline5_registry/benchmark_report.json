@@ -2,14 +2,14 @@
   "benchmark": "burnaby_r1",
   "outputs_evaluated": "outputs/burnaby_r1_slim_pipeline5_registry",
   "rule_metrics": {
-    "gold_rule_count": 22,
+    "gold_rule_count": 29,
     "candidate_rule_count": 142,
-    "verified_rule_count": 11,
-    "review_rule_count": 81,
+    "verified_rule_count": 27,
+    "review_rule_count": 66,
     "rejected_rule_count": 16,
-    "not_used_rule_count": 34,
+    "not_used_rule_count": 33,
     "candidate_recall": 1.0,
-    "verified_gold_recall": 0.45454545454545453,
+    "verified_gold_recall": 0.896551724137931,
     "verified_or_review_recall": 1.0,
     "extraction_coverage_recall": 1.0,
     "verifier_retention_rate": 1.0,
@@ -26,15 +26,6 @@
     "retrieved_gold_rule_ids": [],
     "missed_candidate_gold_rule_ids": [],
     "missed_verified_gold_rule_ids": [
-      "br1_use_001",
-      "br1_lot_area_001",
-      "br1_setback_004",
-      "br1_setback_005",
-      "br1_setback_006",
-      "br1_sep_003",
-      "br1_fire_001",
-      "br1_fire_002",
-      "br1_fire_003",
       "br1_heritage_001",
       "br1_heritage_002",
       "br1_heritage_003"
@@ -43,23 +34,15 @@
     "top_review_reasons": [
       {
         "reason": "pipeline5_text_candidate_requires_review",
-        "count": 79
+        "count": 76
       },
       {
         "reason": "rule_object_not_supported",
-        "count": 49
-      },
-      {
-        "reason": "table_cell_candidate_requires_review",
-        "count": 46
-      },
-      {
-        "reason": "table_evidence_candidate_requires_review",
         "count": 46
       },
       {
         "reason": "operator_not_supported",
-        "count": 41
+        "count": 40
       },
       {
         "reason": "applies_to_not_supported",
@@ -67,19 +50,27 @@
       },
       {
         "reason": "outside_current_rule_contract",
-        "count": 31
+        "count": 30
       },
       {
-        "reason": "text_condition_not_supported",
+        "reason": "table_cell_candidate_requires_review",
         "count": 29
       },
       {
-        "reason": "table_column_not_target_scope",
-        "count": 20
+        "reason": "table_evidence_candidate_requires_review",
+        "count": 29
       },
       {
-        "reason": "table_applies_to_not_supported",
-        "count": 10
+        "reason": "text_condition_not_supported",
+        "count": 28
+      },
+      {
+        "reason": "rule_family_direction_mismatch",
+        "count": 25
+      },
+      {
+        "reason": "table_column_not_target_scope",
+        "count": 19
       }
     ],
     "evidence_quality": {
@@ -108,14 +99,14 @@
     },
     "proof_metrics": {
       "proof_trace_completion_rate": 1.0,
-      "supported_claim_count": 955,
+      "supported_claim_count": 966,
       "refuted_claim_count": 4,
-      "not_enough_info_claim_count": 177,
-      "mean_evidence_strength": 0.71,
-      "high_priority_review_count": 20,
+      "not_enough_info_claim_count": 166,
+      "mean_evidence_strength": 0.723,
+      "high_priority_review_count": 6,
       "table_proof_count": 61,
-      "table_proof_complete_count": 6,
-      "table_proof_partial_count": 55,
+      "table_proof_complete_count": 9,
+      "table_proof_partial_count": 52,
       "table_proof_refuted_count": 0,
       "proof_decision_mismatch_count": 0
     },
@@ -199,6 +190,12 @@
         "source_page": null
       },
       {
+        "gold_id": "br1_setback_007",
+        "rule_id": "pipeline5_merged_rule_0048__api_01",
+        "score": 13,
+        "source_page": null
+      },
+      {
         "gold_id": "br1_sep_001",
         "rule_id": "pipeline5_merged_rule_0051",
         "score": 13,
@@ -251,12 +248,60 @@
         "rule_id": "pipeline5_merged_rule_0123",
         "score": 13,
         "source_page": null
+      },
+      {
+        "gold_id": "br1_use_002",
+        "rule_id": "pipeline5_merged_rule_0004",
+        "score": 7,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_height_006",
+        "rule_id": "pipeline5_merged_rule_0034",
+        "score": 12,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_height_005",
+        "rule_id": "pipeline5_merged_rule_0035",
+        "score": 12,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_storeys_002",
+        "rule_id": "pipeline5_merged_rule_0036",
+        "score": 12,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_storeys_003",
+        "rule_id": "pipeline5_merged_rule_0037",
+        "score": 12,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_sep_004",
+        "rule_id": "pipeline5_merged_rule_0050",
+        "score": 12,
+        "source_page": null
       }
     ],
     "matched_verified": [
       {
+        "gold_id": "br1_use_001",
+        "rule_id": "burnaby_r1_001",
+        "score": 10,
+        "source_page": 1
+      },
+      {
         "gold_id": "br1_units_001",
         "rule_id": "burnaby_r1_062",
+        "score": 13,
+        "source_page": 1
+      },
+      {
+        "gold_id": "br1_lot_area_001",
+        "rule_id": "burnaby_r1_018",
         "score": 13,
         "source_page": 1
       },
@@ -303,38 +348,6 @@
         "source_page": 2
       },
       {
-        "gold_id": "br1_sep_001",
-        "rule_id": "burnaby_r1_057",
-        "score": 13,
-        "source_page": 2
-      },
-      {
-        "gold_id": "br1_sep_002",
-        "rule_id": "burnaby_r1_058",
-        "score": 14,
-        "source_page": 2
-      }
-    ],
-    "matched_review": [
-      {
-        "gold_id": "br1_use_001",
-        "rule_id": "burnaby_r1_001",
-        "score": 10,
-        "source_page": 1
-      },
-      {
-        "gold_id": "br1_units_001",
-        "rule_id": "burnaby_r1_027",
-        "score": 13,
-        "source_page": 2
-      },
-      {
-        "gold_id": "br1_lot_area_001",
-        "rule_id": "burnaby_r1_018",
-        "score": 13,
-        "source_page": 1
-      },
-      {
         "gold_id": "br1_setback_004",
         "rule_id": "burnaby_r1_051",
         "score": 14,
@@ -353,16 +366,22 @@
         "source_page": 2
       },
       {
-        "gold_id": "br1_sep_001",
-        "rule_id": "burnaby_r1_076",
+        "gold_id": "br1_setback_007",
+        "rule_id": "burnaby_r1_053",
         "score": 13,
-        "source_page": 3
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_sep_001",
+        "rule_id": "burnaby_r1_057",
+        "score": 13,
+        "source_page": 2
       },
       {
         "gold_id": "br1_sep_002",
-        "rule_id": "burnaby_r1_075",
+        "rule_id": "burnaby_r1_058",
         "score": 14,
-        "source_page": 3
+        "source_page": 2
       },
       {
         "gold_id": "br1_sep_003",
@@ -389,6 +408,80 @@
         "source_page": 6
       },
       {
+        "gold_id": "br1_use_002",
+        "rule_id": "burnaby_r1_004",
+        "score": 7,
+        "source_page": 1
+      },
+      {
+        "gold_id": "br1_height_006",
+        "rule_id": "burnaby_r1_038",
+        "score": 12,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_height_005",
+        "rule_id": "burnaby_r1_039",
+        "score": 12,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_storeys_002",
+        "rule_id": "burnaby_r1_040",
+        "score": 12,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_storeys_003",
+        "rule_id": "burnaby_r1_041",
+        "score": 12,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_sep_004",
+        "rule_id": "burnaby_r1_056",
+        "score": 12,
+        "source_page": 2
+      }
+    ],
+    "matched_review": [
+      {
+        "gold_id": "br1_units_001",
+        "rule_id": "burnaby_r1_027",
+        "score": 13,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_lot_area_001",
+        "rule_id": "burnaby_r1_028",
+        "score": 13,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_setback_006",
+        "rule_id": "burnaby_r1_071",
+        "score": 15,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_sep_001",
+        "rule_id": "burnaby_r1_076",
+        "score": 13,
+        "source_page": 3
+      },
+      {
+        "gold_id": "br1_sep_002",
+        "rule_id": "burnaby_r1_075",
+        "score": 14,
+        "source_page": 3
+      },
+      {
+        "gold_id": "br1_sep_003",
+        "rule_id": "burnaby_r1_076",
+        "score": 13,
+        "source_page": 3
+      },
+      {
         "gold_id": "br1_heritage_001",
         "rule_id": "burnaby_r1_126",
         "score": 13,
@@ -405,6 +498,12 @@
         "rule_id": "burnaby_r1_129",
         "score": 13,
         "source_page": 6
+      },
+      {
+        "gold_id": "br1_sep_004",
+        "rule_id": "burnaby_r1_076",
+        "score": 12,
+        "source_page": 3
       }
     ],
     "matched_not_used": []
@@ -419,7 +518,7 @@
     "false_rejection_cases": [],
     "field_expectation_mismatch_count": 0,
     "field_expectation_mismatch_cases": [],
-    "needs_review_count": 5
+    "needs_review_count": 4
   },
   "proposal_results": [
     {
@@ -689,43 +788,47 @@
     },
     {
       "case_id": "needs_review_fire_access",
-      "description": "Fire access corridor rules are important but not yet verified.",
-      "decision": "needs_review",
-      "expected_decision": "needs_review",
+      "description": "Fire access corridor width and vertical-clearance rules are verified, so unsafe proposals should be rejected.",
+      "decision": "rejected",
+      "expected_decision": "rejected",
       "matches_expected": true,
       "decision_matches_expected": true,
-      "actual_failed_checks": [],
-      "expected_failed_checks": [],
+      "actual_failed_checks": [
+        "fire_access_corridor_clearance_m",
+        "fire_access_corridor_width_m"
+      ],
+      "expected_failed_checks": [
+        "fire_access_corridor_clearance_m",
+        "fire_access_corridor_width_m"
+      ],
       "failed_checks_match_expected": true,
-      "actual_review_checks": [
-        "fire_access_corridor_clearance_m",
-        "fire_access_corridor_width_m"
-      ],
-      "expected_review_checks": [
-        "fire_access_corridor_clearance_m",
-        "fire_access_corridor_width_m"
-      ],
+      "actual_review_checks": [],
+      "expected_review_checks": [],
       "review_checks_match_expected": true,
       "passed_checks": [],
-      "failed_checks": [],
-      "review_checks": [
+      "failed_checks": [
         {
           "field": "fire_access_corridor_width_m",
           "label": "Fire access corridor width",
           "actual_value": 0.8,
-          "reason": "rule_not_verified",
-          "review_rule_id": "burnaby_r1_117",
-          "message": "No verified rule covers this proposal field."
+          "rule_id": "burnaby_r1_117",
+          "rule_value": "1.0",
+          "rule_unit": "m",
+          "operator": ">=",
+          "message": "0.8 must be >= 1.0."
         },
         {
           "field": "fire_access_corridor_clearance_m",
           "label": "Fire access corridor vertical clearance",
           "actual_value": 2.4,
-          "reason": "rule_not_verified",
-          "review_rule_id": "burnaby_r1_120",
-          "message": "No verified rule covers this proposal field."
+          "rule_id": "burnaby_r1_120",
+          "rule_value": "2.5",
+          "rule_unit": "m",
+          "operator": ">=",
+          "message": "2.4 must be >= 2.5."
         }
-      ]
+      ],
+      "review_checks": []
     },
     {
       "case_id": "needs_review_heritage_coverage",

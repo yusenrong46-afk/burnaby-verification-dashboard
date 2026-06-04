@@ -252,6 +252,7 @@
       "evidence_type": "clause",
       "evidence_text": ".4 Accessory buildings are not permitted within the minimum separations between principal buildings",
       "source_context": ".4 Accessory buildings are not permitted within the minimum separations between principal buildings",
+      "inherited_parent_context": null,
       "local_context": ".4 Accessory buildings are not permitted within the minimum separations between principal buildings",
       "source_section": null,
       "source_heading": null,
@@ -521,6 +522,7 @@
     "review_priority": "low",
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
+      "rule_family_direction_mismatch",
       "rule_object_unit_not_compatible"
     ],
     "support_checks": {
@@ -542,7 +544,7 @@
         "reason": "canonical rule-object alias or text cue"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the unit is not compatible with the proposed rule object",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; rule family direction mismatch; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -552,6 +554,7 @@
       "evidence_type": "clause",
       "evidence_text": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
       "source_context": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
+      "inherited_parent_context": null,
       "local_context": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
       "source_section": null,
       "source_heading": null,
@@ -617,31 +620,33 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
-        "reason": "cited evidence does not support the canonical rule object"
+        "evidence_quote": "rowhouse",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
-        "reason": "applies_to words are not grounded in local evidence"
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
+        "reason": "final support gap remains: applies_to_not_supported",
+        "decision_gap": "applies_to_not_supported"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "refuted",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "value is absent from cited evidence"
       },
       "unit": {
@@ -653,7 +658,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -667,31 +672,31 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "applies_to words are not grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "refuted",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "value is absent from cited evidence"
       },
       "unit": {
@@ -703,7 +708,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -715,21 +720,21 @@
     },
     "text_span_proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
-        "reason": "rule object is not explicit in text evidence"
+        "evidence_quote": "rowhouse",
+        "reason": "rule-object cue appears in text evidence"
       },
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
         "reason": "operator wording is not proven by text evidence"
       },
       "value": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
         "reason": "value is not visible in text evidence"
       },
       "unit": {
@@ -739,16 +744,16 @@
         "reason": "candidate has no explicit unit to prove"
       },
       "constraint_scope": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
-        "reason": "claim words are not sufficiently visible in text evidence"
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
+        "reason": "scope words appear in text evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
-        "reason": "claim words are not sufficiently visible in text evidence"
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
+        "reason": "applies_to words appear in text evidence"
       },
       "condition": {
         "label": "supported",
@@ -768,31 +773,33 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
-        "reason": "cited evidence does not support the canonical rule object"
+        "evidence_quote": "rowhouse",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
-        "reason": "applies_to words are not grounded in local evidence"
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
+        "reason": "final support gap remains: applies_to_not_supported",
+        "decision_gap": "applies_to_not_supported"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "refuted",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "value is absent from cited evidence"
       },
       "unit": {
@@ -804,7 +811,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot (a) links...",
+        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -853,8 +860,9 @@
       "evidence_id": "pipeline5_merged_rule_0075",
       "evidence_type": "clause",
       "evidence_text": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
-      "source_context": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
-      "local_context": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
+      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
+      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -1157,8 +1165,9 @@
       "evidence_id": "pipeline5_merged_rule_0086__api_01",
       "evidence_type": "clause",
       "evidence_text": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
-      "source_context": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
-      "local_context": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
+      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
+      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -1430,6 +1439,7 @@
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
       "text_condition_not_supported",
+      "rule_family_direction_mismatch",
       "applies_to_not_supported",
       "rule_object_unit_not_compatible"
     ],
@@ -1445,7 +1455,7 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; rule family direction mismatch; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -1455,6 +1465,7 @@
       "evidence_type": "clause",
       "evidence_text": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation;",
       "source_context": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation;",
+      "inherited_parent_context": null,
       "local_context": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation;",
       "source_section": null,
       "source_heading": null,
@@ -1727,6 +1738,7 @@
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
       "text_condition_not_supported",
+      "rule_family_direction_mismatch",
       "applies_to_not_supported",
       "rule_object_unit_not_compatible"
     ],
@@ -1742,7 +1754,7 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; rule family direction mismatch; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -1752,6 +1764,7 @@
       "evidence_type": "clause",
       "evidence_text": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation;",
       "source_context": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation;",
+      "inherited_parent_context": null,
       "local_context": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation;",
       "source_section": null,
       "source_heading": null,
@@ -2024,6 +2037,7 @@
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
       "text_condition_not_supported",
+      "rule_family_direction_mismatch",
       "applies_to_not_supported",
       "rule_object_unit_not_compatible"
     ],
@@ -2039,7 +2053,7 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; rule family direction mismatch; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -2049,6 +2063,7 @@
       "evidence_type": "clause",
       "evidence_text": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
       "source_context": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
+      "inherited_parent_context": null,
       "local_context": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
       "source_section": null,
       "source_heading": null,
@@ -2317,6 +2332,7 @@
     "review_priority": "low",
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
+      "rule_family_direction_mismatch",
       "rule_object_unit_not_compatible"
     ],
     "support_checks": {
@@ -2338,7 +2354,7 @@
         "reason": "canonical rule-object alias or text cue"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the unit is not compatible with the proposed rule object",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; rule family direction mismatch; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -2348,6 +2364,7 @@
       "evidence_type": "clause",
       "evidence_text": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "source_context": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
+      "inherited_parent_context": null,
       "local_context": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "source_section": null,
       "source_heading": null,
@@ -2616,6 +2633,7 @@
     "review_priority": "low",
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
+      "rule_family_direction_mismatch",
       "rule_object_unit_not_compatible"
     ],
     "support_checks": {
@@ -2637,7 +2655,7 @@
         "reason": "canonical rule-object alias or text cue"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the unit is not compatible with the proposed rule object",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; rule family direction mismatch; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -2647,6 +2665,7 @@
       "evidence_type": "clause",
       "evidence_text": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "source_context": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
+      "inherited_parent_context": null,
       "local_context": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "source_section": null,
       "source_heading": null,
@@ -2712,31 +2731,31 @@
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "value appears in cited evidence"
       },
       "unit": {
@@ -2748,7 +2767,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -2762,31 +2781,31 @@
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "value appears in cited evidence"
       },
       "unit": {
@@ -2798,7 +2817,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -2836,13 +2855,13 @@
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m p...",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m p...",
         "reason": "applies_to words appear in text evidence"
       },
       "condition": {
@@ -2863,31 +2882,31 @@
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "value appears in cited evidence"
       },
       "unit": {
@@ -2899,7 +2918,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -2945,8 +2964,9 @@
       "evidence_id": "pipeline5_merged_rule_0112",
       "evidence_type": "clause",
       "evidence_text": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
-      "source_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
-      "local_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+      "source_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+      "inherited_parent_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+      "local_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access c",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -3009,10 +3029,10 @@
     "text_span_proof_status": "partial",
     "proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
-        "reason": "cited evidence does not support the canonical rule object"
+        "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
@@ -3059,10 +3079,10 @@
     },
     "text_proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
-        "reason": "cited evidence does not support the canonical rule object"
+        "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
@@ -3109,21 +3129,21 @@
     },
     "text_span_proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (a) provides direct pedestrian access from the dwe...",
-        "reason": "rule object is not explicit in text evidence"
+        "evidence_quote": "fire access corridor",
+        "reason": "rule-object cue appears in text evidence"
       },
       "operator": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (a) provides direct pedestrian access from the dwe...",
-        "reason": "text wording does not prove required"
+        "evidence_quote": "shall",
+        "reason": "text wording supports required"
       },
       "value": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (a) provides direct pedestrian access from the dwe...",
+        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (2) All dwelling units shall have a minimum 1.0 m...",
         "reason": "value is not visible in text evidence"
       },
       "unit": {
@@ -3135,13 +3155,13 @@
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (a) provides direct pedestrian access from the dwe...",
+        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (2) All dwelling units shall have a minimum 1.0 m...",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (a) provides direct pedestrian access from the dwe...",
+        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (2) All dwelling units shall have a minimum 1.0 m...",
         "reason": "applies_to words appear in text evidence"
       },
       "condition": {
@@ -3160,10 +3180,10 @@
     "table_proof_trace": {},
     "merged_proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
-        "reason": "cited evidence does not support the canonical rule object"
+        "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
@@ -3210,13 +3230,12 @@
     },
     "proof_decision_mismatch": false,
     "proof_decision_mismatches": [],
-    "evidence_strength": 0.483,
+    "evidence_strength": 0.587,
     "review_priority": "low",
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
       "non_numeric_value_for_numeric_rule",
-      "value_not_found_in_evidence",
-      "rule_object_not_supported"
+      "value_not_found_in_evidence"
     ],
     "support_checks": {
       "source_evidence_present": true,
@@ -3225,7 +3244,7 @@
       "operator_supported": true,
       "applies_to_supported": true,
       "scope_supported": true,
-      "rule_object_supported": false,
+      "rule_object_supported": true,
       "table_context_supported": true,
       "table_review_gate_passed": true
     },
@@ -3237,7 +3256,7 @@
         "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family; the proposed value is not visible in the cited evidence; the cited evidence does not support the proposed rule object",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family; the proposed value is not visible in the cited evidence",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -3246,8 +3265,9 @@
       "evidence_id": "pipeline5_merged_rule_0113",
       "evidence_type": "clause",
       "evidence_text": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
-      "source_context": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
-      "local_context": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
+      "source_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
+      "inherited_parent_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+      "local_context": "ing units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -3548,6 +3568,7 @@
       "evidence_type": "clause",
       "evidence_text": "The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by the lower of the average natural grade or finished grade along the exterior of the building facing the respective front or rear lot line",
       "source_context": "The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by the lower of the average natural grade or finished grade along the exterior of the building facing the respective front or rear lot line",
+      "inherited_parent_context": null,
       "local_context": "The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by the lower of the average natural grade or finished grade along the exterior of the building facing the respective front or rear lot line",
       "source_section": null,
       "source_heading": null,
@@ -3849,6 +3870,7 @@
       "evidence_type": "clause",
       "evidence_text": "to the midpoint of a sloped roof or the highest point of a flat the roof.",
       "source_context": "to the midpoint of a sloped roof or the highest point of a flat the roof.",
+      "inherited_parent_context": null,
       "local_context": "to the midpoint of a sloped roof or the highest point of a flat the roof.",
       "source_section": null,
       "source_heading": null,
@@ -4149,6 +4171,7 @@
       "evidence_type": "clause",
       "evidence_text": "The midpoint of a sloped roof is considered to be one half of the vertical distance of a sloped roof structure measured from the top plate of the uppermost storey to the highest point of the roof.",
       "source_context": "The midpoint of a sloped roof is considered to be one half of the vertical distance of a sloped roof structure measured from the top plate of the uppermost storey to the highest point of the roof.",
+      "inherited_parent_context": null,
       "local_context": "The midpoint of a sloped roof is considered to be one half of the vertical distance of a sloped roof structure measured from the top plate of the uppermost storey to the highest point of the roof.",
       "source_section": null,
       "source_heading": null,
@@ -4442,6 +4465,7 @@
       "evidence_type": "clause",
       "evidence_text": "The height of a detached garage or carport shall be measured from the finished grade at the point used for vehicular access.",
       "source_context": "The height of a detached garage or carport shall be measured from the finished grade at the point used for vehicular access.",
+      "inherited_parent_context": null,
       "local_context": "The height of a detached garage or carport shall be measured from the finished grade at the point used for vehicular access.",
       "source_section": null,
       "source_heading": null,
@@ -4735,6 +4759,7 @@
       "evidence_type": "clause",
       "evidence_text": "Required separation distances between buildings are measured from the nearest point of each building face.",
       "source_context": "Required separation distances between buildings are measured from the nearest point of each building face.",
+      "inherited_parent_context": null,
       "local_context": "Required separation distances between buildings are measured from the nearest point of each building face.",
       "source_section": null,
       "source_heading": null,

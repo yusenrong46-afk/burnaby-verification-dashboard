@@ -1,5 +1,5 @@
 {
-  "review_rule_count": 81,
+  "review_rule_count": 66,
   "items": [
     {
       "rule_id": "burnaby_r1_076",
@@ -56,6 +56,34 @@
       "best_repair_confidence": 0.876,
       "action_bucket": "retry_with_better_evidence",
       "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.88).",
+      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
+    },
+    {
+      "rule_id": "burnaby_r1_121",
+      "candidate_id": "pipeline5_merged_rule_0115",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "heritage_irregular_lots_permitted",
+      "applies_to": "All dwelling units",
+      "operator": "allowed",
+      "value": "",
+      "unit": "",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "review_category": "missing_condition_evidence",
+      "likely_status": "plausible",
+      "likely_correct_score": 0.682,
+      "triage_priority": "high",
+      "review_rank": 32,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition"
+      ],
+      "best_repair_evidence_id": "pipeline5_merged_rule_0079",
+      "best_repair_confidence": 1.0,
+      "action_bucket": "retry_with_better_evidence",
+      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
@@ -157,11 +185,12 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported"
       ],
       "review_category": "missing_condition_evidence",
       "likely_status": "plausible",
-      "likely_correct_score": 0.55,
+      "likely_correct_score": 0.555,
       "triage_priority": "high",
       "review_rank": 45,
       "can_retry_verification": true,
@@ -189,41 +218,14 @@
       ],
       "review_category": "text_candidate_needs_consensus",
       "likely_status": "likely_correct",
-      "likely_correct_score": 0.832,
+      "likely_correct_score": 0.851,
       "triage_priority": "medium",
-      "review_rank": 116,
+      "review_rank": 114,
       "can_retry_verification": true,
       "repairable_fields": [
         "text_consensus_candidate"
       ],
       "best_repair_evidence_id": "pipeline5_merged_rule_0048__api_01",
-      "best_repair_confidence": 1.0,
-      "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
-      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
-    },
-    {
-      "rule_id": "burnaby_r1_117",
-      "candidate_id": "pipeline5_merged_rule_0111",
-      "rule_object": "fire_access_corridor",
-      "constraint_scope": "corridor_width",
-      "applies_to": "All dwelling units",
-      "operator": ">=",
-      "value": "1.0",
-      "unit": "m",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
-      ],
-      "review_category": "text_candidate_needs_consensus",
-      "likely_status": "likely_correct",
-      "likely_correct_score": 0.785,
-      "triage_priority": "medium",
-      "review_rank": 121,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "text_consensus_candidate"
-      ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0112",
       "best_repair_confidence": 1.0,
       "action_bucket": "retry_with_better_evidence",
       "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
@@ -239,11 +241,12 @@
       "value": "0.8",
       "unit": "m",
       "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
       ],
-      "review_category": "text_candidate_needs_consensus",
+      "review_category": "general_review",
       "likely_status": "likely_correct",
-      "likely_correct_score": 0.784,
+      "likely_correct_score": 0.786,
       "triage_priority": "medium",
       "review_rank": 121,
       "can_retry_verification": true,
@@ -266,9 +269,10 @@
       "value": "1",
       "unit": "dwelling unit",
       "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
       ],
-      "review_category": "text_candidate_needs_consensus",
+      "review_category": "general_review",
       "likely_status": "likely_correct",
       "likely_correct_score": 0.783,
       "triage_priority": "medium",
@@ -278,6 +282,33 @@
         "text_consensus_candidate"
       ],
       "best_repair_evidence_id": "pipeline5_merged_rule_0073",
+      "best_repair_confidence": 1.0,
+      "action_bucket": "retry_with_better_evidence",
+      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
+      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
+    },
+    {
+      "rule_id": "burnaby_r1_028",
+      "candidate_id": "pipeline5_merged_rule_0024",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m²",
+      "support_gaps": [
+        "applies_to_not_supported"
+      ],
+      "review_category": "missing_applies_to",
+      "likely_status": "plausible",
+      "likely_correct_score": 0.722,
+      "triage_priority": "medium",
+      "review_rank": 127,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "best_repair_evidence_id": "pipeline5_merged_rule_0018",
       "best_repair_confidence": 1.0,
       "action_bucket": "retry_with_better_evidence",
       "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
@@ -312,6 +343,36 @@
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
+      "rule_id": "burnaby_r1_019",
+      "candidate_id": "pipeline5_merged_rule_0019",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse .1",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m²",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "missing_scope_evidence",
+      "likely_status": "plausible",
+      "likely_correct_score": 0.718,
+      "triage_priority": "medium",
+      "review_rank": 127,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "best_repair_evidence_id": "pipeline5_merged_rule_0061",
+      "best_repair_confidence": 1.0,
+      "action_bucket": "retry_with_better_evidence",
+      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
+      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
+    },
+    {
       "rule_id": "burnaby_r1_046",
       "candidate_id": "pipeline5_merged_rule_0042",
       "rule_object": "storeys",
@@ -341,35 +402,6 @@
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
-      "rule_id": "burnaby_r1_059",
-      "candidate_id": "pipeline5_merged_rule_0053",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "All Other Buildings",
-      "operator": ">=",
-      "value": "2.4",
-      "unit": "m",
-      "support_gaps": [
-        "table_column_not_target_scope",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "missing_scope_evidence",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.711,
-      "triage_priority": "medium",
-      "review_rank": 128,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "scope"
-      ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0050",
-      "best_repair_confidence": 1.0,
-      "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
-      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
-    },
-    {
       "rule_id": "burnaby_r1_086",
       "candidate_id": "pipeline5_merged_rule_0081",
       "rule_object": "lot_area",
@@ -384,9 +416,9 @@
       ],
       "review_category": "missing_applies_to",
       "likely_status": "plausible",
-      "likely_correct_score": 0.671,
+      "likely_correct_score": 0.703,
       "triage_priority": "medium",
-      "review_rank": 132,
+      "review_rank": 129,
       "can_retry_verification": true,
       "repairable_fields": [
         "applies_to"
@@ -398,51 +430,23 @@
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
-      "rule_id": "burnaby_r1_019",
-      "candidate_id": "pipeline5_merged_rule_0019",
+      "rule_id": "burnaby_r1_029",
+      "candidate_id": "pipeline5_merged_rule_0025",
       "rule_object": "lot_area",
       "constraint_scope": "lot",
-      "applies_to": "Rowhouse .1",
-      "operator": "<=",
-      "value": "280",
-      "unit": "m²",
-      "support_gaps": [
-        "table_column_not_target_scope",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "missing_scope_evidence",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.668,
-      "triage_priority": "medium",
-      "review_rank": 132,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "scope"
-      ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0061",
-      "best_repair_confidence": 1.0,
-      "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
-      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
-    },
-    {
-      "rule_id": "burnaby_r1_028",
-      "candidate_id": "pipeline5_merged_rule_0024",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "applies_to": "Small-Scale Multi-Unit (5 to 6 Units)",
       "operator": ">=",
       "value": "281",
       "unit": "m²",
       "support_gaps": [
-        "applies_to_not_supported"
+        "applies_to_not_supported",
+        "table_applies_to_not_supported"
       ],
       "review_category": "missing_applies_to",
       "likely_status": "plausible",
-      "likely_correct_score": 0.626,
+      "likely_correct_score": 0.566,
       "triage_priority": "medium",
-      "review_rank": 137,
+      "review_rank": 142,
       "can_retry_verification": true,
       "repairable_fields": [
         "applies_to"
@@ -463,21 +467,76 @@
       "value": "280",
       "unit": "m²",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
-        "table_applies_to_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "table_applies_to_not_supported"
       ],
       "review_category": "missing_applies_to",
-      "likely_status": "weak",
-      "likely_correct_score": 0.461,
+      "likely_status": "plausible",
+      "likely_correct_score": 0.554,
       "triage_priority": "medium",
-      "review_rank": 153,
+      "review_rank": 144,
       "can_retry_verification": true,
       "repairable_fields": [
         "applies_to"
       ],
       "best_repair_evidence_id": "pipeline5_merged_rule_0061",
+      "best_repair_confidence": 1.0,
+      "action_bucket": "retry_with_better_evidence",
+      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
+      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
+    },
+    {
+      "rule_id": "burnaby_r1_022",
+      "candidate_id": "pipeline5_merged_rule_0021__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
+      "operator": ">=",
+      "value": "1",
+      "unit": "units",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "likely_status": "plausible",
+      "likely_correct_score": 0.629,
+      "triage_priority": "low",
+      "review_rank": 236,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator"
+      ],
+      "best_repair_evidence_id": "pipeline5_merged_rule_0072__api_01",
+      "best_repair_confidence": 1.0,
+      "action_bucket": "retry_with_better_evidence",
+      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
+      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
+    },
+    {
+      "rule_id": "burnaby_r1_024",
+      "candidate_id": "pipeline5_merged_rule_0022__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "operator": ">=",
+      "value": "3",
+      "unit": "units",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "likely_status": "plausible",
+      "likely_correct_score": 0.629,
+      "triage_priority": "low",
+      "review_rank": 236,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator"
+      ],
+      "best_repair_evidence_id": "pipeline5_merged_rule_0054",
       "best_repair_confidence": 1.0,
       "action_bucket": "retry_with_better_evidence",
       "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
@@ -493,6 +552,7 @@
       "value": "5",
       "unit": "units",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "operator_not_supported"
       ],
       "review_category": "operator_uncertain",
@@ -568,64 +628,6 @@
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
-      "rule_id": "burnaby_r1_022",
-      "candidate_id": "pipeline5_merged_rule_0021__api_01",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
-      "operator": ">=",
-      "value": "1",
-      "unit": "units",
-      "support_gaps": [
-        "operator_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "operator_uncertain",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.575,
-      "triage_priority": "low",
-      "review_rank": 242,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "operator"
-      ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0072__api_01",
-      "best_repair_confidence": 1.0,
-      "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
-      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
-    },
-    {
-      "rule_id": "burnaby_r1_024",
-      "candidate_id": "pipeline5_merged_rule_0022__api_01",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
-      "operator": ">=",
-      "value": "3",
-      "unit": "units",
-      "support_gaps": [
-        "operator_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "operator_uncertain",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.575,
-      "triage_priority": "low",
-      "review_rank": 242,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "operator"
-      ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0054",
-      "best_repair_confidence": 1.0,
-      "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
-      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
-    },
-    {
       "rule_id": "burnaby_r1_075",
       "candidate_id": "pipeline5_merged_rule_0069",
       "rule_object": "building_separation",
@@ -668,11 +670,12 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported"
       ],
       "review_category": "missing_condition_evidence",
       "likely_status": "weak",
-      "likely_correct_score": 0.541,
+      "likely_correct_score": 0.543,
       "triage_priority": "low",
       "review_rank": 245,
       "can_retry_verification": true,
@@ -687,14 +690,14 @@
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
-      "rule_id": "burnaby_r1_130",
-      "candidate_id": "pipeline5_merged_rule_0124",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "buildings on the same lot",
-      "operator": "allowed",
-      "value": "reduced",
-      "unit": "",
+      "rule_id": "burnaby_r1_066",
+      "candidate_id": "pipeline5_merged_rule_0060",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse lots",
+      "operator": ">",
+      "value": "280",
+      "unit": "m²",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
@@ -702,17 +705,19 @@
       ],
       "review_category": "missing_condition_evidence",
       "likely_status": "weak",
-      "likely_correct_score": 0.487,
+      "likely_correct_score": 0.507,
       "triage_priority": "low",
-      "review_rank": 250,
+      "review_rank": 248,
       "can_retry_verification": true,
       "repairable_fields": [
-        "operator"
+        "operator",
+        "condition",
+        "text_consensus_candidate"
       ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0066",
-      "best_repair_confidence": 0.796,
+      "best_repair_evidence_id": "pipeline5_merged_rule_0061",
+      "best_repair_confidence": 1.0,
       "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.80).",
+      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
@@ -774,37 +779,6 @@
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
-      "rule_id": "burnaby_r1_066",
-      "candidate_id": "pipeline5_merged_rule_0060",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "Rowhouse lots",
-      "operator": ">",
-      "value": "280",
-      "unit": "m²",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "text_condition_not_supported",
-        "operator_not_supported"
-      ],
-      "review_category": "missing_condition_evidence",
-      "likely_status": "weak",
-      "likely_correct_score": 0.454,
-      "triage_priority": "low",
-      "review_rank": 254,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "operator",
-        "condition",
-        "text_consensus_candidate"
-      ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0061",
-      "best_repair_confidence": 1.0,
-      "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
-      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
-    },
-    {
       "rule_id": "burnaby_r1_094",
       "candidate_id": "pipeline5_merged_rule_0089",
       "rule_object": "setback",
@@ -846,6 +820,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "review_category": "missing_condition_evidence",
@@ -877,6 +852,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "review_category": "missing_condition_evidence",
@@ -908,6 +884,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "review_category": "missing_condition_evidence",
@@ -939,6 +916,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "review_category": "missing_condition_evidence",
@@ -959,66 +937,6 @@
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
-      "rule_id": "burnaby_r1_029",
-      "candidate_id": "pipeline5_merged_rule_0025",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (5 to 6 Units)",
-      "operator": ">=",
-      "value": "281",
-      "unit": "m²",
-      "support_gaps": [
-        "applies_to_not_supported",
-        "table_applies_to_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "missing_applies_to",
-      "likely_status": "weak",
-      "likely_correct_score": 0.434,
-      "triage_priority": "low",
-      "review_rank": 256,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "applies_to"
-      ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0018",
-      "best_repair_confidence": 1.0,
-      "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
-      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
-    },
-    {
-      "rule_id": "burnaby_r1_120",
-      "candidate_id": "pipeline5_merged_rule_0114",
-      "rule_object": "fire_access_corridor",
-      "constraint_scope": "vertical_clearance",
-      "applies_to": "All dwelling units",
-      "operator": ">=",
-      "value": "2.5",
-      "unit": "m",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "text_condition_not_supported",
-        "rule_object_not_supported"
-      ],
-      "review_category": "missing_condition_evidence",
-      "likely_status": "weak",
-      "likely_correct_score": 0.424,
-      "triage_priority": "low",
-      "review_rank": 257,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "rule_object",
-        "condition"
-      ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0111",
-      "best_repair_confidence": 0.85,
-      "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.85).",
-      "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
-    },
-    {
       "rule_id": "burnaby_r1_081",
       "candidate_id": "pipeline5_merged_rule_0076",
       "rule_object": "height",
@@ -1029,6 +947,7 @@
       "unit": "m",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
         "rule_object_not_supported"
       ],
@@ -1059,6 +978,7 @@
       "unit": "m",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
         "rule_object_not_supported"
       ],
@@ -1079,13 +999,13 @@
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
-      "rule_id": "burnaby_r1_036",
-      "candidate_id": "pipeline5_merged_rule_0032",
-      "rule_object": "impervious_surface",
+      "rule_id": "burnaby_r1_034",
+      "candidate_id": "pipeline5_merged_rule_0030",
+      "rule_object": "lot_coverage",
       "constraint_scope": "lot",
-      "applies_to": "Rowhouse; Small-Scale Multi-Unit (5 to 6 Units)",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
       "operator": "<=",
-      "value": "70",
+      "value": "40",
       "unit": "%",
       "support_gaps": [
         "applies_to_not_supported",
@@ -1096,17 +1016,17 @@
       ],
       "review_category": "missing_applies_to",
       "likely_status": "weak",
-      "likely_correct_score": 0.404,
+      "likely_correct_score": 0.417,
       "triage_priority": "low",
-      "review_rank": 259,
+      "review_rank": 257,
       "can_retry_verification": true,
       "repairable_fields": [
         "scope"
       ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0120",
-      "best_repair_confidence": 1.0,
+      "best_repair_evidence_id": "pipeline5_merged_rule_0028",
+      "best_repair_confidence": 0.976,
       "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
+      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.98).",
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
@@ -1127,9 +1047,9 @@
       ],
       "review_category": "missing_applies_to",
       "likely_status": "weak",
-      "likely_correct_score": 0.4,
+      "likely_correct_score": 0.412,
       "triage_priority": "low",
-      "review_rank": 259,
+      "review_rank": 258,
       "can_retry_verification": true,
       "repairable_fields": [
         "scope"
@@ -1158,9 +1078,9 @@
       ],
       "review_category": "missing_applies_to",
       "likely_status": "weak",
-      "likely_correct_score": 0.4,
+      "likely_correct_score": 0.412,
       "triage_priority": "low",
-      "review_rank": 259,
+      "review_rank": 258,
       "can_retry_verification": true,
       "repairable_fields": [
         "scope"
@@ -1172,13 +1092,13 @@
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
-      "rule_id": "burnaby_r1_034",
-      "candidate_id": "pipeline5_merged_rule_0030",
-      "rule_object": "lot_coverage",
+      "rule_id": "burnaby_r1_036",
+      "candidate_id": "pipeline5_merged_rule_0032",
+      "rule_object": "impervious_surface",
       "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "applies_to": "Rowhouse; Small-Scale Multi-Unit (5 to 6 Units)",
       "operator": "<=",
-      "value": "40",
+      "value": "70",
       "unit": "%",
       "support_gaps": [
         "applies_to_not_supported",
@@ -1189,17 +1109,17 @@
       ],
       "review_category": "missing_applies_to",
       "likely_status": "weak",
-      "likely_correct_score": 0.4,
+      "likely_correct_score": 0.408,
       "triage_priority": "low",
-      "review_rank": 259,
+      "review_rank": 258,
       "can_retry_verification": true,
       "repairable_fields": [
         "scope"
       ],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0028",
-      "best_repair_confidence": 0.976,
+      "best_repair_evidence_id": "pipeline5_merged_rule_0120",
+      "best_repair_confidence": 1.0,
       "action_bucket": "retry_with_better_evidence",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.98).",
+      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 1.00).",
       "next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again."
     },
     {
@@ -1252,9 +1172,9 @@
       ],
       "review_category": "missing_applies_to",
       "likely_status": "weak",
-      "likely_correct_score": 0.377,
+      "likely_correct_score": 0.385,
       "triage_priority": "low",
-      "review_rank": 261,
+      "review_rank": 260,
       "can_retry_verification": true,
       "repairable_fields": [
         "scope",
@@ -1276,17 +1196,16 @@
       "value": "1",
       "unit": "units",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
         "operator_not_supported",
-        "table_applies_to_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "table_applies_to_not_supported"
       ],
       "review_category": "operator_uncertain",
       "likely_status": "likely_wrong_or_noise",
-      "likely_correct_score": 0.295,
+      "likely_correct_score": 0.347,
       "triage_priority": "low",
-      "review_rank": 269,
+      "review_rank": 264,
       "can_retry_verification": true,
       "repairable_fields": [
         "operator"
@@ -1349,7 +1268,7 @@
       ],
       "review_category": "missing_condition_evidence",
       "likely_status": "likely_wrong_or_noise",
-      "likely_correct_score": 0.106,
+      "likely_correct_score": 0.109,
       "triage_priority": "low",
       "review_rank": 288,
       "can_retry_verification": true,
@@ -1498,32 +1417,6 @@
       "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
     },
     {
-      "rule_id": "burnaby_r1_041",
-      "candidate_id": "pipeline5_merged_rule_0037",
-      "rule_object": "storeys",
-      "constraint_scope": "building",
-      "applies_to": "Front Principal Buildings",
-      "operator": "<=",
-      "value": "2.5",
-      "unit": "storeys",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "likely_status": "likely_correct",
-      "likely_correct_score": 0.826,
-      "triage_priority": "high",
-      "review_rank": 18,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
-    },
-    {
       "rule_id": "burnaby_r1_047",
       "candidate_id": "pipeline5_merged_rule_0043",
       "rule_object": "setback",
@@ -1541,188 +1434,6 @@
       "likely_correct_score": 0.826,
       "triage_priority": "high",
       "review_rank": 18,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
-    },
-    {
-      "rule_id": "burnaby_r1_040",
-      "candidate_id": "pipeline5_merged_rule_0036",
-      "rule_object": "storeys",
-      "constraint_scope": "building",
-      "applies_to": "Front Principal Buildings",
-      "operator": "<=",
-      "value": "3",
-      "unit": "storeys",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "likely_status": "likely_correct",
-      "likely_correct_score": 0.824,
-      "triage_priority": "high",
-      "review_rank": 18,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
-    },
-    {
-      "rule_id": "burnaby_r1_038",
-      "candidate_id": "pipeline5_merged_rule_0034",
-      "rule_object": "height",
-      "constraint_scope": "building",
-      "applies_to": "Front Principal Buildings",
-      "operator": "<=",
-      "value": "10",
-      "unit": "m",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "likely_status": "likely_correct",
-      "likely_correct_score": 0.82,
-      "triage_priority": "high",
-      "review_rank": 18,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
-    },
-    {
-      "rule_id": "burnaby_r1_039",
-      "candidate_id": "pipeline5_merged_rule_0035",
-      "rule_object": "height",
-      "constraint_scope": "building",
-      "applies_to": "Front Principal Buildings",
-      "operator": "<=",
-      "value": "9.5",
-      "unit": "m",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "likely_status": "likely_correct",
-      "likely_correct_score": 0.82,
-      "triage_priority": "high",
-      "review_rank": 18,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
-    },
-    {
-      "rule_id": "burnaby_r1_056",
-      "candidate_id": "pipeline5_merged_rule_0050",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-      "operator": ">=",
-      "value": "2.4",
-      "unit": "m",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "likely_status": "likely_correct",
-      "likely_correct_score": 0.818,
-      "triage_priority": "high",
-      "review_rank": 19,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
-    },
-    {
-      "rule_id": "burnaby_r1_018",
-      "candidate_id": "pipeline5_merged_rule_0018",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit",
-      "operator": ">=",
-      "value": "281",
-      "unit": "m²",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "likely_status": "likely_correct",
-      "likely_correct_score": 0.78,
-      "triage_priority": "high",
-      "review_rank": 22,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
-    },
-    {
-      "rule_id": "burnaby_r1_061",
-      "candidate_id": "pipeline5_merged_rule_0055",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Dwelling Units",
-      "operator": ">=",
-      "value": "2",
-      "unit": "units",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.771,
-      "triage_priority": "high",
-      "review_rank": 23,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
-    },
-    {
-      "rule_id": "burnaby_r1_060",
-      "candidate_id": "pipeline5_merged_rule_0054",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Dwelling Units",
-      "operator": ">=",
-      "value": "1",
-      "unit": "units",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.77,
-      "triage_priority": "high",
-      "review_rank": 23,
       "can_retry_verification": false,
       "repairable_fields": [],
       "best_repair_evidence_id": null,
@@ -1836,56 +1547,30 @@
       "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
     },
     {
-      "rule_id": "burnaby_r1_001",
-      "candidate_id": "pipeline5_merged_rule_0001",
-      "rule_object": "permitted_use",
-      "constraint_scope": "use",
-      "applies_to": "Principal Use",
+      "rule_id": "burnaby_r1_130",
+      "candidate_id": "pipeline5_merged_rule_0124",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "buildings on the same lot",
       "operator": "allowed",
-      "value": "Permitted",
+      "value": "reduced",
       "unit": "",
       "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
       ],
-      "review_category": "near_verified_table_context",
+      "review_category": "missing_condition_evidence",
       "likely_status": "plausible",
-      "likely_correct_score": 0.728,
+      "likely_correct_score": 0.687,
       "triage_priority": "high",
-      "review_rank": 27,
+      "review_rank": 31,
       "can_retry_verification": false,
       "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
-    },
-    {
-      "rule_id": "burnaby_r1_004",
-      "candidate_id": "pipeline5_merged_rule_0004",
-      "rule_object": "permitted_use",
-      "constraint_scope": "use",
-      "applies_to": "Principal Use",
-      "operator": "allowed",
-      "value": "Permitted",
-      "unit": "",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.713,
-      "triage_priority": "high",
-      "review_rank": 29,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "safe_verifier_tuning_candidate",
-      "action_reason": "Category `near_verified_table_context` has high support but is blocked by conservative verifier gates.",
-      "next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates."
+      "best_repair_evidence_id": "pipeline5_merged_rule_0066",
+      "best_repair_confidence": 0.796,
+      "action_bucket": "evidence_packet_repair_candidate",
+      "action_reason": "Evidence repair found a possible stronger packet, but not enough fields for automatic retry (confidence 0.80).",
+      "next_step": "Repair Pipeline 5 evidence attachment or retrieval context, then rerun verification."
     },
     {
       "rule_id": "burnaby_r1_068",
@@ -1928,7 +1613,7 @@
       ],
       "review_category": "operator_uncertain",
       "likely_status": "plausible",
-      "likely_correct_score": 0.6,
+      "likely_correct_score": 0.601,
       "triage_priority": "low",
       "review_rank": 239,
       "can_retry_verification": false,
@@ -1966,6 +1651,31 @@
       "next_step": "Repair Pipeline 5 evidence attachment or retrieval context, then rerun verification."
     },
     {
+      "rule_id": "burnaby_r1_067",
+      "candidate_id": "pipeline5_merged_rule_0061",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "rowhouse dwellings",
+      "operator": ">",
+      "value": "280",
+      "unit": "m²",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "review_category": "text_candidate_needs_consensus",
+      "likely_status": "likely_correct",
+      "likely_correct_score": 0.872,
+      "triage_priority": "medium",
+      "review_rank": 112,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "best_repair_evidence_id": "pipeline5_merged_rule_0060",
+      "best_repair_confidence": 1.0,
+      "action_bucket": "needs_second_source_consensus",
+      "action_reason": "Pipeline 5 text candidate needs a second source or table-backed consensus before promotion.",
+      "next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review."
+    },
+    {
       "rule_id": "burnaby_r1_063",
       "candidate_id": "pipeline5_merged_rule_0057",
       "rule_object": "dwelling_units",
@@ -1991,56 +1701,6 @@
       "next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review."
     },
     {
-      "rule_id": "burnaby_r1_067",
-      "candidate_id": "pipeline5_merged_rule_0061",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "rowhouse dwellings",
-      "operator": ">",
-      "value": "280",
-      "unit": "m²",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
-      ],
-      "review_category": "text_candidate_needs_consensus",
-      "likely_status": "likely_correct",
-      "likely_correct_score": 0.839,
-      "triage_priority": "medium",
-      "review_rank": 115,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0060",
-      "best_repair_confidence": 1.0,
-      "action_bucket": "needs_second_source_consensus",
-      "action_reason": "Pipeline 5 text candidate needs a second source or table-backed consensus before promotion.",
-      "next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review."
-    },
-    {
-      "rule_id": "burnaby_r1_116",
-      "candidate_id": "pipeline5_merged_rule_0110",
-      "rule_object": "automatic_sprinkler",
-      "constraint_scope": "dwelling_unit",
-      "applies_to": "Dwelling units more than 45 m from a street lot line",
-      "operator": ">",
-      "value": 45,
-      "unit": "m",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
-      ],
-      "review_category": "text_candidate_needs_consensus",
-      "likely_status": "likely_correct",
-      "likely_correct_score": 0.839,
-      "triage_priority": "medium",
-      "review_rank": 115,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": "pipeline5_merged_rule_0061",
-      "best_repair_confidence": 0.873,
-      "action_bucket": "needs_second_source_consensus",
-      "action_reason": "Pipeline 5 text candidate needs a second source or table-backed consensus before promotion.",
-      "next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review."
-    },
-    {
       "rule_id": "burnaby_r1_087",
       "candidate_id": "pipeline5_merged_rule_0082",
       "rule_object": "permitted_use",
@@ -2053,10 +1713,10 @@
         "pipeline5_text_candidate_requires_review"
       ],
       "review_category": "text_candidate_needs_consensus",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.772,
+      "likely_status": "likely_correct",
+      "likely_correct_score": 0.811,
       "triage_priority": "medium",
-      "review_rank": 122,
+      "review_rank": 118,
       "can_retry_verification": false,
       "repairable_fields": [],
       "best_repair_evidence_id": "pipeline5_merged_rule_0001",
@@ -2079,7 +1739,7 @@
       ],
       "review_category": "text_candidate_needs_consensus",
       "likely_status": "plausible",
-      "likely_correct_score": 0.77,
+      "likely_correct_score": 0.772,
       "triage_priority": "medium",
       "review_rank": 122,
       "can_retry_verification": false,
@@ -2089,106 +1749,6 @@
       "action_bucket": "needs_second_source_consensus",
       "action_reason": "Pipeline 5 text candidate needs a second source or table-backed consensus before promotion.",
       "next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review."
-    },
-    {
-      "rule_id": "burnaby_r1_051",
-      "candidate_id": "pipeline5_merged_rule_0047__api_01",
-      "rule_object": "setback",
-      "constraint_scope": "interior_rear_yard",
-      "applies_to": "Rear Principal Buildings",
-      "operator": ">=",
-      "value": "3.0",
-      "unit": "m",
-      "support_gaps": [
-        "unresolved_exception_cue"
-      ],
-      "review_category": "unresolved_exception",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.758,
-      "triage_priority": "high",
-      "review_rank": 24,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "human_legal_review",
-      "action_reason": "Category `unresolved_exception` can change legal meaning, so deterministic relaxation is unsafe.",
-      "next_step": "Resolve exception, override, or sibling-rule conflict manually before changing verifier behavior."
-    },
-    {
-      "rule_id": "burnaby_r1_052",
-      "candidate_id": "pipeline5_merged_rule_0047__api_02",
-      "rule_object": "setback",
-      "constraint_scope": "interior_rear_yard",
-      "applies_to": "All Buildings",
-      "operator": ">=",
-      "value": "1.5",
-      "unit": "m",
-      "support_gaps": [
-        "unresolved_exception_cue"
-      ],
-      "review_category": "unresolved_exception",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.758,
-      "triage_priority": "high",
-      "review_rank": 24,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "human_legal_review",
-      "action_reason": "Category `unresolved_exception` can change legal meaning, so deterministic relaxation is unsafe.",
-      "next_step": "Resolve exception, override, or sibling-rule conflict manually before changing verifier behavior."
-    },
-    {
-      "rule_id": "burnaby_r1_053",
-      "candidate_id": "pipeline5_merged_rule_0048__api_01",
-      "rule_object": "setback",
-      "constraint_scope": "interior_side_yard",
-      "applies_to": "All Buildings",
-      "operator": ">=",
-      "value": "0",
-      "unit": "m",
-      "support_gaps": [
-        "unresolved_exception_cue"
-      ],
-      "review_category": "unresolved_exception",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.752,
-      "triage_priority": "high",
-      "review_rank": 25,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "human_legal_review",
-      "action_reason": "Category `unresolved_exception` can change legal meaning, so deterministic relaxation is unsafe.",
-      "next_step": "Resolve exception, override, or sibling-rule conflict manually before changing verifier behavior."
-    },
-    {
-      "rule_id": "burnaby_r1_054",
-      "candidate_id": "pipeline5_merged_rule_0048__api_02",
-      "rule_object": "setback",
-      "constraint_scope": "interior_side_yard",
-      "applies_to": "All Buildings",
-      "operator": ">=",
-      "value": "1.2",
-      "unit": "m",
-      "support_gaps": [
-        "unresolved_exception_cue"
-      ],
-      "review_category": "unresolved_exception",
-      "likely_status": "plausible",
-      "likely_correct_score": 0.752,
-      "triage_priority": "high",
-      "review_rank": 25,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "best_repair_evidence_id": null,
-      "best_repair_confidence": 0.0,
-      "action_bucket": "human_legal_review",
-      "action_reason": "Category `unresolved_exception` can change legal meaning, so deterministic relaxation is unsafe.",
-      "next_step": "Resolve exception, override, or sibling-rule conflict manually before changing verifier behavior."
     },
     {
       "rule_id": "burnaby_r1_126",
@@ -2239,9 +1799,9 @@
       ],
       "review_category": "cross_family_conflict",
       "likely_status": "likely_wrong_or_noise",
-      "likely_correct_score": 0.259,
+      "likely_correct_score": 0.278,
       "triage_priority": "high",
-      "review_rank": 74,
+      "review_rank": 72,
       "can_retry_verification": true,
       "repairable_fields": [
         "scope"
@@ -2281,6 +1841,56 @@
       "next_step": "Send back to extraction/adapter normalization; do not tune verifier around this case."
     },
     {
+      "rule_id": "burnaby_r1_061",
+      "candidate_id": "pipeline5_merged_rule_0055",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Dwelling Units",
+      "operator": ">=",
+      "value": "2",
+      "unit": "units",
+      "support_gaps": [
+        "rule_family_direction_mismatch"
+      ],
+      "review_category": "general_review",
+      "likely_status": "likely_correct",
+      "likely_correct_score": 0.827,
+      "triage_priority": "medium",
+      "review_rank": 117,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "best_repair_evidence_id": null,
+      "best_repair_confidence": 0.0,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "No safe automatic repair path yet (category `general_review`, score 0.83).",
+      "next_step": "Leave in low-priority review until more evidence or a broader bylaw benchmark is available."
+    },
+    {
+      "rule_id": "burnaby_r1_060",
+      "candidate_id": "pipeline5_merged_rule_0054",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Dwelling Units",
+      "operator": ">=",
+      "value": "1",
+      "unit": "units",
+      "support_gaps": [
+        "rule_family_direction_mismatch"
+      ],
+      "review_category": "general_review",
+      "likely_status": "likely_correct",
+      "likely_correct_score": 0.825,
+      "triage_priority": "medium",
+      "review_rank": 117,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "best_repair_evidence_id": null,
+      "best_repair_confidence": 0.0,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "No safe automatic repair path yet (category `general_review`, score 0.82).",
+      "next_step": "Leave in low-priority review until more evidence or a broader bylaw benchmark is available."
+    },
+    {
       "rule_id": "burnaby_r1_099",
       "candidate_id": "pipeline5_merged_rule_0094",
       "rule_object": "permitted_use",
@@ -2295,15 +1905,15 @@
       ],
       "review_category": "operator_uncertain",
       "likely_status": "plausible",
-      "likely_correct_score": 0.58,
+      "likely_correct_score": 0.609,
       "triage_priority": "low",
-      "review_rank": 241,
+      "review_rank": 238,
       "can_retry_verification": false,
       "repairable_fields": [],
       "best_repair_evidence_id": "pipeline5_merged_rule_0085",
       "best_repair_confidence": 0.419,
       "action_bucket": "defer_low_priority",
-      "action_reason": "No safe automatic repair path yet (category `operator_uncertain`, score 0.58).",
+      "action_reason": "No safe automatic repair path yet (category `operator_uncertain`, score 0.61).",
       "next_step": "Leave in low-priority review until more evidence or a broader bylaw benchmark is available."
     }
   ],
@@ -2311,30 +1921,30 @@
     "action_counts": [
       {
         "name": "retry_with_better_evidence",
-        "count": 49
+        "count": 46
       },
       {
         "name": "safe_verifier_tuning_candidate",
-        "count": 16
-      },
-      {
-        "name": "human_legal_review",
         "count": 6
       },
       {
-        "name": "needs_second_source_consensus",
-        "count": 5
-      },
-      {
         "name": "evidence_packet_repair_candidate",
-        "count": 3
+        "count": 4
       },
       {
-        "name": "upstream_candidate_issue",
-        "count": 1
+        "name": "needs_second_source_consensus",
+        "count": 4
       },
       {
         "name": "defer_low_priority",
+        "count": 3
+      },
+      {
+        "name": "human_legal_review",
+        "count": 2
+      },
+      {
+        "name": "upstream_candidate_issue",
         "count": 1
       }
     ],
@@ -2342,10 +1952,6 @@
       {
         "name": "missing_condition_evidence",
         "count": 21
-      },
-      {
-        "name": "near_verified_table_context",
-        "count": 16
       },
       {
         "name": "missing_applies_to",
@@ -2356,16 +1962,20 @@
         "count": 12
       },
       {
-        "name": "text_candidate_needs_consensus",
-        "count": 9
+        "name": "near_verified_table_context",
+        "count": 6
       },
       {
-        "name": "unresolved_exception",
+        "name": "text_candidate_needs_consensus",
+        "count": 5
+      },
+      {
+        "name": "general_review",
         "count": 4
       },
       {
         "name": "missing_scope_evidence",
-        "count": 3
+        "count": 2
       },
       {
         "name": "cross_family_conflict",
@@ -2388,15 +1998,7 @@
     "top_support_gaps": [
       {
         "name": "pipeline5_text_candidate_requires_review",
-        "count": 44
-      },
-      {
-        "name": "table_cell_candidate_requires_review",
-        "count": 31
-      },
-      {
-        "name": "table_evidence_candidate_requires_review",
-        "count": 31
+        "count": 42
       },
       {
         "name": "applies_to_not_supported",
@@ -2408,26 +2010,34 @@
       },
       {
         "name": "operator_not_supported",
-        "count": 20
+        "count": 19
+      },
+      {
+        "name": "rule_family_direction_mismatch",
+        "count": 18
+      },
+      {
+        "name": "table_cell_candidate_requires_review",
+        "count": 15
+      },
+      {
+        "name": "table_evidence_candidate_requires_review",
+        "count": 15
       },
       {
         "name": "rule_object_not_supported",
-        "count": 14
-      },
-      {
-        "name": "table_column_not_target_scope",
-        "count": 10
+        "count": 13
       },
       {
         "name": "table_applies_to_not_supported",
         "count": 10
       },
       {
-        "name": "constraint_scope_not_supported",
-        "count": 4
+        "name": "table_column_not_target_scope",
+        "count": 9
       },
       {
-        "name": "unresolved_exception_cue",
+        "name": "constraint_scope_not_supported",
         "count": 4
       },
       {
@@ -2436,10 +2046,10 @@
       }
     ],
     "recommendations": [
-      "Start with 49 rules that can be rerun against stronger evidence.",
-      "Audit 16 near-verified rules for safe general verifier/table-scope tuning.",
-      "Repair evidence attachments for 3 rules before changing verifier logic.",
-      "Keep 6 exception/conflict rules in human legal review.",
+      "Start with 46 rules that can be rerun against stronger evidence.",
+      "Audit 6 near-verified rules for safe general verifier/table-scope tuning.",
+      "Repair evidence attachments for 4 rules before changing verifier logic.",
+      "Keep 2 exception/conflict rules in human legal review.",
       "Return 1 likely extraction/normalization mistakes upstream."
     ]
   }

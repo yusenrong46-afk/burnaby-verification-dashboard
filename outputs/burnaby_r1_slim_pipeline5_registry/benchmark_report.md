@@ -14,14 +14,14 @@
 
 ## Rule Metrics
 
-- Gold rules: 22
+- Gold rules: 29
 - Candidate rules: 142
-- Verified rules: 11
-- Review rules: 81
+- Verified rules: 27
+- Review rules: 66
 - Rejected rules: 16
-- Not-used / traceability-only rules: 34
+- Not-used / traceability-only rules: 33
 - Candidate recall: 1.00
-- Verified recall: 0.45
+- Verified recall: 0.90
 - Verified or review recall: 1.00
 - Extraction coverage recall (ceiling): 1.00
 - Verifier retention rate: 1.00
@@ -35,16 +35,16 @@
 
 ## Top Review / Rejection Reasons
 
-- `pipeline5_text_candidate_requires_review`: 79
-- `rule_object_not_supported`: 49
-- `table_cell_candidate_requires_review`: 46
-- `table_evidence_candidate_requires_review`: 46
-- `operator_not_supported`: 41
+- `pipeline5_text_candidate_requires_review`: 76
+- `rule_object_not_supported`: 46
+- `operator_not_supported`: 40
 - `applies_to_not_supported`: 38
-- `outside_current_rule_contract`: 31
-- `text_condition_not_supported`: 29
-- `table_column_not_target_scope`: 20
-- `table_applies_to_not_supported`: 10
+- `outside_current_rule_contract`: 30
+- `table_cell_candidate_requires_review`: 29
+- `table_evidence_candidate_requires_review`: 29
+- `text_condition_not_supported`: 28
+- `rule_family_direction_mismatch`: 25
+- `table_column_not_target_scope`: 19
 
 ## Evidence Quality
 
@@ -58,14 +58,14 @@
 ## Proof / Bayesian-Lite Triage
 
 - Proof trace completion rate: 1.00
-- Supported claims: 955
+- Supported claims: 966
 - Refuted claims: 4
-- Not-enough-info claims: 177
-- Mean evidence strength: 0.71
-- High-priority review rules: 20
+- Not-enough-info claims: 166
+- Mean evidence strength: 0.72
+- High-priority review rules: 6
 - Table proof rules: 61
-- Complete table proofs: 6
-- Partial table proofs: 55
+- Complete table proofs: 9
+- Partial table proofs: 52
 - Refuted table proofs: 0
 - Proof/decision mismatches: 0
 
@@ -83,7 +83,7 @@
 - False approvals: 0
 - False rejections: 0
 - Field expectation mismatches: 0
-- Needs review decisions: 5
+- Needs review decisions: 4
 
 ## Missed Gold Rules
 
@@ -97,6 +97,6 @@
 - PASS: `reject_accessory_rear_yard` -> needs_review (expected needs_review)
 - PASS: `needs_review_lane_yard` -> rejected (expected rejected)
 - PASS: `needs_review_rear_principal_rear_yard` -> needs_review (expected needs_review)
-- PASS: `needs_review_fire_access` -> needs_review (expected needs_review)
+- PASS: `needs_review_fire_access` -> rejected (expected rejected)
 - PASS: `needs_review_heritage_coverage` -> needs_review (expected needs_review)
 - PASS: `approve_all_verified_setbacks_and_separations` -> approved (expected approved)

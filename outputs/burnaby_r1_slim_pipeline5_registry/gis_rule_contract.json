@@ -4,301 +4,166 @@
   "source_document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
   "source_url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
   "input_mode": "pipeline5_registry",
+  "schema_version": "1.0",
   "rules": [
+    {
+      "rule_id": "burnaby_r1_001",
+      "rule_object": "permitted_use",
+      "constraint_type": "allowed",
+      "constraint_scope": "use",
+      "applies_to": "Principal Use",
+      "operator": "allowed",
+      "value": "Permitted",
+      "unit": "",
+      "condition": "",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 1,
+        "evidence_id": "pipeline5_merged_rule_0001",
+        "quote": "Principal Use | Small-Scale Multi-Unit Housing | Permitted | Principal Use | Small-Scale Multi-Unit Housing | Use-Specific Regulations: -"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_004",
+      "rule_object": "permitted_use",
+      "constraint_type": "allowed",
+      "constraint_scope": "use",
+      "applies_to": "Principal Use",
+      "operator": "allowed",
+      "value": "Permitted",
+      "unit": "",
+      "condition": "",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 1,
+        "evidence_id": "pipeline5_merged_rule_0004",
+        "quote": "Principal Use | Group Home | Permitted | Principal Use | Group Home | Use-Specific Regulations: -"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_018",
+      "rule_object": "lot_area",
+      "constraint_type": "minimum",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m²",
+      "condition": "",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 1,
+        "evidence_id": "pipeline5_merged_rule_0018",
+        "quote": "Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_038",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "building",
+      "applies_to": "Front Principal Buildings",
+      "operator": "<=",
+      "value": "10",
+      "unit": "m",
+      "condition": "sloping roof",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0034",
+        "quote": "Maximum Height | Front Principal Buildings | flat roof: 9.5 m | 10 m | Maximum Height | Front Principal Buildings | Height | sloping roof: 10 m | flat roof: 9.5 m"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_039",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "building",
+      "applies_to": "Front Principal Buildings",
+      "operator": "<=",
+      "value": "9.5",
+      "unit": "m",
+      "condition": "flat roof",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0035",
+        "quote": "Maximum Height | Front Principal Buildings | sloping roof: 10 m | 9.5 m | Maximum Height | Front Principal Buildings | Height | sloping roof: 10 m | flat roof: 9.5 m"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_040",
+      "rule_object": "storeys",
+      "constraint_type": "maximum",
+      "constraint_scope": "building",
+      "applies_to": "Front Principal Buildings",
+      "operator": "<=",
+      "value": "3",
+      "unit": "storeys",
+      "condition": "",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0036",
+        "quote": "Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 3 storeys | Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 3 storeys"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_041",
+      "rule_object": "storeys",
+      "constraint_type": "maximum",
+      "constraint_scope": "building",
+      "applies_to": "Front Principal Buildings",
+      "operator": "<=",
+      "value": "2.5",
+      "unit": "storeys",
+      "condition": "",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0037",
+        "quote": "Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 2.5 storeys | Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 2.5 storeys"
+      }
+    },
     {
       "rule_id": "burnaby_r1_042",
       "rule_object": "height",
       "constraint_type": "maximum",
       "constraint_scope": "building",
       "applies_to": "Rear Principal Buildings",
+      "operator": "<=",
       "value": "7.5",
       "unit": "m",
-      "operator": "<=",
       "condition": "sloping roof",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "height__building__rear_principal_buildings__sloping_roof____7_5__m",
-      "proof_type": "table_natural_logic_partial",
-      "table_proof_status": "partial",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Maximum Height",
-          "reason": "table context contains height cue"
-        },
-        "constraint_scope": {
-          "label": "not_enough_info",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Rear Principal Buildings | flat roof: 7.0 m",
-          "reason": "claim has no distinctive words"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Rear Principal Buildings | flat roof: 7.0 m | Maximum Height",
-          "reason": "applies_to words are present in table context"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Maximum Height",
-          "reason": "table wording implies <="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "7.5 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "7.5 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "flat roof: 7.0 m | Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-          "reason": "condition words are present in table context"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings flat roof: 7.0 m 7.5 m Maximum Hei...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "Rear Principal Buildings",
-          "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
-        }
-      ],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 2,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0038",
-        "evidence_type": "table_cell",
-        "evidence_text": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-        "source_context": "Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-        "local_context": "Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Maximum Height",
-        "row_header": "Rear Principal Buildings",
-        "column_header": "flat roof: 7.0 m",
-        "cell_value": "7.5 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0038",
-        "evidence_id": "pipeline5_merged_rule_0038",
-        "rule_object": "height",
-        "constraint_type": "maximum",
-        "constraint_scope": "building",
-        "applies_to": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": "<=",
-        "value": "7.5",
-        "unit": "m",
-        "condition": "sloping roof",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "rule_key": "Maximum Height - Rear Principal Buildings - Height",
-        "subject": "Rear Principal Buildings",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0048",
-        "original_excerpt": "Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m"
       }
     },
     {
@@ -307,294 +172,18 @@
       "constraint_type": "maximum",
       "constraint_scope": "building",
       "applies_to": "Rear Principal Buildings",
+      "operator": "<=",
       "value": "7.0",
       "unit": "m",
-      "operator": "<=",
       "condition": "flat roof",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "height__building__rear_principal_buildings__flat_roof____7_0__m",
-      "proof_type": "table_natural_logic_partial",
-      "table_proof_status": "partial",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Maximum Height",
-          "reason": "table context contains height cue"
-        },
-        "constraint_scope": {
-          "label": "not_enough_info",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Rear Principal Buildings | sloping roof: 7.5 m",
-          "reason": "claim has no distinctive words"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Rear Principal Buildings | sloping roof: 7.5 m | Maximum Height",
-          "reason": "applies_to words are present in table context"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Maximum Height",
-          "reason": "table wording implies <="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "7.0 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "7.0 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "sloping roof: 7.5 m | Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-          "reason": "condition words are present in table context"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m Maximum Height Rear Principal Buildings sloping roof: 7.5 m 7.0 m Maxim...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "Rear Principal Buildings",
-          "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
-        }
-      ],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 2,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0039",
-        "evidence_type": "table_cell",
-        "evidence_text": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-        "source_context": "Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-        "local_context": "Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Maximum Height",
-        "row_header": "Rear Principal Buildings",
-        "column_header": "sloping roof: 7.5 m",
-        "cell_value": "7.0 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0039",
-        "evidence_id": "pipeline5_merged_rule_0039",
-        "rule_object": "height",
-        "constraint_type": "maximum",
-        "constraint_scope": "building",
-        "applies_to": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": "<=",
-        "value": "7.0",
-        "unit": "m",
-        "condition": "flat roof",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "rule_key": "Maximum Height - Rear Principal Buildings - Height",
-        "subject": "Rear Principal Buildings",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0049",
-        "original_excerpt": "Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m"
       }
     },
     {
@@ -603,294 +192,18 @@
       "constraint_type": "maximum",
       "constraint_scope": "building",
       "applies_to": "Rear Principal Buildings",
+      "operator": "<=",
       "value": "2",
       "unit": "storeys",
-      "operator": "<=",
       "condition": "",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "storeys__building__rear_principal_buildings____2__storeys",
-      "proof_type": "table_natural_logic_partial",
-      "table_proof_status": "partial",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys",
-          "reason": "table context contains storeys cue"
-        },
-        "constraint_scope": {
-          "label": "not_enough_info",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Rear Principal Buildings | Storeys (basement inclusive)",
-          "reason": "claim has no distinctive words"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Rear Principal Buildings | Storeys (basement inclusive) | Maximum Height",
-          "reason": "applies_to words are present in table context"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Maximum Height",
-          "reason": "table wording implies <="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "2 storeys",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "2 storeys",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Storeys (basement inclusive) | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys Maximum Height Rear Principal Buildings Storeys (basement inclusi...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "Rear Principal Buildings",
-          "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
-        }
-      ],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 2,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0040",
-        "evidence_type": "table_cell",
-        "evidence_text": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys",
-        "source_context": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys",
-        "local_context": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Maximum Height",
-        "row_header": "Rear Principal Buildings",
-        "column_header": "Storeys (basement inclusive)",
-        "cell_value": "2 storeys",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0040",
-        "evidence_id": "pipeline5_merged_rule_0040",
-        "rule_object": "storeys",
-        "constraint_type": "maximum",
-        "constraint_scope": "building",
-        "applies_to": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": "<=",
-        "value": "2",
-        "unit": "storeys",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "rule_key": "Maximum Height - Rear Principal Buildings - Storeys",
-        "subject": "Rear Principal Buildings",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0056",
-        "original_excerpt": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys"
       }
     },
     {
@@ -899,294 +212,18 @@
       "constraint_type": "maximum",
       "constraint_scope": "building",
       "applies_to": "Accessory Buildings",
+      "operator": "<=",
       "value": "4.0",
       "unit": "m",
-      "operator": "<=",
       "condition": "",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "height__building__accessory_buildings____4_0__m",
-      "proof_type": "table_natural_logic_partial",
-      "table_proof_status": "partial",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Maximum Height",
-          "reason": "table context contains height cue"
-        },
-        "constraint_scope": {
-          "label": "not_enough_info",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Accessory Buildings | 1 storey",
-          "reason": "claim has no distinctive words"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Accessory Buildings | 1 storey | Maximum Height",
-          "reason": "applies_to words are present in table context"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Maximum Height",
-          "reason": "table wording implies <="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "4.0 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "4.0 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "1 storey | Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "Accessory Buildings",
-          "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
-        }
-      ],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 2,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0041",
-        "evidence_type": "table_cell",
-        "evidence_text": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-        "source_context": "Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-        "local_context": "Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Maximum Height",
-        "row_header": "Accessory Buildings",
-        "column_header": "1 storey",
-        "cell_value": "4.0 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0041",
-        "evidence_id": "pipeline5_merged_rule_0041",
-        "rule_object": "height",
-        "constraint_type": "maximum",
-        "constraint_scope": "building",
-        "applies_to": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": "<=",
-        "value": "4.0",
-        "unit": "m",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "rule_key": "Maximum Height - Accessory Buildings",
-        "subject": "Accessory Buildings",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0060",
-        "original_excerpt": "Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey"
       }
     },
     {
@@ -1195,294 +232,18 @@
       "constraint_type": "minimum",
       "constraint_scope": "street_yard_front",
       "applies_to": "All Buildings",
+      "operator": ">=",
       "value": "4.0",
       "unit": "m",
-      "operator": ">=",
       "condition": "front",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "setback__street_yard_front__all_buildings__front____4_0__m",
-      "proof_type": "table_natural_logic",
-      "table_proof_status": "complete",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table context contains setback cue"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Street Yard | flanking: 3.0 m",
-          "reason": "scope words are present in table row/column context"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Street Yard | flanking: 3.0 m | Minimum Lot Line Setbacks",
-          "reason": "claim has no distinctive words"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table wording implies >="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "4.0 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "4.0 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "flanking: 3.0 m | Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-          "reason": "condition words are present in table context"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard flanking: 3.0 m 4.0 m Minimum Lot...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "All Buildings",
-          "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
-        }
-      ],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 2,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0044",
-        "evidence_type": "table_cell",
-        "evidence_text": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "source_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "local_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Minimum Lot Line Setbacks",
-        "row_header": "Street Yard",
-        "column_header": "flanking: 3.0 m",
-        "cell_value": "4.0 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0044",
-        "evidence_id": "pipeline5_merged_rule_0044",
-        "rule_object": "setback",
-        "constraint_type": "minimum",
-        "constraint_scope": "street_yard_front",
-        "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": ">=",
-        "value": "4.0",
-        "unit": "m",
-        "condition": "front",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "rule_key": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
-        "subject": "Street Yard",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0069",
-        "original_excerpt": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m"
       }
     },
     {
@@ -1491,294 +252,18 @@
       "constraint_type": "minimum",
       "constraint_scope": "street_yard_flanking",
       "applies_to": "All Buildings",
+      "operator": ">=",
       "value": "3.0",
       "unit": "m",
-      "operator": ">=",
       "condition": "flanking",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "setback__street_yard_flanking__all_buildings__flanking____3_0__m",
-      "proof_type": "table_natural_logic",
-      "table_proof_status": "complete",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table context contains setback cue"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Street Yard | front: 4.0 m",
-          "reason": "scope words are present in table row/column context"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Street Yard | front: 4.0 m | Minimum Lot Line Setbacks",
-          "reason": "claim has no distinctive words"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table wording implies >="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "3.0 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "3.0 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "front: 4.0 m | Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-          "reason": "condition words are present in table context"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "All Buildings",
-          "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
-        }
-      ],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 2,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0045",
-        "evidence_type": "table_cell",
-        "evidence_text": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "source_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "local_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Minimum Lot Line Setbacks",
-        "row_header": "Street Yard",
-        "column_header": "front: 4.0 m",
-        "cell_value": "3.0 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0045",
-        "evidence_id": "pipeline5_merged_rule_0045",
-        "rule_object": "setback",
-        "constraint_type": "minimum",
-        "constraint_scope": "street_yard_flanking",
-        "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": ">=",
-        "value": "3.0",
-        "unit": "m",
-        "condition": "flanking",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "rule_key": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
-        "subject": "Street Yard",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0070",
-        "original_excerpt": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m"
       }
     },
     {
@@ -1787,294 +272,118 @@
       "constraint_type": "minimum",
       "constraint_scope": "lane_yard",
       "applies_to": "All Buildings",
+      "operator": ">=",
       "value": "1.5",
       "unit": "m",
-      "operator": ">=",
       "condition": "",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "setback__lane_yard__all_buildings____1_5__m",
-      "proof_type": "table_natural_logic",
-      "table_proof_status": "complete",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table context contains setback cue"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Lane Yard | Lane Yard",
-          "reason": "scope words are present in table row/column context"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Lane Yard | Lane Yard | Minimum Lot Line Setbacks",
-          "reason": "claim has no distinctive words"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table wording implies >="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "1.5 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "1.5 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Lane Yard | Minimum Lot Line Setbacks | Lane Yard | Lane Yard | 1.5 m | Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m Minimum Lot Line Setbacks Lane Yard Lane Yard 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "All Buildings",
-          "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
-        }
-      ],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 2,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0046",
-        "evidence_type": "table_cell",
-        "evidence_text": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-        "source_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-        "local_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Minimum Lot Line Setbacks",
-        "row_header": "Lane Yard",
-        "column_header": "Lane Yard",
-        "cell_value": "1.5 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0046",
-        "evidence_id": "pipeline5_merged_rule_0046",
-        "rule_object": "setback",
-        "constraint_type": "minimum",
-        "constraint_scope": "lane_yard",
-        "applies_to": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": ">=",
-        "value": "1.5",
-        "unit": "m",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "rule_key": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Lane Yard",
-        "subject": "Lane Yard",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0075",
-        "original_excerpt": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_051",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "interior_rear_yard",
+      "applies_to": "Rear Principal Buildings",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0047__api_01",
+        "quote": "Minimum Lot Line Setbacks | Interior Rear Yard | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Rear Yard | 3.0 m, except 1.5 m for accessory buildings"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_052",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "interior_rear_yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "1.5",
+      "unit": "m",
+      "condition": "accessory buildings",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0047__api_02",
+        "quote": "Minimum Lot Line Setbacks | Interior Rear Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Rear Yard | 3.0 m, except 1.5 m for accessory buildings"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_053",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "interior_side_yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "0",
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0048__api_01",
+        "quote": "Minimum Lot Line Setbacks | Interior Side Yard | 0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 0 m, except 1.2 m for end unit lots"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_054",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "interior_side_yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "condition": "end unit lots",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0048__api_02",
+        "quote": "Minimum Lot Line Setbacks | Interior Side Yard | 1.2 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 0 m, except 1.2 m for end unit lots"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_056",
+      "rule_object": "building_separation",
+      "constraint_type": "minimum",
+      "constraint_scope": "building_separation",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
+      "operator": ">=",
+      "value": "2.4",
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0050",
+        "quote": "Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m"
       }
     },
     {
@@ -2083,294 +392,18 @@
       "constraint_type": "minimum",
       "constraint_scope": "building_separation",
       "applies_to": "Rear Principal Buildings",
+      "operator": ">=",
       "value": "2.4",
       "unit": "m",
-      "operator": ">=",
       "condition": "",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "building_separation__building_separation__rear_principal_buildings____2_4__m",
-      "proof_type": "table_natural_logic_partial",
-      "table_proof_status": "partial",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Separation Of Buildings",
-          "reason": "table context contains building_separation cue"
-        },
-        "constraint_scope": {
-          "label": "not_enough_info",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Between Rear Principals | Between Rear Principals",
-          "reason": "table context does not prove this claim"
-        },
-        "applies_to": {
-          "label": "not_enough_info",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Between Rear Principals | Between Rear Principals | Minimum Separation Of Buildings",
-          "reason": "table context does not prove this claim"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Separation Of Buildings",
-          "reason": "table wording implies >="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "2.4 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "2.4 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Between Rear Principals | Minimum Separation Of Buildings | Between Rear Principals | Between Rear Principals | 2.4 m | Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "Rear Principal Buildings",
-          "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
-        }
-      ],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 2,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0051",
-        "evidence_type": "table_cell",
-        "evidence_text": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m",
-        "source_context": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m",
-        "local_context": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Minimum Separation Of Buildings",
-        "row_header": "Between Rear Principals",
-        "column_header": "Between Rear Principals",
-        "cell_value": "2.4 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0051",
-        "evidence_id": "pipeline5_merged_rule_0051",
-        "rule_object": "building_separation",
-        "constraint_type": "minimum",
-        "constraint_scope": "building_separation",
-        "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": ">=",
-        "value": "2.4",
-        "unit": "m",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "rule_key": "Minimum Separation of Buildings on the Same Lot .4 .5 - Between Rear Principals",
-        "subject": "Between Rear Principals",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0090",
-        "original_excerpt": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m"
       }
     },
     {
@@ -2379,294 +412,38 @@
       "constraint_type": "minimum",
       "constraint_scope": "building_separation",
       "applies_to": "Front and Rear Principal Buildings",
+      "operator": ">=",
       "value": "6.0",
       "unit": "m",
-      "operator": ">=",
       "condition": "",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "building_separation__building_separation__front_and_rear_principal_buildings____6_0__m",
-      "proof_type": "table_natural_logic_partial",
-      "table_proof_status": "partial",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Separation Of Buildings",
-          "reason": "table context contains building_separation cue"
-        },
-        "constraint_scope": {
-          "label": "not_enough_info",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Between Front & Rear Principals | Between Front & Rear Principals",
-          "reason": "table context does not prove this claim"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Between Front & Rear Principals | Between Front & Rear Principals | Minimum Separation Of Buildings",
-          "reason": "applies_to words are present in table context"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Separation Of Buildings",
-          "reason": "table wording implies >="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "6.0 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "6.0 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Between Front & Rear Principals | Minimum Separation Of Buildings | Between Front & Rear Principals | Between Front & Rear Principals | 6.0 m | Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m Minimum Separation Of Buildings Between Front & Rear Principals B...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "Front and Rear Principal Buildings",
-          "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
-        }
-      ],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 2,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0052",
-        "evidence_type": "table_cell",
-        "evidence_text": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m",
-        "source_context": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m",
-        "local_context": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Minimum Separation Of Buildings",
-        "row_header": "Between Front & Rear Principals",
-        "column_header": "Between Front & Rear Principals",
-        "cell_value": "6.0 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0052",
-        "evidence_id": "pipeline5_merged_rule_0052",
-        "rule_object": "building_separation",
-        "constraint_type": "minimum",
-        "constraint_scope": "building_separation",
-        "applies_to": "Rowhouse; Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": ">=",
-        "value": "6.0",
-        "unit": "m",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "rule_key": "Minimum Separation of Buildings on the Same Lot .4 .5 - Between Front & Rear Principals",
-        "subject": "Between Front & Rear Principals",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0093",
-        "original_excerpt": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_059",
+      "rule_object": "building_separation",
+      "constraint_type": "minimum",
+      "constraint_scope": "building_separation",
+      "applies_to": "All Other Buildings",
+      "operator": ">=",
+      "value": "2.4",
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0053",
+        "quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m"
       }
     },
     {
@@ -2675,287 +452,18 @@
       "constraint_type": "maximum",
       "constraint_scope": "lot",
       "applies_to": "dwelling units",
+      "operator": "<=",
       "value": "6",
       "unit": "units",
-      "operator": "<=",
       "condition": "SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)",
       "exception": "",
-      "gis_relevance": "context",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "dwelling_units__lot__dwelling_units__small_scale_multi_unit_housing_district_r1____6__units",
-      "proof_type": "text_evidence",
-      "table_proof_status": "none",
-      "text_span_proof_status": "complete",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "dwelling units",
-          "reason": "rule-object cue appears in text evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "maximum",
-          "reason": "text wording supports <= / maximum"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "ted residential dwellings up to a maximum of 6 dwelling units on a lot.\nThis District provi",
-          "reason": "value appears in text evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "units",
-          "reason": "unit appears in text evidence"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. This District provides for the use and development of primarily ground-oriented residenti...",
-          "reason": "scope words appear in text evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. This District provides for the use and development of primarily ground-oriented residenti...",
-          "reason": "applies_to words appear in text evidence"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "condition looks like a heading or non-material label"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no explicit exception claim and no unresolved exception cue"
-        }
-      },
-      "table_proof_trace": {},
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. lot 6 units This District provides for the use and development of primarily ground-orient...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 1,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0056",
-        "evidence_type": "clause",
-        "evidence_text": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot.",
-        "source_context": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot.",
-        "local_context": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot.",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": null,
-        "row_header": "lot",
-        "column_header": null,
-        "cell_value": "6 units",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0056",
-        "evidence_id": "pipeline5_merged_rule_0056",
-        "rule_object": "dwelling_units",
-        "constraint_type": "maximum",
-        "constraint_scope": "lot",
-        "applies_to": "dwelling units",
-        "operator": "<=",
-        "value": "6",
-        "unit": "units",
-        "condition": "SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)",
-        "exception": "",
-        "gis_relevance": "context",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_text_block",
-        "rule_key": "max_dwelling_units",
-        "subject": "lot",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "original_rule_id": "pipeline5_rule_0103",
-        "original_excerpt": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot.",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot."
       }
     },
     {
@@ -2964,288 +472,78 @@
       "constraint_type": "minimum",
       "constraint_scope": "building_separation",
       "applies_to": "principal building",
+      "operator": ">=",
       "value": "6.0",
       "unit": "m",
-      "operator": ">=",
       "condition": "located between a front and rear principal",
       "exception": "",
-      "gis_relevance": "direct",
       "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "building_separation__building_separation__principal_building__located_between_a_front_and_rear_principal____6_0__m",
-      "proof_type": "text_evidence",
-      "table_proof_status": "none",
-      "text_span_proof_status": "complete",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "separation",
-          "reason": "rule-object cue appears in text evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "minimum",
-          "reason": "text wording supports >= / minimum"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "front and rear principal must have a minimum 6.0 m separation from each of the front and rear",
-          "reason": "value appears in text evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "m",
-          "reason": "unit appears in text evidence"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals Any principal building located between a front and rear principal must have a minimum 6.0 m...",
-          "reason": "scope words appear in text evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals Any principal building located between a front and rear principal must have a minimum 6.0 m...",
-          "reason": "applies_to words appear in text evidence"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals Any principal building located between a front and rear principal must have a minimum 6.0 m...",
-          "reason": "material condition words appear in text evidence",
-          "required_for_text_verification": true
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no explicit exception claim and no unresolved exception cue"
-        }
-      },
-      "table_proof_trace": {},
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals separation from front and rear principals 6.0 m Any principal building located between a fr...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [],
-      "review_reason": "all critical evidence checks passed",
-      "source": {
+      "citation": {
         "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
         "page": 3,
-        "section": null,
         "evidence_id": "pipeline5_merged_rule_0068__api_01",
-        "evidence_type": "clause",
-        "evidence_text": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals",
-        "source_context": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals",
-        "local_context": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": null,
-        "row_header": "separation from front and rear principals",
-        "column_header": null,
-        "cell_value": "6.0 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0068__api_01",
-        "evidence_id": "pipeline5_merged_rule_0068__api_01",
-        "rule_object": "building_separation",
-        "constraint_type": "minimum",
-        "constraint_scope": "building_separation",
-        "applies_to": "principal building",
-        "operator": ">=",
-        "value": "6.0",
-        "unit": "m",
-        "condition": "located between a front and rear principal",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_text_block",
-        "rule_key": "separation_front_rear_principals",
-        "subject": "separation from front and rear principals",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": null,
-        "original_rule_id": "pipeline5_merged_rule_0068__api_01",
-        "original_excerpt": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null
+        "quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_116",
+      "rule_object": "automatic_sprinkler",
+      "constraint_type": "required",
+      "constraint_scope": "dwelling_unit",
+      "applies_to": "Dwelling units more than 45 m from a street lot line",
+      "operator": ">",
+      "value": 45,
+      "unit": "m",
+      "condition": "Dwelling units located more than 45 m from a lot line abutting a street",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 6,
+        "evidence_id": "pipeline5_merged_rule_0110",
+        "quote": "(1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system."
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_117",
+      "rule_object": "fire_access_corridor",
+      "constraint_type": "minimum",
+      "constraint_scope": "corridor_width",
+      "applies_to": "All dwelling units",
+      "operator": ">=",
+      "value": "1.0",
+      "unit": "m",
+      "condition": "All dwelling units",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 6,
+        "evidence_id": "pipeline5_merged_rule_0111",
+        "quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:"
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_120",
+      "rule_object": "fire_access_corridor",
+      "constraint_type": "minimum",
+      "constraint_scope": "vertical_clearance",
+      "applies_to": "All dwelling units",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "condition": "All dwelling units; must be clear of any projections or obstructions",
+      "exception": "",
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 6,
+        "evidence_id": "pipeline5_merged_rule_0114",
+        "quote": "(b) is clear of any projections or obstructions to a minimum of 2.5 m in height."
       }
     }
   ]

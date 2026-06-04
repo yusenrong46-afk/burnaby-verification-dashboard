@@ -1,7 +1,7 @@
 {
-  "suggestion_count": 61,
-  "alternative_evidence_count": 61,
-  "retry_candidate_count": 51,
+  "suggestion_count": 58,
+  "alternative_evidence_count": 58,
+  "retry_candidate_count": 48,
   "suggestions": [
     {
       "rule_id": "burnaby_r1_019",
@@ -15,6 +15,7 @@
       "unit": "m²",
       "current_evidence_id": "pipeline5_merged_rule_0019",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "table_column_not_target_scope",
         "table_cell_candidate_requires_review",
         "table_evidence_candidate_requires_review"
@@ -88,11 +89,10 @@
       "unit": "units",
       "current_evidence_id": "pipeline5_merged_rule_0020__api_01",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
         "operator_not_supported",
-        "table_applies_to_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "table_applies_to_not_supported"
       ],
       "best_repair_confidence": 1.0,
       "can_retry_verification": true,
@@ -162,9 +162,8 @@
       "unit": "units",
       "current_evidence_id": "pipeline5_merged_rule_0021__api_01",
       "support_gaps": [
-        "operator_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
       ],
       "best_repair_confidence": 1.0,
       "can_retry_verification": true,
@@ -237,9 +236,8 @@
       "unit": "units",
       "current_evidence_id": "pipeline5_merged_rule_0022__api_01",
       "support_gaps": [
-        "operator_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
       ],
       "best_repair_confidence": 1.0,
       "can_retry_verification": true,
@@ -311,6 +309,7 @@
       "unit": "units",
       "current_evidence_id": "pipeline5_merged_rule_0023__api_01",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "operator_not_supported"
       ],
       "best_repair_confidence": 1.0,
@@ -455,9 +454,7 @@
       "current_evidence_id": "pipeline5_merged_rule_0025",
       "support_gaps": [
         "applies_to_not_supported",
-        "table_applies_to_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "table_applies_to_not_supported"
       ],
       "best_repair_confidence": 1.0,
       "can_retry_verification": true,
@@ -531,10 +528,9 @@
       "unit": "m²",
       "current_evidence_id": "pipeline5_merged_rule_0026",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
-        "table_applies_to_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "table_applies_to_not_supported"
       ],
       "best_repair_confidence": 1.0,
       "can_retry_verification": true,
@@ -886,81 +882,6 @@
             "applies_to_overlap"
           ],
           "evidence_quote": "Maximum Height Front Principal Buildings Storeys (basement inclusive) 2.5 storeys Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 2.5 storeys | Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 2.5 store..."
-        }
-      ]
-    },
-    {
-      "rule_id": "burnaby_r1_059",
-      "candidate_id": "pipeline5_merged_rule_0053",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "All Other Buildings",
-      "condition": "",
-      "operator": ">=",
-      "value": "2.4",
-      "unit": "m",
-      "current_evidence_id": "pipeline5_merged_rule_0053",
-      "support_gaps": [
-        "table_column_not_target_scope",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "best_repair_confidence": 1.0,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "scope"
-      ],
-      "top_evidence": [
-        {
-          "evidence_id": "pipeline5_merged_rule_0050",
-          "page": 2,
-          "evidence_type": "table_cell",
-          "raw_score": 13.99,
-          "repair_confidence": 1.0,
-          "match_reasons": [
-            "alternative_evidence",
-            "value_match",
-            "unit_match",
-            "rule_object_cue",
-            "operator_cue",
-            "scope_overlap",
-            "applies_to_overlap"
-          ],
-          "evidence_quote": "Minimum Separation Of Buildings Between Front Principals Between Front Principals 2.4 m Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m Minimum Sep..."
-        },
-        {
-          "evidence_id": "pipeline5_merged_rule_0051",
-          "page": 2,
-          "evidence_type": "table_cell",
-          "raw_score": 13.99,
-          "repair_confidence": 1.0,
-          "match_reasons": [
-            "alternative_evidence",
-            "value_match",
-            "unit_match",
-            "rule_object_cue",
-            "operator_cue",
-            "scope_overlap",
-            "applies_to_overlap"
-          ],
-          "evidence_quote": "Minimum Separation Of Buildings Between Rear Principals Between Rear Principals 2.4 m Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m Minimum Separat..."
-        },
-        {
-          "evidence_id": "pipeline5_merged_rule_0070",
-          "page": 3,
-          "evidence_type": "clause",
-          "raw_score": 13.55,
-          "repair_confidence": 1.0,
-          "match_reasons": [
-            "alternative_evidence",
-            "value_match",
-            "unit_match",
-            "rule_object_cue",
-            "operator_cue",
-            "scope_overlap",
-            "applies_to_overlap"
-          ],
-          "evidence_quote": "separation from other principals between it and a side lot line 2.4 m and a minimum 2.4 m separation from any other principals between it and a side lot line. and a minimum 2.4 m separation from any other principals between it and a side lot line."
         }
       ]
     },
@@ -1578,7 +1499,8 @@
       "unit": "dwelling unit",
       "current_evidence_id": "pipeline5_merged_rule_0072__api_01",
       "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
       ],
       "best_repair_confidence": 1.0,
       "can_retry_verification": true,
@@ -1655,6 +1577,7 @@
       "current_evidence_id": "pipeline5_merged_rule_0077",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
         "rule_object_not_supported"
       ],
@@ -2043,6 +1966,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported"
       ],
       "best_repair_confidence": 1.0,
@@ -2198,6 +2122,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported"
       ],
       "best_repair_confidence": 1.0,
@@ -2269,7 +2194,8 @@
       "unit": "m",
       "current_evidence_id": "pipeline5_merged_rule_0107",
       "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
       ],
       "best_repair_confidence": 1.0,
       "can_retry_verification": true,
@@ -2331,74 +2257,76 @@
       ]
     },
     {
-      "rule_id": "burnaby_r1_117",
-      "candidate_id": "pipeline5_merged_rule_0111",
+      "rule_id": "burnaby_r1_121",
+      "candidate_id": "pipeline5_merged_rule_0115",
       "rule_object": "fire_access_corridor",
-      "constraint_scope": "corridor_width",
+      "constraint_scope": "heritage_irregular_lots_permitted",
       "applies_to": "All dwelling units",
-      "condition": "All dwelling units",
-      "operator": ">=",
-      "value": "1.0",
-      "unit": "m",
-      "current_evidence_id": "pipeline5_merged_rule_0111",
+      "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
+      "operator": "allowed",
+      "value": "",
+      "unit": "",
+      "current_evidence_id": "pipeline5_merged_rule_0115",
       "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
       ],
       "best_repair_confidence": 1.0,
       "can_retry_verification": true,
       "repairable_fields": [
-        "text_consensus_candidate"
+        "condition"
       ],
       "top_evidence": [
         {
-          "evidence_id": "pipeline5_merged_rule_0112",
-          "page": 6,
+          "evidence_id": "pipeline5_merged_rule_0079",
+          "page": 4,
           "evidence_type": "clause",
-          "raw_score": 15.85,
+          "raw_score": 14.35,
           "repair_confidence": 1.0,
           "match_reasons": [
             "alternative_evidence",
             "value_match",
             "unit_match",
-            "rule_object_cue",
             "operator_cue",
             "scope_overlap",
             "applies_to_overlap",
             "condition_overlap"
           ],
-          "evidence_quote": "fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:"
+          "evidence_quote": "Boarding, lodging or rooming houses permitted (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is inc..."
         },
         {
-          "evidence_id": "pipeline5_merged_rule_0108",
-          "page": 5,
+          "evidence_id": "pipeline5_merged_rule_0080",
+          "page": 4,
           "evidence_type": "clause",
-          "raw_score": 8.85,
-          "repair_confidence": 0.681,
+          "raw_score": 14.35,
+          "repair_confidence": 1.0,
           "match_reasons": [
             "alternative_evidence",
+            "value_match",
             "unit_match",
             "operator_cue",
             "scope_overlap",
             "applies_to_overlap",
             "condition_overlap"
           ],
-          "evidence_quote": "outdoor amenity space 2.0 m An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves. An outdoor amenity space..."
+          "evidence_quote": "capacity 5 persons (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehe..."
         },
         {
-          "evidence_id": "pipeline5_merged_rule_0109",
-          "page": 5,
+          "evidence_id": "pipeline5_merged_rule_0081",
+          "page": 4,
           "evidence_type": "clause",
-          "raw_score": 8.85,
-          "repair_confidence": 0.681,
+          "raw_score": 14.35,
+          "repair_confidence": 1.0,
           "match_reasons": [
             "alternative_evidence",
+            "value_match",
             "unit_match",
             "operator_cue",
             "scope_overlap",
             "applies_to_overlap",
             "condition_overlap"
           ],
-          "evidence_quote": "outdoor amenity space 10.0 m² An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves. An outdoor amenity spa..."
+          "evidence_quote": "lot area 560 m² (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensi..."
         }
       ]
     },
@@ -2416,6 +2344,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "best_repair_confidence": 1.0,
@@ -2491,6 +2420,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "best_repair_confidence": 1.0,
@@ -2568,6 +2498,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "best_repair_confidence": 1.0,
@@ -2643,6 +2574,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "best_repair_confidence": 1.0,
@@ -3307,6 +3239,7 @@
       "current_evidence_id": "pipeline5_merged_rule_0076",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
         "rule_object_not_supported"
       ],
@@ -3437,146 +3370,6 @@
             "condition_overlap"
           ],
           "evidence_quote": "Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks for All Buil..."
-        }
-      ]
-    },
-    {
-      "rule_id": "burnaby_r1_116",
-      "candidate_id": "pipeline5_merged_rule_0110",
-      "rule_object": "automatic_sprinkler",
-      "constraint_scope": "dwelling_unit",
-      "applies_to": "Dwelling units more than 45 m from a street lot line",
-      "condition": "Dwelling units located more than 45 m from a lot line abutting a street",
-      "operator": ">",
-      "value": 45,
-      "unit": "m",
-      "current_evidence_id": "pipeline5_merged_rule_0110",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
-      ],
-      "best_repair_confidence": 0.873,
-      "can_retry_verification": false,
-      "repairable_fields": [],
-      "top_evidence": [
-        {
-          "evidence_id": "pipeline5_merged_rule_0061",
-          "page": 2,
-          "evidence_type": "clause",
-          "raw_score": 11.35,
-          "repair_confidence": 0.873,
-          "match_reasons": [
-            "alternative_evidence",
-            "unit_match",
-            "operator_cue",
-            "scope_overlap",
-            "applies_to_overlap",
-            "condition_overlap"
-          ],
-          "evidence_quote": "Maximum Lot Area lot area 280 m² .1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwelling..."
-        },
-        {
-          "evidence_id": "pipeline5_merged_rule_0079",
-          "page": 4,
-          "evidence_type": "clause",
-          "raw_score": 10.55,
-          "repair_confidence": 0.812,
-          "match_reasons": [
-            "alternative_evidence",
-            "unit_match",
-            "operator_cue",
-            "scope_overlap",
-            "applies_to_overlap",
-            "condition_overlap"
-          ],
-          "evidence_quote": "Boarding, lodging or rooming houses permitted (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is inc..."
-        },
-        {
-          "evidence_id": "pipeline5_merged_rule_0080",
-          "page": 4,
-          "evidence_type": "clause",
-          "raw_score": 10.55,
-          "repair_confidence": 0.812,
-          "match_reasons": [
-            "alternative_evidence",
-            "unit_match",
-            "operator_cue",
-            "scope_overlap",
-            "applies_to_overlap",
-            "condition_overlap"
-          ],
-          "evidence_quote": "capacity 5 persons (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehe..."
-        }
-      ]
-    },
-    {
-      "rule_id": "burnaby_r1_120",
-      "candidate_id": "pipeline5_merged_rule_0114",
-      "rule_object": "fire_access_corridor",
-      "constraint_scope": "vertical_clearance",
-      "applies_to": "All dwelling units",
-      "condition": "All dwelling units; must be clear of any projections or obstructions",
-      "operator": ">=",
-      "value": "2.5",
-      "unit": "m",
-      "current_evidence_id": "pipeline5_merged_rule_0114",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "text_condition_not_supported",
-        "rule_object_not_supported"
-      ],
-      "best_repair_confidence": 0.85,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "rule_object",
-        "condition"
-      ],
-      "top_evidence": [
-        {
-          "evidence_id": "pipeline5_merged_rule_0111",
-          "page": 6,
-          "evidence_type": "clause",
-          "raw_score": 11.05,
-          "repair_confidence": 0.85,
-          "match_reasons": [
-            "alternative_evidence",
-            "unit_match",
-            "rule_object_cue",
-            "operator_cue",
-            "applies_to_overlap",
-            "condition_overlap"
-          ],
-          "evidence_quote": "fire access corridor width 1.0 m (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:"
-        },
-        {
-          "evidence_id": "pipeline5_merged_rule_0112",
-          "page": 6,
-          "evidence_type": "clause",
-          "raw_score": 11.05,
-          "repair_confidence": 0.85,
-          "match_reasons": [
-            "alternative_evidence",
-            "unit_match",
-            "rule_object_cue",
-            "operator_cue",
-            "applies_to_overlap",
-            "condition_overlap"
-          ],
-          "evidence_quote": "fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:"
-        },
-        {
-          "evidence_id": "pipeline5_merged_rule_0076",
-          "page": 4,
-          "evidence_type": "clause",
-          "raw_score": 10.15,
-          "repair_confidence": 0.781,
-          "match_reasons": [
-            "alternative_evidence",
-            "value_match",
-            "unit_match",
-            "operator_cue",
-            "condition_overlap"
-          ],
-          "evidence_quote": "pedestrian walkway width 1.5 m (b) is at least 1.5 m wide and clear to a height of at least 2.5 m; and (b) is at least 1.5 m wide and clear to a height of at least 2.5 m; and"
         }
       ]
     },
@@ -3741,14 +3534,11 @@
       "current_evidence_id": "pipeline5_merged_rule_0124",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
-        "text_condition_not_supported",
-        "operator_not_supported"
+        "text_condition_not_supported"
       ],
       "best_repair_confidence": 0.796,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "operator"
-      ],
+      "can_retry_verification": false,
+      "repairable_fields": [],
       "top_evidence": [
         {
           "evidence_id": "pipeline5_merged_rule_0066",

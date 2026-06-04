@@ -1,5 +1,5 @@
 {
-  "review_rule_count": 81,
+  "review_rule_count": 66,
   "items": [
     {
       "rule_id": "burnaby_r1_055",
@@ -27,31 +27,6 @@
       "similar_verified_score": 1.0
     },
     {
-      "rule_id": "burnaby_r1_041",
-      "candidate_id": "pipeline5_merged_rule_0037",
-      "rule_object": "storeys",
-      "constraint_scope": "building",
-      "applies_to": "Front Principal Buildings",
-      "operator": "<=",
-      "value": "2.5",
-      "unit": "storeys",
-      "source_evidence_id": "pipeline5_merged_rule_0037",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 18,
-      "likely_correct_score": 0.826,
-      "likely_status": "likely_correct",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_044",
-      "similar_verified_score": 1.0
-    },
-    {
       "rule_id": "burnaby_r1_047",
       "candidate_id": "pipeline5_merged_rule_0043",
       "rule_object": "setback",
@@ -75,181 +50,6 @@
       "potential_mistake_flags": [],
       "similar_verified_rule_id": "burnaby_r1_048",
       "similar_verified_score": 1.0
-    },
-    {
-      "rule_id": "burnaby_r1_040",
-      "candidate_id": "pipeline5_merged_rule_0036",
-      "rule_object": "storeys",
-      "constraint_scope": "building",
-      "applies_to": "Front Principal Buildings",
-      "operator": "<=",
-      "value": "3",
-      "unit": "storeys",
-      "source_evidence_id": "pipeline5_merged_rule_0036",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 18,
-      "likely_correct_score": 0.824,
-      "likely_status": "likely_correct",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_044",
-      "similar_verified_score": 0.986
-    },
-    {
-      "rule_id": "burnaby_r1_038",
-      "candidate_id": "pipeline5_merged_rule_0034",
-      "rule_object": "height",
-      "constraint_scope": "building",
-      "applies_to": "Front Principal Buildings",
-      "operator": "<=",
-      "value": "10",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0034",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 18,
-      "likely_correct_score": 0.82,
-      "likely_status": "likely_correct",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_042",
-      "similar_verified_score": 0.95
-    },
-    {
-      "rule_id": "burnaby_r1_039",
-      "candidate_id": "pipeline5_merged_rule_0035",
-      "rule_object": "height",
-      "constraint_scope": "building",
-      "applies_to": "Front Principal Buildings",
-      "operator": "<=",
-      "value": "9.5",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0035",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 18,
-      "likely_correct_score": 0.82,
-      "likely_status": "likely_correct",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_042",
-      "similar_verified_score": 0.95
-    },
-    {
-      "rule_id": "burnaby_r1_056",
-      "candidate_id": "pipeline5_merged_rule_0050",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-      "operator": ">=",
-      "value": "2.4",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0050",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 19,
-      "likely_correct_score": 0.818,
-      "likely_status": "likely_correct",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_057",
-      "similar_verified_score": 0.933
-    },
-    {
-      "rule_id": "burnaby_r1_018",
-      "candidate_id": "pipeline5_merged_rule_0018",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit",
-      "operator": ">=",
-      "value": "281",
-      "unit": "m²",
-      "source_evidence_id": "pipeline5_merged_rule_0018",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 22,
-      "likely_correct_score": 0.78,
-      "likely_status": "likely_correct",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.2
-    },
-    {
-      "rule_id": "burnaby_r1_061",
-      "candidate_id": "pipeline5_merged_rule_0055",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Dwelling Units",
-      "operator": ">=",
-      "value": "2",
-      "unit": "units",
-      "source_evidence_id": "pipeline5_merged_rule_0055",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 23,
-      "likely_correct_score": 0.771,
-      "likely_status": "plausible",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.546
-    },
-    {
-      "rule_id": "burnaby_r1_060",
-      "candidate_id": "pipeline5_merged_rule_0054",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Dwelling Units",
-      "operator": ">=",
-      "value": "1",
-      "unit": "units",
-      "source_evidence_id": "pipeline5_merged_rule_0054",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 23,
-      "likely_correct_score": 0.77,
-      "likely_status": "plausible",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.532
     },
     {
       "rule_id": "burnaby_r1_021",
@@ -327,110 +127,6 @@
       "similar_verified_score": 0.502
     },
     {
-      "rule_id": "burnaby_r1_051",
-      "candidate_id": "pipeline5_merged_rule_0047__api_01",
-      "rule_object": "setback",
-      "constraint_scope": "interior_rear_yard",
-      "applies_to": "Rear Principal Buildings",
-      "operator": ">=",
-      "value": "3.0",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0047__api_01",
-      "support_gaps": [
-        "unresolved_exception_cue"
-      ],
-      "review_category": "unresolved_exception",
-      "triage_priority": "high",
-      "review_rank": 24,
-      "likely_correct_score": 0.758,
-      "likely_status": "plausible",
-      "blocking_reason": "unresolved_exception_cue",
-      "suggested_fix": "Resolve exception/override wording before promotion.",
-      "potential_mistake_flags": [
-        "exception_or_override_unresolved"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 1.0
-    },
-    {
-      "rule_id": "burnaby_r1_052",
-      "candidate_id": "pipeline5_merged_rule_0047__api_02",
-      "rule_object": "setback",
-      "constraint_scope": "interior_rear_yard",
-      "applies_to": "All Buildings",
-      "operator": ">=",
-      "value": "1.5",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0047__api_02",
-      "support_gaps": [
-        "unresolved_exception_cue"
-      ],
-      "review_category": "unresolved_exception",
-      "triage_priority": "high",
-      "review_rank": 24,
-      "likely_correct_score": 0.758,
-      "likely_status": "plausible",
-      "blocking_reason": "unresolved_exception_cue",
-      "suggested_fix": "Resolve exception/override wording before promotion.",
-      "potential_mistake_flags": [
-        "exception_or_override_unresolved"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 1.0
-    },
-    {
-      "rule_id": "burnaby_r1_053",
-      "candidate_id": "pipeline5_merged_rule_0048__api_01",
-      "rule_object": "setback",
-      "constraint_scope": "interior_side_yard",
-      "applies_to": "All Buildings",
-      "operator": ">=",
-      "value": "0",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0048__api_01",
-      "support_gaps": [
-        "unresolved_exception_cue"
-      ],
-      "review_category": "unresolved_exception",
-      "triage_priority": "high",
-      "review_rank": 25,
-      "likely_correct_score": 0.752,
-      "likely_status": "plausible",
-      "blocking_reason": "unresolved_exception_cue",
-      "suggested_fix": "Resolve exception/override wording before promotion.",
-      "potential_mistake_flags": [
-        "exception_or_override_unresolved"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.95
-    },
-    {
-      "rule_id": "burnaby_r1_054",
-      "candidate_id": "pipeline5_merged_rule_0048__api_02",
-      "rule_object": "setback",
-      "constraint_scope": "interior_side_yard",
-      "applies_to": "All Buildings",
-      "operator": ">=",
-      "value": "1.2",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0048__api_02",
-      "support_gaps": [
-        "unresolved_exception_cue"
-      ],
-      "review_category": "unresolved_exception",
-      "triage_priority": "high",
-      "review_rank": 25,
-      "likely_correct_score": 0.752,
-      "likely_status": "plausible",
-      "blocking_reason": "unresolved_exception_cue",
-      "suggested_fix": "Resolve exception/override wording before promotion.",
-      "potential_mistake_flags": [
-        "exception_or_override_unresolved"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.95
-    },
-    {
       "rule_id": "burnaby_r1_027",
       "candidate_id": "pipeline5_merged_rule_0023__api_02",
       "rule_object": "dwelling_units",
@@ -454,31 +150,6 @@
       "potential_mistake_flags": [],
       "similar_verified_rule_id": "burnaby_r1_062",
       "similar_verified_score": 0.512
-    },
-    {
-      "rule_id": "burnaby_r1_001",
-      "candidate_id": "pipeline5_merged_rule_0001",
-      "rule_object": "permitted_use",
-      "constraint_scope": "use",
-      "applies_to": "Principal Use",
-      "operator": "allowed",
-      "value": "Permitted",
-      "unit": "",
-      "source_evidence_id": "pipeline5_merged_rule_0001",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 27,
-      "likely_correct_score": 0.728,
-      "likely_status": "plausible",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.188
     },
     {
       "rule_id": "burnaby_r1_076",
@@ -508,31 +179,6 @@
       "similar_verified_score": 0.831
     },
     {
-      "rule_id": "burnaby_r1_004",
-      "candidate_id": "pipeline5_merged_rule_0004",
-      "rule_object": "permitted_use",
-      "constraint_scope": "use",
-      "applies_to": "Principal Use",
-      "operator": "allowed",
-      "value": "Permitted",
-      "unit": "",
-      "source_evidence_id": "pipeline5_merged_rule_0004",
-      "support_gaps": [
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "near_verified_table_context",
-      "triage_priority": "high",
-      "review_rank": 29,
-      "likely_correct_score": 0.713,
-      "likely_status": "plausible",
-      "blocking_reason": "table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Inspect table title, row, column, and cell; consider adding a safe table-scope pattern.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_044",
-      "similar_verified_score": 0.062
-    },
-    {
       "rule_id": "burnaby_r1_129",
       "candidate_id": "pipeline5_merged_rule_0123",
       "rule_object": "setback",
@@ -558,6 +204,60 @@
       ],
       "similar_verified_rule_id": "burnaby_r1_048",
       "similar_verified_score": 0.588
+    },
+    {
+      "rule_id": "burnaby_r1_130",
+      "candidate_id": "pipeline5_merged_rule_0124",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "buildings on the same lot",
+      "operator": "allowed",
+      "value": "reduced",
+      "unit": "",
+      "source_evidence_id": "pipeline5_merged_rule_0124",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "review_category": "missing_condition_evidence",
+      "triage_priority": "high",
+      "review_rank": 31,
+      "likely_correct_score": 0.687,
+      "likely_status": "plausible",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported",
+      "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
+      "potential_mistake_flags": [
+        "condition_not_in_cited_text"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_058",
+      "similar_verified_score": 0.489
+    },
+    {
+      "rule_id": "burnaby_r1_121",
+      "candidate_id": "pipeline5_merged_rule_0115",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "heritage_irregular_lots_permitted",
+      "applies_to": "All dwelling units",
+      "operator": "allowed",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "pipeline5_merged_rule_0115",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "review_category": "missing_condition_evidence",
+      "triage_priority": "high",
+      "review_rank": 32,
+      "likely_correct_score": 0.682,
+      "likely_status": "plausible",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported",
+      "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
+      "potential_mistake_flags": [
+        "condition_not_in_cited_text"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_120",
+      "similar_verified_score": 0.45
     },
     {
       "rule_id": "burnaby_r1_134",
@@ -653,21 +353,22 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported"
       ],
       "review_category": "missing_condition_evidence",
       "triage_priority": "high",
       "review_rank": 45,
-      "likely_correct_score": 0.55,
+      "likely_correct_score": 0.555,
       "likely_status": "plausible",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, applies_to_not_supported",
       "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
       "potential_mistake_flags": [
         "condition_not_in_cited_text",
         "applies_to_not_grounded"
       ],
-      "similar_verified_rule_id": "burnaby_r1_057",
-      "similar_verified_score": 0.683
+      "similar_verified_rule_id": "burnaby_r1_056",
+      "similar_verified_score": 0.718
     },
     {
       "rule_id": "burnaby_r1_126",
@@ -718,8 +419,8 @@
       ],
       "review_category": "cross_family_conflict",
       "triage_priority": "high",
-      "review_rank": 74,
-      "likely_correct_score": 0.259,
+      "review_rank": 72,
+      "likely_correct_score": 0.278,
       "likely_status": "likely_wrong_or_noise",
       "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review",
       "suggested_fix": "Compare sibling rule families sharing the same value; do not auto-pick a winner.",
@@ -728,8 +429,32 @@
         "table_column_scope_mismatch",
         "applies_to_not_grounded"
       ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.2
+      "similar_verified_rule_id": "burnaby_r1_056",
+      "similar_verified_score": 0.357
+    },
+    {
+      "rule_id": "burnaby_r1_067",
+      "candidate_id": "pipeline5_merged_rule_0061",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "rowhouse dwellings",
+      "operator": ">",
+      "value": "280",
+      "unit": "m²",
+      "source_evidence_id": "pipeline5_merged_rule_0061",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "review_category": "text_candidate_needs_consensus",
+      "triage_priority": "medium",
+      "review_rank": 112,
+      "likely_correct_score": 0.872,
+      "likely_status": "likely_correct",
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_018",
+      "similar_verified_score": 0.506
     },
     {
       "rule_id": "burnaby_r1_063",
@@ -756,54 +481,6 @@
       "similar_verified_score": 1.0
     },
     {
-      "rule_id": "burnaby_r1_067",
-      "candidate_id": "pipeline5_merged_rule_0061",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "rowhouse dwellings",
-      "operator": ">",
-      "value": "280",
-      "unit": "m²",
-      "source_evidence_id": "pipeline5_merged_rule_0061",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
-      ],
-      "review_category": "text_candidate_needs_consensus",
-      "triage_priority": "medium",
-      "review_rank": 115,
-      "likely_correct_score": 0.839,
-      "likely_status": "likely_correct",
-      "blocking_reason": "pipeline5_text_candidate_requires_review",
-      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.227
-    },
-    {
-      "rule_id": "burnaby_r1_116",
-      "candidate_id": "pipeline5_merged_rule_0110",
-      "rule_object": "automatic_sprinkler",
-      "constraint_scope": "dwelling_unit",
-      "applies_to": "Dwelling units more than 45 m from a street lot line",
-      "operator": ">",
-      "value": 45,
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0110",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
-      ],
-      "review_category": "text_candidate_needs_consensus",
-      "triage_priority": "medium",
-      "review_rank": 115,
-      "likely_correct_score": 0.839,
-      "likely_status": "likely_correct",
-      "blocking_reason": "pipeline5_text_candidate_requires_review",
-      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.229
-    },
-    {
       "rule_id": "burnaby_r1_071",
       "candidate_id": "pipeline5_merged_rule_0065",
       "rule_object": "setback",
@@ -818,86 +495,62 @@
       ],
       "review_category": "text_candidate_needs_consensus",
       "triage_priority": "medium",
-      "review_rank": 116,
-      "likely_correct_score": 0.832,
+      "review_rank": 114,
+      "likely_correct_score": 0.851,
       "likely_status": "likely_correct",
       "blocking_reason": "pipeline5_text_candidate_requires_review",
       "suggested_fix": "Look for table or second text source asserting the exact same rule.",
       "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.67
+      "similar_verified_rule_id": "burnaby_r1_053",
+      "similar_verified_score": 0.83
     },
     {
-      "rule_id": "burnaby_r1_117",
-      "candidate_id": "pipeline5_merged_rule_0111",
-      "rule_object": "fire_access_corridor",
-      "constraint_scope": "corridor_width",
-      "applies_to": "All dwelling units",
-      "operator": ">=",
-      "value": "1.0",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0111",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
-      ],
-      "review_category": "text_candidate_needs_consensus",
-      "triage_priority": "medium",
-      "review_rank": 121,
-      "likely_correct_score": 0.785,
-      "likely_status": "likely_correct",
-      "blocking_reason": "pipeline5_text_candidate_requires_review",
-      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.279
-    },
-    {
-      "rule_id": "burnaby_r1_113",
-      "candidate_id": "pipeline5_merged_rule_0107",
-      "rule_object": "setback",
-      "constraint_scope": "lane_yard",
-      "applies_to": "projection",
-      "operator": "<=",
-      "value": "0.8",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0107",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
-      ],
-      "review_category": "text_candidate_needs_consensus",
-      "triage_priority": "medium",
-      "review_rank": 121,
-      "likely_correct_score": 0.784,
-      "likely_status": "likely_correct",
-      "blocking_reason": "pipeline5_text_candidate_requires_review",
-      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
-      "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.461
-    },
-    {
-      "rule_id": "burnaby_r1_077",
-      "candidate_id": "pipeline5_merged_rule_0072__api_01",
+      "rule_id": "burnaby_r1_061",
+      "candidate_id": "pipeline5_merged_rule_0055",
       "rule_object": "dwelling_units",
       "constraint_scope": "lot",
-      "applies_to": "Dwelling Unit",
+      "applies_to": "Dwelling Units",
       "operator": ">=",
-      "value": "1",
-      "unit": "dwelling unit",
-      "source_evidence_id": "pipeline5_merged_rule_0072__api_01",
+      "value": "2",
+      "unit": "units",
+      "source_evidence_id": "pipeline5_merged_rule_0055",
       "support_gaps": [
-        "pipeline5_text_candidate_requires_review"
+        "rule_family_direction_mismatch"
       ],
-      "review_category": "text_candidate_needs_consensus",
+      "review_category": "general_review",
       "triage_priority": "medium",
-      "review_rank": 121,
-      "likely_correct_score": 0.783,
+      "review_rank": 117,
+      "likely_correct_score": 0.827,
       "likely_status": "likely_correct",
-      "blocking_reason": "pipeline5_text_candidate_requires_review",
-      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "blocking_reason": "rule_family_direction_mismatch",
+      "suggested_fix": "Inspect proof trace and support gaps.",
       "potential_mistake_flags": [],
       "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.432
+      "similar_verified_score": 0.546
+    },
+    {
+      "rule_id": "burnaby_r1_060",
+      "candidate_id": "pipeline5_merged_rule_0054",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Dwelling Units",
+      "operator": ">=",
+      "value": "1",
+      "unit": "units",
+      "source_evidence_id": "pipeline5_merged_rule_0054",
+      "support_gaps": [
+        "rule_family_direction_mismatch"
+      ],
+      "review_category": "general_review",
+      "triage_priority": "medium",
+      "review_rank": 117,
+      "likely_correct_score": 0.825,
+      "likely_status": "likely_correct",
+      "blocking_reason": "rule_family_direction_mismatch",
+      "suggested_fix": "Inspect proof trace and support gaps.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_062",
+      "similar_verified_score": 0.532
     },
     {
       "rule_id": "burnaby_r1_087",
@@ -914,14 +567,64 @@
       ],
       "review_category": "text_candidate_needs_consensus",
       "triage_priority": "medium",
-      "review_rank": 122,
-      "likely_correct_score": 0.772,
-      "likely_status": "plausible",
+      "review_rank": 118,
+      "likely_correct_score": 0.811,
+      "likely_status": "likely_correct",
       "blocking_reason": "pipeline5_text_candidate_requires_review",
       "suggested_fix": "Look for table or second text source asserting the exact same rule.",
       "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_001",
+      "similar_verified_score": 0.498
+    },
+    {
+      "rule_id": "burnaby_r1_113",
+      "candidate_id": "pipeline5_merged_rule_0107",
+      "rule_object": "setback",
+      "constraint_scope": "lane_yard",
+      "applies_to": "projection",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "source_evidence_id": "pipeline5_merged_rule_0107",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "review_category": "general_review",
+      "triage_priority": "medium",
+      "review_rank": 121,
+      "likely_correct_score": 0.786,
+      "likely_status": "likely_correct",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch",
+      "suggested_fix": "Inspect proof trace and support gaps.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_052",
+      "similar_verified_score": 0.478
+    },
+    {
+      "rule_id": "burnaby_r1_077",
+      "candidate_id": "pipeline5_merged_rule_0072__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Dwelling Unit",
+      "operator": ">=",
+      "value": "1",
+      "unit": "dwelling unit",
+      "source_evidence_id": "pipeline5_merged_rule_0072__api_01",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "review_category": "general_review",
+      "triage_priority": "medium",
+      "review_rank": 121,
+      "likely_correct_score": 0.783,
+      "likely_status": "likely_correct",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch",
+      "suggested_fix": "Inspect proof trace and support gaps.",
+      "potential_mistake_flags": [],
       "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.175
+      "similar_verified_score": 0.432
     },
     {
       "rule_id": "burnaby_r1_111",
@@ -939,13 +642,39 @@
       "review_category": "text_candidate_needs_consensus",
       "triage_priority": "medium",
       "review_rank": 122,
-      "likely_correct_score": 0.77,
+      "likely_correct_score": 0.772,
       "likely_status": "plausible",
       "blocking_reason": "pipeline5_text_candidate_requires_review",
       "suggested_fix": "Look for table or second text source asserting the exact same rule.",
       "potential_mistake_flags": [],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.343
+      "similar_verified_rule_id": "burnaby_r1_052",
+      "similar_verified_score": 0.359
+    },
+    {
+      "rule_id": "burnaby_r1_028",
+      "candidate_id": "pipeline5_merged_rule_0024",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m²",
+      "source_evidence_id": "pipeline5_merged_rule_0024",
+      "support_gaps": [
+        "applies_to_not_supported"
+      ],
+      "review_category": "missing_applies_to",
+      "triage_priority": "medium",
+      "review_rank": 127,
+      "likely_correct_score": 0.722,
+      "likely_status": "plausible",
+      "blocking_reason": "applies_to_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_018",
+      "similar_verified_score": 1.0
     },
     {
       "rule_id": "burnaby_r1_095",
@@ -973,6 +702,35 @@
       ],
       "similar_verified_rule_id": "burnaby_r1_045",
       "similar_verified_score": 0.564
+    },
+    {
+      "rule_id": "burnaby_r1_019",
+      "candidate_id": "pipeline5_merged_rule_0019",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse .1",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m²",
+      "source_evidence_id": "pipeline5_merged_rule_0019",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "missing_scope_evidence",
+      "triage_priority": "medium",
+      "review_rank": 127,
+      "likely_correct_score": 0.718,
+      "likely_status": "plausible",
+      "blocking_reason": "rule_family_direction_mismatch, table_column_not_target_scope, table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
+      "suggested_fix": "Recover local evidence around the value that proves the scope.",
+      "potential_mistake_flags": [
+        "table_column_scope_mismatch"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_018",
+      "similar_verified_score": 0.636
     },
     {
       "rule_id": "burnaby_r1_046",
@@ -1003,34 +761,6 @@
       "similar_verified_score": 1.0
     },
     {
-      "rule_id": "burnaby_r1_059",
-      "candidate_id": "pipeline5_merged_rule_0053",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "All Other Buildings",
-      "operator": ">=",
-      "value": "2.4",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0053",
-      "support_gaps": [
-        "table_column_not_target_scope",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "missing_scope_evidence",
-      "triage_priority": "medium",
-      "review_rank": 128,
-      "likely_correct_score": 0.711,
-      "likely_status": "plausible",
-      "blocking_reason": "table_column_not_target_scope, table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Recover local evidence around the value that proves the scope.",
-      "potential_mistake_flags": [
-        "table_column_scope_mismatch"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_057",
-      "similar_verified_score": 1.0
-    },
-    {
       "rule_id": "burnaby_r1_086",
       "candidate_id": "pipeline5_merged_rule_0081",
       "rule_object": "lot_area",
@@ -1046,70 +776,43 @@
       ],
       "review_category": "missing_applies_to",
       "triage_priority": "medium",
-      "review_rank": 132,
-      "likely_correct_score": 0.671,
+      "review_rank": 129,
+      "likely_correct_score": 0.703,
       "likely_status": "plausible",
       "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
       "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
       "potential_mistake_flags": [
         "applies_to_not_grounded"
       ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.154
+      "similar_verified_rule_id": "burnaby_r1_018",
+      "similar_verified_score": 0.424
     },
     {
-      "rule_id": "burnaby_r1_019",
-      "candidate_id": "pipeline5_merged_rule_0019",
+      "rule_id": "burnaby_r1_029",
+      "candidate_id": "pipeline5_merged_rule_0025",
       "rule_object": "lot_area",
       "constraint_scope": "lot",
-      "applies_to": "Rowhouse .1",
-      "operator": "<=",
-      "value": "280",
-      "unit": "m²",
-      "source_evidence_id": "pipeline5_merged_rule_0019",
-      "support_gaps": [
-        "table_column_not_target_scope",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "missing_scope_evidence",
-      "triage_priority": "medium",
-      "review_rank": 132,
-      "likely_correct_score": 0.668,
-      "likely_status": "plausible",
-      "blocking_reason": "table_column_not_target_scope, table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Recover local evidence around the value that proves the scope.",
-      "potential_mistake_flags": [
-        "table_column_scope_mismatch"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.222
-    },
-    {
-      "rule_id": "burnaby_r1_028",
-      "candidate_id": "pipeline5_merged_rule_0024",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "applies_to": "Small-Scale Multi-Unit (5 to 6 Units)",
       "operator": ">=",
       "value": "281",
       "unit": "m²",
-      "source_evidence_id": "pipeline5_merged_rule_0024",
+      "source_evidence_id": "pipeline5_merged_rule_0025",
       "support_gaps": [
-        "applies_to_not_supported"
+        "applies_to_not_supported",
+        "table_applies_to_not_supported"
       ],
       "review_category": "missing_applies_to",
       "triage_priority": "medium",
-      "review_rank": 137,
-      "likely_correct_score": 0.626,
+      "review_rank": 142,
+      "likely_correct_score": 0.566,
       "likely_status": "plausible",
-      "blocking_reason": "applies_to_not_supported",
+      "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported",
       "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
       "potential_mistake_flags": [
         "applies_to_not_grounded"
       ],
-      "similar_verified_rule_id": "burnaby_r1_048",
-      "similar_verified_score": 0.2
+      "similar_verified_rule_id": "burnaby_r1_018",
+      "similar_verified_score": 0.85
     },
     {
       "rule_id": "burnaby_r1_030",
@@ -1122,23 +825,103 @@
       "unit": "m²",
       "source_evidence_id": "pipeline5_merged_rule_0026",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
-        "table_applies_to_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "table_applies_to_not_supported"
       ],
       "review_category": "missing_applies_to",
       "triage_priority": "medium",
-      "review_rank": 153,
-      "likely_correct_score": 0.461,
-      "likely_status": "weak",
-      "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
+      "review_rank": 144,
+      "likely_correct_score": 0.554,
+      "likely_status": "plausible",
+      "blocking_reason": "rule_family_direction_mismatch, applies_to_not_supported, table_applies_to_not_supported",
       "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
       "potential_mistake_flags": [
         "applies_to_not_grounded"
       ],
-      "similar_verified_rule_id": "burnaby_r1_045",
-      "similar_verified_score": 0.214
+      "similar_verified_rule_id": "burnaby_r1_018",
+      "similar_verified_score": 0.55
+    },
+    {
+      "rule_id": "burnaby_r1_022",
+      "candidate_id": "pipeline5_merged_rule_0021__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
+      "operator": ">=",
+      "value": "1",
+      "unit": "units",
+      "source_evidence_id": "pipeline5_merged_rule_0021__api_01",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "triage_priority": "low",
+      "review_rank": 236,
+      "likely_correct_score": 0.629,
+      "likely_status": "plausible",
+      "blocking_reason": "rule_family_direction_mismatch, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_062",
+      "similar_verified_score": 0.556
+    },
+    {
+      "rule_id": "burnaby_r1_024",
+      "candidate_id": "pipeline5_merged_rule_0022__api_01",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "operator": ">=",
+      "value": "3",
+      "unit": "units",
+      "source_evidence_id": "pipeline5_merged_rule_0022__api_01",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "triage_priority": "low",
+      "review_rank": 236,
+      "likely_correct_score": 0.629,
+      "likely_status": "plausible",
+      "blocking_reason": "rule_family_direction_mismatch, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_062",
+      "similar_verified_score": 0.556
+    },
+    {
+      "rule_id": "burnaby_r1_099",
+      "candidate_id": "pipeline5_merged_rule_0094",
+      "rule_object": "permitted_use",
+      "constraint_scope": "use",
+      "applies_to": "child_care_facility",
+      "operator": "=",
+      "value": "located on a lot that does not contain a dwelling unit or any other principal use",
+      "unit": "",
+      "source_evidence_id": "pipeline5_merged_rule_0094",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "triage_priority": "low",
+      "review_rank": 238,
+      "likely_correct_score": 0.609,
+      "likely_status": "plausible",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_001",
+      "similar_verified_score": 0.468
     },
     {
       "rule_id": "burnaby_r1_026",
@@ -1151,6 +934,7 @@
       "unit": "units",
       "source_evidence_id": "pipeline5_merged_rule_0023__api_01",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "operator_not_supported"
       ],
       "review_category": "operator_uncertain",
@@ -1158,7 +942,7 @@
       "review_rank": 239,
       "likely_correct_score": 0.606,
       "likely_status": "plausible",
-      "blocking_reason": "operator_not_supported",
+      "blocking_reason": "rule_family_direction_mismatch, operator_not_supported",
       "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
       "potential_mistake_flags": [
         "operator_direction_or_wording_missing"
@@ -1210,15 +994,15 @@
       "review_category": "operator_uncertain",
       "triage_priority": "low",
       "review_rank": 239,
-      "likely_correct_score": 0.6,
+      "likely_correct_score": 0.601,
       "likely_status": "plausible",
       "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
       "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
       "potential_mistake_flags": [
         "operator_direction_or_wording_missing"
       ],
-      "similar_verified_rule_id": "burnaby_r1_058",
-      "similar_verified_score": 0.393
+      "similar_verified_rule_id": "burnaby_r1_056",
+      "similar_verified_score": 0.406
     },
     {
       "rule_id": "burnaby_r1_070",
@@ -1275,33 +1059,6 @@
       "similar_verified_score": 0.321
     },
     {
-      "rule_id": "burnaby_r1_099",
-      "candidate_id": "pipeline5_merged_rule_0094",
-      "rule_object": "permitted_use",
-      "constraint_scope": "use",
-      "applies_to": "child_care_facility",
-      "operator": "=",
-      "value": "located on a lot that does not contain a dwelling unit or any other principal use",
-      "unit": "",
-      "source_evidence_id": "pipeline5_merged_rule_0094",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "operator_not_supported"
-      ],
-      "review_category": "operator_uncertain",
-      "triage_priority": "low",
-      "review_rank": 241,
-      "likely_correct_score": 0.58,
-      "likely_status": "plausible",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
-      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-      "potential_mistake_flags": [
-        "operator_direction_or_wording_missing"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.227
-    },
-    {
       "rule_id": "burnaby_r1_064",
       "candidate_id": "pipeline5_merged_rule_0058",
       "rule_object": "dwelling_units",
@@ -1327,62 +1084,6 @@
       ],
       "similar_verified_rule_id": "burnaby_r1_062",
       "similar_verified_score": 0.5
-    },
-    {
-      "rule_id": "burnaby_r1_022",
-      "candidate_id": "pipeline5_merged_rule_0021__api_01",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
-      "operator": ">=",
-      "value": "1",
-      "unit": "units",
-      "source_evidence_id": "pipeline5_merged_rule_0021__api_01",
-      "support_gaps": [
-        "operator_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "operator_uncertain",
-      "triage_priority": "low",
-      "review_rank": 242,
-      "likely_correct_score": 0.575,
-      "likely_status": "plausible",
-      "blocking_reason": "operator_not_supported, table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-      "potential_mistake_flags": [
-        "operator_direction_or_wording_missing"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.556
-    },
-    {
-      "rule_id": "burnaby_r1_024",
-      "candidate_id": "pipeline5_merged_rule_0022__api_01",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
-      "operator": ">=",
-      "value": "3",
-      "unit": "units",
-      "source_evidence_id": "pipeline5_merged_rule_0022__api_01",
-      "support_gaps": [
-        "operator_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "operator_uncertain",
-      "triage_priority": "low",
-      "review_rank": 242,
-      "likely_correct_score": 0.575,
-      "likely_status": "plausible",
-      "blocking_reason": "operator_not_supported, table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-      "potential_mistake_flags": [
-        "operator_direction_or_wording_missing"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.556
     },
     {
       "rule_id": "burnaby_r1_075",
@@ -1426,32 +1127,33 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported"
       ],
       "review_category": "missing_condition_evidence",
       "triage_priority": "low",
       "review_rank": 245,
-      "likely_correct_score": 0.541,
+      "likely_correct_score": 0.543,
       "likely_status": "weak",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, applies_to_not_supported",
       "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
       "potential_mistake_flags": [
         "condition_not_in_cited_text",
         "applies_to_not_grounded"
       ],
-      "similar_verified_rule_id": "burnaby_r1_058",
-      "similar_verified_score": 0.606
+      "similar_verified_rule_id": "burnaby_r1_059",
+      "similar_verified_score": 0.625
     },
     {
-      "rule_id": "burnaby_r1_130",
-      "candidate_id": "pipeline5_merged_rule_0124",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "buildings on the same lot",
-      "operator": "allowed",
-      "value": "reduced",
-      "unit": "",
-      "source_evidence_id": "pipeline5_merged_rule_0124",
+      "rule_id": "burnaby_r1_066",
+      "candidate_id": "pipeline5_merged_rule_0060",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse lots",
+      "operator": ">",
+      "value": "280",
+      "unit": "m²",
+      "source_evidence_id": "pipeline5_merged_rule_0060",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
@@ -1459,8 +1161,8 @@
       ],
       "review_category": "missing_condition_evidence",
       "triage_priority": "low",
-      "review_rank": 250,
-      "likely_correct_score": 0.487,
+      "review_rank": 248,
+      "likely_correct_score": 0.507,
       "likely_status": "weak",
       "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, operator_not_supported",
       "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
@@ -1468,8 +1170,8 @@
         "operator_direction_or_wording_missing",
         "condition_not_in_cited_text"
       ],
-      "similar_verified_rule_id": "burnaby_r1_058",
-      "similar_verified_score": 0.489
+      "similar_verified_rule_id": "burnaby_r1_018",
+      "similar_verified_score": 0.658
     },
     {
       "rule_id": "burnaby_r1_128",
@@ -1497,7 +1199,7 @@
         "operator_direction_or_wording_missing",
         "condition_not_in_cited_text"
       ],
-      "similar_verified_rule_id": "burnaby_r1_042",
+      "similar_verified_rule_id": "burnaby_r1_038",
       "similar_verified_score": 0.321
     },
     {
@@ -1528,35 +1230,6 @@
       ],
       "similar_verified_rule_id": "burnaby_r1_062",
       "similar_verified_score": 0.576
-    },
-    {
-      "rule_id": "burnaby_r1_066",
-      "candidate_id": "pipeline5_merged_rule_0060",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "Rowhouse lots",
-      "operator": ">",
-      "value": "280",
-      "unit": "m²",
-      "source_evidence_id": "pipeline5_merged_rule_0060",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "text_condition_not_supported",
-        "operator_not_supported"
-      ],
-      "review_category": "missing_condition_evidence",
-      "triage_priority": "low",
-      "review_rank": 254,
-      "likely_correct_score": 0.454,
-      "likely_status": "weak",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, operator_not_supported",
-      "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
-      "potential_mistake_flags": [
-        "operator_direction_or_wording_missing",
-        "condition_not_in_cited_text"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.214
     },
     {
       "rule_id": "burnaby_r1_094",
@@ -1600,6 +1273,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "review_category": "missing_condition_evidence",
@@ -1607,7 +1281,7 @@
       "review_rank": 254,
       "likely_correct_score": 0.446,
       "likely_status": "weak",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_object_not_supported",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, rule_object_not_supported",
       "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
       "potential_mistake_flags": [
         "possible_wrong_rule_family",
@@ -1629,6 +1303,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "review_category": "missing_condition_evidence",
@@ -1636,7 +1311,7 @@
       "review_rank": 254,
       "likely_correct_score": 0.446,
       "likely_status": "weak",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_object_not_supported",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, rule_object_not_supported",
       "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
       "potential_mistake_flags": [
         "possible_wrong_rule_family",
@@ -1658,6 +1333,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "review_category": "missing_condition_evidence",
@@ -1665,7 +1341,7 @@
       "review_rank": 254,
       "likely_correct_score": 0.446,
       "likely_status": "weak",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_object_not_supported",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, rule_object_not_supported",
       "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
       "potential_mistake_flags": [
         "possible_wrong_rule_family",
@@ -1687,6 +1363,7 @@
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "text_condition_not_supported",
+        "rule_family_direction_mismatch",
         "rule_object_not_supported"
       ],
       "review_category": "missing_condition_evidence",
@@ -1694,7 +1371,7 @@
       "review_rank": 254,
       "likely_correct_score": 0.446,
       "likely_status": "weak",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_object_not_supported",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, rule_object_not_supported",
       "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
       "potential_mistake_flags": [
         "possible_wrong_rule_family",
@@ -1702,64 +1379,6 @@
       ],
       "similar_verified_rule_id": "burnaby_r1_045",
       "similar_verified_score": 0.435
-    },
-    {
-      "rule_id": "burnaby_r1_029",
-      "candidate_id": "pipeline5_merged_rule_0025",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (5 to 6 Units)",
-      "operator": ">=",
-      "value": "281",
-      "unit": "m²",
-      "source_evidence_id": "pipeline5_merged_rule_0025",
-      "support_gaps": [
-        "applies_to_not_supported",
-        "table_applies_to_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "missing_applies_to",
-      "triage_priority": "low",
-      "review_rank": 256,
-      "likely_correct_score": 0.434,
-      "likely_status": "weak",
-      "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_cell_candidate_requires_review, table_evidence_candidate_requires_review",
-      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
-      "potential_mistake_flags": [
-        "applies_to_not_grounded"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.189
-    },
-    {
-      "rule_id": "burnaby_r1_120",
-      "candidate_id": "pipeline5_merged_rule_0114",
-      "rule_object": "fire_access_corridor",
-      "constraint_scope": "vertical_clearance",
-      "applies_to": "All dwelling units",
-      "operator": ">=",
-      "value": "2.5",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0114",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "text_condition_not_supported",
-        "rule_object_not_supported"
-      ],
-      "review_category": "missing_condition_evidence",
-      "triage_priority": "low",
-      "review_rank": 257,
-      "likely_correct_score": 0.424,
-      "likely_status": "weak",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_object_not_supported",
-      "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
-      "potential_mistake_flags": [
-        "possible_wrong_rule_family",
-        "condition_not_in_cited_text"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_074",
-      "similar_verified_score": 0.25
     },
     {
       "rule_id": "burnaby_r1_081",
@@ -1773,6 +1392,7 @@
       "source_evidence_id": "pipeline5_merged_rule_0076",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
         "rule_object_not_supported"
       ],
@@ -1781,7 +1401,7 @@
       "review_rank": 257,
       "likely_correct_score": 0.423,
       "likely_status": "weak",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, rule_object_not_supported",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, applies_to_not_supported, rule_object_not_supported",
       "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
       "potential_mistake_flags": [
         "possible_wrong_rule_family",
@@ -1802,6 +1422,7 @@
       "source_evidence_id": "pipeline5_merged_rule_0077",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
         "rule_object_not_supported"
       ],
@@ -1810,7 +1431,7 @@
       "review_rank": 257,
       "likely_correct_score": 0.423,
       "likely_status": "weak",
-      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, rule_object_not_supported",
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, applies_to_not_supported, rule_object_not_supported",
       "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
       "potential_mistake_flags": [
         "possible_wrong_rule_family",
@@ -1818,99 +1439,6 @@
       ],
       "similar_verified_rule_id": "burnaby_r1_045",
       "similar_verified_score": 0.51
-    },
-    {
-      "rule_id": "burnaby_r1_036",
-      "candidate_id": "pipeline5_merged_rule_0032",
-      "rule_object": "impervious_surface",
-      "constraint_scope": "lot",
-      "applies_to": "Rowhouse; Small-Scale Multi-Unit (5 to 6 Units)",
-      "operator": "<=",
-      "value": "70",
-      "unit": "%",
-      "source_evidence_id": "pipeline5_merged_rule_0032",
-      "support_gaps": [
-        "applies_to_not_supported",
-        "table_applies_to_not_supported",
-        "table_column_not_target_scope",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "missing_applies_to",
-      "triage_priority": "low",
-      "review_rank": 259,
-      "likely_correct_score": 0.404,
-      "likely_status": "weak",
-      "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review",
-      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
-      "potential_mistake_flags": [
-        "table_column_scope_mismatch",
-        "applies_to_not_grounded"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.242
-    },
-    {
-      "rule_id": "burnaby_r1_032",
-      "candidate_id": "pipeline5_merged_rule_0028",
-      "rule_object": "lot_coverage",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
-      "operator": "<=",
-      "value": "40",
-      "unit": "%",
-      "source_evidence_id": "pipeline5_merged_rule_0028",
-      "support_gaps": [
-        "applies_to_not_supported",
-        "table_applies_to_not_supported",
-        "table_column_not_target_scope",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "missing_applies_to",
-      "triage_priority": "low",
-      "review_rank": 259,
-      "likely_correct_score": 0.4,
-      "likely_status": "weak",
-      "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review",
-      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
-      "potential_mistake_flags": [
-        "table_column_scope_mismatch",
-        "applies_to_not_grounded"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.208
-    },
-    {
-      "rule_id": "burnaby_r1_033",
-      "candidate_id": "pipeline5_merged_rule_0029",
-      "rule_object": "lot_coverage",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
-      "operator": "<=",
-      "value": "30",
-      "unit": "%",
-      "source_evidence_id": "pipeline5_merged_rule_0029",
-      "support_gaps": [
-        "applies_to_not_supported",
-        "table_applies_to_not_supported",
-        "table_column_not_target_scope",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "review_category": "missing_applies_to",
-      "triage_priority": "low",
-      "review_rank": 259,
-      "likely_correct_score": 0.4,
-      "likely_status": "weak",
-      "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review",
-      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
-      "potential_mistake_flags": [
-        "table_column_scope_mismatch",
-        "applies_to_not_grounded"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.208
     },
     {
       "rule_id": "burnaby_r1_034",
@@ -1931,8 +1459,8 @@
       ],
       "review_category": "missing_applies_to",
       "triage_priority": "low",
-      "review_rank": 259,
-      "likely_correct_score": 0.4,
+      "review_rank": 257,
+      "likely_correct_score": 0.417,
       "likely_status": "weak",
       "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review",
       "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
@@ -1940,8 +1468,101 @@
         "table_column_scope_mismatch",
         "applies_to_not_grounded"
       ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.212
+      "similar_verified_rule_id": "burnaby_r1_018",
+      "similar_verified_score": 0.353
+    },
+    {
+      "rule_id": "burnaby_r1_032",
+      "candidate_id": "pipeline5_merged_rule_0028",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
+      "operator": "<=",
+      "value": "40",
+      "unit": "%",
+      "source_evidence_id": "pipeline5_merged_rule_0028",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "missing_applies_to",
+      "triage_priority": "low",
+      "review_rank": 258,
+      "likely_correct_score": 0.412,
+      "likely_status": "weak",
+      "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "table_column_scope_mismatch",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_056",
+      "similar_verified_score": 0.31
+    },
+    {
+      "rule_id": "burnaby_r1_033",
+      "candidate_id": "pipeline5_merged_rule_0029",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
+      "operator": "<=",
+      "value": "30",
+      "unit": "%",
+      "source_evidence_id": "pipeline5_merged_rule_0029",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "missing_applies_to",
+      "triage_priority": "low",
+      "review_rank": 258,
+      "likely_correct_score": 0.412,
+      "likely_status": "weak",
+      "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "table_column_scope_mismatch",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_056",
+      "similar_verified_score": 0.31
+    },
+    {
+      "rule_id": "burnaby_r1_036",
+      "candidate_id": "pipeline5_merged_rule_0032",
+      "rule_object": "impervious_surface",
+      "constraint_scope": "lot",
+      "applies_to": "Rowhouse; Small-Scale Multi-Unit (5 to 6 Units)",
+      "operator": "<=",
+      "value": "70",
+      "unit": "%",
+      "source_evidence_id": "pipeline5_merged_rule_0032",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "missing_applies_to",
+      "triage_priority": "low",
+      "review_rank": 258,
+      "likely_correct_score": 0.408,
+      "likely_status": "weak",
+      "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "table_column_scope_mismatch",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_056",
+      "similar_verified_score": 0.276
     },
     {
       "rule_id": "burnaby_r1_031",
@@ -1994,8 +1615,8 @@
       ],
       "review_category": "missing_applies_to",
       "triage_priority": "low",
-      "review_rank": 261,
-      "likely_correct_score": 0.377,
+      "review_rank": 260,
+      "likely_correct_score": 0.385,
       "likely_status": "weak",
       "blocking_reason": "applies_to_not_supported, table_applies_to_not_supported, table_condition_not_supported, table_column_not_target_scope",
       "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
@@ -2003,8 +1624,8 @@
         "table_column_scope_mismatch",
         "applies_to_not_grounded"
       ],
-      "similar_verified_rule_id": "burnaby_r1_062",
-      "similar_verified_score": 0.216
+      "similar_verified_rule_id": "burnaby_r1_056",
+      "similar_verified_score": 0.281
     },
     {
       "rule_id": "burnaby_r1_020",
@@ -2017,18 +1638,17 @@
       "unit": "units",
       "source_evidence_id": "pipeline5_merged_rule_0020__api_01",
       "support_gaps": [
+        "rule_family_direction_mismatch",
         "applies_to_not_supported",
         "operator_not_supported",
-        "table_applies_to_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
+        "table_applies_to_not_supported"
       ],
       "review_category": "operator_uncertain",
       "triage_priority": "low",
-      "review_rank": 269,
-      "likely_correct_score": 0.295,
+      "review_rank": 264,
+      "likely_correct_score": 0.347,
       "likely_status": "likely_wrong_or_noise",
-      "blocking_reason": "applies_to_not_supported, operator_not_supported, table_applies_to_not_supported, table_cell_candidate_requires_review",
+      "blocking_reason": "rule_family_direction_mismatch, applies_to_not_supported, operator_not_supported, table_applies_to_not_supported",
       "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
       "potential_mistake_flags": [
         "operator_direction_or_wording_missing",
@@ -2121,7 +1741,7 @@
       "review_category": "missing_condition_evidence",
       "triage_priority": "low",
       "review_rank": 288,
-      "likely_correct_score": 0.106,
+      "likely_correct_score": 0.109,
       "likely_status": "likely_wrong_or_noise",
       "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, operator_not_supported",
       "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
@@ -2131,8 +1751,8 @@
         "condition_not_in_cited_text",
         "applies_to_not_grounded"
       ],
-      "similar_verified_rule_id": "burnaby_r1_058",
-      "similar_verified_score": 0.52
+      "similar_verified_rule_id": "burnaby_r1_059",
+      "similar_verified_score": 0.544
     },
     {
       "rule_id": "burnaby_r1_101",
@@ -2247,10 +1867,6 @@
         "count": 21
       },
       {
-        "name": "near_verified_table_context",
-        "count": 16
-      },
-      {
         "name": "missing_applies_to",
         "count": 13
       },
@@ -2259,19 +1875,23 @@
         "count": 12
       },
       {
-        "name": "text_candidate_needs_consensus",
-        "count": 9
+        "name": "near_verified_table_context",
+        "count": 6
       },
       {
-        "name": "unresolved_exception",
+        "name": "text_candidate_needs_consensus",
+        "count": 5
+      },
+      {
+        "name": "general_review",
         "count": 4
       },
       {
-        "name": "missing_scope_evidence",
-        "count": 3
+        "name": "cross_family_conflict",
+        "count": 2
       },
       {
-        "name": "cross_family_conflict",
+        "name": "missing_scope_evidence",
         "count": 2
       },
       {
@@ -2282,15 +1902,15 @@
     "likelihood_counts": [
       {
         "name": "plausible",
-        "count": 35
+        "count": 29
       },
       {
         "name": "weak",
-        "count": 23
+        "count": 19
       },
       {
         "name": "likely_correct",
-        "count": 15
+        "count": 10
       },
       {
         "name": "likely_wrong_or_noise",
@@ -2300,11 +1920,11 @@
     "priority_counts": [
       {
         "name": "low",
-        "count": 37
+        "count": 34
       },
       {
         "name": "high",
-        "count": 28
+        "count": 16
       },
       {
         "name": "medium",
@@ -2314,15 +1934,7 @@
     "top_blocking_reasons": [
       {
         "reason": "pipeline5_text_candidate_requires_review",
-        "count": 44
-      },
-      {
-        "reason": "table_cell_candidate_requires_review",
-        "count": 31
-      },
-      {
-        "reason": "table_evidence_candidate_requires_review",
-        "count": 31
+        "count": 42
       },
       {
         "reason": "applies_to_not_supported",
@@ -2334,11 +1946,23 @@
       },
       {
         "reason": "operator_not_supported",
-        "count": 20
+        "count": 19
+      },
+      {
+        "reason": "rule_family_direction_mismatch",
+        "count": 18
+      },
+      {
+        "reason": "table_cell_candidate_requires_review",
+        "count": 15
+      },
+      {
+        "reason": "table_evidence_candidate_requires_review",
+        "count": 15
       },
       {
         "reason": "rule_object_not_supported",
-        "count": 14
+        "count": 13
       },
       {
         "reason": "table_applies_to_not_supported",
@@ -2346,11 +1970,7 @@
       },
       {
         "reason": "table_column_not_target_scope",
-        "count": 10
-      },
-      {
-        "reason": "unresolved_exception_cue",
-        "count": 4
+        "count": 9
       },
       {
         "reason": "constraint_scope_not_supported",

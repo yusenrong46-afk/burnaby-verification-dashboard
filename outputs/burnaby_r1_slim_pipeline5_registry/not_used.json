@@ -253,6 +253,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Principal Use | Rowhouse Dwellings | 101.5.2 | Principal Use | Rowhouse Dwellings | Use-Specific Regulations: 101.5.2",
       "source_context": "Principal Use | Rowhouse Dwellings | Use-Specific Regulations: 101.5.2",
+      "inherited_parent_context": null,
       "local_context": "Principal Use | Rowhouse Dwellings | Use-Specific Regulations: 101.5.2",
       "source_section": null,
       "source_heading": null,
@@ -517,12 +518,10 @@
     },
     "proof_decision_mismatch": false,
     "proof_decision_mismatches": [],
-    "evidence_strength": 0.732,
+    "evidence_strength": 0.776,
     "review_priority": "not_used",
     "support_gaps": [
       "operator_not_supported",
-      "table_cell_candidate_requires_review",
-      "table_evidence_candidate_requires_review",
       "cross_reference_only"
     ],
     "support_checks": {
@@ -534,10 +533,10 @@
       "scope_supported": true,
       "rule_object_supported": true,
       "table_context_supported": true,
-      "table_review_gate_passed": false
+      "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "the proposed operator is not supported by the cited wording; table cell candidate requires review; table evidence candidate requires review; the candidate is a bylaw section cross-reference, not a directly validated rule",
+    "review_reason": "the proposed operator is not supported by the cited wording; the candidate is a bylaw section cross-reference, not a directly validated rule",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -547,6 +546,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Principal Use | Boarding, Lodging, or Rooming House | 101.5.3 | Principal Use | Boarding, Lodging, or Rooming House | Use-Specific Regulations: 101.5.3",
       "source_context": "Principal Use | Boarding, Lodging, or Rooming House | Use-Specific Regulations: 101.5.3",
+      "inherited_parent_context": null,
       "local_context": "Principal Use | Boarding, Lodging, or Rooming House | Use-Specific Regulations: 101.5.3",
       "source_section": null,
       "source_heading": null,
@@ -843,6 +843,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Principal Use | Supportive Housing (Category A) | 101.5.4 | Principal Use | Supportive Housing (Category A) | Use-Specific Regulations: 101.5.4",
       "source_context": "Principal Use | Supportive Housing (Category A) | Use-Specific Regulations: 101.5.4",
+      "inherited_parent_context": null,
       "local_context": "Principal Use | Supportive Housing (Category A) | Use-Specific Regulations: 101.5.4",
       "source_section": null,
       "source_heading": null,
@@ -1139,6 +1140,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Principal Use | Child Care Facilities | 101.5.6 | Principal Use | Child Care Facilities | Use-Specific Regulations: 101.5.6",
       "source_context": "Principal Use | Child Care Facilities | Use-Specific Regulations: 101.5.6",
+      "inherited_parent_context": null,
       "local_context": "Principal Use | Child Care Facilities | Use-Specific Regulations: 101.5.6",
       "source_section": null,
       "source_heading": null,
@@ -1441,6 +1443,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Boarding Use (up to 2 boarders) | Use-Specific Regulations: - | Permitted | Accessory Use | Boarding Use (up to 2 boarders) | Use-Specific Regulations: -",
       "source_context": "Accessory Use | Boarding Use (up to 2 boarders) | Use-Specific Regulations: -",
+      "inherited_parent_context": null,
       "local_context": "Accessory Use | Boarding Use (up to 2 boarders) | Use-Specific Regulations: -",
       "source_section": null,
       "source_heading": null,
@@ -1738,6 +1741,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Home Occupations | 6.8, 6.8A | Accessory Use | Home Occupations | Use-Specific Regulations: 6.8, 6.8A",
       "source_context": "Accessory Use | Home Occupations | Use-Specific Regulations: 6.8, 6.8A",
+      "inherited_parent_context": null,
       "local_context": "Accessory Use | Home Occupations | Use-Specific Regulations: 6.8, 6.8A",
       "source_section": null,
       "source_heading": null,
@@ -2035,6 +2039,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Urban Agriculture | 6.30 | Accessory Use | Urban Agriculture | Use-Specific Regulations: 6.30",
       "source_context": "Accessory Use | Urban Agriculture | Use-Specific Regulations: 6.30",
+      "inherited_parent_context": null,
       "local_context": "Accessory Use | Urban Agriculture | Use-Specific Regulations: 6.30",
       "source_section": null,
       "source_heading": null,
@@ -2331,6 +2336,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Accessory Buildings, Structures, and Uses | 101.5.5, 6.6 | Accessory Use | Accessory Buildings, Structures, and Uses | Use-Specific Regulations: 101.5.5, 6.6",
       "source_context": "Accessory Use | Accessory Buildings, Structures, and Uses | Use-Specific Regulations: 101.5.5, 6.6",
+      "inherited_parent_context": null,
       "local_context": "Accessory Use | Accessory Buildings, Structures, and Uses | Use-Specific Regulations: 101.5.5, 6.6",
       "source_section": null,
       "source_heading": null,
@@ -2436,10 +2442,10 @@
         "reason": "candidate has no explicit condition claim"
       },
       "exception": {
-        "label": "not_enough_info",
-        "evidence_field": "table_text",
-        "evidence_quote": "Interior Lot | Rowhouse .1 | 5 m | Interior Lot | Rowhouse .1 | 5 m | Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
-        "reason": "exception or override wording appears but is unresolved"
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
       }
     },
     "text_proof_trace": {
@@ -2537,10 +2543,10 @@
         "reason": "candidate has no explicit claim"
       },
       "exception": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "table_text",
         "evidence_quote": "Interior Lot | Rowhouse .1 | 5 m | Interior Lot | Rowhouse .1 | 5 m | Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
-        "reason": "exception or override wording appears but is unresolved"
+        "reason": "candidate value matches an explicit branch of the except-clause"
       }
     },
     "merged_proof_trace": {
@@ -2587,19 +2593,18 @@
         "reason": "candidate has no explicit condition claim"
       },
       "exception": {
-        "label": "not_enough_info",
-        "evidence_field": "table_text",
-        "evidence_quote": "Interior Lot | Rowhouse .1 | 5 m | Interior Lot | Rowhouse .1 | 5 m | Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
-        "reason": "exception or override wording appears but is unresolved"
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
       }
     },
     "proof_decision_mismatch": false,
     "proof_decision_mismatches": [],
-    "evidence_strength": 0.587,
+    "evidence_strength": 0.631,
     "review_priority": "not_used",
     "support_gaps": [
       "rule_object_not_supported",
-      "unresolved_exception_cue",
       "table_column_not_target_scope",
       "table_cell_candidate_requires_review",
       "table_evidence_candidate_requires_review",
@@ -2624,7 +2629,7 @@
         "reason": "canonical rule-object alias or text cue"
       }
     ],
-    "review_reason": "the cited evidence does not support the proposed rule object; the evidence contains exception or override wording that needs review; the table column does not match the configured target scope; table cell candidate requires review; table evidence candidate requires review; the rule family is outside the current validation contract",
+    "review_reason": "the cited evidence does not support the proposed rule object; the table column does not match the configured target scope; table cell candidate requires review; table evidence candidate requires review; the rule family is outside the current validation contract",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -2634,6 +2639,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Interior Lot | Rowhouse .1 | 5 m | Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
       "source_context": "Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
+      "inherited_parent_context": null,
       "local_context": "Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
       "source_section": null,
       "source_heading": null,
@@ -2739,10 +2745,10 @@
         "reason": "condition words appear in evidence"
       },
       "exception": {
-        "label": "not_enough_info",
-        "evidence_field": "table_text",
-        "evidence_quote": "Interior Lot | Rowhouse .1 | 6.2 m | Interior Lot | Rowhouse .1 | 6.2 m | Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
-        "reason": "exception or override wording appears but is unresolved"
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
       }
     },
     "text_proof_trace": {
@@ -2840,10 +2846,10 @@
         "reason": "condition words are present in table context"
       },
       "exception": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "table_text",
         "evidence_quote": "Interior Lot | Rowhouse .1 | 6.2 m | Interior Lot | Rowhouse .1 | 6.2 m | Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
-        "reason": "exception or override wording appears but is unresolved"
+        "reason": "candidate value matches an explicit branch of the except-clause"
       }
     },
     "merged_proof_trace": {
@@ -2890,19 +2896,18 @@
         "reason": "condition words appear in evidence"
       },
       "exception": {
-        "label": "not_enough_info",
-        "evidence_field": "table_text",
-        "evidence_quote": "Interior Lot | Rowhouse .1 | 6.2 m | Interior Lot | Rowhouse .1 | 6.2 m | Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
-        "reason": "exception or override wording appears but is unresolved"
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
       }
     },
     "proof_decision_mismatch": false,
     "proof_decision_mismatches": [],
-    "evidence_strength": 0.587,
+    "evidence_strength": 0.631,
     "review_priority": "not_used",
     "support_gaps": [
       "rule_object_not_supported",
-      "unresolved_exception_cue",
       "table_column_not_target_scope",
       "table_cell_candidate_requires_review",
       "table_evidence_candidate_requires_review",
@@ -2927,7 +2932,7 @@
         "reason": "canonical rule-object alias or text cue"
       }
     ],
-    "review_reason": "the cited evidence does not support the proposed rule object; the evidence contains exception or override wording that needs review; the table column does not match the configured target scope; table cell candidate requires review; table evidence candidate requires review; the rule family is outside the current validation contract",
+    "review_reason": "the cited evidence does not support the proposed rule object; the table column does not match the configured target scope; table cell candidate requires review; table evidence candidate requires review; the rule family is outside the current validation contract",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -2937,6 +2942,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Interior Lot | Rowhouse .1 | 6.2 m | Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
       "source_context": "Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
+      "inherited_parent_context": null,
       "local_context": "Minimum Lot Width .2 | Interior Lot | Rowhouse .1 | 5 m, except 6.2 m for end unit lots",
       "source_section": null,
       "source_heading": null,
@@ -3238,6 +3244,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Interior Lot | Small-Scale Multi-Unit | 10 m | Minimum Lot Width .2 | Interior Lot | Small-Scale Multi-Unit | 10 m",
       "source_context": "Minimum Lot Width .2 | Interior Lot | Small-Scale Multi-Unit | 10 m",
+      "inherited_parent_context": null,
       "local_context": "Minimum Lot Width .2 | Interior Lot | Small-Scale Multi-Unit | 10 m",
       "source_section": null,
       "source_heading": null,
@@ -3540,6 +3547,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Corner Lot - Street | Rowhouse .1 | 8 m | Minimum Lot Width .2 | Corner Lot - Street | Rowhouse .1 | 8 m",
       "source_context": "Minimum Lot Width .2 | Corner Lot - Street | Rowhouse .1 | 8 m",
+      "inherited_parent_context": null,
       "local_context": "Minimum Lot Width .2 | Corner Lot - Street | Rowhouse .1 | 8 m",
       "source_section": null,
       "source_heading": null,
@@ -3841,6 +3849,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Corner Lot - Street | Small-Scale Multi-Unit | 10 m | Minimum Lot Width .2 | Corner Lot - Street | Small-Scale Multi-Unit | 10 m",
       "source_context": "Minimum Lot Width .2 | Corner Lot - Street | Small-Scale Multi-Unit | 10 m",
+      "inherited_parent_context": null,
       "local_context": "Minimum Lot Width .2 | Corner Lot - Street | Small-Scale Multi-Unit | 10 m",
       "source_section": null,
       "source_heading": null,
@@ -4143,6 +4152,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Corner Lot - Lane | Rowhouse .1 | 6.2 m | Minimum Lot Width .2 | Corner Lot - Lane | Rowhouse .1 | 6.2 m",
       "source_context": "Minimum Lot Width .2 | Corner Lot - Lane | Rowhouse .1 | 6.2 m",
+      "inherited_parent_context": null,
       "local_context": "Minimum Lot Width .2 | Corner Lot - Lane | Rowhouse .1 | 6.2 m",
       "source_section": null,
       "source_heading": null,
@@ -4444,6 +4454,7 @@
       "evidence_type": "table_cell",
       "evidence_text": "Corner Lot - Lane | Small-Scale Multi-Unit | 10 m | Minimum Lot Width .2 | Corner Lot - Lane | Small-Scale Multi-Unit | 10 m",
       "source_context": "Minimum Lot Width .2 | Corner Lot - Lane | Small-Scale Multi-Unit | 10 m",
+      "inherited_parent_context": null,
       "local_context": "Minimum Lot Width .2 | Corner Lot - Lane | Small-Scale Multi-Unit | 10 m",
       "source_section": null,
       "source_heading": null,
@@ -4749,6 +4760,7 @@
       "evidence_type": "clause",
       "evidence_text": ".2 Panhandle lots or other irregular lot configurations are not permitted except in accordance with Section 101.6.4 or where constrained by restrictive site conditions as determined by the Approving Officer.",
       "source_context": ".2 Panhandle lots or other irregular lot configurations are not permitted except in accordance with Section 101.6.4 or where constrained by restrictive site conditions as determined by the Approving Officer.",
+      "inherited_parent_context": null,
       "local_context": ".2 Panhandle lots or other irregular lot configurations are not permitted except in accordance with Section 101.6.4 or where constrained by restrictive site conditions as determined by the Approving Officer.",
       "source_section": null,
       "source_heading": null,
@@ -5055,6 +5067,7 @@
       "evidence_type": "clause",
       "evidence_text": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
       "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "inherited_parent_context": null,
       "local_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
       "source_section": null,
       "source_heading": null,
@@ -5120,31 +5133,33 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
-        "reason": "cited evidence does not support the canonical rule object"
+        "evidence_quote": "rowhouse",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
-        "reason": "applies_to words are not grounded in local evidence"
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway t...",
+        "reason": "final support gap remains: applies_to_not_supported",
+        "decision_gap": "applies_to_not_supported"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "value appears in cited evidence"
       },
       "unit": {
@@ -5170,31 +5185,31 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "applies_to words are not grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "value appears in cited evidence"
       },
       "unit": {
@@ -5206,7 +5221,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "condition words are not fully grounded"
       },
       "exception": {
@@ -5218,21 +5233,21 @@
     },
     "text_span_proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. (c) is subject to a statutory right of way registered in favour of the City.",
-        "reason": "rule object is not explicit in text evidence"
+        "evidence_quote": "rowhouse",
+        "reason": "rule-object cue appears in text evidence"
       },
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. (c) is subject to a statutory right of way registered in favour of the City.",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway t...",
         "reason": "operator wording is not proven by text evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City.\n(c) is subject to a statutory right of way",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City.\n(1) Contiguous rowhouse lots must provide a",
         "reason": "value appears in text evidence"
       },
       "unit": {
@@ -5242,16 +5257,16 @@
         "reason": "candidate has no explicit unit to prove"
       },
       "constraint_scope": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. (c) is subject to a statutory right of way registered in favour of the City.",
-        "reason": "claim words are not sufficiently visible in text evidence"
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway t...",
+        "reason": "scope words appear in text evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. (c) is subject to a statutory right of way registered in favour of the City.",
-        "reason": "claim words are not sufficiently visible in text evidence"
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway t...",
+        "reason": "applies_to words appear in text evidence"
       },
       "condition": {
         "label": "supported",
@@ -5271,31 +5286,33 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
-        "reason": "cited evidence does not support the canonical rule object"
+        "evidence_quote": "rowhouse",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
-        "reason": "applies_to words are not grounded in local evidence"
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway t...",
+        "reason": "final support gap remains: applies_to_not_supported",
+        "decision_gap": "applies_to_not_supported"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City (c) is subject to a statutory right of way registered in fa...",
+        "evidence_quote": "(c) is subject to a statutory right of way registered in favour of the City. pedestrian walkway right of way subject to a statutory right of way registered in favour of the City s from a street, lane, or walkway that intersects the front...",
         "reason": "value appears in cited evidence"
       },
       "unit": {
@@ -5355,8 +5372,9 @@
       "evidence_id": "pipeline5_merged_rule_0078",
       "evidence_type": "clause",
       "evidence_text": "(c) is subject to a statutory right of way registered in favour of the City.",
-      "source_context": "(c) is subject to a statutory right of way registered in favour of the City.",
-      "local_context": "(c) is subject to a statutory right of way registered in favour of the City.",
+      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (c) is subject to a statutory right of way registered in favour of the City.",
+      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (c) is subject to a statutory right of way registered in favour of the City.",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -5655,8 +5673,9 @@
       "evidence_id": "pipeline5_merged_rule_0079",
       "evidence_type": "clause",
       "evidence_text": "(1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
-      "source_context": "(1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
-      "local_context": "(1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
+      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
+      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -5956,8 +5975,9 @@
       "evidence_id": "pipeline5_merged_rule_0080",
       "evidence_type": "clause",
       "evidence_text": "(1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
-      "source_context": "(1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
-      "local_context": "(1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
+      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
+      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (1) Boarding, lodging or rooming houses are permitted for not more than 5 persons, when situated in a single family dwelling on a lot with an area of not less than 560 m², subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -6022,43 +6042,43 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "applies_to words are not grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "value appears in cited evidence"
       },
       "unit": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "unit appears in cited evidence and is compatible"
       },
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -6072,43 +6092,43 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "applies_to words are not grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "value appears in cited evidence"
       },
       "unit": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "unit appears in cited evidence and is compatible"
       },
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -6122,7 +6142,7 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects...",
         "reason": "rule object is not explicit in text evidence"
       },
       "operator": {
@@ -6134,7 +6154,7 @@
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "ving unit shall have a minimum floor area of 27 m²;\n(a) each living unit shall have a minimu",
+        "evidence_quote": "ving unit shall have a minimum floor area of 27 m²;\n(1) Contiguous rowhouse lots must provid",
         "reason": "value appears in text evidence"
       },
       "unit": {
@@ -6146,13 +6166,13 @@
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects...",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects...",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "condition": {
@@ -6173,43 +6193,43 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "applies_to words are not grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "value appears in cited evidence"
       },
       "unit": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "unit appears in cited evidence and is compatible"
       },
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² (a) each living unit shall have a minimum floor area of 27 m²;",
+        "evidence_quote": "(a) each living unit shall have a minimum floor area of 27 m²; living unit floor area 27 m² s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -6257,8 +6277,9 @@
       "evidence_id": "pipeline5_merged_rule_0083",
       "evidence_type": "clause",
       "evidence_text": "(a) each living unit shall have a minimum floor area of 27 m²;",
-      "source_context": "(a) each living unit shall have a minimum floor area of 27 m²;",
-      "local_context": "(a) each living unit shall have a minimum floor area of 27 m²;",
+      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
+      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (a) each living unit shall have a minimum floor area of 27 m²;",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -6423,13 +6444,13 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and (b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and",
+        "evidence_quote": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or...",
         "reason": "rule object is not explicit in text evidence"
       },
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and (b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and",
+        "evidence_quote": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or...",
         "reason": "operator wording is not proven by text evidence"
       },
       "value": {
@@ -6447,13 +6468,13 @@
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and (b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and",
+        "evidence_quote": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or...",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and (b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and",
+        "evidence_quote": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or...",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "condition": {
@@ -6559,8 +6580,9 @@
       "evidence_id": "pipeline5_merged_rule_0084__api_01",
       "evidence_type": "clause",
       "evidence_text": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and",
-      "source_context": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and",
-      "local_context": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and",
+      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and",
+      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -6725,19 +6747,19 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply. (c) the use shall be included as part of a comprehensive development plan to which the pro...",
+        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply. (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestria...",
         "reason": "rule object is not explicit in text evidence"
       },
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply. (c) the use shall be included as part of a comprehensive development plan to which the pro...",
+        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply. (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestria...",
         "reason": "operator wording is not proven by text evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.\n(c) the use shall be included as part of a",
+        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.\n(1) Contiguous rowhouse lots must provide a",
         "reason": "value appears in text evidence"
       },
       "unit": {
@@ -6749,13 +6771,13 @@
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply. (c) the use shall be included as part of a comprehensive development plan to which the pro...",
+        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply. (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestria...",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply. (c) the use shall be included as part of a comprehensive development plan to which the pro...",
+        "evidence_quote": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply. (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestria...",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "condition": {
@@ -6859,8 +6881,9 @@
       "evidence_id": "pipeline5_merged_rule_0085",
       "evidence_type": "clause",
       "evidence_text": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
-      "source_context": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
-      "local_context": "(c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
+      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
+      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (c) the use shall be included as part of a comprehensive development plan to which the provisions of the Comprehensive Development District apply.",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -7160,8 +7183,9 @@
       "evidence_id": "pipeline5_merged_rule_0087",
       "evidence_type": "clause",
       "evidence_text": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
-      "source_context": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
-      "local_context": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -7456,6 +7480,7 @@
       "evidence_type": "clause",
       "evidence_text": "(a) be limited to a maximum of 25 children;",
       "source_context": "(a) be limited to a maximum of 25 children;",
+      "inherited_parent_context": null,
       "local_context": "(a) be limited to a maximum of 25 children;",
       "source_section": null,
       "source_heading": null,
@@ -7750,6 +7775,7 @@
       "evidence_type": "clause",
       "evidence_text": "(b) be located on a corner lot;",
       "source_context": "(b) be located on a corner lot;",
+      "inherited_parent_context": null,
       "local_context": "(b) be located on a corner lot;",
       "source_section": null,
       "source_heading": null,
@@ -8043,6 +8069,7 @@
       "evidence_type": "clause",
       "evidence_text": "(e) comply with all other applicable regulations under this Bylaw.",
       "source_context": "(e) comply with all other applicable regulations under this Bylaw.",
+      "inherited_parent_context": null,
       "local_context": "(e) comply with all other applicable regulations under this Bylaw.",
       "source_section": null,
       "source_heading": null,
@@ -8311,6 +8338,7 @@
     "review_priority": "not_used",
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
+      "rule_family_direction_mismatch",
       "cross_reference_only"
     ],
     "support_checks": {
@@ -8325,7 +8353,7 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate is a bylaw section cross-reference, not a directly validated rule",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; rule family direction mismatch; the candidate is a bylaw section cross-reference, not a directly validated rule",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -8335,6 +8363,7 @@
       "evidence_type": "clause",
       "evidence_text": "Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance.",
       "source_context": "Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance.",
+      "inherited_parent_context": null,
       "local_context": "Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards are limited to a maximum of 0.8 m to provide adequate fire truck clearance.",
       "source_section": null,
       "source_heading": null,
@@ -8378,312 +8407,6 @@
     }
   },
   {
-    "rule_id": "burnaby_r1_121",
-    "rule_object": "panhandle_lots_and_other_irregularly_shaped_lots",
-    "constraint_type": "allowed",
-    "constraint_scope": "heritage_irregular_lots_permitted",
-    "applies_to": "panhandle lots and other irregularly shaped lots",
-    "value": "",
-    "unit": "",
-    "operator": "allowed",
-    "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
-    "exception": "",
-    "gis_relevance": "context",
-    "verification_status": "not_used",
-    "verification_decision": "not_used",
-    "verification_label": "not_enough_info",
-    "canonical_rule_key": "panhandle_lots_and_other_irregularly_shaped_lots__heritage_irregular_lots_permitted__panhandle_lots_and_other_irregularly_shaped_lots__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource__allowed",
-    "proof_type": "text_evidence",
-    "table_proof_status": "none",
-    "text_span_proof_status": "partial",
-    "proof_trace": {
-      "rule_object": {
-        "label": "not_enough_info",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "panhandle lots and other irregularly shaped lots",
-        "reason": "final support gap remains: rule_object_not_supported",
-        "decision_gap": "rule_object_not_supported"
-      },
-      "constraint_scope": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "scope words are grounded in local evidence"
-      },
-      "applies_to": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "applies_to words are grounded in local evidence"
-      },
-      "operator": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "operator wording is supported by evidence"
-      },
-      "value": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit claim"
-      },
-      "unit": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit claim"
-      },
-      "condition": {
-        "label": "not_enough_info",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "claim words are not sufficiently visible in text evidence",
-        "required_for_text_verification": true
-      },
-      "exception": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit exception claim"
-      }
-    },
-    "text_proof_trace": {
-      "rule_object": {
-        "label": "not_enough_info",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "cited evidence does not support the canonical rule object"
-      },
-      "constraint_scope": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "scope words are grounded in local evidence"
-      },
-      "applies_to": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "applies_to words are grounded in local evidence"
-      },
-      "operator": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "operator wording is supported by evidence"
-      },
-      "value": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit claim"
-      },
-      "unit": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit claim"
-      },
-      "condition": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "condition words appear in evidence"
-      },
-      "exception": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit exception claim"
-      }
-    },
-    "text_span_proof_trace": {
-      "rule_object": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "panhandle lots and other irregularly shaped lots",
-        "reason": "rule-object cue appears in text evidence"
-      },
-      "operator": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "permitted",
-        "reason": "text wording supports allowed"
-      },
-      "value": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit value to prove"
-      },
-      "unit": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit unit to prove"
-      },
-      "constraint_scope": {
-        "label": "not_enough_info",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "claim words are not sufficiently visible in text evidence"
-      },
-      "applies_to": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "applies_to words appear in text evidence"
-      },
-      "condition": {
-        "label": "not_enough_info",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "claim words are not sufficiently visible in text evidence",
-        "required_for_text_verification": true
-      },
-      "exception": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "no explicit exception claim and no unresolved exception cue"
-      }
-    },
-    "table_proof_trace": {},
-    "merged_proof_trace": {
-      "rule_object": {
-        "label": "not_enough_info",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "panhandle lots and other irregularly shaped lots",
-        "reason": "final support gap remains: rule_object_not_supported",
-        "decision_gap": "rule_object_not_supported"
-      },
-      "constraint_scope": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "scope words are grounded in local evidence"
-      },
-      "applies_to": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "applies_to words are grounded in local evidence"
-      },
-      "operator": {
-        "label": "supported",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: panhandle lots and other irregularly shaped lots (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "operator wording is supported by evidence"
-      },
-      "value": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit claim"
-      },
-      "unit": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit claim"
-      },
-      "condition": {
-        "label": "not_enough_info",
-        "evidence_field": "evidence_text",
-        "evidence_quote": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-        "reason": "claim words are not sufficiently visible in text evidence",
-        "required_for_text_verification": true
-      },
-      "exception": {
-        "label": "supported",
-        "evidence_field": "",
-        "evidence_quote": "",
-        "reason": "candidate has no explicit exception claim"
-      }
-    },
-    "proof_decision_mismatch": false,
-    "proof_decision_mismatches": [],
-    "evidence_strength": 0.663,
-    "review_priority": "not_used",
-    "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
-      "text_condition_not_supported",
-      "rule_object_not_supported",
-      "outside_current_rule_contract"
-    ],
-    "support_checks": {
-      "source_evidence_present": true,
-      "value_supported": true,
-      "unit_supported": true,
-      "operator_supported": true,
-      "applies_to_supported": true,
-      "scope_supported": true,
-      "rule_object_supported": false,
-      "table_context_supported": true,
-      "table_review_gate_passed": true
-    },
-    "normalization_trace": [
-      {
-        "field": "rule_object",
-        "before": "panhandle lots and other irregularly shaped lots",
-        "after": "panhandle_lots_and_other_irregularly_shaped_lots",
-        "reason": "canonical rule-object alias or text cue"
-      }
-    ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; the cited evidence does not support the proposed rule object; the rule family is outside the current validation contract",
-    "source": {
-      "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
-      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
-      "page": 6,
-      "section": null,
-      "evidence_id": "pipeline5_merged_rule_0115",
-      "evidence_type": "clause",
-      "evidence_text": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-      "source_context": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-      "local_context": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-      "source_section": null,
-      "source_heading": null,
-      "table_title": null,
-      "row_header": "panhandle lots and other irregularly shaped lots",
-      "column_header": null,
-      "cell_value": "",
-      "bbox": null,
-      "table_parser": "pipeline5_visual_blocks"
-    },
-    "candidate": {
-      "candidate_id": "pipeline5_merged_rule_0115",
-      "evidence_id": "pipeline5_merged_rule_0115",
-      "rule_object": "panhandle lots and other irregularly shaped lots",
-      "constraint_type": "allowed",
-      "constraint_scope": "heritage_irregular_lots_permitted",
-      "applies_to": "panhandle lots and other irregularly shaped lots",
-      "operator": "allowed",
-      "value": "",
-      "unit": "",
-      "condition": "Lots in the R1 District on the Community Heritage Register, subject to approval of the Director of Planning and Development and registration of a Section 219 Covenant protecting the heritage resource",
-      "exception": "",
-      "gis_relevance": "context",
-      "notes": "adapted external candidate",
-      "extraction_method": "pipeline5_final_registry",
-      "extraction_source": "zihao",
-      "source_stream": "gemini_text_block",
-      "rule_key": "heritage_irregular_lots_permitted",
-      "subject": "panhandle lots and other irregularly shaped lots",
-      "relevance_category": null,
-      "extraction_final_action": "ACCEPT",
-      "extraction_support_gaps": null,
-      "extraction_review_reasons": [],
-      "original_rule_id": "pipeline5_rule_0162",
-      "original_excerpt": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
-      "sentence_match_score": null,
-      "possible_missing_numeric_values": null,
-      "zihao_verification_status": null,
-      "zihao_confidence": null,
-      "zihao_needs_review": null
-    }
-  },
-  {
     "rule_id": "burnaby_r1_131",
     "rule_object": "lots",
     "constraint_type": "exception",
@@ -8706,25 +8429,26 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
-        "reason": "cited evidence does not support the canonical rule object"
+        "evidence_quote": "lots",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "operator wording is not supported by evidence"
       },
       "value": {
@@ -8742,7 +8466,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -8757,25 +8481,25 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "operator wording is not supported by evidence"
       },
       "value": {
@@ -8793,7 +8517,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -8805,15 +8529,15 @@
     },
     "text_span_proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
-        "reason": "rule object is not explicit in text evidence"
+        "evidence_quote": "lots",
+        "reason": "rule-object cue appears in text evidence"
       },
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "operator wording is not proven by text evidence"
       },
       "value": {
@@ -8831,19 +8555,19 @@
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
-        "reason": "claim words are not sufficiently visible in text evidence"
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
+        "reason": "applies_to words appear in text evidence"
       },
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -8859,25 +8583,26 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
-        "reason": "cited evidence does not support the canonical rule object"
+        "evidence_quote": "lots",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and Section 101.5.1 (f) Section 101.5.1 does not apply; and ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "operator wording is not supported by evidence"
       },
       "value": {
@@ -8895,7 +8620,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(f) Section 101.5.1 does not apply; and (f) Section 101.5.1 does not apply; and",
+        "evidence_quote": "(f) Section 101.5.1 does not apply; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -8938,8 +8663,9 @@
       "evidence_id": "pipeline5_merged_rule_0125",
       "evidence_type": "clause",
       "evidence_text": "(f) Section 101.5.1 does not apply; and",
-      "source_context": "(f) Section 101.5.1 does not apply; and",
-      "local_context": "(f) Section 101.5.1 does not apply; and",
+      "source_context": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
+      "inherited_parent_context": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
+      "local_context": "ts and other irregularly shaped lots may be permitted subject to the following: (f) Section 101.5.1 does not apply; and",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -9004,19 +8730,20 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
-        "reason": "cited evidence does not support the canonical rule object"
+        "evidence_quote": "lots",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
@@ -9041,8 +8768,9 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
-        "reason": "condition words are not fully grounded"
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
+        "reason": "claim words are not sufficiently visible in text evidence",
+        "required_for_text_verification": true
       },
       "exception": {
         "label": "supported",
@@ -9055,25 +8783,25 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "operator wording is not supported by evidence"
       },
       "value": {
@@ -9089,10 +8817,10 @@
         "reason": "candidate has no explicit claim"
       },
       "condition": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
-        "reason": "condition words are not fully grounded"
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
+        "reason": "condition words appear in evidence"
       },
       "exception": {
         "label": "supported",
@@ -9103,10 +8831,10 @@
     },
     "text_span_proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; (i) off-street vehicular parking spaces are not required;",
-        "reason": "rule object is not explicit in text evidence"
+        "evidence_quote": "lots",
+        "reason": "rule-object cue appears in text evidence"
       },
       "operator": {
         "label": "supported",
@@ -9129,19 +8857,19 @@
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; (i) off-street vehicular parking spaces are not required;",
-        "reason": "claim words are not sufficiently visible in text evidence"
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
+        "reason": "applies_to words appear in text evidence"
       },
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -9157,19 +8885,20 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
-        "reason": "cited evidence does not support the canonical rule object"
+        "evidence_quote": "lots",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
@@ -9194,8 +8923,9 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(i) off-street vehicular parking spaces are not required; off-street vehicular parking spaces (i) off-street vehicular parking spaces are not required;",
-        "reason": "condition words are not fully grounded"
+        "evidence_quote": "(i) off-street vehicular parking spaces are not required; (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
+        "reason": "claim words are not sufficiently visible in text evidence",
+        "required_for_text_verification": true
       },
       "exception": {
         "label": "supported",
@@ -9236,8 +8966,9 @@
       "evidence_id": "pipeline5_merged_rule_0126",
       "evidence_type": "clause",
       "evidence_text": "(i) off-street vehicular parking spaces are not required;",
-      "source_context": "(i) off-street vehicular parking spaces are not required;",
-      "local_context": "(i) off-street vehicular parking spaces are not required;",
+      "source_context": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
+      "inherited_parent_context": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
+      "local_context": "ts and other irregularly shaped lots may be permitted subject to the following: (i) off-street vehicular parking spaces are not required;",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -9309,19 +9040,19 @@
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
@@ -9339,7 +9070,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (ii) retention and continued use of driveways that do not otherwise conform with the requirements of th...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (ii) re...",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -9354,25 +9085,25 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
@@ -9390,7 +9121,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -9428,19 +9159,19 @@
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (ii) retention and continued use of driveways that do not otherwise conform with the requirements of th...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (ii) re...",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (ii) retention and continued use of driveways that do not otherwise conform with the requirements of th...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (ii) re...",
         "reason": "applies_to words appear in text evidence"
       },
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (ii) retention and continued use of driveways that do not otherwise conform with the requirements of th...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (ii) re...",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -9463,19 +9194,19 @@
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways (ii) retention and continued use of driveways t...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and retention and continued use of non-conforming driveways ts and other irregularly shaped lots may be per...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
@@ -9493,7 +9224,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (ii) retention and continued use of driveways that do not otherwise conform with the requirements of th...",
+        "evidence_quote": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and (a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (ii) re...",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -9535,8 +9266,9 @@
       "evidence_id": "pipeline5_merged_rule_0127",
       "evidence_type": "clause",
       "evidence_text": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and",
-      "source_context": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and",
-      "local_context": "(ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and",
+      "source_context": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following: (ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and",
+      "inherited_parent_context": "(a) panhandle lots and other irregularly shaped lots may be permitted subject to the following:",
+      "local_context": "ts and other irregularly shaped lots may be permitted subject to the following: (ii) retention and continued use of driveways that do not otherwise conform with the requirements of this Bylaw may be permitted; and",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -9838,6 +9570,7 @@
       "evidence_type": "clause",
       "evidence_text": "(a) Section 6: Supplementary Regulations",
       "source_context": "(a) Section 6: Supplementary Regulations",
+      "inherited_parent_context": null,
       "local_context": "(a) Section 6: Supplementary Regulations",
       "source_section": null,
       "source_heading": null,
@@ -10141,6 +9874,7 @@
       "evidence_type": "clause",
       "evidence_text": "(b) Schedule 8: Off-Street Parking",
       "source_context": "(b) Schedule 8: Off-Street Parking",
+      "inherited_parent_context": null,
       "local_context": "(b) Schedule 8: Off-Street Parking",
       "source_section": null,
       "source_heading": null,
