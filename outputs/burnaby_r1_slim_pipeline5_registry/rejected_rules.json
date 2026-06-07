@@ -226,7 +226,7 @@
     "evidence_strength": 0.686,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "non_numeric_value_for_numeric_rule",
       "operator_not_supported"
     ],
@@ -242,7 +242,12 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family; the proposed operator is not supported by the cited wording",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "evidence is not an enumerated child fragment"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family; the proposed operator is not supported by the cited wording",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -252,7 +257,6 @@
       "evidence_type": "clause",
       "evidence_text": ".4 Accessory buildings are not permitted within the minimum separations between principal buildings",
       "source_context": ".4 Accessory buildings are not permitted within the minimum separations between principal buildings",
-      "inherited_parent_context": null,
       "local_context": ".4 Accessory buildings are not permitted within the minimum separations between principal buildings",
       "source_section": null,
       "source_heading": null,
@@ -280,12 +284,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0002__text_006",
+      "batch_id": "text_page_0002",
+      "source_pipeline": "pipeline5",
       "rule_key": "accessory_buildings_minimum_separations_prohibition",
       "subject": "location",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0113",
       "original_excerpt": ".4 Accessory buildings are not permitted within the minimum separations between principal buildings",
       "sentence_match_score": null,
@@ -296,21 +306,21 @@
     }
   },
   {
-    "rule_id": "burnaby_r1_078",
-    "rule_object": "dwelling_units",
+    "rule_id": "burnaby_r1_077",
+    "rule_object": "frontage",
     "constraint_type": "minimum",
-    "constraint_scope": "dwelling_unit_entrance_orientation_through_lot",
+    "constraint_scope": "site",
     "applies_to": "Dwelling Unit",
     "value": "1",
-    "unit": "dwelling unit per street frontage",
+    "unit": "dwelling unit",
     "operator": ">=",
-    "condition": "through lot with multiple principal buildings and site access from both frontages",
+    "condition": "All Dwelling Units",
     "exception": "",
-    "gis_relevance": "context",
+    "gis_relevance": "direct",
     "verification_status": "unsupported",
     "verification_decision": "rejected",
     "verification_label": "refuted",
-    "canonical_rule_key": "dwelling_units__dwelling_unit_entrance_orientation_through_lot__dwelling_unit__through_lot_with_multiple_principal_buildings_and_site_access_from_both_frontages____1__dwelling_unit_per_street_frontage",
+    "canonical_rule_key": "frontage__site__dwelling_unit__all_dwelling_units____1__dwelling_unit",
     "proof_type": "text_evidence",
     "table_proof_status": "none",
     "text_span_proof_status": "refuted",
@@ -418,7 +428,310 @@
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "dwelling unit",
+        "evidence_quote": "frontage",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "At least",
+        "reason": "text wording supports >= / minimum"
+      },
+      "value": {
+        "label": "refuted",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "text evidence contains numeric values but not the candidate value"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "unit",
+        "reason": "unit appears in text evidence"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "scope words appear in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "no explicit exception claim and no unresolved exception cue"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "final deterministic support check passed"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.705,
+    "review_priority": "low",
+    "support_gaps": [
+      "text_candidate_requires_review",
+      "rule_object_unit_not_compatible"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "normalization_trace": [],
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "no nearby parent clause proved the rule family"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the unit is not compatible with the proposed rule object",
+    "source": {
+      "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "page": 4,
+      "section": null,
+      "evidence_id": "pipeline5_merged_rule_0072__api_01",
+      "evidence_type": "clause",
+      "evidence_text": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
+      "source_context": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
+      "local_context": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
+      "source_section": null,
+      "source_heading": null,
+      "table_title": null,
+      "row_header": "main entrance orientation",
+      "column_header": null,
+      "cell_value": "1 dwelling unit",
+      "bbox": null,
+      "table_parser": "pipeline5_visual_blocks"
+    },
+    "candidate": {
+      "candidate_id": "pipeline5_merged_rule_0072__api_01",
+      "evidence_id": "pipeline5_merged_rule_0072__api_01",
+      "rule_object": "frontage",
+      "constraint_type": "minimum",
+      "constraint_scope": "site",
+      "applies_to": "Dwelling Unit",
+      "operator": ">=",
+      "value": "1",
+      "unit": "dwelling unit",
+      "condition": "All Dwelling Units",
+      "exception": "",
+      "gis_relevance": "direct",
+      "notes": "adapted external candidate",
+      "extraction_method": "pipeline5_final_registry",
+      "extraction_source": "zihao",
+      "source_stream": "gemini_text_block",
+      "source_id": "page_0004__text_004",
+      "batch_id": "text_page_0004",
+      "source_pipeline": "pipeline5",
+      "rule_key": "dwelling_unit_entrance_orientation",
+      "subject": "main entrance orientation",
+      "relevance_category": null,
+      "extraction_final_action": "ACCEPT",
+      "extraction_support_gaps": null,
+      "extraction_review_reasons": null,
+      "review_required": null,
+      "api_review_action": "REPLACE",
+      "api_review_reason": "The exception states an independently testable alternate rule for through lots.",
+      "original_rule_id": "pipeline5_merged_rule_0072__api_01",
+      "original_excerpt": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
+      "sentence_match_score": null,
+      "possible_missing_numeric_values": null,
+      "zihao_verification_status": null,
+      "zihao_confidence": null,
+      "zihao_needs_review": null
+    }
+  },
+  {
+    "rule_id": "burnaby_r1_078",
+    "rule_object": "frontage",
+    "constraint_type": "minimum",
+    "constraint_scope": "site",
+    "applies_to": "Dwelling Unit",
+    "value": "1",
+    "unit": "dwelling unit per street frontage",
+    "operator": ">=",
+    "condition": "through lot with multiple principal buildings and site access from both frontages",
+    "exception": "",
+    "gis_relevance": "direct",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "frontage__site__dwelling_unit__through_lot_with_multiple_principal_buildings_and_site_access_from_both_frontages____1__dwelling_unit_per_street_frontage",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "refuted",
+    "proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "final deterministic support check passed"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per str...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "frontage",
         "reason": "rule-object cue appears in text evidence"
       },
       "operator": {
@@ -521,8 +834,7 @@
     "evidence_strength": 0.705,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
-      "rule_family_direction_mismatch",
+      "text_candidate_requires_review",
       "rule_object_unit_not_compatible"
     ],
     "support_checks": {
@@ -536,15 +848,13 @@
       "table_context_supported": true,
       "table_review_gate_passed": true
     },
-    "normalization_trace": [
-      {
-        "field": "rule_object",
-        "before": "Dwelling Unit",
-        "after": "dwelling_units",
-        "reason": "canonical rule-object alias or text cue"
-      }
-    ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; rule family direction mismatch; the unit is not compatible with the proposed rule object",
+    "normalization_trace": [],
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "no nearby parent clause proved the rule family"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -554,7 +864,6 @@
       "evidence_type": "clause",
       "evidence_text": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
       "source_context": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
-      "inherited_parent_context": null,
       "local_context": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
       "source_section": null,
       "source_heading": null,
@@ -568,26 +877,32 @@
     "candidate": {
       "candidate_id": "pipeline5_merged_rule_0073",
       "evidence_id": "pipeline5_merged_rule_0073",
-      "rule_object": "Dwelling Unit",
+      "rule_object": "frontage",
       "constraint_type": "minimum",
-      "constraint_scope": "dwelling_unit_entrance_orientation_through_lot",
+      "constraint_scope": "site",
       "applies_to": "Dwelling Unit",
       "operator": ">=",
       "value": "1",
       "unit": "dwelling unit per street frontage",
       "condition": "through lot with multiple principal buildings and site access from both frontages",
       "exception": "",
-      "gis_relevance": "context",
+      "gis_relevance": "direct",
       "notes": "adapted external candidate",
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0004__text_004",
+      "batch_id": "text_page_0004",
+      "source_pipeline": "pipeline5",
       "rule_key": "dwelling_unit_entrance_orientation_through_lot",
       "subject": "main entrance orientation",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0120",
       "original_excerpt": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage.",
       "sentence_match_score": null,
@@ -627,26 +942,25 @@
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
-        "reason": "final support gap remains: applies_to_not_supported",
-        "decision_gap": "applies_to_not_supported"
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
+        "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "refuted",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "value is absent from cited evidence"
       },
       "unit": {
@@ -658,7 +972,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -672,31 +986,31 @@
       "rule_object": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
-        "reason": "applies_to words are not grounded in local evidence"
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
+        "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "refuted",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "value is absent from cited evidence"
       },
       "unit": {
@@ -708,7 +1022,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -728,13 +1042,13 @@
       "operator": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "operator wording is not proven by text evidence"
       },
       "value": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "value is not visible in text evidence"
       },
       "unit": {
@@ -746,13 +1060,13 @@
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "scope words appear in text evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "applies_to words appear in text evidence"
       },
       "condition": {
@@ -780,26 +1094,25 @@
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a...",
-        "reason": "final support gap remains: applies_to_not_supported",
-        "decision_gap": "applies_to_not_supported"
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
+        "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "refuted",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "value is absent from cited evidence"
       },
       "unit": {
@@ -811,7 +1124,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot; pedestrian walkway linkage links the fronting street with the parallel lane, street, or trail network at the rear of the lot s from a...",
+        "evidence_quote": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street wi...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -823,12 +1136,11 @@
     },
     "proof_decision_mismatch": false,
     "proof_decision_mismatches": [],
-    "evidence_strength": 0.419,
+    "evidence_strength": 0.483,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "value_not_found_in_evidence",
-      "applies_to_not_supported",
       "rule_object_not_supported",
       "outside_current_rule_contract"
     ],
@@ -837,7 +1149,7 @@
       "value_supported": false,
       "unit_supported": true,
       "operator_supported": true,
-      "applies_to_supported": false,
+      "applies_to_supported": true,
       "scope_supported": true,
       "rule_object_supported": false,
       "table_context_supported": true,
@@ -851,7 +1163,13 @@
         "reason": "canonical rule-object alias or text cue"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the proposed value is not visible in the cited evidence; the applies_to field is not clearly grounded; the cited evidence does not support the proposed rule object; the rule family is outside the current validation contract",
+    "semantic_frame": {
+      "status": "parent_context_attached",
+      "context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
+      "parent_evidence_id": "pipeline5_merged_rule_0074",
+      "reason": "nearby parent clause supplies rule-family and applies-to context"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the proposed value is not visible in the cited evidence; the cited evidence does not support the proposed rule object; the rule family is outside the current validation contract",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -860,9 +1178,8 @@
       "evidence_id": "pipeline5_merged_rule_0075",
       "evidence_type": "clause",
       "evidence_text": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
-      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
-      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
-      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
+      "source_context": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
+      "local_context": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -889,12 +1206,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0004__text_007",
+      "batch_id": "text_page_0004",
+      "source_pipeline": "pipeline5",
       "rule_key": "rowhouse_walkway_linkage",
       "subject": "pedestrian walkway linkage",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0122",
       "original_excerpt": "(a) links the fronting street with the parallel lane, street, or trail network at the rear of the lot;",
       "sentence_match_score": null,
@@ -908,28 +1231,27 @@
     "rule_id": "burnaby_r1_091",
     "rule_object": "parking",
     "constraint_type": "requirement",
-    "constraint_scope": "parking_location",
+    "constraint_scope": "parking",
     "applies_to": "Parking",
     "value": "in an attached or detached garage, carport or outdoor parking pad at the rear of the lot",
     "unit": "",
     "operator": "",
     "condition": "when accessible from an abutting lane or street",
     "exception": "Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
-    "gis_relevance": "context",
-    "verification_status": "not_used",
+    "gis_relevance": "direct",
+    "verification_status": "unsupported",
     "verification_decision": "rejected",
     "verification_label": "refuted",
-    "canonical_rule_key": "parking__parking_location__parking__when_accessible_from_an_abutting_lane_or_street__in_an_attached_or_detached_garage_carport_or_outdoor_parking_pad_at_the_rear_of_the_lot",
+    "canonical_rule_key": "parking__parking__parking__when_accessible_from_an_abutting_lane_or_street__in_an_attached_or_detached_garage_carport_or_outdoor_parking_pad_at_the_rear_of_the_lot",
     "proof_type": "text_evidence",
     "table_proof_status": "none",
     "text_span_proof_status": "partial",
     "proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "Parking",
-        "reason": "final support gap remains: rule_object_not_supported",
-        "decision_gap": "rule_object_not_supported"
+        "evidence_quote": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Directo...",
+        "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
@@ -976,10 +1298,10 @@
     },
     "text_proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Directo...",
-        "reason": "cited evidence does not support the canonical rule object"
+        "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
@@ -1050,10 +1372,10 @@
         "reason": "candidate has no explicit unit to prove"
       },
       "constraint_scope": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Directo...",
-        "reason": "claim words are not sufficiently visible in text evidence"
+        "reason": "scope words appear in text evidence"
       },
       "applies_to": {
         "label": "supported",
@@ -1078,11 +1400,10 @@
     "table_proof_trace": {},
     "merged_proof_trace": {
       "rule_object": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "Parking",
-        "reason": "final support gap remains: rule_object_not_supported",
-        "decision_gap": "rule_object_not_supported"
+        "evidence_quote": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Directo...",
+        "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
@@ -1129,13 +1450,12 @@
     },
     "proof_decision_mismatch": false,
     "proof_decision_mismatches": [],
-    "evidence_strength": 0.483,
+    "evidence_strength": 0.587,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
-      "value_not_found_in_evidence",
-      "rule_object_not_supported",
-      "outside_current_rule_contract"
+      "text_candidate_requires_review",
+      "non_numeric_value_for_numeric_rule",
+      "value_not_found_in_evidence"
     ],
     "support_checks": {
       "source_evidence_present": true,
@@ -1144,19 +1464,17 @@
       "operator_supported": true,
       "applies_to_supported": true,
       "scope_supported": true,
-      "rule_object_supported": false,
+      "rule_object_supported": true,
       "table_context_supported": true,
       "table_review_gate_passed": true
     },
-    "normalization_trace": [
-      {
-        "field": "rule_object",
-        "before": "Parking",
-        "after": "parking",
-        "reason": "canonical rule-object alias or text cue"
-      }
-    ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the proposed value is not visible in the cited evidence; the cited evidence does not support the proposed rule object; the rule family is outside the current validation contract",
+    "normalization_trace": [],
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "no nearby parent clause proved the rule family"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family; the proposed value is not visible in the cited evidence",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -1165,9 +1483,8 @@
       "evidence_id": "pipeline5_merged_rule_0086__api_01",
       "evidence_type": "clause",
       "evidence_text": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
-      "source_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that: (a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
-      "inherited_parent_context": "(1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the fronting street and that:",
-      "local_context": "s from a street, lane, or walkway that intersects the fronting street and that: (a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
+      "source_context": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
+      "local_context": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -1180,28 +1497,952 @@
     "candidate": {
       "candidate_id": "pipeline5_merged_rule_0086__api_01",
       "evidence_id": "pipeline5_merged_rule_0086__api_01",
-      "rule_object": "Parking",
+      "rule_object": "parking",
       "constraint_type": "requirement",
-      "constraint_scope": "parking_location",
+      "constraint_scope": "parking",
       "applies_to": "Parking",
       "operator": "",
       "value": "in an attached or detached garage, carport or outdoor parking pad at the rear of the lot",
       "unit": "",
       "condition": "when accessible from an abutting lane or street",
       "exception": "Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
-      "gis_relevance": "context",
+      "gis_relevance": "direct",
       "notes": "adapted external candidate",
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0004__text_019",
+      "batch_id": "text_page_0004",
+      "source_pipeline": "pipeline5",
       "rule_key": "parking_location",
       "subject": "Parking location",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": null,
+      "review_required": null,
+      "api_review_action": "KEEP",
+      "api_review_reason": "The exception is a discretionary approval and exclusion.",
       "original_rule_id": "pipeline5_merged_rule_0086__api_01",
       "original_excerpt": "(a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct access to the rear of the lot or the Director Engineering is satisfied that access to the rear is not feasible because of an extreme grade, parking may be provided elsewhere on the lot.",
+      "sentence_match_score": null,
+      "possible_missing_numeric_values": null,
+      "zihao_verification_status": null,
+      "zihao_confidence": null,
+      "zihao_needs_review": null
+    }
+  },
+  {
+    "rule_id": "burnaby_r1_092",
+    "rule_object": "parking",
+    "constraint_type": "permission",
+    "constraint_scope": "parking",
+    "applies_to": "Parking",
+    "value": "constructed below grade",
+    "unit": "",
+    "operator": "",
+    "condition": "",
+    "exception": "",
+    "gis_relevance": "direct",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "parking__parking__parking__constructed_below_grade",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "scope words are not grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit claim"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit condition claim"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "scope words are not grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit claim"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit condition claim"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "rule object is not explicit in text evidence"
+      },
+      "operator": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is not proven by text evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure sha",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit unit to prove"
+      },
+      "constraint_scope": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "claim words are not sufficiently visible in text evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "claim words are not sufficiently visible in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit condition claim"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "no explicit exception claim and no unresolved exception cue"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "scope words are not grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit claim"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit condition claim"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.484,
+    "review_priority": "low",
+    "support_gaps": [
+      "text_candidate_requires_review",
+      "non_numeric_value_for_numeric_rule",
+      "applies_to_not_supported",
+      "constraint_scope_not_supported",
+      "rule_object_not_supported"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": false,
+      "scope_supported": false,
+      "rule_object_supported": false,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "normalization_trace": [],
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "no nearby parent clause proved the rule family"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family; the applies_to field is not clearly grounded; the scope or condition is not clearly grounded; the cited evidence does not support the proposed rule object",
+    "source": {
+      "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "page": 4,
+      "section": null,
+      "evidence_id": "pipeline5_merged_rule_0087",
+      "evidence_type": "clause",
+      "evidence_text": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "source_context": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "local_context": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "source_section": null,
+      "source_heading": null,
+      "table_title": null,
+      "row_header": "garage or carport",
+      "column_header": null,
+      "cell_value": "constructed below grade",
+      "bbox": null,
+      "table_parser": "pipeline5_visual_blocks"
+    },
+    "candidate": {
+      "candidate_id": "pipeline5_merged_rule_0087",
+      "evidence_id": "pipeline5_merged_rule_0087",
+      "rule_object": "parking",
+      "constraint_type": "permission",
+      "constraint_scope": "parking",
+      "applies_to": "Parking",
+      "operator": "",
+      "value": "constructed below grade",
+      "unit": "",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "notes": "adapted external candidate",
+      "extraction_method": "pipeline5_final_registry",
+      "extraction_source": "zihao",
+      "source_stream": "gemini_text_block",
+      "source_id": "page_0004__text_020",
+      "batch_id": "text_page_0004",
+      "source_pipeline": "pipeline5",
+      "rule_key": "garage_carport_below_grade_permission",
+      "subject": "garage or carport",
+      "relevance_category": null,
+      "extraction_final_action": "ACCEPT",
+      "extraction_support_gaps": null,
+      "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
+      "original_rule_id": "pipeline5_rule_0134",
+      "original_excerpt": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "sentence_match_score": null,
+      "possible_missing_numeric_values": null,
+      "zihao_verification_status": null,
+      "zihao_confidence": null,
+      "zihao_needs_review": null
+    }
+  },
+  {
+    "rule_id": "burnaby_r1_093",
+    "rule_object": "parking",
+    "constraint_type": "maximum",
+    "constraint_scope": "parking",
+    "applies_to": "Parking",
+    "value": "1.2",
+    "unit": "m",
+    "operator": "<=",
+    "condition": "garage or carport constructed below grade",
+    "exception": "at the driveway",
+    "gis_relevance": "direct",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "parking__parking__parking__garage_or_carport_constructed_below_grade____1_2__m",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is not supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "exception words appear in evidence"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is not supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "exception words appear in evidence"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "rule object is not explicit in text evidence"
+      },
+      "operator": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "text wording does not prove <= / maximum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "part of such structure shall extend more than 1.2 m above the surface of the surrounding grou",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "m",
+        "reason": "unit appears in text evidence"
+      },
+      "constraint_scope": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "claim words are not sufficiently visible in text evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "claim words are not sufficiently visible in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "exception words appear in text evidence"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is not supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "exception words appear in evidence"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.448,
+    "review_priority": "low",
+    "support_gaps": [
+      "text_candidate_requires_review",
+      "applies_to_not_supported",
+      "operator_not_supported",
+      "rule_object_not_supported",
+      "rule_object_unit_not_compatible"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": false,
+      "applies_to_supported": false,
+      "scope_supported": true,
+      "rule_object_supported": false,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "normalization_trace": [],
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "no nearby parent clause proved the rule family"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the applies_to field is not clearly grounded; the proposed operator is not supported by the cited wording; the cited evidence does not support the proposed rule object; the unit is not compatible with the proposed rule object",
+    "source": {
+      "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "page": 4,
+      "section": null,
+      "evidence_id": "pipeline5_merged_rule_0088__api_01",
+      "evidence_type": "clause",
+      "evidence_text": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "source_context": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "local_context": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "source_section": null,
+      "source_heading": null,
+      "table_title": null,
+      "row_header": "extension above surface of surrounding ground",
+      "column_header": null,
+      "cell_value": "1.2 m",
+      "bbox": null,
+      "table_parser": "pipeline5_visual_blocks"
+    },
+    "candidate": {
+      "candidate_id": "pipeline5_merged_rule_0088__api_01",
+      "evidence_id": "pipeline5_merged_rule_0088__api_01",
+      "rule_object": "parking",
+      "constraint_type": "maximum",
+      "constraint_scope": "parking",
+      "applies_to": "Parking",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "condition": "garage or carport constructed below grade",
+      "exception": "at the driveway",
+      "gis_relevance": "direct",
+      "notes": "adapted external candidate",
+      "extraction_method": "pipeline5_final_registry",
+      "extraction_source": "zihao",
+      "source_stream": "gemini_text_block",
+      "source_id": "page_0004__text_020",
+      "batch_id": "text_page_0004",
+      "source_pipeline": "pipeline5",
+      "rule_key": "garage_carport_below_grade_max_height",
+      "subject": "extension above surface of surrounding ground",
+      "relevance_category": null,
+      "extraction_final_action": "ACCEPT",
+      "extraction_support_gaps": null,
+      "extraction_review_reasons": null,
+      "review_required": null,
+      "api_review_action": "KEEP",
+      "api_review_reason": "The exception is an exclusion.",
+      "original_rule_id": "pipeline5_merged_rule_0088__api_01",
+      "original_excerpt": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "sentence_match_score": null,
+      "possible_missing_numeric_values": null,
+      "zihao_verification_status": null,
+      "zihao_confidence": null,
+      "zihao_needs_review": null
+    }
+  },
+  {
+    "rule_id": "burnaby_r1_094",
+    "rule_object": "parking",
+    "constraint_type": "minimum",
+    "constraint_scope": "parking",
+    "applies_to": "Parking",
+    "value": "1.2",
+    "unit": "m",
+    "operator": ">=",
+    "condition": "garage or carport constructed below grade",
+    "exception": "",
+    "gis_relevance": "direct",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "parking__parking__parking__garage_or_carport_constructed_below_grade____1_2__m",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is not supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is not supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "rule object is not explicit in text evidence"
+      },
+      "operator": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "text wording does not prove >= / minimum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "part of such structure shall extend more than 1.2 m above the surface of the surrounding grou",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "m",
+        "reason": "unit appears in text evidence"
+      },
+      "constraint_scope": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "claim words are not sufficiently visible in text evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "claim words are not sufficiently visible in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "no explicit exception claim and no unresolved exception cue"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "operator wording is not supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.448,
+    "review_priority": "low",
+    "support_gaps": [
+      "text_candidate_requires_review",
+      "applies_to_not_supported",
+      "operator_not_supported",
+      "rule_object_not_supported",
+      "rule_object_unit_not_compatible"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": false,
+      "applies_to_supported": false,
+      "scope_supported": true,
+      "rule_object_supported": false,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "normalization_trace": [],
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "no nearby parent clause proved the rule family"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the applies_to field is not clearly grounded; the proposed operator is not supported by the cited wording; the cited evidence does not support the proposed rule object; the unit is not compatible with the proposed rule object",
+    "source": {
+      "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "page": 4,
+      "section": null,
+      "evidence_id": "pipeline5_merged_rule_0089",
+      "evidence_type": "clause",
+      "evidence_text": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "source_context": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "local_context": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "source_section": null,
+      "source_heading": null,
+      "table_title": null,
+      "row_header": "setback from lot line",
+      "column_header": null,
+      "cell_value": "1.2 m",
+      "bbox": null,
+      "table_parser": "pipeline5_visual_blocks"
+    },
+    "candidate": {
+      "candidate_id": "pipeline5_merged_rule_0089",
+      "evidence_id": "pipeline5_merged_rule_0089",
+      "rule_object": "parking",
+      "constraint_type": "minimum",
+      "constraint_scope": "parking",
+      "applies_to": "Parking",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "condition": "garage or carport constructed below grade",
+      "exception": "",
+      "gis_relevance": "direct",
+      "notes": "adapted external candidate",
+      "extraction_method": "pipeline5_final_registry",
+      "extraction_source": "zihao",
+      "source_stream": "gemini_text_block",
+      "source_id": "page_0004__text_020",
+      "batch_id": "text_page_0004",
+      "source_pipeline": "pipeline5",
+      "rule_key": "garage_carport_below_grade_min_setback",
+      "subject": "setback from lot line",
+      "relevance_category": null,
+      "extraction_final_action": "ACCEPT",
+      "extraction_support_gaps": null,
+      "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
+      "original_rule_id": "pipeline5_rule_0136",
+      "original_excerpt": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
       "sentence_match_score": null,
       "possible_missing_numeric_values": null,
       "zihao_verification_status": null,
@@ -1268,7 +2509,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation; (d) bal...",
+        "evidence_quote": "other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -1345,31 +2586,31 @@
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "e greater than 1.0 m above grade up to a maximum of 25% of the width of a required separatio",
+        "evidence_quote": "ater than 1.0 m above grade up to a maximum of 25% of the width of a required separation",
         "reason": "value appears in text evidence"
       },
       "unit": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation; (d) bal...",
+        "evidence_quote": "other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation",
         "reason": "unit is not visible in text evidence"
       },
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation; (d) bal...",
+        "evidence_quote": "other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation; (d) bal...",
+        "evidence_quote": "other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation; (d) bal...",
+        "evidence_quote": "other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -1421,7 +2662,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation; (d) bal...",
+        "evidence_quote": "other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -1437,9 +2678,8 @@
     "evidence_strength": 0.59,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "text_condition_not_supported",
-      "rule_family_direction_mismatch",
       "applies_to_not_supported",
       "rule_object_unit_not_compatible"
     ],
@@ -1455,7 +2695,12 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; rule family direction mismatch; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "no nearby parent clause proved the rule family"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the cited text does not support a material condition needed for text-rule verification; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -1465,7 +2710,6 @@
       "evidence_type": "clause",
       "evidence_text": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation;",
       "source_context": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation;",
-      "inherited_parent_context": null,
       "local_context": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation;",
       "source_section": null,
       "source_heading": null,
@@ -1493,12 +2737,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0005__text_016",
+      "batch_id": "text_page_0005",
+      "source_pipeline": "pipeline5",
       "rule_key": "projection_maximum_balconies_decks",
       "subject": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0146",
       "original_excerpt": "(d) balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation;",
       "sentence_match_score": null,
@@ -1567,7 +2817,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (e) belt courses, cornices, gutters, sills, chimneys, bay windows, or ot...",
+        "evidence_quote": "other similar features up to the lesser of 0.9 m or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -1644,31 +2894,31 @@
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "ther similar features up to the lesser of 0.9 m or 25% of the width of a required separation",
+        "evidence_quote": "imilar features up to the lesser of 0.9 m or 25% of the width of a required separation",
         "reason": "value appears in text evidence"
       },
       "unit": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (e) belt courses, cornices, gutters, sills, chimneys, bay windows, or ot...",
+        "evidence_quote": "other similar features up to the lesser of 0.9 m or 25% of the width of a required separation",
         "reason": "unit is not visible in text evidence"
       },
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (e) belt courses, cornices, gutters, sills, chimneys, bay windows, or ot...",
+        "evidence_quote": "other similar features up to the lesser of 0.9 m or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (e) belt courses, cornices, gutters, sills, chimneys, bay windows, or ot...",
+        "evidence_quote": "other similar features up to the lesser of 0.9 m or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (e) belt courses, cornices, gutters, sills, chimneys, bay windows, or ot...",
+        "evidence_quote": "other similar features up to the lesser of 0.9 m or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -1720,7 +2970,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (e) belt courses, cornices, gutters, sills, chimneys, bay windows, or ot...",
+        "evidence_quote": "other similar features up to the lesser of 0.9 m or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -1736,9 +2986,8 @@
     "evidence_strength": 0.59,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "text_condition_not_supported",
-      "rule_family_direction_mismatch",
       "applies_to_not_supported",
       "rule_object_unit_not_compatible"
     ],
@@ -1754,7 +3003,12 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; rule family direction mismatch; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "no nearby parent clause proved the rule family"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the cited text does not support a material condition needed for text-rule verification; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -1764,7 +3018,6 @@
       "evidence_type": "clause",
       "evidence_text": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation;",
       "source_context": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation;",
-      "inherited_parent_context": null,
       "local_context": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation;",
       "source_section": null,
       "source_heading": null,
@@ -1792,12 +3045,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0005__text_017",
+      "batch_id": "text_page_0005",
+      "source_pipeline": "pipeline5",
       "rule_key": "projection_maximum_belt_courses_percent",
       "subject": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0148",
       "original_excerpt": "(e) belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation;",
       "sentence_match_score": null,
@@ -1866,7 +3125,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation. (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
+        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -1943,31 +3202,31 @@
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "aves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.\n(h)",
+        "evidence_quote": "aves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation",
         "reason": "value appears in text evidence"
       },
       "unit": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation. (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
+        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation",
         "reason": "unit is not visible in text evidence"
       },
       "constraint_scope": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation. (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
+        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "applies_to": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation. (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
+        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence"
       },
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation. (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
+        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -2019,7 +3278,7 @@
       "condition": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation. (h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
+        "evidence_quote": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation",
         "reason": "claim words are not sufficiently visible in text evidence",
         "required_for_text_verification": true
       },
@@ -2035,9 +3294,8 @@
     "evidence_strength": 0.59,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "text_condition_not_supported",
-      "rule_family_direction_mismatch",
       "applies_to_not_supported",
       "rule_object_unit_not_compatible"
     ],
@@ -2053,7 +3311,12 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited text does not support a material condition needed for text-rule verification; rule family direction mismatch; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "no nearby parent clause proved the rule family"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the cited text does not support a material condition needed for text-rule verification; the applies_to field is not clearly grounded; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -2063,7 +3326,6 @@
       "evidence_type": "clause",
       "evidence_text": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
       "source_context": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
-      "inherited_parent_context": null,
       "local_context": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
       "source_section": null,
       "source_heading": null,
@@ -2091,12 +3353,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0005__text_020",
+      "batch_id": "text_page_0005",
+      "source_pipeline": "pipeline5",
       "rule_key": "projection_maximum_eaves_percent",
       "subject": "eaves",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0152",
       "original_excerpt": "(h) eaves up to the lesser of 1.2 m (3.94 ft.) or 25% of the width of a required separation.",
       "sentence_match_score": null,
@@ -2253,13 +3521,13 @@
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves. An outdoor amenity space with a...",
+        "evidence_quote": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves",
         "reason": "scope words appear in text evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves. An outdoor amenity space with a...",
+        "evidence_quote": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves",
         "reason": "applies_to words appear in text evidence"
       },
       "condition": {
@@ -2331,8 +3599,7 @@
     "evidence_strength": 0.705,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
-      "rule_family_direction_mismatch",
+      "text_candidate_requires_review",
       "rule_object_unit_not_compatible"
     ],
     "support_checks": {
@@ -2354,7 +3621,12 @@
         "reason": "canonical rule-object alias or text cue"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; rule family direction mismatch; the unit is not compatible with the proposed rule object",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "evidence is not an enumerated child fragment"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -2364,7 +3636,6 @@
       "evidence_type": "clause",
       "evidence_text": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "source_context": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
-      "inherited_parent_context": null,
       "local_context": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "source_section": null,
       "source_heading": null,
@@ -2392,12 +3663,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0005__text_024",
+      "batch_id": "text_page_0005",
+      "source_pipeline": "pipeline5",
       "rule_key": "outdoor_amenity_space_width",
       "subject": "outdoor amenity space",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0155",
       "original_excerpt": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "sentence_match_score": null,
@@ -2554,13 +3831,13 @@
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves. An outdoor amenity space with a...",
+        "evidence_quote": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves",
         "reason": "scope words appear in text evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves. An outdoor amenity space with a...",
+        "evidence_quote": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves",
         "reason": "applies_to words appear in text evidence"
       },
       "condition": {
@@ -2632,8 +3909,7 @@
     "evidence_strength": 0.705,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
-      "rule_family_direction_mismatch",
+      "text_candidate_requires_review",
       "rule_object_unit_not_compatible"
     ],
     "support_checks": {
@@ -2655,7 +3931,12 @@
         "reason": "canonical rule-object alias or text cue"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; rule family direction mismatch; the unit is not compatible with the proposed rule object",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "evidence is not an enumerated child fragment"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the unit is not compatible with the proposed rule object",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -2665,7 +3946,6 @@
       "evidence_type": "clause",
       "evidence_text": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "source_context": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
-      "inherited_parent_context": null,
       "local_context": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "source_section": null,
       "source_heading": null,
@@ -2693,12 +3973,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0005__text_024",
+      "batch_id": "text_page_0005",
+      "source_pipeline": "pipeline5",
       "rule_key": "outdoor_amenity_space_area",
       "subject": "outdoor amenity space",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0156",
       "original_excerpt": "An outdoor amenity space with a minimum width of 2.0 m and area of 10.0 m² must be provided for each primary dwelling unit for its exclusive use and be accessible from the primary dwelling unit it serves.",
       "sentence_match_score": null,
@@ -2726,36 +4012,36 @@
     "canonical_rule_key": "fire_access_corridor__corridor_width__all_dwelling_units__all_dwelling_units__required__paved_or_gravel",
     "proof_type": "text_evidence",
     "table_proof_status": "none",
-    "text_span_proof_status": "partial",
+    "text_span_proof_status": "complete",
     "proof_trace": {
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "value appears in cited evidence"
       },
       "unit": {
@@ -2767,7 +4053,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -2781,31 +4067,31 @@
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "value appears in cited evidence"
       },
       "unit": {
@@ -2817,7 +4103,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -2843,7 +4129,7 @@
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "ll dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:\n(2) All dwelling",
+        "evidence_quote": "ll dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling",
         "reason": "value appears in text evidence"
       },
       "unit": {
@@ -2853,10 +4139,10 @@
         "reason": "candidate has no explicit unit to prove"
       },
       "constraint_scope": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m p...",
-        "reason": "claim words are not sufficiently visible in text evidence"
+        "reason": "minimum metre corridor wording proves corridor width"
       },
       "applies_to": {
         "label": "supported",
@@ -2882,31 +4168,31 @@
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "value appears in cited evidence"
       },
       "unit": {
@@ -2918,7 +4204,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) A...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: fire access corridor material paved or gravel (2) A...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -2933,7 +4219,7 @@
     "evidence_strength": 0.767,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "non_numeric_value_for_numeric_rule"
     ],
     "support_checks": {
@@ -2952,10 +4238,16 @@
         "field": "applies_to",
         "before": "Dwelling units",
         "after": "All dwelling units",
-        "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
+        "reason": "applies_to refined from subject/rule_key/evidence context"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family",
+    "semantic_frame": {
+      "status": "parent_context_attached",
+      "context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+      "parent_evidence_id": "pipeline5_merged_rule_0111",
+      "reason": "nearby parent clause supplies rule-family and applies-to context"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -2964,9 +4256,8 @@
       "evidence_id": "pipeline5_merged_rule_0112",
       "evidence_type": "clause",
       "evidence_text": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
-      "source_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
-      "inherited_parent_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
-      "local_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access c",
+      "source_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+      "local_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -2993,12 +4284,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0006__text_003",
+      "batch_id": "text_page_0006",
+      "source_pipeline": "pipeline5",
       "rule_key": "fire_access_corridor_material",
       "subject": "fire access corridor material",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0159",
       "original_excerpt": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
       "sentence_match_score": null,
@@ -3031,31 +4328,31 @@
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "refuted",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "value is absent from cited evidence"
       },
       "unit": {
@@ -3067,7 +4364,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -3081,31 +4378,31 @@
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "refuted",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "value is absent from cited evidence"
       },
       "unit": {
@@ -3117,7 +4414,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -3143,7 +4440,7 @@
       "value": {
         "label": "not_enough_info",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (2) All dwelling units shall have a minimum 1.0 m...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "value is not visible in text evidence"
       },
       "unit": {
@@ -3153,15 +4450,15 @@
         "reason": "candidate has no explicit unit to prove"
       },
       "constraint_scope": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (2) All dwelling units shall have a minimum 1.0 m...",
-        "reason": "claim words are not sufficiently visible in text evidence"
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
+        "reason": "minimum metre corridor wording proves corridor width"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and (2) All dwelling units shall have a minimum 1.0 m...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "applies_to words appear in text evidence"
       },
       "condition": {
@@ -3182,31 +4479,31 @@
       "rule_object": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "cited evidence supports the canonical rule object"
       },
       "constraint_scope": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "refuted",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "value is absent from cited evidence"
       },
       "unit": {
@@ -3218,7 +4515,7 @@
       "condition": {
         "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and direct pedestrian access direct pedestrian access...",
+        "evidence_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where dire...",
         "reason": "condition words appear in evidence"
       },
       "exception": {
@@ -3233,7 +4530,7 @@
     "evidence_strength": 0.587,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "non_numeric_value_for_numeric_rule",
       "value_not_found_in_evidence"
     ],
@@ -3253,10 +4550,16 @@
         "field": "applies_to",
         "before": "fire access corridor",
         "after": "All dwelling units",
-        "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
+        "reason": "applies_to refined from subject/rule_key/evidence context"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family; the proposed value is not visible in the cited evidence",
+    "semantic_frame": {
+      "status": "parent_context_attached",
+      "context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
+      "parent_evidence_id": "pipeline5_merged_rule_0112",
+      "reason": "nearby parent clause supplies rule-family and applies-to context"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family; the proposed value is not visible in the cited evidence",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -3265,9 +4568,8 @@
       "evidence_id": "pipeline5_merged_rule_0113",
       "evidence_type": "clause",
       "evidence_text": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
-      "source_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
-      "inherited_parent_context": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
-      "local_context": "ing units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
+      "source_context": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
+      "local_context": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
       "source_section": null,
       "source_heading": null,
       "table_title": null,
@@ -3294,12 +4596,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0006__text_004",
+      "batch_id": "text_page_0006",
+      "source_pipeline": "pipeline5",
       "rule_key": "fire_access_corridor_pedestrian_access",
       "subject": "direct pedestrian access",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0160",
       "original_excerpt": "(a) provides direct pedestrian access from the dwelling unit entrance to a lot line abutting a street, or abutting a constructed lane where direct access to a street is not feasible; and",
       "sentence_match_score": null,
@@ -3534,7 +4842,7 @@
     "evidence_strength": 0.519,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "non_numeric_value_for_numeric_rule",
       "value_not_found_in_evidence",
       "operator_not_supported"
@@ -3555,10 +4863,15 @@
         "field": "applies_to",
         "before": "principal or accessory building",
         "after": "Accessory Buildings",
-        "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
+        "reason": "applies_to refined from subject/rule_key/evidence context"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family; the proposed value is not visible in the cited evidence; the proposed operator is not supported by the cited wording",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "evidence is not an enumerated child fragment"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family; the proposed value is not visible in the cited evidence; the proposed operator is not supported by the cited wording",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -3568,7 +4881,6 @@
       "evidence_type": "clause",
       "evidence_text": "The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by the lower of the average natural grade or finished grade along the exterior of the building facing the respective front or rear lot line",
       "source_context": "The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by the lower of the average natural grade or finished grade along the exterior of the building facing the respective front or rear lot line",
-      "inherited_parent_context": null,
       "local_context": "The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by the lower of the average natural grade or finished grade along the exterior of the building facing the respective front or rear lot line",
       "source_section": null,
       "source_heading": null,
@@ -3596,12 +4908,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0007__text_003",
+      "batch_id": "text_page_0007",
+      "source_pipeline": "pipeline5",
       "rule_key": "height_measurement_base",
       "subject": "height",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0177",
       "original_excerpt": "The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by the lower of the average natural grade or finished grade along the exterior of the building facing the respective front or rear lot line",
       "sentence_match_score": null,
@@ -3836,7 +5154,7 @@
     "evidence_strength": 0.606,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "non_numeric_value_for_numeric_rule",
       "applies_to_not_supported",
       "operator_not_supported"
@@ -3857,10 +5175,15 @@
         "field": "applies_to",
         "before": "principal or accessory building",
         "after": "Accessory Buildings",
-        "reason": "applies_to refined from Pipeline 5 subject/rule_key/evidence context"
+        "reason": "applies_to refined from subject/rule_key/evidence context"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family; the applies_to field is not clearly grounded; the proposed operator is not supported by the cited wording",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "evidence is not an enumerated child fragment"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family; the applies_to field is not clearly grounded; the proposed operator is not supported by the cited wording",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -3870,7 +5193,6 @@
       "evidence_type": "clause",
       "evidence_text": "to the midpoint of a sloped roof or the highest point of a flat the roof.",
       "source_context": "to the midpoint of a sloped roof or the highest point of a flat the roof.",
-      "inherited_parent_context": null,
       "local_context": "to the midpoint of a sloped roof or the highest point of a flat the roof.",
       "source_section": null,
       "source_heading": null,
@@ -3898,12 +5220,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0007__text_003",
+      "batch_id": "text_page_0007",
+      "source_pipeline": "pipeline5",
       "rule_key": "height_measurement_top",
       "subject": "height",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0178",
       "original_excerpt": "to the midpoint of a sloped roof or the highest point of a flat the roof.",
       "sentence_match_score": null,
@@ -4138,7 +5466,7 @@
     "evidence_strength": 0.686,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "non_numeric_value_for_numeric_rule",
       "operator_not_supported"
     ],
@@ -4161,7 +5489,12 @@
         "reason": "canonical field normalization"
       }
     ],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family; the proposed operator is not supported by the cited wording",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "evidence is not an enumerated child fragment"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family; the proposed operator is not supported by the cited wording",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -4171,7 +5504,6 @@
       "evidence_type": "clause",
       "evidence_text": "The midpoint of a sloped roof is considered to be one half of the vertical distance of a sloped roof structure measured from the top plate of the uppermost storey to the highest point of the roof.",
       "source_context": "The midpoint of a sloped roof is considered to be one half of the vertical distance of a sloped roof structure measured from the top plate of the uppermost storey to the highest point of the roof.",
-      "inherited_parent_context": null,
       "local_context": "The midpoint of a sloped roof is considered to be one half of the vertical distance of a sloped roof structure measured from the top plate of the uppermost storey to the highest point of the roof.",
       "source_section": null,
       "source_heading": null,
@@ -4199,12 +5531,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0007__text_003",
+      "batch_id": "text_page_0007",
+      "source_pipeline": "pipeline5",
       "rule_key": "sloped_roof_midpoint_definition",
       "subject": "midpoint",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0179",
       "original_excerpt": "The midpoint of a sloped roof is considered to be one half of the vertical distance of a sloped roof structure measured from the top plate of the uppermost storey to the highest point of the roof.",
       "sentence_match_score": null,
@@ -4439,7 +5777,7 @@
     "evidence_strength": 0.686,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "non_numeric_value_for_numeric_rule",
       "operator_not_supported"
     ],
@@ -4455,7 +5793,12 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family; the proposed operator is not supported by the cited wording",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "evidence is not an enumerated child fragment"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family; the proposed operator is not supported by the cited wording",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -4465,7 +5808,6 @@
       "evidence_type": "clause",
       "evidence_text": "The height of a detached garage or carport shall be measured from the finished grade at the point used for vehicular access.",
       "source_context": "The height of a detached garage or carport shall be measured from the finished grade at the point used for vehicular access.",
-      "inherited_parent_context": null,
       "local_context": "The height of a detached garage or carport shall be measured from the finished grade at the point used for vehicular access.",
       "source_section": null,
       "source_heading": null,
@@ -4493,12 +5835,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0007__text_007",
+      "batch_id": "text_page_0007",
+      "source_pipeline": "pipeline5",
       "rule_key": "height_measurement_base",
       "subject": "height",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0180",
       "original_excerpt": "The height of a detached garage or carport shall be measured from the finished grade at the point used for vehicular access.",
       "sentence_match_score": null,
@@ -4733,7 +6081,7 @@
     "evidence_strength": 0.686,
     "review_priority": "low",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
+      "text_candidate_requires_review",
       "non_numeric_value_for_numeric_rule",
       "operator_not_supported"
     ],
@@ -4749,7 +6097,12 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the candidate has a text value for a numeric GIS rule family; the proposed operator is not supported by the cited wording",
+    "semantic_frame": {
+      "status": "none",
+      "context": "",
+      "reason": "evidence is not an enumerated child fragment"
+    },
+    "review_reason": "text-block rule needs stronger deterministic text proof or consensus; the candidate has a text value for a numeric GIS rule family; the proposed operator is not supported by the cited wording",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -4759,7 +6112,6 @@
       "evidence_type": "clause",
       "evidence_text": "Required separation distances between buildings are measured from the nearest point of each building face.",
       "source_context": "Required separation distances between buildings are measured from the nearest point of each building face.",
-      "inherited_parent_context": null,
       "local_context": "Required separation distances between buildings are measured from the nearest point of each building face.",
       "source_section": null,
       "source_heading": null,
@@ -4787,12 +6139,18 @@
       "extraction_method": "pipeline5_final_registry",
       "extraction_source": "zihao",
       "source_stream": "gemini_text_block",
+      "source_id": "page_0007__text_009",
+      "batch_id": "text_page_0007",
+      "source_pipeline": "pipeline5",
       "rule_key": "building_separation_measurement",
       "subject": "separation distances",
       "relevance_category": null,
       "extraction_final_action": "ACCEPT",
       "extraction_support_gaps": null,
       "extraction_review_reasons": [],
+      "review_required": false,
+      "api_review_action": null,
+      "api_review_reason": null,
       "original_rule_id": "pipeline5_rule_0181",
       "original_excerpt": "Required separation distances between buildings are measured from the nearest point of each building face.",
       "sentence_match_score": null,

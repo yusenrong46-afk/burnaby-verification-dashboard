@@ -1,11 +1,22 @@
 flowchart LR
-  A[Pipeline 5 Candidate Rules] --> C[Normalize + Evidence Lookup]
-  B[Pipeline 5 Evidence Packets] --> C
+  A[Pipeline 5 or 6 Registry] --> C[Adapter + Evidence Lookup]
+  B[Evidence Packets] --> C
   C --> D[Deterministic Verification]
   D --> E[verified_rules.json]
   D --> F[review_needed.json]
   D --> G[rejected_rules.json]
   D --> H[not_used.json]
+  F --> K[Evidence Repair Suggestions]
+  F --> M[Review Router]
+  F --> O[MiniLM Semantic Retrieval]
+  K --> P[Evidence Intelligence]
+  O --> P
+  P --> Q[Evidence Intelligence Rerun]
+  Q --> R[Promotion Ready Review]
+  F --> S[Extraction Feedback]
+  H --> S
+  C --> N[Rule Relationships]
+  K -. optional .-> L[Evidence Rerun]
   E --> I[GIS compatibility export]
   E --> J[Benchmark]
   F --> J

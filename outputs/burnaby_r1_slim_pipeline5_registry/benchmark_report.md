@@ -14,14 +14,14 @@
 
 ## Rule Metrics
 
-- Gold rules: 29
+- Gold rules: 22
 - Candidate rules: 142
-- Verified rules: 27
-- Review rules: 66
-- Rejected rules: 16
-- Not-used / traceability-only rules: 33
+- Verified rules: 18
+- Review rules: 81
+- Rejected rules: 20
+- Not-used / traceability-only rules: 23
 - Candidate recall: 1.00
-- Verified recall: 0.90
+- Verified recall: 0.77
 - Verified or review recall: 1.00
 - Extraction coverage recall (ceiling): 1.00
 - Verifier retention rate: 1.00
@@ -35,16 +35,16 @@
 
 ## Top Review / Rejection Reasons
 
-- `pipeline5_text_candidate_requires_review`: 76
-- `rule_object_not_supported`: 46
-- `operator_not_supported`: 40
-- `applies_to_not_supported`: 38
-- `outside_current_rule_contract`: 30
-- `table_cell_candidate_requires_review`: 29
-- `table_evidence_candidate_requires_review`: 29
+- `text_candidate_requires_review`: 76
+- `table_cell_candidate_requires_review`: 44
+- `table_evidence_candidate_requires_review`: 44
+- `operator_not_supported`: 41
+- `applies_to_not_supported`: 36
+- `rule_object_not_supported`: 31
 - `text_condition_not_supported`: 28
-- `rule_family_direction_mismatch`: 25
 - `table_column_not_target_scope`: 19
+- `outside_current_rule_contract`: 18
+- `non_numeric_value_for_numeric_rule`: 10
 
 ## Evidence Quality
 
@@ -58,14 +58,14 @@
 ## Proof / Bayesian-Lite Triage
 
 - Proof trace completion rate: 1.00
-- Supported claims: 966
+- Supported claims: 978
 - Refuted claims: 4
-- Not-enough-info claims: 166
-- Mean evidence strength: 0.72
-- High-priority review rules: 6
+- Not-enough-info claims: 154
+- Mean evidence strength: 0.73
+- High-priority review rules: 21
 - Table proof rules: 61
-- Complete table proofs: 9
-- Partial table proofs: 52
+- Complete table proofs: 8
+- Partial table proofs: 53
 - Refuted table proofs: 0
 - Proof/decision mismatches: 0
 
