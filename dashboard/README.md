@@ -32,5 +32,5 @@ Main tabs:
 - Advanced Rerun: optional shadow verifier reruns against stronger suggested evidence,
   including promotion-ready risk screening
 - Rule Relationships: consensus, conflict, and cross-family diagnostics
-- GIS/Felt Export: verified-only downstream contract preview
+- GIS/Felt Export: verified-only parameter export, map-layer needs, and review blockers
 - Code Explanation: file/layer map

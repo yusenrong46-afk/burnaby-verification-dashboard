@@ -211,27 +211,27 @@
   },
   "semantic_retrieval": {
     "mode": "enabled",
-    "backend": "minilm",
+    "backend": "fallback_lexical",
     "model": "sentence-transformers/all-MiniLM-L6-v2",
-    "suggestion_count": 77,
-    "high_confidence_count": 23
+    "suggestion_count": 74,
+    "high_confidence_count": 18
   },
   "evidence_intelligence": {
     "mode": "report_only",
     "item_count": 81,
-    "merged_repair_and_semantic_count": 60,
+    "merged_repair_and_semantic_count": 57,
     "semantic_only_count": 17,
-    "repair_only_count": 1,
+    "repair_only_count": 4,
     "no_auto_suggestion_count": 3,
     "direct_verification_allowed": false
   },
   "evidence_intelligence_rerun": {
     "mode": "evidence_intelligence_shadow",
-    "attempt_count": 48,
-    "verified_after_rerun_count": 6,
-    "promotion_ready_count": 3,
-    "review_after_rerun_count": 30,
-    "rejected_after_rerun_count": 9,
+    "attempt_count": 47,
+    "verified_after_rerun_count": 3,
+    "promotion_ready_count": 1,
+    "review_after_rerun_count": 31,
+    "rejected_after_rerun_count": 10,
     "not_used_after_rerun_count": 1,
     "skipped_count": 2
   },
@@ -239,6 +239,11 @@
     "row_count": 104,
     "review_feedback_count": 81,
     "not_used_feedback_count": 23
+  },
+  "gis_felt_export": {
+    "gis_constraint_count": 18,
+    "buildable_area_parameter_count": 16,
+    "review_blocker_rule_count": 81
   },
   "top_review_reasons": [
     {

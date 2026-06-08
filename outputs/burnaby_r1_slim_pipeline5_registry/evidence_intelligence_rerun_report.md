@@ -3,20 +3,19 @@
 This report reruns Evidence Intelligence leads through the deterministic verifier.
 It does not auto-promote rules.
 
-- Attempts: 48
-- Verified after rerun: 6
-- Promotion-ready: 3
-- Still review: 30
-- Rejected: 9
+- Attempts: 47
+- Verified after rerun: 3
+- Promotion-ready: 1
+- Still review: 31
+- Rejected: 10
 - Not used: 1
 - Skipped: 2
 
 ## Risk Flags
 
-- `retry_evidence_contains_legal_condition_cue`: 3
 - `blocked_by_risk_gap`: 2
 - `operator_direction_outside_rule_family_contract`: 2
-- `refuted_subproof`: 1
+- `retry_evidence_contains_legal_condition_cue`: 2
 
 ## Top 25 Attempts
 

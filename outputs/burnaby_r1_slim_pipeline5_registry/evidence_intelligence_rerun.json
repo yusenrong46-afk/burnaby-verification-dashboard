@@ -1,25 +1,25 @@
 {
   "mode": "evidence_intelligence_shadow",
   "guardrail": "Rerun results do not modify verified_rules.json. Promotion-ready items require manual review before contract insertion.",
-  "attempt_count": 48,
-  "verified_after_rerun_count": 6,
-  "promotion_ready_count": 3,
-  "review_after_rerun_count": 30,
-  "rejected_after_rerun_count": 9,
+  "attempt_count": 47,
+  "verified_after_rerun_count": 3,
+  "promotion_ready_count": 1,
+  "review_after_rerun_count": 31,
+  "rejected_after_rerun_count": 10,
   "not_used_after_rerun_count": 1,
   "skipped_count": 2,
   "retry_decision_counts": [
     {
       "name": "review_needed",
-      "count": 30
+      "count": 31
     },
     {
       "name": "rejected",
-      "count": 9
+      "count": 10
     },
     {
       "name": "verified",
-      "count": 6
+      "count": 3
     },
     {
       "name": "skipped",
@@ -32,10 +32,6 @@
   ],
   "risk_flag_counts": [
     {
-      "name": "retry_evidence_contains_legal_condition_cue",
-      "count": 3
-    },
-    {
       "name": "blocked_by_risk_gap",
       "count": 2
     },
@@ -44,8 +40,8 @@
       "count": 2
     },
     {
-      "name": "refuted_subproof",
-      "count": 1
+      "name": "retry_evidence_contains_legal_condition_cue",
+      "count": 2
     }
   ],
   "attempts": [
@@ -935,7 +931,7 @@
       "unit": "",
       "original_evidence_id": "pipeline5_merged_rule_0064",
       "retry_evidence_id": "pipeline5_merged_rule_0072__api_01",
-      "intelligence_source": "repair_and_semantic",
+      "intelligence_source": "repair_only",
       "intelligence_action": "rerun_with_repair_evidence",
       "confidence": 0.827,
       "retry_decision": "review_needed",
@@ -1034,54 +1030,61 @@
       "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
     },
     {
-      "original_rule_id": "burnaby_r1_067",
-      "retry_candidate_id": "pipeline5_merged_rule_0061__intelligence_rerun",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "rowhouse dwellings",
-      "operator": ">",
-      "value": "280",
-      "unit": "m²",
-      "original_evidence_id": "pipeline5_merged_rule_0061",
-      "retry_evidence_id": "pipeline5_merged_rule_0060",
+      "original_rule_id": "burnaby_r1_012",
+      "retry_candidate_id": "pipeline5_merged_rule_0012__intelligence_rerun",
+      "rule_object": "site_width",
+      "constraint_scope": "site",
+      "applies_to": "Rowhouse .1",
+      "operator": ">=",
+      "value": "6.2",
+      "unit": "m",
+      "original_evidence_id": "pipeline5_merged_rule_0012",
+      "retry_evidence_id": "pipeline5_merged_rule_0011__api_01",
       "intelligence_source": "repair_and_semantic",
       "intelligence_action": "inspect_semantic_evidence_then_rerun",
       "confidence": 1.0,
-      "retry_decision": "review_needed",
+      "retry_decision": "rejected",
       "retry_rule_id": "burnaby_r1_178",
       "retry_support_gaps": [
-        "text_candidate_requires_review",
-        "text_condition_not_supported",
-        "operator_not_supported"
+        "value_not_found_in_evidence",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
       ],
-      "retry_evidence_strength": 0.73,
-      "retry_review_reason": "text-block rule needs stronger deterministic text proof or consensus; the cited text does not support a material condition needed for text-rule verification; the proposed operator is not supported by the cited wording",
+      "retry_evidence_strength": 0.529,
+      "retry_review_reason": "the proposed value is not visible in the cited evidence; the table column does not match the configured target scope; table cell candidate requires review; table evidence candidate requires review",
       "promotion_ready": false,
       "promotion_risk_flags": [],
       "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
     },
     {
-      "original_rule_id": "burnaby_r1_047",
-      "retry_candidate_id": "pipeline5_merged_rule_0043__intelligence_rerun",
-      "rule_object": "setback",
-      "constraint_scope": "street_yard_front",
-      "applies_to": "All Buildings",
+      "original_rule_id": "burnaby_r1_016",
+      "retry_candidate_id": "pipeline5_merged_rule_0016__intelligence_rerun",
+      "rule_object": "site_width",
+      "constraint_scope": "site",
+      "applies_to": "Rowhouse .1",
       "operator": ">=",
-      "value": "3.0",
+      "value": "6.2",
       "unit": "m",
-      "original_evidence_id": "pipeline5_merged_rule_0043",
-      "retry_evidence_id": "pipeline5_merged_rule_0045",
-      "intelligence_source": "semantic_only",
+      "original_evidence_id": "pipeline5_merged_rule_0016",
+      "retry_evidence_id": "pipeline5_merged_rule_0011__api_01",
+      "intelligence_source": "repair_and_semantic",
       "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.9,
-      "retry_decision": "verified",
+      "confidence": 0.939,
+      "retry_decision": "rejected",
       "retry_rule_id": "burnaby_r1_179",
-      "retry_support_gaps": [],
-      "retry_evidence_strength": 0.883,
-      "retry_review_reason": "all critical evidence checks passed",
-      "promotion_ready": true,
+      "retry_support_gaps": [
+        "value_not_found_in_evidence",
+        "unresolved_exception_cue",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "retry_evidence_strength": 0.49,
+      "retry_review_reason": "the proposed value is not visible in the cited evidence; the evidence contains exception or override wording that needs review; the table column does not match the configured target scope; table cell candidate requires review; table evidence candidate requires review",
+      "promotion_ready": false,
       "promotion_risk_flags": [],
-      "promotion_recommendation": "ready_for_manual_promotion_review"
+      "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
     },
     {
       "original_rule_id": "burnaby_r1_039",
@@ -1096,7 +1099,7 @@
       "retry_evidence_id": "pipeline5_merged_rule_0034",
       "intelligence_source": "semantic_only",
       "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.894,
+      "confidence": 0.936,
       "retry_decision": "rejected",
       "retry_rule_id": "burnaby_r1_180",
       "retry_support_gaps": [
@@ -1106,6 +1109,31 @@
       ],
       "retry_evidence_strength": 0.557,
       "retry_review_reason": "the proposed value is not visible in the cited evidence; table cell candidate requires review; table evidence candidate requires review",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
+    },
+    {
+      "original_rule_id": "burnaby_r1_047",
+      "retry_candidate_id": "pipeline5_merged_rule_0043__intelligence_rerun",
+      "rule_object": "setback",
+      "constraint_scope": "street_yard_flanking",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "pipeline5_merged_rule_0043",
+      "retry_evidence_id": "pipeline5_merged_rule_0044",
+      "intelligence_source": "semantic_only",
+      "intelligence_action": "inspect_semantic_evidence_then_rerun",
+      "confidence": 0.927,
+      "retry_decision": "rejected",
+      "retry_rule_id": "burnaby_r1_181",
+      "retry_support_gaps": [
+        "value_not_found_in_evidence"
+      ],
+      "retry_evidence_strength": 0.587,
+      "retry_review_reason": "the proposed value is not visible in the cited evidence",
       "promotion_ready": false,
       "promotion_risk_flags": [],
       "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
@@ -1123,9 +1151,9 @@
       "retry_evidence_id": "pipeline5_merged_rule_0035",
       "intelligence_source": "semantic_only",
       "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.89,
+      "confidence": 0.901,
       "retry_decision": "rejected",
-      "retry_rule_id": "burnaby_r1_181",
+      "retry_rule_id": "burnaby_r1_182",
       "retry_support_gaps": [
         "value_not_found_in_evidence",
         "table_cell_candidate_requires_review",
@@ -1138,28 +1166,105 @@
       "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
     },
     {
-      "original_rule_id": "burnaby_r1_060",
-      "retry_candidate_id": "pipeline5_merged_rule_0054__intelligence_rerun",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Dwelling Units",
+      "original_rule_id": "burnaby_r1_015",
+      "retry_candidate_id": "pipeline5_merged_rule_0015__intelligence_rerun",
+      "rule_object": "site_width",
+      "constraint_scope": "site",
+      "applies_to": "Small-Scale Multi-Unit",
       "operator": ">=",
-      "value": "1",
-      "unit": "units",
-      "original_evidence_id": "pipeline5_merged_rule_0054",
-      "retry_evidence_id": "pipeline5_merged_rule_0055",
+      "value": "10",
+      "unit": "m",
+      "original_evidence_id": "pipeline5_merged_rule_0015",
+      "retry_evidence_id": "pipeline5_merged_rule_0013",
       "intelligence_source": "semantic_only",
       "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.841,
-      "retry_decision": "rejected",
-      "retry_rule_id": "burnaby_r1_182",
+      "confidence": 0.855,
+      "retry_decision": "review_needed",
+      "retry_rule_id": "burnaby_r1_183",
       "retry_support_gaps": [
-        "value_not_found_in_evidence",
         "table_cell_candidate_requires_review",
         "table_evidence_candidate_requires_review"
       ],
-      "retry_evidence_strength": 0.557,
-      "retry_review_reason": "the proposed value is not visible in the cited evidence; table cell candidate requires review; table evidence candidate requires review",
+      "retry_evidence_strength": 0.821,
+      "retry_review_reason": "table cell candidate requires review; table evidence candidate requires review",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
+    },
+    {
+      "original_rule_id": "burnaby_r1_017",
+      "retry_candidate_id": "pipeline5_merged_rule_0017__intelligence_rerun",
+      "rule_object": "site_width",
+      "constraint_scope": "site",
+      "applies_to": "Small-Scale Multi-Unit",
+      "operator": ">=",
+      "value": "10",
+      "unit": "m",
+      "original_evidence_id": "pipeline5_merged_rule_0017",
+      "retry_evidence_id": "pipeline5_merged_rule_0013",
+      "intelligence_source": "semantic_only",
+      "intelligence_action": "inspect_semantic_evidence_then_rerun",
+      "confidence": 0.855,
+      "retry_decision": "review_needed",
+      "retry_rule_id": "burnaby_r1_184",
+      "retry_support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "retry_evidence_strength": 0.821,
+      "retry_review_reason": "table cell candidate requires review; table evidence candidate requires review",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
+    },
+    {
+      "original_rule_id": "burnaby_r1_013",
+      "retry_candidate_id": "pipeline5_merged_rule_0013__intelligence_rerun",
+      "rule_object": "site_width",
+      "constraint_scope": "site",
+      "applies_to": "Small-Scale Multi-Unit",
+      "operator": ">=",
+      "value": "10",
+      "unit": "m",
+      "original_evidence_id": "pipeline5_merged_rule_0013",
+      "retry_evidence_id": "pipeline5_merged_rule_0015",
+      "intelligence_source": "semantic_only",
+      "intelligence_action": "inspect_semantic_evidence_then_rerun",
+      "confidence": 0.83,
+      "retry_decision": "review_needed",
+      "retry_rule_id": "burnaby_r1_185",
+      "retry_support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "retry_evidence_strength": 0.821,
+      "retry_review_reason": "table cell candidate requires review; table evidence candidate requires review",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
+    },
+    {
+      "original_rule_id": "burnaby_r1_055",
+      "retry_candidate_id": "pipeline5_merged_rule_0049__intelligence_rerun",
+      "rule_object": "setback",
+      "constraint_scope": "interior_side_yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "original_evidence_id": "pipeline5_merged_rule_0049",
+      "retry_evidence_id": "pipeline5_merged_rule_0048__api_01",
+      "intelligence_source": "semantic_only",
+      "intelligence_action": "inspect_semantic_evidence_then_rerun",
+      "confidence": 0.811,
+      "retry_decision": "rejected",
+      "retry_rule_id": "burnaby_r1_186",
+      "retry_support_gaps": [
+        "value_not_found_in_evidence",
+        "unresolved_exception_cue"
+      ],
+      "retry_evidence_strength": 0.548,
+      "retry_review_reason": "the proposed value is not visible in the cited evidence; the evidence contains exception or override wording that needs review",
       "promotion_ready": false,
       "promotion_risk_flags": [],
       "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
@@ -1177,147 +1282,15 @@
       "retry_evidence_id": "pipeline5_merged_rule_0024",
       "intelligence_source": "semantic_only",
       "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.779,
+      "confidence": 0.741,
       "retry_decision": "review_needed",
-      "retry_rule_id": "burnaby_r1_183",
+      "retry_rule_id": "burnaby_r1_187",
       "retry_support_gaps": [
         "applies_to_not_supported",
         "table_applies_to_not_supported"
       ],
       "retry_evidence_strength": 0.732,
       "retry_review_reason": "the applies_to field is not clearly grounded; the table row or column does not support applies_to",
-      "promotion_ready": false,
-      "promotion_risk_flags": [],
-      "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
-    },
-    {
-      "original_rule_id": "burnaby_r1_055",
-      "retry_candidate_id": "pipeline5_merged_rule_0049__intelligence_rerun",
-      "rule_object": "setback",
-      "constraint_scope": "interior_side_yard",
-      "applies_to": "All Buildings",
-      "operator": ">=",
-      "value": "1.2",
-      "unit": "m",
-      "original_evidence_id": "pipeline5_merged_rule_0049",
-      "retry_evidence_id": "pipeline5_merged_rule_0065",
-      "intelligence_source": "semantic_only",
-      "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.776,
-      "retry_decision": "review_needed",
-      "retry_rule_id": "burnaby_r1_184",
-      "retry_support_gaps": [
-        "operator_not_supported"
-      ],
-      "retry_evidence_strength": 0.776,
-      "retry_review_reason": "the proposed operator is not supported by the cited wording",
-      "promotion_ready": false,
-      "promotion_risk_flags": [],
-      "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
-    },
-    {
-      "original_rule_id": "burnaby_r1_056",
-      "retry_candidate_id": "pipeline5_merged_rule_0050__intelligence_rerun",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "All Other Buildings",
-      "operator": ">=",
-      "value": "2.4",
-      "unit": "m",
-      "original_evidence_id": "pipeline5_merged_rule_0050",
-      "retry_evidence_id": "pipeline5_merged_rule_0053",
-      "intelligence_source": "semantic_only",
-      "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.751,
-      "retry_decision": "verified",
-      "retry_rule_id": "burnaby_r1_185",
-      "retry_support_gaps": [],
-      "retry_evidence_strength": 0.883,
-      "retry_review_reason": "all critical evidence checks passed",
-      "promotion_ready": true,
-      "promotion_risk_flags": [],
-      "promotion_recommendation": "ready_for_manual_promotion_review"
-    },
-    {
-      "original_rule_id": "burnaby_r1_021",
-      "retry_candidate_id": "pipeline5_merged_rule_0020__api_02__intelligence_rerun",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "lot",
-      "operator": "<=",
-      "value": 101.5,
-      "unit": "units",
-      "original_evidence_id": "pipeline5_merged_rule_0020__api_02",
-      "retry_evidence_id": "pipeline5_merged_rule_0054",
-      "intelligence_source": "semantic_only",
-      "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.743,
-      "retry_decision": "rejected",
-      "retry_rule_id": "burnaby_r1_186",
-      "retry_support_gaps": [
-        "value_not_found_in_evidence",
-        "operator_not_supported",
-        "table_operator_refuted",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "retry_evidence_strength": 0.459,
-      "retry_review_reason": "the proposed value is not visible in the cited evidence; the proposed operator is not supported by the cited wording; the table wording supports the opposite operator direction; table cell candidate requires review; table evidence candidate requires review",
-      "promotion_ready": false,
-      "promotion_risk_flags": [],
-      "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
-    },
-    {
-      "original_rule_id": "burnaby_r1_023",
-      "retry_candidate_id": "pipeline5_merged_rule_0021__api_02__intelligence_rerun",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
-      "operator": "<=",
-      "value": "2",
-      "unit": "units",
-      "original_evidence_id": "pipeline5_merged_rule_0021__api_02",
-      "retry_evidence_id": "pipeline5_merged_rule_0061",
-      "intelligence_source": "semantic_only",
-      "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.74,
-      "retry_decision": "verified",
-      "retry_rule_id": "burnaby_r1_187",
-      "retry_support_gaps": [],
-      "retry_evidence_strength": 0.883,
-      "retry_review_reason": "all critical evidence checks passed",
-      "promotion_ready": false,
-      "promotion_risk_flags": [
-        "refuted_subproof",
-        "retry_evidence_contains_legal_condition_cue"
-      ],
-      "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
-    },
-    {
-      "original_rule_id": "burnaby_r1_025",
-      "retry_candidate_id": "pipeline5_merged_rule_0022__api_02__intelligence_rerun",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "lot",
-      "operator": "<=",
-      "value": 101.5,
-      "unit": "units",
-      "original_evidence_id": "pipeline5_merged_rule_0022__api_02",
-      "retry_evidence_id": "pipeline5_merged_rule_0055",
-      "intelligence_source": "semantic_only",
-      "intelligence_action": "inspect_semantic_evidence_then_rerun",
-      "confidence": 0.726,
-      "retry_decision": "rejected",
-      "retry_rule_id": "burnaby_r1_188",
-      "retry_support_gaps": [
-        "value_not_found_in_evidence",
-        "operator_not_supported",
-        "table_operator_refuted",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
-      ],
-      "retry_evidence_strength": 0.459,
-      "retry_review_reason": "the proposed value is not visible in the cited evidence; the proposed operator is not supported by the cited wording; the table wording supports the opposite operator direction; table cell candidate requires review; table evidence candidate requires review",
       "promotion_ready": false,
       "promotion_risk_flags": [],
       "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
@@ -2325,1031 +2298,6 @@
         "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
       },
       "promotion_status": "shadow_verified_not_promoted"
-    },
-    {
-      "rule_id": "burnaby_r1_179",
-      "rule_object": "setback",
-      "constraint_type": "minimum",
-      "constraint_scope": "street_yard_front",
-      "applies_to": "All Buildings",
-      "value": "3.0",
-      "unit": "m",
-      "operator": ">=",
-      "condition": "front street yard",
-      "exception": "",
-      "gis_relevance": "direct",
-      "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "setback__street_yard_front__all_buildings__front_street_yard____3_0__m",
-      "proof_type": "table_natural_logic",
-      "table_proof_status": "complete",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table context contains setback cue"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Street Yard | front: 4.0 m",
-          "reason": "scope words are present in table row/column context"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Street Yard | front: 4.0 m | Minimum Lot Line Setbacks",
-          "reason": "claim has no distinctive words"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table wording implies >="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "3.0 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "3.0 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "front: 4.0 m | Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-          "reason": "condition words are present in table context"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "constraint_scope",
-          "before": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
-          "after": "street_yard_front",
-          "reason": "constraint scope refined from rule family and extraction context"
-        },
-        {
-          "field": "applies_to",
-          "before": "Rowhouse",
-          "after": "All Buildings",
-          "reason": "applies_to refined from subject/rule_key/evidence context"
-        },
-        {
-          "field": "condition",
-          "before": "",
-          "after": "front street yard",
-          "reason": "canonical field normalization"
-        }
-      ],
-      "semantic_frame": {
-        "status": "none",
-        "context": "",
-        "reason": "table evidence does not need parent prose context"
-      },
-      "review_reason": "all critical evidence checks passed",
-      "source": {
-        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "page": 2,
-        "section": null,
-        "evidence_id": "pipeline5_merged_rule_0045",
-        "evidence_type": "table_cell",
-        "evidence_text": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "source_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "local_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Minimum Lot Line Setbacks",
-        "row_header": "Street Yard",
-        "column_header": "front: 4.0 m",
-        "cell_value": "3.0 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0043__intelligence_rerun",
-        "evidence_id": "pipeline5_merged_rule_0045",
-        "rule_object": "setback",
-        "constraint_type": "minimum",
-        "constraint_scope": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
-        "applies_to": "Rowhouse",
-        "operator": ">=",
-        "value": "3.0",
-        "unit": "m",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "source_id": "page_0002__table_001",
-        "batch_id": "page_0002__table_001",
-        "source_pipeline": "pipeline5",
-        "rule_key": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
-        "subject": "Street Yard",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "review_required": false,
-        "api_review_action": null,
-        "api_review_reason": null,
-        "original_rule_id": "pipeline5_rule_0068",
-        "original_excerpt": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | 3.0 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null,
-        "evidence_intelligence_rerun": {
-          "original_rule_id": "burnaby_r1_047",
-          "original_evidence_id": "pipeline5_merged_rule_0043",
-          "retry_evidence_id": "pipeline5_merged_rule_0045",
-          "intelligence_source": "semantic_only",
-          "recommended_action": "inspect_semantic_evidence_then_rerun",
-          "confidence": 0.9
-        }
-      },
-      "evidence_intelligence_rerun": {
-        "original_rule_id": "burnaby_r1_047",
-        "retry_candidate_id": "pipeline5_merged_rule_0043__intelligence_rerun",
-        "rule_object": "setback",
-        "constraint_scope": "street_yard_front",
-        "applies_to": "All Buildings",
-        "operator": ">=",
-        "value": "3.0",
-        "unit": "m",
-        "original_evidence_id": "pipeline5_merged_rule_0043",
-        "retry_evidence_id": "pipeline5_merged_rule_0045",
-        "intelligence_source": "semantic_only",
-        "intelligence_action": "inspect_semantic_evidence_then_rerun",
-        "confidence": 0.9,
-        "retry_decision": "verified",
-        "retry_rule_id": "burnaby_r1_179",
-        "retry_support_gaps": [],
-        "retry_evidence_strength": 0.883,
-        "retry_review_reason": "all critical evidence checks passed",
-        "promotion_ready": true,
-        "promotion_risk_flags": [],
-        "promotion_recommendation": "ready_for_manual_promotion_review"
-      },
-      "promotion_status": "shadow_verified_not_promoted"
-    },
-    {
-      "rule_id": "burnaby_r1_185",
-      "rule_object": "building_separation",
-      "constraint_type": "minimum",
-      "constraint_scope": "building_separation",
-      "applies_to": "All Other Buildings",
-      "value": "2.4",
-      "unit": "m",
-      "operator": ">=",
-      "condition": "",
-      "exception": "",
-      "gis_relevance": "direct",
-      "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "building_separation__building_separation__all_other_buildings____2_4__m",
-      "proof_type": "table_natural_logic_partial",
-      "table_proof_status": "partial",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Between All Other Buildings | Minimum Separation Of Buildings | Between All Other Buildings | Between All Other Buildings | 2.4 m | Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Separation Of Buildings",
-          "reason": "table context contains building_separation cue"
-        },
-        "constraint_scope": {
-          "label": "not_enough_info",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Between All Other Buildings | Between All Other Buildings",
-          "reason": "table context does not prove this claim"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Between All Other Buildings | Between All Other Buildings | Minimum Separation Of Buildings",
-          "reason": "applies_to words are present in table context"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Separation Of Buildings",
-          "reason": "table wording implies >="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "2.4 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "2.4 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Between All Other Buildings | Minimum Separation Of Buildings | Between All Other Buildings | Between All Other Buildings | 2.4 m | Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Between All Other Buildings | Minimum Separation Of Buildings | Between All Other Buildings | Between All Other Buildings | 2.4 m | Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "All Other Buildings",
-          "reason": "applies_to refined from subject/rule_key/evidence context"
-        }
-      ],
-      "semantic_frame": {
-        "status": "none",
-        "context": "",
-        "reason": "table evidence does not need parent prose context"
-      },
-      "review_reason": "all critical evidence checks passed",
-      "source": {
-        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "page": 2,
-        "section": null,
-        "evidence_id": "pipeline5_merged_rule_0053",
-        "evidence_type": "table_cell",
-        "evidence_text": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-        "source_context": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-        "local_context": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Minimum Separation Of Buildings",
-        "row_header": "Between All Other Buildings",
-        "column_header": "Between All Other Buildings",
-        "cell_value": "2.4 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0050__intelligence_rerun",
-        "evidence_id": "pipeline5_merged_rule_0053",
-        "rule_object": "building_separation",
-        "constraint_type": "minimum",
-        "constraint_scope": "building_separation",
-        "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": ">=",
-        "value": "2.4",
-        "unit": "m",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "source_id": "page_0002__table_001",
-        "batch_id": "page_0002__table_001",
-        "source_pipeline": "pipeline5",
-        "rule_key": "Minimum Separation of Buildings on the Same Lot .4 .5 - Between Front Principals",
-        "subject": "Between Front Principals",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "review_required": false,
-        "api_review_action": null,
-        "api_review_reason": null,
-        "original_rule_id": "pipeline5_rule_0087",
-        "original_excerpt": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null,
-        "evidence_intelligence_rerun": {
-          "original_rule_id": "burnaby_r1_056",
-          "original_evidence_id": "pipeline5_merged_rule_0050",
-          "retry_evidence_id": "pipeline5_merged_rule_0053",
-          "intelligence_source": "semantic_only",
-          "recommended_action": "inspect_semantic_evidence_then_rerun",
-          "confidence": 0.751
-        }
-      },
-      "evidence_intelligence_rerun": {
-        "original_rule_id": "burnaby_r1_056",
-        "retry_candidate_id": "pipeline5_merged_rule_0050__intelligence_rerun",
-        "rule_object": "building_separation",
-        "constraint_scope": "building_separation",
-        "applies_to": "All Other Buildings",
-        "operator": ">=",
-        "value": "2.4",
-        "unit": "m",
-        "original_evidence_id": "pipeline5_merged_rule_0050",
-        "retry_evidence_id": "pipeline5_merged_rule_0053",
-        "intelligence_source": "semantic_only",
-        "intelligence_action": "inspect_semantic_evidence_then_rerun",
-        "confidence": 0.751,
-        "retry_decision": "verified",
-        "retry_rule_id": "burnaby_r1_185",
-        "retry_support_gaps": [],
-        "retry_evidence_strength": 0.883,
-        "retry_review_reason": "all critical evidence checks passed",
-        "promotion_ready": true,
-        "promotion_risk_flags": [],
-        "promotion_recommendation": "ready_for_manual_promotion_review"
-      },
-      "promotion_status": "shadow_verified_not_promoted"
-    },
-    {
-      "rule_id": "burnaby_r1_187",
-      "rule_object": "dwelling_units",
-      "constraint_type": "maximum",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
-      "value": "2",
-      "unit": "units",
-      "operator": "<=",
-      "condition": "",
-      "exception": "",
-      "gis_relevance": "context",
-      "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "dwelling_units__lot__small_scale_multi_unit_1_to_2_units____2__units",
-      "proof_type": "text_evidence",
-      "table_proof_status": "none",
-      "text_span_proof_status": "refuted",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwellings may exceed...",
-          "reason": "final deterministic support check passed"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "dwelling units",
-          "reason": "rule-object cue appears in text evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Maximum",
-          "reason": "text wording supports <= / maximum"
-        },
-        "value": {
-          "label": "refuted",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwellings may exceed...",
-          "reason": "text evidence contains numeric values but not the candidate value"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "units",
-          "reason": "unit appears in text evidence"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwellings may exceed...",
-          "reason": "scope words appear in text evidence"
-        },
-        "applies_to": {
-          "label": "not_enough_info",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwellings may exceed...",
-          "reason": "claim words are not sufficiently visible in text evidence"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no explicit exception claim and no unresolved exception cue"
-        }
-      },
-      "table_proof_trace": {},
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. .1 Maximum lot area for rowhouse dwellings may exceed...",
-          "reason": "final deterministic support check passed"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot. Maximum Lot Area lot area 280 m² .1 Maximum lot area f...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [],
-      "semantic_frame": {
-        "status": "none",
-        "context": "",
-        "reason": "evidence is not an enumerated child fragment"
-      },
-      "review_reason": "all critical evidence checks passed",
-      "source": {
-        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "page": 2,
-        "section": null,
-        "evidence_id": "pipeline5_merged_rule_0061",
-        "evidence_type": "clause",
-        "evidence_text": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot.",
-        "source_context": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot.",
-        "local_context": ".1 Maximum lot area for rowhouse dwellings may exceed 280 m², subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot.",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Maximum Lot Area",
-        "row_header": "lot area",
-        "column_header": null,
-        "cell_value": "280 m²",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0021__api_02__intelligence_rerun",
-        "evidence_id": "pipeline5_merged_rule_0061",
-        "rule_object": "dwelling_units",
-        "constraint_type": "maximum",
-        "constraint_scope": "lot",
-        "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
-        "operator": "<=",
-        "value": "2",
-        "unit": "units",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "context",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "source_id": "page_0002__table_001",
-        "batch_id": "page_0002__table_001",
-        "source_pipeline": "pipeline5",
-        "rule_key": "Permitted Dwelling Units",
-        "subject": "Dwelling Units (including secondary suites)",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": null,
-        "review_required": null,
-        "api_review_action": "REPLACE",
-        "api_review_reason": "The value '1 to 2' is an actual permitted range and should be split into lower and upper bounds.",
-        "original_rule_id": "pipeline5_merged_rule_0021__api_02",
-        "original_excerpt": "Permitted Dwelling Units (including secondary suites) | 1 to 2 Units",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null,
-        "evidence_intelligence_rerun": {
-          "original_rule_id": "burnaby_r1_023",
-          "original_evidence_id": "pipeline5_merged_rule_0021__api_02",
-          "retry_evidence_id": "pipeline5_merged_rule_0061",
-          "intelligence_source": "semantic_only",
-          "recommended_action": "inspect_semantic_evidence_then_rerun",
-          "confidence": 0.74
-        }
-      },
-      "evidence_intelligence_rerun": {
-        "original_rule_id": "burnaby_r1_023",
-        "retry_candidate_id": "pipeline5_merged_rule_0021__api_02__intelligence_rerun",
-        "rule_object": "dwelling_units",
-        "constraint_scope": "lot",
-        "applies_to": "Small-Scale Multi-Unit (1 to 2 Units)",
-        "operator": "<=",
-        "value": "2",
-        "unit": "units",
-        "original_evidence_id": "pipeline5_merged_rule_0021__api_02",
-        "retry_evidence_id": "pipeline5_merged_rule_0061",
-        "intelligence_source": "semantic_only",
-        "intelligence_action": "inspect_semantic_evidence_then_rerun",
-        "confidence": 0.74,
-        "retry_decision": "verified",
-        "retry_rule_id": "burnaby_r1_187",
-        "retry_support_gaps": [],
-        "retry_evidence_strength": 0.883,
-        "retry_review_reason": "all critical evidence checks passed",
-        "promotion_ready": false,
-        "promotion_risk_flags": [
-          "refuted_subproof",
-          "retry_evidence_contains_legal_condition_cue"
-        ],
-        "promotion_recommendation": "do_not_promote_without_contract_or_legal_review"
-      },
-      "promotion_status": "shadow_verified_not_promoted"
     }
   ],
   "promotion_ready": [
@@ -3678,696 +2626,6 @@
         "retry_rule_id": "burnaby_r1_148",
         "retry_support_gaps": [],
         "retry_evidence_strength": 0.845,
-        "retry_review_reason": "all critical evidence checks passed",
-        "promotion_ready": true,
-        "promotion_risk_flags": [],
-        "promotion_recommendation": "ready_for_manual_promotion_review"
-      },
-      "promotion_status": "promotion_ready_manual_review_required"
-    },
-    {
-      "rule_id": "burnaby_r1_179",
-      "rule_object": "setback",
-      "constraint_type": "minimum",
-      "constraint_scope": "street_yard_front",
-      "applies_to": "All Buildings",
-      "value": "3.0",
-      "unit": "m",
-      "operator": ">=",
-      "condition": "front street yard",
-      "exception": "",
-      "gis_relevance": "direct",
-      "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "setback__street_yard_front__all_buildings__front_street_yard____3_0__m",
-      "proof_type": "table_natural_logic",
-      "table_proof_status": "complete",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table context contains setback cue"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Street Yard | front: 4.0 m",
-          "reason": "scope words are present in table row/column context"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Street Yard | front: 4.0 m | Minimum Lot Line Setbacks",
-          "reason": "claim has no distinctive words"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Lot Line Setbacks",
-          "reason": "table wording implies >="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "3.0 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "3.0 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "front: 4.0 m | Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-          "reason": "condition words are present in table context"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "evidence_text",
-          "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m Minimum Lot Line Setbacks Street Yard front: 4.0 m 3.0 m Minimum Lot Line S...",
-          "reason": "condition words appear in evidence"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "constraint_scope",
-          "before": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
-          "after": "street_yard_front",
-          "reason": "constraint scope refined from rule family and extraction context"
-        },
-        {
-          "field": "applies_to",
-          "before": "Rowhouse",
-          "after": "All Buildings",
-          "reason": "applies_to refined from subject/rule_key/evidence context"
-        },
-        {
-          "field": "condition",
-          "before": "",
-          "after": "front street yard",
-          "reason": "canonical field normalization"
-        }
-      ],
-      "semantic_frame": {
-        "status": "none",
-        "context": "",
-        "reason": "table evidence does not need parent prose context"
-      },
-      "review_reason": "all critical evidence checks passed",
-      "source": {
-        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "page": 2,
-        "section": null,
-        "evidence_id": "pipeline5_merged_rule_0045",
-        "evidence_type": "table_cell",
-        "evidence_text": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "source_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "local_context": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Minimum Lot Line Setbacks",
-        "row_header": "Street Yard",
-        "column_header": "front: 4.0 m",
-        "cell_value": "3.0 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0043__intelligence_rerun",
-        "evidence_id": "pipeline5_merged_rule_0045",
-        "rule_object": "setback",
-        "constraint_type": "minimum",
-        "constraint_scope": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
-        "applies_to": "Rowhouse",
-        "operator": ">=",
-        "value": "3.0",
-        "unit": "m",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "source_id": "page_0002__table_001",
-        "batch_id": "page_0002__table_001",
-        "source_pipeline": "pipeline5",
-        "rule_key": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
-        "subject": "Street Yard",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "review_required": false,
-        "api_review_action": null,
-        "api_review_reason": null,
-        "original_rule_id": "pipeline5_rule_0068",
-        "original_excerpt": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | 3.0 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null,
-        "evidence_intelligence_rerun": {
-          "original_rule_id": "burnaby_r1_047",
-          "original_evidence_id": "pipeline5_merged_rule_0043",
-          "retry_evidence_id": "pipeline5_merged_rule_0045",
-          "intelligence_source": "semantic_only",
-          "recommended_action": "inspect_semantic_evidence_then_rerun",
-          "confidence": 0.9
-        }
-      },
-      "evidence_intelligence_rerun": {
-        "original_rule_id": "burnaby_r1_047",
-        "retry_candidate_id": "pipeline5_merged_rule_0043__intelligence_rerun",
-        "rule_object": "setback",
-        "constraint_scope": "street_yard_front",
-        "applies_to": "All Buildings",
-        "operator": ">=",
-        "value": "3.0",
-        "unit": "m",
-        "original_evidence_id": "pipeline5_merged_rule_0043",
-        "retry_evidence_id": "pipeline5_merged_rule_0045",
-        "intelligence_source": "semantic_only",
-        "intelligence_action": "inspect_semantic_evidence_then_rerun",
-        "confidence": 0.9,
-        "retry_decision": "verified",
-        "retry_rule_id": "burnaby_r1_179",
-        "retry_support_gaps": [],
-        "retry_evidence_strength": 0.883,
-        "retry_review_reason": "all critical evidence checks passed",
-        "promotion_ready": true,
-        "promotion_risk_flags": [],
-        "promotion_recommendation": "ready_for_manual_promotion_review"
-      },
-      "promotion_status": "promotion_ready_manual_review_required"
-    },
-    {
-      "rule_id": "burnaby_r1_185",
-      "rule_object": "building_separation",
-      "constraint_type": "minimum",
-      "constraint_scope": "building_separation",
-      "applies_to": "All Other Buildings",
-      "value": "2.4",
-      "unit": "m",
-      "operator": ">=",
-      "condition": "",
-      "exception": "",
-      "gis_relevance": "direct",
-      "verification_status": "verified",
-      "verification_decision": "verified",
-      "verification_label": "supported",
-      "canonical_rule_key": "building_separation__building_separation__all_other_buildings____2_4__m",
-      "proof_type": "table_natural_logic_partial",
-      "table_proof_status": "partial",
-      "text_span_proof_status": "none",
-      "proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Between All Other Buildings | Minimum Separation Of Buildings | Between All Other Buildings | Between All Other Buildings | 2.4 m | Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit condition claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "text_span_proof_trace": {},
-      "table_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Separation Of Buildings",
-          "reason": "table context contains building_separation cue"
-        },
-        "constraint_scope": {
-          "label": "not_enough_info",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Between All Other Buildings | Between All Other Buildings",
-          "reason": "table context does not prove this claim"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "row_header/column_header",
-          "evidence_quote": "Between All Other Buildings | Between All Other Buildings | Minimum Separation Of Buildings",
-          "reason": "applies_to words are present in table context"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table_title/row_header",
-          "evidence_quote": "Minimum Separation Of Buildings",
-          "reason": "table wording implies >="
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "2.4 m",
-          "reason": "numeric value appears in table cell"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "cell_value",
-          "evidence_quote": "2.4 m",
-          "reason": "unit appears in table cell"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Between All Other Buildings | Minimum Separation Of Buildings | Between All Other Buildings | Between All Other Buildings | 2.4 m | Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "no exception claim and no unresolved exception cue"
-        }
-      },
-      "merged_proof_trace": {
-        "rule_object": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "cited evidence supports the canonical rule object"
-        },
-        "constraint_scope": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "scope words are grounded in local evidence"
-        },
-        "applies_to": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "applies_to words are grounded in local evidence"
-        },
-        "operator": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "operator wording is supported by evidence"
-        },
-        "value": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "value appears in cited evidence"
-        },
-        "unit": {
-          "label": "supported",
-          "evidence_field": "table/evidence_text",
-          "evidence_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m Minimum Separation Of Buildings Between All Other Buildings Between All O...",
-          "reason": "unit appears in cited evidence and is compatible"
-        },
-        "condition": {
-          "label": "supported",
-          "evidence_field": "column_header/table_text",
-          "evidence_quote": "Between All Other Buildings | Minimum Separation Of Buildings | Between All Other Buildings | Between All Other Buildings | 2.4 m | Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-          "reason": "candidate has no explicit claim"
-        },
-        "exception": {
-          "label": "supported",
-          "evidence_field": "",
-          "evidence_quote": "",
-          "reason": "candidate has no explicit exception claim"
-        }
-      },
-      "proof_decision_mismatch": false,
-      "proof_decision_mismatches": [],
-      "evidence_strength": 0.883,
-      "review_priority": "verified",
-      "support_gaps": [],
-      "support_checks": {
-        "source_evidence_present": true,
-        "value_supported": true,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": true,
-        "table_review_gate_passed": true
-      },
-      "normalization_trace": [
-        {
-          "field": "applies_to",
-          "before": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-          "after": "All Other Buildings",
-          "reason": "applies_to refined from subject/rule_key/evidence context"
-        }
-      ],
-      "semantic_frame": {
-        "status": "none",
-        "context": "",
-        "reason": "table evidence does not need parent prose context"
-      },
-      "review_reason": "all critical evidence checks passed",
-      "source": {
-        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "page": 2,
-        "section": null,
-        "evidence_id": "pipeline5_merged_rule_0053",
-        "evidence_type": "table_cell",
-        "evidence_text": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-        "source_context": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-        "local_context": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-        "source_section": null,
-        "source_heading": null,
-        "table_title": "Minimum Separation Of Buildings",
-        "row_header": "Between All Other Buildings",
-        "column_header": "Between All Other Buildings",
-        "cell_value": "2.4 m",
-        "bbox": null,
-        "table_parser": "pipeline5_visual_blocks"
-      },
-      "candidate": {
-        "candidate_id": "pipeline5_merged_rule_0050__intelligence_rerun",
-        "evidence_id": "pipeline5_merged_rule_0053",
-        "rule_object": "building_separation",
-        "constraint_type": "minimum",
-        "constraint_scope": "building_separation",
-        "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
-        "operator": ">=",
-        "value": "2.4",
-        "unit": "m",
-        "condition": "",
-        "exception": "",
-        "gis_relevance": "direct",
-        "notes": "adapted external candidate",
-        "extraction_method": "pipeline5_final_registry",
-        "extraction_source": "zihao",
-        "source_stream": "gemini_table_image",
-        "source_id": "page_0002__table_001",
-        "batch_id": "page_0002__table_001",
-        "source_pipeline": "pipeline5",
-        "rule_key": "Minimum Separation of Buildings on the Same Lot .4 .5 - Between Front Principals",
-        "subject": "Between Front Principals",
-        "relevance_category": null,
-        "extraction_final_action": "ACCEPT",
-        "extraction_support_gaps": null,
-        "extraction_review_reasons": [],
-        "review_required": false,
-        "api_review_action": null,
-        "api_review_reason": null,
-        "original_rule_id": "pipeline5_rule_0087",
-        "original_excerpt": "Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m",
-        "sentence_match_score": null,
-        "possible_missing_numeric_values": null,
-        "zihao_verification_status": null,
-        "zihao_confidence": null,
-        "zihao_needs_review": null,
-        "evidence_intelligence_rerun": {
-          "original_rule_id": "burnaby_r1_056",
-          "original_evidence_id": "pipeline5_merged_rule_0050",
-          "retry_evidence_id": "pipeline5_merged_rule_0053",
-          "intelligence_source": "semantic_only",
-          "recommended_action": "inspect_semantic_evidence_then_rerun",
-          "confidence": 0.751
-        }
-      },
-      "evidence_intelligence_rerun": {
-        "original_rule_id": "burnaby_r1_056",
-        "retry_candidate_id": "pipeline5_merged_rule_0050__intelligence_rerun",
-        "rule_object": "building_separation",
-        "constraint_scope": "building_separation",
-        "applies_to": "All Other Buildings",
-        "operator": ">=",
-        "value": "2.4",
-        "unit": "m",
-        "original_evidence_id": "pipeline5_merged_rule_0050",
-        "retry_evidence_id": "pipeline5_merged_rule_0053",
-        "intelligence_source": "semantic_only",
-        "intelligence_action": "inspect_semantic_evidence_then_rerun",
-        "confidence": 0.751,
-        "retry_decision": "verified",
-        "retry_rule_id": "burnaby_r1_185",
-        "retry_support_gaps": [],
-        "retry_evidence_strength": 0.883,
         "retry_review_reason": "all critical evidence checks passed",
         "promotion_ready": true,
         "promotion_risk_flags": [],

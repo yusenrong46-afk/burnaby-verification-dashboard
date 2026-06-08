@@ -3,17 +3,17 @@
 This report merges deterministic evidence repair and MiniLM semantic retrieval. It does not verify rules.
 
 - Review rules covered: 81
-- Repair + semantic overlap: 60
+- Repair + semantic overlap: 57
 - Semantic-only leads: 17
-- Repair-only leads: 1
+- Repair-only leads: 4
 - No automatic suggestion: 3
 - Direct verification allowed: `False`
 
 ## Action Counts
 
 - `rerun_with_repair_evidence`: 37
-- `inspect_ranked_evidence`: 29
-- `inspect_semantic_evidence_then_rerun`: 11
+- `inspect_ranked_evidence`: 30
+- `inspect_semantic_evidence_then_rerun`: 10
 - `human_legal_review`: 3
 - `manual_review_no_automatic_suggestion`: 1
 

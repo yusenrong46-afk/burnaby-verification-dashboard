@@ -24,6 +24,10 @@ def load_output_data(output_dir: Path) -> dict[str, Any]:
         {"consensus": [], "conflicts": [], "cross_family_collisions": []},
     )
     contract = _read_json(output_dir / "gis_rule_contract.json", {"rules": []})
+    gis_felt = _read_json(
+        output_dir / "gis_felt_export.json",
+        {"constraints": [], "buildable_area_parameters": {}, "review_blockers": {}, "map_layer_requirements": []},
+    )
     summary = _read_json(output_dir / "slim_summary.json", {})
     intelligence_rerun = _read_json(output_dir / "evidence_intelligence_rerun.json", {})
     legacy_rerun = _read_json(
@@ -54,6 +58,7 @@ def load_output_data(output_dir: Path) -> dict[str, Any]:
         "not_used": _read_json(output_dir / "not_used.json", []),
         "relationships": relationships,
         "contract": contract,
+        "gis_felt": gis_felt,
         "source_info": _source_info(contract, summary),
     }
 
@@ -191,7 +196,7 @@ def main() -> None:
     with tabs[7]:
         _relationships_tab(st, data["relationships"])
     with tabs[8]:
-        _export_tab(st, data["contract"], data["verified"])
+        _export_tab(st, data["contract"], data["gis_felt"], data["verified"])
     with tabs[9]:
         _structure_tab(st)
     with tabs[10]:
@@ -443,12 +448,85 @@ def _extraction_feedback_tab(st: Any, feedback: dict[str, Any]) -> None:
         st.json(item)
 
 
-def _export_tab(st: Any, contract: dict[str, Any], verified_rules: list[dict[str, Any]]) -> None:
+def _export_tab(
+    st: Any,
+    contract: dict[str, Any],
+    gis_felt: dict[str, Any],
+    verified_rules: list[dict[str, Any]],
+) -> None:
     st.subheader("GIS/Felt Export Preview")
-    st.caption("Only verified rules appear in the compatibility contract. Review, rejected, and not-used rules are excluded.")
-    st.metric("Exported verified rules", len(contract.get("rules", verified_rules)))
-    rows = [compact_rule_row(rule) for rule in contract.get("rules", verified_rules)[:200]]
-    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    st.caption(
+        "Only verified rules appear as executable GIS/Felt constraints. Review, rejected, and not-used rules are excluded from map logic."
+    )
+    counts = gis_felt.get("export_counts", {})
+    metric_cols = st.columns(4)
+    metric_cols[0].metric("Verified Rules", len(contract.get("rules", verified_rules)))
+    metric_cols[1].metric("GIS Constraints", counts.get("gis_constraint_count", len(gis_felt.get("constraints", []))))
+    metric_cols[2].metric("Parameter Keys", counts.get("buildable_area_parameter_count", len(gis_felt.get("buildable_area_parameters", {}))))
+    metric_cols[3].metric("Review Blockers", counts.get("review_blocker_rule_count", 0))
+
+    parameters = gis_felt.get("buildable_area_parameters", {})
+    if parameters:
+        st.markdown("### Buildable-Area Parameters")
+        parameter_rows = [
+            {
+                "parameter": key,
+                "value": value.get("value"),
+                "numeric": value.get("value_numeric"),
+                "unit": value.get("unit"),
+                "operator": value.get("operator"),
+                "geometry_target": value.get("geometry_target"),
+                "source_rules": ", ".join(str(item) for item in value.get("source_rule_ids", [])),
+                "conditions": ", ".join(str(item) for item in value.get("conditions", [])),
+            }
+            for key, value in sorted(parameters.items())
+        ]
+        st.dataframe(_display_rows(parameter_rows), width="stretch", hide_index=True)
+    else:
+        st.info("No buildable-area parameters were produced in this run.")
+
+    constraints = gis_felt.get("constraints", [])
+    if constraints:
+        st.markdown("### Verified GIS/Felt Constraints")
+        constraint_rows = [
+            {
+                "constraint_id": item.get("constraint_id"),
+                "parameter_key": item.get("parameter_key"),
+                "group": item.get("export_group"),
+                "geometry_target": item.get("geometry_target"),
+                "operator": item.get("operator"),
+                "value": item.get("value"),
+                "unit": item.get("unit"),
+                "page": item.get("source_page"),
+                "popup": item.get("felt_popup_sentence"),
+            }
+            for item in constraints[:250]
+        ]
+        st.dataframe(_display_rows(constraint_rows), width="stretch", hide_index=True)
+
+    layer_requirements = gis_felt.get("map_layer_requirements", [])
+    if layer_requirements:
+        st.markdown("### Map Layers Needed")
+        st.dataframe(_display_rows(layer_requirements), width="stretch", hide_index=True)
+
+    blockers = gis_felt.get("review_blockers", {})
+    if blockers:
+        st.markdown("### Review Blockers For Map Users")
+        st.caption("These are plausible rules that must stay as warnings until they become verified.")
+        blocker_left, blocker_right = st.columns(2)
+        with blocker_left:
+            st.markdown("#### Categories")
+            _bar_rows(st, blockers.get("category_counts", []), "name", "count")
+        with blocker_right:
+            st.markdown("#### Actions")
+            _bar_rows(st, blockers.get("action_counts", []), "name", "count")
+        examples = blockers.get("example_blockers", [])
+        if examples:
+            st.markdown("#### Example Blockers")
+            st.dataframe(_display_rows(examples), width="stretch", hide_index=True)
+
+    with st.expander("Raw gis_felt_export.json"):
+        st.json(gis_felt)
     with st.expander("Raw gis_rule_contract.json"):
         st.json(contract)
 
@@ -827,6 +905,7 @@ def _structure_tab(st: Any) -> None:
   -> extraction_feedback.py
   -> review_router.py
   -> rule_relationships.py
+  -> gis_felt_export.py
   -> evidence_rerun.py (optional)
   -> dashboard""",
         language="text",
@@ -845,6 +924,7 @@ def _structure_tab(st: Any) -> None:
         {"layer": "Evidence intelligence rerun", "file": "evidence_intelligence_rerun.py", "purpose": "Run selected evidence leads through the deterministic verifier in shadow mode."},
         {"layer": "Extraction feedback", "file": "extraction_feedback.py", "purpose": "Translate review/not-used outcomes into concrete upstream extraction fixes."},
         {"layer": "Rule relationships", "file": "rule_relationships.py", "purpose": "Report consensus, conflicts, and cross-family collisions without verifying rules."},
+        {"layer": "GIS/Felt export", "file": "gis_felt_export.py", "purpose": "Translate verified rules into map-friendly parameter keys, geometry targets, and review blockers."},
         {"layer": "Evidence rerun", "file": "evidence_rerun.py", "purpose": "Optional shadow rerun against stronger evidence."},
     ]
     st.table(rows)

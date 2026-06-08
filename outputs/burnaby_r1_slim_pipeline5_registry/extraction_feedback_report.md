@@ -9,13 +9,13 @@ This report translates verifier outcomes into upstream extraction/evidence-span 
 ## Category Counts
 
 - `attach_complete_text_span`: 41
-- `preserve_table_context`: 33
+- `preserve_table_context`: 35
 - `classify_not_used_artifact`: 10
 - `cross_reference_or_traceability`: 9
 - `administrative_or_discretionary_language`: 4
-- `candidate_likely_correct_after_rerun`: 3
 - `model_exception_or_legal_condition`: 3
 - `better_evidence_available`: 1
+- `candidate_likely_correct_after_rerun`: 1
 
 ## Top 30
 

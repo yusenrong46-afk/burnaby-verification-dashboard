@@ -22,14 +22,17 @@ Pipeline 5/6 candidates/evidence -> deterministic validation -> verified/review/
 - Evidence rerun mode: `disabled`
 - Evidence rerun verified: 0
 - Evidence rerun promotion-ready: 0
-- Semantic retrieval backend: `minilm`
-- Semantic retrieval suggestions: 77
-- High-confidence semantic matches: 23
+- Semantic retrieval backend: `fallback_lexical`
+- Semantic retrieval suggestions: 74
+- High-confidence semantic matches: 18
 - Evidence intelligence items: 81
 - Evidence intelligence no-suggestion items: 3
-- Evidence intelligence rerun attempts: 48
-- Evidence intelligence promotion-ready: 3
+- Evidence intelligence rerun attempts: 47
+- Evidence intelligence promotion-ready: 1
 - Extraction feedback rows: 104
+- GIS/Felt constraints: 18
+- GIS/Felt buildable-area parameters: 16
+- GIS/Felt review blockers: 81
 
 ## Review Router Actions
 
