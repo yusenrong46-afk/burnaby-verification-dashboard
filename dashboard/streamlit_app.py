@@ -144,9 +144,24 @@ def main() -> None:
     )
     _style(st)
 
-    st.sidebar.header("Filters")
+    st.sidebar.header("Navigation")
     st.sidebar.caption(str(output_dir))
+    page = st.sidebar.radio(
+        "Page",
+        [
+            "Start Here",
+            "Results",
+            "Review Queue",
+            "Candidate Compare",
+            "Evidence Tools",
+            "GIS/Felt Export",
+            "Code Explanation",
+            "Advanced",
+        ],
+    )
     router_items = data["router"].get("items", [])
+    st.sidebar.markdown("---")
+    st.sidebar.subheader("Filters")
     categories = st.sidebar.multiselect("Review category", _unique(router_items, "review_category"))
     priorities = st.sidebar.multiselect("Priority", _unique(router_items, "triage_priority"))
     likelihoods = st.sidebar.multiselect("Likely status", _unique(router_items, "likely_status"))
@@ -161,46 +176,84 @@ def main() -> None:
     )
 
     _render_header(st, data["source_info"], data)
+    if page == "Start Here":
+        _start_here_tab(st, data, filtered_items)
+    elif page == "Results":
+        _results_tab(st, data)
+    elif page == "Review Queue":
+        _review_tree_tab(st, filtered_items, data["evidence_units"], data["source_info"])
+    elif page == "Candidate Compare":
+        _candidate_compare_tab(st, filtered_items, data["review"], data["verified"])
+    elif page == "Evidence Tools":
+        _evidence_tools_tab(st, data)
+    elif page == "GIS/Felt Export":
+        _export_tab(st, data["contract"], data["gis_felt"], data["verified"])
+    elif page == "Code Explanation":
+        _structure_tab(st)
+    elif page == "Advanced":
+        _advanced_tab(st, data)
+
+
+def _start_here_tab(st: Any, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> None:
+    """Render a plain-English landing page before exposing detailed tables."""
     _render_kpis(st, data, filtered_items)
     _render_guidance(st)
+    validation = data.get("validation", {})
+    counts = validation.get("bucket_counts", {})
+    gis_counts = data.get("gis_felt", {}).get("export_counts", {})
+    left, right = st.columns([1.05, 0.95])
+    with left:
+        st.subheader("What This Dashboard Is Saying")
+        st.markdown(
+            f"""
+**Safe for GIS/Felt now:** `{counts.get('verified', 0)}` verified rules are exported as `{gis_counts.get('gis_constraint_count', 0)}` GIS/Felt constraints.
 
-    tabs = st.tabs(
-        [
-            "Overview",
-            "Pipeline Flow",
-            "Results",
-            "Review Tree",
-            "Candidate vs Verified",
-            "Evidence Intelligence",
-            "Extraction Feedback",
-            "Rule Relationships",
-            "GIS/Felt Export",
-            "Code Explanation",
-            "Advanced Rerun",
+**Do not map automatically:** `{counts.get('review_needed', 0)}` rules still need review, `{counts.get('rejected', 0)}` are unsafe, and `{counts.get('not_used', 0)}` are traceability or out-of-contract items.
+
+**Main action:** reduce the review queue by fixing evidence packets first, then only tune verifier logic when the pattern is general.
+"""
+        )
+    with right:
+        st.subheader("Where To Go")
+        rows = [
+            {"task": "Show the final result", "page": "Results", "what_to_check": "Safety metrics and bucket counts"},
+            {"task": "Review one rule", "page": "Review Queue", "what_to_check": "Reason, evidence sentence, human instruction"},
+            {"task": "Compare meaning", "page": "Candidate Compare", "what_to_check": "Candidate sentence vs verified sentence"},
+            {"task": "Help GIS/Felt", "page": "GIS/Felt Export", "what_to_check": "Parameter keys and geometry targets"},
         ]
-    )
-    with tabs[0]:
-        _overview_tab(st, data)
-    with tabs[1]:
-        _pipeline_flow_tab(st)
-    with tabs[2]:
-        _results_tab(st, data)
-    with tabs[3]:
-        _review_tree_tab(st, filtered_items, data["evidence_units"], data["source_info"])
-    with tabs[4]:
-        _candidate_compare_tab(st, filtered_items, data["review"], data["verified"])
-    with tabs[5]:
-        _intelligence_tab(st, data["intelligence"], data["source_info"])
-    with tabs[6]:
-        _extraction_feedback_tab(st, data["extraction_feedback"])
-    with tabs[7]:
-        _relationships_tab(st, data["relationships"])
-    with tabs[8]:
-        _export_tab(st, data["contract"], data["gis_felt"], data["verified"])
-    with tabs[9]:
-        _structure_tab(st)
-    with tabs[10]:
+        st.dataframe(_display_rows(rows), use_container_width=True, hide_index=True)
+
+    st.subheader("Pipeline At A Glance")
+    _pipeline_flow_tab(st)
+    st.subheader("Review Reduction Priorities")
+    _action_summary(st, data)
+
+
+def _evidence_tools_tab(st: Any, data: dict[str, Any]) -> None:
+    """Group evidence/rerun tools behind one page so the main UI stays simple."""
+    st.subheader("Evidence Tools")
+    st.caption("These tools help decide why a rule is still under review. They do not directly verify rules.")
+    _intelligence_tab(st, data["intelligence"], data["source_info"])
+    with st.expander("Deterministic Evidence Repair", expanded=False):
+        _repair_tab(st, data["repair"], data["source_info"])
+    with st.expander("MiniLM Semantic Retrieval", expanded=False):
+        _semantic_tab(st, data["semantic"], data["source_info"])
+    with st.expander("Shadow Rerun", expanded=False):
         _rerun_tab(st, data["rerun"], data["evidence_units"], data["source_info"])
+
+
+def _advanced_tab(st: Any, data: dict[str, Any]) -> None:
+    """Keep diagnostic pages available without making them the first-screen path."""
+    st.subheader("Advanced Diagnostics")
+    left, right = st.columns(2)
+    with left:
+        st.markdown("### Rule Relationships")
+        st.caption("Consensus/conflict diagnostics. These never verify rules by themselves.")
+    with right:
+        st.markdown("### Extraction Feedback")
+        st.caption("Actionable feedback for upstream candidate/evidence extraction.")
+    _relationships_tab(st, data["relationships"])
+    _extraction_feedback_tab(st, data["extraction_feedback"])
 
 
 def _overview_tab(st: Any, data: dict[str, Any]) -> None:
@@ -359,7 +412,7 @@ def _review_queue_tab(st: Any, items: list[dict[str, Any]]) -> None:
         }
         for item in items[:200]
     ]
-    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    st.dataframe(_display_rows(rows), use_container_width=True, hide_index=True)
 
 
 def _relationships_tab(st: Any, relationships: dict[str, Any]) -> None:
@@ -373,11 +426,11 @@ def _relationships_tab(st: Any, relationships: dict[str, Any]) -> None:
     cols[1].metric("Conflicts", len(conflicts))
     cols[2].metric("Cross-family collisions", len(collisions))
     st.markdown("### Consensus")
-    st.dataframe(_display_rows(consensus[:200]), width="stretch", hide_index=True)
+    st.dataframe(_display_rows(consensus[:200]), use_container_width=True, hide_index=True)
     st.markdown("### Conflicts")
-    st.dataframe(_display_rows(conflicts[:200]), width="stretch", hide_index=True)
+    st.dataframe(_display_rows(conflicts[:200]), use_container_width=True, hide_index=True)
     st.markdown("### Cross-Family Collisions")
-    st.dataframe(_display_rows(collisions[:200]), width="stretch", hide_index=True)
+    st.dataframe(_display_rows(collisions[:200]), use_container_width=True, hide_index=True)
 
 
 def _extraction_feedback_tab(st: Any, feedback: dict[str, Any]) -> None:
@@ -426,7 +479,7 @@ def _extraction_feedback_tab(st: Any, feedback: dict[str, Any]) -> None:
         }
         for item in visible[:300]
     ]
-    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    st.dataframe(_display_rows(rows), use_container_width=True, hide_index=True)
     selected = st.selectbox("Feedback detail", [item["rule_id"] for item in visible])
     item = next(item for item in visible if item["rule_id"] == selected)
     st.markdown("### Feedback Detail")
@@ -481,7 +534,7 @@ def _export_tab(
             }
             for key, value in sorted(parameters.items())
         ]
-        st.dataframe(_display_rows(parameter_rows), width="stretch", hide_index=True)
+        st.dataframe(_display_rows(parameter_rows), use_container_width=True, hide_index=True)
     else:
         st.info("No buildable-area parameters were produced in this run.")
 
@@ -502,12 +555,12 @@ def _export_tab(
             }
             for item in constraints[:250]
         ]
-        st.dataframe(_display_rows(constraint_rows), width="stretch", hide_index=True)
+        st.dataframe(_display_rows(constraint_rows), use_container_width=True, hide_index=True)
 
     layer_requirements = gis_felt.get("map_layer_requirements", [])
     if layer_requirements:
         st.markdown("### Map Layers Needed")
-        st.dataframe(_display_rows(layer_requirements), width="stretch", hide_index=True)
+        st.dataframe(_display_rows(layer_requirements), use_container_width=True, hide_index=True)
 
     blockers = gis_felt.get("review_blockers", {})
     if blockers:
@@ -523,7 +576,7 @@ def _export_tab(
         examples = blockers.get("example_blockers", [])
         if examples:
             st.markdown("#### Example Blockers")
-            st.dataframe(_display_rows(examples), width="stretch", hide_index=True)
+            st.dataframe(_display_rows(examples), use_container_width=True, hide_index=True)
 
     with st.expander("Raw gis_felt_export.json"):
         st.json(gis_felt)
@@ -578,7 +631,7 @@ def _candidate_compare_tab(
 
     if verified_rule:
         st.markdown("#### Field Differences")
-        st.dataframe(_display_rows(_field_comparison_rows(review_rule, verified_rule)), width="stretch", hide_index=True)
+        st.dataframe(_display_rows(_field_comparison_rows(review_rule, verified_rule)), use_container_width=True, hide_index=True)
 
     left, right = st.columns(2)
     with left:
@@ -644,7 +697,7 @@ def _intelligence_tab(st: Any, intelligence: dict[str, Any], source_info: dict[s
         }
         for item in visible[:250]
     ]
-    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    st.dataframe(_display_rows(rows), use_container_width=True, hide_index=True)
 
     selected = st.selectbox("Evidence intelligence detail", [item["rule_id"] for item in visible])
     item = next(item for item in visible if item["rule_id"] == selected)
@@ -698,7 +751,7 @@ def _repair_tab(st: Any, repair: dict[str, Any], source_info: dict[str, Any]) ->
                 "match_reasons": ", ".join(top.get("match_reasons", [])),
             }
         )
-    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    st.dataframe(_display_rows(rows), use_container_width=True, hide_index=True)
     if suggestions:
         selected = st.selectbox("Suggestion detail", [item["rule_id"] for item in suggestions])
         item = next(item for item in suggestions if item["rule_id"] == selected)
@@ -752,7 +805,7 @@ def _semantic_tab(st: Any, semantic: dict[str, Any], source_info: dict[str, Any]
                 "reasons": ", ".join(top.get("match_reasons", [])),
             }
         )
-    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    st.dataframe(_display_rows(rows), use_container_width=True, hide_index=True)
 
     selected = st.selectbox("Semantic match detail", [item["rule_id"] for item in suggestions])
     item = next(item for item in suggestions if item["rule_id"] == selected)
@@ -849,7 +902,7 @@ def _rerun_tab(
     ]
     if ready_rows:
         st.markdown("### Promotion-Ready Shadow Verifications")
-        st.dataframe(_display_rows(ready_rows), width="stretch", hide_index=True)
+        st.dataframe(_display_rows(ready_rows), use_container_width=True, hide_index=True)
 
     rows = [
         {
@@ -868,7 +921,7 @@ def _rerun_tab(
         for item in visible[:250]
     ]
     st.markdown(f"### Rerun Attempts ({len(visible)})")
-    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    st.dataframe(_display_rows(rows), use_container_width=True, hide_index=True)
     if visible:
         selected = st.selectbox("Rerun detail", [item["original_rule_id"] for item in visible])
         item = next(item for item in visible if item["original_rule_id"] == selected)
@@ -1012,6 +1065,15 @@ def _render_guidance(st: Any) -> None:
 
 def _sidebar_guidance(st: Any) -> None:
     """Keep short usage instructions visible near the filters."""
+    st.sidebar.markdown(
+        """
+**Simple path**
+
+1. Start with `Start Here`.
+2. Use `Review Queue` for rules needing attention.
+3. Use `GIS/Felt Export` for downstream map handoff.
+"""
+    )
     with st.sidebar.expander("How to use this dashboard", expanded=False):
         st.markdown(
             """
@@ -1391,7 +1453,7 @@ def _style(st: Any) -> None:
 <style>
 html, body, [class*="css"] {font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;}
 .stApp {background:#f5f7fb;}
-.block-container {padding-top: 1.25rem; padding-bottom: 3rem; max-width: 1540px;}
+.block-container {padding-top: 1.25rem; padding-bottom: 3rem; max-width: 1600px; padding-left:2.2rem; padding-right:2.2rem;}
 section[data-testid="stSidebar"] {background:#111827;}
 section[data-testid="stSidebar"] * {color:#f8fafc;}
 section[data-testid="stSidebar"] [data-baseweb="select"] span,
@@ -1400,6 +1462,14 @@ section[data-testid="stSidebar"] textarea {color:#111827;}
 section[data-testid="stSidebar"] .stCaption,
 section[data-testid="stSidebar"] p {color:#cbd5e1;}
 section[data-testid="stSidebar"] div[data-testid="stExpander"] {border-color:#374151; background:#172033;}
+section[data-testid="stSidebar"] div[role="radiogroup"] label {
+  background:#1f2937;
+  border:1px solid #374151;
+  border-radius:8px;
+  padding:6px 8px;
+  margin:5px 0;
+}
+section[data-testid="stSidebar"] div[role="radiogroup"] label:hover {background:#243244;}
 h2, h3 {color:#111827; letter-spacing:0;}
 h3 {margin-top:1.35rem;}
 .app-header {display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:18px; align-items:stretch; border:1px solid #d7dee8; border-radius:8px; padding:22px 24px; background:#ffffff; margin-bottom:14px; box-shadow:0 12px 30px rgba(15,23,42,.07);}
@@ -1453,6 +1523,7 @@ h3 {margin-top:1.35rem;}
 .flow-strip span {display:block; font-size:13px; color:#172033; font-weight:650; line-height:1.3;}
 @keyframes flowPulse {0%{left:-80%;} 55%{left:135%;} 100%{left:135%;}}
 div[data-testid="stDataFrame"] {border:1px solid #d9e0e8; border-radius:8px; overflow:hidden; box-shadow:0 4px 14px rgba(15,23,42,.035);}
+div[data-testid="stDataFrame"] div[role="columnheader"] {font-weight:760;}
 div[data-testid="stExpander"] {border:1px solid #d9e0e8; border-radius:8px; background:#fff;}
 div[data-testid="stTabs"] button[role="tab"] {border-radius:8px 8px 0 0; padding:10px 12px; font-weight:680;}
 div[data-testid="stTabs"] button[aria-selected="true"] {background:#ffffff; border-bottom:3px solid #2563eb; color:#0f172a;}
