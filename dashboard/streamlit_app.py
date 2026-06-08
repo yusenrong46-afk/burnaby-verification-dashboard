@@ -50,6 +50,12 @@ def main() -> None:
 
     if page == "Overview":
         render_overview(st, data)
+    elif page == "Triage":
+        render_triage(st, data)
+    elif page == "Candidate vs Evidence":
+        render_candidate_vs_evidence(st, data)
+    elif page == "Recheck Passes":
+        render_recheck_passes(st, data)
     elif page == "Review Workbench":
         render_review_workbench(st, data)
     elif page == "Evidence Leads":
@@ -115,7 +121,15 @@ def render_sidebar(st: Any, data: dict[str, Any], output_dir: Path) -> str:
     st.sidebar.caption("Read-only verifier output review")
     page = st.sidebar.radio(
         "Go to",
-        ["Overview", "Review Workbench", "Evidence Leads", "GIS/Felt Handoff", "Raw + Code"],
+        [
+            "Overview",
+            "Triage",
+            "Candidate vs Evidence",
+            "Recheck Passes",
+            "Evidence Leads",
+            "GIS/Felt Handoff",
+            "Raw + Code",
+        ],
         label_visibility="collapsed",
     )
 
@@ -131,9 +145,10 @@ def render_sidebar(st: Any, data: dict[str, Any], output_dir: Path) -> str:
     st.sidebar.markdown(
         """
 1. **Overview** tells you what is safe now.
-2. **Review Workbench** tells you what to check next.
-3. **Evidence Leads** suggests better evidence, but never verifies by score.
-4. **GIS/Felt Handoff** is the downstream-safe map export.
+2. **Triage** shows review categories and priorities.
+3. **Candidate vs Evidence** compares claim meaning against the cited evidence.
+4. **Recheck Passes** shows which review items passed a shadow rerun.
+5. **GIS/Felt Handoff** is the downstream-safe map export.
 """
     )
     return page
@@ -218,6 +233,178 @@ def render_overview(st: Any, data: dict[str, Any]) -> None:
 # ---------------------------------------------------------------------------
 
 
+def render_triage(st: Any, data: dict[str, Any]) -> None:
+    """Show the review-router triage breakdown and queue."""
+    st.markdown("## Triage")
+    st.caption("This page answers: which review items should be handled first, and why?")
+    router = data.get("router", {})
+    summary = router.get("summary", {})
+    items = router.get("items", [])
+    if not items:
+        st.info("No triage data was found.")
+        return
+
+    top = st.columns(4)
+    metric_card(top[0], "Review items", len(items), "Total routed to review", "warn")
+    metric_card(top[1], "Categories", len(summary.get("category_counts", [])), "Review reason groups", "neutral")
+    metric_card(top[2], "High priority", count_name(summary.get("priority_counts", []), "high"), "Review first", "warn")
+    metric_card(top[3], "Likely correct", count_name(summary.get("likelihood_counts", []), "likely_correct"), "Good repair candidates", "good")
+
+    left, right = st.columns(2, gap="large")
+    with left:
+        st.markdown("### Review categories")
+        bar_list(st, summary.get("category_counts", []), "name", "count")
+        st.markdown("### Action buckets")
+        bar_list(st, summary.get("action_counts", []), "name", "count")
+    with right:
+        st.markdown("### Priority")
+        bar_list(st, summary.get("priority_counts", []), "name", "count")
+        st.markdown("### Top support gaps")
+        bar_list(st, summary.get("top_support_gaps", []), "name", "count")
+
+    st.markdown("### Triage queue")
+    filters = render_review_filters(st, items)
+    visible = apply_review_filters(items, filters)
+    if not visible:
+        st.warning("No triage rows match the current filters.")
+        return
+    rows = [review_queue_row(item) for item in visible[:300]]
+    st.dataframe(display_rows(rows), use_container_width=True, hide_index=True, height=460)
+
+    selected_id = st.selectbox("Open triage detail", [item.get("rule_id") for item in visible], key="triage_detail")
+    selected = next((item for item in visible if item.get("rule_id") == selected_id), visible[0])
+    render_review_detail(st, selected, data)
+
+
+def render_candidate_vs_evidence(st: Any, data: dict[str, Any]) -> None:
+    """Show sentence-level candidate claim versus cited evidence."""
+    st.markdown("## Candidate vs Evidence")
+    st.caption("This page answers: does the extracted candidate mean the same thing as the evidence sentence?")
+    items = data.get("router", {}).get("items", [])
+    if not items:
+        st.info("No candidate/evidence comparison data was found.")
+        return
+
+    filters = render_review_filters(st, items)
+    visible = apply_review_filters(items, filters)
+    if not visible:
+        st.warning("No comparison rows match the current filters.")
+        return
+
+    selected_id = st.selectbox("Choose review rule", [item.get("rule_id") for item in visible], key="candidate_evidence_rule")
+    item = next((row for row in visible if row.get("rule_id") == selected_id), visible[0])
+    verified = find_rule(data.get("verified", []), item.get("similar_verified_rule_id"))
+    intelligence = find_rule(data.get("intelligence", {}).get("items", []), item.get("rule_id"))
+
+    candidate, evidence = st.columns(2, gap="large")
+    with candidate:
+        st.markdown("### Candidate claim")
+        st.markdown(
+            f"""
+<div class="contrast-card candidate">
+  <span>Generated rule</span>
+  <p>{escape(item.get('candidate_sentence') or rule_sentence(item))}</p>
+</div>
+""",
+            unsafe_allow_html=True,
+        )
+        st.dataframe(display_rows([candidate_field_row(item)]), use_container_width=True, hide_index=True)
+
+    with evidence:
+        st.markdown("### Cited evidence")
+        st.markdown(
+            f"""
+<div class="contrast-card evidence">
+  <span>Evidence sentence</span>
+  <p>{escape(item.get('evidence_sentence') or 'No evidence sentence was attached.')}</p>
+</div>
+""",
+            unsafe_allow_html=True,
+        )
+        st.markdown("#### Why it is still review")
+        st.warning(item.get("blocking_reason") or list_text(item.get("support_gaps")))
+
+    st.markdown("### Side-by-side meaning check")
+    rows = [
+        {"question": "Rule object", "candidate": item.get("rule_object"), "evidence / verifier signal": item.get("review_category")},
+        {"question": "Value and unit", "candidate": value_unit(item), "evidence / verifier signal": "check exact value and unit in evidence sentence"},
+        {"question": "Operator", "candidate": item.get("operator"), "evidence / verifier signal": "look for words like maximum, minimum, more than, required"},
+        {"question": "Scope / applies_to", "candidate": item.get("applies_to") or item.get("constraint_scope"), "evidence / verifier signal": item.get("evidence_span_diagnosis")},
+        {"question": "Condition / exception", "candidate": item.get("condition"), "evidence / verifier signal": "keep in review if except/subject to/notwithstanding language is unresolved"},
+    ]
+    st.dataframe(display_rows(rows), use_container_width=True, hide_index=True, height=240)
+
+    lower_left, lower_right = st.columns(2, gap="large")
+    with lower_left:
+        st.markdown("### Closest verified rule")
+        if verified:
+            st.success(rule_sentence(verified))
+            st.caption(f"Similarity score: {item.get('similar_verified_score')}")
+        else:
+            st.info("No close verified rule was found.")
+    with lower_right:
+        st.markdown("### Better evidence lead")
+        if intelligence and intelligence.get("best_evidence_id"):
+            st.info(f"{intelligence.get('best_evidence_id')} | confidence {display_value(intelligence.get('confidence'))}")
+            st.code(short_quote(intelligence.get("best_evidence_quote") or intelligence.get("best_evidence_sentence")), language="text")
+        else:
+            st.info("No automatic evidence lead for this rule.")
+
+    st.markdown("### Human reviewer instruction")
+    st.code(bylaw_lookup_text(item, data), language="text")
+
+
+def render_recheck_passes(st: Any, data: dict[str, Any]) -> None:
+    """Show review candidates that pass when rerun with better evidence."""
+    st.markdown("## Recheck Passes")
+    st.caption("This page answers: which review rules would pass after rechecking with stronger evidence?")
+    rerun = data.get("rerun", {})
+    attempts = rerun.get("attempts", [])
+    if not attempts:
+        st.info("No shadow recheck attempts were found.")
+        return
+
+    verified_attempts = [item for item in attempts if item.get("retry_decision") == "verified"]
+    promotion_ready = [item for item in attempts if item.get("promotion_ready")]
+    still_review = [item for item in attempts if item.get("retry_decision") == "review_needed"]
+    rejected = [item for item in attempts if item.get("retry_decision") == "rejected"]
+
+    cols = st.columns(4)
+    metric_card(cols[0], "Attempts", len(attempts), "Rules rechecked", "neutral")
+    metric_card(cols[1], "Would verify", len(verified_attempts), "Passed deterministic rerun", "good")
+    metric_card(cols[2], "Promotion-ready", len(promotion_ready), "No risk flags", "good")
+    metric_card(cols[3], "Still blocked", len(still_review) + len(rejected), "Needs review or rejected", "warn")
+
+    st.markdown(
+        """
+<div class="instruction-card">
+  <b>Important guardrail</b>
+  <p>These are shadow reruns. A rule should move into <code>verified_rules.json</code> only after manual promotion review confirms the stronger evidence is the correct cited source and no legal condition is missing.</p>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+
+    decision_filter = st.multiselect("Rerun decision", unique(attempts, "retry_decision"))
+    ready_only = st.checkbox("Promotion-ready only", value=True)
+    visible = attempts
+    if decision_filter:
+        visible = [item for item in visible if item.get("retry_decision") in decision_filter]
+    if ready_only:
+        visible = [item for item in visible if item.get("promotion_ready")]
+
+    rows = [recheck_row(item) for item in visible[:300]]
+    st.dataframe(display_rows(rows), use_container_width=True, hide_index=True, height=430)
+
+    if not visible:
+        st.warning("No recheck rows match the current filters.")
+        return
+
+    selected_id = st.selectbox("Open recheck detail", [item.get("original_rule_id") for item in visible])
+    item = next((row for row in visible if row.get("original_rule_id") == selected_id), visible[0])
+    render_recheck_detail(st, item, data)
+
+
 def render_review_workbench(st: Any, data: dict[str, Any]) -> None:
     st.markdown("## Review Workbench")
     st.caption("Pick one review item, read why it is blocked, and follow the human instruction.")
@@ -236,6 +423,9 @@ def render_review_workbench(st: Any, data: dict[str, Any]) -> None:
         st.dataframe(display_rows(queue_rows), use_container_width=True, hide_index=True, height=520)
 
     with right:
+        if not visible:
+            st.warning("No review rows match the current filters.")
+            return
         selected_id = st.selectbox("Open rule detail", [item.get("rule_id") for item in visible])
         item = next((row for row in visible if row.get("rule_id") == selected_id), visible[0])
         render_review_detail(st, item, data)
@@ -278,6 +468,73 @@ def review_queue_row(item: dict[str, Any]) -> dict[str, Any]:
         "unit": item.get("unit"),
         "why blocked": item.get("blocking_reason") or first(item.get("support_gaps")),
     }
+
+
+def candidate_field_row(item: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "rule_id": item.get("rule_id"),
+        "rule": item.get("rule_object"),
+        "scope": item.get("constraint_scope"),
+        "applies_to": item.get("applies_to"),
+        "operator": item.get("operator"),
+        "value": item.get("value"),
+        "unit": item.get("unit"),
+        "condition": item.get("condition"),
+    }
+
+
+def recheck_row(item: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "original_rule": item.get("original_rule_id"),
+        "rerun_rule": item.get("retry_rule_id"),
+        "decision": item.get("retry_decision"),
+        "promotion_ready": item.get("promotion_ready"),
+        "rule": item.get("rule_object"),
+        "scope": item.get("constraint_scope"),
+        "value": item.get("value"),
+        "unit": item.get("unit"),
+        "old evidence": item.get("original_evidence_id"),
+        "new evidence": item.get("retry_evidence_id"),
+        "confidence": item.get("confidence"),
+        "risk flags": list_text(item.get("promotion_risk_flags")),
+    }
+
+
+def render_recheck_detail(st: Any, item: dict[str, Any], data: dict[str, Any]) -> None:
+    st.markdown("### Recheck detail")
+    tone = "good" if item.get("promotion_ready") else "warn"
+    st.markdown(
+        f"""
+<div class="detail-card {escape(tone)}">
+  <div class="detail-top"><b>{escape(item.get('original_rule_id'))}</b><span>{escape(item.get('retry_decision'))}</span></div>
+  <h3>{escape(rule_sentence(item))}</h3>
+  <p><b>Original evidence:</b> {escape(item.get('original_evidence_id'))}</p>
+  <p><b>Recheck evidence:</b> {escape(item.get('retry_evidence_id'))}</p>
+  <p><b>Recommendation:</b> {escape(item.get('promotion_recommendation') or 'inspect before promotion')}</p>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+    left, right = st.columns(2)
+    with left:
+        st.markdown("#### Deterministic rerun")
+        st.success(f"Decision: {item.get('retry_decision')}")
+        st.write(f"Evidence strength: `{display_value(item.get('retry_evidence_strength'))}`")
+        st.write(f"Support gaps: `{list_text(item.get('retry_support_gaps')) or 'none'}`")
+    with right:
+        st.markdown("#### Promotion screen")
+        if item.get("promotion_ready"):
+            st.success("Promotion-ready after manual source review.")
+        else:
+            st.warning("Not promotion-ready.")
+        st.write(f"Risk flags: `{list_text(item.get('promotion_risk_flags')) or 'none'}`")
+    st.markdown("#### What to manually check")
+    st.code(
+        "Open the recheck evidence ID in the source/evidence files. Confirm it proves the same candidate value, unit, operator, scope, condition, and exception status before promoting.",
+        language="text",
+    )
+    with st.expander("Raw recheck JSON"):
+        st.json(item)
 
 
 def render_review_detail(st: Any, item: dict[str, Any], data: dict[str, Any]) -> None:
@@ -538,6 +795,14 @@ def named_counts(rows: list[dict[str, Any]]) -> dict[str, int]:
     return {str(row.get("name")): int(row.get("count") or 0) for row in rows}
 
 
+def count_name(rows: list[dict[str, Any]], name: str) -> int:
+    return named_counts(rows).get(name, 0)
+
+
+def find_rule(rows: list[dict[str, Any]], rule_id: Any) -> dict[str, Any]:
+    return next((row for row in rows if row.get("rule_id") == rule_id), {})
+
+
 def unique(items: list[dict[str, Any]], key: str) -> list[str]:
     return sorted({str(item.get(key)) for item in items if item.get(key) not in (None, "")})
 
@@ -682,6 +947,11 @@ h1, h2, h3 {letter-spacing:0; color:var(--ink);} h2 {margin-top:.6rem;} h3 {marg
 .next-actions {display:grid; gap:10px;} .next-actions div, .instruction-card, .detail-card {background:#fff; border:1px solid var(--line); border-radius:10px; padding:15px 16px; box-shadow:0 5px 16px rgba(20,31,53,.04);} .next-actions b {font-size:28px; color:var(--blue); margin-right:8px;} .next-actions span {font-weight:800;} .next-actions p, .instruction-card p, .detail-card p {color:var(--muted); margin:.25rem 0 .2rem;}
 .flow {display:grid; grid-template-columns:1fr 22px 1fr 22px 1fr 22px 1.5fr 22px 1.2fr; gap:8px; align-items:center;} .flow div {background:#fff; border:1px solid var(--line); border-radius:10px; padding:13px 14px; text-align:center; font-weight:800; min-height:64px; display:flex; align-items:center; justify-content:center;} .flow span:before {content:"→"; color:var(--blue); font-weight:900; font-size:22px;}
 .detail-card {border-left:4px solid var(--blue); margin-bottom:12px;} .detail-card.evidence {border-left-color:var(--green);} .detail-card h3 {font-size:18px; line-height:1.35; margin:.65rem 0;} .detail-top {display:flex; justify-content:space-between; gap:12px;} .detail-top span {background:#eef4ff; color:#1d4ed8; border-radius:999px; padding:3px 9px; font-size:12px; font-weight:800;}
+.contrast-card {background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px 18px; min-height:170px; box-shadow:0 5px 16px rgba(20,31,53,.04); border-top:4px solid var(--blue);}
+.contrast-card.evidence {border-top-color:var(--green);}
+.contrast-card.candidate {border-top-color:var(--amber);}
+.contrast-card span {display:block; color:var(--muted); text-transform:uppercase; font-size:11px; font-weight:800; margin-bottom:8px;}
+.contrast-card p {font-size:17px; line-height:1.45; margin:0; color:var(--ink);}
 .bar-row {display:grid; grid-template-columns:minmax(140px,220px) 1fr 48px; gap:10px; align-items:center; margin:7px 0; background:#fff; border:1px solid var(--line); border-radius:8px; padding:8px 10px;} .bar-row span {font-weight:700; color:#334155;} .bar-row div {height:12px; background:#e8eef7; border-radius:999px; overflow:hidden;} .bar-row i {display:block; height:100%; background:var(--blue);} .bar-row b {text-align:right;}
 div[data-testid="stDataFrame"] {border:1px solid var(--line); border-radius:10px; overflow:hidden; box-shadow:0 5px 16px rgba(20,31,53,.04);} div[data-testid="stMetric"] {background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 14px;}
 code, pre {border-radius:8px;} div[data-testid="stExpander"] {background:#fff; border:1px solid var(--line); border-radius:10px;}

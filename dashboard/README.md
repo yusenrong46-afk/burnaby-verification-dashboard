@@ -17,7 +17,9 @@ outputs/burnaby_r1_slim_pipeline5_registry/
 Main pages:
 
 - Overview: safety state, output buckets, and recommended next actions.
-- Review Workbench: review queue table plus selected-rule detail in side-by-side columns.
+- Triage: review categories, priorities, action buckets, support gaps, and triage queue.
+- Candidate vs Evidence: sentence-level contrast between generated candidate and cited evidence.
+- Recheck Passes: shadow rerun results showing which review items would verify with stronger evidence.
 - Evidence Leads: evidence repair / semantic lead queue for reducing review volume.
 - GIS/Felt Handoff: verified-only parameters, constraints, map layers, and review blockers.
 - Raw + Code: technical file map and raw JSON for debugging.
@@ -29,6 +31,7 @@ verified = safe for downstream export
 review_needed = plausible but not proven
 rejected = unsafe or contradicted
 not_used = traceability/out-of-contract artifact
+recheck pass = shadow result only, still needs manual promotion review
 ```
 
 The dashboard does not verify rules, call an LLM, mutate outputs, or touch GIS files.
