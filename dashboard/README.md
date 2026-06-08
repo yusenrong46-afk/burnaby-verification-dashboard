@@ -1,6 +1,8 @@
 # Verification Dashboard
 
-Run from `code/burnaby_rule_verification_prototype`:
+This Streamlit dashboard is a read-only product view of the verifier outputs. It is designed for classmates, reviewers, and GIS/Felt collaborators, not as an internal JSON explorer.
+
+Run locally from this deployment repo:
 
 ```bash
 streamlit run dashboard/streamlit_app.py --server.port 8502
@@ -12,23 +14,21 @@ Default source folder:
 outputs/burnaby_r1_slim_pipeline5_registry/
 ```
 
-To inspect another verifier run, pass an output directory:
+Main pages:
 
-```bash
-streamlit run dashboard/streamlit_app.py -- \
-  --output-dir /tmp/vancouver_pipeline6_verifier_span_summary
+- Overview: safety state, output buckets, and recommended next actions.
+- Review Workbench: review queue table plus selected-rule detail in side-by-side columns.
+- Evidence Leads: evidence repair / semantic lead queue for reducing review volume.
+- GIS/Felt Handoff: verified-only parameters, constraints, map layers, and review blockers.
+- Raw + Code: technical file map and raw JSON for debugging.
+
+Important boundary:
+
+```text
+verified = safe for downstream export
+review_needed = plausible but not proven
+rejected = unsafe or contradicted
+not_used = traceability/out-of-contract artifact
 ```
 
-The dashboard reads generated verifier outputs only. It does not call an LLM and
-does not change verification decisions.
-
-Main sidebar pages:
-
-- Start Here: plain-English summary, safety state, and recommended workflow
-- Results: bucket counts, benchmark gates, and current verifier output
-- Review Queue: ranked review items with category, action bucket, and reviewer instructions
-- Candidate Compare: review candidate compared with closest verified rule
-- Evidence Tools: Evidence Intelligence, deterministic repair, MiniLM retrieval, and shadow reruns
-- GIS/Felt Export: verified-only parameter export, map-layer needs, and review blockers
-- Code Explanation: file/layer map
-- Advanced: extraction feedback plus rule relationship diagnostics
+The dashboard does not verify rules, call an LLM, mutate outputs, or touch GIS files.
