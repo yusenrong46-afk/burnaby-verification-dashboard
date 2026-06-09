@@ -25,7 +25,7 @@ Pipeline 5 candidates/evidence -> deterministic validation -> verified/review/re
 - Guarded bundle promotions: 3
 - Rule graph nodes / edges: 544 / 1931
 - Cache hits / misses: 142 / 0
-- Semantic high-similarity review items: 3
+- Semantic high-similarity review items: 2
 - Safe verifier tuning candidates: 5
 - Felt verified-rule CSV rows: 30
 

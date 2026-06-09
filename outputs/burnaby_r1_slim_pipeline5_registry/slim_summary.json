@@ -456,12 +456,16 @@
   "semantic_review": {
     "review_rule_count": 63,
     "verified_rule_count": 30,
-    "high_similarity_count": 3,
+    "high_similarity_count": 2,
     "summary": {
       "semantic_action_counts": [
         {
           "name": "no_close_verified_analogue",
-          "count": 57
+          "count": 55
+        },
+        {
+          "name": "close_meaning_guardrail_blocked",
+          "count": 4
         },
         {
           "name": "close_meaning_general_review",
@@ -469,14 +473,6 @@
         },
         {
           "name": "close_meaning_scope_review",
-          "count": 1
-        },
-        {
-          "name": "close_meaning_condition_review",
-          "count": 1
-        },
-        {
-          "name": "close_meaning_guardrail_blocked",
           "count": 1
         }
       ]
