@@ -5,12 +5,12 @@
     "Promotion-ready means the ordinary deterministic verifier returned verified with no risk flags.",
     "Synthetic retry candidates keep the original source_stream so they cannot create fake consensus."
   ],
-  "attempt_count": 43,
+  "attempt_count": 42,
   "verified_after_rerun_count": 0,
   "promotion_ready_count": 0,
   "review_after_rerun_count": 33,
-  "rejected_after_rerun_count": 9,
-  "skipped_count": 13,
+  "rejected_after_rerun_count": 8,
+  "skipped_count": 14,
   "attempts": [
     {
       "original_rule_id": "burnaby_r1_019",
@@ -1602,14 +1602,12 @@
       "retry_evidence_type": "table_cell",
       "retry_evidence_quote": "Minimum Lot Line Setbacks Interior Side Yard Interior Side Yard 0 m Minimum Lot Line Setbacks | Interior Side Yard | 0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 0 m, except 1.2 m for end unit lots Minimum Lot Line Setbacks...",
       "repairable_fields": [
-        "operator",
         "text_consensus_candidate"
       ],
       "best_repair_confidence": 0.976,
       "original_support_gaps": [
         "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported",
-        "operator_not_supported"
+        "applies_to_not_supported"
       ],
       "retry_decision": "rejected",
       "retry_support_gaps": [
@@ -1881,54 +1879,6 @@
       "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
     },
     {
-      "original_rule_id": "burnaby_r1_095",
-      "original_candidate_id": "pipeline5_merged_rule_0090__api_01",
-      "retry_candidate_id": "pipeline5_merged_rule_0090__api_01__rerun__pipeline5_merged_rule_0041",
-      "rule_object": "height",
-      "constraint_scope": "building",
-      "applies_to": "accessory_structure",
-      "condition": "located outside of a required yard",
-      "operator": "<=",
-      "value": "4.6",
-      "unit": "m",
-      "original_evidence_id": "pipeline5_merged_rule_0090__api_01",
-      "retry_evidence_id": "pipeline5_merged_rule_0041",
-      "retry_evidence_page": 2,
-      "retry_evidence_type": "table_cell",
-      "retry_evidence_quote": "Maximum Height Accessory Buildings 1 storey 4.0 m Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-      "repairable_fields": [
-        "applies_to"
-      ],
-      "best_repair_confidence": 0.707,
-      "original_support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported"
-      ],
-      "retry_decision": "rejected",
-      "retry_support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "text_condition_not_supported",
-        "value_not_found_in_evidence",
-        "table_condition_not_supported"
-      ],
-      "retry_support_checks": {
-        "source_evidence_present": true,
-        "value_supported": false,
-        "unit_supported": true,
-        "operator_supported": true,
-        "applies_to_supported": true,
-        "scope_supported": true,
-        "rule_object_supported": true,
-        "table_context_supported": false,
-        "table_review_gate_passed": true
-      },
-      "retry_proof_type": "table_natural_logic_refuted",
-      "retry_table_proof_status": "refuted",
-      "promotion_ready": false,
-      "promotion_risk_flags": [],
-      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
-    },
-    {
       "original_rule_id": "burnaby_r1_031",
       "original_candidate_id": "pipeline5_merged_rule_0027",
       "retry_candidate_id": "pipeline5_merged_rule_0027__rerun__pipeline5_merged_rule_0120",
@@ -2177,6 +2127,12 @@
       "candidate_id": "pipeline5_merged_rule_0062",
       "reason": "repair_suggestion_not_retryable",
       "best_repair_confidence": 0.712
+    },
+    {
+      "rule_id": "burnaby_r1_095",
+      "candidate_id": "pipeline5_merged_rule_0090__api_01",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.707
     },
     {
       "rule_id": "burnaby_r1_073",

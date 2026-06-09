@@ -37,8 +37,8 @@
 
 - `pipeline5_text_candidate_requires_review`: 74
 - `rule_object_not_supported`: 46
-- `operator_not_supported`: 39
-- `applies_to_not_supported`: 37
+- `operator_not_supported`: 38
+- `applies_to_not_supported`: 35
 - `outside_current_rule_contract`: 30
 - `text_condition_not_supported`: 30
 - `table_cell_candidate_requires_review`: 29
@@ -58,9 +58,9 @@
 ## Proof / Bayesian-Lite Triage
 
 - Proof trace completion rate: 1.00
-- Supported claims: 970
+- Supported claims: 974
 - Refuted claims: 4
-- Not-enough-info claims: 162
+- Not-enough-info claims: 158
 - Mean evidence strength: 0.73
 - High-priority review rules: 5
 - Table proof rules: 62

@@ -987,6 +987,66 @@
       ]
     },
     {
+      "rule_id": "burnaby_r1_095",
+      "candidate_id": "pipeline5_merged_rule_0090__api_01",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "accessory_structure",
+      "operator": "<=",
+      "value": "4.6",
+      "unit": "m",
+      "source_evidence_id": "pipeline5_merged_rule_0090__api_01",
+      "review_category": "almost_verified",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 111,
+      "priority_rank": 1111,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Pipeline 5 text candidate needs a second source or table-backed consensus before promotion.",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Rerun using the evidence bundle; promote only if deterministic verifier passes.",
+      "human_instruction": "Rerun using the evidence bundle; promote only if deterministic verifier passes. Check pipeline5_text_candidate_requires_review in page 5; evidence_id pipeline5_merged_rule_0090__api_01. Evidence bundle is safe to rerun through the verifier. Semantic match: burnaby_r1_045 (score 0.69, blockers different_numeric_value).",
+      "candidate_sentence": "accessory_structure has height <= 4.6 m when located outside of a required yard.",
+      "evidence_sentence": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height.",
+      "bundle_sentence": "pipeline5_merged_rule_0090__api_01 supports applies_to, condition, operator, rule_object, unit, value; pipeline5_merged_rule_0041 supports applies_to, operator, rule_object, unit; pipeline5_merged_rule_0042 supports applies_to, operator, rule_object, unit; pipeline5_merged_rule_0034 supports operator, rule_object, unit.",
+      "decision_path": [
+        "9:bundle_safe_retry_available"
+      ],
+      "where_to_find_it": "page 5; evidence_id pipeline5_merged_rule_0090__api_01",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.879,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_045",
+      "similar_verified_score": 0.564,
+      "best_repair_evidence_id": "pipeline5_merged_rule_0041",
+      "best_repair_confidence": 0.707,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.921,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_045",
+      "semantic_score": 0.689,
+      "semantic_structured_score": 0.635,
+      "semantic_embedding_score": 0.788,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
       "rule_id": "burnaby_r1_063",
       "candidate_id": "pipeline5_merged_rule_0057",
       "decision": "review_needed",
@@ -1614,71 +1674,6 @@
       ]
     },
     {
-      "rule_id": "burnaby_r1_095",
-      "candidate_id": "pipeline5_merged_rule_0090__api_01",
-      "decision": "review_needed",
-      "rule_object": "height",
-      "constraint_scope": "building",
-      "applies_to": "accessory_structure",
-      "operator": "<=",
-      "value": "4.6",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0090__api_01",
-      "review_category": "scope_review",
-      "likely_status": "plausible",
-      "priority": "medium",
-      "triage_priority": "medium",
-      "review_rank": 127,
-      "priority_rank": 1127,
-      "action_bucket": "rerun_with_evidence_bundle",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.71).",
-      "next_action": "rerun_with_evidence_bundle",
-      "next_step": "Check row/column/header/prose context for the correct legal scope.",
-      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported in page 5; evidence_id pipeline5_merged_rule_0090__api_01. Suggested stronger evidence: pipeline5_merged_rule_0041. Evidence bundle is safe to rerun through the verifier. Semantic match: burnaby_r1_045 (score 0.69, blockers different_numeric_value).",
-      "candidate_sentence": "accessory_structure has height <= 4.6 m when located outside of a required yard.",
-      "evidence_sentence": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height.",
-      "bundle_sentence": "pipeline5_merged_rule_0090__api_01 supports applies_to, condition, operator, rule_object, unit, value; pipeline5_merged_rule_0041 supports applies_to, operator, rule_object, unit; pipeline5_merged_rule_0042 supports applies_to, operator, rule_object, unit; pipeline5_merged_rule_0034 supports operator, rule_object, unit.",
-      "decision_path": [
-        "5:scope_or_applies_to_missing"
-      ],
-      "where_to_find_it": "page 5; evidence_id pipeline5_merged_rule_0090__api_01",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported"
-      ],
-      "likely_correct_score": 0.72,
-      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
-      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
-      "potential_mistake_flags": [
-        "applies_to_not_grounded"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_045",
-      "similar_verified_score": 0.564,
-      "best_repair_evidence_id": "pipeline5_merged_rule_0041",
-      "best_repair_confidence": 0.707,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "applies_to"
-      ],
-      "rerun_decision": "rejected",
-      "rerun_promotion_ready": false,
-      "bundle_score": 0.921,
-      "bundle_safe_retry": true,
-      "bundle_missing_fields": [],
-      "bundle_rerun_decision": "review_needed",
-      "bundle_rerun_promotion_ready": false,
-      "semantic_review_class": "guardrail_blocked_low_similarity",
-      "semantic_verified_rule_id": "burnaby_r1_045",
-      "semantic_score": 0.689,
-      "semantic_structured_score": 0.635,
-      "semantic_embedding_score": 0.788,
-      "semantic_match_type": "structured_plus_embedding",
-      "semantic_next_action": "no_close_verified_analogue",
-      "semantic_guardrail_blockers": [
-        "different_numeric_value"
-      ]
-    },
-    {
       "rule_id": "burnaby_r1_046",
       "candidate_id": "pipeline5_merged_rule_0042",
       "decision": "review_needed",
@@ -1810,6 +1805,71 @@
       "semantic_guardrail_blockers": [
         "different_numeric_value"
       ]
+    },
+    {
+      "rule_id": "burnaby_r1_094",
+      "candidate_id": "pipeline5_merged_rule_0089",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "garage_carport_below_grade_min_setback",
+      "applies_to": "Parking",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "source_evidence_id": "pipeline5_merged_rule_0089",
+      "review_category": "scope_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 134,
+      "priority_rank": 1134,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.98).",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported in page 4; evidence_id pipeline5_merged_rule_0089. Suggested stronger evidence: pipeline5_merged_rule_0048__api_01. Evidence bundle is safe to rerun through the verifier. Semantic match: burnaby_r1_054 (score 0.71, blockers none).",
+      "candidate_sentence": "Parking has setback >= 1.2 m when garage or carport constructed below grade.",
+      "evidence_sentence": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
+      "bundle_sentence": "pipeline5_merged_rule_0089 supports condition, rule_object, scope, unit, value; pipeline5_merged_rule_0049 supports operator, rule_object, scope, unit, value; pipeline5_merged_rule_0087 supports condition, scope, unit, value; pipeline5_merged_rule_0088__api_01 supports condition, scope, unit, value.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 4; evidence_id pipeline5_merged_rule_0089",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "likely_correct_score": 0.651,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_050",
+      "similar_verified_score": 0.49,
+      "best_repair_evidence_id": "pipeline5_merged_rule_0048__api_01",
+      "best_repair_confidence": 0.976,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.841,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "no_close_semantic_match",
+      "semantic_verified_rule_id": "burnaby_r1_054",
+      "semantic_score": 0.715,
+      "semantic_structured_score": 0.76,
+      "semantic_embedding_score": 0.63,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": []
     },
     {
       "rule_id": "burnaby_r1_030",
@@ -2834,76 +2894,6 @@
         "different_direction",
         "different_numeric_value",
         "different_unit",
-        "missing_core_evidence"
-      ]
-    },
-    {
-      "rule_id": "burnaby_r1_094",
-      "candidate_id": "pipeline5_merged_rule_0089",
-      "decision": "review_needed",
-      "rule_object": "setback",
-      "constraint_scope": "garage_carport_below_grade_min_setback",
-      "applies_to": "Parking",
-      "operator": ">=",
-      "value": "1.2",
-      "unit": "m",
-      "source_evidence_id": "pipeline5_merged_rule_0089",
-      "review_category": "operator_review",
-      "likely_status": "weak",
-      "priority": "low",
-      "triage_priority": "low",
-      "review_rank": 254,
-      "priority_rank": 2254,
-      "action_bucket": "operator_review",
-      "action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.98).",
-      "next_action": "operator_review",
-      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
-      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported in page 4; evidence_id pipeline5_merged_rule_0089. Suggested stronger evidence: pipeline5_merged_rule_0048__api_01. Evidence bundle is safe to rerun through the verifier. Semantic match: burnaby_r1_054 (score 0.71, blockers missing_core_evidence).",
-      "candidate_sentence": "Parking has setback >= 1.2 m when garage or carport constructed below grade.",
-      "evidence_sentence": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a lot line.",
-      "bundle_sentence": "pipeline5_merged_rule_0089 supports condition, rule_object, scope, unit, value; pipeline5_merged_rule_0049 supports operator, rule_object, scope, unit, value; pipeline5_merged_rule_0087 supports condition, scope, unit, value; pipeline5_merged_rule_0088__api_01 supports condition, scope, unit, value.",
-      "decision_path": [
-        "3:operator_missing_or_refuted"
-      ],
-      "where_to_find_it": "page 4; evidence_id pipeline5_merged_rule_0089",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported",
-        "operator_not_supported"
-      ],
-      "likely_correct_score": 0.453,
-      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported",
-      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-      "potential_mistake_flags": [
-        "operator_direction_or_wording_missing",
-        "applies_to_not_grounded"
-      ],
-      "similar_verified_rule_id": "burnaby_r1_050",
-      "similar_verified_score": 0.49,
-      "best_repair_evidence_id": "pipeline5_merged_rule_0048__api_01",
-      "best_repair_confidence": 0.976,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "operator",
-        "text_consensus_candidate"
-      ],
-      "rerun_decision": "rejected",
-      "rerun_promotion_ready": false,
-      "bundle_score": 0.841,
-      "bundle_safe_retry": true,
-      "bundle_missing_fields": [
-        "applies_to"
-      ],
-      "bundle_rerun_decision": "review_needed",
-      "bundle_rerun_promotion_ready": false,
-      "semantic_review_class": "guardrail_blocked_low_similarity",
-      "semantic_verified_rule_id": "burnaby_r1_054",
-      "semantic_score": 0.71,
-      "semantic_structured_score": 0.76,
-      "semantic_embedding_score": 0.63,
-      "semantic_match_type": "structured_plus_embedding",
-      "semantic_next_action": "close_meaning_guardrail_blocked",
-      "semantic_guardrail_blockers": [
         "missing_core_evidence"
       ]
     },
@@ -4311,7 +4301,7 @@
     "category_counts": [
       {
         "name": "operator_review",
-        "count": 32
+        "count": 31
       },
       {
         "name": "scope_review",
@@ -4330,12 +4320,12 @@
         "count": 2
       },
       {
-        "name": "upstream_extraction_issue",
+        "name": "almost_verified",
         "count": 2
       },
       {
-        "name": "almost_verified",
-        "count": 1
+        "name": "upstream_extraction_issue",
+        "count": 2
       },
       {
         "name": "human_legal_review",
@@ -4345,11 +4335,11 @@
     "action_counts": [
       {
         "name": "operator_review",
-        "count": 32
+        "count": 31
       },
       {
         "name": "rerun_with_evidence_bundle",
-        "count": 15
+        "count": 16
       },
       {
         "name": "defer_low_priority",
@@ -4379,7 +4369,7 @@
     "priority_counts": [
       {
         "name": "low",
-        "count": 34
+        "count": 33
       },
       {
         "name": "high",
@@ -4387,7 +4377,7 @@
       },
       {
         "name": "medium",
-        "count": 14
+        "count": 15
       }
     ],
     "likelihood_counts": [
@@ -4397,11 +4387,11 @@
       },
       {
         "name": "weak",
-        "count": 19
+        "count": 18
       },
       {
         "name": "likely_correct",
-        "count": 10
+        "count": 11
       },
       {
         "name": "likely_wrong_or_noise",
@@ -4411,7 +4401,7 @@
     "semantic_review_counts": [
       {
         "name": "guardrail_blocked_low_similarity",
-        "count": 58
+        "count": 57
       },
       {
         "name": "high_confidence_near_duplicate",
@@ -4423,7 +4413,7 @@
       },
       {
         "name": "no_close_semantic_match",
-        "count": 1
+        "count": 2
       }
     ],
     "top_blocking_reasons": [
@@ -4437,7 +4427,7 @@
       },
       {
         "reason": "applies_to_not_supported",
-        "count": 24
+        "count": 23
       },
       {
         "reason": "rule_family_direction_mismatch",
@@ -4445,7 +4435,7 @@
       },
       {
         "reason": "operator_not_supported",
-        "count": 18
+        "count": 17
       },
       {
         "reason": "table_cell_candidate_requires_review",
@@ -4487,7 +4477,7 @@
       },
       {
         "name": "applies_to_not_supported",
-        "count": 24
+        "count": 23
       },
       {
         "name": "rule_family_direction_mismatch",
@@ -4495,7 +4485,7 @@
       },
       {
         "name": "operator_not_supported",
-        "count": 18
+        "count": 17
       },
       {
         "name": "table_cell_candidate_requires_review",

@@ -1,7 +1,7 @@
 {
   "suggestion_count": 56,
   "alternative_evidence_count": 56,
-  "retry_candidate_count": 43,
+  "retry_candidate_count": 42,
   "suggestions": [
     {
       "rule_id": "burnaby_r1_019",
@@ -2531,13 +2531,11 @@
       "current_evidence_id": "pipeline5_merged_rule_0089",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported",
-        "operator_not_supported"
+        "applies_to_not_supported"
       ],
       "best_repair_confidence": 0.976,
       "can_retry_verification": true,
       "repairable_fields": [
-        "operator",
         "text_consensus_candidate"
       ],
       "top_evidence": [
@@ -3359,14 +3357,11 @@
       "unit": "m",
       "current_evidence_id": "pipeline5_merged_rule_0090__api_01",
       "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported"
+        "pipeline5_text_candidate_requires_review"
       ],
       "best_repair_confidence": 0.707,
-      "can_retry_verification": true,
-      "repairable_fields": [
-        "applies_to"
-      ],
+      "can_retry_verification": false,
+      "repairable_fields": [],
       "top_evidence": [
         {
           "evidence_id": "pipeline5_merged_rule_0041",

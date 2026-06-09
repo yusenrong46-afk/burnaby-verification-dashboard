@@ -12394,10 +12394,10 @@
         "reason": "applies_to words are not grounded in local evidence"
       },
       "operator": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
-        "reason": "operator wording is not supported by evidence"
+        "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
@@ -12444,10 +12444,10 @@
         "reason": "applies_to words are not grounded in local evidence"
       },
       "operator": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
-        "reason": "operator wording is not supported by evidence"
+        "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
@@ -12482,10 +12482,10 @@
         "reason": "rule object is not explicit in text evidence"
       },
       "operator": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
-        "reason": "text wording does not prove >= / minimum"
+        "evidence_quote": "nor be less",
+        "reason": "text wording supports >= / minimum"
       },
       "value": {
         "label": "supported",
@@ -12545,10 +12545,10 @@
         "reason": "applies_to words are not grounded in local evidence"
       },
       "operator": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(b) A garage or carport may be constructed below grade, provided that no part of such structure shall extend more than 1.2 m above the surface of the surrounding ground at any point other than the driveway, nor be less than 1.2 m from a...",
-        "reason": "operator wording is not supported by evidence"
+        "reason": "operator wording is supported by evidence"
       },
       "value": {
         "label": "supported",
@@ -12577,18 +12577,17 @@
     },
     "proof_decision_mismatch": false,
     "proof_decision_mismatches": [],
-    "evidence_strength": 0.685,
+    "evidence_strength": 0.776,
     "review_priority": "medium",
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
-      "applies_to_not_supported",
-      "operator_not_supported"
+      "applies_to_not_supported"
     ],
     "support_checks": {
       "source_evidence_present": true,
       "value_supported": true,
       "unit_supported": true,
-      "operator_supported": false,
+      "operator_supported": true,
       "applies_to_supported": false,
       "scope_supported": true,
       "rule_object_supported": true,
@@ -12596,7 +12595,7 @@
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded; the proposed operator is not supported by the cited wording",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -12648,35 +12647,32 @@
       "zihao_confidence": null,
       "zihao_needs_review": null
     },
-    "review_category": "operator_uncertain",
-    "likely_correct_score": 0.453,
-    "likely_status": "weak",
-    "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported",
-    "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+    "review_category": "missing_applies_to",
+    "likely_correct_score": 0.651,
+    "likely_status": "plausible",
+    "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
+    "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
     "potential_mistake_flags": [
-      "operator_direction_or_wording_missing",
       "applies_to_not_grounded"
     ],
     "similar_verified_rule_id": "burnaby_r1_050",
     "similar_verified_score": 0.49,
-    "triage_priority": "low",
-    "review_rank": 254,
+    "triage_priority": "medium",
+    "review_rank": 134,
     "review_action_bucket": "retry_with_better_evidence",
     "review_action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.98).",
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0048__api_01",
     "repair_confidence": 0.976,
     "can_retry_verification": true,
-    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_review_class": "no_close_semantic_match",
     "semantic_verified_rule_id": "burnaby_r1_054",
-    "semantic_score": 0.71,
+    "semantic_score": 0.715,
     "semantic_structured_score": 0.76,
     "semantic_embedding_score": 0.63,
     "semantic_match_type": "structured_plus_embedding",
-    "semantic_next_action": "close_meaning_guardrail_blocked",
-    "semantic_guardrail_blockers": [
-      "missing_core_evidence"
-    ]
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": []
   },
   {
     "rule_id": "burnaby_r1_095",
@@ -12711,11 +12707,10 @@
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. An accessory structure not being a building, excluding a fence or a retaining wall,...",
-        "reason": "final support gap remains: applies_to_not_supported",
-        "decision_gap": "applies_to_not_supported"
+        "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. accessory structure not being a building 4.6 m An accessory structure not being a b...",
+        "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
@@ -12762,10 +12757,10 @@
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. accessory structure not being a building 4.6 m An accessory structure not being a b...",
-        "reason": "applies_to words are not grounded in local evidence"
+        "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
@@ -12864,11 +12859,10 @@
         "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
-        "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. An accessory structure not being a building, excluding a fence or a retaining wall,...",
-        "reason": "final support gap remains: applies_to_not_supported",
-        "decision_gap": "applies_to_not_supported"
+        "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. accessory structure not being a building 4.6 m An accessory structure not being a b...",
+        "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
@@ -12903,25 +12897,24 @@
     },
     "proof_decision_mismatch": false,
     "proof_decision_mismatches": [],
-    "evidence_strength": 0.776,
+    "evidence_strength": 0.868,
     "review_priority": "medium",
     "support_gaps": [
-      "pipeline5_text_candidate_requires_review",
-      "applies_to_not_supported"
+      "pipeline5_text_candidate_requires_review"
     ],
     "support_checks": {
       "source_evidence_present": true,
       "value_supported": true,
       "unit_supported": true,
       "operator_supported": true,
-      "applies_to_supported": false,
+      "applies_to_supported": true,
       "scope_supported": true,
       "rule_object_supported": true,
       "table_context_supported": true,
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
@@ -12973,24 +12966,22 @@
       "zihao_confidence": null,
       "zihao_needs_review": null
     },
-    "review_category": "missing_applies_to",
-    "likely_correct_score": 0.72,
-    "likely_status": "plausible",
-    "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
-    "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
-    "potential_mistake_flags": [
-      "applies_to_not_grounded"
-    ],
+    "review_category": "text_candidate_needs_consensus",
+    "likely_correct_score": 0.879,
+    "likely_status": "likely_correct",
+    "blocking_reason": "pipeline5_text_candidate_requires_review",
+    "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+    "potential_mistake_flags": [],
     "similar_verified_rule_id": "burnaby_r1_045",
     "similar_verified_score": 0.564,
     "triage_priority": "medium",
-    "review_rank": 127,
-    "review_action_bucket": "retry_with_better_evidence",
-    "review_action_reason": "Evidence repair found enough matching fields to rerun verification (confidence 0.71).",
-    "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
+    "review_rank": 111,
+    "review_action_bucket": "needs_second_source_consensus",
+    "review_action_reason": "Pipeline 5 text candidate needs a second source or table-backed consensus before promotion.",
+    "review_next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review.",
     "repair_evidence_id": "pipeline5_merged_rule_0041",
     "repair_confidence": 0.707,
-    "can_retry_verification": true,
+    "can_retry_verification": false,
     "semantic_review_class": "guardrail_blocked_low_similarity",
     "semantic_verified_rule_id": "burnaby_r1_045",
     "semantic_score": 0.689,

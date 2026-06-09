@@ -18,12 +18,12 @@ Shadow reruns test the best evidence bundle through the normal verifier. They do
 - `burnaby_r1_086` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_086` gaps=pipeline5_text_candidate_requires_review, applies_to_not_supported
 - `burnaby_r1_127` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_127` gaps=pipeline5_text_candidate_requires_review, text_condition_not_supported
 - `burnaby_r1_129` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_129` gaps=pipeline5_text_candidate_requires_review, text_condition_not_supported
-- `burnaby_r1_095` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_095` gaps=pipeline5_text_candidate_requires_review, applies_to_not_supported
+- `burnaby_r1_095` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_095` gaps=pipeline5_text_candidate_requires_review
 - `burnaby_r1_027` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_027` gaps=text_condition_not_supported
 - `burnaby_r1_032` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_032` gaps=applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review, table_evidence_candidate_requires_review
 - `burnaby_r1_033` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_033` gaps=applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review, table_evidence_candidate_requires_review
 - `burnaby_r1_035` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_035` gaps=text_condition_not_supported, applies_to_not_supported, table_condition_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review, table_evidence_candidate_requires_review
-- `burnaby_r1_094` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_094` gaps=pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported
+- `burnaby_r1_094` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_094` gaps=pipeline5_text_candidate_requires_review, applies_to_not_supported
 - `burnaby_r1_031` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_031` gaps=applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review, table_evidence_candidate_requires_review
 - `burnaby_r1_034` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_034` gaps=table_column_not_target_scope, table_cell_candidate_requires_review, table_evidence_candidate_requires_review
 - `burnaby_r1_036` -> `review_needed` ready=False bundle=`bundle::burnaby_r1_036` gaps=applies_to_not_supported

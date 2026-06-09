@@ -2,12 +2,12 @@
 
 Shadow reruns test stronger evidence through the normal verifier. They do not automatically promote rules.
 
-- Attempts: 43
+- Attempts: 42
 - Verified after rerun: 0
 - Promotion ready: 0
 - Still review: 33
-- Rejected: 9
-- Skipped: 13
+- Rejected: 8
+- Skipped: 14
 
 ## Top 25 Attempts
 

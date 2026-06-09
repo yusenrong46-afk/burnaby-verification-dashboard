@@ -9501,6 +9501,12 @@
       "source": "review_rule:burnaby_r1_094",
       "target": "canonical_rule_key:setback_garage_carport_below_grade_min_setback_parking_garage_or_carport_constructed_below_grade_1_2_m",
       "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:burnaby_r1_094",
+      "target": "canonical_rule_key:setback_garage_carport_below_grade_min_setback_parking_garage_or_carport_constructed_below_grade_1_2_m",
+      "type": "supports_field",
       "field": "rule_object"
     },
     {
@@ -9515,13 +9521,6 @@
       "type": "missing_field",
       "field": "applies_to",
       "gap": "applies_to_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_094",
-      "target": "canonical_rule_key:setback_garage_carport_below_grade_min_setback_parking_garage_or_carport_constructed_below_grade_1_2_m",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_095",
@@ -9571,9 +9570,8 @@
     {
       "source": "review_rule:burnaby_r1_095",
       "target": "canonical_rule_key:height_building_accessory_structure_located_outside_of_a_required_yard_4_6_m",
-      "type": "missing_field",
-      "field": "applies_to",
-      "gap": "applies_to_not_supported"
+      "type": "supports_field",
+      "field": "applies_to"
     },
     {
       "source": "review_rule:burnaby_r1_098",
@@ -14861,7 +14859,7 @@
     "edge_type_counts": [
       {
         "name": "supports_field",
-        "count": 499
+        "count": 501
       },
       {
         "name": "same_scope",
@@ -14889,7 +14887,7 @@
       },
       {
         "name": "missing_field",
-        "count": 84
+        "count": 82
       }
     ]
   }

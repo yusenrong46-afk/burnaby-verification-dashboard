@@ -518,6 +518,141 @@
       ]
     },
     {
+      "rule_id": "burnaby_r1_094",
+      "candidate_id": "pipeline5_merged_rule_0089",
+      "canonical_rule_key": "setback__garage_carport_below_grade_min_setback__parking__garage_or_carport_constructed_below_grade____1_2__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [
+          "below",
+          "carport",
+          "garage",
+          "grade",
+          "min",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "parking"
+        ],
+        "condition_concepts": [
+          "below",
+          "carport",
+          "constructed",
+          "garage",
+          "grade"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_054",
+          "semantic_score": 0.715,
+          "structured_score": 0.76,
+          "embedding_score": 0.63,
+          "combined_semantic_score": 0.715,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_side_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_050",
+          "semantic_score": 0.646,
+          "structured_score": 0.623,
+          "embedding_score": 0.69,
+          "combined_semantic_score": 0.646,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_052",
+          "semantic_score": 0.631,
+          "structured_score": 0.62,
+          "embedding_score": 0.652,
+          "combined_semantic_score": 0.631,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_rear_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.715,
+      "best_structured_score": 0.76,
+      "best_embedding_score": 0.63,
+      "best_combined_semantic_score": 0.715,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
       "rule_id": "burnaby_r1_027",
       "candidate_id": "pipeline5_merged_rule_0023__api_02",
       "canonical_rule_key": "dwelling_units__lot__lot__frequent_transit_network_area_only____6__units",
@@ -633,148 +768,6 @@
         "text_condition_not_supported",
         "table_cell_candidate_requires_review",
         "table_evidence_candidate_requires_review"
-      ]
-    },
-    {
-      "rule_id": "burnaby_r1_094",
-      "candidate_id": "pipeline5_merged_rule_0089",
-      "canonical_rule_key": "setback__garage_carport_below_grade_min_setback__parking__garage_or_carport_constructed_below_grade____1_2__m",
-      "signature": {
-        "rule_object": "setback",
-        "direction": "min",
-        "value_bucket": "1_to_3",
-        "value_numeric": 1.2,
-        "unit": "m",
-        "scope_concepts": [
-          "below",
-          "carport",
-          "garage",
-          "grade",
-          "min",
-          "setback_area"
-        ],
-        "applies_to_concepts": [
-          "parking"
-        ],
-        "condition_concepts": [
-          "below",
-          "carport",
-          "constructed",
-          "garage",
-          "grade"
-        ]
-      },
-      "best_verified_matches": [
-        {
-          "verified_rule_id": "burnaby_r1_054",
-          "semantic_score": 0.71,
-          "structured_score": 0.76,
-          "embedding_score": 0.63,
-          "combined_semantic_score": 0.71,
-          "semantic_guardrails": [
-            "same_rule_object",
-            "same_direction",
-            "same_unit",
-            "same_value"
-          ],
-          "semantic_guardrail_blockers": [
-            "missing_core_evidence"
-          ],
-          "match_reasons": [
-            "same_rule_object",
-            "same_direction",
-            "same_unit",
-            "same_value",
-            "scope_concept_overlap",
-            "embedding_similarity"
-          ],
-          "verified_rule_object": "setback",
-          "verified_scope": "interior_side_yard",
-          "verified_applies_to": "All Buildings",
-          "verified_operator": ">=",
-          "verified_value": "1.2",
-          "verified_unit": "m"
-        },
-        {
-          "verified_rule_id": "burnaby_r1_050",
-          "semantic_score": 0.646,
-          "structured_score": 0.623,
-          "embedding_score": 0.69,
-          "combined_semantic_score": 0.646,
-          "semantic_guardrails": [
-            "same_rule_object",
-            "same_direction",
-            "same_unit"
-          ],
-          "semantic_guardrail_blockers": [
-            "different_numeric_value",
-            "missing_core_evidence"
-          ],
-          "match_reasons": [
-            "same_rule_object",
-            "same_direction",
-            "same_unit",
-            "same_value_bucket",
-            "scope_concept_overlap",
-            "embedding_similarity"
-          ],
-          "verified_rule_object": "setback",
-          "verified_scope": "lane_yard",
-          "verified_applies_to": "All Buildings",
-          "verified_operator": ">=",
-          "verified_value": "1.5",
-          "verified_unit": "m"
-        },
-        {
-          "verified_rule_id": "burnaby_r1_052",
-          "semantic_score": 0.631,
-          "structured_score": 0.62,
-          "embedding_score": 0.652,
-          "combined_semantic_score": 0.631,
-          "semantic_guardrails": [
-            "same_rule_object",
-            "same_direction",
-            "same_unit"
-          ],
-          "semantic_guardrail_blockers": [
-            "different_numeric_value",
-            "missing_core_evidence"
-          ],
-          "match_reasons": [
-            "same_rule_object",
-            "same_direction",
-            "same_unit",
-            "same_value_bucket",
-            "scope_concept_overlap",
-            "embedding_similarity"
-          ],
-          "verified_rule_object": "setback",
-          "verified_scope": "interior_rear_yard",
-          "verified_applies_to": "All Buildings",
-          "verified_operator": ">=",
-          "verified_value": "1.5",
-          "verified_unit": "m"
-        }
-      ],
-      "best_semantic_score": 0.71,
-      "best_structured_score": 0.76,
-      "best_embedding_score": 0.63,
-      "best_combined_semantic_score": 0.71,
-      "semantic_match_type": "structured_plus_embedding",
-      "semantic_guardrails": [
-        "same_rule_object",
-        "same_direction",
-        "same_unit",
-        "same_value"
-      ],
-      "semantic_guardrail_blockers": [
-        "missing_core_evidence"
-      ],
-      "semantic_next_action": "close_meaning_guardrail_blocked",
-      "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported",
-        "operator_not_supported"
       ]
     },
     {
@@ -901,8 +894,7 @@
       ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported"
+        "pipeline5_text_candidate_requires_review"
       ]
     },
     {
@@ -7963,14 +7955,14 @@
     "semantic_action_counts": [
       {
         "name": "no_close_verified_analogue",
-        "count": 55
-      },
-      {
-        "name": "close_meaning_guardrail_blocked",
-        "count": 4
+        "count": 56
       },
       {
         "name": "close_meaning_general_review",
+        "count": 3
+      },
+      {
+        "name": "close_meaning_guardrail_blocked",
         "count": 3
       },
       {

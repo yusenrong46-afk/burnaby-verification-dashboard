@@ -16,9 +16,9 @@ Pipeline 5 candidates/evidence -> deterministic validation -> verified/review/re
 - Table context completion: 1.00
 - Evidence repair suggestions: 56
 - Suggestions with alternative evidence: 56
-- Retry candidates from evidence repair: 43
+- Retry candidates from evidence repair: 42
 - Evidence intelligence safe bundle retries: 22
-- Evidence rerun attempts: 43
+- Evidence rerun attempts: 42
 - Promotion-ready shadow reruns: 0
 - Evidence bundle rerun attempts: 18
 - Promotion-ready bundle reruns: 3
@@ -26,15 +26,16 @@ Pipeline 5 candidates/evidence -> deterministic validation -> verified/review/re
 - Rule graph nodes / edges: 544 / 1931
 - Cache hits / misses: 142 / 0
 - Semantic high-similarity review items: 2
+- Review items potentially promotable after evidence fix: 4
 - Safe verifier tuning candidates: 5
 - Felt verified-rule CSV rows: 30
 
 ## Review Actions
 
-- `retry_with_better_evidence`: 41
+- `retry_with_better_evidence`: 40
 - `evidence_packet_repair_candidate`: 7
 - `safe_verifier_tuning_candidate`: 5
-- `needs_second_source_consensus`: 4
+- `needs_second_source_consensus`: 5
 - `defer_low_priority`: 3
 - `human_legal_review`: 2
 - `upstream_candidate_issue`: 1
@@ -43,8 +44,8 @@ Pipeline 5 candidates/evidence -> deterministic validation -> verified/review/re
 
 - `pipeline5_text_candidate_requires_review`: 74
 - `rule_object_not_supported`: 46
-- `operator_not_supported`: 39
-- `applies_to_not_supported`: 37
+- `operator_not_supported`: 38
+- `applies_to_not_supported`: 35
 - `text_condition_not_supported`: 30
 - `outside_current_rule_contract`: 30
 - `table_cell_candidate_requires_review`: 29

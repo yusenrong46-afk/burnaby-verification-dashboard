@@ -4,7 +4,7 @@ This report searches existing evidence packets for stronger support. It does not
 
 - Suggestions: 56
 - With alternative evidence: 56
-- Retry candidates: 43
+- Retry candidates: 42
 
 ## Top 20
 

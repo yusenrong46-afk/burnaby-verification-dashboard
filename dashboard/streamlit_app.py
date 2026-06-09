@@ -29,6 +29,7 @@ def load_output_data(output_dir: Path) -> dict[str, Any]:
         "bundle_rerun": _read_json(output_dir / "evidence_bundle_rerun_report.json", {"attempts": [], "promotion_ready": []}),
         "safe_tuning": _read_json(output_dir / "safe_verifier_tuning_candidates.json", {"items": [], "candidate_count": 0}),
         "router": _read_json(output_dir / "review_router.json", {"items": [], "summary": {}}),
+        "resolution": _read_json(output_dir / "review_resolution.json", {"items": [], "summary": {}}),
         "rule_graph": _read_json(output_dir / "rule_graph.json", {"nodes": [], "edges": [], "summary": {}}),
         "cache": _read_json(output_dir / "verification_cache.json", {"entries": []}),
         "semantic": _read_json(output_dir / "semantic_review_report.json", {"items": [], "summary": {}}),
@@ -131,6 +132,7 @@ def main() -> None:
             "Overview",
             "Evidence Intelligence",
             "Review",
+            "Review Resolution",
             "Bundle Rerun",
             "Semantic Review",
             "Rule Graph",
@@ -150,24 +152,26 @@ def main() -> None:
     with tabs[2]:
         _review_router_tab(st, data["router"])
     with tabs[3]:
-        _bundle_rerun_tab(st, data["bundle_rerun"])
+        _review_resolution_tab(st, data["resolution"])
     with tabs[4]:
-        _semantic_review_tab(st, data["semantic"])
+        _bundle_rerun_tab(st, data["bundle_rerun"])
     with tabs[5]:
-        _rule_graph_tab(st, data["rule_graph"])
+        _semantic_review_tab(st, data["semantic"])
     with tabs[6]:
-        _candidate_compare_tab(st, filtered_items, data["review"], data["verified"])
+        _rule_graph_tab(st, data["rule_graph"])
     with tabs[7]:
-        _repair_tab(st, data["repair"])
+        _candidate_compare_tab(st, filtered_items, data["review"], data["verified"])
     with tabs[8]:
-        _rerun_tab(st, data["rerun"], data["evidence_units"])
+        _repair_tab(st, data["repair"])
     with tabs[9]:
-        _safe_tuning_tab(st, data["safe_tuning"], data["evidence_units"])
+        _rerun_tab(st, data["rerun"], data["evidence_units"])
     with tabs[10]:
-        _felt_export_tab(st, data["felt_export"], output_dir)
+        _safe_tuning_tab(st, data["safe_tuning"], data["evidence_units"])
     with tabs[11]:
-        _structure_tab(st)
+        _felt_export_tab(st, data["felt_export"], output_dir)
     with tabs[12]:
+        _structure_tab(st)
+    with tabs[13]:
         _preflight_tab(st, data["preflight"])
 
 
@@ -315,6 +319,78 @@ def _review_router_tab(st: Any, report: dict[str, Any]) -> None:
             item,
         )
         with st.expander("Raw route JSON"):
+            st.json(item)
+
+
+def _review_resolution_tab(st: Any, report: dict[str, Any]) -> None:
+    """Show final reviewer-facing resolution labels for remaining review items."""
+    items = report.get("items", [])
+    st.subheader("Review Resolution")
+    st.caption(
+        "Final operating labels for the remaining review queue. This page tells a reviewer what kind of work is left; it does not promote rules."
+    )
+    summary = report.get("summary", {})
+    metric_cols = st.columns(4)
+    metric_cols[0].metric("Review Rules", report.get("review_rule_count", len(items)))
+    metric_cols[1].metric("Evidence-Fix Candidates", summary.get("can_promote_after_evidence_fix_count", 0))
+    metric_cols[2].metric("Semantic Duplicates", summary.get("duplicate_or_degraded_count", 0))
+    metric_cols[3].metric("Promotable Now", summary.get("promotable_now_count", 0))
+
+    left, right = st.columns(2)
+    with left:
+        st.markdown("### Resolution Buckets")
+        _bar_rows(st, summary.get("resolution_counts", []), "name", "count")
+    with right:
+        st.markdown("### Next Step Types")
+        _bar_rows(st, summary.get("next_step_type_counts", []), "name", "count")
+
+    recommendations = summary.get("recommendations", [])
+    if recommendations:
+        st.markdown("### Recommended Workflow")
+        for item in recommendations:
+            st.markdown(f"- {item}")
+
+    if not items:
+        st.info("No review resolution output found. Rerun the slim verifier.")
+        return
+    buckets = st.multiselect("Resolution", _unique(items, "resolution"))
+    next_steps = st.multiselect("Next step type", _unique(items, "next_step_type"))
+    visible = items
+    if buckets:
+        visible = [item for item in visible if item.get("resolution") in buckets]
+    if next_steps:
+        visible = [item for item in visible if item.get("next_step_type") in next_steps]
+
+    rows = [
+        {
+            "rule_id": item.get("rule_id"),
+            "resolution": item.get("resolution"),
+            "next_step": item.get("next_step_type"),
+            "can_promote_after_fix": item.get("can_promote_after_evidence_fix"),
+            "rule_object": item.get("rule_object"),
+            "value": item.get("value"),
+            "unit": item.get("unit"),
+            "semantic_match": item.get("semantic_verified_rule_id"),
+            "semantic_score": item.get("semantic_score"),
+            "gaps": ", ".join(item.get("support_gaps", [])[:4]),
+            "page": item.get("source_page"),
+            "evidence_id": item.get("source_evidence_id"),
+            "where": item.get("where_to_find_it"),
+        }
+        for item in visible[:250]
+    ]
+    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    if visible:
+        selected = st.selectbox("Resolution detail", [item["rule_id"] for item in visible])
+        item = next(candidate for candidate in visible if candidate["rule_id"] == selected)
+        _detail_sentence_panel(
+            st,
+            "Resolution in plain English",
+            _resolution_detail_sentences(item),
+            {"evidence_quote": item.get("evidence_sentence"), "page": item.get("source_page")},
+            item,
+        )
+        with st.expander("Raw resolution JSON"):
             st.json(item)
 
 
@@ -822,6 +898,7 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
     bundle_rerun = data.get("bundle_rerun", {})
     bundle_promotion = data.get("bundle_promotion", {})
     semantic = data.get("semantic", {})
+    resolution = data.get("resolution", {}).get("summary", {})
     # These KPI cards put the two most actionable review-reduction paths in the
     # first screen: alternate evidence and safe verifier tuning.
     cards = [
@@ -832,6 +909,7 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
         ("Bundle Safe Retry", intelligence.get("safe_retry_count", 0)),
         ("Promoted By Bundle", bundle_promotion.get("promotion_count", 0)),
         ("Bundle Ready", bundle_rerun.get("promotion_ready_count", 0)),
+        ("Evidence-Fix Path", resolution.get("can_promote_after_evidence_fix_count", 0)),
         ("Semantic Near-Match", semantic.get("high_similarity_count", 0)),
         ("Precision", f"{metrics.get('verified_precision', 0):.2f}"),
         ("False Approvals", proposal.get("false_approval_count", 0)),
@@ -892,6 +970,7 @@ def _action_summary(st: Any, data: dict[str, Any]) -> None:
     review_counts = _named_counts(data.get("router", {}).get("summary", {}).get("action_counts", []))
     promotion = data.get("bundle_promotion", {})
     semantic = data.get("semantic", {})
+    resolution = data.get("resolution", {}).get("summary", {})
     cards = [
         (
             "Guarded bundle promotions",
@@ -907,6 +986,11 @@ def _action_summary(st: Any, data: dict[str, Any]) -> None:
             "Safe verifier tuning",
             review_counts.get("safe_verifier_tuning_candidate", 0),
             "Candidates likely need general rule-pattern support.",
+        ),
+        (
+            "Resolution evidence-fix path",
+            resolution.get("can_promote_after_evidence_fix_count", 0),
+            "Remaining review items that may be repairable by stronger deterministic evidence, not by semantic score.",
         ),
         (
             "Semantic near-matches",
@@ -1083,6 +1167,27 @@ def _router_detail_sentences(item: dict[str, Any]) -> list[str]:
         f"Decision path: {path}.",
         f"Human instruction: {item.get('human_instruction')}",
         f"Evidence bundle summary: {item.get('bundle_sentence')}",
+    ]
+
+
+def _resolution_detail_sentences(item: dict[str, Any]) -> list[str]:
+    """Explain one review-resolution label in plain English."""
+    can_fix = (
+        "has a plausible deterministic evidence-fix path"
+        if item.get("can_promote_after_evidence_fix")
+        else "does not currently have a safe deterministic promotion path"
+    )
+    semantic = item.get("semantic_verified_rule_id") or "none"
+    score = _display_value(item.get("semantic_score"))
+    return [
+        f"Candidate claim: {item.get('candidate_sentence') or _rule_sentence(item)}",
+        f"Original evidence says: {item.get('evidence_sentence') or 'no evidence sentence available'}",
+        f"The final resolution is `{item.get('resolution')}`, so the next step is `{item.get('next_step_type')}`.",
+        f"This item {can_fix}. Support gaps: {_list_text(item.get('support_gaps', []))}.",
+        f"Closest semantic verified match: `{semantic}` with score {score}. Guardrail blockers: {_list_text(item.get('semantic_guardrail_blockers', []))}.",
+        f"Bundle rerun decision: `{item.get('bundle_rerun_decision')}` with gaps {_list_text(item.get('bundle_rerun_gaps', []))}.",
+        f"Human next step: {item.get('human_next_step')}",
+        f"Where to check in the bylaw: {item.get('where_to_find_it')}",
     ]
 
 

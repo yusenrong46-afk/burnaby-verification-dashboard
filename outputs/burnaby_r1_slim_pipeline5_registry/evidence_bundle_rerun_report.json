@@ -1225,15 +1225,14 @@
       "bundle_sentence": "pipeline5_merged_rule_0090__api_01 supports applies_to, condition, operator, rule_object, unit, value; pipeline5_merged_rule_0041 supports applies_to, operator, rule_object, unit; pipeline5_merged_rule_0042 supports applies_to, operator, rule_object, unit; pipeline5_merged_rule_0034 supports operator, rule_object, unit.",
       "retry_decision": "review_needed",
       "retry_support_gaps": [
-        "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported"
+        "pipeline5_text_candidate_requires_review"
       ],
       "retry_support_checks": {
         "source_evidence_present": true,
         "value_supported": true,
         "unit_supported": true,
         "operator_supported": true,
-        "applies_to_supported": false,
+        "applies_to_supported": true,
         "scope_supported": true,
         "rule_object_supported": true,
         "table_context_supported": true,
@@ -1475,14 +1474,13 @@
       "retry_decision": "review_needed",
       "retry_support_gaps": [
         "pipeline5_text_candidate_requires_review",
-        "applies_to_not_supported",
-        "operator_not_supported"
+        "applies_to_not_supported"
       ],
       "retry_support_checks": {
         "source_evidence_present": true,
         "value_supported": true,
         "unit_supported": true,
-        "operator_supported": false,
+        "operator_supported": true,
         "applies_to_supported": false,
         "scope_supported": true,
         "rule_object_supported": true,

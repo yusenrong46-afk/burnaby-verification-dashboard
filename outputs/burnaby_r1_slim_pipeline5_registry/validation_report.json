@@ -46,19 +46,19 @@
         "count": 23
       },
       {
-        "name": "operator_uncertain",
-        "count": 11
-      },
-      {
         "name": "missing_applies_to",
         "count": 10
       },
       {
-        "name": "near_verified_table_context",
-        "count": 5
+        "name": "operator_uncertain",
+        "count": 10
       },
       {
         "name": "text_candidate_needs_consensus",
+        "count": 6
+      },
+      {
+        "name": "near_verified_table_context",
         "count": 5
       },
       {
@@ -85,11 +85,11 @@
       },
       {
         "name": "weak",
-        "count": 19
+        "count": 18
       },
       {
         "name": "likely_correct",
-        "count": 10
+        "count": 11
       },
       {
         "name": "likely_wrong_or_noise",
@@ -99,7 +99,7 @@
     "priority_counts": [
       {
         "name": "low",
-        "count": 34
+        "count": 33
       },
       {
         "name": "high",
@@ -107,7 +107,7 @@
       },
       {
         "name": "medium",
-        "count": 14
+        "count": 15
       }
     ],
     "top_blocking_reasons": [
@@ -121,7 +121,7 @@
       },
       {
         "reason": "applies_to_not_supported",
-        "count": 24
+        "count": 23
       },
       {
         "reason": "rule_family_direction_mismatch",
@@ -129,7 +129,7 @@
       },
       {
         "reason": "operator_not_supported",
-        "count": 18
+        "count": 17
       },
       {
         "reason": "table_cell_candidate_requires_review",
@@ -226,15 +226,15 @@
   "evidence_repair": {
     "suggestion_count": 56,
     "alternative_evidence_count": 56,
-    "retry_candidate_count": 43
+    "retry_candidate_count": 42
   },
   "evidence_rerun": {
-    "attempt_count": 43,
+    "attempt_count": 42,
     "verified_after_rerun_count": 0,
     "promotion_ready_count": 0,
     "review_after_rerun_count": 33,
-    "rejected_after_rerun_count": 9,
-    "skipped_count": 13
+    "rejected_after_rerun_count": 8,
+    "skipped_count": 14
   },
   "evidence_bundle_rerun": {
     "attempt_count": 18,
@@ -258,7 +258,7 @@
     "action_counts": [
       {
         "name": "retry_with_better_evidence",
-        "count": 41
+        "count": 40
       },
       {
         "name": "evidence_packet_repair_candidate",
@@ -270,7 +270,7 @@
       },
       {
         "name": "needs_second_source_consensus",
-        "count": 4
+        "count": 5
       },
       {
         "name": "defer_low_priority",
@@ -291,16 +291,16 @@
         "count": 23
       },
       {
-        "name": "operator_uncertain",
-        "count": 11
-      },
-      {
         "name": "missing_applies_to",
         "count": 10
       },
       {
+        "name": "operator_uncertain",
+        "count": 10
+      },
+      {
         "name": "text_candidate_needs_consensus",
-        "count": 5
+        "count": 6
       },
       {
         "name": "near_verified_table_context",
@@ -345,7 +345,7 @@
       },
       {
         "name": "applies_to_not_supported",
-        "count": 24
+        "count": 23
       },
       {
         "name": "rule_family_direction_mismatch",
@@ -353,7 +353,7 @@
       },
       {
         "name": "operator_not_supported",
-        "count": 18
+        "count": 17
       },
       {
         "name": "table_cell_candidate_requires_review",
@@ -385,12 +385,102 @@
       }
     ],
     "recommendations": [
-      "Start with 41 rules that can be rerun against stronger evidence.",
+      "Start with 40 rules that can be rerun against stronger evidence.",
       "Audit 5 near-verified rules for safe general verifier/table-scope tuning.",
       "Repair evidence attachments for 7 rules before changing verifier logic.",
       "Keep 2 exception/conflict rules in human legal review.",
       "Return 1 likely extraction/normalization mistakes upstream."
     ]
+  },
+  "review_resolution": {
+    "review_rule_count": 63,
+    "summary": {
+      "resolution_counts": [
+        {
+          "name": "operator_or_direction_issue",
+          "count": 20
+        },
+        {
+          "name": "upstream_extraction_issue",
+          "count": 13
+        },
+        {
+          "name": "condition_evidence_needed",
+          "count": 9
+        },
+        {
+          "name": "scope_or_applies_to_evidence_needed",
+          "count": 8
+        },
+        {
+          "name": "low_priority_defer",
+          "count": 4
+        },
+        {
+          "name": "needs_second_source_consensus",
+          "count": 4
+        },
+        {
+          "name": "conflict_review",
+          "count": 2
+        },
+        {
+          "name": "duplicate_or_degraded_extraction",
+          "count": 2
+        },
+        {
+          "name": "human_legal_review",
+          "count": 1
+        }
+      ],
+      "next_step_type_counts": [
+        {
+          "name": "confirm_operator_direction",
+          "count": 20
+        },
+        {
+          "name": "fix_candidate_rule_family",
+          "count": 13
+        },
+        {
+          "name": "find_condition_span",
+          "count": 9
+        },
+        {
+          "name": "find_scope_context",
+          "count": 8
+        },
+        {
+          "name": "defer_until_more_evidence",
+          "count": 4
+        },
+        {
+          "name": "find_independent_corroboration",
+          "count": 4
+        },
+        {
+          "name": "choose_correct_rule_family",
+          "count": 2
+        },
+        {
+          "name": "close_as_duplicate_or_keep_out_of_contract",
+          "count": 2
+        },
+        {
+          "name": "legal_exception_or_override_review",
+          "count": 1
+        }
+      ],
+      "promotable_now_count": 0,
+      "can_promote_after_evidence_fix_count": 4,
+      "duplicate_or_degraded_count": 2,
+      "recommendations": [
+        "Prioritize finding condition spans; these are often close to verified but missing legal qualifiers.",
+        "Prioritize table headers, row labels, and nearby prose for scope/applies_to gaps.",
+        "Close semantic duplicates as extraction noise unless they add a distinct legal rule.",
+        "Keep exception, covenant, and notwithstanding language in human legal review."
+      ]
+    }
   },
   "rule_graph": {
     "node_count": 544,
@@ -421,7 +511,7 @@
       "edge_type_counts": [
         {
           "name": "supports_field",
-          "count": 499
+          "count": 501
         },
         {
           "name": "same_scope",
@@ -449,7 +539,7 @@
         },
         {
           "name": "missing_field",
-          "count": 84
+          "count": 82
         }
       ]
     }
@@ -470,14 +560,14 @@
       "semantic_action_counts": [
         {
           "name": "no_close_verified_analogue",
-          "count": 55
-        },
-        {
-          "name": "close_meaning_guardrail_blocked",
-          "count": 4
+          "count": 56
         },
         {
           "name": "close_meaning_general_review",
+          "count": 3
+        },
+        {
+          "name": "close_meaning_guardrail_blocked",
           "count": 3
         },
         {
@@ -503,7 +593,7 @@
     "evidence_rerun_csv": "felt_evidence_rerun.csv",
     "verified_rule_count": 30,
     "review_rule_count": 63,
-    "rerun_attempt_count": 43,
+    "rerun_attempt_count": 42,
     "authoritative_file": "gis_rule_contract.json",
     "notes": [
       "Review and rerun exports are for inspection only.",
@@ -521,11 +611,11 @@
     },
     {
       "reason": "operator_not_supported",
-      "count": 39
+      "count": 38
     },
     {
       "reason": "applies_to_not_supported",
-      "count": 37
+      "count": 35
     },
     {
       "reason": "text_condition_not_supported",

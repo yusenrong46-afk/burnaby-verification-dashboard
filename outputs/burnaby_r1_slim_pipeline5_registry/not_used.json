@@ -7254,16 +7254,16 @@
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) be limited to a maximum of 25 children; child care facility 25 children (a) be limited to a maximum of 25 children;",
-        "reason": "scope words are not grounded in local evidence"
+        "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) be limited to a maximum of 25 children; child care facility 25 children (a) be limited to a maximum of 25 children;",
-        "reason": "applies_to words are not grounded in local evidence"
+        "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
@@ -7304,16 +7304,16 @@
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) be limited to a maximum of 25 children; child care facility 25 children (a) be limited to a maximum of 25 children;",
-        "reason": "scope words are not grounded in local evidence"
+        "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) be limited to a maximum of 25 children; child care facility 25 children (a) be limited to a maximum of 25 children;",
-        "reason": "applies_to words are not grounded in local evidence"
+        "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
@@ -7405,16 +7405,16 @@
         "reason": "cited evidence does not support the canonical rule object"
       },
       "constraint_scope": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) be limited to a maximum of 25 children; child care facility 25 children (a) be limited to a maximum of 25 children;",
-        "reason": "scope words are not grounded in local evidence"
+        "reason": "scope words are grounded in local evidence"
       },
       "applies_to": {
-        "label": "not_enough_info",
+        "label": "supported",
         "evidence_field": "evidence_text",
         "evidence_quote": "(a) be limited to a maximum of 25 children; child care facility 25 children (a) be limited to a maximum of 25 children;",
-        "reason": "applies_to words are not grounded in local evidence"
+        "reason": "applies_to words are grounded in local evidence"
       },
       "operator": {
         "label": "supported",
@@ -7449,12 +7449,10 @@
     },
     "proof_decision_mismatch": false,
     "proof_decision_mismatches": [],
-    "evidence_strength": 0.542,
+    "evidence_strength": 0.707,
     "review_priority": "not_used",
     "support_gaps": [
       "pipeline5_text_candidate_requires_review",
-      "applies_to_not_supported",
-      "constraint_scope_not_supported",
       "rule_object_not_supported",
       "outside_current_rule_contract"
     ],
@@ -7463,14 +7461,14 @@
       "value_supported": true,
       "unit_supported": true,
       "operator_supported": true,
-      "applies_to_supported": false,
-      "scope_supported": false,
+      "applies_to_supported": true,
+      "scope_supported": true,
       "rule_object_supported": false,
       "table_context_supported": true,
       "table_review_gate_passed": true
     },
     "normalization_trace": [],
-    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded; the scope or condition is not clearly grounded; the cited evidence does not support the proposed rule object; the rule family is outside the current validation contract",
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited evidence does not support the proposed rule object; the rule family is outside the current validation contract",
     "source": {
       "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
       "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
