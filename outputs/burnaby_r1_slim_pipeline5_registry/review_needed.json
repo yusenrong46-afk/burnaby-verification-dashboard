@@ -310,7 +310,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0061",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_018",
+    "semantic_score": 0.53,
+    "semantic_structured_score": 0.44,
+    "semantic_embedding_score": 0.697,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_020",
@@ -624,7 +635,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0072__api_01",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.507,
+    "semantic_structured_score": 0.38,
+    "semantic_embedding_score": 0.742,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_021",
@@ -940,7 +963,17 @@
     "review_next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates.",
     "repair_evidence_id": null,
     "repair_confidence": 0.0,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.661,
+    "semantic_structured_score": 0.6,
+    "semantic_embedding_score": 0.773,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_022",
@@ -1251,7 +1284,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0072__api_01",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.523,
+    "semantic_structured_score": 0.38,
+    "semantic_embedding_score": 0.788,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_023",
@@ -1567,7 +1612,17 @@
     "review_next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates.",
     "repair_evidence_id": null,
     "repair_confidence": 0.0,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.623,
+    "semantic_structured_score": 0.54,
+    "semantic_embedding_score": 0.777,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_024",
@@ -1878,7 +1933,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0054",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.555,
+    "semantic_structured_score": 0.44,
+    "semantic_embedding_score": 0.768,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_025",
@@ -2194,7 +2261,17 @@
     "review_next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates.",
     "repair_evidence_id": null,
     "repair_confidence": 0.0,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.659,
+    "semantic_structured_score": 0.6,
+    "semantic_embedding_score": 0.769,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_026",
@@ -2507,7 +2584,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0054",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.53,
+    "semantic_structured_score": 0.44,
+    "semantic_embedding_score": 0.697,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_027",
@@ -2826,7 +2915,15 @@
     "review_next_step": "Repair Pipeline 5 evidence attachment or retrieval context, then rerun verification.",
     "repair_evidence_id": "pipeline5_merged_rule_0056",
     "repair_confidence": 1.0,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "no_close_semantic_match",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.713,
+    "semantic_structured_score": 0.74,
+    "semantic_embedding_score": 0.662,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": []
   },
   {
     "rule_id": "burnaby_r1_029",
@@ -3139,7 +3236,15 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0018",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "close_semantic_match",
+    "semantic_verified_rule_id": "burnaby_r1_018",
+    "semantic_score": 0.805,
+    "semantic_structured_score": 0.81,
+    "semantic_embedding_score": 0.796,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "close_meaning_scope_review",
+    "semantic_guardrail_blockers": []
   },
   {
     "rule_id": "burnaby_r1_030",
@@ -3451,7 +3556,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0061",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_018",
+    "semantic_score": 0.53,
+    "semantic_structured_score": 0.44,
+    "semantic_embedding_score": 0.697,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_031",
@@ -3766,7 +3882,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0120",
     "repair_confidence": 0.696,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.264,
+    "semantic_structured_score": 0.16,
+    "semantic_embedding_score": 0.457,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value",
+      "different_rule_object",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_032",
@@ -4081,7 +4209,20 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0030",
     "repair_confidence": 0.976,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_018",
+    "semantic_score": 0.321,
+    "semantic_structured_score": 0.07,
+    "semantic_embedding_score": 0.787,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "different_rule_object",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_033",
@@ -4396,7 +4537,20 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0120",
     "repair_confidence": 0.696,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_018",
+    "semantic_score": 0.317,
+    "semantic_structured_score": 0.07,
+    "semantic_embedding_score": 0.776,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "different_rule_object",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_034",
@@ -4711,7 +4865,20 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0028",
     "repair_confidence": 0.976,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_028",
+    "semantic_score": 0.327,
+    "semantic_structured_score": 0.07,
+    "semantic_embedding_score": 0.805,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "different_rule_object",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_035",
@@ -5029,7 +5196,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0120",
     "repair_confidence": 0.696,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.295,
+    "semantic_structured_score": 0.16,
+    "semantic_embedding_score": 0.545,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value",
+      "different_rule_object",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_036",
@@ -5351,7 +5530,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0120",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.31,
+    "semantic_structured_score": 0.16,
+    "semantic_embedding_score": 0.588,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value",
+      "different_rule_object",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_037",
@@ -5675,7 +5866,19 @@
     "review_next_step": "Resolve exception, override, or sibling-rule conflict manually before changing verifier behavior.",
     "repair_evidence_id": "pipeline5_merged_rule_0120",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.291,
+    "semantic_structured_score": 0.16,
+    "semantic_embedding_score": 0.535,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value",
+      "different_rule_object",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_046",
@@ -5994,7 +6197,17 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0041",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_044",
+    "semantic_score": 0.659,
+    "semantic_structured_score": 0.6,
+    "semantic_embedding_score": 0.77,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_047",
@@ -6310,7 +6523,15 @@
     "review_next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates.",
     "repair_evidence_id": null,
     "repair_confidence": 0.0,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "close_semantic_match",
+    "semantic_verified_rule_id": "burnaby_r1_049",
+    "semantic_score": 0.794,
+    "semantic_structured_score": 0.82,
+    "semantic_embedding_score": 0.747,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "close_meaning_general_review",
+    "semantic_guardrail_blockers": []
   },
   {
     "rule_id": "burnaby_r1_055",
@@ -6626,7 +6847,15 @@
     "review_next_step": "Inspect whether a general verifier rule or table-scope pattern can be added without weakening safety gates.",
     "repair_evidence_id": null,
     "repair_confidence": 0.0,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "high_confidence_near_duplicate",
+    "semantic_verified_rule_id": "burnaby_r1_054",
+    "semantic_score": 0.917,
+    "semantic_structured_score": 0.9,
+    "semantic_embedding_score": 0.95,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "close_meaning_general_review",
+    "semantic_guardrail_blockers": []
   },
   {
     "rule_id": "burnaby_r1_060",
@@ -6934,7 +7163,18 @@
     "review_next_step": "Leave in low-priority review until more evidence or a broader bylaw benchmark is available.",
     "repair_evidence_id": null,
     "repair_confidence": 0.0,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.565,
+    "semantic_structured_score": 0.45,
+    "semantic_embedding_score": 0.778,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_061",
@@ -7242,7 +7482,18 @@
     "review_next_step": "Leave in low-priority review until more evidence or a broader bylaw benchmark is available.",
     "repair_evidence_id": null,
     "repair_confidence": 0.0,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.57,
+    "semantic_structured_score": 0.45,
+    "semantic_embedding_score": 0.794,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_063",
@@ -7550,7 +7801,18 @@
     "review_next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review.",
     "repair_evidence_id": "pipeline5_merged_rule_0056",
     "repair_confidence": 0.965,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.499,
+    "semantic_structured_score": 0.307,
+    "semantic_embedding_score": 0.855,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "close_meaning_guardrail_blocked",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_064",
@@ -7868,7 +8130,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0061",
     "repair_confidence": 0.965,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.408,
+    "semantic_structured_score": 0.272,
+    "semantic_embedding_score": 0.662,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_066",
@@ -8184,7 +8457,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0061",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_018",
+    "semantic_score": 0.505,
+    "semantic_structured_score": 0.44,
+    "semantic_embedding_score": 0.627,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_067",
@@ -8493,7 +8778,19 @@
     "review_next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review.",
     "repair_evidence_id": "pipeline5_merged_rule_0060",
     "repair_confidence": 1.0,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_028",
+    "semantic_score": 0.49,
+    "semantic_structured_score": 0.44,
+    "semantic_embedding_score": 0.583,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_068",
@@ -8804,7 +9101,20 @@
     "review_next_step": "Repair Pipeline 5 evidence attachment or retrieval context, then rerun verification.",
     "repair_evidence_id": "pipeline5_merged_rule_0106__api_01",
     "repair_confidence": 0.712,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_052",
+    "semantic_score": 0.345,
+    "semantic_structured_score": 0.28,
+    "semantic_embedding_score": 0.465,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "different_unit",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_069",
@@ -9115,7 +9425,20 @@
     "review_next_step": "Repair Pipeline 5 evidence attachment or retrieval context, then rerun verification.",
     "repair_evidence_id": "pipeline5_merged_rule_0106__api_01",
     "repair_confidence": 0.581,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_051",
+    "semantic_score": 0.337,
+    "semantic_structured_score": 0.338,
+    "semantic_embedding_score": 0.336,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "different_unit",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_070",
@@ -9427,7 +9750,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0072__api_01",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.416,
+    "semantic_structured_score": 0.295,
+    "semantic_embedding_score": 0.642,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_071",
@@ -9742,7 +10077,15 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0048__api_01",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "high_confidence_near_duplicate",
+    "semantic_verified_rule_id": "burnaby_r1_054",
+    "semantic_score": 0.916,
+    "semantic_structured_score": 0.93,
+    "semantic_embedding_score": 0.891,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "close_meaning_general_review",
+    "semantic_guardrail_blockers": []
   },
   {
     "rule_id": "burnaby_r1_073",
@@ -10053,7 +10396,20 @@
     "review_next_step": "Repair Pipeline 5 evidence attachment or retrieval context, then rerun verification.",
     "repair_evidence_id": "pipeline5_merged_rule_0066",
     "repair_confidence": 0.681,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_059",
+    "semantic_score": 0.54,
+    "semantic_structured_score": 0.42,
+    "semantic_embedding_score": 0.762,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "different_unit",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_077",
@@ -10362,7 +10718,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0073",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.567,
+    "semantic_structured_score": 0.45,
+    "semantic_embedding_score": 0.784,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_081",
@@ -10680,7 +11047,17 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0077",
     "repair_confidence": 0.942,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_050",
+    "semantic_score": 0.481,
+    "semantic_structured_score": 0.48,
+    "semantic_embedding_score": 0.483,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_rule_object"
+    ]
   },
   {
     "rule_id": "burnaby_r1_082",
@@ -10998,7 +11375,17 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0076",
     "repair_confidence": 0.942,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_120",
+    "semantic_score": 0.472,
+    "semantic_structured_score": 0.48,
+    "semantic_embedding_score": 0.458,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_rule_object"
+    ]
   },
   {
     "rule_id": "burnaby_r1_086",
@@ -11311,7 +11698,17 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0079",
     "repair_confidence": 0.85,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_018",
+    "semantic_score": 0.636,
+    "semantic_structured_score": 0.6,
+    "semantic_embedding_score": 0.703,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_087",
@@ -11620,7 +12017,17 @@
     "review_next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review.",
     "repair_evidence_id": "pipeline5_merged_rule_0127",
     "repair_confidence": 0.619,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_001",
+    "semantic_score": 0.596,
+    "semantic_structured_score": 0.54,
+    "semantic_embedding_score": 0.701,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction"
+    ]
   },
   {
     "rule_id": "burnaby_r1_093",
@@ -11935,7 +12342,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0104",
     "repair_confidence": 0.712,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_045",
+    "semantic_score": 0.554,
+    "semantic_structured_score": 0.54,
+    "semantic_embedding_score": 0.581,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_094",
@@ -12248,7 +12666,17 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0048__api_01",
     "repair_confidence": 0.976,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_054",
+    "semantic_score": 0.71,
+    "semantic_structured_score": 0.76,
+    "semantic_embedding_score": 0.63,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "close_meaning_guardrail_blocked",
+    "semantic_guardrail_blockers": [
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_095",
@@ -12562,7 +12990,17 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0041",
     "repair_confidence": 0.707,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_045",
+    "semantic_score": 0.689,
+    "semantic_structured_score": 0.635,
+    "semantic_embedding_score": 0.788,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_098",
@@ -12875,7 +13313,20 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0084__api_01",
     "repair_confidence": 0.658,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.417,
+    "semantic_structured_score": 0.266,
+    "semantic_embedding_score": 0.697,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "different_unit",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_099",
@@ -13186,7 +13637,18 @@
     "review_next_step": "Leave in low-priority review until more evidence or a broader bylaw benchmark is available.",
     "repair_evidence_id": "pipeline5_merged_rule_0006",
     "repair_confidence": 0.399,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_001",
+    "semantic_score": 0.563,
+    "semantic_structured_score": 0.54,
+    "semantic_embedding_score": 0.606,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_101",
@@ -13513,7 +13975,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0066",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_059",
+    "semantic_score": 0.53,
+    "semantic_structured_score": 0.42,
+    "semantic_embedding_score": 0.735,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_102",
@@ -13838,7 +14312,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0066",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_059",
+    "semantic_score": 0.53,
+    "semantic_structured_score": 0.42,
+    "semantic_embedding_score": 0.735,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_103",
@@ -14165,7 +14650,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0066",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_059",
+    "semantic_score": 0.548,
+    "semantic_structured_score": 0.42,
+    "semantic_embedding_score": 0.786,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_105",
@@ -14482,7 +14979,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0101",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_059",
+    "semantic_score": 0.647,
+    "semantic_structured_score": 0.54,
+    "semantic_embedding_score": 0.847,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "close_meaning_guardrail_blocked",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_107",
@@ -14802,7 +15310,20 @@
     "review_next_step": "Send back to extraction/adapter normalization; do not tune verifier around this case.",
     "repair_evidence_id": "pipeline5_merged_rule_0066",
     "repair_confidence": 0.604,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_075",
+    "semantic_score": 0.571,
+    "semantic_structured_score": 0.483,
+    "semantic_embedding_score": 0.735,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "different_unit",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_108",
@@ -15129,7 +15650,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0066",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_059",
+    "semantic_score": 0.53,
+    "semantic_structured_score": 0.42,
+    "semantic_embedding_score": 0.735,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_109",
@@ -15446,7 +15979,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0105",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_059",
+    "semantic_score": 0.685,
+    "semantic_structured_score": 0.6,
+    "semantic_embedding_score": 0.844,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "close_meaning_guardrail_blocked",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_111",
@@ -15754,7 +16298,19 @@
     "review_next_step": "Find a second independent evidence packet or table context before allowing this text candidate past review.",
     "repair_evidence_id": "pipeline5_merged_rule_0062",
     "repair_confidence": 0.95,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_051",
+    "semantic_score": 0.349,
+    "semantic_structured_score": 0.347,
+    "semantic_embedding_score": 0.353,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "different_unit"
+    ]
   },
   {
     "rule_id": "burnaby_r1_113",
@@ -16063,7 +16619,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0106__api_01",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_050",
+    "semantic_score": 0.574,
+    "semantic_structured_score": 0.54,
+    "semantic_embedding_score": 0.638,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value"
+    ]
   },
   {
     "rule_id": "burnaby_r1_121",
@@ -16390,7 +16957,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0079",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_120",
+    "semantic_score": 0.396,
+    "semantic_structured_score": 0.33,
+    "semantic_embedding_score": 0.519,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_122",
@@ -16709,7 +17288,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0117",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_117",
+    "semantic_score": 0.435,
+    "semantic_structured_score": 0.48,
+    "semantic_embedding_score": 0.352,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_rule_object",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_123",
@@ -17028,7 +17618,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0116",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_120",
+    "semantic_score": 0.452,
+    "semantic_structured_score": 0.48,
+    "semantic_embedding_score": 0.401,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_rule_object",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_124",
@@ -17347,7 +17948,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0119",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_045",
+    "semantic_score": 0.429,
+    "semantic_structured_score": 0.44,
+    "semantic_embedding_score": 0.408,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_numeric_value",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_125",
@@ -17666,7 +18279,18 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0118",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_120",
+    "semantic_score": 0.452,
+    "semantic_structured_score": 0.48,
+    "semantic_embedding_score": 0.4,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_rule_object",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_126",
@@ -17982,7 +18606,20 @@
     "review_next_step": "Resolve exception, override, or sibling-rule conflict manually before changing verifier behavior.",
     "repair_evidence_id": "pipeline5_merged_rule_0121",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.27,
+    "semantic_structured_score": 0.162,
+    "semantic_embedding_score": 0.472,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value",
+      "different_rule_object",
+      "different_unit",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_127",
@@ -18296,7 +18933,20 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0120",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_062",
+    "semantic_score": 0.267,
+    "semantic_structured_score": 0.162,
+    "semantic_embedding_score": 0.462,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value",
+      "different_rule_object",
+      "different_unit",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_128",
@@ -18612,7 +19262,20 @@
     "review_next_step": "Repair Pipeline 5 evidence attachment or retrieval context, then rerun verification.",
     "repair_evidence_id": "pipeline5_merged_rule_0130",
     "repair_confidence": 0.927,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_039",
+    "semantic_score": 0.341,
+    "semantic_structured_score": 0.295,
+    "semantic_embedding_score": 0.425,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit",
+      "exception_or_override_unresolved",
+      "missing_core_evidence"
+    ]
   },
   {
     "rule_id": "burnaby_r1_129",
@@ -18926,7 +19589,18 @@
     "review_next_step": "Repair Pipeline 5 evidence attachment or retrieval context, then rerun verification.",
     "repair_evidence_id": "pipeline5_merged_rule_0043",
     "repair_confidence": 0.807,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_050",
+    "semantic_score": 0.635,
+    "semantic_structured_score": 0.653,
+    "semantic_embedding_score": 0.601,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_numeric_value",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_130",
@@ -19240,7 +19914,19 @@
     "review_next_step": "Repair Pipeline 5 evidence attachment or retrieval context, then rerun verification.",
     "repair_evidence_id": "pipeline5_merged_rule_0066",
     "repair_confidence": 0.796,
-    "can_retry_verification": false
+    "can_retry_verification": false,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_075",
+    "semantic_score": 0.457,
+    "semantic_structured_score": 0.42,
+    "semantic_embedding_score": 0.526,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_134",
@@ -19554,7 +20240,19 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0106__api_01",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_050",
+    "semantic_score": 0.324,
+    "semantic_structured_score": 0.292,
+    "semantic_embedding_score": 0.384,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_direction",
+      "different_unit",
+      "exception_or_override_unresolved"
+    ]
   },
   {
     "rule_id": "burnaby_r1_135",
@@ -19868,6 +20566,17 @@
     "review_next_step": "Rerun the same candidate against the suggested evidence packet and require deterministic proof again.",
     "repair_evidence_id": "pipeline5_merged_rule_0106__api_01",
     "repair_confidence": 1.0,
-    "can_retry_verification": true
+    "can_retry_verification": true,
+    "semantic_review_class": "guardrail_blocked_low_similarity",
+    "semantic_verified_rule_id": "burnaby_r1_001",
+    "semantic_score": 0.297,
+    "semantic_structured_score": 0.28,
+    "semantic_embedding_score": 0.33,
+    "semantic_match_type": "structured_plus_embedding",
+    "semantic_next_action": "no_close_verified_analogue",
+    "semantic_guardrail_blockers": [
+      "different_rule_object",
+      "exception_or_override_unresolved"
+    ]
   }
 ]

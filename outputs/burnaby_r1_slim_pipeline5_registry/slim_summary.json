@@ -321,6 +321,8 @@
       "safe_verifier_tuning_candidate": "Inspect whether a general verifier/table rule can safely reduce review.",
       "evidence_packet_repair_candidate": "Repair evidence attachment first; current suggestion is not strong enough to rerun.",
       "needs_second_source_consensus": "Find independent text/table consensus before promotion.",
+      "semantic_duplicate_review": "Compare a high-similarity review item against an already verified rule; usually a duplicate/degraded extraction.",
+      "semantic_guardrail_review": "Close semantic match, but core guardrails disagree; inspect manually instead of tuning.",
       "human_legal_review": "Resolve exception or cross-family conflict manually.",
       "upstream_candidate_issue": "Return likely extraction/normalization issue upstream.",
       "defer_low_priority": "Leave in review until broader benchmark evidence exists."

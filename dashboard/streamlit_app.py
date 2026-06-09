@@ -261,24 +261,30 @@ def _review_router_tab(st: Any, report: dict[str, Any]) -> None:
     st.subheader("Review Decision Tree")
     st.caption("One explicit route per review item. It tells the human what to check next; it does not change verifier decisions.")
     summary = report.get("summary", {})
-    left, right = st.columns(2)
+    left, middle, right = st.columns(3)
     with left:
         st.markdown("### Action Buckets")
         _bar_rows(st, summary.get("action_counts", []), "name", "count")
-    with right:
+    with middle:
         st.markdown("### Review Categories")
         _bar_rows(st, summary.get("category_counts", []), "name", "count")
+    with right:
+        st.markdown("### Semantic Classes")
+        _bar_rows(st, summary.get("semantic_review_counts", []), "name", "count")
 
     if not items:
         st.info("No review router output found. Rerun the slim verifier.")
         return
     actions = st.multiselect("Action bucket", _unique(items, "action_bucket"))
     categories = st.multiselect("Decision category", _unique(items, "review_category"))
+    semantic_classes = st.multiselect("Semantic class", _unique(items, "semantic_review_class"))
     visible = items
     if actions:
         visible = [item for item in visible if item.get("action_bucket") in actions]
     if categories:
         visible = [item for item in visible if item.get("review_category") in categories]
+    if semantic_classes:
+        visible = [item for item in visible if item.get("semantic_review_class") in semantic_classes]
     rows = [
         {
             "rule_id": item.get("rule_id"),
@@ -286,6 +292,10 @@ def _review_router_tab(st: Any, report: dict[str, Any]) -> None:
             "action": item.get("action_bucket"),
             "priority": item.get("priority"),
             "rule_object": item.get("rule_object"),
+            "semantic_class": item.get("semantic_review_class"),
+            "semantic_score": item.get("semantic_score"),
+            "semantic_match": item.get("semantic_verified_rule_id"),
+            "semantic_blockers": ", ".join(item.get("semantic_guardrail_blockers", [])),
             "bundle_safe": item.get("bundle_safe_retry"),
             "bundle_ready": item.get("bundle_rerun_promotion_ready"),
             "decision_path": " > ".join(item.get("decision_path", [])),
@@ -458,7 +468,9 @@ def _candidate_compare_tab(
     selected_id = st.selectbox("Review rule", options)
     review_rule = _by_rule_id(review_rules, selected_id)
     triage_item = next((item for item in triage_items if item["rule_id"] == selected_id), {})
-    verified_rule = _by_rule_id(verified_rules, triage_item.get("similar_verified_rule_id"))
+    semantic_match_id = triage_item.get("semantic_verified_rule_id") or review_rule.get("semantic_verified_rule_id")
+    lexical_match_id = triage_item.get("similar_verified_rule_id") or review_rule.get("similar_verified_rule_id")
+    verified_rule = _by_rule_id(verified_rules, semantic_match_id or lexical_match_id)
 
     st.markdown("### Sentence-Level Claim Comparison")
     sentence_left, sentence_right = st.columns(2)
@@ -477,7 +489,7 @@ def _candidate_compare_tab(
                 "Closest verified claim",
                 _rule_sentence(verified_rule),
                 "verified",
-                f"Similarity score: {triage_item.get('similar_verified_score')}",
+                f"Semantic score: {triage_item.get('semantic_score') or review_rule.get('semantic_score') or 'n/a'}; lexical score: {triage_item.get('similar_verified_score')}",
             )
         else:
             _sentence_card(
@@ -504,7 +516,8 @@ def _candidate_compare_tab(
         st.markdown("### Closest Verified Rule")
         if verified_rule:
             st.table([compact_rule_row(verified_rule)])
-            st.markdown(f"Similarity score: `{triage_item.get('similar_verified_score')}`")
+            st.markdown(f"Semantic score: `{triage_item.get('semantic_score') or review_rule.get('semantic_score') or 'n/a'}`")
+            st.markdown(f"Lexical score: `{triage_item.get('similar_verified_score')}`")
             st.code(_source_text(verified_rule), language="text")
         else:
             st.info("No verified comparison rule found.")
@@ -1059,10 +1072,14 @@ def _intelligence_detail_sentences(item: dict[str, Any]) -> list[str]:
 def _router_detail_sentences(item: dict[str, Any]) -> list[str]:
     """Explain one decision-tree route in plain English."""
     path = " -> ".join(item.get("decision_path", [])) or "no path recorded"
+    semantic_match = item.get("semantic_verified_rule_id") or "none"
+    semantic_score = _display_value(item.get("semantic_score"))
+    semantic_blockers = _list_text(item.get("semantic_guardrail_blockers", [])) or "none"
     return [
         f"Candidate claim: {item.get('candidate_sentence') or _rule_sentence(item)}",
         f"Original evidence says: {item.get('evidence_sentence') or 'no evidence sentence available'}",
         f"The review tree routed this to `{item.get('review_category')}` with action `{item.get('action_bucket')}`.",
+        f"Semantic review class: `{item.get('semantic_review_class')}`. Closest verified match: `{semantic_match}` with score {semantic_score}; blockers: {semantic_blockers}.",
         f"Decision path: {path}.",
         f"Human instruction: {item.get('human_instruction')}",
         f"Evidence bundle summary: {item.get('bundle_sentence')}",
