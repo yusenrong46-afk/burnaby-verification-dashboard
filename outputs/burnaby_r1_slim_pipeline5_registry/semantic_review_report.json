@@ -3,6 +3,16 @@
   "review_rule_count": 63,
   "verified_rule_count": 30,
   "high_similarity_count": 3,
+  "embedding": {
+    "available": false,
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "mode": "structured_only",
+    "reason": "sentence_transformers_unavailable:ModuleNotFoundError",
+    "notes": [
+      "Embedding backend unavailable; semantic review used structured signatures only.",
+      "Install/cache sentence-transformers/all-MiniLM-L6-v2 to enable embedding ranking."
+    ]
+  },
   "items": [
     {
       "rule_id": "burnaby_r1_071",
@@ -32,6 +42,16 @@
         {
           "verified_rule_id": "burnaby_r1_054",
           "semantic_score": 0.93,
+          "structured_score": 0.93,
+          "embedding_score": null,
+          "combined_semantic_score": 0.93,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -50,6 +70,17 @@
         {
           "verified_rule_id": "burnaby_r1_053",
           "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -66,6 +97,17 @@
         {
           "verified_rule_id": "burnaby_r1_052",
           "semantic_score": 0.68,
+          "structured_score": 0.68,
+          "embedding_score": null,
+          "combined_semantic_score": 0.68,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -82,6 +124,17 @@
         }
       ],
       "best_semantic_score": 0.93,
+      "best_structured_score": 0.93,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.93,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
       "semantic_next_action": "close_meaning_general_review",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review"
@@ -109,6 +162,16 @@
         {
           "verified_rule_id": "burnaby_r1_054",
           "semantic_score": 0.9,
+          "structured_score": 0.9,
+          "embedding_score": null,
+          "combined_semantic_score": 0.9,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -126,6 +189,17 @@
         {
           "verified_rule_id": "burnaby_r1_053",
           "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -142,6 +216,17 @@
         {
           "verified_rule_id": "burnaby_r1_052",
           "semantic_score": 0.68,
+          "structured_score": 0.68,
+          "embedding_score": null,
+          "combined_semantic_score": 0.68,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -158,6 +243,17 @@
         }
       ],
       "best_semantic_score": 0.9,
+      "best_structured_score": 0.9,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.9,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
       "semantic_next_action": "close_meaning_general_review",
       "support_gaps": [
         "table_cell_candidate_requires_review",
@@ -186,6 +282,16 @@
         {
           "verified_rule_id": "burnaby_r1_049",
           "semantic_score": 0.82,
+          "structured_score": 0.82,
+          "embedding_score": null,
+          "combined_semantic_score": 0.82,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -203,6 +309,16 @@
         {
           "verified_rule_id": "burnaby_r1_051",
           "semantic_score": 0.772,
+          "structured_score": 0.772,
+          "embedding_score": null,
+          "combined_semantic_score": 0.772,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -220,6 +336,17 @@
         {
           "verified_rule_id": "burnaby_r1_048",
           "semantic_score": 0.68,
+          "structured_score": 0.68,
+          "embedding_score": null,
+          "combined_semantic_score": 0.68,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -236,6 +363,17 @@
         }
       ],
       "best_semantic_score": 0.82,
+      "best_structured_score": 0.82,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.82,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
       "semantic_next_action": "close_meaning_general_review",
       "support_gaps": [
         "table_cell_candidate_requires_review",
@@ -270,6 +408,16 @@
         {
           "verified_rule_id": "burnaby_r1_028",
           "semantic_score": 0.816,
+          "structured_score": 0.816,
+          "embedding_score": null,
+          "combined_semantic_score": 0.816,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -288,6 +436,16 @@
         {
           "verified_rule_id": "burnaby_r1_018",
           "semantic_score": 0.81,
+          "structured_score": 0.81,
+          "embedding_score": null,
+          "combined_semantic_score": 0.81,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -305,6 +463,17 @@
         {
           "verified_rule_id": "burnaby_r1_056",
           "semantic_score": 0.23,
+          "structured_score": 0.23,
+          "embedding_score": null,
+          "combined_semantic_score": 0.23,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "applies_to_concept_overlap"
@@ -318,11 +487,139 @@
         }
       ],
       "best_semantic_score": 0.816,
+      "best_structured_score": 0.816,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.816,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
       "semantic_next_action": "close_meaning_scope_review",
       "support_gaps": [
         "text_condition_not_supported",
         "applies_to_not_supported",
         "table_applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_027",
+      "candidate_id": "pipeline5_merged_rule_0023__api_02",
+      "canonical_rule_key": "dwelling_units__lot__lot__frequent_transit_network_area_only____6__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 6.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [],
+        "condition_concepts": [
+          "area",
+          "frequent",
+          "network",
+          "only",
+          "transit"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.74,
+          "structured_score": 0.74,
+          "embedding_score": null,
+          "combined_semantic_score": 0.74,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.74,
+      "best_structured_score": 0.74,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.74,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_condition_review",
+      "support_gaps": [
+        "text_condition_not_supported",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
       ]
     },
     {
@@ -357,7 +654,19 @@
       "best_verified_matches": [
         {
           "verified_rule_id": "burnaby_r1_054",
-          "semantic_score": 0.76,
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -375,6 +684,18 @@
         {
           "verified_rule_id": "burnaby_r1_050",
           "semantic_score": 0.623,
+          "structured_score": 0.623,
+          "embedding_score": null,
+          "combined_semantic_score": 0.623,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -392,6 +713,18 @@
         {
           "verified_rule_id": "burnaby_r1_052",
           "semantic_score": 0.62,
+          "structured_score": 0.62,
+          "embedding_score": null,
+          "combined_semantic_score": 0.62,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -407,86 +740,25 @@
           "verified_unit": "m"
         }
       ],
-      "best_semantic_score": 0.76,
-      "semantic_next_action": "close_meaning_but_missing_core_evidence",
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.76,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
         "applies_to_not_supported",
         "operator_not_supported"
-      ]
-    },
-    {
-      "rule_id": "burnaby_r1_027",
-      "candidate_id": "pipeline5_merged_rule_0023__api_02",
-      "canonical_rule_key": "dwelling_units__lot__lot__frequent_transit_network_area_only____6__units",
-      "signature": {
-        "rule_object": "dwelling_units",
-        "direction": "max",
-        "value_bucket": "3_to_10",
-        "value_numeric": 6.0,
-        "unit": "units",
-        "scope_concepts": [],
-        "applies_to_concepts": [],
-        "condition_concepts": [
-          "area",
-          "frequent",
-          "network",
-          "only",
-          "transit"
-        ]
-      },
-      "best_verified_matches": [
-        {
-          "verified_rule_id": "burnaby_r1_062",
-          "semantic_score": 0.74,
-          "match_reasons": [
-            "same_rule_object",
-            "same_direction",
-            "same_unit",
-            "same_value"
-          ],
-          "verified_rule_object": "dwelling_units",
-          "verified_scope": "lot",
-          "verified_applies_to": "dwelling units",
-          "verified_operator": "<=",
-          "verified_value": "6",
-          "verified_unit": "units"
-        },
-        {
-          "verified_rule_id": "burnaby_r1_039",
-          "semantic_score": 0.22,
-          "match_reasons": [
-            "same_direction",
-            "same_value_bucket"
-          ],
-          "verified_rule_object": "height",
-          "verified_scope": "building",
-          "verified_applies_to": "Front Principal Buildings",
-          "verified_operator": "<=",
-          "verified_value": "9.5",
-          "verified_unit": "m"
-        },
-        {
-          "verified_rule_id": "burnaby_r1_040",
-          "semantic_score": 0.22,
-          "match_reasons": [
-            "same_direction",
-            "same_value_bucket"
-          ],
-          "verified_rule_object": "storeys",
-          "verified_scope": "building",
-          "verified_applies_to": "Front Principal Buildings",
-          "verified_operator": "<=",
-          "verified_value": "3",
-          "verified_unit": "storeys"
-        }
-      ],
-      "best_semantic_score": 0.74,
-      "semantic_next_action": "close_meaning_condition_review",
-      "support_gaps": [
-        "text_condition_not_supported",
-        "table_cell_candidate_requires_review",
-        "table_evidence_candidate_requires_review"
       ]
     },
     {
@@ -529,6 +801,18 @@
         {
           "verified_rule_id": "burnaby_r1_050",
           "semantic_score": 0.653,
+          "structured_score": 0.653,
+          "embedding_score": null,
+          "combined_semantic_score": 0.653,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -546,6 +830,18 @@
         {
           "verified_rule_id": "burnaby_r1_048",
           "semantic_score": 0.647,
+          "structured_score": 0.647,
+          "embedding_score": null,
+          "combined_semantic_score": 0.647,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -562,6 +858,18 @@
         {
           "verified_rule_id": "burnaby_r1_049",
           "semantic_score": 0.647,
+          "structured_score": 0.647,
+          "embedding_score": null,
+          "combined_semantic_score": 0.647,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -577,6 +885,19 @@
         }
       ],
       "best_semantic_score": 0.653,
+      "best_structured_score": 0.653,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.653,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -609,6 +930,17 @@
         {
           "verified_rule_id": "burnaby_r1_045",
           "semantic_score": 0.635,
+          "structured_score": 0.635,
+          "embedding_score": null,
+          "combined_semantic_score": 0.635,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -626,6 +958,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -642,6 +985,17 @@
         {
           "verified_rule_id": "burnaby_r1_042",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -657,6 +1011,18 @@
         }
       ],
       "best_semantic_score": 0.635,
+      "best_structured_score": 0.635,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.635,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -692,6 +1058,17 @@
         {
           "verified_rule_id": "burnaby_r1_076",
           "semantic_score": 0.603,
+          "structured_score": 0.603,
+          "embedding_score": null,
+          "combined_semantic_score": 0.603,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -709,6 +1086,17 @@
         {
           "verified_rule_id": "burnaby_r1_056",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -725,6 +1113,17 @@
         {
           "verified_rule_id": "burnaby_r1_057",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -740,6 +1139,18 @@
         }
       ],
       "best_semantic_score": 0.603,
+      "best_structured_score": 0.603,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.603,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -766,6 +1177,17 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -782,6 +1204,17 @@
         {
           "verified_rule_id": "burnaby_r1_040",
           "semantic_score": 0.36,
+          "structured_score": 0.36,
+          "embedding_score": null,
+          "combined_semantic_score": 0.36,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value"
@@ -796,6 +1229,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -809,6 +1253,18 @@
         }
       ],
       "best_semantic_score": 0.6,
+      "best_structured_score": 0.6,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.6,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "table_cell_candidate_requires_review",
@@ -833,6 +1289,17 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -849,6 +1316,17 @@
         {
           "verified_rule_id": "burnaby_r1_045",
           "semantic_score": 0.36,
+          "structured_score": 0.36,
+          "embedding_score": null,
+          "combined_semantic_score": 0.36,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value"
@@ -863,6 +1341,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -876,6 +1365,18 @@
         }
       ],
       "best_semantic_score": 0.6,
+      "best_structured_score": 0.6,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.6,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "table_cell_candidate_requires_review",
@@ -902,6 +1403,17 @@
         {
           "verified_rule_id": "burnaby_r1_041",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -918,6 +1430,17 @@
         {
           "verified_rule_id": "burnaby_r1_044",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -934,6 +1457,17 @@
         {
           "verified_rule_id": "burnaby_r1_040",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -948,6 +1482,18 @@
         }
       ],
       "best_semantic_score": 0.6,
+      "best_structured_score": 0.6,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.6,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "table_column_not_target_scope",
@@ -981,6 +1527,17 @@
         {
           "verified_rule_id": "burnaby_r1_018",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -997,6 +1554,17 @@
         {
           "verified_rule_id": "burnaby_r1_028",
           "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -1013,6 +1581,17 @@
         {
           "verified_rule_id": "burnaby_r1_048",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -1025,6 +1604,18 @@
         }
       ],
       "best_semantic_score": 0.6,
+      "best_structured_score": 0.6,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.6,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1060,6 +1651,17 @@
         {
           "verified_rule_id": "burnaby_r1_074",
           "semantic_score": 0.543,
+          "structured_score": 0.543,
+          "embedding_score": null,
+          "combined_semantic_score": 0.543,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1076,6 +1678,17 @@
         {
           "verified_rule_id": "burnaby_r1_075",
           "semantic_score": 0.543,
+          "structured_score": 0.543,
+          "embedding_score": null,
+          "combined_semantic_score": 0.543,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1092,6 +1705,17 @@
         {
           "verified_rule_id": "burnaby_r1_076",
           "semantic_score": 0.543,
+          "structured_score": 0.543,
+          "embedding_score": null,
+          "combined_semantic_score": 0.543,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1107,6 +1731,18 @@
         }
       ],
       "best_semantic_score": 0.543,
+      "best_structured_score": 0.543,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.543,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1133,6 +1769,17 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -1148,6 +1795,17 @@
         {
           "verified_rule_id": "burnaby_r1_044",
           "semantic_score": 0.36,
+          "structured_score": 0.36,
+          "embedding_score": null,
+          "combined_semantic_score": 0.36,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value"
@@ -1162,6 +1820,17 @@
         {
           "verified_rule_id": "burnaby_r1_041",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -1175,6 +1844,18 @@
         }
       ],
       "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "table_cell_candidate_requires_review",
@@ -1208,6 +1889,16 @@
         {
           "verified_rule_id": "burnaby_r1_001",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1223,6 +1914,16 @@
         {
           "verified_rule_id": "burnaby_r1_004",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1238,6 +1939,15 @@
         {
           "verified_rule_id": "burnaby_r1_028",
           "semantic_score": 0.01,
+          "structured_score": 0.01,
+          "embedding_score": null,
+          "combined_semantic_score": 0.01,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "condition_concept_overlap"
           ],
@@ -1250,6 +1960,17 @@
         }
       ],
       "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review"
@@ -1281,6 +2002,18 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -1296,6 +2029,18 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -1311,6 +2056,18 @@
         {
           "verified_rule_id": "burnaby_r1_042",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_direction",
@@ -1325,6 +2082,19 @@
         }
       ],
       "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1359,6 +2129,17 @@
         {
           "verified_rule_id": "burnaby_r1_001",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1374,6 +2155,17 @@
         {
           "verified_rule_id": "burnaby_r1_004",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1389,6 +2181,16 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.006,
+          "structured_score": 0.006,
+          "embedding_score": null,
+          "combined_semantic_score": 0.006,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "condition_concept_overlap"
           ],
@@ -1401,6 +2203,18 @@
         }
       ],
       "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1432,6 +2246,17 @@
         {
           "verified_rule_id": "burnaby_r1_050",
           "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1447,6 +2272,17 @@
         {
           "verified_rule_id": "burnaby_r1_053",
           "semantic_score": 0.48,
+          "structured_score": 0.48,
+          "embedding_score": null,
+          "combined_semantic_score": 0.48,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1463,6 +2299,17 @@
         {
           "verified_rule_id": "burnaby_r1_048",
           "semantic_score": 0.42,
+          "structured_score": 0.42,
+          "embedding_score": null,
+          "combined_semantic_score": 0.42,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -1477,6 +2324,18 @@
         }
       ],
       "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1512,6 +2371,18 @@
         {
           "verified_rule_id": "burnaby_r1_074",
           "semantic_score": 0.483,
+          "structured_score": 0.483,
+          "embedding_score": null,
+          "combined_semantic_score": 0.483,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_value_bucket",
@@ -1528,6 +2399,18 @@
         {
           "verified_rule_id": "burnaby_r1_075",
           "semantic_score": 0.483,
+          "structured_score": 0.483,
+          "embedding_score": null,
+          "combined_semantic_score": 0.483,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_value_bucket",
@@ -1544,6 +2427,18 @@
         {
           "verified_rule_id": "burnaby_r1_058",
           "semantic_score": 0.48,
+          "structured_score": 0.48,
+          "embedding_score": null,
+          "combined_semantic_score": 0.48,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_value_bucket",
@@ -1558,6 +2453,19 @@
         }
       ],
       "best_semantic_score": 0.483,
+      "best_structured_score": 0.483,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.483,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_unit",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1591,6 +2499,17 @@
         {
           "verified_rule_id": "burnaby_r1_050",
           "semantic_score": 0.48,
+          "structured_score": 0.48,
+          "embedding_score": null,
+          "combined_semantic_score": 0.48,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit",
@@ -1606,6 +2525,17 @@
         {
           "verified_rule_id": "burnaby_r1_052",
           "semantic_score": 0.48,
+          "structured_score": 0.48,
+          "embedding_score": null,
+          "combined_semantic_score": 0.48,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit",
@@ -1621,6 +2551,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -1634,6 +2575,18 @@
         }
       ],
       "best_semantic_score": 0.48,
+      "best_structured_score": 0.48,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.48,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_rule_object"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1665,6 +2618,17 @@
         {
           "verified_rule_id": "burnaby_r1_120",
           "semantic_score": 0.48,
+          "structured_score": 0.48,
+          "embedding_score": null,
+          "combined_semantic_score": 0.48,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit",
@@ -1680,6 +2644,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -1694,6 +2669,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -1707,6 +2693,18 @@
         }
       ],
       "best_semantic_score": 0.48,
+      "best_structured_score": 0.48,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.48,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_rule_object"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1753,6 +2751,18 @@
         {
           "verified_rule_id": "burnaby_r1_117",
           "semantic_score": 0.48,
+          "structured_score": 0.48,
+          "embedding_score": null,
+          "combined_semantic_score": 0.48,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit",
@@ -1768,6 +2778,18 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -1782,6 +2804,18 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -1795,6 +2829,19 @@
         }
       ],
       "best_semantic_score": 0.48,
+      "best_structured_score": 0.48,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.48,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_rule_object",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1841,6 +2888,18 @@
         {
           "verified_rule_id": "burnaby_r1_120",
           "semantic_score": 0.48,
+          "structured_score": 0.48,
+          "embedding_score": null,
+          "combined_semantic_score": 0.48,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit",
@@ -1856,6 +2915,18 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -1870,6 +2941,18 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -1883,6 +2966,19 @@
         }
       ],
       "best_semantic_score": 0.48,
+      "best_structured_score": 0.48,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.48,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_rule_object",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -1930,6 +3026,18 @@
         {
           "verified_rule_id": "burnaby_r1_120",
           "semantic_score": 0.48,
+          "structured_score": 0.48,
+          "embedding_score": null,
+          "combined_semantic_score": 0.48,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit",
@@ -1945,6 +3053,18 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -1959,6 +3079,18 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -1972,6 +3104,19 @@
         }
       ],
       "best_semantic_score": 0.48,
+      "best_structured_score": 0.48,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.48,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_rule_object",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -2002,6 +3147,17 @@
         {
           "verified_rule_id": "burnaby_r1_117",
           "semantic_score": 0.46,
+          "structured_score": 0.46,
+          "embedding_score": null,
+          "combined_semantic_score": 0.46,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value",
@@ -2018,6 +3174,17 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.45,
+          "structured_score": 0.45,
+          "embedding_score": null,
+          "combined_semantic_score": 0.45,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2033,6 +3200,17 @@
         {
           "verified_rule_id": "burnaby_r1_120",
           "semantic_score": 0.295,
+          "structured_score": 0.295,
+          "embedding_score": null,
+          "combined_semantic_score": 0.295,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket",
@@ -2048,6 +3226,18 @@
         }
       ],
       "best_semantic_score": 0.46,
+      "best_structured_score": 0.46,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.46,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_rule_object",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -2077,6 +3267,17 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.45,
+          "structured_score": 0.45,
+          "embedding_score": null,
+          "combined_semantic_score": 0.45,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2092,6 +3293,17 @@
         {
           "verified_rule_id": "burnaby_r1_117",
           "semantic_score": 0.445,
+          "structured_score": 0.445,
+          "embedding_score": null,
+          "combined_semantic_score": 0.445,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value",
@@ -2108,6 +3320,17 @@
         {
           "verified_rule_id": "burnaby_r1_120",
           "semantic_score": 0.294,
+          "structured_score": 0.294,
+          "embedding_score": null,
+          "combined_semantic_score": 0.294,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket",
@@ -2123,6 +3346,18 @@
         }
       ],
       "best_semantic_score": 0.45,
+      "best_structured_score": 0.45,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.45,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "rule_family_direction_mismatch"
@@ -2151,6 +3386,17 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.45,
+          "structured_score": 0.45,
+          "embedding_score": null,
+          "combined_semantic_score": 0.45,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2166,6 +3412,17 @@
         {
           "verified_rule_id": "burnaby_r1_117",
           "semantic_score": 0.305,
+          "structured_score": 0.305,
+          "embedding_score": null,
+          "combined_semantic_score": 0.305,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket",
@@ -2182,6 +3439,17 @@
         {
           "verified_rule_id": "burnaby_r1_120",
           "semantic_score": 0.294,
+          "structured_score": 0.294,
+          "embedding_score": null,
+          "combined_semantic_score": 0.294,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket",
@@ -2197,6 +3465,18 @@
         }
       ],
       "best_semantic_score": 0.45,
+      "best_structured_score": 0.45,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.45,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "rule_family_direction_mismatch"
@@ -2222,6 +3502,17 @@
         {
           "verified_rule_id": "burnaby_r1_018",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2237,6 +3528,17 @@
         {
           "verified_rule_id": "burnaby_r1_028",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2252,6 +3554,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -2264,6 +3577,18 @@
         }
       ],
       "best_semantic_score": 0.44,
+      "best_structured_score": 0.44,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.44,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "rule_family_direction_mismatch",
@@ -2294,6 +3619,18 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2309,6 +3646,18 @@
         {
           "verified_rule_id": "burnaby_r1_049",
           "semantic_score": 0.36,
+          "structured_score": 0.36,
+          "embedding_score": null,
+          "combined_semantic_score": 0.36,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value"
@@ -2323,6 +3672,18 @@
         {
           "verified_rule_id": "burnaby_r1_051",
           "semantic_score": 0.36,
+          "structured_score": 0.36,
+          "embedding_score": null,
+          "combined_semantic_score": 0.36,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value"
@@ -2336,6 +3697,19 @@
         }
       ],
       "best_semantic_score": 0.44,
+      "best_structured_score": 0.44,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.44,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "rule_family_direction_mismatch",
@@ -2370,6 +3744,18 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2385,6 +3771,18 @@
         {
           "verified_rule_id": "burnaby_r1_028",
           "semantic_score": 0.236,
+          "structured_score": 0.236,
+          "embedding_score": null,
+          "combined_semantic_score": 0.236,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "applies_to_concept_overlap",
@@ -2400,6 +3798,18 @@
         {
           "verified_rule_id": "burnaby_r1_018",
           "semantic_score": 0.23,
+          "structured_score": 0.23,
+          "embedding_score": null,
+          "combined_semantic_score": 0.23,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "applies_to_concept_overlap"
@@ -2413,6 +3823,19 @@
         }
       ],
       "best_semantic_score": 0.44,
+      "best_structured_score": 0.44,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.44,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "text_condition_not_supported",
@@ -2440,6 +3863,17 @@
         {
           "verified_rule_id": "burnaby_r1_018",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2455,6 +3889,17 @@
         {
           "verified_rule_id": "burnaby_r1_028",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2470,6 +3915,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -2482,6 +3938,18 @@
         }
       ],
       "best_semantic_score": 0.44,
+      "best_structured_score": 0.44,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.44,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "rule_family_direction_mismatch",
@@ -2519,6 +3987,18 @@
         {
           "verified_rule_id": "burnaby_r1_018",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2534,6 +4014,18 @@
         {
           "verified_rule_id": "burnaby_r1_028",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2549,6 +4041,18 @@
         {
           "verified_rule_id": "burnaby_r1_116",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -2561,6 +4065,19 @@
         }
       ],
       "best_semantic_score": 0.44,
+      "best_structured_score": 0.44,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.44,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -2600,6 +4117,18 @@
         {
           "verified_rule_id": "burnaby_r1_018",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2615,6 +4144,18 @@
         {
           "verified_rule_id": "burnaby_r1_028",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2630,6 +4171,18 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.195,
+          "structured_score": 0.195,
+          "embedding_score": null,
+          "combined_semantic_score": 0.195,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "applies_to_concept_overlap"
@@ -2643,6 +4196,19 @@
         }
       ],
       "best_semantic_score": 0.44,
+      "best_structured_score": 0.44,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.44,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review"
@@ -2687,6 +4253,18 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2702,6 +4280,18 @@
         {
           "verified_rule_id": "burnaby_r1_042",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2717,6 +4307,18 @@
         {
           "verified_rule_id": "burnaby_r1_043",
           "semantic_score": 0.44,
+          "structured_score": 0.44,
+          "embedding_score": null,
+          "combined_semantic_score": 0.44,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit",
@@ -2731,6 +4333,19 @@
         }
       ],
       "best_semantic_score": 0.44,
+      "best_structured_score": 0.44,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.44,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -2768,6 +4383,17 @@
         {
           "verified_rule_id": "burnaby_r1_074",
           "semantic_score": 0.423,
+          "structured_score": 0.423,
+          "embedding_score": null,
+          "combined_semantic_score": 0.423,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -2783,6 +4409,17 @@
         {
           "verified_rule_id": "burnaby_r1_075",
           "semantic_score": 0.423,
+          "structured_score": 0.423,
+          "embedding_score": null,
+          "combined_semantic_score": 0.423,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -2798,6 +4435,17 @@
         {
           "verified_rule_id": "burnaby_r1_076",
           "semantic_score": 0.423,
+          "structured_score": 0.423,
+          "embedding_score": null,
+          "combined_semantic_score": 0.423,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -2812,6 +4460,18 @@
         }
       ],
       "best_semantic_score": 0.423,
+      "best_structured_score": 0.423,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.423,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -2851,6 +4511,16 @@
         {
           "verified_rule_id": "burnaby_r1_074",
           "semantic_score": 0.423,
+          "structured_score": 0.423,
+          "embedding_score": null,
+          "combined_semantic_score": 0.423,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -2866,6 +4536,16 @@
         {
           "verified_rule_id": "burnaby_r1_075",
           "semantic_score": 0.423,
+          "structured_score": 0.423,
+          "embedding_score": null,
+          "combined_semantic_score": 0.423,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -2881,6 +4561,16 @@
         {
           "verified_rule_id": "burnaby_r1_076",
           "semantic_score": 0.423,
+          "structured_score": 0.423,
+          "embedding_score": null,
+          "combined_semantic_score": 0.423,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -2895,6 +4585,17 @@
         }
       ],
       "best_semantic_score": 0.423,
+      "best_structured_score": 0.423,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.423,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -2933,6 +4634,17 @@
         {
           "verified_rule_id": "burnaby_r1_074",
           "semantic_score": 0.423,
+          "structured_score": 0.423,
+          "embedding_score": null,
+          "combined_semantic_score": 0.423,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -2948,6 +4660,17 @@
         {
           "verified_rule_id": "burnaby_r1_075",
           "semantic_score": 0.423,
+          "structured_score": 0.423,
+          "embedding_score": null,
+          "combined_semantic_score": 0.423,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -2963,6 +4686,17 @@
         {
           "verified_rule_id": "burnaby_r1_076",
           "semantic_score": 0.423,
+          "structured_score": 0.423,
+          "embedding_score": null,
+          "combined_semantic_score": 0.423,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -2977,6 +4711,18 @@
         }
       ],
       "best_semantic_score": 0.423,
+      "best_structured_score": 0.423,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.423,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -3019,6 +4765,17 @@
         {
           "verified_rule_id": "burnaby_r1_074",
           "semantic_score": 0.422,
+          "structured_score": 0.422,
+          "embedding_score": null,
+          "combined_semantic_score": 0.422,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -3034,6 +4791,17 @@
         {
           "verified_rule_id": "burnaby_r1_075",
           "semantic_score": 0.422,
+          "structured_score": 0.422,
+          "embedding_score": null,
+          "combined_semantic_score": 0.422,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -3049,6 +4817,17 @@
         {
           "verified_rule_id": "burnaby_r1_076",
           "semantic_score": 0.422,
+          "structured_score": 0.422,
+          "embedding_score": null,
+          "combined_semantic_score": 0.422,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap",
@@ -3063,6 +4842,18 @@
         }
       ],
       "best_semantic_score": 0.422,
+      "best_structured_score": 0.422,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.422,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -3094,6 +4885,18 @@
         {
           "verified_rule_id": "burnaby_r1_056",
           "semantic_score": 0.42,
+          "structured_score": 0.42,
+          "embedding_score": null,
+          "combined_semantic_score": 0.42,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3108,6 +4911,18 @@
         {
           "verified_rule_id": "burnaby_r1_057",
           "semantic_score": 0.42,
+          "structured_score": 0.42,
+          "embedding_score": null,
+          "combined_semantic_score": 0.42,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3122,6 +4937,18 @@
         {
           "verified_rule_id": "burnaby_r1_058",
           "semantic_score": 0.42,
+          "structured_score": 0.42,
+          "embedding_score": null,
+          "combined_semantic_score": 0.42,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3135,6 +4962,19 @@
         }
       ],
       "best_semantic_score": 0.42,
+      "best_structured_score": 0.42,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.42,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_unit",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -3179,6 +5019,17 @@
         {
           "verified_rule_id": "burnaby_r1_056",
           "semantic_score": 0.42,
+          "structured_score": 0.42,
+          "embedding_score": null,
+          "combined_semantic_score": 0.42,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3193,6 +5044,17 @@
         {
           "verified_rule_id": "burnaby_r1_057",
           "semantic_score": 0.42,
+          "structured_score": 0.42,
+          "embedding_score": null,
+          "combined_semantic_score": 0.42,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3207,6 +5069,17 @@
         {
           "verified_rule_id": "burnaby_r1_058",
           "semantic_score": 0.42,
+          "structured_score": 0.42,
+          "embedding_score": null,
+          "combined_semantic_score": 0.42,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3220,6 +5093,18 @@
         }
       ],
       "best_semantic_score": 0.42,
+      "best_structured_score": 0.42,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.42,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -3246,6 +5131,18 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -3260,6 +5157,18 @@
         {
           "verified_rule_id": "burnaby_r1_117",
           "semantic_score": 0.36,
+          "structured_score": 0.36,
+          "embedding_score": null,
+          "combined_semantic_score": 0.36,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value"
@@ -3274,6 +5183,18 @@
         {
           "verified_rule_id": "burnaby_r1_050",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -3287,6 +5208,19 @@
         }
       ],
       "best_semantic_score": 0.38,
+      "best_structured_score": 0.38,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.38,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "rule_family_direction_mismatch",
@@ -3317,6 +5251,18 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.38,
+          "structured_score": 0.38,
+          "embedding_score": null,
+          "combined_semantic_score": 0.38,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_unit"
@@ -3331,6 +5277,18 @@
         {
           "verified_rule_id": "burnaby_r1_117",
           "semantic_score": 0.36,
+          "structured_score": 0.36,
+          "embedding_score": null,
+          "combined_semantic_score": 0.36,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value"
@@ -3345,6 +5303,18 @@
         {
           "verified_rule_id": "burnaby_r1_056",
           "semantic_score": 0.29,
+          "structured_score": 0.29,
+          "embedding_score": null,
+          "combined_semantic_score": 0.29,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket",
@@ -3359,6 +5329,19 @@
         }
       ],
       "best_semantic_score": 0.38,
+      "best_structured_score": 0.38,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.38,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "rule_family_direction_mismatch",
@@ -3390,6 +5373,17 @@
         {
           "verified_rule_id": "burnaby_r1_048",
           "semantic_score": 0.347,
+          "structured_score": 0.347,
+          "embedding_score": null,
+          "combined_semantic_score": 0.347,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_value_bucket",
@@ -3405,6 +5399,17 @@
         {
           "verified_rule_id": "burnaby_r1_049",
           "semantic_score": 0.347,
+          "structured_score": 0.347,
+          "embedding_score": null,
+          "combined_semantic_score": 0.347,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_value_bucket",
@@ -3420,6 +5425,17 @@
         {
           "verified_rule_id": "burnaby_r1_051",
           "semantic_score": 0.347,
+          "structured_score": 0.347,
+          "embedding_score": null,
+          "combined_semantic_score": 0.347,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_value_bucket",
@@ -3434,6 +5450,18 @@
         }
       ],
       "best_semantic_score": 0.347,
+      "best_structured_score": 0.347,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.347,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review"
@@ -3469,6 +5497,18 @@
         {
           "verified_rule_id": "burnaby_r1_048",
           "semantic_score": 0.338,
+          "structured_score": 0.338,
+          "embedding_score": null,
+          "combined_semantic_score": 0.338,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_value_bucket",
@@ -3484,6 +5524,18 @@
         {
           "verified_rule_id": "burnaby_r1_049",
           "semantic_score": 0.338,
+          "structured_score": 0.338,
+          "embedding_score": null,
+          "combined_semantic_score": 0.338,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_value_bucket",
@@ -3499,6 +5551,18 @@
         {
           "verified_rule_id": "burnaby_r1_051",
           "semantic_score": 0.338,
+          "structured_score": 0.338,
+          "embedding_score": null,
+          "combined_semantic_score": 0.338,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "same_value_bucket",
@@ -3513,6 +5577,19 @@
         }
       ],
       "best_semantic_score": 0.338,
+      "best_structured_score": 0.338,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.338,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_unit",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -3559,6 +5636,17 @@
         {
           "verified_rule_id": "burnaby_r1_117",
           "semantic_score": 0.33,
+          "structured_score": 0.33,
+          "embedding_score": null,
+          "combined_semantic_score": 0.33,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "applies_to_concept_overlap"
@@ -3573,6 +5661,17 @@
         {
           "verified_rule_id": "burnaby_r1_120",
           "semantic_score": 0.33,
+          "structured_score": 0.33,
+          "embedding_score": null,
+          "combined_semantic_score": 0.33,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "applies_to_concept_overlap"
@@ -3587,6 +5686,17 @@
         {
           "verified_rule_id": "burnaby_r1_001",
           "semantic_score": 0.28,
+          "structured_score": 0.28,
+          "embedding_score": null,
+          "combined_semantic_score": 0.28,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit"
@@ -3600,6 +5710,18 @@
         }
       ],
       "best_semantic_score": 0.33,
+      "best_structured_score": 0.33,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.33,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -3635,6 +5757,16 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.307,
+          "structured_score": 0.307,
+          "embedding_score": null,
+          "combined_semantic_score": 0.307,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_rule_object",
             "applies_to_concept_overlap",
@@ -3650,6 +5782,16 @@
         {
           "verified_rule_id": "burnaby_r1_001",
           "semantic_score": 0.28,
+          "structured_score": 0.28,
+          "embedding_score": null,
+          "combined_semantic_score": 0.28,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit"
@@ -3664,6 +5806,16 @@
         {
           "verified_rule_id": "burnaby_r1_004",
           "semantic_score": 0.28,
+          "structured_score": 0.28,
+          "embedding_score": null,
+          "combined_semantic_score": 0.28,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit"
@@ -3677,6 +5829,17 @@
         }
       ],
       "best_semantic_score": 0.307,
+      "best_structured_score": 0.307,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.307,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review"
@@ -3713,6 +5876,17 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.295,
+          "structured_score": 0.295,
+          "embedding_score": null,
+          "combined_semantic_score": 0.295,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "applies_to_concept_overlap"
@@ -3727,6 +5901,17 @@
         {
           "verified_rule_id": "burnaby_r1_117",
           "semantic_score": 0.198,
+          "structured_score": 0.198,
+          "embedding_score": null,
+          "combined_semantic_score": 0.198,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "applies_to_concept_overlap",
@@ -3742,6 +5927,17 @@
         {
           "verified_rule_id": "burnaby_r1_120",
           "semantic_score": 0.197,
+          "structured_score": 0.197,
+          "embedding_score": null,
+          "combined_semantic_score": 0.197,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_direction",
             "applies_to_concept_overlap",
@@ -3756,6 +5952,18 @@
         }
       ],
       "best_semantic_score": 0.295,
+      "best_structured_score": 0.295,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.295,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -3798,6 +6006,18 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.295,
+          "structured_score": 0.295,
+          "embedding_score": null,
+          "combined_semantic_score": 0.295,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "applies_to_concept_overlap"
@@ -3812,6 +6032,18 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.295,
+          "structured_score": 0.295,
+          "embedding_score": null,
+          "combined_semantic_score": 0.295,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "applies_to_concept_overlap"
@@ -3826,6 +6058,18 @@
         {
           "verified_rule_id": "burnaby_r1_042",
           "semantic_score": 0.295,
+          "structured_score": 0.295,
+          "embedding_score": null,
+          "combined_semantic_score": 0.295,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "applies_to_concept_overlap"
@@ -3839,6 +6083,19 @@
         }
       ],
       "best_semantic_score": 0.295,
+      "best_structured_score": 0.295,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.295,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "exception_or_override_unresolved",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -3887,6 +6144,17 @@
         {
           "verified_rule_id": "burnaby_r1_050",
           "semantic_score": 0.292,
+          "structured_score": 0.292,
+          "embedding_score": null,
+          "combined_semantic_score": 0.292,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3901,6 +6169,17 @@
         {
           "verified_rule_id": "burnaby_r1_048",
           "semantic_score": 0.287,
+          "structured_score": 0.287,
+          "embedding_score": null,
+          "combined_semantic_score": 0.287,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3915,6 +6194,17 @@
         {
           "verified_rule_id": "burnaby_r1_049",
           "semantic_score": 0.287,
+          "structured_score": 0.287,
+          "embedding_score": null,
+          "combined_semantic_score": 0.287,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3928,6 +6218,18 @@
         }
       ],
       "best_semantic_score": 0.292,
+      "best_structured_score": 0.292,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.292,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -3962,6 +6264,18 @@
         {
           "verified_rule_id": "burnaby_r1_050",
           "semantic_score": 0.283,
+          "structured_score": 0.283,
+          "embedding_score": null,
+          "combined_semantic_score": 0.283,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3976,6 +6290,18 @@
         {
           "verified_rule_id": "burnaby_r1_048",
           "semantic_score": 0.28,
+          "structured_score": 0.28,
+          "embedding_score": null,
+          "combined_semantic_score": 0.28,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -3990,6 +6316,18 @@
         {
           "verified_rule_id": "burnaby_r1_049",
           "semantic_score": 0.28,
+          "structured_score": 0.28,
+          "embedding_score": null,
+          "combined_semantic_score": 0.28,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "scope_concept_overlap"
@@ -4003,6 +6341,19 @@
         }
       ],
       "best_semantic_score": 0.283,
+      "best_structured_score": 0.283,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.283,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_unit",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -4053,6 +6404,17 @@
         {
           "verified_rule_id": "burnaby_r1_001",
           "semantic_score": 0.28,
+          "structured_score": 0.28,
+          "embedding_score": null,
+          "combined_semantic_score": 0.28,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit"
@@ -4067,6 +6429,17 @@
         {
           "verified_rule_id": "burnaby_r1_004",
           "semantic_score": 0.28,
+          "structured_score": 0.28,
+          "embedding_score": null,
+          "combined_semantic_score": 0.28,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "same_unit"
@@ -4081,6 +6454,17 @@
         {
           "verified_rule_id": "burnaby_r1_048",
           "semantic_score": 0.26,
+          "structured_score": 0.26,
+          "embedding_score": null,
+          "combined_semantic_score": 0.26,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_rule_object"
           ],
@@ -4093,6 +6477,18 @@
         }
       ],
       "best_semantic_score": 0.28,
+      "best_structured_score": 0.28,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.28,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_rule_object",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -4138,6 +6534,16 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.272,
+          "structured_score": 0.272,
+          "embedding_score": null,
+          "combined_semantic_score": 0.272,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_rule_object",
             "condition_concept_overlap"
@@ -4152,6 +6558,16 @@
         {
           "verified_rule_id": "burnaby_r1_001",
           "semantic_score": 0.12,
+          "structured_score": 0.12,
+          "embedding_score": null,
+          "combined_semantic_score": 0.12,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object"
+          ],
           "match_reasons": [
             "same_unit"
           ],
@@ -4165,6 +6581,16 @@
         {
           "verified_rule_id": "burnaby_r1_004",
           "semantic_score": 0.12,
+          "structured_score": 0.12,
+          "embedding_score": null,
+          "combined_semantic_score": 0.12,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object"
+          ],
           "match_reasons": [
             "same_unit"
           ],
@@ -4177,6 +6603,17 @@
         }
       ],
       "best_semantic_score": 0.272,
+      "best_structured_score": 0.272,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.272,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -4207,6 +6644,18 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.266,
+          "structured_score": 0.266,
+          "embedding_score": null,
+          "combined_semantic_score": 0.266,
+          "semantic_guardrails": [
+            "same_rule_object"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_unit",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_rule_object",
             "condition_concept_overlap"
@@ -4221,6 +6670,17 @@
         {
           "verified_rule_id": "burnaby_r1_001",
           "semantic_score": 0.12,
+          "structured_score": 0.12,
+          "embedding_score": null,
+          "combined_semantic_score": 0.12,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_unit"
           ],
@@ -4234,6 +6694,17 @@
         {
           "verified_rule_id": "burnaby_r1_004",
           "semantic_score": 0.12,
+          "structured_score": 0.12,
+          "embedding_score": null,
+          "combined_semantic_score": 0.12,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
           "match_reasons": [
             "same_unit"
           ],
@@ -4246,6 +6717,19 @@
         }
       ],
       "best_semantic_score": 0.266,
+      "best_structured_score": 0.266,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.266,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_unit",
+        "missing_core_evidence"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -4273,6 +6757,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -4287,6 +6782,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4300,6 +6806,17 @@
         {
           "verified_rule_id": "burnaby_r1_040",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4312,6 +6829,18 @@
         }
       ],
       "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "applies_to_not_supported",
@@ -4345,6 +6874,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -4359,6 +6899,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4372,6 +6923,17 @@
         {
           "verified_rule_id": "burnaby_r1_040",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4384,6 +6946,18 @@
         }
       ],
       "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "applies_to_not_supported",
@@ -4417,6 +6991,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -4431,6 +7016,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4444,6 +7040,17 @@
         {
           "verified_rule_id": "burnaby_r1_040",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4456,6 +7063,18 @@
         }
       ],
       "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "applies_to_not_supported",
@@ -4487,6 +7106,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -4501,6 +7131,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4514,6 +7155,17 @@
         {
           "verified_rule_id": "burnaby_r1_040",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4526,6 +7178,18 @@
         }
       ],
       "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "applies_to_not_supported",
@@ -4563,6 +7227,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -4577,6 +7252,17 @@
         {
           "verified_rule_id": "burnaby_r1_116",
           "semantic_score": 0.2,
+          "structured_score": 0.2,
+          "embedding_score": null,
+          "combined_semantic_score": 0.2,
+          "semantic_guardrails": [
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_value"
           ],
@@ -4590,6 +7276,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4602,6 +7299,18 @@
         }
       ],
       "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "text_condition_not_supported",
@@ -4636,6 +7345,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -4650,6 +7370,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4663,6 +7394,17 @@
         {
           "verified_rule_id": "burnaby_r1_040",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4675,6 +7417,18 @@
         }
       ],
       "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "applies_to_not_supported",
@@ -4706,6 +7460,17 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -4720,6 +7485,17 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4733,6 +7509,17 @@
         {
           "verified_rule_id": "burnaby_r1_040",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4745,6 +7532,18 @@
         }
       ],
       "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "applies_to_not_supported",
@@ -4789,6 +7588,18 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -4803,6 +7614,18 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.162,
+          "structured_score": 0.162,
+          "embedding_score": null,
+          "combined_semantic_score": 0.162,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "condition_concept_overlap"
@@ -4817,6 +7640,18 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4829,6 +7664,19 @@
         }
       ],
       "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -4870,6 +7718,18 @@
         {
           "verified_rule_id": "burnaby_r1_038",
           "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "same_value_bucket"
@@ -4884,6 +7744,18 @@
         {
           "verified_rule_id": "burnaby_r1_062",
           "semantic_score": 0.162,
+          "structured_score": 0.162,
+          "embedding_score": null,
+          "combined_semantic_score": 0.162,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction",
             "condition_concept_overlap"
@@ -4898,6 +7770,18 @@
         {
           "verified_rule_id": "burnaby_r1_039",
           "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
           "match_reasons": [
             "same_direction"
           ],
@@ -4910,6 +7794,19 @@
         }
       ],
       "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ],
       "semantic_next_action": "no_close_verified_analogue",
       "support_gaps": [
         "pipeline5_text_candidate_requires_review",
@@ -4932,17 +7829,18 @@
         "count": 1
       },
       {
-        "name": "close_meaning_but_missing_core_evidence",
+        "name": "close_meaning_condition_review",
         "count": 1
       },
       {
-        "name": "close_meaning_condition_review",
+        "name": "close_meaning_guardrail_blocked",
         "count": 1
       }
     ]
   },
   "notes": [
-    "Semantic score uses normalized structured fields, not an LLM.",
-    "A high score can prioritize review but cannot clear support gaps."
+    "Semantic score uses normalized structured fields plus optional MiniLM embeddings.",
+    "Embedding similarity is advisory and cannot clear support gaps.",
+    "Guardrails cap high similarity when core legal fields disagree."
   ]
 }

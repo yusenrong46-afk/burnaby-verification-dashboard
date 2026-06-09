@@ -358,11 +358,18 @@ def _bundle_rerun_tab(st: Any, report: dict[str, Any]) -> None:
 def _semantic_review_tab(st: Any, report: dict[str, Any]) -> None:
     items = report.get("items", [])
     st.subheader("Semantic Review")
-    st.caption("Structured meaning comparison against verified rules. Advisory only; it cannot clear support gaps.")
-    metric_cols = st.columns(3)
+    st.caption("Structured meaning comparison plus optional MiniLM embedding similarity. Advisory only; it cannot clear support gaps.")
+    metric_cols = st.columns(4)
     metric_cols[0].metric("Review Rules", report.get("review_rule_count", len(items)))
     metric_cols[1].metric("Verified Rules Compared", report.get("verified_rule_count", 0))
     metric_cols[2].metric("High Similarity", report.get("high_similarity_count", 0))
+    embedding = report.get("embedding", {})
+    metric_cols[3].metric("Embedding Mode", embedding.get("mode", "unknown"))
+    if embedding:
+        st.caption(
+            f"Embedding backend: {embedding.get('model') or 'none'} "
+            f"({ 'available' if embedding.get('available') else embedding.get('reason', 'unavailable') })."
+        )
     actions = report.get("summary", {}).get("semantic_action_counts", [])
     if actions:
         st.markdown("### Semantic Next Actions")
@@ -378,9 +385,13 @@ def _semantic_review_tab(st: Any, report: dict[str, Any]) -> None:
         rows.append(
             {
                 "rule_id": item.get("rule_id"),
-                "score": item.get("best_semantic_score"),
+                "combined_score": item.get("best_combined_semantic_score", item.get("best_semantic_score")),
+                "structured_score": item.get("best_structured_score"),
+                "embedding_score": item.get("best_embedding_score"),
+                "match_type": item.get("semantic_match_type"),
                 "action": item.get("semantic_next_action"),
                 "matched_verified": top.get("verified_rule_id"),
+                "guardrail_blockers": ", ".join(item.get("semantic_guardrail_blockers", [])),
                 "reasons": ", ".join(top.get("match_reasons", [])),
                 "support_gaps": ", ".join(item.get("support_gaps", [])[:4]),
             }
@@ -394,8 +405,10 @@ def _semantic_review_tab(st: Any, report: dict[str, Any]) -> None:
             st,
             "Semantic review in plain English",
             [
-                f"Review rule `{item.get('rule_id')}` has semantic score {_display_value(item.get('best_semantic_score'))} against verified rule `{top.get('verified_rule_id')}`.",
+                f"Review rule `{item.get('rule_id')}` has combined semantic score {_display_value(item.get('best_combined_semantic_score', item.get('best_semantic_score')))} against verified rule `{top.get('verified_rule_id')}`.",
+                f"Structured score: {_display_value(top.get('structured_score'))}; embedding score: {_display_value(top.get('embedding_score'))}.",
                 f"The match reasons are: {_list_text(top.get('match_reasons', []))}.",
+                f"Guardrails passed: {_list_text(top.get('semantic_guardrails', []))}. Blockers: {_list_text(top.get('semantic_guardrail_blockers', []))}.",
                 f"The verifier still blocks this candidate because of: {_list_text(item.get('support_gaps', []))}.",
                 f"Suggested semantic action: `{item.get('semantic_next_action')}`.",
                 "This comparison prioritizes review only. It cannot verify a rule.",
