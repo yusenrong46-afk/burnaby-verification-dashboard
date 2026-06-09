@@ -5,23 +5,23 @@
 - PASS: `verified_precision_is_1`
 - PASS: `false_verified_is_0`
 - PASS: `false_approval_is_0`
-- PASS: `proposal_decision_accuracy_is_1`
-- PASS: `proposal_case_accuracy_is_1`
 - PASS: `retrieval_recall_at_least_0_95`
 - PASS: `verified_or_review_recall_at_least_0_90`
 - PASS: `verified_source_support_failures_is_0`
+- PASS: `proposal_decision_accuracy_is_1`
+- PASS: `proposal_case_accuracy_is_1`
 - PASS: `proposal_field_expectations_match`
 
 ## Rule Metrics
 
-- Gold rules: 22
+- Gold rules: 29
 - Candidate rules: 142
-- Verified rules: 18
-- Review rules: 81
-- Rejected rules: 20
-- Not-used / traceability-only rules: 23
+- Verified rules: 30
+- Review rules: 63
+- Rejected rules: 16
+- Not-used / traceability-only rules: 33
 - Candidate recall: 1.00
-- Verified recall: 0.77
+- Verified recall: 0.90
 - Verified or review recall: 1.00
 - Extraction coverage recall (ceiling): 1.00
 - Verifier retention rate: 1.00
@@ -35,16 +35,16 @@
 
 ## Top Review / Rejection Reasons
 
-- `text_candidate_requires_review`: 76
-- `table_cell_candidate_requires_review`: 44
-- `table_evidence_candidate_requires_review`: 44
-- `operator_not_supported`: 41
-- `applies_to_not_supported`: 36
-- `rule_object_not_supported`: 31
-- `text_condition_not_supported`: 28
+- `pipeline5_text_candidate_requires_review`: 74
+- `rule_object_not_supported`: 46
+- `operator_not_supported`: 39
+- `applies_to_not_supported`: 37
+- `outside_current_rule_contract`: 30
+- `text_condition_not_supported`: 30
+- `table_cell_candidate_requires_review`: 29
+- `table_evidence_candidate_requires_review`: 29
+- `rule_family_direction_mismatch`: 25
 - `table_column_not_target_scope`: 19
-- `outside_current_rule_contract`: 18
-- `non_numeric_value_for_numeric_rule`: 10
 
 ## Evidence Quality
 
@@ -58,14 +58,14 @@
 ## Proof / Bayesian-Lite Triage
 
 - Proof trace completion rate: 1.00
-- Supported claims: 978
+- Supported claims: 970
 - Refuted claims: 4
-- Not-enough-info claims: 154
+- Not-enough-info claims: 162
 - Mean evidence strength: 0.73
-- High-priority review rules: 21
-- Table proof rules: 61
-- Complete table proofs: 8
-- Partial table proofs: 53
+- High-priority review rules: 5
+- Table proof rules: 62
+- Complete table proofs: 10
+- Partial table proofs: 52
 - Refuted table proofs: 0
 - Proof/decision mismatches: 0
 

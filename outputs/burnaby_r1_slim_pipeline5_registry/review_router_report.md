@@ -1,66 +1,71 @@
 # Review Router
 
-This report classifies review-needed rules by next action. It does not verify rules.
+This file consolidates triage, evidence repair, and audit into one review queue. It does not verify rules.
 
-## Action Buckets
+## Summary
 
-- `retry_with_better_evidence`: 35
-- `safe_verifier_tuning_candidate`: 28
-- `needs_second_source_consensus`: 7
-- `defer_low_priority`: 6
-- `human_legal_review`: 5
+- Review rules: 63
 
-## Recommendations
+### Action Buckets
 
-- Start with 35 rules that can be rerun against stronger evidence.
-- Audit 28 near-verified rules for general verifier tuning.
-- Keep 5 exception/conflict rules in human legal review.
+- `operator_review`: 32
+- `rerun_with_evidence_bundle`: 15
+- `defer_low_priority`: 8
+- `condition_evidence_needed`: 4
+- `fix_candidate_or_rule_family_mapping`: 2
+- `scope_review`: 1
+- `human_legal_review`: 1
 
-## Top Support Gaps
+### Likelihood
 
-- `text_candidate_requires_review`: 41
-- `table_cell_candidate_requires_review`: 36
-- `table_evidence_candidate_requires_review`: 36
+- `plausible`: 25
+- `weak`: 19
+- `likely_correct`: 10
+- `likely_wrong_or_noise`: 9
+
+### Top Support Gaps
+
+- `pipeline5_text_candidate_requires_review`: 40
+- `text_condition_not_supported`: 24
 - `applies_to_not_supported`: 24
-- `text_condition_not_supported`: 22
-- `operator_not_supported`: 20
-- `table_column_not_target_scope`: 13
-- `rule_object_not_supported`: 12
+- `rule_family_direction_mismatch`: 18
+- `operator_not_supported`: 18
+- `table_cell_candidate_requires_review`: 15
+- `table_evidence_candidate_requires_review`: 15
+- `rule_object_not_supported`: 13
 - `table_applies_to_not_supported`: 10
-- `constraint_scope_not_supported`: 5
-- `unresolved_exception_cue`: 3
+- `table_column_not_target_scope`: 9
+- `constraint_scope_not_supported`: 4
 - `cross_family_value_collision`: 2
 
-## Evidence Span Issues
+### Recommendations
 
-- `none`: 64
-- `enumerated_subclause_without_parent`: 16
-- `exception_fragment_needs_parent_scope`: 1
+- Keep 1 exception/conflict rules in human legal review.
 
-## Top 25 Items
+## Top 25 Review Routes
 
-- `burnaby_r1_071` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.90: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_046` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.80: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_113` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.83: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_076` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.78: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_019` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.71: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_127` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.70: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_135` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.71: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_026` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.64: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_028` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.66: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_070` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.64: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_086` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.66: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_022` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.60: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_024` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.60: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_064` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.62: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_075` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.59: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_105` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.58: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_109` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.59: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_030` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.55: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_032` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.55: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_034` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.55: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_036` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.55: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_029` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.52: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_066` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.50: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_122` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.48: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
-- `burnaby_r1_123` -> `retry_with_better_evidence` category=`better_evidence_needed` score=0.48: Rerun the same candidate against the suggested stronger evidence, then require deterministic proof again.
+- `burnaby_r1_055` -> `defer_low_priority` / `high`: Keep in review until more evidence or a general verifier rule is justified. Check table_cell_candidate_requires_review, table_evidence_candidate_requires_review in page 2; evidence_id pipeline5_merged_rule_0049.
+- `burnaby_r1_047` -> `defer_low_priority` / `high`: Keep in review until more evidence or a general verifier rule is justified. Check table_cell_candidate_requires_review, table_evidence_candidate_requires_review in page 2; evidence_id pipeline5_merged_rule_0043.
+- `burnaby_r1_021` -> `defer_low_priority` / `high`: Keep in review until more evidence or a general verifier rule is justified. Check table_cell_candidate_requires_review, table_evidence_candidate_requires_review in page 2; evidence_id pipeline5_merged_rule_0020__api_02.
+- `burnaby_r1_023` -> `defer_low_priority` / `high`: Keep in review until more evidence or a general verifier rule is justified. Check table_cell_candidate_requires_review, table_evidence_candidate_requires_review in page 2; evidence_id pipeline5_merged_rule_0021__api_02.
+- `burnaby_r1_025` -> `defer_low_priority` / `high`: Keep in review until more evidence or a general verifier rule is justified. Check table_cell_candidate_requires_review, table_evidence_candidate_requires_review in page 2; evidence_id pipeline5_merged_rule_0022__api_02.
+- `burnaby_r1_129` -> `rerun_with_evidence_bundle` / `high`: Find the clause or table header that proves the condition. Check pipeline5_text_candidate_requires_review, text_condition_not_supported in page 6; evidence_id pipeline5_merged_rule_0123. Evidence bundle is safe to rerun through the verifier.
+- `burnaby_r1_130` -> `rerun_with_evidence_bundle` / `high`: Find the clause or table header that proves the condition. Check pipeline5_text_candidate_requires_review, text_condition_not_supported in page 6; evidence_id pipeline5_merged_rule_0124. Evidence bundle is safe to rerun through the verifier.
+- `burnaby_r1_121` -> `condition_evidence_needed` / `high`: Find the clause or table header that proves the condition. Check pipeline5_text_candidate_requires_review, text_condition_not_supported in page 6; evidence_id pipeline5_merged_rule_0115. Suggested stronger evidence: pipeline5_merged_rule_0079.
+- `burnaby_r1_134` -> `condition_evidence_needed` / `high`: Find the clause or table header that proves the condition. Check pipeline5_text_candidate_requires_review, text_condition_not_supported in page 6; evidence_id pipeline5_merged_rule_0128. Suggested stronger evidence: pipeline5_merged_rule_0106__api_01.
+- `burnaby_r1_135` -> `condition_evidence_needed` / `high`: Find the clause or table header that proves the condition. Check pipeline5_text_candidate_requires_review, text_condition_not_supported in page 6; evidence_id pipeline5_merged_rule_0129. Suggested stronger evidence: pipeline5_merged_rule_0106__api_01.
+- `burnaby_r1_127` -> `rerun_with_evidence_bundle` / `high`: Find the clause or table header that proves the condition. Check pipeline5_text_candidate_requires_review, text_condition_not_supported in page 6; evidence_id pipeline5_merged_rule_0121. Suggested stronger evidence: pipeline5_merged_rule_0120. Evidence bundle is safe to rerun through the verifier.
+- `burnaby_r1_027` -> `rerun_with_evidence_bundle` / `high`: Find the clause or table header that proves the condition. Check text_condition_not_supported, table_cell_candidate_requires_review, table_evidence_candidate_requires_review in page 2; evidence_id pipeline5_merged_rule_0023__api_02. Evidence bundle is safe to rerun through the verifier.
+- `burnaby_r1_109` -> `operator_review` / `high`: Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, applies_to_not_supported in page 5; evidence_id pipeline5_merged_rule_0104. Suggested stronger evidence: pipeline5_merged_rule_0105.
+- `burnaby_r1_126` -> `condition_evidence_needed` / `high`: Find the clause or table header that proves the condition. Check pipeline5_text_candidate_requires_review, text_condition_not_supported, cross_family_value_collision in page 6; evidence_id pipeline5_merged_rule_0120. Suggested stronger evidence: pipeline5_merged_rule_0121.
+- `burnaby_r1_037` -> `scope_review` / `high`: Check row/column/header/prose context for the correct legal scope. Check applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review in page 2; evidence_id pipeline5_merged_rule_0033. Suggested stronger evidence: pipeline5_merged_rule_0120.
+- `burnaby_r1_063` -> `rerun_with_evidence_bundle` / `medium`: Rerun using the evidence bundle; promote only if deterministic verifier passes. Check pipeline5_text_candidate_requires_review in page 1; evidence_id pipeline5_merged_rule_0057. Evidence bundle is safe to rerun through the verifier.
+- `burnaby_r1_067` -> `human_legal_review` / `medium`: Resolve exception/covenant/notwithstanding wording manually. Check pipeline5_text_candidate_requires_review in page 2; evidence_id pipeline5_merged_rule_0061.
+- `burnaby_r1_071` -> `defer_low_priority` / `medium`: Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 2; evidence_id pipeline5_merged_rule_0065. Suggested stronger evidence: pipeline5_merged_rule_0048__api_01.
+- `burnaby_r1_060` -> `operator_review` / `medium`: Confirm the legal direction: maximum/minimum/required/permitted. Check rule_family_direction_mismatch in page 4; evidence_id pipeline5_merged_rule_0054.
+- `burnaby_r1_061` -> `operator_review` / `medium`: Confirm the legal direction: maximum/minimum/required/permitted. Check rule_family_direction_mismatch in page 4; evidence_id pipeline5_merged_rule_0055.
+- `burnaby_r1_087` -> `defer_low_priority` / `medium`: Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 4; evidence_id pipeline5_merged_rule_0082.
+- `burnaby_r1_077` -> `operator_review` / `medium`: Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, rule_family_direction_mismatch in page 4; evidence_id pipeline5_merged_rule_0072__api_01. Suggested stronger evidence: pipeline5_merged_rule_0073.
+- `burnaby_r1_113` -> `operator_review` / `medium`: Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, rule_family_direction_mismatch in page 5; evidence_id pipeline5_merged_rule_0107. Suggested stronger evidence: pipeline5_merged_rule_0106__api_01.
+- `burnaby_r1_111` -> `defer_low_priority` / `medium`: Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 5; evidence_id pipeline5_merged_rule_0106__api_01.
+- `burnaby_r1_019` -> `operator_review` / `medium`: Confirm the legal direction: maximum/minimum/required/permitted. Check rule_family_direction_mismatch, table_column_not_target_scope, table_cell_candidate_requires_review, table_evidence_candidate_requires_review in page 1; evidence_id pipeline5_merged_rule_0019. Suggested stronger evidence: pipeline5_merged_rule_0061.

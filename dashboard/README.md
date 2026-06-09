@@ -1,37 +1,89 @@
 # Verification Dashboard
 
-This Streamlit dashboard is a read-only product view of the verifier outputs. It is designed for classmates, reviewers, and GIS/Felt collaborators, not as an internal JSON explorer.
+The dashboard is a reader for verifier outputs. It does not call an LLM, change
+decisions, or promote rules.
 
-Run locally from this deployment repo:
+Run from the project root:
 
 ```bash
-streamlit run dashboard/streamlit_app.py --server.port 8502
+.venv/bin/python -m streamlit run dashboard/streamlit_app.py --server.port 8502
 ```
 
-Default source folder:
+Default output folder:
 
 ```text
 outputs/burnaby_r1_slim_pipeline5_registry/
 ```
 
-Main pages:
-
-- Overview: safety state, output buckets, and recommended next actions.
-- Triage: review categories, priorities, action buckets, support gaps, and triage queue.
-- Candidate vs Evidence: sentence-level contrast between generated candidate and cited evidence.
-- Recheck Passes: shadow rerun results showing which review items would verify with stronger evidence.
-- Evidence Leads: evidence repair / semantic lead queue for reducing review volume.
-- GIS/Felt Handoff: verified-only parameters, constraints, map layers, and review blockers.
-- Raw + Code: technical file map and raw JSON for debugging.
-
-Important boundary:
+## How To Read It
 
 ```text
-verified = safe for downstream export
-review_needed = plausible but not proven
-rejected = unsafe or contradicted
-not_used = traceability/out-of-contract artifact
-recheck pass = shadow result only, still needs manual promotion review
+verified
 ```
 
-The dashboard does not verify rules, call an LLM, mutate outputs, or touch GIS files.
+Safe, source-supported rules. These are the only rules that should drive GIS.
+
+```text
+review_needed
+```
+
+Possibly useful rules that need clearer evidence, scope, condition, or legal
+review.
+
+```text
+rejected
+```
+
+Unsafe or contradicted candidates.
+
+```text
+not_used
+```
+
+Traceability-only or out-of-contract candidates, such as cross-references and
+administrative rules.
+
+## Main Pages
+
+```text
+Overview
+```
+
+Counts, quality gates, review categories, and benchmark results.
+
+```text
+Review
+```
+
+Single reviewer-facing queue from `review_router.json`. It combines priority,
+likely status, action bucket, decision path, plain-English rule/evidence
+sentences, and human next step.
+
+```text
+Candidate vs Verified
+```
+
+Side-by-side sentence view: what a review candidate claims versus the nearest
+verified rule.
+
+```text
+Evidence Repair
+```
+
+Possible stronger evidence snippets. These suggestions are advisory only.
+
+```text
+GIS/Felt Export
+```
+
+Verified-only GIS contract and map-friendly export preview.
+
+```text
+Verification Structure
+```
+
+File and layer map explaining how the verifier is organized.
+
+## Guardrail
+
+The dashboard explains decisions. It does not make decisions.

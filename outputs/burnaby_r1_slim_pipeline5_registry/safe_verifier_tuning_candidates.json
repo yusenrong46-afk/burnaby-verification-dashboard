@@ -1,0 +1,227 @@
+{
+  "mode": "safe_verifier_tuning_backlog",
+  "candidate_count": 5,
+  "tuning_type_counts": [
+    {
+      "name": "structured_table_gate",
+      "count": 5
+    }
+  ],
+  "items": [
+    {
+      "rule_id": "burnaby_r1_055",
+      "candidate_id": "pipeline5_merged_rule_0049",
+      "rule_object": "setback",
+      "constraint_scope": "interior_side_yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "condition": "",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "near_verified_table_context",
+      "likely_status": "likely_correct",
+      "likely_correct_score": 0.876,
+      "tuning_type": "structured_table_gate",
+      "proposed_experiment": "Allow a table candidate only when title, row/column, cell value, unit, and configured scope pattern all pass.",
+      "required_tests": [
+        "run unit tests",
+        "run benchmark/evaluate_benchmark.py",
+        "run benchmark/evaluate_adversarial.py",
+        "confirm false_verified_count stays 0",
+        "add positive and negative table-cell tests"
+      ],
+      "guardrails": [
+        "do not verify if value is absent from cited evidence",
+        "do not verify if unit is absent or incompatible",
+        "do not verify if evidence contains unresolved exception wording",
+        "do not use similarity or confidence as a verification override",
+        "do not use table cell value without row/column/table-title support"
+      ],
+      "source_page": 2,
+      "evidence_id": "pipeline5_merged_rule_0049",
+      "evidence_quote": "Minimum Lot Line Setbacks | Interior Side Yard | 1.2 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 1.2 m",
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "rerun_evidence_id": null,
+      "rerun_support_gaps": [],
+      "status": "design_candidate_only"
+    },
+    {
+      "rule_id": "burnaby_r1_047",
+      "candidate_id": "pipeline5_merged_rule_0043",
+      "rule_object": "setback",
+      "constraint_scope": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "condition": "",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "near_verified_table_context",
+      "likely_status": "likely_correct",
+      "likely_correct_score": 0.826,
+      "tuning_type": "structured_table_gate",
+      "proposed_experiment": "Allow a table candidate only when title, row/column, cell value, unit, and configured scope pattern all pass.",
+      "required_tests": [
+        "run unit tests",
+        "run benchmark/evaluate_benchmark.py",
+        "run benchmark/evaluate_adversarial.py",
+        "confirm false_verified_count stays 0",
+        "add positive and negative table-cell tests"
+      ],
+      "guardrails": [
+        "do not verify if value is absent from cited evidence",
+        "do not verify if unit is absent or incompatible",
+        "do not verify if evidence contains unresolved exception wording",
+        "do not use similarity or confidence as a verification override",
+        "do not use table cell value without row/column/table-title support"
+      ],
+      "source_page": 2,
+      "evidence_id": "pipeline5_merged_rule_0043",
+      "evidence_quote": "Minimum Lot Line Setbacks | Street Yard | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | 3.0 m",
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "rerun_evidence_id": null,
+      "rerun_support_gaps": [],
+      "status": "design_candidate_only"
+    },
+    {
+      "rule_id": "burnaby_r1_021",
+      "candidate_id": "pipeline5_merged_rule_0020__api_02",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "lot",
+      "operator": "<=",
+      "value": 3,
+      "unit": "units",
+      "condition": "",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "near_verified_table_context",
+      "likely_status": "plausible",
+      "likely_correct_score": 0.766,
+      "tuning_type": "structured_table_gate",
+      "proposed_experiment": "Allow a table candidate only when title, row/column, cell value, unit, and configured scope pattern all pass.",
+      "required_tests": [
+        "run unit tests",
+        "run benchmark/evaluate_benchmark.py",
+        "run benchmark/evaluate_adversarial.py",
+        "confirm false_verified_count stays 0",
+        "add positive and negative table-cell tests"
+      ],
+      "guardrails": [
+        "do not verify if value is absent from cited evidence",
+        "do not verify if unit is absent or incompatible",
+        "do not verify if evidence contains unresolved exception wording",
+        "do not use similarity or confidence as a verification override",
+        "do not use table cell value without row/column/table-title support"
+      ],
+      "source_page": 2,
+      "evidence_id": "pipeline5_merged_rule_0020__api_02",
+      "evidence_quote": "Permitted Dwelling Units | Dwelling Units (including secondary suites) | 3 units | Permitted Dwelling Units (including secondary suites) | 1 to 3 Units",
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "rerun_evidence_id": null,
+      "rerun_support_gaps": [],
+      "status": "design_candidate_only"
+    },
+    {
+      "rule_id": "burnaby_r1_023",
+      "candidate_id": "pipeline5_merged_rule_0021__api_02",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "lot",
+      "operator": "<=",
+      "value": 2,
+      "unit": "units",
+      "condition": "",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "near_verified_table_context",
+      "likely_status": "plausible",
+      "likely_correct_score": 0.766,
+      "tuning_type": "structured_table_gate",
+      "proposed_experiment": "Allow a table candidate only when title, row/column, cell value, unit, and configured scope pattern all pass.",
+      "required_tests": [
+        "run unit tests",
+        "run benchmark/evaluate_benchmark.py",
+        "run benchmark/evaluate_adversarial.py",
+        "confirm false_verified_count stays 0",
+        "add positive and negative table-cell tests"
+      ],
+      "guardrails": [
+        "do not verify if value is absent from cited evidence",
+        "do not verify if unit is absent or incompatible",
+        "do not verify if evidence contains unresolved exception wording",
+        "do not use similarity or confidence as a verification override",
+        "do not use table cell value without row/column/table-title support"
+      ],
+      "source_page": 2,
+      "evidence_id": "pipeline5_merged_rule_0021__api_02",
+      "evidence_quote": "Permitted Dwelling Units | Dwelling Units (including secondary suites) | 2 units | Permitted Dwelling Units (including secondary suites) | 1 to 2 Units",
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "rerun_evidence_id": null,
+      "rerun_support_gaps": [],
+      "status": "design_candidate_only"
+    },
+    {
+      "rule_id": "burnaby_r1_025",
+      "candidate_id": "pipeline5_merged_rule_0022__api_02",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "lot",
+      "applies_to": "lot",
+      "operator": "<=",
+      "value": 4,
+      "unit": "units",
+      "condition": "",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "review_category": "near_verified_table_context",
+      "likely_status": "plausible",
+      "likely_correct_score": 0.766,
+      "tuning_type": "structured_table_gate",
+      "proposed_experiment": "Allow a table candidate only when title, row/column, cell value, unit, and configured scope pattern all pass.",
+      "required_tests": [
+        "run unit tests",
+        "run benchmark/evaluate_benchmark.py",
+        "run benchmark/evaluate_adversarial.py",
+        "confirm false_verified_count stays 0",
+        "add positive and negative table-cell tests"
+      ],
+      "guardrails": [
+        "do not verify if value is absent from cited evidence",
+        "do not verify if unit is absent or incompatible",
+        "do not verify if evidence contains unresolved exception wording",
+        "do not use similarity or confidence as a verification override",
+        "do not use table cell value without row/column/table-title support"
+      ],
+      "source_page": 2,
+      "evidence_id": "pipeline5_merged_rule_0022__api_02",
+      "evidence_quote": "Permitted Dwelling Units | Dwelling Units (including secondary suites) | 4 units | Permitted Dwelling Units (including secondary suites) | 3 to 4 Units",
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "rerun_evidence_id": null,
+      "rerun_support_gaps": [],
+      "status": "design_candidate_only"
+    }
+  ],
+  "notes": [
+    "This report does not promote review rules.",
+    "Each tuning candidate requires a general implementation plus benchmark/adversarial validation.",
+    "Evidence confidence or semantic similarity cannot override value/unit/operator/source support."
+  ]
+}

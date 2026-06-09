@@ -1,0 +1,4948 @@
+{
+  "purpose": "Advisory semantic-signature comparison for review rules. It never verifies rules.",
+  "review_rule_count": 63,
+  "verified_rule_count": 30,
+  "high_similarity_count": 3,
+  "items": [
+    {
+      "rule_id": "burnaby_r1_071",
+      "candidate_id": "pipeline5_merged_rule_0065",
+      "canonical_rule_key": "setback__interior_side_yard__end_unit_of_a_rowhouse_development__end_unit_lots____1_2__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [
+          "interior",
+          "setback_area",
+          "side"
+        ],
+        "applies_to_concepts": [
+          "development",
+          "end",
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "end"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_054",
+          "semantic_score": 0.93,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_side_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_053",
+          "semantic_score": 0.7,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_side_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_052",
+          "semantic_score": 0.68,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_rear_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.93,
+      "semantic_next_action": "close_meaning_general_review",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_055",
+      "candidate_id": "pipeline5_merged_rule_0049",
+      "canonical_rule_key": "setback__interior_side_yard__all_buildings____1_2__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [
+          "interior",
+          "setback_area",
+          "side"
+        ],
+        "applies_to_concepts": [],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_054",
+          "semantic_score": 0.9,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_side_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_053",
+          "semantic_score": 0.7,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_side_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_052",
+          "semantic_score": 0.68,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_rear_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.9,
+      "semantic_next_action": "close_meaning_general_review",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_047",
+      "candidate_id": "pipeline5_merged_rule_0043",
+      "canonical_rule_key": "setback__minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard__all_buildings____3_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "line",
+          "setback_area",
+          "street"
+        ],
+        "applies_to_concepts": [],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_049",
+          "semantic_score": 0.82,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_flanking",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_051",
+          "semantic_score": 0.772,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_rear_yard",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_048",
+          "semantic_score": 0.68,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_front",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.82,
+      "semantic_next_action": "close_meaning_general_review",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_029",
+      "candidate_id": "pipeline5_merged_rule_0025",
+      "canonical_rule_key": "lot_area__lot__small_scale_multi_unit_5_to_6_units__frequent_transit_network_area_only____281__m",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "100_plus",
+        "value_numeric": 281.0,
+        "unit": "m2",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": [
+          "area",
+          "frequent",
+          "network",
+          "only",
+          "transit"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_028",
+          "semantic_score": 0.816,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.81,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_056",
+          "semantic_score": 0.23,
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.816,
+      "semantic_next_action": "close_meaning_scope_review",
+      "support_gaps": [
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "table_applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_094",
+      "candidate_id": "pipeline5_merged_rule_0089",
+      "canonical_rule_key": "setback__garage_carport_below_grade_min_setback__parking__garage_or_carport_constructed_below_grade____1_2__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [
+          "below",
+          "carport",
+          "garage",
+          "grade",
+          "min",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "parking"
+        ],
+        "condition_concepts": [
+          "below",
+          "carport",
+          "constructed",
+          "garage",
+          "grade"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_054",
+          "semantic_score": 0.76,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_side_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_050",
+          "semantic_score": 0.623,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_052",
+          "semantic_score": 0.62,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_rear_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.76,
+      "semantic_next_action": "close_meaning_but_missing_core_evidence",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_027",
+      "candidate_id": "pipeline5_merged_rule_0023__api_02",
+      "canonical_rule_key": "dwelling_units__lot__lot__frequent_transit_network_area_only____6__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 6.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [],
+        "condition_concepts": [
+          "area",
+          "frequent",
+          "network",
+          "only",
+          "transit"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.74,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.74,
+      "semantic_next_action": "close_meaning_condition_review",
+      "support_gaps": [
+        "text_condition_not_supported",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_129",
+      "candidate_id": "pipeline5_merged_rule_0123",
+      "canonical_rule_key": "setback__street_yard__street_yards__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource____2_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area",
+          "street"
+        ],
+        "applies_to_concepts": [
+          "setback_area",
+          "street"
+        ],
+        "condition_concepts": [
+          "219",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_050",
+          "semantic_score": 0.653,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_048",
+          "semantic_score": 0.647,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_front",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_049",
+          "semantic_score": 0.647,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_flanking",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.653,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_095",
+      "candidate_id": "pipeline5_merged_rule_0090__api_01",
+      "canonical_rule_key": "height__building__accessory_structure__located_outside_of_a_required_yard____4_6__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 4.6,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "accessory",
+          "structure"
+        ],
+        "condition_concepts": [
+          "located",
+          "outside",
+          "required",
+          "setback_area"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_045",
+          "semantic_score": 0.635,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Accessory Buildings",
+          "verified_operator": "<=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_042",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.635,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_109",
+      "candidate_id": "pipeline5_merged_rule_0104",
+      "canonical_rule_key": "building_separation__building_separation__projection__project_into_the_required_minimum_separation_between_buildings_on_the_same_lot____1_2__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "projection"
+        ],
+        "condition_concepts": [
+          "between",
+          "into",
+          "project",
+          "required",
+          "same",
+          "separation"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_076",
+          "semantic_score": 0.603,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_056",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_057",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.603,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_021",
+      "candidate_id": "pipeline5_merged_rule_0020__api_02",
+      "canonical_rule_key": "dwelling_units__lot__lot____3__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.36,
+          "match_reasons": [
+            "same_direction",
+            "same_value"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.6,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_025",
+      "candidate_id": "pipeline5_merged_rule_0022__api_02",
+      "canonical_rule_key": "dwelling_units__lot__lot____4__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 4.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_045",
+          "semantic_score": 0.36,
+          "match_reasons": [
+            "same_direction",
+            "same_value"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Accessory Buildings",
+          "verified_operator": "<=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.6,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_046",
+      "candidate_id": "pipeline5_merged_rule_0042",
+      "canonical_rule_key": "storeys__building__accessory_buildings____1__storeys",
+      "signature": {
+        "rule_object": "storeys",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "storeys",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "accessory"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_041",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "2.5",
+          "verified_unit": "storeys"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_044",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "2",
+          "verified_unit": "storeys"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.6,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_086",
+      "candidate_id": "pipeline5_merged_rule_0081",
+      "canonical_rule_key": "lot_area__lot__boarding_house__boarding_lodging_or_rooming_houses____560__m",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "100_plus",
+        "value_numeric": 560.0,
+        "unit": "m2",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "boarding",
+          "house"
+        ],
+        "condition_concepts": [
+          "boarding",
+          "house",
+          "lodging",
+          "rooming"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_028",
+          "semantic_score": 0.6,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_048",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_front",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.6,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_105",
+      "candidate_id": "pipeline5_merged_rule_0100",
+      "canonical_rule_key": "building_separation__building_separation__projection__project_into_the_required_minimum_separation_between_buildings_on_the_same_lot____0_9__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "max",
+        "value_bucket": "under_1",
+        "value_numeric": 0.9,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "projection"
+        ],
+        "condition_concepts": [
+          "between",
+          "into",
+          "project",
+          "required",
+          "same",
+          "separation"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_074",
+          "semantic_score": 0.543,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_075",
+          "semantic_score": 0.543,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_076",
+          "semantic_score": 0.543,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.543,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_023",
+      "candidate_id": "pipeline5_merged_rule_0021__api_02",
+      "canonical_rule_key": "dwelling_units__lot__lot____2__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_044",
+          "semantic_score": 0.36,
+          "match_reasons": [
+            "same_direction",
+            "same_value"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "2",
+          "verified_unit": "storeys"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_041",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "2.5",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_087",
+      "candidate_id": "pipeline5_merged_rule_0082",
+      "canonical_rule_key": "permitted_use__use__supportive_housing__as_the_only_principal_use__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "eq",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "use"
+        ],
+        "applies_to_concepts": [
+          "housing",
+          "supportive"
+        ],
+        "condition_concepts": [
+          "only",
+          "principal",
+          "use"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_001",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        },
+        {
+          "verified_rule_id": "burnaby_r1_004",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        },
+        {
+          "verified_rule_id": "burnaby_r1_028",
+          "semantic_score": 0.01,
+          "match_reasons": [
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_093",
+      "candidate_id": "pipeline5_merged_rule_0088__api_01",
+      "canonical_rule_key": "height__building__parking__garage_or_carport_constructed_below_grade____1_2__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "parking"
+        ],
+        "condition_concepts": [
+          "below",
+          "carport",
+          "constructed",
+          "garage",
+          "grade"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_042",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_099",
+      "candidate_id": "pipeline5_merged_rule_0094",
+      "canonical_rule_key": "permitted_use__use__child_care_facility__in_the_r1_district____located_on_a_lot_that_does_not_contain_a_dwelling_unit_or_any_other_principal_use",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "eq",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "use"
+        ],
+        "applies_to_concepts": [
+          "care",
+          "child",
+          "facility"
+        ],
+        "condition_concepts": [
+          "district"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_001",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        },
+        {
+          "verified_rule_id": "burnaby_r1_004",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        },
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.006,
+          "match_reasons": [
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_113",
+      "candidate_id": "pipeline5_merged_rule_0107",
+      "canonical_rule_key": "setback__lane_yard__projection__in_the_r1_district____0_8__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "under_1",
+        "value_numeric": 0.8,
+        "unit": "m",
+        "scope_concepts": [
+          "lane",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "projection"
+        ],
+        "condition_concepts": [
+          "district"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_050",
+          "semantic_score": 0.54,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_053",
+          "semantic_score": 0.48,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_side_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_048",
+          "semantic_score": 0.42,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_front",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_107",
+      "candidate_id": "pipeline5_merged_rule_0102",
+      "canonical_rule_key": "building_separation__building_separation__projection__project_into_the_required_minimum_separation_between_buildings_on_the_same_lot____as_per_section_6_9",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "eq",
+        "value_bucket": "3_to_10",
+        "value_numeric": 6.9,
+        "unit": null,
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "projection"
+        ],
+        "condition_concepts": [
+          "between",
+          "into",
+          "project",
+          "required",
+          "same",
+          "separation"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_074",
+          "semantic_score": 0.483,
+          "match_reasons": [
+            "same_rule_object",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_075",
+          "semantic_score": 0.483,
+          "match_reasons": [
+            "same_rule_object",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_058",
+          "semantic_score": 0.48,
+          "match_reasons": [
+            "same_rule_object",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Front and Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.483,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_081",
+      "candidate_id": "pipeline5_merged_rule_0076",
+      "canonical_rule_key": "height__building__rowhouse__contiguous_rowhouse_lots____1_5__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.5,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "contiguous",
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_050",
+          "semantic_score": 0.48,
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_052",
+          "semantic_score": 0.48,
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_rear_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.48,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_082",
+      "candidate_id": "pipeline5_merged_rule_0077",
+      "canonical_rule_key": "height__building__rowhouse__contiguous_rowhouse_lots____2_5__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.5,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "contiguous",
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_120",
+          "semantic_score": 0.48,
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "vertical_clearance",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "2.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.48,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_122",
+      "candidate_id": "pipeline5_merged_rule_0116",
+      "canonical_rule_key": "height__building__panhandle_lots__lots_with_lane_access_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource____1__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "panhandle"
+        ],
+        "condition_concepts": [
+          "219",
+          "access",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "lane",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_117",
+          "semantic_score": 0.48,
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.48,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_123",
+      "candidate_id": "pipeline5_merged_rule_0117",
+      "canonical_rule_key": "height__building__panhandle_lots__lots_with_lane_access_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource____2_5__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.5,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "panhandle"
+        ],
+        "condition_concepts": [
+          "219",
+          "access",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "lane",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_120",
+          "semantic_score": 0.48,
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "vertical_clearance",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "2.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.48,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_125",
+      "candidate_id": "pipeline5_merged_rule_0119",
+      "canonical_rule_key": "height__building__panhandle_lots__lots_without_lane_access_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource____2_5__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.5,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "panhandle"
+        ],
+        "condition_concepts": [
+          "219",
+          "access",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "lane",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject",
+          "without"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_120",
+          "semantic_score": 0.48,
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "vertical_clearance",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "2.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.48,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_077",
+      "candidate_id": "pipeline5_merged_rule_0072__api_01",
+      "canonical_rule_key": "dwelling_units__lot__dwelling_unit__all_dwelling_units____1__dwelling_unit",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "dwelling"
+        ],
+        "condition_concepts": [
+          "dwelling"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_117",
+          "semantic_score": 0.46,
+          "match_reasons": [
+            "same_direction",
+            "same_value",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.45,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_120",
+          "semantic_score": 0.295,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "vertical_clearance",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "2.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.46,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_060",
+      "candidate_id": "pipeline5_merged_rule_0054",
+      "canonical_rule_key": "dwelling_units__lot__dwelling_units__total_dwelling_units_on_a_lot_1_to_3_units____1__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "dwelling"
+        ],
+        "condition_concepts": [
+          "dwelling",
+          "total"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.45,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_117",
+          "semantic_score": 0.445,
+          "match_reasons": [
+            "same_direction",
+            "same_value",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_120",
+          "semantic_score": 0.294,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "vertical_clearance",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "2.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.45,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_061",
+      "candidate_id": "pipeline5_merged_rule_0055",
+      "canonical_rule_key": "dwelling_units__lot__dwelling_units__total_dwelling_units_on_a_lot_4_to_6_units____2__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "dwelling"
+        ],
+        "condition_concepts": [
+          "dwelling",
+          "total"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.45,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_117",
+          "semantic_score": 0.305,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_120",
+          "semantic_score": 0.294,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "vertical_clearance",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "2.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.45,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_019",
+      "candidate_id": "pipeline5_merged_rule_0019",
+      "canonical_rule_key": "lot_area__lot__rowhouse_1____280__m",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "max",
+        "value_bucket": "100_plus",
+        "value_numeric": 280.0,
+        "unit": "m2",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_028",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.44,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_024",
+      "candidate_id": "pipeline5_merged_rule_0022__api_01",
+      "canonical_rule_key": "dwelling_units__lot__small_scale_multi_unit_3_to_4_units____3__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_049",
+          "semantic_score": 0.36,
+          "match_reasons": [
+            "same_direction",
+            "same_value"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_flanking",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_051",
+          "semantic_score": 0.36,
+          "match_reasons": [
+            "same_direction",
+            "same_value"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_rear_yard",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.44,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_026",
+      "candidate_id": "pipeline5_merged_rule_0023__api_01",
+      "canonical_rule_key": "dwelling_units__lot__small_scale_multi_unit_5_to_6_units__frequent_transit_network_area_only____5__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 5.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": [
+          "area",
+          "frequent",
+          "network",
+          "only",
+          "transit"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_028",
+          "semantic_score": 0.236,
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.23,
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        }
+      ],
+      "best_semantic_score": 0.44,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "text_condition_not_supported",
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_030",
+      "candidate_id": "pipeline5_merged_rule_0026",
+      "canonical_rule_key": "lot_area__lot__rowhouse____280__m",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "max",
+        "value_bucket": "100_plus",
+        "value_numeric": 280.0,
+        "unit": "m2",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_028",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.44,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "table_applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_066",
+      "candidate_id": "pipeline5_merged_rule_0060",
+      "canonical_rule_key": "lot_area__lot__rowhouse_lots__subject_to_section_101_4_footnote_1_in_small_scale_multi_unit_housing_district_r1____280__m",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "gt",
+        "value_bucket": "100_plus",
+        "value_numeric": 280.0,
+        "unit": "m2",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "101",
+          "district",
+          "footnote",
+          "housing",
+          "multi",
+          "scale",
+          "section",
+          "small",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_028",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_116",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "automatic_sprinkler",
+          "verified_scope": "dwelling_unit",
+          "verified_applies_to": "Dwelling units more than 45 m from a street lot line",
+          "verified_operator": ">",
+          "verified_value": 45,
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.44,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_067",
+      "candidate_id": "pipeline5_merged_rule_0061",
+      "canonical_rule_key": "lot_area__lot__rowhouse_dwellings__subject_to_registration_of_a_section_219_covenant_prohibiting_the_construction_of_more_than_3_dwelling_units_on_the_lot____280__m",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "max",
+        "value_bucket": "100_plus",
+        "value_numeric": 280.0,
+        "unit": "m2",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "dwelling",
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "219",
+          "construction",
+          "covenant",
+          "dwelling",
+          "more",
+          "prohibiting",
+          "registration",
+          "section",
+          "subject",
+          "than"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_028",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot",
+          "verified_applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m²"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.195,
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        }
+      ],
+      "best_semantic_score": 0.44,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_124",
+      "candidate_id": "pipeline5_merged_rule_0118",
+      "canonical_rule_key": "height__building__panhandle_lots__lots_without_lane_access_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource____4_5__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 4.5,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "panhandle"
+        ],
+        "condition_concepts": [
+          "219",
+          "access",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "lane",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject",
+          "without"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_042",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_043",
+          "semantic_score": 0.44,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "7.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.44,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_101",
+      "candidate_id": "pipeline5_merged_rule_0096",
+      "canonical_rule_key": "building_separation__building_separation__projection__project_into_the_required_minimum_separation_between_buildings_on_the_same_lot__allowed__permitted",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "projection"
+        ],
+        "condition_concepts": [
+          "between",
+          "into",
+          "project",
+          "required",
+          "same",
+          "separation"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_074",
+          "semantic_score": 0.423,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_075",
+          "semantic_score": 0.423,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_076",
+          "semantic_score": 0.423,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.423,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_102",
+      "candidate_id": "pipeline5_merged_rule_0097",
+      "canonical_rule_key": "building_separation__building_separation__projection__project_into_the_required_minimum_separation_between_buildings_on_the_same_lot__allowed__permitted",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "projection"
+        ],
+        "condition_concepts": [
+          "between",
+          "into",
+          "project",
+          "required",
+          "same",
+          "separation"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_074",
+          "semantic_score": 0.423,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_075",
+          "semantic_score": 0.423,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_076",
+          "semantic_score": 0.423,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.423,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_108",
+      "candidate_id": "pipeline5_merged_rule_0103",
+      "canonical_rule_key": "building_separation__building_separation__projection__project_into_the_required_minimum_separation_between_buildings_on_the_same_lot__allowed__permitted",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "projection"
+        ],
+        "condition_concepts": [
+          "between",
+          "into",
+          "project",
+          "required",
+          "same",
+          "separation"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_074",
+          "semantic_score": 0.423,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_075",
+          "semantic_score": 0.423,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_076",
+          "semantic_score": 0.423,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.423,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_103",
+      "candidate_id": "pipeline5_merged_rule_0098",
+      "canonical_rule_key": "building_separation__building_separation__projection__project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_1_0_m_or_less_above_grade__allowed__permitted",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "projection"
+        ],
+        "condition_concepts": [
+          "above",
+          "between",
+          "grade",
+          "into",
+          "less",
+          "project",
+          "required",
+          "same",
+          "separation"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_074",
+          "semantic_score": 0.422,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_075",
+          "semantic_score": 0.422,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_076",
+          "semantic_score": 0.422,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "principal building",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.422,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_073",
+      "candidate_id": "pipeline5_merged_rule_0067",
+      "canonical_rule_key": "building_separation__building_separation__minimum_separations__see__section_101_6_1",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "eq",
+        "value_bucket": "100_plus",
+        "value_numeric": 101.6,
+        "unit": null,
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "separation"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_056",
+          "semantic_score": 0.42,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_057",
+          "semantic_score": 0.42,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_058",
+          "semantic_score": 0.42,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Front and Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.42,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_130",
+      "candidate_id": "pipeline5_merged_rule_0124",
+      "canonical_rule_key": "building_separation__building_separation__buildings_on_the_same_lot__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource__allowed__reduced",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "same"
+        ],
+        "condition_concepts": [
+          "219",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_056",
+          "semantic_score": 0.42,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_057",
+          "semantic_score": 0.42,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_058",
+          "semantic_score": 0.42,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Front and Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.42,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_020",
+      "candidate_id": "pipeline5_merged_rule_0020__api_01",
+      "canonical_rule_key": "dwelling_units__lot__rowhouse____1__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_117",
+          "semantic_score": 0.36,
+          "match_reasons": [
+            "same_direction",
+            "same_value"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_050",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.38,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "table_applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_022",
+      "candidate_id": "pipeline5_merged_rule_0021__api_01",
+      "canonical_rule_key": "dwelling_units__lot__small_scale_multi_unit_1_to_2_units____1__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "units",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.38,
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_117",
+          "semantic_score": 0.36,
+          "match_reasons": [
+            "same_direction",
+            "same_value"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_056",
+          "semantic_score": 0.29,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.38,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_111",
+      "candidate_id": "pipeline5_merged_rule_0106__api_01",
+      "canonical_rule_key": "setback__projection_cross_reference_yards__projection____subject_to_section_6_12",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "eq",
+        "value_bucket": "3_to_10",
+        "value_numeric": 6.12,
+        "unit": null,
+        "scope_concepts": [
+          "cross",
+          "projection",
+          "reference",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "projection"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_048",
+          "semantic_score": 0.347,
+          "match_reasons": [
+            "same_rule_object",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_front",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_049",
+          "semantic_score": 0.347,
+          "match_reasons": [
+            "same_rule_object",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_flanking",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_051",
+          "semantic_score": 0.347,
+          "match_reasons": [
+            "same_rule_object",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_rear_yard",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.347,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_069",
+      "candidate_id": "pipeline5_merged_rule_0063",
+      "canonical_rule_key": "setback__vision_clearance_areas_additional_setbacks_cross_reference__vision_clearance_areas__see__section_6_13",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "eq",
+        "value_bucket": "3_to_10",
+        "value_numeric": 6.13,
+        "unit": null,
+        "scope_concepts": [
+          "additional",
+          "area",
+          "clearance",
+          "cross",
+          "reference",
+          "setback_area",
+          "vision"
+        ],
+        "applies_to_concepts": [
+          "area",
+          "clearance",
+          "vision"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_048",
+          "semantic_score": 0.338,
+          "match_reasons": [
+            "same_rule_object",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_front",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_049",
+          "semantic_score": 0.338,
+          "match_reasons": [
+            "same_rule_object",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_flanking",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_051",
+          "semantic_score": 0.338,
+          "match_reasons": [
+            "same_rule_object",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "interior_rear_yard",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.338,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_121",
+      "candidate_id": "pipeline5_merged_rule_0115",
+      "canonical_rule_key": "fire_access_corridor__heritage_irregular_lots_permitted__all_dwelling_units__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource__allowed",
+      "signature": {
+        "rule_object": "fire_access_corridor",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "heritage",
+          "irregular",
+          "permitted"
+        ],
+        "applies_to_concepts": [
+          "dwelling"
+        ],
+        "condition_concepts": [
+          "219",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_117",
+          "semantic_score": 0.33,
+          "match_reasons": [
+            "same_rule_object",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_120",
+          "semantic_score": 0.33,
+          "match_reasons": [
+            "same_rule_object",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "vertical_clearance",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "2.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_001",
+          "semantic_score": 0.28,
+          "match_reasons": [
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        }
+      ],
+      "best_semantic_score": 0.33,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_063",
+      "candidate_id": "pipeline5_merged_rule_0057",
+      "canonical_rule_key": "dwelling_units__lot__ground_oriented_residential_dwellings__small_scale_multi_unit_housing_district_r1__allowed",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "dwelling",
+          "ground",
+          "oriented",
+          "residential"
+        ],
+        "condition_concepts": [
+          "district",
+          "housing",
+          "multi",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.307,
+          "match_reasons": [
+            "same_rule_object",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_001",
+          "semantic_score": 0.28,
+          "match_reasons": [
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        },
+        {
+          "verified_rule_id": "burnaby_r1_004",
+          "semantic_score": 0.28,
+          "match_reasons": [
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        }
+      ],
+      "best_semantic_score": 0.307,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_070",
+      "candidate_id": "pipeline5_merged_rule_0064",
+      "canonical_rule_key": "dwelling_units__lot__rowhouse_dwelling_units__on_a_lot_line_between_two_adjoining_rowhouse_dwellings_with_a_shared_party_wall__not_required",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "dwelling",
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "adjoining",
+          "between",
+          "dwelling",
+          "line",
+          "party",
+          "rowhouse",
+          "shared",
+          "two",
+          "wall"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.295,
+          "match_reasons": [
+            "same_rule_object",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_117",
+          "semantic_score": 0.198,
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_120",
+          "semantic_score": 0.197,
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "vertical_clearance",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "2.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.295,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_128",
+      "candidate_id": "pipeline5_merged_rule_0122",
+      "canonical_rule_key": "height__building__principal_building__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource__excluded",
+      "signature": {
+        "rule_object": "height",
+        "direction": "eq",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "219",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.295,
+          "match_reasons": [
+            "same_rule_object",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.295,
+          "match_reasons": [
+            "same_rule_object",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_042",
+          "semantic_score": 0.295,
+          "match_reasons": [
+            "same_rule_object",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.295,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_134",
+      "candidate_id": "pipeline5_merged_rule_0128",
+      "canonical_rule_key": "setback__heritage_parking_in_required_yards__parking__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource__allowed",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "heritage",
+          "parking",
+          "required",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "parking"
+        ],
+        "condition_concepts": [
+          "219",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_050",
+          "semantic_score": 0.292,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_048",
+          "semantic_score": 0.287,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_front",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_049",
+          "semantic_score": 0.287,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_flanking",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.292,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_068",
+      "candidate_id": "pipeline5_merged_rule_0062",
+      "canonical_rule_key": "setback__required_yards_permitted_projections_cross_reference__required_yards__see__sections_101_6_1_and_6_12",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "eq",
+        "value_bucket": "100_plus",
+        "value_numeric": 101.6,
+        "unit": null,
+        "scope_concepts": [
+          "cross",
+          "permitted",
+          "projection",
+          "reference",
+          "required",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "required",
+          "setback_area"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_050",
+          "semantic_score": 0.283,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_048",
+          "semantic_score": 0.28,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_front",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_049",
+          "semantic_score": 0.28,
+          "match_reasons": [
+            "same_rule_object",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_flanking",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.283,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_135",
+      "candidate_id": "pipeline5_merged_rule_0129",
+      "canonical_rule_key": "setback__heritage_existing_non_conforming_parking__existing_parking_areas__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource__allowed",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "conforming",
+          "existing",
+          "heritage",
+          "non",
+          "parking"
+        ],
+        "applies_to_concepts": [
+          "area",
+          "existing",
+          "parking"
+        ],
+        "condition_concepts": [
+          "219",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_001",
+          "semantic_score": 0.28,
+          "match_reasons": [
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        },
+        {
+          "verified_rule_id": "burnaby_r1_004",
+          "semantic_score": 0.28,
+          "match_reasons": [
+            "same_direction",
+            "same_unit"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        },
+        {
+          "verified_rule_id": "burnaby_r1_048",
+          "semantic_score": 0.26,
+          "match_reasons": [
+            "same_rule_object"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "street_yard_front",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "4.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.28,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_064",
+      "candidate_id": "pipeline5_merged_rule_0058",
+      "canonical_rule_key": "dwelling_units__covenant_requirement__section_219_covenant__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1__required",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "required",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "covenant",
+          "requirement"
+        ],
+        "applies_to_concepts": [
+          "219",
+          "covenant",
+          "section"
+        ],
+        "condition_concepts": [
+          "create",
+          "district",
+          "housing",
+          "more",
+          "multi",
+          "plan",
+          "registration",
+          "rowhouse",
+          "scale",
+          "small",
+          "subdivision",
+          "time",
+          "two"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.272,
+          "match_reasons": [
+            "same_rule_object",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_001",
+          "semantic_score": 0.12,
+          "match_reasons": [
+            "same_unit"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        },
+        {
+          "verified_rule_id": "burnaby_r1_004",
+          "semantic_score": 0.12,
+          "match_reasons": [
+            "same_unit"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        }
+      ],
+      "best_semantic_score": 0.272,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_098",
+      "candidate_id": "pipeline5_merged_rule_0093__api_01",
+      "canonical_rule_key": "dwelling_units__lot__child_care_facility__in_the_r1_district____comply_with_the_development_regulations_under_section_101_4_for_1_to_3_small_scale_multi_unit_dwelling_units_on_a_lot",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "eq",
+        "value_bucket": "100_plus",
+        "value_numeric": 101.4,
+        "unit": null,
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "care",
+          "child",
+          "facility"
+        ],
+        "condition_concepts": [
+          "district"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.266,
+          "match_reasons": [
+            "same_rule_object",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_001",
+          "semantic_score": 0.12,
+          "match_reasons": [
+            "same_unit"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        },
+        {
+          "verified_rule_id": "burnaby_r1_004",
+          "semantic_score": 0.12,
+          "match_reasons": [
+            "same_unit"
+          ],
+          "verified_rule_object": "permitted_use",
+          "verified_scope": "use",
+          "verified_applies_to": "Principal Use",
+          "verified_operator": "allowed",
+          "verified_value": "Permitted",
+          "verified_unit": ""
+        }
+      ],
+      "best_semantic_score": 0.266,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_031",
+      "candidate_id": "pipeline5_merged_rule_0027",
+      "canonical_rule_key": "lot_coverage__lot__rowhouse____55__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 55.0,
+        "unit": "%",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_032",
+      "candidate_id": "pipeline5_merged_rule_0028",
+      "canonical_rule_key": "lot_coverage__lot__small_scale_multi_unit_1_to_2_units__lots_567_m2____40__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 40.0,
+        "unit": "%",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": [
+          "567"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_033",
+      "candidate_id": "pipeline5_merged_rule_0029",
+      "canonical_rule_key": "lot_coverage__lot__small_scale_multi_unit_1_to_2_units__lots_567_m2____30__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 30.0,
+        "unit": "%",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": [
+          "567"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_034",
+      "candidate_id": "pipeline5_merged_rule_0030",
+      "canonical_rule_key": "lot_coverage__lot__small_scale_multi_unit_3_to_4_units____40__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 40.0,
+        "unit": "%",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_035",
+      "candidate_id": "pipeline5_merged_rule_0031",
+      "canonical_rule_key": "lot_coverage__lot__small_scale_multi_unit_5_to_6_units__frequent_transit_network_area_only____45__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 45.0,
+        "unit": "%",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": [
+          "area",
+          "frequent",
+          "network",
+          "only",
+          "transit"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_116",
+          "semantic_score": 0.2,
+          "match_reasons": [
+            "same_value"
+          ],
+          "verified_rule_object": "automatic_sprinkler",
+          "verified_scope": "dwelling_unit",
+          "verified_applies_to": "Dwelling units more than 45 m from a street lot line",
+          "verified_operator": ">",
+          "verified_value": 45,
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_condition_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_036",
+      "candidate_id": "pipeline5_merged_rule_0032",
+      "canonical_rule_key": "impervious_surface__lot__rowhouse_small_scale_multi_unit_5_to_6_units____70__",
+      "signature": {
+        "rule_object": "impervious_surface",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 70.0,
+        "unit": "%",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "rowhouse",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_037",
+      "candidate_id": "pipeline5_merged_rule_0033",
+      "canonical_rule_key": "impervious_surface__lot__small_scale_multi_unit_1_to_2_units_small_scale_multi_unit_3_to_4_units____60__",
+      "signature": {
+        "rule_object": "impervious_surface",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 60.0,
+        "unit": "%",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_040",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "storeys",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "3",
+          "verified_unit": "storeys"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "applies_to_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review",
+        "cross_family_value_collision"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_126",
+      "candidate_id": "pipeline5_merged_rule_0120",
+      "canonical_rule_key": "lot_coverage__lot__lots__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource____60__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 60.0,
+        "unit": "%",
+        "scope_concepts": [],
+        "applies_to_concepts": [],
+        "condition_concepts": [
+          "219",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.162,
+          "match_reasons": [
+            "same_direction",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "cross_family_value_collision"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_127",
+      "candidate_id": "pipeline5_merged_rule_0121",
+      "canonical_rule_key": "impervious_surface__lot__lots__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource____70__",
+      "signature": {
+        "rule_object": "impervious_surface",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 70.0,
+        "unit": "%",
+        "scope_concepts": [],
+        "applies_to_concepts": [],
+        "condition_concepts": [
+          "219",
+          "approval",
+          "community",
+          "covenant",
+          "development",
+          "director",
+          "district",
+          "heritage",
+          "planning",
+          "protecting",
+          "register",
+          "registration",
+          "resource",
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_038",
+          "semantic_score": 0.22,
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "10",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_062",
+          "semantic_score": 0.162,
+          "match_reasons": [
+            "same_direction",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "dwelling units",
+          "verified_operator": "<=",
+          "verified_value": "6",
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_039",
+          "semantic_score": 0.16,
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "Front Principal Buildings",
+          "verified_operator": "<=",
+          "verified_value": "9.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ]
+    }
+  ],
+  "summary": {
+    "semantic_action_counts": [
+      {
+        "name": "no_close_verified_analogue",
+        "count": 57
+      },
+      {
+        "name": "close_meaning_general_review",
+        "count": 3
+      },
+      {
+        "name": "close_meaning_scope_review",
+        "count": 1
+      },
+      {
+        "name": "close_meaning_but_missing_core_evidence",
+        "count": 1
+      },
+      {
+        "name": "close_meaning_condition_review",
+        "count": 1
+      }
+    ]
+  },
+  "notes": [
+    "Semantic score uses normalized structured fields, not an LLM.",
+    "A high score can prioritize review but cannot clear support gaps."
+  ]
+}

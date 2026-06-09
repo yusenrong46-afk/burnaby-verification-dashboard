@@ -12,144 +12,61 @@
   ],
   "map_layer_requirements": [
     {
-      "layer_key": "parcel_polygon",
-      "description": "Parcel boundary polygons used for lot-level filters and capacity context.",
-      "example_team_file": "code/gis_files/burnaby/parcels_with_zoning.gpkg"
-    },
-    {
-      "layer_key": "front_lot_line",
-      "description": "Front lot-line segments used to apply verified front street-yard setbacks.",
-      "example_team_file": "code/gis_files/burnaby/front.gpkg"
-    },
-    {
-      "layer_key": "side_lot_line",
-      "description": "Side lot-line segments used for interior and flanking side-yard constraints.",
-      "example_team_file": "code/gis_files/burnaby/side.gpkg"
-    },
-    {
-      "layer_key": "rear_lot_line",
-      "description": "Rear lot-line segments used for rear-yard constraints.",
-      "example_team_file": "code/gis_files/burnaby/rear.gpkg"
-    },
-    {
-      "layer_key": "lane",
-      "description": "Lane geometry used for lane-yard setbacks and access checks.",
-      "example_team_file": "code/gis_files/burnaby/lane/Lane.shp"
+      "layer_key": "access_path",
+      "description": "Fire-access corridor paths for width and vertical-clearance checks.",
+      "example_team_file": "code/gis_files/burnaby/access_path.gpkg"
     },
     {
       "layer_key": "building_footprint",
-      "description": "Existing or proposed building footprints used for height and separation checks.",
-      "example_team_file": "future/proposed_buildings.gpkg"
+      "description": "Building footprint polygons for height, storey, separation, and coverage limits.",
+      "example_team_file": "code/gis_files/burnaby/building_footprint.gpkg"
+    },
+    {
+      "layer_key": "dwelling_unit",
+      "description": "Dwelling-unit points/areas for unit-level trigger predicates (e.g. sprinklers).",
+      "example_team_file": "code/gis_files/burnaby/dwelling_unit.gpkg"
+    },
+    {
+      "layer_key": "front_lot_line",
+      "description": "Front lot-line segments for verified front street-yard setbacks.",
+      "example_team_file": "code/gis_files/burnaby/front_lot_line.gpkg"
+    },
+    {
+      "layer_key": "lane",
+      "description": "Lane edges for verified lane-yard setbacks.",
+      "example_team_file": "code/gis_files/burnaby/lane.gpkg"
+    },
+    {
+      "layer_key": "parcel_polygon",
+      "description": "Parcel boundary polygons for lot-level filters and capacity context.",
+      "example_team_file": "code/gis_files/burnaby/parcel_polygon.gpkg"
+    },
+    {
+      "layer_key": "rear_lot_line",
+      "description": "Rear lot-line segments for rear-yard setbacks.",
+      "example_team_file": "code/gis_files/burnaby/rear_lot_line.gpkg"
+    },
+    {
+      "layer_key": "side_lot_line",
+      "description": "Side lot-line segments for interior and flanking side-yard setbacks.",
+      "example_team_file": "code/gis_files/burnaby/side_lot_line.gpkg"
+    },
+    {
+      "layer_key": "zoning_polygon",
+      "description": "Zoning district polygons for use-permission context.",
+      "example_team_file": "code/gis_files/burnaby/zoning_polygon.gpkg"
     }
   ],
   "buildable_area_parameters": {
-    "rear_principal_height_sloping_roof_m": {
-      "parameter_key": "rear_principal_height_sloping_roof_m",
-      "value": "7.5",
-      "value_numeric": 7.5,
-      "unit": "m",
-      "operator": "<=",
-      "geometry_target": "building_footprint",
-      "source_rule_ids": [
-        "burnaby_r1_042"
-      ],
-      "source_pages": [
-        2
-      ],
-      "conditions": [
-        "sloping roof"
-      ]
-    },
-    "rear_principal_height_flat_roof_m": {
-      "parameter_key": "rear_principal_height_flat_roof_m",
-      "value": "7.0",
-      "value_numeric": 7,
-      "unit": "m",
-      "operator": "<=",
-      "geometry_target": "building_footprint",
-      "source_rule_ids": [
-        "burnaby_r1_043"
-      ],
-      "source_pages": [
-        2
-      ],
-      "conditions": [
-        "flat roof"
-      ]
-    },
-    "max_building_storeys": {
-      "parameter_key": "max_building_storeys",
-      "value": "2",
-      "value_numeric": 2,
-      "unit": "storeys",
-      "operator": "<=",
-      "geometry_target": "building_footprint",
-      "source_rule_ids": [
-        "burnaby_r1_044"
-      ],
-      "source_pages": [
-        2
-      ],
-      "conditions": []
-    },
     "accessory_building_height_m": {
       "parameter_key": "accessory_building_height_m",
       "value": "4.0",
-      "value_numeric": 4,
+      "value_numeric": 4.0,
       "unit": "m",
       "operator": "<=",
       "geometry_target": "building_footprint",
       "source_rule_ids": [
         "burnaby_r1_045"
-      ],
-      "source_pages": [
-        2
-      ],
-      "conditions": []
-    },
-    "front_street_yard_setback_m": {
-      "parameter_key": "front_street_yard_setback_m",
-      "value": "4.0",
-      "value_numeric": 4,
-      "unit": "m",
-      "operator": ">=",
-      "geometry_target": "front_lot_line",
-      "source_rule_ids": [
-        "burnaby_r1_048"
-      ],
-      "source_pages": [
-        2
-      ],
-      "conditions": [
-        "front"
-      ]
-    },
-    "flanking_street_yard_setback_m": {
-      "parameter_key": "flanking_street_yard_setback_m",
-      "value": "3.0",
-      "value_numeric": 3,
-      "unit": "m",
-      "operator": ">=",
-      "geometry_target": "side_lot_line",
-      "source_rule_ids": [
-        "burnaby_r1_049"
-      ],
-      "source_pages": [
-        2
-      ],
-      "conditions": [
-        "flanking"
-      ]
-    },
-    "lane_yard_setback_m": {
-      "parameter_key": "lane_yard_setback_m",
-      "value": "1.5",
-      "value_numeric": 1.5,
-      "unit": "m",
-      "operator": ">=",
-      "geometry_target": "lane",
-      "source_rule_ids": [
-        "burnaby_r1_050"
       ],
       "source_pages": [
         2
@@ -173,8 +90,23 @@
         "accessory buildings"
       ]
     },
-    "interior_side_yard_setback_m": {
-      "parameter_key": "interior_side_yard_setback_m",
+    "building_separation_m": {
+      "parameter_key": "building_separation_m",
+      "value": "2.4",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_056"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": []
+    },
+    "end_unit_interior_side_yard_setback_m": {
+      "parameter_key": "end_unit_interior_side_yard_setback_m",
       "value": "1.2",
       "value_numeric": 1.2,
       "unit": "m",
@@ -190,93 +122,10 @@
         "end unit lots"
       ]
     },
-    "rear_principal_separation_m": {
-      "parameter_key": "rear_principal_separation_m",
-      "value": "2.4",
-      "value_numeric": 2.4,
-      "unit": "m",
-      "operator": ">=",
-      "geometry_target": "building_footprint",
-      "source_rule_ids": [
-        "burnaby_r1_057"
-      ],
-      "source_pages": [
-        2
-      ],
-      "conditions": []
-    },
-    "front_rear_principal_separation_m": {
-      "parameter_key": "front_rear_principal_separation_m",
-      "value": "6.0",
-      "value_numeric": 6,
-      "unit": "m",
-      "operator": ">=",
-      "geometry_target": "building_footprint",
-      "source_rule_ids": [
-        "burnaby_r1_058",
-        "burnaby_r1_074"
-      ],
-      "source_pages": [
-        2,
-        3
-      ],
-      "conditions": [
-        "located between a front and rear principal"
-      ]
-    },
-    "other_building_separation_m": {
-      "parameter_key": "other_building_separation_m",
-      "value": "2.4",
-      "value_numeric": 2.4,
-      "unit": "m",
-      "operator": ">=",
-      "geometry_target": "building_footprint",
-      "source_rule_ids": [
-        "burnaby_r1_059"
-      ],
-      "source_pages": [
-        2
-      ],
-      "conditions": []
-    },
-    "max_dwelling_units": {
-      "parameter_key": "max_dwelling_units",
-      "value": "6",
-      "value_numeric": 6,
-      "unit": "units",
-      "operator": "<=",
-      "geometry_target": "parcel_polygon",
-      "source_rule_ids": [
-        "burnaby_r1_062"
-      ],
-      "source_pages": [
-        1
-      ],
-      "conditions": [
-        "SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)"
-      ]
-    },
-    "sprinkler_distance_threshold_m": {
-      "parameter_key": "sprinkler_distance_threshold_m",
-      "value": 45,
-      "value_numeric": 45,
-      "unit": "m",
-      "operator": ">",
-      "geometry_target": "dwelling_unit",
-      "source_rule_ids": [
-        "burnaby_r1_116"
-      ],
-      "source_pages": [
-        6
-      ],
-      "conditions": [
-        "Dwelling units located more than 45 m from a lot line abutting a street"
-      ]
-    },
     "fire_access_corridor_width_m": {
       "parameter_key": "fire_access_corridor_width_m",
       "value": "1.0",
-      "value_numeric": 1,
+      "value_numeric": 1.0,
       "unit": "m",
       "operator": ">=",
       "geometry_target": "access_path",
@@ -306,6 +155,318 @@
       "conditions": [
         "All dwelling units; must be clear of any projections or obstructions"
       ]
+    },
+    "flanking_street_yard_setback_m": {
+      "parameter_key": "flanking_street_yard_setback_m",
+      "value": "3.0",
+      "value_numeric": 3.0,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "side_lot_line",
+      "source_rule_ids": [
+        "burnaby_r1_049"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": [
+        "flanking"
+      ]
+    },
+    "front_principal_height_flat_roof_m": {
+      "parameter_key": "front_principal_height_flat_roof_m",
+      "value": "9.5",
+      "value_numeric": 9.5,
+      "unit": "m",
+      "operator": "<=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_039"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": [
+        "flat roof"
+      ]
+    },
+    "front_principal_height_sloping_roof_m": {
+      "parameter_key": "front_principal_height_sloping_roof_m",
+      "value": "10",
+      "value_numeric": 10.0,
+      "unit": "m",
+      "operator": "<=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_038"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": [
+        "sloping roof"
+      ]
+    },
+    "front_principal_max_storeys__2_5": {
+      "parameter_key": "front_principal_max_storeys__2_5",
+      "value": "2.5",
+      "value_numeric": 2.5,
+      "unit": "storeys",
+      "operator": "<=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_041"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": []
+    },
+    "front_principal_max_storeys__3": {
+      "parameter_key": "front_principal_max_storeys__3",
+      "value": "3",
+      "value_numeric": 3.0,
+      "unit": "storeys",
+      "operator": "<=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_040"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": []
+    },
+    "front_rear_principal_separation_m__2_4": {
+      "parameter_key": "front_rear_principal_separation_m__2_4",
+      "value": "2.4",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_076"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": [
+        "located between a front and rear principal"
+      ]
+    },
+    "front_rear_principal_separation_m__6": {
+      "parameter_key": "front_rear_principal_separation_m__6",
+      "value": "6.0",
+      "value_numeric": 6.0,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_058",
+        "burnaby_r1_074",
+        "burnaby_r1_075"
+      ],
+      "source_pages": [
+        2,
+        3
+      ],
+      "conditions": [
+        "located between a front and rear principal",
+        "located between a front and rear principal on a through lot"
+      ]
+    },
+    "front_street_yard_setback_m": {
+      "parameter_key": "front_street_yard_setback_m",
+      "value": "4.0",
+      "value_numeric": 4.0,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "front_lot_line",
+      "source_rule_ids": [
+        "burnaby_r1_048"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": [
+        "front"
+      ]
+    },
+    "interior_side_yard_setback_m": {
+      "parameter_key": "interior_side_yard_setback_m",
+      "value": "0",
+      "value_numeric": 0.0,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "side_lot_line",
+      "source_rule_ids": [
+        "burnaby_r1_053"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": []
+    },
+    "lane_yard_setback_m": {
+      "parameter_key": "lane_yard_setback_m",
+      "value": "1.5",
+      "value_numeric": 1.5,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "lane",
+      "source_rule_ids": [
+        "burnaby_r1_050"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": []
+    },
+    "max_dwelling_units": {
+      "parameter_key": "max_dwelling_units",
+      "value": "6",
+      "value_numeric": 6.0,
+      "unit": "units",
+      "operator": "<=",
+      "geometry_target": "parcel_polygon",
+      "source_rule_ids": [
+        "burnaby_r1_062"
+      ],
+      "source_pages": [
+        1
+      ],
+      "conditions": [
+        "SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)"
+      ]
+    },
+    "min_lot_area_m2": {
+      "parameter_key": "min_lot_area_m2",
+      "value": "281",
+      "value_numeric": 281.0,
+      "unit": "m²",
+      "operator": ">=",
+      "geometry_target": "parcel_polygon",
+      "source_rule_ids": [
+        "burnaby_r1_018",
+        "burnaby_r1_028"
+      ],
+      "source_pages": [
+        1
+      ],
+      "conditions": [
+        "4 Units Only"
+      ]
+    },
+    "other_building_separation_m": {
+      "parameter_key": "other_building_separation_m",
+      "value": "2.4",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_059"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": []
+    },
+    "rear_principal_height_flat_roof_m": {
+      "parameter_key": "rear_principal_height_flat_roof_m",
+      "value": "7.0",
+      "value_numeric": 7.0,
+      "unit": "m",
+      "operator": "<=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_043"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": [
+        "flat roof"
+      ]
+    },
+    "rear_principal_height_sloping_roof_m": {
+      "parameter_key": "rear_principal_height_sloping_roof_m",
+      "value": "7.5",
+      "value_numeric": 7.5,
+      "unit": "m",
+      "operator": "<=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_042"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": [
+        "sloping roof"
+      ]
+    },
+    "rear_principal_max_storeys": {
+      "parameter_key": "rear_principal_max_storeys",
+      "value": "2",
+      "value_numeric": 2.0,
+      "unit": "storeys",
+      "operator": "<=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_044"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": []
+    },
+    "rear_principal_separation_m": {
+      "parameter_key": "rear_principal_separation_m",
+      "value": "2.4",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "burnaby_r1_057"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": []
+    },
+    "rear_yard_setback_m": {
+      "parameter_key": "rear_yard_setback_m",
+      "value": "3.0",
+      "value_numeric": 3.0,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "rear_lot_line",
+      "source_rule_ids": [
+        "burnaby_r1_051"
+      ],
+      "source_pages": [
+        2
+      ],
+      "conditions": []
+    },
+    "sprinkler_distance_threshold_m": {
+      "parameter_key": "sprinkler_distance_threshold_m",
+      "value": 45,
+      "value_numeric": 45.0,
+      "unit": "m",
+      "operator": ">",
+      "geometry_target": "dwelling_unit",
+      "source_rule_ids": [
+        "burnaby_r1_116"
+      ],
+      "source_pages": [
+        6
+      ],
+      "conditions": [
+        "Dwelling units located more than 45 m from a lot line abutting a street"
+      ]
     }
   },
   "constraints": [
@@ -316,11 +477,19 @@
       "parameter_key": "permitted_use",
       "export_group": "use_context",
       "geometry_target": "zoning_polygon",
+      "geometry": {
+        "operation": "use_permission",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": "allowed",
       "value": "Permitted",
       "value_numeric": null,
       "unit": "",
-      "applies_to": "Small-Scale Multi-Unit Housing",
+      "applies_to": "Principal Use",
       "condition": "",
       "exception": "",
       "gis_relevance": "context",
@@ -328,7 +497,181 @@
       "source_page": 1,
       "source_evidence_id": "pipeline5_merged_rule_0001",
       "source_quote": "Principal Use | Small-Scale Multi-Unit Housing | Permitted | Principal Use | Small-Scale Multi-Unit Housing | Use-Specific Regulations: -",
-      "felt_popup_sentence": "Small-Scale Multi-Unit Housing: permitted_use on zoning_polygon is permitted."
+      "felt_popup_sentence": "Principal Use: permitted use for use is permitted with value Permitted."
+    },
+    {
+      "constraint_id": "burnaby_r1_004",
+      "source_rule_id": "burnaby_r1_004",
+      "rule_object": "permitted_use",
+      "parameter_key": "permitted_use",
+      "export_group": "use_context",
+      "geometry_target": "zoning_polygon",
+      "geometry": {
+        "operation": "use_permission",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": "allowed",
+      "value": "Permitted",
+      "value_numeric": null,
+      "unit": "",
+      "applies_to": "Principal Use",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "context",
+      "gis_ready": false,
+      "source_page": 1,
+      "source_evidence_id": "pipeline5_merged_rule_0004",
+      "source_quote": "Principal Use | Group Home | Permitted | Principal Use | Group Home | Use-Specific Regulations: -",
+      "felt_popup_sentence": "Principal Use: permitted use for use is permitted with value Permitted."
+    },
+    {
+      "constraint_id": "burnaby_r1_018",
+      "source_rule_id": "burnaby_r1_018",
+      "rule_object": "lot_area",
+      "parameter_key": "min_lot_area_m2",
+      "export_group": "capacity",
+      "geometry_target": "parcel_polygon",
+      "geometry": {
+        "operation": "area_floor",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": ">=",
+      "value": "281",
+      "value_numeric": 281.0,
+      "unit": "m²",
+      "applies_to": "Small-Scale Multi-Unit",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "context",
+      "gis_ready": false,
+      "source_page": 1,
+      "source_evidence_id": "pipeline5_merged_rule_0018",
+      "source_quote": "Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²",
+      "felt_popup_sentence": "Small-Scale Multi-Unit: lot area for lot must be at least 281 m²."
+    },
+    {
+      "constraint_id": "burnaby_r1_038",
+      "source_rule_id": "burnaby_r1_038",
+      "rule_object": "height",
+      "parameter_key": "front_principal_height_sloping_roof_m",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": "<=",
+      "value": "10",
+      "value_numeric": 10.0,
+      "unit": "m",
+      "applies_to": "Front Principal Buildings",
+      "condition": "sloping roof",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 2,
+      "source_evidence_id": "pipeline5_merged_rule_0034",
+      "source_quote": "Maximum Height | Front Principal Buildings | flat roof: 9.5 m | 10 m | Maximum Height | Front Principal Buildings | Height | sloping roof: 10 m | flat roof: 9.5 m",
+      "felt_popup_sentence": "Front Principal Buildings: height for building must be no more than 10 m when sloping roof."
+    },
+    {
+      "constraint_id": "burnaby_r1_039",
+      "source_rule_id": "burnaby_r1_039",
+      "rule_object": "height",
+      "parameter_key": "front_principal_height_flat_roof_m",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": "<=",
+      "value": "9.5",
+      "value_numeric": 9.5,
+      "unit": "m",
+      "applies_to": "Front Principal Buildings",
+      "condition": "flat roof",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 2,
+      "source_evidence_id": "pipeline5_merged_rule_0035",
+      "source_quote": "Maximum Height | Front Principal Buildings | sloping roof: 10 m | 9.5 m | Maximum Height | Front Principal Buildings | Height | sloping roof: 10 m | flat roof: 9.5 m",
+      "felt_popup_sentence": "Front Principal Buildings: height for building must be no more than 9.5 m when flat roof."
+    },
+    {
+      "constraint_id": "burnaby_r1_040",
+      "source_rule_id": "burnaby_r1_040",
+      "rule_object": "storeys",
+      "parameter_key": "front_principal_max_storeys",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "storey_count_cap",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": "<=",
+      "value": "3",
+      "value_numeric": 3.0,
+      "unit": "storeys",
+      "applies_to": "Front Principal Buildings",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 2,
+      "source_evidence_id": "pipeline5_merged_rule_0036",
+      "source_quote": "Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 3 storeys | Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 3 storeys",
+      "felt_popup_sentence": "Front Principal Buildings: storeys for building must be no more than 3 storeys."
+    },
+    {
+      "constraint_id": "burnaby_r1_041",
+      "source_rule_id": "burnaby_r1_041",
+      "rule_object": "storeys",
+      "parameter_key": "front_principal_max_storeys",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "storey_count_cap",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": "<=",
+      "value": "2.5",
+      "value_numeric": 2.5,
+      "unit": "storeys",
+      "applies_to": "Front Principal Buildings",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 2,
+      "source_evidence_id": "pipeline5_merged_rule_0037",
+      "source_quote": "Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 2.5 storeys | Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | 2.5 storeys",
+      "felt_popup_sentence": "Front Principal Buildings: storeys for building must be no more than 2.5 storeys."
     },
     {
       "constraint_id": "burnaby_r1_042",
@@ -337,6 +680,14 @@
       "parameter_key": "rear_principal_height_sloping_roof_m",
       "export_group": "buildable_area",
       "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": "<=",
       "value": "7.5",
       "value_numeric": 7.5,
@@ -349,7 +700,7 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0038",
       "source_quote": "Maximum Height | Rear Principal Buildings | flat roof: 7.0 m | 7.5 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-      "felt_popup_sentence": "Rear Principal Buildings: rear_principal_height_sloping_roof_m on building_footprint must be no more than 7.5 m when sloping roof."
+      "felt_popup_sentence": "Rear Principal Buildings: height for building must be no more than 7.5 m when sloping roof."
     },
     {
       "constraint_id": "burnaby_r1_043",
@@ -358,9 +709,17 @@
       "parameter_key": "rear_principal_height_flat_roof_m",
       "export_group": "buildable_area",
       "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": "<=",
       "value": "7.0",
-      "value_numeric": 7,
+      "value_numeric": 7.0,
       "unit": "m",
       "applies_to": "Rear Principal Buildings",
       "condition": "flat roof",
@@ -370,18 +729,26 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0039",
       "source_quote": "Maximum Height | Rear Principal Buildings | sloping roof: 7.5 m | 7.0 m | Maximum Height | Rear Principal Buildings | Height | sloping roof: 7.5 m | flat roof: 7.0 m",
-      "felt_popup_sentence": "Rear Principal Buildings: rear_principal_height_flat_roof_m on building_footprint must be no more than 7.0 m when flat roof."
+      "felt_popup_sentence": "Rear Principal Buildings: height for building must be no more than 7.0 m when flat roof."
     },
     {
       "constraint_id": "burnaby_r1_044",
       "source_rule_id": "burnaby_r1_044",
       "rule_object": "storeys",
-      "parameter_key": "max_building_storeys",
+      "parameter_key": "rear_principal_max_storeys",
       "export_group": "buildable_area",
       "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "storey_count_cap",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": "<=",
       "value": "2",
-      "value_numeric": 2,
+      "value_numeric": 2.0,
       "unit": "storeys",
       "applies_to": "Rear Principal Buildings",
       "condition": "",
@@ -391,7 +758,7 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0040",
       "source_quote": "Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys | Maximum Height | Rear Principal Buildings | Storeys (basement inclusive) | 2 storeys",
-      "felt_popup_sentence": "Rear Principal Buildings: max_building_storeys on building_footprint must be no more than 2 storeys."
+      "felt_popup_sentence": "Rear Principal Buildings: storeys for building must be no more than 2 storeys."
     },
     {
       "constraint_id": "burnaby_r1_045",
@@ -400,9 +767,17 @@
       "parameter_key": "accessory_building_height_m",
       "export_group": "buildable_area",
       "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": "<=",
       "value": "4.0",
-      "value_numeric": 4,
+      "value_numeric": 4.0,
       "unit": "m",
       "applies_to": "Accessory Buildings",
       "condition": "",
@@ -412,7 +787,7 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0041",
       "source_quote": "Maximum Height | Accessory Buildings | 1 storey | 4.0 m | Maximum Height | Accessory Buildings | 4.0 m | 1 storey",
-      "felt_popup_sentence": "Accessory Buildings: accessory_building_height_m on building_footprint must be no more than 4.0 m."
+      "felt_popup_sentence": "Accessory Buildings: height for building must be no more than 4.0 m."
     },
     {
       "constraint_id": "burnaby_r1_048",
@@ -421,9 +796,18 @@
       "parameter_key": "front_street_yard_setback_m",
       "export_group": "buildable_area",
       "geometry_target": "front_lot_line",
+      "geometry": {
+        "operation": "offset_inward",
+        "axis": "front_lot_line",
+        "direction": "inward",
+        "source_fields": [
+          "rule_object",
+          "constraint_scope"
+        ]
+      },
       "operator": ">=",
       "value": "4.0",
-      "value_numeric": 4,
+      "value_numeric": 4.0,
       "unit": "m",
       "applies_to": "All Buildings",
       "condition": "front",
@@ -433,7 +817,7 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0044",
       "source_quote": "Minimum Lot Line Setbacks | Street Yard | flanking: 3.0 m | 4.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-      "felt_popup_sentence": "All Buildings: front_street_yard_setback_m on front_lot_line must be at least 4.0 m when front."
+      "felt_popup_sentence": "All Buildings: setback for street yard front must be at least 4.0 m when front."
     },
     {
       "constraint_id": "burnaby_r1_049",
@@ -442,9 +826,18 @@
       "parameter_key": "flanking_street_yard_setback_m",
       "export_group": "buildable_area",
       "geometry_target": "side_lot_line",
+      "geometry": {
+        "operation": "offset_inward",
+        "axis": "side_lot_line",
+        "direction": "inward",
+        "source_fields": [
+          "rule_object",
+          "constraint_scope"
+        ]
+      },
       "operator": ">=",
       "value": "3.0",
-      "value_numeric": 3,
+      "value_numeric": 3.0,
       "unit": "m",
       "applies_to": "All Buildings",
       "condition": "flanking",
@@ -454,7 +847,7 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0045",
       "source_quote": "Minimum Lot Line Setbacks | Street Yard | front: 4.0 m | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | front: 4.0 m | flanking: 3.0 m",
-      "felt_popup_sentence": "All Buildings: flanking_street_yard_setback_m on side_lot_line must be at least 3.0 m when flanking."
+      "felt_popup_sentence": "All Buildings: setback for street yard flanking must be at least 3.0 m when flanking."
     },
     {
       "constraint_id": "burnaby_r1_050",
@@ -463,6 +856,15 @@
       "parameter_key": "lane_yard_setback_m",
       "export_group": "buildable_area",
       "geometry_target": "lane",
+      "geometry": {
+        "operation": "offset_inward",
+        "axis": "lane_lot_line",
+        "direction": "inward",
+        "source_fields": [
+          "rule_object",
+          "constraint_scope"
+        ]
+      },
       "operator": ">=",
       "value": "1.5",
       "value_numeric": 1.5,
@@ -475,7 +877,37 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0046",
       "source_quote": "Minimum Lot Line Setbacks | Lane Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | 1.5 m",
-      "felt_popup_sentence": "All Buildings: lane_yard_setback_m on lane must be at least 1.5 m."
+      "felt_popup_sentence": "All Buildings: setback for lane yard must be at least 1.5 m."
+    },
+    {
+      "constraint_id": "burnaby_r1_051",
+      "source_rule_id": "burnaby_r1_051",
+      "rule_object": "setback",
+      "parameter_key": "rear_yard_setback_m",
+      "export_group": "buildable_area",
+      "geometry_target": "rear_lot_line",
+      "geometry": {
+        "operation": "offset_inward",
+        "axis": "rear_lot_line",
+        "direction": "inward",
+        "source_fields": [
+          "rule_object",
+          "constraint_scope"
+        ]
+      },
+      "operator": ">=",
+      "value": "3.0",
+      "value_numeric": 3.0,
+      "unit": "m",
+      "applies_to": "Rear Principal Buildings",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 2,
+      "source_evidence_id": "pipeline5_merged_rule_0047__api_01",
+      "source_quote": "Minimum Lot Line Setbacks | Interior Rear Yard | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Rear Yard | 3.0 m, except 1.5 m for accessory buildings",
+      "felt_popup_sentence": "Rear Principal Buildings: setback for interior rear yard must be at least 3.0 m."
     },
     {
       "constraint_id": "burnaby_r1_052",
@@ -484,6 +916,15 @@
       "parameter_key": "accessory_rear_yard_setback_m",
       "export_group": "buildable_area",
       "geometry_target": "rear_lot_line",
+      "geometry": {
+        "operation": "offset_inward",
+        "axis": "rear_lot_line",
+        "direction": "inward",
+        "source_fields": [
+          "rule_object",
+          "constraint_scope"
+        ]
+      },
       "operator": ">=",
       "value": "1.5",
       "value_numeric": 1.5,
@@ -496,15 +937,54 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0047__api_02",
       "source_quote": "Minimum Lot Line Setbacks | Interior Rear Yard | 1.5 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Rear Yard | 3.0 m, except 1.5 m for accessory buildings",
-      "felt_popup_sentence": "All Buildings: accessory_rear_yard_setback_m on rear_lot_line must be at least 1.5 m when accessory buildings."
+      "felt_popup_sentence": "All Buildings: setback for interior rear yard must be at least 1.5 m when accessory buildings."
+    },
+    {
+      "constraint_id": "burnaby_r1_053",
+      "source_rule_id": "burnaby_r1_053",
+      "rule_object": "setback",
+      "parameter_key": "interior_side_yard_setback_m",
+      "export_group": "buildable_area",
+      "geometry_target": "side_lot_line",
+      "geometry": {
+        "operation": "offset_inward",
+        "axis": "side_lot_line",
+        "direction": "inward",
+        "source_fields": [
+          "rule_object",
+          "constraint_scope"
+        ]
+      },
+      "operator": ">=",
+      "value": "0",
+      "value_numeric": 0.0,
+      "unit": "m",
+      "applies_to": "All Buildings",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 2,
+      "source_evidence_id": "pipeline5_merged_rule_0048__api_01",
+      "source_quote": "Minimum Lot Line Setbacks | Interior Side Yard | 0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 0 m, except 1.2 m for end unit lots",
+      "felt_popup_sentence": "All Buildings: setback for interior side yard must be at least 0 m."
     },
     {
       "constraint_id": "burnaby_r1_054",
       "source_rule_id": "burnaby_r1_054",
       "rule_object": "setback",
-      "parameter_key": "interior_side_yard_setback_m",
+      "parameter_key": "end_unit_interior_side_yard_setback_m",
       "export_group": "buildable_area",
       "geometry_target": "side_lot_line",
+      "geometry": {
+        "operation": "offset_inward",
+        "axis": "side_lot_line",
+        "direction": "inward",
+        "source_fields": [
+          "rule_object",
+          "constraint_scope"
+        ]
+      },
       "operator": ">=",
       "value": "1.2",
       "value_numeric": 1.2,
@@ -517,7 +997,36 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0048__api_02",
       "source_quote": "Minimum Lot Line Setbacks | Interior Side Yard | 1.2 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 0 m, except 1.2 m for end unit lots",
-      "felt_popup_sentence": "All Buildings: interior_side_yard_setback_m on side_lot_line must be at least 1.2 m when end unit lots."
+      "felt_popup_sentence": "All Buildings: setback for interior side yard must be at least 1.2 m when end unit lots."
+    },
+    {
+      "constraint_id": "burnaby_r1_056",
+      "source_rule_id": "burnaby_r1_056",
+      "rule_object": "building_separation",
+      "parameter_key": "building_separation_m",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": ">=",
+      "value": "2.4",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 2,
+      "source_evidence_id": "pipeline5_merged_rule_0050",
+      "source_quote": "Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m",
+      "felt_popup_sentence": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units): building separation for building separation must be at least 2.4 m."
     },
     {
       "constraint_id": "burnaby_r1_057",
@@ -526,6 +1035,14 @@
       "parameter_key": "rear_principal_separation_m",
       "export_group": "buildable_area",
       "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": ">=",
       "value": "2.4",
       "value_numeric": 2.4,
@@ -538,7 +1055,7 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0051",
       "source_quote": "Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m",
-      "felt_popup_sentence": "Rear Principal Buildings: rear_principal_separation_m on building_footprint must be at least 2.4 m."
+      "felt_popup_sentence": "Rear Principal Buildings: building separation for building separation must be at least 2.4 m."
     },
     {
       "constraint_id": "burnaby_r1_058",
@@ -547,9 +1064,17 @@
       "parameter_key": "front_rear_principal_separation_m",
       "export_group": "buildable_area",
       "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": ">=",
       "value": "6.0",
-      "value_numeric": 6,
+      "value_numeric": 6.0,
       "unit": "m",
       "applies_to": "Front and Rear Principal Buildings",
       "condition": "",
@@ -559,7 +1084,7 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0052",
       "source_quote": "Minimum Separation Of Buildings | Between Front & Rear Principals | 6.0 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | 6.0 m",
-      "felt_popup_sentence": "Front and Rear Principal Buildings: front_rear_principal_separation_m on building_footprint must be at least 6.0 m."
+      "felt_popup_sentence": "Front and Rear Principal Buildings: building separation for building separation must be at least 6.0 m."
     },
     {
       "constraint_id": "burnaby_r1_059",
@@ -568,6 +1093,14 @@
       "parameter_key": "other_building_separation_m",
       "export_group": "buildable_area",
       "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": ">=",
       "value": "2.4",
       "value_numeric": 2.4,
@@ -580,7 +1113,7 @@
       "source_page": 2,
       "source_evidence_id": "pipeline5_merged_rule_0053",
       "source_quote": "Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
-      "felt_popup_sentence": "All Other Buildings: other_building_separation_m on building_footprint must be at least 2.4 m."
+      "felt_popup_sentence": "All Other Buildings: building separation for building separation must be at least 2.4 m."
     },
     {
       "constraint_id": "burnaby_r1_062",
@@ -589,19 +1122,27 @@
       "parameter_key": "max_dwelling_units",
       "export_group": "capacity",
       "geometry_target": "parcel_polygon",
+      "geometry": {
+        "operation": "unit_count_cap",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": "<=",
       "value": "6",
-      "value_numeric": 6,
+      "value_numeric": 6.0,
       "unit": "units",
       "applies_to": "dwelling units",
       "condition": "SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)",
       "exception": "",
       "gis_relevance": "context",
-      "gis_ready": true,
+      "gis_ready": false,
       "source_page": 1,
       "source_evidence_id": "pipeline5_merged_rule_0056",
       "source_quote": "This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot.",
-      "felt_popup_sentence": "dwelling units: max_dwelling_units on parcel_polygon must be no more than 6 units when SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)."
+      "felt_popup_sentence": "dwelling units: dwelling units for lot must be no more than 6 units when SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)."
     },
     {
       "constraint_id": "burnaby_r1_074",
@@ -610,9 +1151,17 @@
       "parameter_key": "front_rear_principal_separation_m",
       "export_group": "buildable_area",
       "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": ">=",
       "value": "6.0",
-      "value_numeric": 6,
+      "value_numeric": 6.0,
       "unit": "m",
       "applies_to": "principal building",
       "condition": "located between a front and rear principal",
@@ -622,7 +1171,7 @@
       "source_page": 3,
       "source_evidence_id": "pipeline5_merged_rule_0068__api_01",
       "source_quote": "Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals",
-      "felt_popup_sentence": "principal building: front_rear_principal_separation_m on building_footprint must be at least 6.0 m when located between a front and rear principal."
+      "felt_popup_sentence": "principal building: building separation for building separation must be at least 6.0 m when located between a front and rear principal."
     },
     {
       "constraint_id": "burnaby_r1_116",
@@ -631,19 +1180,27 @@
       "parameter_key": "sprinkler_distance_threshold_m",
       "export_group": "fire_access",
       "geometry_target": "dwelling_unit",
+      "geometry": {
+        "operation": "trigger_predicate",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": ">",
       "value": 45,
-      "value_numeric": 45,
+      "value_numeric": 45.0,
       "unit": "m",
       "applies_to": "Dwelling units more than 45 m from a street lot line",
       "condition": "Dwelling units located more than 45 m from a lot line abutting a street",
       "exception": "",
       "gis_relevance": "context",
-      "gis_ready": true,
+      "gis_ready": false,
       "source_page": 6,
       "source_evidence_id": "pipeline5_merged_rule_0110",
       "source_quote": "(1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system.",
-      "felt_popup_sentence": "Dwelling units more than 45 m from a street lot line: sprinkler_distance_threshold_m on dwelling_unit must be more than 45 m when Dwelling units located more than 45 m from a lot line abutting a street."
+      "felt_popup_sentence": "Dwelling units more than 45 m from a street lot line: automatic sprinkler for dwelling unit must be more than 45 m when Dwelling units located more than 45 m from a lot line abutting a street."
     },
     {
       "constraint_id": "burnaby_r1_117",
@@ -652,19 +1209,27 @@
       "parameter_key": "fire_access_corridor_width_m",
       "export_group": "fire_access",
       "geometry_target": "access_path",
+      "geometry": {
+        "operation": "clearance",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": ">=",
       "value": "1.0",
-      "value_numeric": 1,
+      "value_numeric": 1.0,
       "unit": "m",
       "applies_to": "All dwelling units",
       "condition": "All dwelling units",
       "exception": "",
       "gis_relevance": "context",
-      "gis_ready": true,
+      "gis_ready": false,
       "source_page": 6,
       "source_evidence_id": "pipeline5_merged_rule_0111",
       "source_quote": "(2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that:",
-      "felt_popup_sentence": "All dwelling units: fire_access_corridor_width_m on access_path must be at least 1.0 m when All dwelling units."
+      "felt_popup_sentence": "All dwelling units: fire access corridor for corridor width must be at least 1.0 m when All dwelling units."
     },
     {
       "constraint_id": "burnaby_r1_120",
@@ -673,6 +1238,14 @@
       "parameter_key": "fire_access_vertical_clearance_m",
       "export_group": "fire_access",
       "geometry_target": "access_path",
+      "geometry": {
+        "operation": "clearance",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
       "operator": ">=",
       "value": "2.5",
       "value_numeric": 2.5,
@@ -681,319 +1254,313 @@
       "condition": "All dwelling units; must be clear of any projections or obstructions",
       "exception": "",
       "gis_relevance": "context",
-      "gis_ready": true,
+      "gis_ready": false,
       "source_page": 6,
       "source_evidence_id": "pipeline5_merged_rule_0114",
       "source_quote": "(b) is clear of any projections or obstructions to a minimum of 2.5 m in height.",
-      "felt_popup_sentence": "All dwelling units: fire_access_vertical_clearance_m on access_path must be at least 2.5 m when All dwelling units; must be clear of any projections or obstructions."
+      "felt_popup_sentence": "All dwelling units: fire access corridor for vertical clearance must be at least 2.5 m when All dwelling units; must be clear of any projections or obstructions."
+    },
+    {
+      "constraint_id": "burnaby_r1_028",
+      "source_rule_id": "burnaby_r1_028",
+      "rule_object": "lot_area",
+      "parameter_key": "min_lot_area_m2",
+      "export_group": "capacity",
+      "geometry_target": "parcel_polygon",
+      "geometry": {
+        "operation": "area_floor",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": ">=",
+      "value": "281",
+      "value_numeric": 281.0,
+      "unit": "m²",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "condition": "4 Units Only",
+      "exception": "",
+      "gis_relevance": "context",
+      "gis_ready": false,
+      "source_page": 1,
+      "source_evidence_id": "bundle::burnaby_r1_028",
+      "source_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²\n[pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 4 Units Only: 281 m2\n[pipeline5_merged_rule_0025] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 281 m2",
+      "felt_popup_sentence": "Small-Scale Multi-Unit (3 to 4 Units): lot area for lot must be at least 281 m² when 4 Units Only."
+    },
+    {
+      "constraint_id": "burnaby_r1_075",
+      "source_rule_id": "burnaby_r1_075",
+      "rule_object": "building_separation",
+      "parameter_key": "front_rear_principal_separation_m",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": ">=",
+      "value": "6.0",
+      "value_numeric": 6.0,
+      "unit": "m",
+      "applies_to": "principal building",
+      "condition": "located between a front and rear principal on a through lot",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 3,
+      "source_evidence_id": "bundle::burnaby_r1_075",
+      "source_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals\n[pipeline5_merged_rule_0069] or, in the case of through lots, from each opposing front principal\n[pipeline5_merged_rule_0070] and a minimum 2.4 m separation from any other principals between it and a side lot line.",
+      "felt_popup_sentence": "principal building: building separation for building separation must be at least 6.0 m when located between a front and rear principal on a through lot."
+    },
+    {
+      "constraint_id": "burnaby_r1_076",
+      "source_rule_id": "burnaby_r1_076",
+      "rule_object": "building_separation",
+      "parameter_key": "front_rear_principal_separation_m",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": ">=",
+      "value": "2.4",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "applies_to": "principal building",
+      "condition": "located between a front and rear principal",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 2,
+      "source_evidence_id": "bundle::burnaby_r1_076",
+      "source_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m\n[pipeline5_merged_rule_0051] Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m\n[pipeline5_merged_rule_0053] Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
+      "felt_popup_sentence": "principal building: building separation for building separation must be at least 2.4 m when located between a front and rear principal."
     }
   ],
   "review_blockers": {
-    "count": 81,
+    "count": 63,
     "category_counts": [
       {
-        "name": "better_evidence_needed",
-        "count": 37
+        "name": "missing_condition_evidence",
+        "count": 23
       },
       {
-        "name": "almost_verified",
-        "count": 18
-      },
-      {
-        "name": "scope_review",
+        "name": "operator_uncertain",
         "count": 11
       },
       {
-        "name": "verifier_tuning_candidate",
+        "name": "missing_applies_to",
         "count": 10
       },
       {
-        "name": "human_legal_review",
-        "count": 3
+        "name": "near_verified_table_context",
+        "count": 5
       },
       {
-        "name": "conflict_review",
+        "name": "text_candidate_needs_consensus",
+        "count": 5
+      },
+      {
+        "name": "general_review",
+        "count": 4
+      },
+      {
+        "name": "cross_family_conflict",
         "count": 2
+      },
+      {
+        "name": "missing_scope_evidence",
+        "count": 2
+      },
+      {
+        "name": "possible_rule_object_mismatch",
+        "count": 1
       }
     ],
     "action_counts": [
       {
         "name": "retry_with_better_evidence",
-        "count": 35
+        "count": 41
       },
       {
-        "name": "safe_verifier_tuning_candidate",
-        "count": 28
-      },
-      {
-        "name": "needs_second_source_consensus",
+        "name": "evidence_packet_repair_candidate",
         "count": 7
       },
       {
+        "name": "safe_verifier_tuning_candidate",
+        "count": 5
+      },
+      {
+        "name": "needs_second_source_consensus",
+        "count": 4
+      },
+      {
         "name": "defer_low_priority",
-        "count": 6
+        "count": 3
       },
       {
         "name": "human_legal_review",
-        "count": 5
+        "count": 2
+      },
+      {
+        "name": "upstream_candidate_issue",
+        "count": 1
       }
     ],
     "rule_family_counts": [
       {
         "name": "dwelling_units",
-        "count": 14
-      },
-      {
-        "name": "building_separation",
-        "count": 12
+        "count": 15
       },
       {
         "name": "setback",
         "count": 11
       },
       {
+        "name": "building_separation",
+        "count": 9
+      },
+      {
         "name": "height",
-        "count": 10
+        "count": 9
       },
       {
         "name": "lot_area",
-        "count": 8
-      },
-      {
-        "name": "site_width",
-        "count": 7
+        "count": 6
       },
       {
         "name": "lot_coverage",
         "count": 6
       },
       {
-        "name": "permitted_use",
-        "count": 3
-      },
-      {
         "name": "impervious_surface",
         "count": 3
       },
       {
-        "name": "storeys",
-        "count": 3
-      },
-      {
-        "name": "parking",
+        "name": "permitted_use",
         "count": 2
       },
       {
-        "name": "prohibited_use",
+        "name": "fire_access_corridor",
+        "count": 1
+      },
+      {
+        "name": "storeys",
         "count": 1
       }
     ],
     "example_blockers": [
       {
-        "rule_id": "burnaby_r1_004",
-        "rule_object": "permitted_use",
-        "category": "almost_verified",
-        "priority": "high",
-        "action_bucket": "safe_verifier_tuning_candidate",
-        "support_gaps": [
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Check whether the missing support gap can be solved with a generic wording/operator/scope rule."
-      },
-      {
-        "rule_id": "burnaby_r1_011",
-        "rule_object": "site_width",
-        "category": "human_legal_review",
-        "priority": "high",
-        "action_bucket": "human_legal_review",
-        "support_gaps": [
-          "unresolved_exception_cue",
-          "table_column_not_target_scope",
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Do not promote automatically; legal condition or conflict can change the rule meaning."
-      },
-      {
-        "rule_id": "burnaby_r1_012",
-        "rule_object": "site_width",
-        "category": "scope_review",
-        "priority": "medium",
-        "action_bucket": "defer_low_priority",
-        "support_gaps": [
-          "table_column_not_target_scope",
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Read the candidate sentence and evidence sentence, then decide whether evidence repair or upstream extraction is needed."
-      },
-      {
-        "rule_id": "burnaby_r1_013",
-        "rule_object": "site_width",
-        "category": "almost_verified",
-        "priority": "high",
-        "action_bucket": "safe_verifier_tuning_candidate",
-        "support_gaps": [
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Check whether the missing support gap can be solved with a generic wording/operator/scope rule."
-      },
-      {
-        "rule_id": "burnaby_r1_014",
-        "rule_object": "site_width",
-        "category": "scope_review",
-        "priority": "medium",
-        "action_bucket": "defer_low_priority",
-        "support_gaps": [
-          "table_column_not_target_scope",
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Read the candidate sentence and evidence sentence, then decide whether evidence repair or upstream extraction is needed."
-      },
-      {
-        "rule_id": "burnaby_r1_015",
-        "rule_object": "site_width",
-        "category": "almost_verified",
-        "priority": "high",
-        "action_bucket": "safe_verifier_tuning_candidate",
-        "support_gaps": [
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Check whether the missing support gap can be solved with a generic wording/operator/scope rule."
-      },
-      {
-        "rule_id": "burnaby_r1_016",
-        "rule_object": "site_width",
-        "category": "scope_review",
-        "priority": "medium",
-        "action_bucket": "defer_low_priority",
-        "support_gaps": [
-          "table_column_not_target_scope",
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Read the candidate sentence and evidence sentence, then decide whether evidence repair or upstream extraction is needed."
-      },
-      {
-        "rule_id": "burnaby_r1_017",
-        "rule_object": "site_width",
-        "category": "almost_verified",
-        "priority": "high",
-        "action_bucket": "safe_verifier_tuning_candidate",
-        "support_gaps": [
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Check whether the missing support gap can be solved with a generic wording/operator/scope rule."
-      },
-      {
-        "rule_id": "burnaby_r1_018",
-        "rule_object": "lot_area",
-        "category": "almost_verified",
-        "priority": "high",
-        "action_bucket": "safe_verifier_tuning_candidate",
-        "support_gaps": [
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Check whether the missing support gap can be solved with a generic wording/operator/scope rule."
-      },
-      {
         "rule_id": "burnaby_r1_019",
         "rule_object": "lot_area",
-        "category": "better_evidence_needed",
-        "priority": "medium",
-        "action_bucket": "retry_with_better_evidence",
-        "support_gaps": [
-          "table_column_not_target_scope",
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Open the suggested evidence and compare value, unit, operator, scope, condition, and exception language."
+        "review_category": "missing_scope_evidence",
+        "review_reason": "rule family direction mismatch; the table column does not match the configured target scope; table cell candidate requires review; table evidence candidate requires review"
       },
       {
         "rule_id": "burnaby_r1_020",
         "rule_object": "dwelling_units",
-        "category": "better_evidence_needed",
-        "priority": "low",
-        "action_bucket": "retry_with_better_evidence",
-        "support_gaps": [
-          "applies_to_not_supported",
-          "operator_not_supported",
-          "table_applies_to_not_supported",
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Open the suggested evidence and compare value, unit, operator, scope, condition, and exception language."
+        "review_category": "operator_uncertain",
+        "review_reason": "rule family direction mismatch; the applies_to field is not clearly grounded; the proposed operator is not supported by the cited wording; the table row or column does not support applies_to"
       },
       {
         "rule_id": "burnaby_r1_021",
         "rule_object": "dwelling_units",
-        "category": "almost_verified",
-        "priority": "high",
-        "action_bucket": "safe_verifier_tuning_candidate",
-        "support_gaps": [
-          "table_cell_candidate_requires_review",
-          "table_evidence_candidate_requires_review"
-        ],
-        "human_instruction": "Check whether the missing support gap can be solved with a generic wording/operator/scope rule."
+        "review_category": "near_verified_table_context",
+        "review_reason": "table cell candidate requires review; table evidence candidate requires review"
+      },
+      {
+        "rule_id": "burnaby_r1_022",
+        "rule_object": "dwelling_units",
+        "review_category": "operator_uncertain",
+        "review_reason": "rule family direction mismatch; the proposed operator is not supported by the cited wording"
+      },
+      {
+        "rule_id": "burnaby_r1_023",
+        "rule_object": "dwelling_units",
+        "review_category": "near_verified_table_context",
+        "review_reason": "table cell candidate requires review; table evidence candidate requires review"
+      },
+      {
+        "rule_id": "burnaby_r1_024",
+        "rule_object": "dwelling_units",
+        "review_category": "operator_uncertain",
+        "review_reason": "rule family direction mismatch; the proposed operator is not supported by the cited wording"
+      },
+      {
+        "rule_id": "burnaby_r1_025",
+        "rule_object": "dwelling_units",
+        "review_category": "near_verified_table_context",
+        "review_reason": "table cell candidate requires review; table evidence candidate requires review"
+      },
+      {
+        "rule_id": "burnaby_r1_026",
+        "rule_object": "dwelling_units",
+        "review_category": "missing_condition_evidence",
+        "review_reason": "the cited text does not support a material condition needed for text-rule verification; rule family direction mismatch; the proposed operator is not supported by the cited wording"
       }
     ]
   },
   "not_used_summary": {
-    "count": 23,
+    "count": 33,
     "top_reasons": [
       {
-        "name": "outside_current_rule_contract",
-        "count": 17
-      },
-      {
         "name": "rule_object_not_supported",
-        "count": 15
+        "count": 31
       },
       {
-        "name": "text_candidate_requires_review",
-        "count": 15
+        "name": "outside_current_rule_contract",
+        "count": 28
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review",
+        "count": 18
       },
       {
         "name": "operator_not_supported",
-        "count": 13
-      },
-      {
-        "name": "cross_reference_only",
-        "count": 9
+        "count": 15
       },
       {
         "name": "table_cell_candidate_requires_review",
-        "count": 8
+        "count": 14
       },
       {
         "name": "table_evidence_candidate_requires_review",
-        "count": 8
-      },
-      {
-        "name": "administrative_process_rule",
-        "count": 7
+        "count": 14
       },
       {
         "name": "table_column_not_target_scope",
-        "count": 6
+        "count": 10
       },
       {
         "name": "applies_to_not_supported",
-        "count": 5
+        "count": 8
+      },
+      {
+        "name": "cross_reference_only",
+        "count": 8
+      },
+      {
+        "name": "constraint_scope_not_supported",
+        "count": 3
       },
       {
         "name": "text_condition_not_supported",
         "count": 3
       },
       {
-        "name": "constraint_scope_not_supported",
-        "count": 2
+        "name": "rule_family_direction_mismatch",
+        "count": 1
       }
     ],
     "example_rule_ids": [
@@ -1004,18 +1571,14 @@
       "burnaby_r1_007",
       "burnaby_r1_008",
       "burnaby_r1_009",
-      "burnaby_r1_010",
-      "burnaby_r1_079",
-      "burnaby_r1_083",
-      "burnaby_r1_084",
-      "burnaby_r1_085"
+      "burnaby_r1_010"
     ]
   },
   "export_counts": {
-    "verified_rule_count": 18,
-    "gis_constraint_count": 18,
-    "buildable_area_parameter_count": 16,
-    "review_blocker_rule_count": 81,
-    "not_used_rule_count": 23
+    "verified_rule_count": 30,
+    "gis_constraint_count": 30,
+    "buildable_area_parameter_count": 25,
+    "review_blocker_rule_count": 63,
+    "not_used_rule_count": 33
   }
 }

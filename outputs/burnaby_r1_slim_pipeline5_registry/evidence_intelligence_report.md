@@ -1,46 +1,49 @@
-# Evidence Intelligence
+# Evidence Intelligence Report
 
-This report merges deterministic evidence repair and MiniLM semantic retrieval. It does not verify rules.
+This report ranks and bundles evidence for review rules. It does not verify rules.
 
-- Review rules covered: 81
-- Repair + semantic overlap: 57
-- Semantic-only leads: 17
-- Repair-only leads: 4
-- No automatic suggestion: 3
-- Direct verification allowed: `False`
+- Review rules: 63
+- Evidence packets indexed: 142
+- Safe bundle rerun candidates: 22
+- Blocked items: 41
 
-## Action Counts
+## Next Actions
 
-- `rerun_with_repair_evidence`: 37
-- `inspect_ranked_evidence`: 30
-- `inspect_semantic_evidence_then_rerun`: 10
-- `human_legal_review`: 3
-- `manual_review_no_automatic_suggestion`: 1
+- `rerun_with_evidence_bundle`: 22
+- `human_legal_review`: 14
+- `blocked_review`: 10
+- `retry_with_better_evidence`: 10
+- `inspect_context_fields`: 7
 
-## Top 25
+## Top 30 Items
 
-- `burnaby_r1_019` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0061`
-- `burnaby_r1_020` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0072__api_01`
-- `burnaby_r1_022` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0072__api_01`
-- `burnaby_r1_024` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0054`
-- `burnaby_r1_026` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0054`
-- `burnaby_r1_028` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0018`
-- `burnaby_r1_029` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0018`
-- `burnaby_r1_030` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0061`
-- `burnaby_r1_032` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0030`
-- `burnaby_r1_036` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0120`
-- `burnaby_r1_037` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0120`
-- `burnaby_r1_046` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0041`
-- `burnaby_r1_066` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0061`
-- `burnaby_r1_071` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0048__api_01`
-- `burnaby_r1_075` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0068__api_01`
-- `burnaby_r1_076` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0050`
-- `burnaby_r1_082` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0116`
-- `burnaby_r1_086` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0079`
-- `burnaby_r1_101` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0066`
-- `burnaby_r1_102` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0066`
-- `burnaby_r1_103` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0066`
-- `burnaby_r1_105` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0101`
-- `burnaby_r1_108` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0066`
-- `burnaby_r1_109` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0105`
-- `burnaby_r1_113` -> `rerun_with_repair_evidence` source=`repair_and_semantic` confidence=1.00 evidence=`pipeline5_merged_rule_0106__api_01`
+- `burnaby_r1_029` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_063` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_070` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_086` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_101` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_102` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_103` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_108` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_127` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_129` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_130` score=1.00 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_095` score=0.92 safe_retry=True action=`rerun_with_evidence_bundle` missing=none blocked_by=none
+- `burnaby_r1_027` score=0.84 safe_retry=True action=`rerun_with_evidence_bundle` missing=condition blocked_by=none
+- `burnaby_r1_032` score=0.84 safe_retry=True action=`rerun_with_evidence_bundle` missing=applies_to blocked_by=none
+- `burnaby_r1_033` score=0.84 safe_retry=True action=`rerun_with_evidence_bundle` missing=applies_to blocked_by=none
+- `burnaby_r1_035` score=0.84 safe_retry=True action=`rerun_with_evidence_bundle` missing=applies_to blocked_by=none
+- `burnaby_r1_094` score=0.84 safe_retry=True action=`rerun_with_evidence_bundle` missing=applies_to blocked_by=none
+- `burnaby_r1_031` score=0.76 safe_retry=True action=`rerun_with_evidence_bundle` missing=applies_to blocked_by=none
+- `burnaby_r1_034` score=0.76 safe_retry=True action=`rerun_with_evidence_bundle` missing=applies_to blocked_by=none
+- `burnaby_r1_036` score=0.76 safe_retry=True action=`rerun_with_evidence_bundle` missing=applies_to blocked_by=none
+- `burnaby_r1_046` score=0.76 safe_retry=True action=`rerun_with_evidence_bundle` missing=scope blocked_by=none
+- `burnaby_r1_093` score=0.76 safe_retry=True action=`rerun_with_evidence_bundle` missing=applies_to blocked_by=none
+- `burnaby_r1_060` score=0.85 safe_retry=False action=`blocked_review` missing=none blocked_by=support_gap:rule_family_direction_mismatch
+- `burnaby_r1_061` score=0.85 safe_retry=False action=`blocked_review` missing=none blocked_by=support_gap:rule_family_direction_mismatch
+- `burnaby_r1_064` score=0.85 safe_retry=False action=`human_legal_review` missing=none blocked_by=bundle_contains_exception_or_covenant_language
+- `burnaby_r1_066` score=0.85 safe_retry=False action=`human_legal_review` missing=none blocked_by=bundle_contains_exception_or_covenant_language
+- `burnaby_r1_067` score=0.85 safe_retry=False action=`human_legal_review` missing=none blocked_by=bundle_contains_exception_or_covenant_language
+- `burnaby_r1_071` score=0.85 safe_retry=False action=`human_legal_review` missing=none blocked_by=bundle_contains_exception_or_covenant_language
+- `burnaby_r1_077` score=0.85 safe_retry=False action=`blocked_review` missing=none blocked_by=support_gap:rule_family_direction_mismatch
+- `burnaby_r1_126` score=0.85 safe_retry=False action=`blocked_review` missing=none blocked_by=support_gap:cross_family_value_collision

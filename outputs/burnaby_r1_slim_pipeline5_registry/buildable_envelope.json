@@ -1,0 +1,264 @@
+{
+  "city": "Burnaby",
+  "zone": "R1",
+  "source_document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+  "derived_from": "gis_felt_export.json (verified-only)",
+  "lot_line_setbacks_m": {
+    "front_lot_line": [
+      {
+        "rule_id": "burnaby_r1_048",
+        "value_numeric": 4.0,
+        "unit": "m",
+        "operator": ">=",
+        "condition": "front",
+        "applies_to": "All Buildings"
+      }
+    ],
+    "lane_lot_line": [
+      {
+        "rule_id": "burnaby_r1_050",
+        "value_numeric": 1.5,
+        "unit": "m",
+        "operator": ">=",
+        "condition": null,
+        "applies_to": "All Buildings"
+      }
+    ],
+    "rear_lot_line": [
+      {
+        "rule_id": "burnaby_r1_051",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "operator": ">=",
+        "condition": null,
+        "applies_to": "Rear Principal Buildings"
+      },
+      {
+        "rule_id": "burnaby_r1_052",
+        "value_numeric": 1.5,
+        "unit": "m",
+        "operator": ">=",
+        "condition": "accessory buildings",
+        "applies_to": "All Buildings"
+      }
+    ],
+    "side_lot_line": [
+      {
+        "rule_id": "burnaby_r1_049",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "operator": ">=",
+        "condition": "flanking",
+        "applies_to": "All Buildings"
+      },
+      {
+        "rule_id": "burnaby_r1_053",
+        "value_numeric": 0.0,
+        "unit": "m",
+        "operator": ">=",
+        "condition": null,
+        "applies_to": "All Buildings"
+      },
+      {
+        "rule_id": "burnaby_r1_054",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "operator": ">=",
+        "condition": "end unit lots",
+        "applies_to": "All Buildings"
+      }
+    ]
+  },
+  "max_height_m_by_role": {
+    "Accessory Buildings": [
+      {
+        "rule_id": "burnaby_r1_045",
+        "value_numeric": 4.0,
+        "unit": "m",
+        "operator": "<=",
+        "condition": null,
+        "applies_to": "Accessory Buildings"
+      }
+    ],
+    "Front Principal Buildings": [
+      {
+        "rule_id": "burnaby_r1_038",
+        "value_numeric": 10.0,
+        "unit": "m",
+        "operator": "<=",
+        "condition": "sloping roof",
+        "applies_to": "Front Principal Buildings"
+      },
+      {
+        "rule_id": "burnaby_r1_039",
+        "value_numeric": 9.5,
+        "unit": "m",
+        "operator": "<=",
+        "condition": "flat roof",
+        "applies_to": "Front Principal Buildings"
+      }
+    ],
+    "Rear Principal Buildings": [
+      {
+        "rule_id": "burnaby_r1_042",
+        "value_numeric": 7.5,
+        "unit": "m",
+        "operator": "<=",
+        "condition": "sloping roof",
+        "applies_to": "Rear Principal Buildings"
+      },
+      {
+        "rule_id": "burnaby_r1_043",
+        "value_numeric": 7.0,
+        "unit": "m",
+        "operator": "<=",
+        "condition": "flat roof",
+        "applies_to": "Rear Principal Buildings"
+      }
+    ]
+  },
+  "max_storeys_by_role": {
+    "Front Principal Buildings": [
+      {
+        "rule_id": "burnaby_r1_040",
+        "value_numeric": 3.0,
+        "unit": "storeys",
+        "operator": "<=",
+        "condition": null,
+        "applies_to": "Front Principal Buildings"
+      },
+      {
+        "rule_id": "burnaby_r1_041",
+        "value_numeric": 2.5,
+        "unit": "storeys",
+        "operator": "<=",
+        "condition": null,
+        "applies_to": "Front Principal Buildings"
+      }
+    ],
+    "Rear Principal Buildings": [
+      {
+        "rule_id": "burnaby_r1_044",
+        "value_numeric": 2.0,
+        "unit": "storeys",
+        "operator": "<=",
+        "condition": null,
+        "applies_to": "Rear Principal Buildings"
+      }
+    ]
+  },
+  "building_separations_m": [
+    {
+      "rule_id": "burnaby_r1_056",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "operator": ">=",
+      "condition": null,
+      "applies_to": "Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units); Small-Scale Multi-Unit (5 to 6 Units)"
+    },
+    {
+      "rule_id": "burnaby_r1_057",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "operator": ">=",
+      "condition": null,
+      "applies_to": "Rear Principal Buildings"
+    },
+    {
+      "rule_id": "burnaby_r1_058",
+      "value_numeric": 6.0,
+      "unit": "m",
+      "operator": ">=",
+      "condition": null,
+      "applies_to": "Front and Rear Principal Buildings"
+    },
+    {
+      "rule_id": "burnaby_r1_059",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "operator": ">=",
+      "condition": null,
+      "applies_to": "All Other Buildings"
+    },
+    {
+      "rule_id": "burnaby_r1_074",
+      "value_numeric": 6.0,
+      "unit": "m",
+      "operator": ">=",
+      "condition": "located between a front and rear principal",
+      "applies_to": "principal building"
+    }
+  ],
+  "max_lot_coverage_pct": [],
+  "max_impervious_surface_pct": [],
+  "parcel_level": {
+    "min_lot_area": {
+      "rule_id": "burnaby_r1_018",
+      "value_numeric": 281.0,
+      "unit": "m²",
+      "operator": ">=",
+      "condition": null,
+      "applies_to": "Small-Scale Multi-Unit"
+    },
+    "max_dwelling_units": {
+      "rule_id": "burnaby_r1_062",
+      "value_numeric": 6.0,
+      "unit": "units",
+      "operator": "<=",
+      "condition": "SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)",
+      "applies_to": "dwelling units"
+    }
+  },
+  "context_and_triggers": [
+    {
+      "rule_id": "burnaby_r1_001",
+      "value_numeric": null,
+      "unit": "",
+      "operator": "allowed",
+      "condition": null,
+      "applies_to": "Principal Use",
+      "operation": "use_permission"
+    },
+    {
+      "rule_id": "burnaby_r1_004",
+      "value_numeric": null,
+      "unit": "",
+      "operator": "allowed",
+      "condition": null,
+      "applies_to": "Principal Use",
+      "operation": "use_permission"
+    },
+    {
+      "rule_id": "burnaby_r1_116",
+      "value_numeric": 45.0,
+      "unit": "m",
+      "operator": ">",
+      "condition": "Dwelling units located more than 45 m from a lot line abutting a street",
+      "applies_to": "Dwelling units more than 45 m from a street lot line",
+      "operation": "trigger_predicate"
+    },
+    {
+      "rule_id": "burnaby_r1_117",
+      "value_numeric": 1.0,
+      "unit": "m",
+      "operator": ">=",
+      "condition": "All dwelling units",
+      "applies_to": "All dwelling units",
+      "operation": "clearance"
+    },
+    {
+      "rule_id": "burnaby_r1_120",
+      "value_numeric": 2.5,
+      "unit": "m",
+      "operator": ">=",
+      "condition": "All dwelling units; must be clear of any projections or obstructions",
+      "applies_to": "All dwelling units",
+      "operation": "clearance"
+    }
+  ],
+  "notes": [
+    "Read-only projection of verified rules; not a verification artifact.",
+    "Setbacks are keyed by lot line; multiple entries reflect conditional variants (e.g. end-unit, accessory).",
+    "Heights/storeys are grouped by building role; roof-type condition is preserved, not collapsed."
+  ]
+}

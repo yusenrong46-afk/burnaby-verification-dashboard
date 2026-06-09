@@ -1,0 +1,943 @@
+{
+  "mode": "guarded_bundle_promotion",
+  "promotion_count": 3,
+  "review_removed_count": 3,
+  "rejected_promotion_count": 0,
+  "promoted_rule_ids": [
+    "burnaby_r1_028",
+    "burnaby_r1_075",
+    "burnaby_r1_076"
+  ],
+  "promoted_rules": [
+    {
+      "rule_id": "burnaby_r1_028",
+      "rule_object": "lot_area",
+      "constraint_type": "minimum",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "value": "281",
+      "unit": "m²",
+      "operator": ">=",
+      "condition": "4 Units Only",
+      "exception": "",
+      "gis_relevance": "context",
+      "verification_status": "verified",
+      "verification_decision": "verified",
+      "verification_label": "supported",
+      "canonical_rule_key": "lot_area__lot__small_scale_multi_unit_3_to_4_units__4_units_only____281__m",
+      "proof_type": "table_natural_logic",
+      "table_proof_status": "complete",
+      "text_span_proof_status": "none",
+      "proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "condition words appear in evidence"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "text_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "condition words appear in evidence"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "text_span_proof_trace": {},
+      "table_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "table_title/row_header",
+          "evidence_quote": "Minimum Lot Area",
+          "reason": "table context contains lot_area cue"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "row_header/column_header",
+          "evidence_quote": "Lot Area .3 | Small-Scale Multi-Unit",
+          "reason": "scope words are present in table row/column context"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "row_header/column_header",
+          "evidence_quote": "Lot Area .3 | Small-Scale Multi-Unit | Minimum Lot Area",
+          "reason": "applies_to words are present in table context"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "table_title/row_header",
+          "evidence_quote": "Minimum Lot Area",
+          "reason": "table wording implies >="
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "cell_value",
+          "evidence_quote": "281 m²",
+          "reason": "numeric value appears in table cell"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "cell_value",
+          "evidence_quote": "281 m²",
+          "reason": "unit appears in table cell"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "column_header/table_text",
+          "evidence_quote": "Small-Scale Multi-Unit | Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | [pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²\n[pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 4 Units Only: 281 m2\n[pipeline5_merged_rule_0025] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 281 m2",
+          "reason": "condition words are present in table context"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "no exception claim and no unresolved exception cue"
+        }
+      },
+      "merged_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m² [pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum...",
+          "reason": "condition words appear in evidence"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "proof_decision_mismatch": false,
+      "proof_decision_mismatches": [],
+      "evidence_strength": 0.883,
+      "review_priority": "verified",
+      "support_gaps": [],
+      "support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "normalization_trace": [],
+      "review_reason": "verified after guarded evidence bundle rerun",
+      "source": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 1,
+        "section": null,
+        "evidence_id": "bundle::burnaby_r1_028",
+        "evidence_type": "table_cell",
+        "evidence_text": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²\n[pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 4 Units Only: 281 m2\n[pipeline5_merged_rule_0025] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 281 m2",
+        "source_context": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²\n[pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 4 Units Only: 281 m2\n[pipeline5_merged_rule_0025] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 281 m2",
+        "inherited_parent_context": null,
+        "local_context": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²\n[pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 4 Units Only: 281 m2\n[pipeline5_merged_rule_0025] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 281 m2",
+        "source_section": null,
+        "source_heading": null,
+        "table_title": "Minimum Lot Area",
+        "row_header": "Lot Area .3",
+        "column_header": "Small-Scale Multi-Unit",
+        "cell_value": "281 m²",
+        "bbox": null,
+        "table_parser": null
+      },
+      "candidate": {
+        "candidate_id": "pipeline5_merged_rule_0024__rerun__bundle_burnaby_r1_028",
+        "evidence_id": "bundle::burnaby_r1_028",
+        "rule_object": "lot_area",
+        "constraint_type": "minimum",
+        "constraint_scope": "lot",
+        "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+        "operator": ">=",
+        "value": "281",
+        "unit": "m²",
+        "condition": "4 Units Only",
+        "exception": "",
+        "gis_relevance": "context",
+        "notes": "adapted external candidate",
+        "extraction_method": "pipeline5_final_registry",
+        "extraction_source": "zihao",
+        "source_stream": "gemini_table_image",
+        "rule_key": "Minimum Lot Area",
+        "subject": "Lot Area",
+        "relevance_category": null,
+        "extraction_final_action": "ACCEPT",
+        "extraction_support_gaps": null,
+        "extraction_review_reasons": [],
+        "original_rule_id": "burnaby_r1_028",
+        "original_excerpt": "Minimum Lot Area | 4 Units Only: 281 m2",
+        "sentence_match_score": null,
+        "possible_missing_numeric_values": null,
+        "zihao_verification_status": null,
+        "zihao_confidence": null,
+        "zihao_needs_review": null,
+        "original_candidate_id": "pipeline5_merged_rule_0024",
+        "original_evidence_id": "pipeline5_merged_rule_0024",
+        "evidence_bundle_rerun": true
+      },
+      "promotion_source": "evidence_bundle_rerun",
+      "bundle_promotion": {
+        "original_rule_id": "burnaby_r1_028",
+        "retry_candidate_id": "pipeline5_merged_rule_0024__rerun__bundle_burnaby_r1_028",
+        "bundle_evidence_id": "bundle::burnaby_r1_028",
+        "bundle_evidence_ids": [
+          "pipeline5_merged_rule_0018",
+          "pipeline5_merged_rule_0024",
+          "pipeline5_merged_rule_0025"
+        ],
+        "bundle_score": 1.0,
+        "bundle_sentence": "pipeline5_merged_rule_0024 supports applies_to, condition, operator, rule_object, scope, unit, value; pipeline5_merged_rule_0018 supports applies_to, condition, operator, rule_object, scope, unit, value; pipeline5_merged_rule_0025 supports operator, rule_object, scope, unit, value; pipeline5_merged_rule_0081 supports operator, rule_object, scope, unit.",
+        "original_support_gaps": []
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_075",
+      "rule_object": "building_separation",
+      "constraint_type": "minimum",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "value": "6.0",
+      "unit": "m",
+      "operator": ">=",
+      "condition": "located between a front and rear principal on a through lot",
+      "exception": "",
+      "gis_relevance": "direct",
+      "verification_status": "verified",
+      "verification_decision": "verified",
+      "verification_label": "supported",
+      "canonical_rule_key": "building_separation__building_separation__principal_building__located_between_a_front_and_rear_principal_on_a_through_lot____6_0__m",
+      "proof_type": "text_evidence",
+      "table_proof_status": "none",
+      "text_span_proof_status": "complete",
+      "proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "condition words appear in evidence"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "text_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "condition words appear in evidence"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "text_span_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "separation",
+          "reason": "rule-object cue appears in text evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "minimum",
+          "reason": "text wording supports >= / minimum"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "front and rear principal must have a minimum 6.0 m separation from each of the front and rear",
+          "reason": "value appears in text evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "m",
+          "reason": "unit appears in text evidence"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "scope words appear in text evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "applies_to words appear in text evidence"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "material condition words appear in text evidence",
+          "required_for_text_verification": true
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "no explicit exception claim and no unresolved exception cue"
+        }
+      },
+      "table_proof_trace": {},
+      "merged_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals [pipeline5_merged_rule_0069] or, in the case of throug...",
+          "reason": "condition words appear in evidence"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "proof_decision_mismatch": false,
+      "proof_decision_mismatches": [],
+      "evidence_strength": 0.883,
+      "review_priority": "verified",
+      "support_gaps": [],
+      "support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "normalization_trace": [],
+      "review_reason": "verified after guarded evidence bundle rerun",
+      "source": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 3,
+        "section": null,
+        "evidence_id": "bundle::burnaby_r1_075",
+        "evidence_type": "clause",
+        "evidence_text": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals\n[pipeline5_merged_rule_0069] or, in the case of through lots, from each opposing front principal\n[pipeline5_merged_rule_0070] and a minimum 2.4 m separation from any other principals between it and a side lot line.",
+        "source_context": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals\n[pipeline5_merged_rule_0069] or, in the case of through lots, from each opposing front principal\n[pipeline5_merged_rule_0070] and a minimum 2.4 m separation from any other principals between it and a side lot line.",
+        "inherited_parent_context": null,
+        "local_context": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals\n[pipeline5_merged_rule_0069] or, in the case of through lots, from each opposing front principal\n[pipeline5_merged_rule_0070] and a minimum 2.4 m separation from any other principals between it and a side lot line.",
+        "source_section": null,
+        "source_heading": null,
+        "table_title": null,
+        "row_header": "separation from front and rear principals",
+        "column_header": null,
+        "cell_value": "6.0 m",
+        "bbox": null,
+        "table_parser": null
+      },
+      "candidate": {
+        "candidate_id": "pipeline5_merged_rule_0069__rerun__bundle_burnaby_r1_075",
+        "evidence_id": "bundle::burnaby_r1_075",
+        "rule_object": "building_separation",
+        "constraint_type": "minimum",
+        "constraint_scope": "building_separation",
+        "applies_to": "principal building",
+        "operator": ">=",
+        "value": "6.0",
+        "unit": "m",
+        "condition": "located between a front and rear principal on a through lot",
+        "exception": "",
+        "gis_relevance": "direct",
+        "notes": "adapted external candidate",
+        "extraction_method": "pipeline5_final_registry",
+        "extraction_source": "zihao",
+        "source_stream": "gemini_text_block",
+        "rule_key": "separation_opposing_front_principals",
+        "subject": "separation from opposing front principals",
+        "relevance_category": null,
+        "extraction_final_action": "ACCEPT",
+        "extraction_support_gaps": null,
+        "extraction_review_reasons": [],
+        "original_rule_id": "burnaby_r1_075",
+        "original_excerpt": "or, in the case of through lots, from each opposing front principal",
+        "sentence_match_score": null,
+        "possible_missing_numeric_values": null,
+        "zihao_verification_status": null,
+        "zihao_confidence": null,
+        "zihao_needs_review": null,
+        "original_candidate_id": "pipeline5_merged_rule_0069",
+        "original_evidence_id": "pipeline5_merged_rule_0069",
+        "evidence_bundle_rerun": true
+      },
+      "promotion_source": "evidence_bundle_rerun",
+      "bundle_promotion": {
+        "original_rule_id": "burnaby_r1_075",
+        "retry_candidate_id": "pipeline5_merged_rule_0069__rerun__bundle_burnaby_r1_075",
+        "bundle_evidence_id": "bundle::burnaby_r1_075",
+        "bundle_evidence_ids": [
+          "pipeline5_merged_rule_0068__api_01",
+          "pipeline5_merged_rule_0069",
+          "pipeline5_merged_rule_0070"
+        ],
+        "bundle_score": 1.0,
+        "bundle_sentence": "pipeline5_merged_rule_0069 supports applies_to, condition, rule_object, scope, unit, value; pipeline5_merged_rule_0068__api_01 supports applies_to, condition, operator, rule_object, scope, unit, value; pipeline5_merged_rule_0052 supports applies_to, condition, operator, rule_object, scope, unit, value; pipeline5_merged_rule_0070 supports applies_to, condition, operator, rule_object, scope, unit.",
+        "original_support_gaps": []
+      }
+    },
+    {
+      "rule_id": "burnaby_r1_076",
+      "rule_object": "building_separation",
+      "constraint_type": "minimum",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "value": "2.4",
+      "unit": "m",
+      "operator": ">=",
+      "condition": "located between a front and rear principal",
+      "exception": "",
+      "gis_relevance": "direct",
+      "verification_status": "verified",
+      "verification_decision": "verified",
+      "verification_label": "supported",
+      "canonical_rule_key": "building_separation__building_separation__principal_building__located_between_a_front_and_rear_principal____2_4__m",
+      "proof_type": "table_natural_logic_partial",
+      "table_proof_status": "partial",
+      "text_span_proof_status": "none",
+      "proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "material condition words appear in text evidence",
+          "required_for_text_verification": true
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "text_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "condition words appear in evidence"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "text_span_proof_trace": {},
+      "table_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "table_title/row_header",
+          "evidence_quote": "Minimum Separation Of Buildings",
+          "reason": "table context contains building_separation cue"
+        },
+        "constraint_scope": {
+          "label": "not_enough_info",
+          "evidence_field": "row_header/column_header",
+          "evidence_quote": "Between Front Principals | Between Front Principals",
+          "reason": "table context does not prove this claim"
+        },
+        "applies_to": {
+          "label": "not_enough_info",
+          "evidence_field": "row_header/column_header",
+          "evidence_quote": "Between Front Principals | Between Front Principals | Minimum Separation Of Buildings",
+          "reason": "table context does not prove this claim"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "table_title/row_header",
+          "evidence_quote": "Minimum Separation Of Buildings",
+          "reason": "table wording implies >="
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "cell_value",
+          "evidence_quote": "2.4 m",
+          "reason": "numeric value appears in table cell"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "cell_value",
+          "evidence_quote": "2.4 m",
+          "reason": "unit appears in table cell"
+        },
+        "condition": {
+          "label": "not_enough_info",
+          "evidence_field": "column_header/table_text",
+          "evidence_quote": "Between Front Principals | Minimum Separation Of Buildings | Between Front Principals | Between Front Principals | 2.4 m | [pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m\n[pipeline5_merged_rule_0051] Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m\n[pipeline5_merged_rule_0053] Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
+          "reason": "table context does not prove this claim"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "no exception claim and no unresolved exception cue"
+        }
+      },
+      "merged_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "table/evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m [pipeline5_merged_rule_0051] Minimum Separation Of...",
+          "reason": "material condition words appear in text evidence",
+          "required_for_text_verification": true
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "proof_decision_mismatch": false,
+      "proof_decision_mismatches": [],
+      "evidence_strength": 0.883,
+      "review_priority": "verified",
+      "support_gaps": [],
+      "support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "normalization_trace": [],
+      "review_reason": "verified after guarded evidence bundle rerun",
+      "source": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "section": null,
+        "evidence_id": "bundle::burnaby_r1_076",
+        "evidence_type": "table_cell",
+        "evidence_text": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m\n[pipeline5_merged_rule_0051] Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m\n[pipeline5_merged_rule_0053] Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
+        "source_context": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m\n[pipeline5_merged_rule_0051] Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m\n[pipeline5_merged_rule_0053] Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
+        "inherited_parent_context": null,
+        "local_context": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m\n[pipeline5_merged_rule_0051] Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m\n[pipeline5_merged_rule_0053] Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m",
+        "source_section": null,
+        "source_heading": null,
+        "table_title": "Minimum Separation Of Buildings",
+        "row_header": "Between Front Principals",
+        "column_header": "Between Front Principals",
+        "cell_value": "2.4 m",
+        "bbox": null,
+        "table_parser": null
+      },
+      "candidate": {
+        "candidate_id": "pipeline5_merged_rule_0070__rerun__bundle_burnaby_r1_076",
+        "evidence_id": "bundle::burnaby_r1_076",
+        "rule_object": "building_separation",
+        "constraint_type": "minimum",
+        "constraint_scope": "building_separation",
+        "applies_to": "principal building",
+        "operator": ">=",
+        "value": "2.4",
+        "unit": "m",
+        "condition": "located between a front and rear principal",
+        "exception": "",
+        "gis_relevance": "direct",
+        "notes": "adapted external candidate",
+        "extraction_method": "pipeline5_final_registry",
+        "extraction_source": "zihao",
+        "source_stream": "gemini_text_block",
+        "rule_key": "separation_other_principals_side_lot",
+        "subject": "separation from other principals between it and a side lot line",
+        "relevance_category": null,
+        "extraction_final_action": "ACCEPT",
+        "extraction_support_gaps": null,
+        "extraction_review_reasons": [],
+        "original_rule_id": "burnaby_r1_076",
+        "original_excerpt": "and a minimum 2.4 m separation from any other principals between it and a side lot line.",
+        "sentence_match_score": null,
+        "possible_missing_numeric_values": null,
+        "zihao_verification_status": null,
+        "zihao_confidence": null,
+        "zihao_needs_review": null,
+        "original_candidate_id": "pipeline5_merged_rule_0070",
+        "original_evidence_id": "pipeline5_merged_rule_0070",
+        "evidence_bundle_rerun": true
+      },
+      "promotion_source": "evidence_bundle_rerun",
+      "bundle_promotion": {
+        "original_rule_id": "burnaby_r1_076",
+        "retry_candidate_id": "pipeline5_merged_rule_0070__rerun__bundle_burnaby_r1_076",
+        "bundle_evidence_id": "bundle::burnaby_r1_076",
+        "bundle_evidence_ids": [
+          "pipeline5_merged_rule_0050",
+          "pipeline5_merged_rule_0051",
+          "pipeline5_merged_rule_0053"
+        ],
+        "bundle_score": 1.0,
+        "bundle_sentence": "pipeline5_merged_rule_0070 supports applies_to, condition, operator, rule_object, scope, unit, value; pipeline5_merged_rule_0050 supports applies_to, condition, operator, rule_object, scope, unit, value; pipeline5_merged_rule_0051 supports applies_to, condition, operator, rule_object, scope, unit, value; pipeline5_merged_rule_0053 supports condition, operator, rule_object, scope, unit, value.",
+        "original_support_gaps": []
+      }
+    }
+  ],
+  "rejected_promotions": [],
+  "notes": [
+    "Promotion requires deterministic bundle rerun to return verified.",
+    "Bundle score alone cannot promote a rule.",
+    "Rules with support gaps, proof mismatches, or exception/covenant language stay in review."
+  ]
+}

@@ -1,56 +1,53 @@
 # Slim Verification Report
 
 ```text
-Pipeline 5/6 candidates/evidence -> deterministic validation -> verified/review/rejected/not_used
+Pipeline 5 candidates/evidence -> deterministic validation -> verified/review/rejected/not_used
 ```
 
 - Input mode: `pipeline5_registry`
-- City / zone: `Burnaby / R1`
-- Source document: `R1Small-Scale-Multi-Unit-Housing-District.pdf`
 - Evidence units: 142
 - Candidate rules: 142
-- Verified rules: 18
-- Review needed: 81
-- Rejected rules: 20
-- Not used / traceability only: 23
+- Verified rules: 30
+- Review needed: 63
+- Rejected rules: 16
+- Not used / traceability only: 33
 - Evidence match rate: 1.00
 - Value grounding rate: 0.97
 - Table context completion: 1.00
-- Evidence repair suggestions: 61
-- Suggestions with alternative evidence: 61
-- Retry candidates from evidence repair: 37
-- Evidence rerun mode: `disabled`
-- Evidence rerun verified: 0
-- Evidence rerun promotion-ready: 0
-- Semantic retrieval backend: `fallback_lexical`
-- Semantic retrieval suggestions: 74
-- High-confidence semantic matches: 18
-- Evidence intelligence items: 81
-- Evidence intelligence no-suggestion items: 3
-- Evidence intelligence rerun attempts: 47
-- Evidence intelligence promotion-ready: 1
-- Extraction feedback rows: 104
-- GIS/Felt constraints: 18
-- GIS/Felt buildable-area parameters: 16
-- GIS/Felt review blockers: 81
+- Evidence repair suggestions: 56
+- Suggestions with alternative evidence: 56
+- Retry candidates from evidence repair: 43
+- Evidence intelligence safe bundle retries: 22
+- Evidence rerun attempts: 43
+- Promotion-ready shadow reruns: 0
+- Evidence bundle rerun attempts: 18
+- Promotion-ready bundle reruns: 3
+- Guarded bundle promotions: 3
+- Rule graph nodes / edges: 544 / 1931
+- Cache hits / misses: 142 / 0
+- Semantic high-similarity review items: 3
+- Safe verifier tuning candidates: 5
+- Felt verified-rule CSV rows: 30
 
-## Review Router Actions
+## Review Actions
 
-- `retry_with_better_evidence`: 35
-- `safe_verifier_tuning_candidate`: 28
-- `needs_second_source_consensus`: 7
-- `defer_low_priority`: 6
-- `human_legal_review`: 5
+- `retry_with_better_evidence`: 41
+- `evidence_packet_repair_candidate`: 7
+- `safe_verifier_tuning_candidate`: 5
+- `needs_second_source_consensus`: 4
+- `defer_low_priority`: 3
+- `human_legal_review`: 2
+- `upstream_candidate_issue`: 1
 
 ## Top Review / Rejection Reasons
 
-- `text_candidate_requires_review`: 76
-- `table_cell_candidate_requires_review`: 44
-- `table_evidence_candidate_requires_review`: 44
-- `operator_not_supported`: 41
-- `applies_to_not_supported`: 36
-- `rule_object_not_supported`: 31
-- `text_condition_not_supported`: 28
+- `pipeline5_text_candidate_requires_review`: 74
+- `rule_object_not_supported`: 46
+- `operator_not_supported`: 39
+- `applies_to_not_supported`: 37
+- `text_condition_not_supported`: 30
+- `outside_current_rule_contract`: 30
+- `table_cell_candidate_requires_review`: 29
+- `table_evidence_candidate_requires_review`: 29
+- `rule_family_direction_mismatch`: 25
 - `table_column_not_target_scope`: 19
-- `outside_current_rule_contract`: 18
-- `table_applies_to_not_supported`: 10
