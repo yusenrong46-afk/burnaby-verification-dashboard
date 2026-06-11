@@ -6,8 +6,8 @@
     "candidate_rule_count": 142,
     "verified_rule_count": 30,
     "review_rule_count": 63,
-    "rejected_rule_count": 16,
-    "not_used_rule_count": 33,
+    "rejected_rule_count": 35,
+    "not_used_rule_count": 14,
     "candidate_recall": 1.0,
     "verified_gold_recall": 0.896551724137931,
     "verified_or_review_recall": 1.0,
@@ -34,51 +34,51 @@
     "top_review_reasons": [
       {
         "reason": "pipeline5_text_candidate_requires_review",
-        "count": 74
-      },
-      {
-        "reason": "rule_object_not_supported",
-        "count": 46
-      },
-      {
-        "reason": "operator_not_supported",
-        "count": 38
+        "count": 75
       },
       {
         "reason": "applies_to_not_supported",
         "count": 35
       },
       {
-        "reason": "outside_current_rule_contract",
-        "count": 30
+        "reason": "rule_object_not_supported",
+        "count": 35
       },
       {
-        "reason": "text_condition_not_supported",
-        "count": 30
+        "reason": "operator_not_supported",
+        "count": 29
       },
       {
         "reason": "table_cell_candidate_requires_review",
-        "count": 29
+        "count": 27
       },
       {
         "reason": "table_evidence_candidate_requires_review",
-        "count": 29
+        "count": 27
       },
       {
         "reason": "rule_family_direction_mismatch",
-        "count": 25
+        "count": 26
       },
       {
         "reason": "table_column_not_target_scope",
         "count": 19
+      },
+      {
+        "reason": "text_condition_not_supported",
+        "count": 19
+      },
+      {
+        "reason": "rule_object_unit_not_compatible",
+        "count": 15
       }
     ],
     "evidence_quality": {
       "evidence_unit_count": 142,
       "candidate_rule_count": 142,
-      "mean_evidence_quality_score": 0.812,
+      "mean_evidence_quality_score": 0.821,
       "candidate_evidence_match_rate": 1.0,
-      "candidate_value_grounding_rate": 0.972,
+      "candidate_value_grounding_rate": 0.88,
       "candidate_unit_grounding_rate": 1.0,
       "table_evidence_count": 61,
       "table_context_completion_rate": 1.0,
@@ -89,7 +89,7 @@
         },
         {
           "issue": "evidence_text_not_in_source_context",
-          "count": 61
+          "count": 54
         },
         {
           "issue": "incomplete_table_context",
@@ -99,13 +99,13 @@
     },
     "proof_metrics": {
       "proof_trace_completion_rate": 1.0,
-      "supported_claim_count": 974,
-      "refuted_claim_count": 4,
-      "not_enough_info_claim_count": 158,
-      "mean_evidence_strength": 0.728,
-      "high_priority_review_count": 5,
-      "table_proof_count": 62,
-      "table_proof_complete_count": 10,
+      "supported_claim_count": 976,
+      "refuted_claim_count": 12,
+      "not_enough_info_claim_count": 148,
+      "mean_evidence_strength": 0.72,
+      "high_priority_review_count": 8,
+      "table_proof_count": 61,
+      "table_proof_complete_count": 9,
       "table_proof_partial_count": 52,
       "table_proof_refuted_count": 0,
       "proof_decision_mismatch_count": 0
@@ -337,7 +337,7 @@
       },
       {
         "gold_id": "br1_setback_002",
-        "rule_id": "burnaby_r1_049",
+        "rule_id": "burnaby_r1_047",
         "score": 13,
         "source_page": 2
       },
@@ -349,13 +349,13 @@
       },
       {
         "gold_id": "br1_setback_004",
-        "rule_id": "burnaby_r1_051",
+        "rule_id": "burnaby_r1_047",
         "score": 14,
         "source_page": 2
       },
       {
         "gold_id": "br1_setback_005",
-        "rule_id": "burnaby_r1_052",
+        "rule_id": "burnaby_r1_050",
         "score": 14,
         "source_page": 2
       },
@@ -373,7 +373,7 @@
       },
       {
         "gold_id": "br1_sep_001",
-        "rule_id": "burnaby_r1_057",
+        "rule_id": "burnaby_r1_056",
         "score": 13,
         "source_page": 2
       },
@@ -385,7 +385,7 @@
       },
       {
         "gold_id": "br1_sep_003",
-        "rule_id": "burnaby_r1_059",
+        "rule_id": "burnaby_r1_056",
         "score": 14,
         "source_page": 2
       },
@@ -409,7 +409,7 @@
       },
       {
         "gold_id": "br1_use_002",
-        "rule_id": "burnaby_r1_004",
+        "rule_id": "burnaby_r1_001",
         "score": 7,
         "source_page": 1
       },
@@ -453,7 +453,7 @@
       },
       {
         "gold_id": "br1_lot_area_001",
-        "rule_id": "burnaby_r1_029",
+        "rule_id": "burnaby_r1_028",
         "score": 13,
         "source_page": 2
       },
@@ -462,6 +462,12 @@
         "rule_id": "burnaby_r1_071",
         "score": 15,
         "source_page": 2
+      },
+      {
+        "gold_id": "br1_sep_002",
+        "rule_id": "burnaby_r1_075",
+        "score": 14,
+        "source_page": 3
       },
       {
         "gold_id": "br1_heritage_001",

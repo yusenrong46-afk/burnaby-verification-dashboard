@@ -326,6 +326,28 @@
       }
     },
     {
+      "rule_id": "burnaby_r1_047",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "3.0",
+      "value_numeric": 3.0,
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0043",
+        "quote": "Minimum Lot Line Setbacks | Street Yard | 3.0 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | 3.0 m"
+      }
+    },
+    {
       "rule_id": "burnaby_r1_048",
       "rule_object": "setback",
       "constraint_type": "minimum",
@@ -536,6 +558,36 @@
       }
     },
     {
+      "rule_id": "burnaby_r1_055",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "interior_side_yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "1.2",
+      "value_numeric": 1.2,
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "geometry": {
+        "operation": "offset_inward",
+        "axis": "side_lot_line",
+        "direction": "inward",
+        "source_fields": [
+          "rule_object",
+          "constraint_scope"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 2,
+        "evidence_id": "pipeline5_merged_rule_0049",
+        "quote": "Minimum Lot Line Setbacks | Interior Side Yard | 1.2 m | Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | 1.2 m"
+      }
+    },
+    {
       "rule_id": "burnaby_r1_056",
       "rule_object": "building_separation",
       "constraint_type": "minimum",
@@ -710,6 +762,35 @@
       }
     },
     {
+      "rule_id": "burnaby_r1_076",
+      "rule_object": "building_separation",
+      "constraint_type": "minimum",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "operator": ">=",
+      "value": "2.4",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "condition": "located between a front and rear principal",
+      "exception": "",
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+        "page": 3,
+        "evidence_id": "pipeline5_merged_rule_0070",
+        "quote": "and a minimum 2.4 m separation from any other principals between it and a side lot line."
+      }
+    },
+    {
       "rule_id": "burnaby_r1_116",
       "rule_object": "automatic_sprinkler",
       "constraint_type": "required",
@@ -794,93 +875,6 @@
         "page": 6,
         "evidence_id": "pipeline5_merged_rule_0114",
         "quote": "(b) is clear of any projections or obstructions to a minimum of 2.5 m in height."
-      }
-    },
-    {
-      "rule_id": "burnaby_r1_028",
-      "rule_object": "lot_area",
-      "constraint_type": "minimum",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
-      "operator": ">=",
-      "value": "281",
-      "value_numeric": 281.0,
-      "unit": "m²",
-      "condition": "4 Units Only",
-      "exception": "",
-      "geometry": {
-        "operation": "area_floor",
-        "axis": null,
-        "direction": null,
-        "source_fields": [
-          "rule_object"
-        ]
-      },
-      "verification_status": "verified",
-      "citation": {
-        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "page": 1,
-        "evidence_id": "bundle::burnaby_r1_028",
-        "quote": "[pipeline5_merged_rule_0018] Minimum Lot Area | Lot Area .3 | Small-Scale Multi-Unit | 281 m² | Lot Area .3 | Minimum Lot Area | Small-Scale Multi-Unit | 281 m²\n[pipeline5_merged_rule_0024] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 4 Units Only: 281 m2\n[pipeline5_merged_rule_0025] Minimum Lot Area | Lot Area | 281 m² | Minimum Lot Area | 281 m2"
-      }
-    },
-    {
-      "rule_id": "burnaby_r1_075",
-      "rule_object": "building_separation",
-      "constraint_type": "minimum",
-      "constraint_scope": "building_separation",
-      "applies_to": "principal building",
-      "operator": ">=",
-      "value": "6.0",
-      "value_numeric": 6.0,
-      "unit": "m",
-      "condition": "located between a front and rear principal on a through lot",
-      "exception": "",
-      "geometry": {
-        "operation": "min_separation",
-        "axis": null,
-        "direction": null,
-        "source_fields": [
-          "rule_object"
-        ]
-      },
-      "verification_status": "verified",
-      "citation": {
-        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "page": 3,
-        "evidence_id": "bundle::burnaby_r1_075",
-        "quote": "[pipeline5_merged_rule_0068__api_01] Any principal building located between a front and rear principal must have a minimum 6.0 m separation from each of the front and rear principals\n[pipeline5_merged_rule_0069] or, in the case of through lots, from each opposing front principal\n[pipeline5_merged_rule_0070] and a minimum 2.4 m separation from any other principals between it and a side lot line."
-      }
-    },
-    {
-      "rule_id": "burnaby_r1_076",
-      "rule_object": "building_separation",
-      "constraint_type": "minimum",
-      "constraint_scope": "building_separation",
-      "applies_to": "principal building",
-      "operator": ">=",
-      "value": "2.4",
-      "value_numeric": 2.4,
-      "unit": "m",
-      "condition": "located between a front and rear principal",
-      "exception": "",
-      "geometry": {
-        "operation": "min_separation",
-        "axis": null,
-        "direction": null,
-        "source_fields": [
-          "rule_object"
-        ]
-      },
-      "verification_status": "verified",
-      "citation": {
-        "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
-        "page": 2,
-        "evidence_id": "bundle::burnaby_r1_076",
-        "quote": "[pipeline5_merged_rule_0050] Minimum Separation Of Buildings | Between Front Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front Principals | 2.4 m\n[pipeline5_merged_rule_0051] Minimum Separation Of Buildings | Between Rear Principals | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between Rear Principals | 2.4 m\n[pipeline5_merged_rule_0053] Minimum Separation Of Buildings | Between All Other Buildings | 2.4 m | Minimum Separation of Buildings on the Same Lot .4 .5 | Between All Other Buildings | 2.4 m"
       }
     }
   ]

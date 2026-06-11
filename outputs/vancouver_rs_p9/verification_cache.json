@@ -1,0 +1,1554 @@
+{
+  "cache_enabled": true,
+  "cache_mode": "diagnostic_reuse_ready",
+  "verifier_version": "fsr-family-cue-extras-v3",
+  "run_context_hash": "39be6abfbc39badf30b6be87e680edee5734a5bed262067a6aecf48bc9d6eaac",
+  "entry_count": 43,
+  "cache_hit_count": 0,
+  "safe_reuse_count": 0,
+  "cache_miss_count": 43,
+  "entries": [
+    {
+      "candidate_id": "pipeline5_merged_rule_0001",
+      "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "cache_key": "0f5ba9eba9e941ae40a26fcf9e3f31d133dbcadb9429df09208d3e2f6d4c2b48",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0001",
+          "rule_object": "permitted_use",
+          "constraint_type": "use",
+          "constraint_scope": "laneway_house_permitted_use",
+          "applies_to": "laneway house",
+          "operator": "permitted",
+          "value": "",
+          "unit": "",
+          "condition": "only in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+        "evidence_text_hash": "9886236812f66e2c373d7cbac8c7a168e3563744aa0b19cfb9acc0b0b53a124d",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0002",
+      "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_015",
+      "cache_key": "fe08ab14b76202813e9de8d10f6d2c4ec9406648a1680240c5329d4da0941e83",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0002",
+          "rule_object": "building_separation",
+          "constraint_type": "dimension",
+          "constraint_scope": "laneway_house_separation_distance",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "4.9",
+          "unit": "m",
+          "condition": "measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_015",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_015",
+        "evidence_text_hash": "d79dad89cfb8410ae43aff0df2c96a2d256e580c0240cb753a6e413667a81868",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0003",
+      "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_016",
+      "cache_key": "751da32fedeb93240ae04c200c669766f1e361746e15765a198bfc3ddc1dcd88",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_003",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0003",
+          "rule_object": "rear_setback",
+          "constraint_type": "dimension",
+          "constraint_scope": "laneway_house_rear_setback",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "0.9",
+          "unit": "m",
+          "condition": "from the ultimate rear property line",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_016",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_016",
+        "evidence_text_hash": "8d8d34c4447ff60b6056f02ab1271924d1cdad53b247afa9156954cf43cb7bd9",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0004",
+      "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_017",
+      "cache_key": "b18dd54499a9b1ee64a6f6f67ba585e21ed38b59e56eb6a1989570be2e690833",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_004",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0004",
+          "rule_object": "side_setback",
+          "constraint_type": "dimension",
+          "constraint_scope": "laneway_house_side_setback",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "1.2",
+          "unit": "m",
+          "condition": "from each side property line",
+          "exception": "the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+          "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_017",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_017",
+        "evidence_text_hash": "9478e456711661976a7bef722e4d697ddf455a449f47bbce7d0859d7a10e9712",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0005",
+      "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_002",
+      "cache_key": "e215c824145c537b0fe290a8e23221f53eb21d70848c72d603f873562017f4f1",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_005",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0005",
+          "rule_object": "permitted_use",
+          "constraint_type": "use_regulation",
+          "constraint_scope": "vancouver_generic_graph_pack_014__page_0010__local_002__laneway_house_child_day_care",
+          "applies_to": "laneway house in combination with a child day care facility",
+          "operator": "permitted",
+          "value": "",
+          "unit": "",
+          "condition": "only if there is only 1 laneway house and 1 child day care facility on the site, and the child day care facility is in a building converted from a single detached house or single detached house with secondary suite containing no other uses",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_002",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_002",
+        "evidence_text_hash": "7fa090b1d748baaef8467be92c517644602d5c963b45bb23d20a2cb700d952bd",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0006",
+      "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_003",
+      "cache_key": "a88bf08f81ead25a874b1f756fbd0a48f50913e4ef38f866029a609430f13da7",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_006",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0006",
+          "rule_object": "laneway_house_count",
+          "constraint_type": "density",
+          "constraint_scope": "vancouver_generic_graph_pack_014__page_0010__local_003__laneway_house_count",
+          "applies_to": "laneway house",
+          "operator": "=",
+          "value": "1",
+          "unit": "units",
+          "condition": "in combination with a child day care facility on the site",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_003",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_003",
+        "evidence_text_hash": "da9d2ea458e53dea336dc081a0a66c0154de9ea3a7c5a937f7042bf9fdd815b3",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0007",
+      "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_003",
+      "cache_key": "9cefdc0007b429905386fe35dde641ae3e2b68e2a80e146a9f1fe88479f1fc92",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_007",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0007",
+          "rule_object": "child_day_care_facility_count",
+          "constraint_type": "density",
+          "constraint_scope": "vancouver_generic_graph_pack_014__page_0010__local_003__child_day_care_count",
+          "applies_to": "child day care facility",
+          "operator": "=",
+          "value": "1",
+          "unit": "units",
+          "condition": "in combination with a laneway house on the site",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_003",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_003",
+        "evidence_text_hash": "da9d2ea458e53dea336dc081a0a66c0154de9ea3a7c5a937f7042bf9fdd815b3",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0008",
+      "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_004",
+      "cache_key": "4260b38375c1e6784f2b722d7593af15b4386e7e09a74b9944caeafdeb47692e",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_008",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0008",
+          "rule_object": "building_type",
+          "constraint_type": "use_regulation",
+          "constraint_scope": "vancouver_generic_graph_pack_014__page_0010__local_004__child_day_care_building_type",
+          "applies_to": "child day care facility",
+          "operator": "required",
+          "value": "",
+          "unit": "",
+          "condition": "when in combination with a laneway house; must be in a building that was converted from a single detached house or single detached house with secondary suite, and contains no other uses",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_004",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_004",
+        "evidence_text_hash": "b028b0df4582fda8fddec660700e8c985cd964633c7d8a558afa48f25707a408",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0009",
+      "evidence_id": "vancouver_generic_graph_pack_022__page_0018__local_010",
+      "cache_key": "82350687b87130e5326bec4c742474645b697f46183bbf8de7b101ab2129ee27",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_009",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0009",
+          "rule_object": "permitted_use",
+          "constraint_type": "use",
+          "constraint_scope": "11.9.1.2_short_term_rental",
+          "applies_to": "short term rental accommodation",
+          "operator": "permitted",
+          "value": "",
+          "unit": "",
+          "condition": "only in a lawful dwelling unit, secondary suite, laneway house, or lock-off unit that is a principal residence unit",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_022__page_0018__local_010",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_022__page_0018__local_010",
+        "evidence_text_hash": "a8d095a11a4f4918c3a900e678dd52d08f734b78b2bf641da795d9040df2904e",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0010",
+      "evidence_id": "vancouver_generic_graph_pack_011__page_0009__local_020",
+      "cache_key": "5509173a56efe97efd92a8e4c5cd5e0d5ad082cf1e94a82c690958904941c203",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_010",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0010",
+          "rule_object": "permitted_use",
+          "constraint_type": "use",
+          "constraint_scope": "vancouver_generic_graph_pack_011__page_0009__local_020_decks",
+          "applies_to": "decks",
+          "operator": "prohibited",
+          "value": "",
+          "unit": "",
+          "condition": "above the uppermost level of a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_011__page_0009__local_020",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_011__page_0009__local_020",
+        "evidence_text_hash": "acd59d13079b6b772e2e19f58e88fb3fcc72c1300d2d329a6939a311b878fd3b",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0011",
+      "evidence_id": "vancouver_generic_graph_pack_011__page_0009__local_020",
+      "cache_key": "05ccaec217717e9171a7e44d675d624725cdf855e3525df877f108dfd6b2e21b",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_011",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0011",
+          "rule_object": "permitted_use",
+          "constraint_type": "use",
+          "constraint_scope": "vancouver_generic_graph_pack_011__page_0009__local_020_roof_decks",
+          "applies_to": "roof decks",
+          "operator": "prohibited",
+          "value": "",
+          "unit": "",
+          "condition": "above the uppermost level of a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_011__page_0009__local_020",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_011__page_0009__local_020",
+        "evidence_text_hash": "acd59d13079b6b772e2e19f58e88fb3fcc72c1300d2d329a6939a311b878fd3b",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0012",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_002",
+      "cache_key": "dbfda87264f7554867441a9c9bd12f0eb1d52cdef1fe81a346ef519782f98b65",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_012",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0012",
+          "rule_object": "computation_method",
+          "constraint_type": "administrative",
+          "constraint_scope": "computation_basis",
+          "applies_to": "computation of floor area, floor space ratio, yards, site coverage, impermeability, number of buildings on site and dwelling unit density",
+          "operator": "required",
+          "value": "",
+          "unit": "",
+          "condition": "must be based on the site width and area at the time of development, prior to any subdivision into individual freehold rowhouse parcels",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_002",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_002",
+        "evidence_text_hash": "43dae4d502bf54d21c3641b30fe9815b0939d260cd90729dc0c5d66b3f174094",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0013",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_003",
+      "cache_key": "9ff8277fc4cefb1b0abdc3d6b9b2d772647fd3f548b899f38163b6c6644364c4",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_013",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0013",
+          "rule_object": "site_width",
+          "constraint_type": "minimum",
+          "constraint_scope": "freehold_rowhouse_minimum_site_width",
+          "applies_to": "site width",
+          "operator": ">=",
+          "value": "5.0",
+          "unit": "m",
+          "condition": "for each freehold rowhouse parcel, for the purpose of fee simple subdivision",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_003",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_003",
+        "evidence_text_hash": "bf40d56756c3e1e6bb8b166daf149b40dd87516a1b6cfcb36d4bd2264f88b352",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0014",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_003",
+      "cache_key": "62e5a5053f966c28a13de644af66e9c9db4497243a954064b21d2cc40d455fd5",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_014",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0014",
+          "rule_object": "frontage",
+          "constraint_type": "minimum",
+          "constraint_scope": "freehold_rowhouse_minimum_frontage",
+          "applies_to": "frontage",
+          "operator": ">=",
+          "value": "5.0",
+          "unit": "m",
+          "condition": "for each freehold rowhouse parcel, for the purpose of fee simple subdivision",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_003",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_003",
+        "evidence_text_hash": "bf40d56756c3e1e6bb8b166daf149b40dd87516a1b6cfcb36d4bd2264f88b352",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0015",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_007",
+      "cache_key": "a717d3584e9c8014711d067e9c05e0b821995eb4bea7f8d29bf88dd3a95bcc96",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_015",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0015",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_floor_area_ratio",
+          "applies_to": "floor area",
+          "operator": "<=",
+          "value": "",
+          "unit": "",
+          "condition": "for a laneway house, must not exceed the lesser of 0.25 multiplied by the site area and 186 m2",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_007",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_007",
+        "evidence_text_hash": "3d140c32f6fa264621de9e0ece4139d54f86301c0403ab52a314ecacce16f35b",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0016",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_008",
+      "cache_key": "e27fcce97c9621d49c6d2e8443c04cf23dc688a199ac814e8638996a1901d630",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_016",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0016",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_floor_area_limit",
+          "applies_to": "floor area",
+          "operator": "<=",
+          "value": "186",
+          "unit": "m2",
+          "condition": "for a laneway house, must not exceed the lesser of 0.25 multiplied by the site area and 186 m2",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_008",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_008",
+        "evidence_text_hash": "3bb91c7172d26a399b37daae22682ed06e997888a743f2748d9f102021508926",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0017",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_009",
+      "cache_key": "342ee930475e9f927a9d53fd00a20ed24ed9ab91f83a136a178ede08a7d3e521",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_017",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0017",
+          "rule_object": "site_width",
+          "constraint_type": "minimum",
+          "constraint_scope": "laneway_house_minimum_site_width",
+          "applies_to": "site width",
+          "operator": ">=",
+          "value": "9.8",
+          "unit": "m",
+          "condition": "for a laneway house",
+          "exception": "the Director of Planning may reduce the minimum site width if the site is at least 7.3 m in width and the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_009",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_009",
+        "evidence_text_hash": "539b27300b938b0b52e5412c05c26acc24028afc37bab9688e6e2f8ba1897a7a",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0018",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_010",
+      "cache_key": "ffc206ef40b7c886d8b858b25939ecfba5c2d071876bdade9c4336fe14cf2fbc",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_018",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0018",
+          "rule_object": "site_width",
+          "constraint_type": "minimum",
+          "constraint_scope": "laneway_house_reduced_site_width_minimum",
+          "applies_to": "site width",
+          "operator": ">=",
+          "value": "7.3",
+          "unit": "m",
+          "condition": "for a laneway house, to allow the Director of Planning to reduce the minimum site width",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_010",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_010",
+        "evidence_text_hash": "a809134efd6e50493a40c80333be9d8f587149ffa34fe9e91f65f48b3597547f",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0019",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_011",
+      "cache_key": "fb3c16c85d94f0be34898da5c2c75ff2f7b867b9612ab10fa13cfc7b220f75bf",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_019",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0019",
+          "rule_object": "director_consideration",
+          "constraint_type": "administrative",
+          "constraint_scope": "laneway_house_reduced_site_width_considerations",
+          "applies_to": "Director of Planning consideration of massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines",
+          "operator": "required",
+          "value": "",
+          "unit": "",
+          "condition": "for a laneway house, to reduce the minimum site width",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_011",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_011",
+        "evidence_text_hash": "6eedf0898f210c2d08d9e922d90ac4aeeaf56e35541862c83723e19aab158a3a",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0020",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+      "cache_key": "7c5b9b5cf5b7ed8f34b869fbe99f7af712a478966f09229a97c614f53140d001",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_020",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0020",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_maximum_height_meters",
+          "applies_to": "building height",
+          "operator": "<=",
+          "value": "8.5",
+          "unit": "m",
+          "condition": "for a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+        "evidence_text_hash": "3ed22a59db25d4fbab0340598b6a9a57b2f6dd0febd4315909ee8116699f31be",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0021",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+      "cache_key": "c7088df229c08c15f8e8204d942076aed70f735f08872ae8c2fd8a475f68761a",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_021",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0021",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_maximum_height_storeys",
+          "applies_to": "building height",
+          "operator": "<=",
+          "value": "2",
+          "unit": "storeys",
+          "condition": "for a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+        "evidence_text_hash": "3ed22a59db25d4fbab0340598b6a9a57b2f6dd0febd4315909ee8116699f31be",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0022",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_013",
+      "cache_key": "5c3fbc828aca3e47021e6075b4bf733db6fb92e1ad1d839bae774fc836f321a3",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_022",
+      "support_gaps": [
+        "upstream_extraction_requested_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0022",
+          "rule_object": "lot_coverage",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_maximum_site_coverage",
+          "applies_to": "site coverage",
+          "operator": "<=",
+          "value": "50",
+          "unit": "%",
+          "condition": "for a site with a laneway house",
+          "exception": "Despite the maximum permitted site coverage in an applicable district schedule",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_013",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_013",
+        "evidence_text_hash": "6193dca35d29fe18a86fe57c794d8168bbf12cb303fa2964310ff04eca9df879",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0023",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_019",
+      "cache_key": "ce8c0203ab86ca0ee23b97e0ba4e11af4aac9a3099c438658fb68ea240c9e238",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_023",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0023",
+          "rule_object": "room_size",
+          "constraint_type": "minimum",
+          "constraint_scope": "main_habitable_room_minimum_size",
+          "applies_to": "main habitable room size",
+          "operator": ">=",
+          "value": "16.7",
+          "unit": "m2",
+          "condition": "for 1 main habitable room that is not a bedroom",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_019",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_019",
+        "evidence_text_hash": "7e515884144e26709e81a25a6e92cd29987ccbccf27e15f0552efdd56bae3429",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0024",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_019",
+      "cache_key": "3891bf9273e682b0ff43c87d9cb56a155b88b6b5b63f5e975dab2a86001b0d88",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_024",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0024",
+          "rule_object": "room_dimension",
+          "constraint_type": "minimum",
+          "constraint_scope": "main_habitable_room_minimum_dimension",
+          "applies_to": "main habitable room dimension",
+          "operator": ">=",
+          "value": "2.1",
+          "unit": "m",
+          "condition": "measured between finished wall surfaces, for 1 main habitable room that is not a bedroom",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_019",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_019",
+        "evidence_text_hash": "7e515884144e26709e81a25a6e92cd29987ccbccf27e15f0552efdd56bae3429",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0025",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_020",
+      "cache_key": "626cde5e701c47896809fb7a64f44d2eba349e764378b29bd628be47b8b7c160",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_025",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0025",
+          "rule_object": "room_size",
+          "constraint_type": "minimum",
+          "constraint_scope": "bedroom_minimum_size",
+          "applies_to": "bedroom size",
+          "operator": ">=",
+          "value": "8.4",
+          "unit": "m2",
+          "condition": "for at least 1 bedroom",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_020",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_020",
+        "evidence_text_hash": "fd7a8dae1e917b226c69af28fe17ee9df33168b484c7f6163c077d4344b12e9c",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0026",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_020",
+      "cache_key": "d8a101e5b86be9aa08d1fbf53e111190e11f202ace7b38bba6bdb799298eac98",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_026",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0026",
+          "rule_object": "room_dimension",
+          "constraint_type": "minimum",
+          "constraint_scope": "bedroom_minimum_dimension",
+          "applies_to": "bedroom dimension",
+          "operator": ">=",
+          "value": "2.1",
+          "unit": "m",
+          "condition": "measured between finished wall surfaces, for at least 1 bedroom",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_020",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_020",
+        "evidence_text_hash": "fd7a8dae1e917b226c69af28fe17ee9df33168b484c7f6163c077d4344b12e9c",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0027",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_003",
+      "cache_key": "e34084268ce40cd5153ce193b93c531ee521bad6e999c70bd2111f9100b40af7",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_027",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0027",
+          "rule_object": "floor_area_computation",
+          "constraint_type": "inclusion",
+          "constraint_scope": "laneway_house_floor_area_inclusion_all_floors",
+          "applies_to": "all_floors",
+          "operator": "required",
+          "value": "",
+          "unit": "",
+          "condition": "for a laneway house, including earthen floor, measured to the extreme outer limits of the building",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_003",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_003",
+        "evidence_text_hash": "4bd73efbbe3061371959db3ed8ca843ba6ae6d0e26ef968167bd2876196272d2",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0028",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_004",
+      "cache_key": "a8d0c0062c7366d6a33dec3d594d25cff8d2a8cbe1459ea9a61e2cc4765c3d7b",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_028",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0028",
+          "rule_object": "floor_area_computation",
+          "constraint_type": "inclusion",
+          "constraint_scope": "laneway_house_floor_area_inclusion_stairways_etc",
+          "applies_to": "stairways_and_similar_features",
+          "operator": "required",
+          "value": "",
+          "unit": "",
+          "condition": "for a laneway house, including stairways, fire escapes, elevator shafts and other features that the Director of Planning considers similar, measured by their gross cross-sectional areas and included in the measurements for each floor at which they are located",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_004",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_004",
+        "evidence_text_hash": "687474b051da2cde6e2af7492f42463d2d8ab303ba460e0986ab109b8f680453",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0029",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_005",
+      "cache_key": "7da0eeb26336df4bebc39d1631eb0b38a6e806376f0db5f8d811a0cb68b2f23a",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_029",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "operator_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0029",
+          "rule_object": "floor_area_computation",
+          "constraint_type": "minimum",
+          "constraint_scope": "laneway_house_floor_area_inclusion_excess_height_threshold",
+          "applies_to": "floor_to_floor_or_roof_joists_height",
+          "operator": ">=",
+          "value": "3.7",
+          "unit": "m",
+          "condition": "for a laneway house, if the distance from a floor to the floor above or, where there is no floor above, to the top of the roof joists exceeds this threshold, an amount equal to the area of the floor below the excess height must be included",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_005",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_005",
+        "evidence_text_hash": "c688da7d40ddf1a61191f71af5d7bad14ffc842a7268f65b9643e6737d7cf56e",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0030",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_007",
+      "cache_key": "647cfd747fa7bf91c299e0cf9677c4a99563ef3ea68a71819f56e418fa43c845",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_030",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0030",
+          "rule_object": "parking_space",
+          "constraint_type": "minimum",
+          "constraint_scope": "laneway_house_parking_space_open_sides",
+          "applies_to": "open_sides",
+          "operator": ">=",
+          "value": "2",
+          "unit": "",
+          "condition": "for each parking space used for off-street parking floor area exclusion in a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_007",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_007",
+        "evidence_text_hash": "b755d07ac20f056cea96d2eb925244ddd7aeeef05158f2336a2b13f1f8993d60",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0031",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_007",
+      "cache_key": "8ec57ae23dfa9042f3ba29fcda890624a18035d4da95d31de2940f3e799c9815",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_031",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0031",
+          "rule_object": "parking_space",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_parking_space_length",
+          "applies_to": "length",
+          "operator": "<=",
+          "value": "7.3",
+          "unit": "m",
+          "condition": "for each parking space used for off-street parking floor area exclusion in a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_007",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_007",
+        "evidence_text_hash": "b755d07ac20f056cea96d2eb925244ddd7aeeef05158f2336a2b13f1f8993d60",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0032",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_008",
+      "cache_key": "51849b6bc51d0664089bd27ccf19a9f9177f1d3c5b326df615ae268aa7c7fb79",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_032",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0032",
+          "rule_object": "floor_area_exclusion",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_balcony_deck_exclusion_limit",
+          "applies_to": "balcony_and_deck_exclusions",
+          "operator": "<=",
+          "value": "8",
+          "unit": "%",
+          "condition": "total area of balcony, deck, and similar exclusions as a percentage of the permitted floor area for a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_008",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_008",
+        "evidence_text_hash": "abec8e1f4a048843c7e89cfc1d0f09819fc7bdb5a59c6573e899a94a86c45714",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0033",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_010",
+      "cache_key": "8c2450f5189c1c8ca9fb1a892e32bbf4c1a6eb45e81d2dea41a76ba6dfa06324",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_033",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0033",
+          "rule_object": "guard_rail",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_guard_rail_height_limit",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "",
+          "unit": "",
+          "condition": "for guard rails protecting entries, porches, and verandahs excluded from laneway house floor area, which must not exceed the required minimum height",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_010",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_010",
+        "evidence_text_hash": "5362bfc9607ac8e32a27832e4b1255fcb0e1575966b257b510342410e430ec48",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0034",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_011",
+      "cache_key": "03f4fe9902e9bff0fa3335274b9caaf28de87bbe16d372efdecb1cc6c7a6db13",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_034",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0034",
+          "rule_object": "floor_area_exclusion",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_combined_exclusion_limit",
+          "applies_to": "combined_exclusions",
+          "operator": "<=",
+          "value": "13",
+          "unit": "%",
+          "condition": "total area of entry, porch, verandah, balcony, and deck exclusions combined as a percentage of the permitted floor area for a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_011",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_011",
+        "evidence_text_hash": "1b67d84286b0fc5200fb6937a608c2f439ea32ff7791ddcc30a928c2fa086b6b",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0035",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_012",
+      "cache_key": "9145573c6d1d7708b753e3d941e3715d0b36fa16c2d6e9395e7e3a1398fae19d",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_035",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0035",
+          "rule_object": "ceiling_height",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_excluded_entry_porch_verandah_ceiling_height",
+          "applies_to": "ceiling_height",
+          "operator": "<=",
+          "value": "3.1",
+          "unit": "m",
+          "condition": "of the total area being excluded (entries, porches, verandahs) for a laneway house, measured from the entry, porch or verandah floor, excluding roof structure",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_012",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_012",
+        "evidence_text_hash": "682515880e8267ea5c4227db28c5617dbc56318a3fa69c86de6dd8e458dca087",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0036",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+      "cache_key": "d6b8a692e4e94d012a1cc99923ec3ac7d3f6f5b6a700b1d3e6606326382b6484",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_036",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0036",
+          "rule_object": "roof",
+          "constraint_type": "dimensional",
+          "constraint_scope": "laneway_house_roof_joist_pitch",
+          "applies_to": "joist_pitch",
+          "operator": "required",
+          "value": "",
+          "unit": "",
+          "condition": "roof joists must have a minimum 7:12 pitch and the related ceiling maintains the same pitch as the roof joists, for floor area exclusion under sloping roof/ceiling in a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+        "evidence_text_hash": "aca2fc0016932c4002a1a999e897d20f9085294791117dcfff393bc230d52c66",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0037",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_014",
+      "cache_key": "e115dab2c9431ac61a670ef05e68287716dd172b776bcc691fccb59cb522855d",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_037",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "operator_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0037",
+          "rule_object": "clearance",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_floor_to_ceiling_distance_max",
+          "applies_to": "floor_to_ceiling_distance",
+          "operator": "<=",
+          "value": "2.3",
+          "unit": "m",
+          "condition": "measured vertically, from the floor to any part of the roof rafters or ceiling for floor area exclusion under sloping roof/ceiling in a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_014",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_014",
+        "evidence_text_hash": "5c79d24fa63e9b6d41868881b1eb4ab2381f0899b8c4d0d94191e6e4335f2105",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0038",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_014",
+      "cache_key": "3a635ec20ec76cecb47027b72ebdc4b535ef85a84c559e9d9f63f34a2244a1e6",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_038",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_family_direction_mismatch",
+        "operator_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0038",
+          "rule_object": "clearance",
+          "constraint_type": "minimum",
+          "constraint_scope": "laneway_house_floor_to_ceiling_distance_min",
+          "applies_to": "floor_to_ceiling_distance",
+          "operator": ">=",
+          "value": "1.2",
+          "unit": "m",
+          "condition": "measured vertically, from the floor to any part of the roof rafters or ceiling for floor area exclusion under sloping roof/ceiling in a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_014",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_014",
+        "evidence_text_hash": "5c79d24fa63e9b6d41868881b1eb4ab2381f0899b8c4d0d94191e6e4335f2105",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0039",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_015",
+      "cache_key": "66399fc210f65443b9266f549601bc55f4bbad09fcdc5104d621a9cf33476654",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_039",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0039",
+          "rule_object": "floor_area_exclusion",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_sloping_roof_excluded_area_limit",
+          "applies_to": "sloping_roof_excluded_floor_area",
+          "operator": "<=",
+          "value": "10",
+          "unit": "%",
+          "condition": "for a laneway house, the excluded floor area under sloping roof/ceiling as a percentage of the permitted total floor area",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_015",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_015",
+        "evidence_text_hash": "0a1d88c96ca9a487726ab03110854b4c277e2f42bba7c9cb2f41cf51473ee24a",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0040",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_017",
+      "cache_key": "7d402ee071a9e349464cf4cf337e97bd428547da610fc76ca06d67441691a0ca",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_040",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0040",
+          "rule_object": "floor_area_exclusion",
+          "constraint_type": "use",
+          "constraint_scope": "laneway_house_undeveloped_floor_exclusion_hatch",
+          "applies_to": "undeveloped_floors",
+          "operator": "required",
+          "value": "",
+          "unit": "",
+          "condition": "for a laneway house, areas of undeveloped floors located above the highest storey or partial storey and to which there is no permanent means of access other than a hatch",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_017",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_017",
+        "evidence_text_hash": "72527a7dfbf74c5a5b007bb99588e999039781970b9215a6c04de4b505984b07",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0041",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_018",
+      "cache_key": "f4c92dcb02a407dc7dcb6d490457ddae9e28d5c0566b816fe5dca110edb93869",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_041",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0041",
+          "rule_object": "ceiling_height",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_undeveloped_floor_exclusion_ceiling_height",
+          "applies_to": "adjacent_storey_ceiling_height",
+          "operator": "<=",
+          "value": "1.2",
+          "unit": "m",
+          "condition": "ceiling height of a storey or partial storey adjacent to undeveloped floors to be excluded from laneway house floor area",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_018",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_018",
+        "evidence_text_hash": "ba7c471dbcffa7cf5669d4528f81e8dd7a054066393d33d066cd81b56e805000",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0042",
+      "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_019",
+      "cache_key": "50f29dd525f584a354859b21db297a2dacfbaefb409ee8f319c0b8a8a0472d93",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_042",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0042",
+          "rule_object": "ceiling_height",
+          "constraint_type": "maximum",
+          "constraint_scope": "laneway_house_below_grade_floor_exclusion_ceiling_height",
+          "applies_to": "below_grade_floor_ceiling_height",
+          "operator": "<=",
+          "value": "1.2",
+          "unit": "m",
+          "condition": "ceiling height of floors located at or below finished grade to be excluded from laneway house floor area",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_019",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_019",
+        "evidence_text_hash": "0a0f39e0262ecb21ad9b9386f8189d310b128059e1cd055fc3901c8c4f987989",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "pipeline5_merged_rule_0043",
+      "evidence_id": "vancouver_generic_graph_pack_013__page_0010__local_021",
+      "cache_key": "c3989e61287fe076e5474fd1cfd15dcc2cd6edd279b3ce73e68ce0eef96e2941",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_043",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "pipeline5_merged_rule_0043",
+          "rule_object": "development_review",
+          "constraint_type": "discretionary",
+          "constraint_scope": "institutional_uses_due_regard",
+          "applies_to": "due regard to building design, off-street parking and loading, and neighbourhood amenity impact",
+          "operator": "required",
+          "value": "",
+          "unit": "",
+          "condition": "for Institutional Uses",
+          "exception": "",
+          "evidence_id": "vancouver_generic_graph_pack_013__page_0010__local_021",
+          "source_stream": "gemini_text_block",
+          "extraction_method": "pipeline9_rag"
+        },
+        "evidence_id": "vancouver_generic_graph_pack_013__page_0010__local_021",
+        "evidence_text_hash": "64995e41b531bf7481644e9ebbcb31d1f387a1e022c1e3b3a80436bf91cf719b",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    }
+  ],
+  "notes": [
+    "Cache keys include candidate core fields, cited evidence text, config hash, and verifier version.",
+    "The run-level candidate context is hashed once at report level (run_context_hash), not inside per-candidate keys, so one changed candidate cannot invalidate every other entry.",
+    "safe_to_reuse requires a cache hit, an unchanged report-level run_context_hash, and a matching decision; it is computed after verification as a would-skipping-have-been-safe diagnostic.",
+    "This report identifies reusable results but does not skip deterministic verification yet.",
+    "Skipping requires additional tests for run-level source agreement and cross-family collision dependencies."
+  ]
+}

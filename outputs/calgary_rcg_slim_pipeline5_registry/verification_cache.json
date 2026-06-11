@@ -1,0 +1,858 @@
+{
+  "cache_enabled": false,
+  "cache_mode": "diagnostic_reuse_ready",
+  "verifier_version": "fsr-family-cue-extras-v3",
+  "run_context_hash": "c1aa86f66ab5fcb4ed09aa171bf62c9432d07993af990c37369239235a73cac2",
+  "entry_count": 24,
+  "cache_hit_count": 0,
+  "safe_reuse_count": 0,
+  "cache_miss_count": 24,
+  "entries": [
+    {
+      "candidate_id": "local_merged_rule_0001",
+      "evidence_id": "local_merged_rule_0001",
+      "cache_key": "9b41b1f997728213e5d94fadf01195dfc4ef8f94e6dfdbb9ae84bbda1bfc236e",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0001",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "max_floor_area",
+          "applies_to": "floor_area",
+          "operator": "<=",
+          "value": "100.0",
+          "unit": "m2",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0001",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0001",
+        "evidence_text_hash": "9f7413aba6e7e77fc26ecba783613c8cefa8a71fe71668c33f0d049d66738f39",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0002",
+      "evidence_id": "local_merged_rule_0002",
+      "cache_key": "982b9d6266a6c24d59ee13895d993bc00eda7a094c156fda310c62783166f106",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "calgary_rcg_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0002",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "max_floor_area",
+          "applies_to": "floor_area",
+          "operator": "<=",
+          "value": "13.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0002",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0002",
+        "evidence_text_hash": "abf57d922421d46290ea324799c2d9b03dc25f4c5b84c1a8584bc2b54d8e9f21",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0003",
+      "evidence_id": "local_merged_rule_0003",
+      "cache_key": "c97e5681d6fdbfad4800becedf7d1460cd3a9bb9601d0339d999e95d54d2fc39",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "calgary_rcg_003",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0003",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "max_floor_area",
+          "applies_to": "floor_area",
+          "operator": "<=",
+          "value": "10.0",
+          "unit": "%",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0003",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0003",
+        "evidence_text_hash": "37400099fdebbd1c3b3f1169c76d75dd9322c2f3087de86d14239f9887491d02",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0004",
+      "evidence_id": "local_merged_rule_0004",
+      "cache_key": "5053a044568f267b339af5ca96edf5e149f01fa24dfc6440757e95f0e74e7f6b",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "calgary_rcg_004",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0004",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "min_setback",
+          "applies_to": "setback",
+          "operator": ">=",
+          "value": "1.5",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0004",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0004",
+        "evidence_text_hash": "d84daec98e9c7abd27f020d4db370f9d003497fd3620051d1871147ee2d77492",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0005",
+      "evidence_id": "local_merged_rule_0005",
+      "cache_key": "2dba376d1f4da0492a801bed0b286b15bed7e48230f0686528016fb505a58960",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_005",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0005",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "min_setback",
+          "applies_to": "setback",
+          "operator": ">=",
+          "value": "0.6",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0005",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0005",
+        "evidence_text_hash": "eb9fc8e5d43262edf80fa2c4088a4b87f502cf8e4c3a5cc1ebab98ea225efea0",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0006",
+      "evidence_id": "local_merged_rule_0006",
+      "cache_key": "361c9d0a1ece6cc71b2b354677c92a92ee01f5cf7f29befd501975b608f7396d",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "calgary_rcg_006",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0006",
+          "rule_object": "building_separation",
+          "constraint_type": "minimum",
+          "constraint_scope": "building_separation",
+          "applies_to": "building_separation",
+          "operator": ">=",
+          "value": "5.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0006",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0006",
+        "evidence_text_hash": "b48f5371f44b327de779906cd0eaa7a1c3c95310e2725e6cb1800accd3597b4f",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0007",
+      "evidence_id": "local_merged_rule_0007",
+      "cache_key": "1b57559ec5013b91a015248884bdd805248c92f6e31f5e5d0b8cbb0dad86a098",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_007",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0007",
+          "rule_object": "building_separation",
+          "constraint_type": "minimum",
+          "constraint_scope": "building_separation",
+          "applies_to": "building_separation",
+          "operator": ">=",
+          "value": "0.6",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0007",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0007",
+        "evidence_text_hash": "478155e066f0f4cec353cc940d0f76d83097429b24a052c52679db14067e9206",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0008",
+      "evidence_id": "local_merged_rule_0008",
+      "cache_key": "9d06e1396f9e8a06ac3537c502d55ff7251c198e08b4458e902ef7ec86f0db59",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "calgary_rcg_008",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0008",
+          "rule_object": "building_separation",
+          "constraint_type": "minimum",
+          "constraint_scope": "building_separation",
+          "applies_to": "building_separation",
+          "operator": ">=",
+          "value": "40.0",
+          "unit": "%",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0008",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0008",
+        "evidence_text_hash": "18a68d1e0046178bad76c1deec25296c3df9d91c07af48f7e8b27c30c79a0472",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0009",
+      "evidence_id": "local_merged_rule_0009",
+      "cache_key": "75feb93013eda94a5bab1d975c00a130da46a88d919ce5bb2f9b362c520ccf1d",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_009",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0009",
+          "rule_object": "building_separation",
+          "constraint_type": "minimum",
+          "constraint_scope": "building_separation",
+          "applies_to": "building_separation",
+          "operator": ">=",
+          "value": "3.1",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0009",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0009",
+        "evidence_text_hash": "25d162434c26d0089531bac8f9c45897f86cd9989f8c2343aeb6b29623ec4ba0",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0010",
+      "evidence_id": "local_merged_rule_0010",
+      "cache_key": "c6e1a471ae765f3f3386f9cdeb3ff9f0a12b529cf3f2246c36a2cfbd8865d4d8",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "calgary_rcg_010",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0010",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "building",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "7.5",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0010",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0010",
+        "evidence_text_hash": "05dc914f651e4067bed13f4051a4e1a86985cd22e439c0d589e49f2fa013aa5e",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0011",
+      "evidence_id": "local_merged_rule_0011",
+      "cache_key": "25afbbc18946ca8b466b9b8637bfaa7a9d776d12b0fe00761e69582001d43241",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "calgary_rcg_011",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0011",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "building",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "5.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0011",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0011",
+        "evidence_text_hash": "9a97b4c9f3a1b795521e3c6b95aa4abcb9243dbf7f6ca7a14c6f17817ee2608c",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0012",
+      "evidence_id": "local_merged_rule_0012",
+      "cache_key": "08386a5f1ba8001b652c7103667f1a651190b1490882ebae1c8b0cfcd0144a6a",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_012",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0012",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "building",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "3.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0012",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0012",
+        "evidence_text_hash": "b42d34d6ce4bc45ad83f30aa0c7c8fb867d07a8fbaf706241b3f6dc8754b2528",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0013",
+      "evidence_id": "local_merged_rule_0013",
+      "cache_key": "2139a6994cf8a83519e6ababde0189a2bd4334a90b0cc5eec19ca5cee3483805",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_013",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0013",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "building",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "7.5",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0013",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0013",
+        "evidence_text_hash": "e24d137c79d56766e32099fbe19a57da7e05da734b235e8b2c74a54aebdaa748",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0014",
+      "evidence_id": "local_merged_rule_0014",
+      "cache_key": "f64a12fbbf501fb0616b920ba2e81ad2418fd10eab8d9a587de54213bbb4e951",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_014",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0014",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "max_floor_area",
+          "applies_to": "floor_area",
+          "operator": "<=",
+          "value": "2.5",
+          "unit": "m2",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0014",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0014",
+        "evidence_text_hash": "b992fa44efa4aeaeef4cc3eb441185ed83a0f9c45bfcddc989d47ac01a400b9c",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0015",
+      "evidence_id": "local_merged_rule_0015",
+      "cache_key": "d1abd1aa58370f76f357b0d1f3bff3f3343b36660e47aa205fc53af62c98cd43",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_015",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0015",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "max_floor_area",
+          "applies_to": "floor_area",
+          "operator": "<=",
+          "value": "75.0",
+          "unit": "m2",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0015",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0015",
+        "evidence_text_hash": "08d65448af240a6d022dbd78d82fd8d48e82ef2b425194c6da8f531b5d2742cb",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0016",
+      "evidence_id": "local_merged_rule_0016",
+      "cache_key": "62f4c891940debccd72cf0919fb65996880356902fbdfd3dbb52cf2b53cb63db",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "calgary_rcg_016",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0016",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "max_floor_area",
+          "applies_to": "floor_area",
+          "operator": "<=",
+          "value": "10.0",
+          "unit": "%",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0016",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0016",
+        "evidence_text_hash": "6187621fd8f201df43bf8e6526bb722338eb18fed2e18ee1273eda96d52a5f31",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0017",
+      "evidence_id": "local_merged_rule_0017",
+      "cache_key": "18e24d8b85267383cc7a429f2bb1065da49b6ce49e22b1f5406dfe093fad682a",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_017",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0017",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "min_setback",
+          "applies_to": "setback",
+          "operator": ">=",
+          "value": "4.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0017",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0017",
+        "evidence_text_hash": "5355e116b7a5498fc358da358e6ec65b939e5aca364faf47ef988c1fff7297c0",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0018",
+      "evidence_id": "local_merged_rule_0018",
+      "cache_key": "9467139833b788d7d377fee684a7eb5b979924edad088a918651b218b0541e7c",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_018",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0018",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "min_setback",
+          "applies_to": "setback",
+          "operator": ">=",
+          "value": "2.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0018",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0018",
+        "evidence_text_hash": "41c61a28c96becf3a2faa564e9f4e496f743b1c2fd39423783846fa8da1daf51",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0019",
+      "evidence_id": "local_merged_rule_0019",
+      "cache_key": "2073555f1cd0e3663d79623c8b42ef9f111068b71241885bef7b425b748b4575",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_019",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0019",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "min_setback",
+          "applies_to": "setback",
+          "operator": ">=",
+          "value": "3.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0019",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0019",
+        "evidence_text_hash": "d07030c99566ffc641a48d16339c5893a4177d4f22111429d915337d9d7fdc75",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0020",
+      "evidence_id": "local_merged_rule_0020",
+      "cache_key": "3129bfa00c1631e0b190b99828cd13dd11ff21147a847b67c27212a38c1ef7bb",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "calgary_rcg_020",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0020",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "min_setback",
+          "applies_to": "setback",
+          "operator": ">=",
+          "value": "0.6",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0020",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0020",
+        "evidence_text_hash": "55640c1f9c6f8c92a3d56fd6110157fa126e2bcf6a6178eada16c920b3a1798d",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0021",
+      "evidence_id": "local_merged_rule_0021",
+      "cache_key": "f977766e72e980577a589689757a53020e01b2bbc24faa87c6f9191eee306faf",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "calgary_rcg_021",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0021",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "min_setback",
+          "applies_to": "setback",
+          "operator": ">=",
+          "value": "6.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0021",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0021",
+        "evidence_text_hash": "3c2fcb3078292b17bebffb030c03f37ed6c97fc14f0457ff500d94c8225e1148",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0022",
+      "evidence_id": "local_merged_rule_0022",
+      "cache_key": "bfb957b10b6bc9261beb69ef0071b5300e3b35d07859ab37ebec6d08520cb0e2",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_022",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0022",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "min_setback",
+          "applies_to": "setback",
+          "operator": ">=",
+          "value": "3.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0022",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0022",
+        "evidence_text_hash": "e4fb6181a12a9ce6745988171e01b7a4d2052660e8cab3e82e185afb9b029a9b",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0023",
+      "evidence_id": "local_merged_rule_0023",
+      "cache_key": "cd8b214c8db29736bf35dc16d5be65482313b44579befbe6d4768e070d06a265",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_023",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0023",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "building",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "1.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0023",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0023",
+        "evidence_text_hash": "c23fafc85dcf95beb9e81b83e6c8951b6aa8f089781d06c092dddab372786e51",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "local_merged_rule_0024",
+      "evidence_id": "local_merged_rule_0024",
+      "cache_key": "f89a6157a28cfc3836349ffaf23d73fbdf33953672a713ebe8aa03ab7e54a7c1",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "calgary_rcg_024",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "local_merged_rule_0024",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "building",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "1.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "local_merged_rule_0024",
+          "source_stream": "local_text_block",
+          "extraction_method": "pipeline5_final_registry"
+        },
+        "evidence_id": "local_merged_rule_0024",
+        "evidence_text_hash": "9f0e3a3c3e54b0c8554c31cc5da0cbe01ff51675765e8af6b29cc215201a73eb",
+        "config_hash": "23e7b08982ec5c5038ed651a8725b5c274c38f9e16df88c3921e7ddbf4770fa5",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    }
+  ],
+  "notes": [
+    "Cache keys include candidate core fields, cited evidence text, config hash, and verifier version.",
+    "The run-level candidate context is hashed once at report level (run_context_hash), not inside per-candidate keys, so one changed candidate cannot invalidate every other entry.",
+    "safe_to_reuse requires a cache hit, an unchanged report-level run_context_hash, and a matching decision; it is computed after verification as a would-skipping-have-been-safe diagnostic.",
+    "This report identifies reusable results but does not skip deterministic verification yet.",
+    "Skipping requires additional tests for run-level source agreement and cross-family collision dependencies."
+  ]
+}

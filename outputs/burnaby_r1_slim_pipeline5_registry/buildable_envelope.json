@@ -187,27 +187,55 @@
       "operator": ">=",
       "condition": "located between a front and rear principal",
       "applies_to": "principal building"
+    },
+    {
+      "rule_id": "burnaby_r1_075",
+      "value_numeric": 6.0,
+      "unit": "m",
+      "operator": ">=",
+      "condition": "located between a front and rear principal on a through lot",
+      "applies_to": "principal building"
+    },
+    {
+      "rule_id": "burnaby_r1_076",
+      "value_numeric": 2.4,
+      "unit": "m",
+      "operator": ">=",
+      "condition": "located between a front and rear principal",
+      "applies_to": "principal building"
     }
   ],
   "max_lot_coverage_pct": [],
   "max_impervious_surface_pct": [],
   "parcel_level": {
-    "min_lot_area": {
-      "rule_id": "burnaby_r1_018",
-      "value_numeric": 281.0,
-      "unit": "m²",
-      "operator": ">=",
-      "condition": null,
-      "applies_to": "Small-Scale Multi-Unit"
-    },
-    "max_dwelling_units": {
-      "rule_id": "burnaby_r1_062",
-      "value_numeric": 6.0,
-      "unit": "units",
-      "operator": "<=",
-      "condition": "SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)",
-      "applies_to": "dwelling units"
-    }
+    "max_dwelling_units": [
+      {
+        "rule_id": "burnaby_r1_062",
+        "value_numeric": 6.0,
+        "unit": "units",
+        "operator": "<=",
+        "condition": "SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1)",
+        "applies_to": "dwelling units"
+      }
+    ],
+    "min_lot_area": [
+      {
+        "rule_id": "burnaby_r1_018",
+        "value_numeric": 281.0,
+        "unit": "m²",
+        "operator": ">=",
+        "condition": null,
+        "applies_to": "Small-Scale Multi-Unit"
+      },
+      {
+        "rule_id": "burnaby_r1_028",
+        "value_numeric": 281.0,
+        "unit": "m²",
+        "operator": ">=",
+        "condition": "4 Units Only",
+        "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)"
+      }
+    ]
   },
   "context_and_triggers": [
     {
@@ -259,6 +287,7 @@
   "notes": [
     "Read-only projection of verified rules; not a verification artifact.",
     "Setbacks are keyed by lot line; multiple entries reflect conditional variants (e.g. end-unit, accessory).",
-    "Heights/storeys are grouped by building role; roof-type condition is preserved, not collapsed."
+    "Heights/storeys are grouped by building role; roof-type condition is preserved, not collapsed.",
+    "Parcel-level entries are lists so conditional variants (e.g. a '4 Units Only' lot-area floor) are kept alongside the base rule."
   ]
 }

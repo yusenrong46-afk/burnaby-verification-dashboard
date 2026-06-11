@@ -1,0 +1,1486 @@
+{
+  "mode": "shadow_evidence_bundle_rerun",
+  "notes": [
+    "Bundle reruns do not mutate verified_rules.json.",
+    "Bundle score and safe_retry are advisory only.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no support gaps or risk flags."
+  ],
+  "attempt_count": 10,
+  "verified_after_rerun_count": 1,
+  "promotion_ready_count": 1,
+  "review_after_rerun_count": 9,
+  "rejected_after_rerun_count": 0,
+  "skipped_count": 4,
+  "attempts": [
+    {
+      "original_rule_id": "calgary_rcg_007",
+      "original_candidate_id": "local_merged_rule_0007",
+      "retry_candidate_id": "local_merged_rule_0007__rerun__bundle_calgary_rcg_007",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "condition": "",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0007",
+      "bundle_evidence_id": "bundle::calgary_rcg_007",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0007",
+        "local_merged_rule_0008",
+        "local_merged_rule_0009"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "local_merged_rule_0007 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0008 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0009 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[local_merged_rule_0007] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019\n[local_merged_rule_0008] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019\n[local_merged_rule_0009] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_009",
+      "original_candidate_id": "local_merged_rule_0009",
+      "retry_candidate_id": "local_merged_rule_0009__rerun__bundle_calgary_rcg_009",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "condition": "",
+      "operator": ">=",
+      "value": "3.1",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0009",
+      "bundle_evidence_id": "bundle::calgary_rcg_009",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0007",
+        "local_merged_rule_0008",
+        "local_merged_rule_0009"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "local_merged_rule_0009 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0007 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0008 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0006 supports applies_to, operator, rule_object, scope, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[local_merged_rule_0007] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019\n[local_merged_rule_0008] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019\n[local_merged_rule_0009] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_017",
+      "original_candidate_id": "local_merged_rule_0017",
+      "retry_candidate_id": "local_merged_rule_0017__rerun__bundle_calgary_rcg_017",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "4.0",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0017",
+      "bundle_evidence_id": "bundle::calgary_rcg_017",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0017",
+        "local_merged_rule_0018",
+        "local_merged_rule_0019"
+      ],
+      "bundle_provenance_key": "section:352(8)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "local_merged_rule_0017 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0018 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0019 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0006 supports applies_to, operator, rule_object, scope, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[local_merged_rule_0017] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.\n[local_merged_rule_0018] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.\n[local_merged_rule_0019] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_018",
+      "original_candidate_id": "local_merged_rule_0018",
+      "retry_candidate_id": "local_merged_rule_0018__rerun__bundle_calgary_rcg_018",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0018",
+      "bundle_evidence_id": "bundle::calgary_rcg_018",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0017",
+        "local_merged_rule_0018",
+        "local_merged_rule_0019"
+      ],
+      "bundle_provenance_key": "section:352(8)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "local_merged_rule_0018 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0017 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0019 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0020 supports applies_to, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[local_merged_rule_0017] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.\n[local_merged_rule_0018] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.\n[local_merged_rule_0019] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_019",
+      "original_candidate_id": "local_merged_rule_0019",
+      "retry_candidate_id": "local_merged_rule_0019__rerun__bundle_calgary_rcg_019",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0019",
+      "bundle_evidence_id": "bundle::calgary_rcg_019",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0017",
+        "local_merged_rule_0018",
+        "local_merged_rule_0019"
+      ],
+      "bundle_provenance_key": "section:352(8)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "local_merged_rule_0019 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0017 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0018 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0020 supports applies_to, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[local_merged_rule_0017] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.\n[local_merged_rule_0018] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.\n[local_merged_rule_0019] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_022",
+      "original_candidate_id": "local_merged_rule_0022",
+      "retry_candidate_id": "local_merged_rule_0022__rerun__bundle_calgary_rcg_022",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0022",
+      "bundle_evidence_id": "bundle::calgary_rcg_022",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0017",
+        "local_merged_rule_0018",
+        "local_merged_rule_0019"
+      ],
+      "bundle_provenance_key": "section:352(8)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "local_merged_rule_0022 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0017 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0018 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0019 supports applies_to, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[local_merged_rule_0017] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.\n[local_merged_rule_0018] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.\n[local_merged_rule_0019] (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district where: (i) the balcony is setback less than 4.0 metres from the shared property line; and (ii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_023",
+      "original_candidate_id": "local_merged_rule_0023",
+      "retry_candidate_id": "local_merged_rule_0023__rerun__bundle_calgary_rcg_023",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0023",
+      "bundle_evidence_id": "bundle::calgary_rcg_023",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0023"
+      ],
+      "bundle_provenance_key": "section:360(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.843,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "local_merged_rule_0023 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0024 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, unit; local_merged_rule_0011 supports applies_to, operator, rule_object, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[local_merged_rule_0023] (2) When the difference between the average building reference point at the front corners of the parcel and those at the rear of the parcel is greater than or equal to 1.0 metres, the building height must not be greater than a height plane that: (a) begins at the highest average building reference point; (b) extends vertically to the maximum building height plus",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_024",
+      "original_candidate_id": "local_merged_rule_0024",
+      "retry_candidate_id": "local_merged_rule_0024__rerun__bundle_calgary_rcg_024",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0024",
+      "bundle_evidence_id": "bundle::calgary_rcg_024",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0023"
+      ],
+      "bundle_provenance_key": "section:360(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.843,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "local_merged_rule_0024 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0023 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, unit; local_merged_rule_0011 supports applies_to, operator, rule_object, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[local_merged_rule_0023] (2) When the difference between the average building reference point at the front corners of the parcel and those at the rear of the parcel is greater than or equal to 1.0 metres, the building height must not be greater than a height plane that: (a) begins at the highest average building reference point; (b) extends vertically to the maximum building height plus",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_012",
+      "original_candidate_id": "local_merged_rule_0012",
+      "retry_candidate_id": "local_merged_rule_0012__rerun__bundle_calgary_rcg_012",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0012",
+      "bundle_evidence_id": "bundle::calgary_rcg_012",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0011",
+        "local_merged_rule_0012",
+        "local_merged_rule_0013"
+      ],
+      "bundle_provenance_key": "section:352(4.1)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.763,
+      "bundle_missing_fields": [
+        "scope"
+      ],
+      "bundle_sentence": "local_merged_rule_0012 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0011 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0013 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0017 supports applies_to, operator, rule_object, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[local_merged_rule_0011] (4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear property line shared with a parcel designated with a low density residential district; and (c) increases at a 45 degree angle to a maximum of 7.5 metres at a proportional distance from the shared property line. 10P2019\n[local_merged_rule_0012] (4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear property line shared with a parcel designated with a low density residential district; and (c) increases at a 45 degree angle to a maximum of 7.5 metres at a proportional distance from the shared property line. 10P2019\n[local_merged_rule_0013] (4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear property line shared with a parcel designated with a low density residential district; and (c) increases at a 45 degree angle to a maximum of 7.5 metres at a proportional distance from the shared property line. 10P2019",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_013",
+      "original_candidate_id": "local_merged_rule_0013",
+      "retry_candidate_id": "local_merged_rule_0013__rerun__bundle_calgary_rcg_013",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0013",
+      "bundle_evidence_id": "bundle::calgary_rcg_013",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0010"
+      ],
+      "bundle_provenance_key": "section:352(4)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.763,
+      "bundle_missing_fields": [
+        "scope"
+      ],
+      "bundle_sentence": "local_merged_rule_0013 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0011 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0012 supports applies_to, operator, rule_object, unit, value.",
+      "retry_decision": "verified",
+      "retry_support_gaps": [],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": true,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks.",
+      "bundle_evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+      "verified_rule": {
+        "rule_id": "calgary_rcg_034",
+        "rule_object": "height",
+        "constraint_type": "maximum",
+        "constraint_scope": "building",
+        "applies_to": "height",
+        "value": "7.5",
+        "unit": "m",
+        "operator": "<=",
+        "condition": "",
+        "exception": "",
+        "gis_relevance": "direct",
+        "verification_status": "verified",
+        "verification_decision": "verified",
+        "verification_label": "supported",
+        "canonical_rule_key": "height__building__height____7_5__m",
+        "proof_type": "text_evidence",
+        "table_proof_status": "none",
+        "text_span_proof_status": "complete",
+        "proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "cited evidence supports the canonical rule object"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "scope words are grounded in local evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "applies_to words are grounded in local evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "operator wording is supported by evidence"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "value appears in cited evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "unit appears in cited evidence and is compatible"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit exception claim"
+          }
+        },
+        "text_proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "cited evidence supports the canonical rule object"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "scope words are grounded in local evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "applies_to words are grounded in local evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "operator wording is supported by evidence"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "value appears in cited evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "unit appears in cited evidence and is compatible"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit exception claim"
+          }
+        },
+        "text_span_proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "height",
+            "reason": "rule-object cue appears in text evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "maximum",
+            "reason": "text wording supports <= / maximum"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "imum building height for a Backyard Suite is 7.5 metres. 10P2019\n[local_merged_rule_0010] (4)",
+            "reason": "value appears in text evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "metres",
+            "reason": "unit appears in text evidence"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maxim...",
+            "reason": "scope words appear in text evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maxim...",
+            "reason": "applies_to words appear in text evidence"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "no explicit exception claim and no unresolved exception cue"
+          }
+        },
+        "table_proof_trace": {},
+        "merged_proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "cited evidence supports the canonical rule object"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "scope words are grounded in local evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "applies_to words are grounded in local evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "operator wording is supported by evidence"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "value appears in cited evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "unit appears in cited evidence and is compatible"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit exception claim"
+          }
+        },
+        "proof_decision_mismatch": false,
+        "proof_decision_mismatches": [],
+        "evidence_strength": 0.883,
+        "review_priority": "verified",
+        "support_gaps": [],
+        "support_checks": {
+          "source_evidence_present": true,
+          "value_supported": true,
+          "unit_supported": true,
+          "operator_supported": true,
+          "applies_to_supported": true,
+          "scope_supported": true,
+          "rule_object_supported": true,
+          "table_context_supported": true,
+          "table_review_gate_passed": true
+        },
+        "normalization_trace": [],
+        "review_reason": "all critical evidence checks passed",
+        "source": {
+          "document": null,
+          "url": null,
+          "page": 396,
+          "section": null,
+          "evidence_id": "bundle::calgary_rcg_013",
+          "evidence_type": "clause",
+          "evidence_text": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+          "source_context": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+          "inherited_parent_context": null,
+          "local_context": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+          "source_section": "352(4)",
+          "source_heading": null,
+          "table_title": null,
+          "row_header": "building",
+          "column_header": null,
+          "cell_value": "7.5 m",
+          "bbox": null,
+          "table_parser": null
+        },
+        "candidate": {
+          "candidate_id": "local_merged_rule_0013__rerun__bundle_calgary_rcg_013",
+          "evidence_id": "bundle::calgary_rcg_013",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "building",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "7.5",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "gis_relevance": "direct",
+          "notes": "adapted external candidate",
+          "extraction_method": "pipeline5_final_registry",
+          "extraction_source": "zihao",
+          "source_stream": "local_text_block",
+          "rule_key": "max_height",
+          "subject": "building",
+          "relevance_category": null,
+          "extraction_final_action": "ACCEPT",
+          "extraction_support_gaps": null,
+          "extraction_review_reasons": [],
+          "original_rule_id": "calgary_rcg_013",
+          "original_excerpt": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear property line shared with a parcel designated with a low density residential district; and (c) increases at a 45 degree angle to a maximum of 7.5 metres at a proportional distance from the shared property line. 10P2019",
+          "sentence_match_score": null,
+          "possible_missing_numeric_values": null,
+          "zihao_verification_status": null,
+          "zihao_confidence": null,
+          "zihao_needs_review": null,
+          "original_candidate_id": "local_merged_rule_0013",
+          "original_evidence_id": "local_merged_rule_0013",
+          "evidence_bundle_rerun": true
+        }
+      }
+    }
+  ],
+  "verified_after_rerun": [
+    {
+      "original_rule_id": "calgary_rcg_013",
+      "original_candidate_id": "local_merged_rule_0013",
+      "retry_candidate_id": "local_merged_rule_0013__rerun__bundle_calgary_rcg_013",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0013",
+      "bundle_evidence_id": "bundle::calgary_rcg_013",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0010"
+      ],
+      "bundle_provenance_key": "section:352(4)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.763,
+      "bundle_missing_fields": [
+        "scope"
+      ],
+      "bundle_sentence": "local_merged_rule_0013 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0011 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0012 supports applies_to, operator, rule_object, unit, value.",
+      "retry_decision": "verified",
+      "retry_support_gaps": [],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": true,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks.",
+      "bundle_evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+      "verified_rule": {
+        "rule_id": "calgary_rcg_034",
+        "rule_object": "height",
+        "constraint_type": "maximum",
+        "constraint_scope": "building",
+        "applies_to": "height",
+        "value": "7.5",
+        "unit": "m",
+        "operator": "<=",
+        "condition": "",
+        "exception": "",
+        "gis_relevance": "direct",
+        "verification_status": "verified",
+        "verification_decision": "verified",
+        "verification_label": "supported",
+        "canonical_rule_key": "height__building__height____7_5__m",
+        "proof_type": "text_evidence",
+        "table_proof_status": "none",
+        "text_span_proof_status": "complete",
+        "proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "cited evidence supports the canonical rule object"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "scope words are grounded in local evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "applies_to words are grounded in local evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "operator wording is supported by evidence"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "value appears in cited evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "unit appears in cited evidence and is compatible"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit exception claim"
+          }
+        },
+        "text_proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "cited evidence supports the canonical rule object"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "scope words are grounded in local evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "applies_to words are grounded in local evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "operator wording is supported by evidence"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "value appears in cited evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "unit appears in cited evidence and is compatible"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit exception claim"
+          }
+        },
+        "text_span_proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "height",
+            "reason": "rule-object cue appears in text evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "maximum",
+            "reason": "text wording supports <= / maximum"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "imum building height for a Backyard Suite is 7.5 metres. 10P2019\n[local_merged_rule_0010] (4)",
+            "reason": "value appears in text evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "metres",
+            "reason": "unit appears in text evidence"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maxim...",
+            "reason": "scope words appear in text evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maxim...",
+            "reason": "applies_to words appear in text evidence"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "no explicit exception claim and no unresolved exception cue"
+          }
+        },
+        "table_proof_trace": {},
+        "merged_proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "cited evidence supports the canonical rule object"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "scope words are grounded in local evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "applies_to words are grounded in local evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "operator wording is supported by evidence"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "value appears in cited evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "unit appears in cited evidence and is compatible"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit exception claim"
+          }
+        },
+        "proof_decision_mismatch": false,
+        "proof_decision_mismatches": [],
+        "evidence_strength": 0.883,
+        "review_priority": "verified",
+        "support_gaps": [],
+        "support_checks": {
+          "source_evidence_present": true,
+          "value_supported": true,
+          "unit_supported": true,
+          "operator_supported": true,
+          "applies_to_supported": true,
+          "scope_supported": true,
+          "rule_object_supported": true,
+          "table_context_supported": true,
+          "table_review_gate_passed": true
+        },
+        "normalization_trace": [],
+        "review_reason": "all critical evidence checks passed",
+        "source": {
+          "document": null,
+          "url": null,
+          "page": 396,
+          "section": null,
+          "evidence_id": "bundle::calgary_rcg_013",
+          "evidence_type": "clause",
+          "evidence_text": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+          "source_context": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+          "inherited_parent_context": null,
+          "local_context": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+          "source_section": "352(4)",
+          "source_heading": null,
+          "table_title": null,
+          "row_header": "building",
+          "column_header": null,
+          "cell_value": "7.5 m",
+          "bbox": null,
+          "table_parser": null
+        },
+        "candidate": {
+          "candidate_id": "local_merged_rule_0013__rerun__bundle_calgary_rcg_013",
+          "evidence_id": "bundle::calgary_rcg_013",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "building",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "7.5",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "gis_relevance": "direct",
+          "notes": "adapted external candidate",
+          "extraction_method": "pipeline5_final_registry",
+          "extraction_source": "zihao",
+          "source_stream": "local_text_block",
+          "rule_key": "max_height",
+          "subject": "building",
+          "relevance_category": null,
+          "extraction_final_action": "ACCEPT",
+          "extraction_support_gaps": null,
+          "extraction_review_reasons": [],
+          "original_rule_id": "calgary_rcg_013",
+          "original_excerpt": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear property line shared with a parcel designated with a low density residential district; and (c) increases at a 45 degree angle to a maximum of 7.5 metres at a proportional distance from the shared property line. 10P2019",
+          "sentence_match_score": null,
+          "possible_missing_numeric_values": null,
+          "zihao_verification_status": null,
+          "zihao_confidence": null,
+          "zihao_needs_review": null,
+          "original_candidate_id": "local_merged_rule_0013",
+          "original_evidence_id": "local_merged_rule_0013",
+          "evidence_bundle_rerun": true
+        }
+      }
+    }
+  ],
+  "promotion_ready": [
+    {
+      "original_rule_id": "calgary_rcg_013",
+      "original_candidate_id": "local_merged_rule_0013",
+      "retry_candidate_id": "local_merged_rule_0013__rerun__bundle_calgary_rcg_013",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "local_merged_rule_0013",
+      "bundle_evidence_id": "bundle::calgary_rcg_013",
+      "bundle_evidence_ids": [
+        "local_merged_rule_0010"
+      ],
+      "bundle_provenance_key": "section:352(4)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.763,
+      "bundle_missing_fields": [
+        "scope"
+      ],
+      "bundle_sentence": "local_merged_rule_0013 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0011 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0012 supports applies_to, operator, rule_object, unit, value.",
+      "retry_decision": "verified",
+      "retry_support_gaps": [],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": true,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks.",
+      "bundle_evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+      "verified_rule": {
+        "rule_id": "calgary_rcg_034",
+        "rule_object": "height",
+        "constraint_type": "maximum",
+        "constraint_scope": "building",
+        "applies_to": "height",
+        "value": "7.5",
+        "unit": "m",
+        "operator": "<=",
+        "condition": "",
+        "exception": "",
+        "gis_relevance": "direct",
+        "verification_status": "verified",
+        "verification_decision": "verified",
+        "verification_label": "supported",
+        "canonical_rule_key": "height__building__height____7_5__m",
+        "proof_type": "text_evidence",
+        "table_proof_status": "none",
+        "text_span_proof_status": "complete",
+        "proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "cited evidence supports the canonical rule object"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "scope words are grounded in local evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "applies_to words are grounded in local evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "operator wording is supported by evidence"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "value appears in cited evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "unit appears in cited evidence and is compatible"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit exception claim"
+          }
+        },
+        "text_proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "cited evidence supports the canonical rule object"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "scope words are grounded in local evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "applies_to words are grounded in local evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "operator wording is supported by evidence"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "value appears in cited evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "unit appears in cited evidence and is compatible"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit exception claim"
+          }
+        },
+        "text_span_proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "height",
+            "reason": "rule-object cue appears in text evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "maximum",
+            "reason": "text wording supports <= / maximum"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "imum building height for a Backyard Suite is 7.5 metres. 10P2019\n[local_merged_rule_0010] (4)",
+            "reason": "value appears in text evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "metres",
+            "reason": "unit appears in text evidence"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maxim...",
+            "reason": "scope words appear in text evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maxim...",
+            "reason": "applies_to words appear in text evidence"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "no explicit exception claim and no unresolved exception cue"
+          }
+        },
+        "table_proof_trace": {},
+        "merged_proof_trace": {
+          "rule_object": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "cited evidence supports the canonical rule object"
+          },
+          "constraint_scope": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "scope words are grounded in local evidence"
+          },
+          "applies_to": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "applies_to words are grounded in local evidence"
+          },
+          "operator": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "operator wording is supported by evidence"
+          },
+          "value": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "value appears in cited evidence"
+          },
+          "unit": {
+            "label": "supported",
+            "evidence_field": "evidence_text",
+            "evidence_quote": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 building 7.5 m [local_merged_rule_0010] (4) Unless otherwise referenced in subsection (...",
+            "reason": "unit appears in cited evidence and is compatible"
+          },
+          "condition": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit condition claim"
+          },
+          "exception": {
+            "label": "supported",
+            "evidence_field": "",
+            "evidence_quote": "",
+            "reason": "candidate has no explicit exception claim"
+          }
+        },
+        "proof_decision_mismatch": false,
+        "proof_decision_mismatches": [],
+        "evidence_strength": 0.883,
+        "review_priority": "verified",
+        "support_gaps": [],
+        "support_checks": {
+          "source_evidence_present": true,
+          "value_supported": true,
+          "unit_supported": true,
+          "operator_supported": true,
+          "applies_to_supported": true,
+          "scope_supported": true,
+          "rule_object_supported": true,
+          "table_context_supported": true,
+          "table_review_gate_passed": true
+        },
+        "normalization_trace": [],
+        "review_reason": "all critical evidence checks passed",
+        "source": {
+          "document": null,
+          "url": null,
+          "page": 396,
+          "section": null,
+          "evidence_id": "bundle::calgary_rcg_013",
+          "evidence_type": "clause",
+          "evidence_text": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+          "source_context": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+          "inherited_parent_context": null,
+          "local_context": "[local_merged_rule_0010] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+          "source_section": "352(4)",
+          "source_heading": null,
+          "table_title": null,
+          "row_header": "building",
+          "column_header": null,
+          "cell_value": "7.5 m",
+          "bbox": null,
+          "table_parser": null
+        },
+        "candidate": {
+          "candidate_id": "local_merged_rule_0013__rerun__bundle_calgary_rcg_013",
+          "evidence_id": "bundle::calgary_rcg_013",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "building",
+          "applies_to": "height",
+          "operator": "<=",
+          "value": "7.5",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "gis_relevance": "direct",
+          "notes": "adapted external candidate",
+          "extraction_method": "pipeline5_final_registry",
+          "extraction_source": "zihao",
+          "source_stream": "local_text_block",
+          "rule_key": "max_height",
+          "subject": "building",
+          "relevance_category": null,
+          "extraction_final_action": "ACCEPT",
+          "extraction_support_gaps": null,
+          "extraction_review_reasons": [],
+          "original_rule_id": "calgary_rcg_013",
+          "original_excerpt": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear property line shared with a parcel designated with a low density residential district; and (c) increases at a 45 degree angle to a maximum of 7.5 metres at a proportional distance from the shared property line. 10P2019",
+          "sentence_match_score": null,
+          "possible_missing_numeric_values": null,
+          "zihao_verification_status": null,
+          "zihao_confidence": null,
+          "zihao_needs_review": null,
+          "original_candidate_id": "local_merged_rule_0013",
+          "original_evidence_id": "local_merged_rule_0013",
+          "evidence_bundle_rerun": true
+        }
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "rule_id": "calgary_rcg_005",
+      "candidate_id": "local_merged_rule_0005",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_001",
+      "candidate_id": "local_merged_rule_0001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.391,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_014",
+      "candidate_id": "local_merged_rule_0014",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.391,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_015",
+      "candidate_id": "local_merged_rule_0015",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.391,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    }
+  ]
+}

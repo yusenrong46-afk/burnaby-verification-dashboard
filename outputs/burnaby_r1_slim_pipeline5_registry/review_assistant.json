@@ -6,7 +6,7 @@
     "The deterministic verifier alone decides verified/review/rejected.",
     "An LLM suggestion must be human-confirmed and re-run through the verifier to take effect."
   ],
-  "item_count": 66,
+  "item_count": 58,
   "items": [
     {
       "rule_id": "burnaby_r1_019",
@@ -26,8 +26,8 @@
       "why_blocked": "Verifier held this rule because: rule_family_direction_mismatch, applies_to_not_supported, operator_not_supported, table_applies_to_not_supported.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Find wording such as minimum, maximum, required, permitted, not less, or not exceed."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -50,8 +50,8 @@
       "why_blocked": "Verifier held this rule because: rule_family_direction_mismatch, operator_not_supported.",
       "likely_fix": {
         "field": "operator",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it. Triage guidance: Find wording such as minimum, maximum, required, permitted, not less, or not exceed."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -74,8 +74,8 @@
       "why_blocked": "Verifier held this rule because: rule_family_direction_mismatch, operator_not_supported.",
       "likely_fix": {
         "field": "operator",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it. Triage guidance: Find wording such as minimum, maximum, required, permitted, not less, or not exceed."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -98,8 +98,8 @@
       "why_blocked": "Verifier held this rule because: text_condition_not_supported, rule_family_direction_mismatch, operator_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -110,20 +110,8 @@
       "why_blocked": "Verifier held this rule because: text_condition_not_supported, table_cell_candidate_requires_review, table_evidence_candidate_requires_review.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_028",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: applies_to_not_supported.",
-      "likely_fix": {
-        "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -134,8 +122,8 @@
       "why_blocked": "Verifier held this rule because: text_condition_not_supported, applies_to_not_supported, table_applies_to_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -146,8 +134,8 @@
       "why_blocked": "Verifier held this rule because: rule_family_direction_mismatch, applies_to_not_supported, table_applies_to_not_supported.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -158,8 +146,8 @@
       "why_blocked": "Verifier held this rule because: applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -170,8 +158,8 @@
       "why_blocked": "Verifier held this rule because: applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -182,8 +170,8 @@
       "why_blocked": "Verifier held this rule because: applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -194,8 +182,8 @@
       "why_blocked": "Verifier held this rule because: applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -206,8 +194,8 @@
       "why_blocked": "Verifier held this rule because: text_condition_not_supported, applies_to_not_supported, table_applies_to_not_supported, table_condition_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -218,8 +206,8 @@
       "why_blocked": "Verifier held this rule because: applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -230,8 +218,8 @@
       "why_blocked": "Verifier held this rule because: applies_to_not_supported, table_applies_to_not_supported, table_column_not_target_scope, table_cell_candidate_requires_review.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Compare sibling rule families sharing the same value; do not auto-pick a winner.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Compare sibling rule families sharing the same value; do not auto-pick a winner."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -299,11 +287,11 @@
     {
       "rule_id": "burnaby_r1_063",
       "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review.",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, operator_not_supported.",
       "likely_fix": {
-        "field": "none",
+        "field": "operator",
         "proposed_value": null,
-        "rationale": "No single missing-context field dominates; needs human inspection."
+        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it. Triage guidance: Find wording such as minimum, maximum, required, permitted, not less, or not exceed."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -311,7 +299,7 @@
     {
       "rule_id": "burnaby_r1_064",
       "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, rule_object_not_supported.",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, rule_object_not_supported, unresolved_exception_cue.",
       "likely_fix": {
         "field": "none",
         "proposed_value": null,
@@ -326,8 +314,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, operator_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -335,35 +323,11 @@
     {
       "rule_id": "burnaby_r1_067",
       "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review.",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, unresolved_exception_cue.",
       "likely_fix": {
         "field": "none",
         "proposed_value": null,
         "rationale": "No single missing-context field dominates; needs human inspection."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_068",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, operator_not_supported.",
-      "likely_fix": {
-        "field": "operator",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_069",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, operator_not_supported.",
-      "likely_fix": {
-        "field": "operator",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -374,8 +338,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, operator_not_supported.",
       "likely_fix": {
         "field": "operator",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it. Triage guidance: Find wording such as minimum, maximum, required, permitted, not less, or not exceed."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -388,42 +352,6 @@
         "field": "none",
         "proposed_value": null,
         "rationale": "No single missing-context field dominates; needs human inspection."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_073",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, operator_not_supported.",
-      "likely_fix": {
-        "field": "operator",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_075",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, operator_not_supported.",
-      "likely_fix": {
-        "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_076",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported.",
-      "likely_fix": {
-        "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -446,8 +374,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, applies_to_not_supported, rule_object_not_supported.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -458,8 +386,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, applies_to_not_supported, rule_object_not_supported.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -470,8 +398,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, applies_to_not_supported.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -489,13 +417,25 @@
       "advisory_only": true
     },
     {
+      "rule_id": "burnaby_r1_088",
+      "source": "heuristic",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, applies_to_not_supported.",
+      "likely_fix": {
+        "field": "applies_to",
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
+      },
+      "confidence": 0.0,
+      "advisory_only": true
+    },
+    {
       "rule_id": "burnaby_r1_093",
       "source": "heuristic",
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported, rule_object_not_supported.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Find wording such as minimum, maximum, required, permitted, not less, or not exceed."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -503,137 +443,17 @@
     {
       "rule_id": "burnaby_r1_094",
       "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported.",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, applies_to_not_supported.",
       "likely_fix": {
         "field": "applies_to",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it. Triage guidance: Recover row/header or local text that names the affected building/use type."
       },
       "confidence": 0.0,
       "advisory_only": true
     },
     {
       "rule_id": "burnaby_r1_095",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, applies_to_not_supported.",
-      "likely_fix": {
-        "field": "applies_to",
-        "proposed_value": "Recover row/header or local text that names the affected building/use type.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_098",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported.",
-      "likely_fix": {
-        "field": "applies_to",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'applies_to'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_099",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, operator_not_supported.",
-      "likely_fix": {
-        "field": "operator",
-        "proposed_value": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
-        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_101",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, constraint_scope_not_supported.",
-      "likely_fix": {
-        "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_102",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, constraint_scope_not_supported.",
-      "likely_fix": {
-        "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_103",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, operator_not_supported.",
-      "likely_fix": {
-        "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_105",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, applies_to_not_supported.",
-      "likely_fix": {
-        "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_107",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, constraint_scope_not_supported.",
-      "likely_fix": {
-        "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_108",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, constraint_scope_not_supported.",
-      "likely_fix": {
-        "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_109",
-      "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, applies_to_not_supported.",
-      "likely_fix": {
-        "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
-      },
-      "confidence": 0.0,
-      "advisory_only": true
-    },
-    {
-      "rule_id": "burnaby_r1_111",
       "source": "heuristic",
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review.",
       "likely_fix": {
@@ -645,9 +465,93 @@
       "advisory_only": true
     },
     {
+      "rule_id": "burnaby_r1_099",
+      "source": "heuristic",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, operator_not_supported.",
+      "likely_fix": {
+        "field": "operator",
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'operator'; check the cited evidence for it. Triage guidance: Find wording such as minimum, maximum, required, permitted, not less, or not exceed."
+      },
+      "confidence": 0.0,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "burnaby_r1_101",
+      "source": "heuristic",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, constraint_scope_not_supported.",
+      "likely_fix": {
+        "field": "condition",
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
+      },
+      "confidence": 0.0,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "burnaby_r1_102",
+      "source": "heuristic",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, constraint_scope_not_supported.",
+      "likely_fix": {
+        "field": "condition",
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
+      },
+      "confidence": 0.0,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "burnaby_r1_103",
+      "source": "heuristic",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, operator_not_supported.",
+      "likely_fix": {
+        "field": "condition",
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
+      },
+      "confidence": 0.0,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "burnaby_r1_105",
+      "source": "heuristic",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, applies_to_not_supported.",
+      "likely_fix": {
+        "field": "condition",
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
+      },
+      "confidence": 0.0,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "burnaby_r1_108",
+      "source": "heuristic",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, applies_to_not_supported, constraint_scope_not_supported.",
+      "likely_fix": {
+        "field": "condition",
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
+      },
+      "confidence": 0.0,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "burnaby_r1_109",
+      "source": "heuristic",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, applies_to_not_supported.",
+      "likely_fix": {
+        "field": "condition",
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
+      },
+      "confidence": 0.0,
+      "advisory_only": true
+    },
+    {
       "rule_id": "burnaby_r1_113",
       "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, rule_family_direction_mismatch.",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, unresolved_exception_cue.",
       "likely_fix": {
         "field": "none",
         "proposed_value": null,
@@ -662,8 +566,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -674,8 +578,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, rule_object_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -686,8 +590,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, rule_object_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -698,8 +602,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, rule_object_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -710,8 +614,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_family_direction_mismatch, rule_object_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -722,8 +626,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, cross_family_value_collision.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Compare sibling rule families sharing the same value; do not auto-pick a winner.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Compare sibling rule families sharing the same value; do not auto-pick a winner."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -734,8 +638,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -743,11 +647,11 @@
     {
       "rule_id": "burnaby_r1_128",
       "source": "heuristic",
-      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, operator_not_supported.",
+      "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported, operator_not_supported, unresolved_exception_cue.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Resolve exception/override wording before promotion."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -758,8 +662,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -770,8 +674,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -782,8 +686,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true
@@ -794,8 +698,8 @@
       "why_blocked": "Verifier held this rule because: pipeline5_text_candidate_requires_review, text_condition_not_supported.",
       "likely_fix": {
         "field": "condition",
-        "proposed_value": "Find evidence span that includes the material condition, not only the value/unit.",
-        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it."
+        "proposed_value": null,
+        "rationale": "Largest unmet gap maps to 'condition'; check the cited evidence for it. Triage guidance: Find evidence span that includes the material condition, not only the value/unit."
       },
       "confidence": 0.0,
       "advisory_only": true

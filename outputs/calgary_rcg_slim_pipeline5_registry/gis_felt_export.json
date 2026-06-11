@@ -1,0 +1,329 @@
+{
+  "schema_version": "gis_felt_export_v1",
+  "city": "Calgary",
+  "zone": "RCG",
+  "source_document": null,
+  "source_url": null,
+  "input_mode": "pipeline5_registry",
+  "consumer_notes": [
+    "This export is derived only from verified_rules.json.",
+    "Review, rejected, and not_used rules are not executable constraints.",
+    "Map consumers should display review_blockers as warnings, not apply them as zoning logic."
+  ],
+  "map_layer_requirements": [
+    {
+      "layer_key": "building_footprint",
+      "description": "Building footprint polygons for height, storey, separation, and coverage limits.",
+      "example_team_file": "code/gis_files/calgary/building_footprint.gpkg"
+    }
+  ],
+  "buildable_area_parameters": {
+    "building_height_m__5": {
+      "parameter_key": "building_height_m__5",
+      "value": "5.0",
+      "value_numeric": 5.0,
+      "unit": "m",
+      "operator": "<=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "calgary_rcg_011"
+      ],
+      "source_pages": [
+        396
+      ],
+      "conditions": []
+    },
+    "building_height_m__7_5": {
+      "parameter_key": "building_height_m__7_5",
+      "value": "7.5",
+      "value_numeric": 7.5,
+      "unit": "m",
+      "operator": "<=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "calgary_rcg_010"
+      ],
+      "source_pages": [
+        396
+      ],
+      "conditions": []
+    },
+    "building_separation_m": {
+      "parameter_key": "building_separation_m",
+      "value": "5.0",
+      "value_numeric": 5.0,
+      "unit": "m",
+      "operator": ">=",
+      "geometry_target": "building_footprint",
+      "source_rule_ids": [
+        "calgary_rcg_006"
+      ],
+      "source_pages": [
+        396
+      ],
+      "conditions": []
+    }
+  },
+  "constraints": [
+    {
+      "constraint_id": "calgary_rcg_004",
+      "source_rule_id": "calgary_rcg_004",
+      "rule_object": "setback",
+      "parameter_key": "setback_min_setback",
+      "export_group": "buildable_area",
+      "geometry_target": null,
+      "geometry": null,
+      "operator": ">=",
+      "value": "1.5",
+      "value_numeric": 1.5,
+      "unit": "m",
+      "applies_to": "setback",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": false,
+      "source_page": 395,
+      "source_evidence_id": "local_merged_rule_0004",
+      "source_quote": "352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (b) 0.6 metres for any portion of the building used as a private garage.",
+      "felt_popup_sentence": "setback: setback for min setback must be at least 1.5 m."
+    },
+    {
+      "constraint_id": "calgary_rcg_006",
+      "source_rule_id": "calgary_rcg_006",
+      "rule_object": "building_separation",
+      "parameter_key": "building_separation_m",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": ">=",
+      "value": "5.0",
+      "value_numeric": 5.0,
+      "unit": "m",
+      "applies_to": "building_separation",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 396,
+      "source_evidence_id": "local_merged_rule_0006",
+      "source_quote": "(3) Unless otherwise referenced in subsections (3.1) and (3.2), a minimum separation of 5.0 metres is required between the closest façade of the main residential building to the closest façade of a Backyard Suite. 10P2019",
+      "felt_popup_sentence": "building_separation: building separation for building separation must be at least 5.0 m."
+    },
+    {
+      "constraint_id": "calgary_rcg_010",
+      "source_rule_id": "calgary_rcg_010",
+      "rule_object": "height",
+      "parameter_key": "building_height_m",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": "<=",
+      "value": "7.5",
+      "value_numeric": 7.5,
+      "unit": "m",
+      "applies_to": "height",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 396,
+      "source_evidence_id": "local_merged_rule_0010",
+      "source_quote": "(4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019",
+      "felt_popup_sentence": "height: height for building must be no more than 7.5 m."
+    },
+    {
+      "constraint_id": "calgary_rcg_011",
+      "source_rule_id": "calgary_rcg_011",
+      "rule_object": "height",
+      "parameter_key": "building_height_m",
+      "export_group": "buildable_area",
+      "geometry_target": "building_footprint",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "operator": "<=",
+      "value": "5.0",
+      "value_numeric": 5.0,
+      "unit": "m",
+      "applies_to": "height",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": true,
+      "source_page": 396,
+      "source_evidence_id": "local_merged_rule_0011",
+      "source_quote": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear property line shared with a parcel designated with a low density residential district; and (c) increases at a 45 degree angle to a maximum of 7.5 metres at a proportional distance from the shared property line. 10P2019",
+      "felt_popup_sentence": "height: height for building must be no more than 5.0 m."
+    },
+    {
+      "constraint_id": "calgary_rcg_020",
+      "source_rule_id": "calgary_rcg_020",
+      "rule_object": "setback",
+      "parameter_key": "setback_min_setback",
+      "export_group": "buildable_area",
+      "geometry_target": null,
+      "geometry": null,
+      "operator": ">=",
+      "value": "0.6",
+      "value_numeric": 0.6,
+      "unit": "m",
+      "applies_to": "setback",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": false,
+      "source_page": 397,
+      "source_evidence_id": "local_merged_rule_0020",
+      "source_quote": "(9) A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres from the property line.",
+      "felt_popup_sentence": "setback: setback for min setback must be at least 0.6 m."
+    },
+    {
+      "constraint_id": "calgary_rcg_021",
+      "source_rule_id": "calgary_rcg_021",
+      "rule_object": "setback",
+      "parameter_key": "setback_min_setback",
+      "export_group": "buildable_area",
+      "geometry_target": null,
+      "geometry": null,
+      "operator": ">=",
+      "value": "6.0",
+      "value_numeric": 6.0,
+      "unit": "m",
+      "applies_to": "setback",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "direct",
+      "gis_ready": false,
+      "source_page": 398,
+      "source_evidence_id": "local_merged_rule_0021",
+      "source_quote": "(3) The building setback from the front property line for a Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling in the Developed Area is deemed to conform with the requirements of this Bylaw if: (a) the Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling was legally existing or approved prior to the effective date of this Bylaw; (b) the building setback from the front property line is: (i) a minimum of 6.0 metres for the R-C1L or R-C1Ls districts; or (ii) a minimum of 3.0 metres for any other residential district; and 67P2008 (c) the main residential building: (i) has not been added to after the effective date of this Bylaw; or (ii) has been added to after the effective date of this Bylaw and the addition complies with the requirements specified in this Bylaw for a building setback from the front property line. 67P2008, 46P2008",
+      "felt_popup_sentence": "setback: setback for min setback must be at least 6.0 m."
+    }
+  ],
+  "review_blockers": {
+    "count": 14,
+    "category_counts": [
+      {
+        "name": "missing_applies_to",
+        "count": 6
+      },
+      {
+        "name": "operator_uncertain",
+        "count": 5
+      },
+      {
+        "name": "unresolved_exception",
+        "count": 3
+      }
+    ],
+    "action_counts": [
+      {
+        "name": "retry_with_better_evidence",
+        "count": 11
+      },
+      {
+        "name": "human_legal_review",
+        "count": 3
+      }
+    ],
+    "rule_family_counts": [
+      {
+        "name": "setback",
+        "count": 5
+      },
+      {
+        "name": "height",
+        "count": 4
+      },
+      {
+        "name": "floor_area",
+        "count": 3
+      },
+      {
+        "name": "building_separation",
+        "count": 2
+      }
+    ],
+    "example_blockers": [
+      {
+        "rule_id": "calgary_rcg_001",
+        "rule_object": "floor_area",
+        "review_category": "unresolved_exception",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the proposed operator is not supported by the cited wording; the evidence contains exception or override wording that needs review"
+      },
+      {
+        "rule_id": "calgary_rcg_005",
+        "rule_object": "setback",
+        "review_category": "operator_uncertain",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded; the scope or condition is not clearly grounded; the proposed operator is not supported by the cited wording"
+      },
+      {
+        "rule_id": "calgary_rcg_007",
+        "rule_object": "building_separation",
+        "review_category": "missing_applies_to",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded"
+      },
+      {
+        "rule_id": "calgary_rcg_009",
+        "rule_object": "building_separation",
+        "review_category": "missing_applies_to",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded"
+      },
+      {
+        "rule_id": "calgary_rcg_012",
+        "rule_object": "height",
+        "review_category": "operator_uncertain",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded; the scope or condition is not clearly grounded; the proposed operator is not supported by the cited wording"
+      },
+      {
+        "rule_id": "calgary_rcg_013",
+        "rule_object": "height",
+        "review_category": "missing_applies_to",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded; the scope or condition is not clearly grounded"
+      },
+      {
+        "rule_id": "calgary_rcg_014",
+        "rule_object": "floor_area",
+        "review_category": "unresolved_exception",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded; the evidence contains exception or override wording that needs review"
+      },
+      {
+        "rule_id": "calgary_rcg_015",
+        "rule_object": "floor_area",
+        "review_category": "unresolved_exception",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded; the evidence contains exception or override wording that needs review"
+      }
+    ]
+  },
+  "not_used_summary": {
+    "count": 0,
+    "top_reasons": [],
+    "example_rule_ids": []
+  },
+  "export_counts": {
+    "verified_rule_count": 6,
+    "gis_constraint_count": 6,
+    "buildable_area_parameter_count": 3,
+    "review_blocker_rule_count": 14,
+    "not_used_rule_count": 0
+  }
+}

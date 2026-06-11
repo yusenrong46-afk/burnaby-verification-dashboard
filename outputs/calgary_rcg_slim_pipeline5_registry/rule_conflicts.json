@@ -1,0 +1,205 @@
+[
+  {
+    "scope_key": "building_separation::building_separation",
+    "rule_object": "building_separation",
+    "constraint_scope": "building_separation",
+    "applies_to": "building_separation",
+    "variants": [
+      {
+        "value": "5.0",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "0.6",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "40.0",
+        "unit": "%",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "3.1",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      }
+    ]
+  },
+  {
+    "scope_key": "floor_area::max_floor_area",
+    "rule_object": "floor_area",
+    "constraint_scope": "max_floor_area",
+    "applies_to": "floor_area",
+    "variants": [
+      {
+        "value": "100.0",
+        "unit": "m2",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "13.0",
+        "unit": "m",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "10.0",
+        "unit": "%",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "2.5",
+        "unit": "m2",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "75.0",
+        "unit": "m2",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "local_text_block"
+        ]
+      }
+    ]
+  },
+  {
+    "scope_key": "height::building",
+    "rule_object": "height",
+    "constraint_scope": "building",
+    "applies_to": "height",
+    "variants": [
+      {
+        "value": "7.5",
+        "unit": "m",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "5.0",
+        "unit": "m",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "3.0",
+        "unit": "m",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "1.0",
+        "unit": "m",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "local_text_block"
+        ]
+      }
+    ]
+  },
+  {
+    "scope_key": "setback::min_setback",
+    "rule_object": "setback",
+    "constraint_scope": "min_setback",
+    "applies_to": "setback",
+    "variants": [
+      {
+        "value": "1.5",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "0.6",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "4.0",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "2.0",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "3.0",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      },
+      {
+        "value": "6.0",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "local_text_block"
+        ]
+      }
+    ]
+  }
+]

@@ -32,6 +32,20 @@
     "rule_object": "dwelling_units",
     "constraint_scope": "lot",
     "applies_to": "Rowhouse",
+    "value": "1",
+    "unit": "units",
+    "operator": ">=",
+    "agreeing_sources": [
+      "gemini_table_image",
+      "gemini_text_block"
+    ],
+    "source_count": 2
+  },
+  {
+    "scope_key": "dwelling_units::lot",
+    "rule_object": "dwelling_units",
+    "constraint_scope": "lot",
+    "applies_to": "Rowhouse",
     "value": "6",
     "unit": "units",
     "operator": "<=",

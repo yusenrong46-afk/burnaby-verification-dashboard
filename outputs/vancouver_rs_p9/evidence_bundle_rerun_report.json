@@ -1,0 +1,221 @@
+{
+  "mode": "shadow_evidence_bundle_rerun",
+  "notes": [
+    "Bundle reruns do not mutate verified_rules.json.",
+    "Bundle score and safe_retry are advisory only.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no support gaps or risk flags."
+  ],
+  "attempt_count": 0,
+  "verified_after_rerun_count": 0,
+  "promotion_ready_count": 0,
+  "review_after_rerun_count": 0,
+  "rejected_after_rerun_count": 0,
+  "skipped_count": 22,
+  "attempts": [],
+  "verified_after_rerun": [],
+  "promotion_ready": [],
+  "skipped": [
+    {
+      "rule_id": "vancouver_rs_027",
+      "candidate_id": "pipeline5_merged_rule_0027",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "vancouver_rs_028",
+      "candidate_id": "pipeline5_merged_rule_0028",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "vancouver_rs_003",
+      "candidate_id": "pipeline5_merged_rule_0003",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_004",
+      "candidate_id": "pipeline5_merged_rule_0004",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_012",
+      "candidate_id": "pipeline5_merged_rule_0012",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_015",
+      "candidate_id": "pipeline5_merged_rule_0015",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_016",
+      "candidate_id": "pipeline5_merged_rule_0016",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_019",
+      "candidate_id": "pipeline5_merged_rule_0019",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_033",
+      "candidate_id": "pipeline5_merged_rule_0033",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_036",
+      "candidate_id": "pipeline5_merged_rule_0036",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_040",
+      "candidate_id": "pipeline5_merged_rule_0040",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_041",
+      "candidate_id": "pipeline5_merged_rule_0041",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_042",
+      "candidate_id": "pipeline5_merged_rule_0042",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_030",
+      "candidate_id": "pipeline5_merged_rule_0030",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.7,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_005",
+      "candidate_id": "pipeline5_merged_rule_0005",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_009",
+      "candidate_id": "pipeline5_merged_rule_0009",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_001",
+      "candidate_id": "pipeline5_merged_rule_0001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_002",
+      "candidate_id": "pipeline5_merged_rule_0002",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_022",
+      "candidate_id": "pipeline5_merged_rule_0022",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_035",
+      "candidate_id": "pipeline5_merged_rule_0035",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_010",
+      "candidate_id": "pipeline5_merged_rule_0010",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.383,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator,rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_011",
+      "candidate_id": "pipeline5_merged_rule_0011",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.383,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator,rule_object"
+      ]
+    }
+  ]
+}

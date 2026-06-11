@@ -1,0 +1,115 @@
+[
+  {
+    "scope_key": "floor_area::exclusion",
+    "rule_object": "floor_area",
+    "constraint_scope": "exclusion",
+    "applies_to": "laneway house",
+    "variants": [
+      {
+        "value": "8",
+        "unit": "percent",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "vancouver_pipeline_text"
+        ]
+      },
+      {
+        "value": "13",
+        "unit": "percent",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "vancouver_pipeline_text"
+        ]
+      }
+    ]
+  },
+  {
+    "scope_key": "floor_area::site_area",
+    "rule_object": "floor_area",
+    "constraint_scope": "site_area",
+    "applies_to": "laneway house",
+    "variants": [
+      {
+        "value": "0.25",
+        "unit": "multiplied by the site area",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "vancouver_pipeline_text"
+        ]
+      },
+      {
+        "value": "0.25",
+        "unit": "multiplied by the site area",
+        "operator": "multiplied by",
+        "direction": "eq",
+        "sources": [
+          "vancouver_pipeline_text"
+        ]
+      }
+    ]
+  },
+  {
+    "scope_key": "openness::open_sides",
+    "rule_object": "openness",
+    "constraint_scope": "open_sides",
+    "applies_to": "floors or portions thereof that are used for off-street parking",
+    "variants": [
+      {
+        "value": "2",
+        "unit": "sides",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "vancouver_pipeline_text"
+        ]
+      },
+      {
+        "value": "7.3",
+        "unit": "m",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "vancouver_pipeline_text"
+        ]
+      }
+    ]
+  },
+  {
+    "scope_key": "site_dimension::site_width",
+    "rule_object": "site_dimension",
+    "constraint_scope": "site_width",
+    "applies_to": "fee simple subdivision",
+    "variants": [
+      {
+        "value": "5.0",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "vancouver_pipeline_text"
+        ]
+      },
+      {
+        "value": "9.8",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "vancouver_pipeline_text"
+        ]
+      },
+      {
+        "value": "7.3",
+        "unit": "m",
+        "operator": ">=",
+        "direction": "min",
+        "sources": [
+          "vancouver_pipeline_text"
+        ]
+      }
+    ]
+  }
+]

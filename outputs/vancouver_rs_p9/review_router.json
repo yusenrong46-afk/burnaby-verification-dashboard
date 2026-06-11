@@ -1,0 +1,1679 @@
+{
+  "purpose": "Single reviewer-facing queue. Advisory only; verification decisions remain in verified/review/rejected/not_used outputs.",
+  "review_rule_count": 22,
+  "items": [
+    {
+      "rule_id": "vancouver_rs_035",
+      "candidate_id": "pipeline5_merged_rule_0035",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "laneway_house_excluded_entry_porch_verandah_ceiling_height",
+      "applies_to": "ceiling_height",
+      "operator": "<=",
+      "value": "3.1",
+      "unit": "m",
+      "source_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_012",
+      "review_category": "scope_review",
+      "likely_status": "weak",
+      "priority": "high",
+      "triage_priority": "high",
+      "review_rank": 46,
+      "priority_rank": 46,
+      "action_bucket": "scope_review",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `scope_review`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "scope_review",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, unresolved_exception_cue in page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_012. Suggested stronger evidence: vancouver_generic_graph_pack_009__page_0009__local_010. Semantic match: vancouver_rs_020 (score 0.71, blockers different_numeric_value, exception_or_override_unresolved).",
+      "candidate_sentence": "ceiling_height has height <= 3.1 m when of the total area being excluded (entries, porches, verandahs) for a laneway house, measured from the entry, porch or verandah floor, excluding roof structure.",
+      "evidence_sentence": "(iii) the ceiling height, excluding roof structure, of the total area being excluded does not exceed 3.1 m measured from the entry, porch or verandah floor;",
+      "bundle_sentence": "vancouver_generic_graph_pack_009__page_0009__local_012 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_010 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_011 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_013 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_012",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "likely_correct_score": 0.543,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, unresolved_exception_cue",
+      "suggested_fix": "Resolve exception/override wording before promotion.",
+      "potential_mistake_flags": [
+        "exception_or_override_unresolved",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_020",
+      "similar_verified_score": 0.618,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_010",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.47,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "exception"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_020",
+      "semantic_score": 0.708,
+      "semantic_structured_score": 0.692,
+      "semantic_embedding_score": 0.737,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_027",
+      "candidate_id": "pipeline5_merged_rule_0027",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_floor_area_inclusion_all_floors",
+      "applies_to": "all_floors",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_003",
+      "review_category": "almost_verified",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 116,
+      "priority_rank": 1116,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Decision tree step `9:bundle_safe_retry_available` routed this to `rerun_with_evidence_bundle`: Rerun using the evidence bundle; promote only if deterministic verifier passes.",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Rerun using the evidence bundle; promote only if deterministic verifier passes.",
+      "human_instruction": "Rerun using the evidence bundle; promote only if deterministic verifier passes. Check pipeline5_text_candidate_requires_review in page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_003. Suggested stronger evidence: vancouver_generic_graph_pack_006__page_0008__local_005. Evidence bundle is safe to rerun through the verifier. Semantic match: vancouver_rs_021 (score 0.27, blockers different_direction, different_rule_object, different_unit).",
+      "candidate_sentence": "all_floors has a floor area rule when for a laneway house, including earthen floor, measured to the extreme outer limits of the building.",
+      "evidence_sentence": "(a) all floors, including earthen floor, measured to the extreme outer limits of the building;",
+      "bundle_sentence": "vancouver_generic_graph_pack_009__page_0009__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_002 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "9:bundle_safe_retry_available"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_003",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.833,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.182,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 1.0,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.268,
+      "semantic_structured_score": 0.052,
+      "semantic_embedding_score": 0.67,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_009",
+      "candidate_id": "pipeline5_merged_rule_0009",
+      "decision": "review_needed",
+      "rule_object": "permitted_use",
+      "constraint_scope": "11.9.1.2_short_term_rental",
+      "applies_to": "short term rental accommodation",
+      "operator": "permitted",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_022__page_0018__local_010",
+      "review_category": "defer_low_priority",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 117,
+      "priority_rank": 1117,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "Decision tree step `10:defer_low_priority` routed this to `defer_low_priority`: Keep in review until more evidence or a general verifier rule is justified.",
+      "next_action": "defer_low_priority",
+      "next_step": "Keep in review until more evidence or a general verifier rule is justified.",
+      "human_instruction": "Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 18; evidence_id vancouver_generic_graph_pack_022__page_0018__local_010. Semantic match: vancouver_rs_021 (score 0.13, blockers different_direction, different_rule_object, different_unit).",
+      "candidate_sentence": "short term rental accommodation has a permitted use rule when only in a lawful dwelling unit, secondary suite, laneway house, or lock-off unit that is a principal residence unit.",
+      "evidence_sentence": "11.9.1.2 Short term rental accommodation is only permitted in a lawful dwelling unit, secondary suite, laneway house, or lock-off unit that is a principal residence unit.",
+      "bundle_sentence": "vancouver_generic_graph_pack_022__page_0018__local_010 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_014__page_0010__local_002 supports condition, operator, unit, value; vancouver_generic_graph_pack_014__page_0010__local_003 supports condition, operator, unit, value; vancouver_generic_graph_pack_014__page_0010__local_004 supports condition, operator, unit, value.",
+      "decision_path": [
+        "10:defer_low_priority"
+      ],
+      "where_to_find_it": "page 18; evidence_id vancouver_generic_graph_pack_022__page_0018__local_010",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.825,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.116,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "best_repair_confidence": 0.923,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.691,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "rule_object"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.132,
+      "semantic_structured_score": 0.005,
+      "semantic_embedding_score": 0.369,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_022",
+      "candidate_id": "pipeline5_merged_rule_0022",
+      "decision": "review_needed",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "laneway_house_maximum_site_coverage",
+      "applies_to": "site coverage",
+      "operator": "<=",
+      "value": "50",
+      "unit": "%",
+      "source_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_013",
+      "review_category": "defer_low_priority",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 121,
+      "priority_rank": 1121,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "Decision tree step `10:defer_low_priority` routed this to `defer_low_priority`: Keep in review until more evidence or a general verifier rule is justified.",
+      "next_action": "defer_low_priority",
+      "next_step": "Keep in review until more evidence or a general verifier rule is justified.",
+      "human_instruction": "Keep in review until more evidence or a general verifier rule is justified. Check upstream_extraction_requested_review in page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_013. Semantic match: vancouver_rs_021 (score 0.33, blockers different_numeric_value, different_rule_object, different_unit).",
+      "candidate_sentence": "site coverage has lot coverage <= 50 % when for a site with a laneway house.",
+      "evidence_sentence": "11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area.",
+      "bundle_sentence": "vancouver_generic_graph_pack_007__page_0008__local_013 supports applies_to, condition, operator, rule_object, scope, value; vancouver_generic_graph_pack_006__page_0008__local_015 supports applies_to, condition, operator, rule_object, scope, value; vancouver_generic_graph_pack_006__page_0008__local_016 supports applies_to, condition, operator, rule_object, scope, value; vancouver_generic_graph_pack_006__page_0008__local_017 supports applies_to, condition, operator, rule_object, scope, value.",
+      "decision_path": [
+        "10:defer_low_priority"
+      ],
+      "where_to_find_it": "page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_013",
+      "support_gaps": [
+        "upstream_extraction_requested_review"
+      ],
+      "likely_correct_score": 0.786,
+      "blocking_reason": "upstream_extraction_requested_review",
+      "suggested_fix": "Inspect proof trace and support gaps.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.286,
+      "best_repair_evidence_id": null,
+      "best_repair_confidence": 0.0,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.541,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "unit"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.333,
+      "semantic_structured_score": 0.233,
+      "semantic_embedding_score": 0.518,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_005",
+      "candidate_id": "pipeline5_merged_rule_0005",
+      "decision": "review_needed",
+      "rule_object": "permitted_use",
+      "constraint_scope": "vancouver_generic_graph_pack_014__page_0010__local_002__laneway_house_child_day_care",
+      "applies_to": "laneway house in combination with a child day care facility",
+      "operator": "permitted",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_014__page_0010__local_002",
+      "review_category": "defer_low_priority",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 122,
+      "priority_rank": 1122,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "Decision tree step `10:defer_low_priority` routed this to `defer_low_priority`: Keep in review until more evidence or a general verifier rule is justified.",
+      "next_action": "defer_low_priority",
+      "next_step": "Keep in review until more evidence or a general verifier rule is justified.",
+      "human_instruction": "Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 10; evidence_id vancouver_generic_graph_pack_014__page_0010__local_002. Semantic match: vancouver_rs_021 (score 0.18, blockers different_direction, different_rule_object, different_unit).",
+      "candidate_sentence": "laneway house in combination with a child day care facility has a permitted use rule when only if there is only 1 laneway house and 1 child day care facility on the site, and the child day care facility is in a building converted from a single detached house or single detached house with secondary suite containing no other uses.",
+      "evidence_sentence": "11.3.8.11 A laneway house in combination with a child day care facility is only permitted if:",
+      "bundle_sentence": "vancouver_generic_graph_pack_014__page_0010__local_002 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_014__page_0010__local_003 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_014__page_0010__local_004 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_002 supports applies_to, condition, operator, scope, unit, value.",
+      "decision_path": [
+        "10:defer_low_priority"
+      ],
+      "where_to_find_it": "page 10; evidence_id vancouver_generic_graph_pack_014__page_0010__local_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.771,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.161,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.691,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "rule_object"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.177,
+      "semantic_structured_score": 0.023,
+      "semantic_embedding_score": 0.464,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_012",
+      "candidate_id": "pipeline5_merged_rule_0012",
+      "decision": "review_needed",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "computation_basis",
+      "applies_to": "computation of floor area, floor space ratio, yards, site coverage, impermeability, number of buildings on site and dwelling unit density",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_002",
+      "review_category": "defer_low_priority",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 123,
+      "priority_rank": 1123,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "Decision tree step `10:defer_low_priority` routed this to `defer_low_priority`: Keep in review until more evidence or a general verifier rule is justified.",
+      "next_action": "defer_low_priority",
+      "next_step": "Keep in review until more evidence or a general verifier rule is justified.",
+      "human_instruction": "Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_002. Suggested stronger evidence: vancouver_generic_graph_pack_007__page_0008__local_003. Semantic match: vancouver_rs_021 (score 0.16, blockers different_direction, different_rule_object, different_unit).",
+      "candidate_sentence": "computation of floor area, floor space ratio, yards, site coverage, impermeability, number of buildings on site and dwelling unit density has a lot coverage rule when must be based on the site width and area at the time of development, prior to any subdivision into individual freehold rowhouse parcels.",
+      "evidence_sentence": "11.3.7.1 Computation of floor area, floor space ratio, yards, site coverage, impermeability, number of buildings on site and dwelling unit density must be based on the site width and area at the time of development, prior to any subdivision into individual...",
+      "bundle_sentence": "vancouver_generic_graph_pack_007__page_0008__local_002 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_006__page_0008__local_005 supports applies_to, condition, operator, rule_object, unit, value; vancouver_generic_graph_pack_006__page_0008__local_015 supports applies_to, condition, operator, rule_object, unit, value.",
+      "decision_path": [
+        "10:defer_low_priority"
+      ],
+      "where_to_find_it": "page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.764,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.107,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_003",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.16,
+      "semantic_structured_score": 0.0,
+      "semantic_embedding_score": 0.458,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_015",
+      "candidate_id": "pipeline5_merged_rule_0015",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_floor_area_ratio",
+      "applies_to": "floor area",
+      "operator": "<=",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_007",
+      "review_category": "defer_low_priority",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 123,
+      "priority_rank": 1123,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "Decision tree step `10:defer_low_priority` routed this to `defer_low_priority`: Keep in review until more evidence or a general verifier rule is justified.",
+      "next_action": "defer_low_priority",
+      "next_step": "Keep in review until more evidence or a general verifier rule is justified.",
+      "human_instruction": "Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_007. Suggested stronger evidence: vancouver_generic_graph_pack_006__page_0008__local_005. Semantic match: vancouver_rs_020 (score 0.37, blockers different_rule_object, different_unit).",
+      "candidate_sentence": "floor area has a floor area rule when for a laneway house, must not exceed the lesser of 0.25 multiplied by the site area and 186 m2.",
+      "evidence_sentence": "(a) 0.25 multiplied by the site area; and",
+      "bundle_sentence": "vancouver_generic_graph_pack_007__page_0008__local_007 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_011__page_0009__local_020 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "10:defer_low_priority"
+      ],
+      "where_to_find_it": "page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_007",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.766,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.312,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_020",
+      "semantic_score": 0.368,
+      "semantic_structured_score": 0.212,
+      "semantic_embedding_score": 0.659,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_001",
+      "candidate_id": "pipeline5_merged_rule_0001",
+      "decision": "review_needed",
+      "rule_object": "permitted_use",
+      "constraint_scope": "laneway_house_permitted_use",
+      "applies_to": "laneway house",
+      "operator": "permitted",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "review_category": "defer_low_priority",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 124,
+      "priority_rank": 1124,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "Decision tree step `10:defer_low_priority` routed this to `defer_low_priority`: Keep in review until more evidence or a general verifier rule is justified.",
+      "next_action": "defer_low_priority",
+      "next_step": "Keep in review until more evidence or a general verifier rule is justified.",
+      "human_instruction": "Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 8; evidence_id vancouver_generic_graph_pack_006__page_0008__local_005. Semantic match: vancouver_rs_021 (score 0.22, blockers different_direction, different_rule_object, different_unit).",
+      "candidate_sentence": "laneway house has a permitted use rule when only in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site.",
+      "evidence_sentence": "11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site.",
+      "bundle_sentence": "vancouver_generic_graph_pack_006__page_0008__local_005 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_014__page_0010__local_002 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_014__page_0010__local_003 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_014__page_0010__local_004 supports applies_to, condition, operator, scope, unit, value.",
+      "decision_path": [
+        "10:defer_low_priority"
+      ],
+      "where_to_find_it": "page 8; evidence_id vancouver_generic_graph_pack_006__page_0008__local_005",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.749,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.17,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_002",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.541,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "rule_object"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.224,
+      "semantic_structured_score": 0.055,
+      "semantic_embedding_score": 0.538,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_030",
+      "candidate_id": "pipeline5_merged_rule_0030",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_parking_space_open_sides",
+      "applies_to": "open_sides",
+      "operator": ">=",
+      "value": "2",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_007",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 124,
+      "priority_rank": 1124,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, rule_family_direction_mismatch in page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_007. Suggested stronger evidence: vancouver_generic_graph_pack_009__page_0009__local_004. Semantic match: vancouver_rs_021 (score 0.34, blockers different_direction, different_rule_object, different_unit, exception_or_override_unresolved).",
+      "candidate_sentence": "open_sides has floor area >= 2 when for each parking space used for off-street parking floor area exclusion in a laneway house.",
+      "evidence_sentence": "(a) floors or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;",
+      "bundle_sentence": "vancouver_generic_graph_pack_009__page_0009__local_007 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_003 supports condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_007",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "likely_correct_score": 0.755,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch",
+      "suggested_fix": "Inspect proof trace and support gaps.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.217,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_004",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.7,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.335,
+      "semantic_structured_score": 0.245,
+      "semantic_embedding_score": 0.502,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_033",
+      "candidate_id": "pipeline5_merged_rule_0033",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_guard_rail_height_limit",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_010",
+      "review_category": "human_legal_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 124,
+      "priority_rank": 1124,
+      "action_bucket": "human_legal_review",
+      "action_reason": "Decision tree step `7:exception_covenant_notwithstanding` routed this to `human_legal_review`: Resolve exception/covenant/notwithstanding wording manually.",
+      "next_action": "human_legal_review",
+      "next_step": "Resolve exception/covenant/notwithstanding wording manually.",
+      "human_instruction": "Resolve exception/covenant/notwithstanding wording manually. Check pipeline5_text_candidate_requires_review in page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_010. Suggested stronger evidence: vancouver_generic_graph_pack_007__page_0008__local_007. Semantic match: vancouver_rs_020 (score 0.42, blockers different_rule_object, different_unit, exception_or_override_unresolved).",
+      "candidate_sentence": "height has a floor area rule when for guard rails protecting entries, porches, and verandahs excluded from laneway house floor area, which must not exceed the required minimum height.",
+      "evidence_sentence": "(i) they are open or protected by guard rails that do not exceed the required minimum height,",
+      "bundle_sentence": "vancouver_generic_graph_pack_009__page_0009__local_010 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_011__page_0009__local_020 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_003 supports condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "7:exception_covenant_notwithstanding"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_010",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.756,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.233,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_007",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_020",
+      "semantic_score": 0.423,
+      "semantic_structured_score": 0.302,
+      "semantic_embedding_score": 0.647,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_041",
+      "candidate_id": "pipeline5_merged_rule_0041",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "laneway_house_undeveloped_floor_exclusion_ceiling_height",
+      "applies_to": "adjacent_storey_ceiling_height",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "source_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_018",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 239,
+      "priority_rank": 2239,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported in page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_018. Suggested stronger evidence: vancouver_generic_graph_pack_009__page_0009__local_013. Semantic match: vancouver_rs_020 (score 0.65, blockers different_numeric_value, exception_or_override_unresolved, missing_core_evidence).",
+      "candidate_sentence": "adjacent_storey_ceiling_height has height <= 1.2 m when ceiling height of a storey or partial storey adjacent to undeveloped floors to be excluded from laneway house floor area.",
+      "evidence_sentence": "(ii) adjacent to a storey or partial storey with a ceiling height of less than 1.2 m; and",
+      "bundle_sentence": "vancouver_generic_graph_pack_009__page_0009__local_018 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_011__page_0009__local_020 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_013 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_014 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_018",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.598,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_020",
+      "similar_verified_score": 0.581,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_020",
+      "semantic_score": 0.648,
+      "semantic_structured_score": 0.623,
+      "semantic_embedding_score": 0.695,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "exception_or_override_unresolved",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_042",
+      "candidate_id": "pipeline5_merged_rule_0042",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "laneway_house_below_grade_floor_exclusion_ceiling_height",
+      "applies_to": "below_grade_floor_ceiling_height",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "source_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_019",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 240,
+      "priority_rank": 2240,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported in page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_019. Suggested stronger evidence: vancouver_generic_graph_pack_009__page_0009__local_013. Semantic match: vancouver_rs_020 (score 0.65, blockers different_numeric_value, exception_or_override_unresolved, missing_core_evidence).",
+      "candidate_sentence": "below_grade_floor_ceiling_height has height <= 1.2 m when ceiling height of floors located at or below finished grade to be excluded from laneway house floor area.",
+      "evidence_sentence": "(f) floors located at or below finished grade with a ceiling height of less than 1.2 m.",
+      "bundle_sentence": "vancouver_generic_graph_pack_009__page_0009__local_019 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_011__page_0009__local_020 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_013 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_014 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_019",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.591,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_020",
+      "similar_verified_score": 0.521,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_020",
+      "semantic_score": 0.647,
+      "semantic_structured_score": 0.612,
+      "semantic_embedding_score": 0.712,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "exception_or_override_unresolved",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_010",
+      "candidate_id": "pipeline5_merged_rule_0010",
+      "decision": "review_needed",
+      "rule_object": "permitted_use",
+      "constraint_scope": "vancouver_generic_graph_pack_011__page_0009__local_020_decks",
+      "applies_to": "decks",
+      "operator": "prohibited",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_011__page_0009__local_020",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 241,
+      "priority_rank": 2241,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported in page 9; evidence_id vancouver_generic_graph_pack_011__page_0009__local_020. Semantic match: vancouver_rs_021 (score 0.16, blockers different_direction, different_rule_object, different_unit, missing_core_evidence).",
+      "candidate_sentence": "decks has a permitted use rule when above the uppermost level of a laneway house.",
+      "evidence_sentence": "11.3.8.10 Decks and roof decks are not permitted above the uppermost level of a laneway house.",
+      "bundle_sentence": "vancouver_generic_graph_pack_011__page_0009__local_020 supports applies_to, condition, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_005 supports applies_to, condition, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_017 supports applies_to, condition, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_018 supports applies_to, condition, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_011__page_0009__local_020",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.579,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.225,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_017",
+      "best_repair_confidence": 0.731,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.383,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "operator",
+        "rule_object"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.156,
+      "semantic_structured_score": 0.012,
+      "semantic_embedding_score": 0.423,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_011",
+      "candidate_id": "pipeline5_merged_rule_0011",
+      "decision": "review_needed",
+      "rule_object": "permitted_use",
+      "constraint_scope": "vancouver_generic_graph_pack_011__page_0009__local_020_roof_decks",
+      "applies_to": "roof decks",
+      "operator": "prohibited",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_011__page_0009__local_020",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 241,
+      "priority_rank": 2241,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported in page 9; evidence_id vancouver_generic_graph_pack_011__page_0009__local_020. Semantic match: vancouver_rs_021 (score 0.17, blockers different_direction, different_rule_object, different_unit, missing_core_evidence).",
+      "candidate_sentence": "roof decks has a permitted use rule when above the uppermost level of a laneway house.",
+      "evidence_sentence": "11.3.8.10 Decks and roof decks are not permitted above the uppermost level of a laneway house.",
+      "bundle_sentence": "vancouver_generic_graph_pack_011__page_0009__local_020 supports applies_to, condition, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_005 supports applies_to, condition, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_017 supports applies_to, condition, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_018 supports applies_to, condition, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_011__page_0009__local_020",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.579,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.225,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_017",
+      "best_repair_confidence": 0.769,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.383,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "operator",
+        "rule_object"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.175,
+      "semantic_structured_score": 0.012,
+      "semantic_embedding_score": 0.478,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_040",
+      "candidate_id": "pipeline5_merged_rule_0040",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_undeveloped_floor_exclusion_hatch",
+      "applies_to": "undeveloped_floors",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_017",
+      "review_category": "operator_review",
+      "likely_status": "weak",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 244,
+      "priority_rank": 2244,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported in page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_017. Suggested stronger evidence: vancouver_generic_graph_pack_009__page_0009__local_013. Semantic match: vancouver_rs_021 (score 0.24, blockers different_direction, different_rule_object, different_unit, missing_core_evidence).",
+      "candidate_sentence": "undeveloped_floors has a floor area rule when for a laneway house, areas of undeveloped floors located above the highest storey or partial storey and to which there is no permanent means of access other than a hatch.",
+      "evidence_sentence": "(i) above the highest storey or partial storey and to which there is no permanent means of access other than a hatch, or",
+      "bundle_sentence": "vancouver_generic_graph_pack_009__page_0009__local_017 supports applies_to, condition, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_002 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_017",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.548,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.163,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.24,
+      "semantic_structured_score": 0.043,
+      "semantic_embedding_score": 0.606,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_028",
+      "candidate_id": "pipeline5_merged_rule_0028",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_floor_area_inclusion_stairways_etc",
+      "applies_to": "stairways_and_similar_features",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_004",
+      "review_category": "upstream_extraction_issue",
+      "likely_status": "weak",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 246,
+      "priority_rank": 2246,
+      "action_bucket": "fix_candidate_or_rule_family_mapping",
+      "action_reason": "Decision tree step `4:rule_family_unsupported` routed this to `fix_candidate_or_rule_family_mapping`: Check whether extraction chose the wrong rule family.",
+      "next_action": "fix_candidate_or_rule_family_mapping",
+      "next_step": "Check whether extraction chose the wrong rule family.",
+      "human_instruction": "Check whether extraction chose the wrong rule family. Check pipeline5_text_candidate_requires_review, rule_object_not_supported in page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_004. Suggested stronger evidence: vancouver_generic_graph_pack_009__page_0009__local_003. Evidence bundle is safe to rerun through the verifier. Semantic match: vancouver_rs_021 (score 0.23, blockers different_direction, different_rule_object, different_unit).",
+      "candidate_sentence": "stairways_and_similar_features has a floor area rule when for a laneway house, including stairways, fire escapes, elevator shafts and other features that the Director of Planning considers similar, measured by their gross cross-sectional areas and included in the measurements for each floor at which they are located.",
+      "evidence_sentence": "(b) stairways, fire escapes, elevator shafts and other features that the Director of Planning considers similar, measured by their gross cross-sectional areas and included in the measurements for each floor at which they are located; and",
+      "bundle_sentence": "vancouver_generic_graph_pack_009__page_0009__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_002 supports condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "4:rule_family_unsupported"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_004",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.53,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_object_not_supported",
+      "suggested_fix": "Check whether Pipeline 5 attached the value to the wrong rule family.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.109,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_003",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 1.0,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.231,
+      "semantic_structured_score": 0.038,
+      "semantic_embedding_score": 0.589,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_019",
+      "candidate_id": "pipeline5_merged_rule_0019",
+      "decision": "review_needed",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "laneway_house_reduced_site_width_considerations",
+      "applies_to": "Director of Planning consideration of massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_011",
+      "review_category": "upstream_extraction_issue",
+      "likely_status": "weak",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 248,
+      "priority_rank": 2248,
+      "action_bucket": "fix_candidate_or_rule_family_mapping",
+      "action_reason": "Decision tree step `4:rule_family_unsupported` routed this to `fix_candidate_or_rule_family_mapping`: Check whether extraction chose the wrong rule family.",
+      "next_action": "fix_candidate_or_rule_family_mapping",
+      "next_step": "Check whether extraction chose the wrong rule family.",
+      "human_instruction": "Check whether extraction chose the wrong rule family. Check pipeline5_text_candidate_requires_review, rule_object_not_supported in page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_011. Suggested stronger evidence: vancouver_generic_graph_pack_006__page_0008__local_005. Semantic match: vancouver_rs_021 (score 0.24, blockers different_direction, different_rule_object, different_unit).",
+      "candidate_sentence": "Director of Planning consideration of massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines has a lot coverage rule when for a laneway house, to reduce the minimum site width.",
+      "evidence_sentence": "(b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines.",
+      "bundle_sentence": "vancouver_generic_graph_pack_007__page_0008__local_011 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_006__page_0008__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_006__page_0008__local_015 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_006__page_0008__local_016 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "4:rule_family_unsupported"
+      ],
+      "where_to_find_it": "page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_011",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.509,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_object_not_supported",
+      "suggested_fix": "Check whether Pipeline 5 attached the value to the wrong rule family.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.13,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.241,
+      "semantic_structured_score": 0.052,
+      "semantic_embedding_score": 0.593,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_036",
+      "candidate_id": "pipeline5_merged_rule_0036",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_roof_joist_pitch",
+      "applies_to": "joist_pitch",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "source_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+      "review_category": "upstream_extraction_issue",
+      "likely_status": "weak",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 261,
+      "priority_rank": 2261,
+      "action_bucket": "fix_candidate_or_rule_family_mapping",
+      "action_reason": "Decision tree step `4:rule_family_unsupported` routed this to `fix_candidate_or_rule_family_mapping`: Check whether extraction chose the wrong rule family.",
+      "next_action": "fix_candidate_or_rule_family_mapping",
+      "next_step": "Check whether extraction chose the wrong rule family.",
+      "human_instruction": "Check whether extraction chose the wrong rule family. Check pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_object_not_supported in page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_013. Suggested stronger evidence: vancouver_generic_graph_pack_009__page_0009__local_012. Semantic match: vancouver_rs_021 (score 0.22, blockers different_direction, different_rule_object, different_unit, exception_or_override_unresolved).",
+      "candidate_sentence": "joist_pitch has a floor area rule when roof joists must have a minimum 7:12 pitch and the related ceiling maintains the same pitch as the roof joists, for floor area exclusion under sloping roof/ceiling in a laneway house.",
+      "evidence_sentence": "(d) areas of floors existing, proposed or as may be extended over open-to-below space located directly below sloping roof rafters or a sloping ceiling where the ceiling is directly attached to the underside of sloping roof rafters, and where the roof joists...",
+      "bundle_sentence": "vancouver_generic_graph_pack_009__page_0009__local_013 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_009__page_0009__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "4:rule_family_unsupported"
+      ],
+      "where_to_find_it": "page 9; evidence_id vancouver_generic_graph_pack_009__page_0009__local_013",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.383,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_object_not_supported",
+      "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family",
+        "condition_not_in_cited_text"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.117,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_012",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_021",
+      "semantic_score": 0.221,
+      "semantic_structured_score": 0.049,
+      "semantic_embedding_score": 0.539,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_004",
+      "candidate_id": "pipeline5_merged_rule_0004",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "laneway_house_side_setback",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "source_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_017",
+      "review_category": "operator_review",
+      "likely_status": "likely_wrong_or_noise",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 279,
+      "priority_rank": 2279,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check upstream_extraction_requested_review, pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported in page 8; evidence_id vancouver_generic_graph_pack_006__page_0008__local_017. Suggested stronger evidence: vancouver_generic_graph_pack_006__page_0008__local_015. Semantic match: vancouver_rs_020 (score 0.30, blockers different_direction, different_numeric_value, different_rule_object, missing_core_evidence).",
+      "candidate_sentence": "laneway house has setback >= 1.2 m when from each side property line.",
+      "evidence_sentence": "(c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width.",
+      "bundle_sentence": "vancouver_generic_graph_pack_006__page_0008__local_017 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_019 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_020 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_002 supports applies_to, condition, operator, rule_object, scope, unit.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 8; evidence_id vancouver_generic_graph_pack_006__page_0008__local_017",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.197,
+      "blocking_reason": "upstream_extraction_requested_review, pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family",
+        "operator_direction_or_wording_missing",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_020",
+      "similar_verified_score": 0.233,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_015",
+      "best_repair_confidence": 0.923,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_020",
+      "semantic_score": 0.3,
+      "semantic_structured_score": 0.173,
+      "semantic_embedding_score": 0.537,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_rule_object",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_002",
+      "candidate_id": "pipeline5_merged_rule_0002",
+      "decision": "review_needed",
+      "rule_object": "building_separation",
+      "constraint_scope": "laneway_house_separation_distance",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "4.9",
+      "unit": "m",
+      "source_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_015",
+      "review_category": "operator_review",
+      "likely_status": "likely_wrong_or_noise",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 281,
+      "priority_rank": 2281,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported, rule_object_not_supported in page 8; evidence_id vancouver_generic_graph_pack_006__page_0008__local_015. Suggested stronger evidence: vancouver_generic_graph_pack_006__page_0008__local_016. Semantic match: vancouver_rs_020 (score 0.39, blockers different_direction, different_numeric_value, different_rule_object, missing_core_evidence).",
+      "candidate_sentence": "laneway house has building separation >= 4.9 m when measured across the width of the site, from the single detached house or single detached house with secondary suite on the site.",
+      "evidence_sentence": "(a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site;",
+      "bundle_sentence": "vancouver_generic_graph_pack_006__page_0008__local_015 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_006__page_0008__local_016 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_006__page_0008__local_017 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_011 supports applies_to, condition, operator, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 8; evidence_id vancouver_generic_graph_pack_006__page_0008__local_015",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.178,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported, rule_object_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family",
+        "operator_direction_or_wording_missing",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_020",
+      "similar_verified_score": 0.284,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_016",
+      "best_repair_confidence": 0.892,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.541,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "rule_object"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_020",
+      "semantic_score": 0.388,
+      "semantic_structured_score": 0.236,
+      "semantic_embedding_score": 0.671,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_rule_object",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_003",
+      "candidate_id": "pipeline5_merged_rule_0003",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "laneway_house_rear_setback",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "0.9",
+      "unit": "m",
+      "source_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_016",
+      "review_category": "operator_review",
+      "likely_status": "likely_wrong_or_noise",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 281,
+      "priority_rank": 2281,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported, rule_object_not_supported in page 8; evidence_id vancouver_generic_graph_pack_006__page_0008__local_016. Suggested stronger evidence: vancouver_generic_graph_pack_006__page_0008__local_015. Semantic match: vancouver_rs_020 (score 0.31, blockers different_direction, different_numeric_value, different_rule_object, missing_core_evidence).",
+      "candidate_sentence": "laneway house has setback >= 0.9 m when from the ultimate rear property line.",
+      "evidence_sentence": "(b) 0.9 m from the ultimate rear property line; and",
+      "bundle_sentence": "vancouver_generic_graph_pack_006__page_0008__local_016 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_019 supports applies_to, condition, operator, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_002 supports applies_to, condition, operator, rule_object, scope, unit; vancouver_generic_graph_pack_007__page_0008__local_003 supports applies_to, condition, operator, rule_object, scope, unit.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 8; evidence_id vancouver_generic_graph_pack_006__page_0008__local_016",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.175,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported, rule_object_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family",
+        "operator_direction_or_wording_missing",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_020",
+      "similar_verified_score": 0.261,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_015",
+      "best_repair_confidence": 0.923,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_020",
+      "semantic_score": 0.306,
+      "semantic_structured_score": 0.173,
+      "semantic_embedding_score": 0.554,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_rule_object",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_016",
+      "candidate_id": "pipeline5_merged_rule_0016",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_floor_area_limit",
+      "applies_to": "floor area",
+      "operator": "<=",
+      "value": "186",
+      "unit": "m2",
+      "source_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_008",
+      "review_category": "operator_review",
+      "likely_status": "likely_wrong_or_noise",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 281,
+      "priority_rank": 2281,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported, rule_object_not_supported in page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_008. Suggested stronger evidence: vancouver_generic_graph_pack_006__page_0008__local_005. Semantic match: vancouver_rs_020 (score 0.37, blockers different_numeric_value, different_rule_object, different_unit, missing_core_evidence).",
+      "candidate_sentence": "floor area has floor area <= 186 m2 when for a laneway house, must not exceed the lesser of 0.25 multiplied by the site area and 186 m2.",
+      "evidence_sentence": "(b) 186 m2.",
+      "bundle_sentence": "vancouver_generic_graph_pack_007__page_0008__local_008 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_006__page_0008__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; vancouver_generic_graph_pack_007__page_0008__local_007 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 8; evidence_id vancouver_generic_graph_pack_007__page_0008__local_008",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.18,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported, rule_object_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family",
+        "operator_direction_or_wording_missing",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "vancouver_rs_021",
+      "similar_verified_score": 0.303,
+      "best_repair_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "vancouver_rs_020",
+      "semantic_score": 0.37,
+      "semantic_structured_score": 0.212,
+      "semantic_embedding_score": 0.664,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit",
+        "missing_core_evidence"
+      ]
+    }
+  ],
+  "summary": {
+    "category_counts": [
+      {
+        "name": "operator_review",
+        "count": 10
+      },
+      {
+        "name": "defer_low_priority",
+        "count": 6
+      },
+      {
+        "name": "upstream_extraction_issue",
+        "count": 3
+      },
+      {
+        "name": "scope_review",
+        "count": 1
+      },
+      {
+        "name": "almost_verified",
+        "count": 1
+      },
+      {
+        "name": "human_legal_review",
+        "count": 1
+      }
+    ],
+    "action_counts": [
+      {
+        "name": "operator_review",
+        "count": 10
+      },
+      {
+        "name": "defer_low_priority",
+        "count": 6
+      },
+      {
+        "name": "fix_candidate_or_rule_family_mapping",
+        "count": 3
+      },
+      {
+        "name": "scope_review",
+        "count": 1
+      },
+      {
+        "name": "rerun_with_evidence_bundle",
+        "count": 1
+      },
+      {
+        "name": "human_legal_review",
+        "count": 1
+      }
+    ],
+    "priority_counts": [
+      {
+        "name": "low",
+        "count": 12
+      },
+      {
+        "name": "medium",
+        "count": 9
+      },
+      {
+        "name": "high",
+        "count": 1
+      }
+    ],
+    "likelihood_counts": [
+      {
+        "name": "plausible",
+        "count": 10
+      },
+      {
+        "name": "weak",
+        "count": 5
+      },
+      {
+        "name": "likely_wrong_or_noise",
+        "count": 4
+      },
+      {
+        "name": "likely_correct",
+        "count": 3
+      }
+    ],
+    "semantic_review_counts": [
+      {
+        "name": "guardrail_blocked_low_similarity",
+        "count": 22
+      }
+    ],
+    "top_blocking_reasons": [
+      {
+        "name": "pipeline5_text_candidate_requires_review",
+        "count": 7
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, operator_not_supported",
+        "count": 5
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported, rule_object_not_supported",
+        "count": 3
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, rule_object_not_supported",
+        "count": 2
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, applies_to_not_supported, unresolved_exception_cue",
+        "count": 1
+      },
+      {
+        "name": "upstream_extraction_requested_review",
+        "count": 1
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch",
+        "count": 1
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, text_condition_not_supported, rule_object_not_supported",
+        "count": 1
+      },
+      {
+        "name": "upstream_extraction_requested_review, pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported",
+        "count": 1
+      }
+    ],
+    "top_support_gaps": [
+      {
+        "name": "pipeline5_text_candidate_requires_review",
+        "count": 21
+      },
+      {
+        "name": "operator_not_supported",
+        "count": 9
+      },
+      {
+        "name": "rule_object_not_supported",
+        "count": 7
+      },
+      {
+        "name": "applies_to_not_supported",
+        "count": 5
+      },
+      {
+        "name": "upstream_extraction_requested_review",
+        "count": 2
+      },
+      {
+        "name": "unresolved_exception_cue",
+        "count": 1
+      },
+      {
+        "name": "rule_family_direction_mismatch",
+        "count": 1
+      },
+      {
+        "name": "text_condition_not_supported",
+        "count": 1
+      }
+    ],
+    "action_descriptions": {
+      "retry_with_better_evidence": "Rerun candidate against a different, stronger evidence packet.",
+      "safe_verifier_tuning_candidate": "Inspect whether a general verifier/table rule can safely reduce review.",
+      "evidence_packet_repair_candidate": "Repair evidence attachment first; current suggestion is not strong enough to rerun.",
+      "needs_second_source_consensus": "Find independent text/table consensus before promotion.",
+      "semantic_duplicate_review": "Compare a high-similarity review item against an already verified rule; usually a duplicate/degraded extraction.",
+      "semantic_guardrail_review": "Close semantic match, but core guardrails disagree; inspect manually instead of tuning.",
+      "human_legal_review": "Resolve exception or cross-family conflict manually.",
+      "upstream_candidate_issue": "Return likely extraction/normalization issue upstream.",
+      "defer_low_priority": "Leave in review until broader benchmark evidence exists."
+    },
+    "recommendations": [
+      "Keep 1 exception/conflict rules in human legal review."
+    ]
+  }
+}

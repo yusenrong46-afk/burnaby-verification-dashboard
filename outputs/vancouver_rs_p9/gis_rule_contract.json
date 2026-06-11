@@ -1,0 +1,68 @@
+{
+  "city": "Vancouver",
+  "zone": "RS",
+  "source_document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+  "source_url": "",
+  "input_mode": "pipeline9_rag",
+  "schema_version": "1.1",
+  "rules": [
+    {
+      "rule_id": "vancouver_rs_020",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "laneway_house_maximum_height_meters",
+      "applies_to": "building height",
+      "operator": "<=",
+      "value": "8.5",
+      "value_numeric": 8.5,
+      "unit": "m",
+      "condition": "for a laneway house",
+      "exception": "",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+        "url": "",
+        "page": 8,
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+        "quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_021",
+      "rule_object": "storeys",
+      "constraint_type": "maximum",
+      "constraint_scope": "laneway_house_maximum_height_storeys",
+      "applies_to": "building height",
+      "operator": "<=",
+      "value": "2",
+      "value_numeric": 2.0,
+      "unit": "storeys",
+      "condition": "for a laneway house",
+      "exception": "",
+      "geometry": {
+        "operation": "storey_count_cap",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+        "url": "",
+        "page": 8,
+        "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+        "quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys."
+      }
+    }
+  ]
+}

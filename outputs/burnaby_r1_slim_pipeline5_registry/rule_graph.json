@@ -1,7 +1,7 @@
 {
   "purpose": "Diagnostic graph for rule/evidence relationships. Analysis only; verifier decisions are unchanged.",
-  "node_count": 544,
-  "edge_count": 1931,
+  "node_count": 550,
+  "edge_count": 1925,
   "nodes": [
     {
       "id": "evidence_unit:pipeline5_merged_rule_0001",
@@ -3402,6 +3402,23 @@
       "label": "height__building__accessory_buildings____4_0__m"
     },
     {
+      "id": "verified_rule:burnaby_r1_047",
+      "type": "verified_rule",
+      "label": "burnaby_r1_047",
+      "decision": "verified",
+      "rule_object": "setback",
+      "constraint_scope": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
+      "type": "canonical_rule_key",
+      "label": "setback__minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard__all_buildings____3_0__m"
+    },
+    {
       "id": "verified_rule:burnaby_r1_048",
       "type": "verified_rule",
       "label": "burnaby_r1_048",
@@ -3521,6 +3538,23 @@
       "label": "setback__interior_side_yard__all_buildings__end_unit_lots____1_2__m"
     },
     {
+      "id": "verified_rule:burnaby_r1_055",
+      "type": "verified_rule",
+      "label": "burnaby_r1_055",
+      "decision": "verified",
+      "rule_object": "setback",
+      "constraint_scope": "interior_side_yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
+      "type": "canonical_rule_key",
+      "label": "setback__interior_side_yard__all_buildings____1_2__m"
+    },
+    {
       "id": "verified_rule:burnaby_r1_056",
       "type": "verified_rule",
       "label": "burnaby_r1_056",
@@ -3608,6 +3642,18 @@
       "unit": "m"
     },
     {
+      "id": "verified_rule:burnaby_r1_076",
+      "type": "verified_rule",
+      "label": "burnaby_r1_076",
+      "decision": "verified",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "operator": ">=",
+      "value": "2.4",
+      "unit": "m"
+    },
+    {
       "id": "verified_rule:burnaby_r1_116",
       "type": "verified_rule",
       "label": "burnaby_r1_116",
@@ -3657,42 +3703,6 @@
       "id": "canonical_rule_key:fire_access_corridor_vertical_clearance_all_dwelling_units_all_dwelling_units_must_be_clear_of_any_projections_or_obstructions_2_5_m",
       "type": "canonical_rule_key",
       "label": "fire_access_corridor__vertical_clearance__all_dwelling_units__all_dwelling_units_must_be_clear_of_any_projections_or_obstructions____2_5__m"
-    },
-    {
-      "id": "verified_rule:burnaby_r1_028",
-      "type": "verified_rule",
-      "label": "burnaby_r1_028",
-      "decision": "verified",
-      "rule_object": "lot_area",
-      "constraint_scope": "lot",
-      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
-      "operator": ">=",
-      "value": "281",
-      "unit": "m²"
-    },
-    {
-      "id": "verified_rule:burnaby_r1_075",
-      "type": "verified_rule",
-      "label": "burnaby_r1_075",
-      "decision": "verified",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "principal building",
-      "operator": ">=",
-      "value": "6.0",
-      "unit": "m"
-    },
-    {
-      "id": "verified_rule:burnaby_r1_076",
-      "type": "verified_rule",
-      "label": "burnaby_r1_076",
-      "decision": "verified",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "principal building",
-      "operator": ">=",
-      "value": "2.4",
-      "unit": "m"
     },
     {
       "id": "review_rule:burnaby_r1_019",
@@ -3821,6 +3831,18 @@
       "id": "canonical_rule_key:dwelling_units_lot_lot_frequent_transit_network_area_only_6_units",
       "type": "canonical_rule_key",
       "label": "dwelling_units__lot__lot__frequent_transit_network_area_only____6__units"
+    },
+    {
+      "id": "review_rule:burnaby_r1_028",
+      "type": "review_rule",
+      "label": "burnaby_r1_028",
+      "decision": "review_needed",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot",
+      "applies_to": "Small-Scale Multi-Unit (3 to 4 Units)",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m²"
     },
     {
       "id": "review_rule:burnaby_r1_029",
@@ -3958,40 +3980,6 @@
       "label": "storeys__building__accessory_buildings____1__storeys"
     },
     {
-      "id": "review_rule:burnaby_r1_047",
-      "type": "review_rule",
-      "label": "burnaby_r1_047",
-      "decision": "review_needed",
-      "rule_object": "setback",
-      "constraint_scope": "Minimum Lot Line Setbacks for All Buildings .2 .3 - Street Yard",
-      "applies_to": "All Buildings",
-      "operator": ">=",
-      "value": "3.0",
-      "unit": "m"
-    },
-    {
-      "id": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
-      "type": "canonical_rule_key",
-      "label": "setback__minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard__all_buildings____3_0__m"
-    },
-    {
-      "id": "review_rule:burnaby_r1_055",
-      "type": "review_rule",
-      "label": "burnaby_r1_055",
-      "decision": "review_needed",
-      "rule_object": "setback",
-      "constraint_scope": "interior_side_yard",
-      "applies_to": "All Buildings",
-      "operator": ">=",
-      "value": "1.2",
-      "unit": "m"
-    },
-    {
-      "id": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
-      "type": "canonical_rule_key",
-      "label": "setback__interior_side_yard__all_buildings____1_2__m"
-    },
-    {
       "id": "review_rule:burnaby_r1_060",
       "type": "review_rule",
       "label": "burnaby_r1_060",
@@ -4032,7 +4020,7 @@
       "type": "review_rule",
       "label": "burnaby_r1_064",
       "decision": "review_needed",
-      "rule_object": "dwelling_units",
+      "rule_object": "lot_area",
       "constraint_scope": "covenant_requirement",
       "applies_to": "Section 219 Covenant",
       "operator": "required",
@@ -4040,9 +4028,26 @@
       "unit": ""
     },
     {
-      "id": "canonical_rule_key:dwelling_units_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
+      "id": "canonical_rule_key:lot_area_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
       "type": "canonical_rule_key",
-      "label": "dwelling_units__covenant_requirement__section_219_covenant__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1__required"
+      "label": "lot_area__covenant_requirement__section_219_covenant__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1__required"
+    },
+    {
+      "id": "review_rule:burnaby_r1_065",
+      "type": "review_rule",
+      "label": "burnaby_r1_065",
+      "decision": "review_needed",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_configuration",
+      "applies_to": "Panhandle lots or other irregular lot configurations",
+      "operator": "not permitted",
+      "value": "",
+      "unit": ""
+    },
+    {
+      "id": "canonical_rule_key:lot_area_lot_configuration_panhandle_lots_or_other_irregular_lot_configurations_small_scale_multi_unit_housing_district_r1_not_permitted",
+      "type": "canonical_rule_key",
+      "label": "lot_area__lot_configuration__panhandle_lots_or_other_irregular_lot_configurations__small_scale_multi_unit_housing_district_r1__not_permitted"
     },
     {
       "id": "review_rule:burnaby_r1_066",
@@ -4067,30 +4072,6 @@
       "operator": ">",
       "value": "280",
       "unit": "m²"
-    },
-    {
-      "id": "review_rule:burnaby_r1_068",
-      "type": "review_rule",
-      "label": "burnaby_r1_068",
-      "decision": "review_needed",
-      "rule_object": "setback",
-      "constraint_scope": "required_yards_permitted_projections_cross_reference",
-      "applies_to": "required yards",
-      "operator": "see",
-      "value": "Sections 101.6.1 and 6.12",
-      "unit": ""
-    },
-    {
-      "id": "review_rule:burnaby_r1_069",
-      "type": "review_rule",
-      "label": "burnaby_r1_069",
-      "decision": "review_needed",
-      "rule_object": "setback",
-      "constraint_scope": "vision_clearance_areas_additional_setbacks_cross_reference",
-      "applies_to": "vision clearance areas",
-      "operator": "see",
-      "value": "Section 6.13",
-      "unit": ""
     },
     {
       "id": "review_rule:burnaby_r1_070",
@@ -4122,16 +4103,16 @@
       "label": "setback__interior_side_yard__end_unit_of_a_rowhouse_development__end_unit_lots____1_2__m"
     },
     {
-      "id": "review_rule:burnaby_r1_073",
+      "id": "review_rule:burnaby_r1_075",
       "type": "review_rule",
-      "label": "burnaby_r1_073",
+      "label": "burnaby_r1_075",
       "decision": "review_needed",
       "rule_object": "building_separation",
       "constraint_scope": "building_separation",
-      "applies_to": "minimum separations",
-      "operator": "see",
-      "value": "Section 101.6.1",
-      "unit": ""
+      "applies_to": "principal building",
+      "operator": ">=",
+      "value": "6.0",
+      "unit": "m"
     },
     {
       "id": "review_rule:burnaby_r1_077",
@@ -4194,6 +4175,23 @@
       "unit": ""
     },
     {
+      "id": "review_rule:burnaby_r1_088",
+      "type": "review_rule",
+      "label": "burnaby_r1_088",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "supportive_housing_min_floor_area",
+      "applies_to": "Supportive Housing",
+      "operator": ">=",
+      "value": "27",
+      "unit": "m²"
+    },
+    {
+      "id": "canonical_rule_key:floor_area_supportive_housing_min_floor_area_supportive_housing_category_a_supportive_housing_facilities_27_m",
+      "type": "canonical_rule_key",
+      "label": "floor_area__supportive_housing_min_floor_area__supportive_housing__category_a_supportive_housing_facilities____27__m"
+    },
+    {
       "id": "review_rule:burnaby_r1_093",
       "type": "review_rule",
       "label": "burnaby_r1_093",
@@ -4228,18 +4226,6 @@
       "operator": "<=",
       "value": "4.6",
       "unit": "m"
-    },
-    {
-      "id": "review_rule:burnaby_r1_098",
-      "type": "review_rule",
-      "label": "burnaby_r1_098",
-      "decision": "review_needed",
-      "rule_object": "dwelling_units",
-      "constraint_scope": "lot",
-      "applies_to": "child_care_facility",
-      "operator": "=",
-      "value": "comply with the development regulations under section 101.4 for 1 to 3 small-scale multi-unit dwelling units on a lot",
-      "unit": ""
     },
     {
       "id": "review_rule:burnaby_r1_099",
@@ -4302,18 +4288,6 @@
       "unit": "m"
     },
     {
-      "id": "review_rule:burnaby_r1_107",
-      "type": "review_rule",
-      "label": "burnaby_r1_107",
-      "decision": "review_needed",
-      "rule_object": "building_separation",
-      "constraint_scope": "building_separation",
-      "applies_to": "projection",
-      "operator": "=",
-      "value": "as per Section 6.9",
-      "unit": ""
-    },
-    {
       "id": "review_rule:burnaby_r1_108",
       "type": "review_rule",
       "label": "burnaby_r1_108",
@@ -4336,18 +4310,6 @@
       "operator": "<=",
       "value": "1.2",
       "unit": "m"
-    },
-    {
-      "id": "review_rule:burnaby_r1_111",
-      "type": "review_rule",
-      "label": "burnaby_r1_111",
-      "decision": "review_needed",
-      "rule_object": "setback",
-      "constraint_scope": "projection_cross_reference_yards",
-      "applies_to": "projection",
-      "operator": "=",
-      "value": "subject to Section 6.12",
-      "unit": ""
     },
     {
       "id": "review_rule:burnaby_r1_113",
@@ -4487,6 +4449,57 @@
       "unit": ""
     },
     {
+      "id": "review_rule:burnaby_r1_131",
+      "type": "review_rule",
+      "label": "burnaby_r1_131",
+      "decision": "review_needed",
+      "rule_object": "building_separation",
+      "constraint_scope": "heritage_section_101_5_1_exemption",
+      "applies_to": "lots",
+      "operator": "not applicable",
+      "value": "",
+      "unit": ""
+    },
+    {
+      "id": "canonical_rule_key:building_separation_heritage_section_101_5_1_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_applicable",
+      "type": "canonical_rule_key",
+      "label": "building_separation__heritage_section_101_5_1_exemption__lots__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource__not_applicable"
+    },
+    {
+      "id": "review_rule:burnaby_r1_132",
+      "type": "review_rule",
+      "label": "burnaby_r1_132",
+      "decision": "review_needed",
+      "rule_object": "building_separation",
+      "constraint_scope": "heritage_off_street_parking_exemption",
+      "applies_to": "lots",
+      "operator": "not required",
+      "value": "",
+      "unit": ""
+    },
+    {
+      "id": "canonical_rule_key:building_separation_heritage_off_street_parking_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_required",
+      "type": "canonical_rule_key",
+      "label": "building_separation__heritage_off_street_parking_exemption__lots__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource__not_required"
+    },
+    {
+      "id": "review_rule:burnaby_r1_133",
+      "type": "review_rule",
+      "label": "burnaby_r1_133",
+      "decision": "review_needed",
+      "rule_object": "building_separation",
+      "constraint_scope": "heritage_non_conforming_driveways",
+      "applies_to": "driveways",
+      "operator": "allowed",
+      "value": "",
+      "unit": ""
+    },
+    {
+      "id": "canonical_rule_key:building_separation_heritage_non_conforming_driveways_driveways_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "canonical_rule_key",
+      "label": "building_separation__heritage_non_conforming_driveways__driveways__lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource__allowed"
+    },
+    {
       "id": "review_rule:burnaby_r1_134",
       "type": "review_rule",
       "label": "burnaby_r1_134",
@@ -4509,6 +4522,23 @@
       "operator": "allowed",
       "value": "",
       "unit": ""
+    },
+    {
+      "id": "review_rule:burnaby_r1_142",
+      "type": "review_rule",
+      "label": "burnaby_r1_142",
+      "decision": "review_needed",
+      "rule_object": "building_separation",
+      "constraint_scope": "additional_regulations_cross_reference",
+      "applies_to": "zoning regulations",
+      "operator": "applies",
+      "value": "Schedule 8",
+      "unit": ""
+    },
+    {
+      "id": "canonical_rule_key:building_separation_additional_regulations_cross_reference_zoning_regulations_applies_schedule_8",
+      "type": "canonical_rule_key",
+      "label": "building_separation__additional_regulations_cross_reference__zoning_regulations__applies__schedule_8"
     }
   ],
   "edges": [
@@ -6494,6 +6524,57 @@
       "field": "applies_to"
     },
     {
+      "source": "verified_rule:burnaby_r1_047",
+      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_047",
+      "target": "evidence_unit:pipeline5_merged_rule_0043",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_047",
+      "target": "candidate_rule:pipeline5_merged_rule_0043",
+      "type": "from_candidate"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_047",
+      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_047",
+      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_047",
+      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_047",
+      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_047",
+      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_047",
+      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
       "source": "verified_rule:burnaby_r1_048",
       "target": "canonical_rule_key:setback_street_yard_front_all_buildings_front_4_0_m",
       "type": "same_canonical_key"
@@ -6851,6 +6932,57 @@
       "field": "applies_to"
     },
     {
+      "source": "verified_rule:burnaby_r1_055",
+      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_055",
+      "target": "evidence_unit:pipeline5_merged_rule_0049",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_055",
+      "target": "candidate_rule:pipeline5_merged_rule_0049",
+      "type": "from_candidate"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_055",
+      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_055",
+      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_055",
+      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_055",
+      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_055",
+      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_055",
+      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
       "source": "verified_rule:burnaby_r1_056",
       "target": "canonical_rule_key:building_separation_building_separation_small_scale_multi_unit_1_to_2_units_small_scale_multi_unit_3_to_4_units_small_scale_multi_unit_5_to_6_units_2_4_m",
       "type": "same_canonical_key"
@@ -7157,6 +7289,57 @@
       "field": "applies_to"
     },
     {
+      "source": "verified_rule:burnaby_r1_076",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_076",
+      "target": "evidence_unit:pipeline5_merged_rule_0070",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_076",
+      "target": "candidate_rule:pipeline5_merged_rule_0070",
+      "type": "from_candidate"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_076",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_076",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_076",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_076",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_076",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "verified_rule:burnaby_r1_076",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
       "source": "verified_rule:burnaby_r1_116",
       "target": "canonical_rule_key:automatic_sprinkler_dwelling_unit_dwelling_units_more_than_45_m_from_a_street_lot_line_dwelling_units_located_more_than_45_m_from_a_lot_line_abutting_a_street_45_m",
       "type": "same_canonical_key"
@@ -7310,159 +7493,6 @@
       "field": "applies_to"
     },
     {
-      "source": "verified_rule:burnaby_r1_028",
-      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_028",
-      "target": "evidence_unit:bundle_burnaby_r1_028",
-      "type": "cites"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_028",
-      "target": "candidate_rule:pipeline5_merged_rule_0024_rerun_bundle_burnaby_r1_028",
-      "type": "from_candidate"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_028",
-      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_028",
-      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_028",
-      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
-      "type": "supports_field",
-      "field": "operator"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_028",
-      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
-      "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_028",
-      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
-      "type": "supports_field",
-      "field": "scope"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_028",
-      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
-      "type": "supports_field",
-      "field": "applies_to"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_075",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_075",
-      "target": "evidence_unit:bundle_burnaby_r1_075",
-      "type": "cites"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_075",
-      "target": "candidate_rule:pipeline5_merged_rule_0069_rerun_bundle_burnaby_r1_075",
-      "type": "from_candidate"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_075",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_075",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_075",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
-      "type": "supports_field",
-      "field": "operator"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_075",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
-      "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_075",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
-      "type": "supports_field",
-      "field": "scope"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_075",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
-      "type": "supports_field",
-      "field": "applies_to"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_076",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_076",
-      "target": "evidence_unit:bundle_burnaby_r1_076",
-      "type": "cites"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_076",
-      "target": "candidate_rule:pipeline5_merged_rule_0070_rerun_bundle_burnaby_r1_076",
-      "type": "from_candidate"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_076",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_076",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_076",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
-      "type": "supports_field",
-      "field": "operator"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_076",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
-      "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_076",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
-      "type": "supports_field",
-      "field": "scope"
-    },
-    {
-      "source": "verified_rule:burnaby_r1_076",
-      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_2_4_m",
-      "type": "supports_field",
-      "field": "applies_to"
-    },
-    {
       "source": "review_rule:burnaby_r1_019",
       "target": "canonical_rule_key:lot_area_lot_rowhouse_1_280_m",
       "type": "same_canonical_key"
@@ -7544,6 +7574,12 @@
       "source": "review_rule:burnaby_r1_020",
       "target": "canonical_rule_key:dwelling_units_lot_rowhouse_1_units",
       "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:burnaby_r1_020",
+      "target": "canonical_rule_key:dwelling_units_lot_rowhouse_1_units",
+      "type": "supports_field",
       "field": "rule_object"
     },
     {
@@ -7555,16 +7591,8 @@
     {
       "source": "review_rule:burnaby_r1_020",
       "target": "canonical_rule_key:dwelling_units_lot_rowhouse_1_units",
-      "type": "missing_field",
-      "field": "applies_to",
-      "gap": "applies_to_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_020",
-      "target": "canonical_rule_key:dwelling_units_lot_rowhouse_1_units",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
+      "type": "supports_field",
+      "field": "applies_to"
     },
     {
       "source": "review_rule:burnaby_r1_021",
@@ -7648,6 +7676,12 @@
       "source": "review_rule:burnaby_r1_022",
       "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_1_to_2_units_1_units",
       "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:burnaby_r1_022",
+      "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_1_to_2_units_1_units",
+      "type": "supports_field",
       "field": "rule_object"
     },
     {
@@ -7661,13 +7695,6 @@
       "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_1_to_2_units_1_units",
       "type": "supports_field",
       "field": "applies_to"
-    },
-    {
-      "source": "review_rule:burnaby_r1_022",
-      "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_1_to_2_units_1_units",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_023",
@@ -7751,6 +7778,12 @@
       "source": "review_rule:burnaby_r1_024",
       "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_3_to_4_units_3_units",
       "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:burnaby_r1_024",
+      "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_3_to_4_units_3_units",
+      "type": "supports_field",
       "field": "rule_object"
     },
     {
@@ -7764,13 +7797,6 @@
       "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_3_to_4_units_3_units",
       "type": "supports_field",
       "field": "applies_to"
-    },
-    {
-      "source": "review_rule:burnaby_r1_024",
-      "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_3_to_4_units_3_units",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_025",
@@ -7854,6 +7880,12 @@
       "source": "review_rule:burnaby_r1_026",
       "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_5_to_6_units_frequent_transit_network_area_only_5_units",
       "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:burnaby_r1_026",
+      "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_5_to_6_units_frequent_transit_network_area_only_5_units",
+      "type": "supports_field",
       "field": "rule_object"
     },
     {
@@ -7867,20 +7899,6 @@
       "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_5_to_6_units_frequent_transit_network_area_only_5_units",
       "type": "supports_field",
       "field": "applies_to"
-    },
-    {
-      "source": "review_rule:burnaby_r1_026",
-      "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_5_to_6_units_frequent_transit_network_area_only_5_units",
-      "type": "missing_field",
-      "field": "condition",
-      "gap": "text_condition_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_026",
-      "target": "canonical_rule_key:dwelling_units_lot_small_scale_multi_unit_5_to_6_units_frequent_transit_network_area_only_5_units",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_027",
@@ -7934,11 +7952,56 @@
       "field": "applies_to"
     },
     {
-      "source": "review_rule:burnaby_r1_027",
-      "target": "canonical_rule_key:dwelling_units_lot_lot_frequent_transit_network_area_only_6_units",
+      "source": "review_rule:burnaby_r1_028",
+      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:burnaby_r1_028",
+      "target": "evidence_unit:pipeline5_merged_rule_0024",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:burnaby_r1_028",
+      "target": "candidate_rule:pipeline5_merged_rule_0024",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:burnaby_r1_028",
+      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:burnaby_r1_028",
+      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:burnaby_r1_028",
+      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:burnaby_r1_028",
+      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:burnaby_r1_028",
+      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:burnaby_r1_028",
+      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_3_to_4_units_4_units_only_281_m",
       "type": "missing_field",
-      "field": "condition",
-      "gap": "text_condition_not_supported"
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_029",
@@ -7984,13 +8047,6 @@
       "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_5_to_6_units_frequent_transit_network_area_only_281_m",
       "type": "supports_field",
       "field": "scope"
-    },
-    {
-      "source": "review_rule:burnaby_r1_029",
-      "target": "canonical_rule_key:lot_area_lot_small_scale_multi_unit_5_to_6_units_frequent_transit_network_area_only_281_m",
-      "type": "missing_field",
-      "field": "condition",
-      "gap": "text_condition_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_029",
@@ -8308,13 +8364,6 @@
       "source": "review_rule:burnaby_r1_035",
       "target": "canonical_rule_key:lot_coverage_lot_small_scale_multi_unit_5_to_6_units_frequent_transit_network_area_only_45",
       "type": "missing_field",
-      "field": "condition",
-      "gap": "text_condition_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_035",
-      "target": "canonical_rule_key:lot_coverage_lot_small_scale_multi_unit_5_to_6_units_frequent_transit_network_area_only_45",
-      "type": "missing_field",
       "field": "applies_to",
       "gap": "applies_to_not_supported"
     },
@@ -8481,108 +8530,6 @@
       "field": "applies_to"
     },
     {
-      "source": "review_rule:burnaby_r1_047",
-      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "review_rule:burnaby_r1_047",
-      "target": "evidence_unit:pipeline5_merged_rule_0043",
-      "type": "cites"
-    },
-    {
-      "source": "review_rule:burnaby_r1_047",
-      "target": "candidate_rule:pipeline5_merged_rule_0043",
-      "type": "from_candidate"
-    },
-    {
-      "source": "review_rule:burnaby_r1_047",
-      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "review_rule:burnaby_r1_047",
-      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "review_rule:burnaby_r1_047",
-      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
-      "type": "supports_field",
-      "field": "operator"
-    },
-    {
-      "source": "review_rule:burnaby_r1_047",
-      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
-      "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "review_rule:burnaby_r1_047",
-      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
-      "type": "supports_field",
-      "field": "scope"
-    },
-    {
-      "source": "review_rule:burnaby_r1_047",
-      "target": "canonical_rule_key:setback_minimum_lot_line_setbacks_for_all_buildings_2_3_street_yard_all_buildings_3_0_m",
-      "type": "supports_field",
-      "field": "applies_to"
-    },
-    {
-      "source": "review_rule:burnaby_r1_055",
-      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "review_rule:burnaby_r1_055",
-      "target": "evidence_unit:pipeline5_merged_rule_0049",
-      "type": "cites"
-    },
-    {
-      "source": "review_rule:burnaby_r1_055",
-      "target": "candidate_rule:pipeline5_merged_rule_0049",
-      "type": "from_candidate"
-    },
-    {
-      "source": "review_rule:burnaby_r1_055",
-      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "review_rule:burnaby_r1_055",
-      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "review_rule:burnaby_r1_055",
-      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
-      "type": "supports_field",
-      "field": "operator"
-    },
-    {
-      "source": "review_rule:burnaby_r1_055",
-      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
-      "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "review_rule:burnaby_r1_055",
-      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
-      "type": "supports_field",
-      "field": "scope"
-    },
-    {
-      "source": "review_rule:burnaby_r1_055",
-      "target": "canonical_rule_key:setback_interior_side_yard_all_buildings_1_2_m",
-      "type": "supports_field",
-      "field": "applies_to"
-    },
-    {
       "source": "review_rule:burnaby_r1_060",
       "target": "canonical_rule_key:dwelling_units_lot_dwelling_units_total_dwelling_units_on_a_lot_1_to_3_units_1_units",
       "type": "same_canonical_key"
@@ -8737,7 +8684,7 @@
     },
     {
       "source": "review_rule:burnaby_r1_064",
-      "target": "canonical_rule_key:dwelling_units_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
+      "target": "canonical_rule_key:lot_area_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
       "type": "same_canonical_key"
     },
     {
@@ -8752,37 +8699,89 @@
     },
     {
       "source": "review_rule:burnaby_r1_064",
-      "target": "canonical_rule_key:dwelling_units_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
+      "target": "canonical_rule_key:lot_area_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
       "type": "supports_field",
       "field": "value"
     },
     {
       "source": "review_rule:burnaby_r1_064",
-      "target": "canonical_rule_key:dwelling_units_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
+      "target": "canonical_rule_key:lot_area_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
       "type": "supports_field",
       "field": "unit"
     },
     {
       "source": "review_rule:burnaby_r1_064",
-      "target": "canonical_rule_key:dwelling_units_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
+      "target": "canonical_rule_key:lot_area_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
       "type": "supports_field",
       "field": "operator"
     },
     {
       "source": "review_rule:burnaby_r1_064",
-      "target": "canonical_rule_key:dwelling_units_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
+      "target": "canonical_rule_key:lot_area_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:burnaby_r1_064",
+      "target": "canonical_rule_key:lot_area_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
       "type": "supports_field",
       "field": "scope"
     },
     {
       "source": "review_rule:burnaby_r1_064",
-      "target": "canonical_rule_key:dwelling_units_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
+      "target": "canonical_rule_key:lot_area_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
       "type": "supports_field",
       "field": "applies_to"
     },
     {
-      "source": "review_rule:burnaby_r1_064",
-      "target": "canonical_rule_key:dwelling_units_covenant_requirement_section_219_covenant_at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_in_small_scale_multi_unit_housing_district_r1_required",
+      "source": "review_rule:burnaby_r1_065",
+      "target": "canonical_rule_key:lot_area_lot_configuration_panhandle_lots_or_other_irregular_lot_configurations_small_scale_multi_unit_housing_district_r1_not_permitted",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:burnaby_r1_065",
+      "target": "evidence_unit:pipeline5_merged_rule_0059_api_01",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:burnaby_r1_065",
+      "target": "candidate_rule:pipeline5_merged_rule_0059_api_01",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:burnaby_r1_065",
+      "target": "canonical_rule_key:lot_area_lot_configuration_panhandle_lots_or_other_irregular_lot_configurations_small_scale_multi_unit_housing_district_r1_not_permitted",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:burnaby_r1_065",
+      "target": "canonical_rule_key:lot_area_lot_configuration_panhandle_lots_or_other_irregular_lot_configurations_small_scale_multi_unit_housing_district_r1_not_permitted",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:burnaby_r1_065",
+      "target": "canonical_rule_key:lot_area_lot_configuration_panhandle_lots_or_other_irregular_lot_configurations_small_scale_multi_unit_housing_district_r1_not_permitted",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:burnaby_r1_065",
+      "target": "canonical_rule_key:lot_area_lot_configuration_panhandle_lots_or_other_irregular_lot_configurations_small_scale_multi_unit_housing_district_r1_not_permitted",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "review_rule:burnaby_r1_065",
+      "target": "canonical_rule_key:lot_area_lot_configuration_panhandle_lots_or_other_irregular_lot_configurations_small_scale_multi_unit_housing_district_r1_not_permitted",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_065",
+      "target": "canonical_rule_key:lot_area_lot_configuration_panhandle_lots_or_other_irregular_lot_configurations_small_scale_multi_unit_housing_district_r1_not_permitted",
       "type": "missing_field",
       "field": "rule_object",
       "gap": "rule_object_not_supported"
@@ -8898,110 +8897,6 @@
       "field": "applies_to"
     },
     {
-      "source": "review_rule:burnaby_r1_068",
-      "target": "canonical_rule_key:setback_required_yards_permitted_projections_cross_reference_required_yards_see_sections_101_6_1_and_6_12",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "review_rule:burnaby_r1_068",
-      "target": "evidence_unit:pipeline5_merged_rule_0062",
-      "type": "cites"
-    },
-    {
-      "source": "review_rule:burnaby_r1_068",
-      "target": "candidate_rule:pipeline5_merged_rule_0062",
-      "type": "from_candidate"
-    },
-    {
-      "source": "review_rule:burnaby_r1_068",
-      "target": "canonical_rule_key:setback_required_yards_permitted_projections_cross_reference_required_yards_see_sections_101_6_1_and_6_12",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "review_rule:burnaby_r1_068",
-      "target": "canonical_rule_key:setback_required_yards_permitted_projections_cross_reference_required_yards_see_sections_101_6_1_and_6_12",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "review_rule:burnaby_r1_068",
-      "target": "canonical_rule_key:setback_required_yards_permitted_projections_cross_reference_required_yards_see_sections_101_6_1_and_6_12",
-      "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "review_rule:burnaby_r1_068",
-      "target": "canonical_rule_key:setback_required_yards_permitted_projections_cross_reference_required_yards_see_sections_101_6_1_and_6_12",
-      "type": "supports_field",
-      "field": "scope"
-    },
-    {
-      "source": "review_rule:burnaby_r1_068",
-      "target": "canonical_rule_key:setback_required_yards_permitted_projections_cross_reference_required_yards_see_sections_101_6_1_and_6_12",
-      "type": "supports_field",
-      "field": "applies_to"
-    },
-    {
-      "source": "review_rule:burnaby_r1_068",
-      "target": "canonical_rule_key:setback_required_yards_permitted_projections_cross_reference_required_yards_see_sections_101_6_1_and_6_12",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_069",
-      "target": "canonical_rule_key:setback_vision_clearance_areas_additional_setbacks_cross_reference_vision_clearance_areas_see_section_6_13",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "review_rule:burnaby_r1_069",
-      "target": "evidence_unit:pipeline5_merged_rule_0063",
-      "type": "cites"
-    },
-    {
-      "source": "review_rule:burnaby_r1_069",
-      "target": "candidate_rule:pipeline5_merged_rule_0063",
-      "type": "from_candidate"
-    },
-    {
-      "source": "review_rule:burnaby_r1_069",
-      "target": "canonical_rule_key:setback_vision_clearance_areas_additional_setbacks_cross_reference_vision_clearance_areas_see_section_6_13",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "review_rule:burnaby_r1_069",
-      "target": "canonical_rule_key:setback_vision_clearance_areas_additional_setbacks_cross_reference_vision_clearance_areas_see_section_6_13",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "review_rule:burnaby_r1_069",
-      "target": "canonical_rule_key:setback_vision_clearance_areas_additional_setbacks_cross_reference_vision_clearance_areas_see_section_6_13",
-      "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "review_rule:burnaby_r1_069",
-      "target": "canonical_rule_key:setback_vision_clearance_areas_additional_setbacks_cross_reference_vision_clearance_areas_see_section_6_13",
-      "type": "supports_field",
-      "field": "scope"
-    },
-    {
-      "source": "review_rule:burnaby_r1_069",
-      "target": "canonical_rule_key:setback_vision_clearance_areas_additional_setbacks_cross_reference_vision_clearance_areas_see_section_6_13",
-      "type": "supports_field",
-      "field": "applies_to"
-    },
-    {
-      "source": "review_rule:burnaby_r1_069",
-      "target": "canonical_rule_key:setback_vision_clearance_areas_additional_setbacks_cross_reference_vision_clearance_areas_see_section_6_13",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
-    },
-    {
       "source": "review_rule:burnaby_r1_070",
       "target": "canonical_rule_key:dwelling_units_lot_rowhouse_dwelling_units_on_a_lot_line_between_two_adjoining_rowhouse_dwellings_with_a_shared_party_wall_not_required",
       "type": "same_canonical_key"
@@ -9105,56 +9000,56 @@
       "field": "applies_to"
     },
     {
-      "source": "review_rule:burnaby_r1_073",
-      "target": "canonical_rule_key:building_separation_building_separation_minimum_separations_see_section_101_6_1",
+      "source": "review_rule:burnaby_r1_075",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
       "type": "same_canonical_key"
     },
     {
-      "source": "review_rule:burnaby_r1_073",
-      "target": "evidence_unit:pipeline5_merged_rule_0067",
+      "source": "review_rule:burnaby_r1_075",
+      "target": "evidence_unit:pipeline5_merged_rule_0069",
       "type": "cites"
     },
     {
-      "source": "review_rule:burnaby_r1_073",
-      "target": "candidate_rule:pipeline5_merged_rule_0067",
+      "source": "review_rule:burnaby_r1_075",
+      "target": "candidate_rule:pipeline5_merged_rule_0069",
       "type": "from_candidate"
     },
     {
-      "source": "review_rule:burnaby_r1_073",
-      "target": "canonical_rule_key:building_separation_building_separation_minimum_separations_see_section_101_6_1",
+      "source": "review_rule:burnaby_r1_075",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
       "type": "supports_field",
       "field": "value"
     },
     {
-      "source": "review_rule:burnaby_r1_073",
-      "target": "canonical_rule_key:building_separation_building_separation_minimum_separations_see_section_101_6_1",
+      "source": "review_rule:burnaby_r1_075",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
       "type": "supports_field",
       "field": "unit"
     },
     {
-      "source": "review_rule:burnaby_r1_073",
-      "target": "canonical_rule_key:building_separation_building_separation_minimum_separations_see_section_101_6_1",
+      "source": "review_rule:burnaby_r1_075",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
       "type": "supports_field",
-      "field": "rule_object"
+      "field": "operator"
     },
     {
-      "source": "review_rule:burnaby_r1_073",
-      "target": "canonical_rule_key:building_separation_building_separation_minimum_separations_see_section_101_6_1",
+      "source": "review_rule:burnaby_r1_075",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
       "type": "supports_field",
       "field": "scope"
     },
     {
-      "source": "review_rule:burnaby_r1_073",
-      "target": "canonical_rule_key:building_separation_building_separation_minimum_separations_see_section_101_6_1",
+      "source": "review_rule:burnaby_r1_075",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
       "type": "supports_field",
       "field": "applies_to"
     },
     {
-      "source": "review_rule:burnaby_r1_073",
-      "target": "canonical_rule_key:building_separation_building_separation_minimum_separations_see_section_101_6_1",
+      "source": "review_rule:burnaby_r1_075",
+      "target": "canonical_rule_key:building_separation_building_separation_principal_building_located_between_a_front_and_rear_principal_on_a_through_lot_6_0_m",
       "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
+      "field": "rule_object",
+      "gap": "rule_object_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_077",
@@ -9417,6 +9312,58 @@
       "field": "applies_to"
     },
     {
+      "source": "review_rule:burnaby_r1_088",
+      "target": "canonical_rule_key:floor_area_supportive_housing_min_floor_area_supportive_housing_category_a_supportive_housing_facilities_27_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:burnaby_r1_088",
+      "target": "evidence_unit:pipeline5_merged_rule_0083",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:burnaby_r1_088",
+      "target": "candidate_rule:pipeline5_merged_rule_0083",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:burnaby_r1_088",
+      "target": "canonical_rule_key:floor_area_supportive_housing_min_floor_area_supportive_housing_category_a_supportive_housing_facilities_27_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:burnaby_r1_088",
+      "target": "canonical_rule_key:floor_area_supportive_housing_min_floor_area_supportive_housing_category_a_supportive_housing_facilities_27_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:burnaby_r1_088",
+      "target": "canonical_rule_key:floor_area_supportive_housing_min_floor_area_supportive_housing_category_a_supportive_housing_facilities_27_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:burnaby_r1_088",
+      "target": "canonical_rule_key:floor_area_supportive_housing_min_floor_area_supportive_housing_category_a_supportive_housing_facilities_27_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:burnaby_r1_088",
+      "target": "canonical_rule_key:floor_area_supportive_housing_min_floor_area_supportive_housing_category_a_supportive_housing_facilities_27_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:burnaby_r1_088",
+      "target": "canonical_rule_key:floor_area_supportive_housing_min_floor_area_supportive_housing_category_a_supportive_housing_facilities_27_m",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
       "source": "review_rule:burnaby_r1_093",
       "target": "canonical_rule_key:height_building_parking_garage_or_carport_constructed_below_grade_1_2_m",
       "type": "same_canonical_key"
@@ -9570,61 +9517,9 @@
     {
       "source": "review_rule:burnaby_r1_095",
       "target": "canonical_rule_key:height_building_accessory_structure_located_outside_of_a_required_yard_4_6_m",
-      "type": "supports_field",
-      "field": "applies_to"
-    },
-    {
-      "source": "review_rule:burnaby_r1_098",
-      "target": "canonical_rule_key:dwelling_units_lot_child_care_facility_in_the_r1_district_comply_with_the_development_regulations_under_section_101_4_for_1_to_3_small_scale_multi_unit_dwelling_units_on_a_lot",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "review_rule:burnaby_r1_098",
-      "target": "evidence_unit:pipeline5_merged_rule_0093_api_01",
-      "type": "cites"
-    },
-    {
-      "source": "review_rule:burnaby_r1_098",
-      "target": "candidate_rule:pipeline5_merged_rule_0093_api_01",
-      "type": "from_candidate"
-    },
-    {
-      "source": "review_rule:burnaby_r1_098",
-      "target": "canonical_rule_key:dwelling_units_lot_child_care_facility_in_the_r1_district_comply_with_the_development_regulations_under_section_101_4_for_1_to_3_small_scale_multi_unit_dwelling_units_on_a_lot",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "review_rule:burnaby_r1_098",
-      "target": "canonical_rule_key:dwelling_units_lot_child_care_facility_in_the_r1_district_comply_with_the_development_regulations_under_section_101_4_for_1_to_3_small_scale_multi_unit_dwelling_units_on_a_lot",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "review_rule:burnaby_r1_098",
-      "target": "canonical_rule_key:dwelling_units_lot_child_care_facility_in_the_r1_district_comply_with_the_development_regulations_under_section_101_4_for_1_to_3_small_scale_multi_unit_dwelling_units_on_a_lot",
-      "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "review_rule:burnaby_r1_098",
-      "target": "canonical_rule_key:dwelling_units_lot_child_care_facility_in_the_r1_district_comply_with_the_development_regulations_under_section_101_4_for_1_to_3_small_scale_multi_unit_dwelling_units_on_a_lot",
-      "type": "supports_field",
-      "field": "scope"
-    },
-    {
-      "source": "review_rule:burnaby_r1_098",
-      "target": "canonical_rule_key:dwelling_units_lot_child_care_facility_in_the_r1_district_comply_with_the_development_regulations_under_section_101_4_for_1_to_3_small_scale_multi_unit_dwelling_units_on_a_lot",
       "type": "missing_field",
       "field": "applies_to",
       "gap": "applies_to_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_098",
-      "target": "canonical_rule_key:dwelling_units_lot_child_care_facility_in_the_r1_district_comply_with_the_development_regulations_under_section_101_4_for_1_to_3_small_scale_multi_unit_dwelling_units_on_a_lot",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_099",
@@ -9657,6 +9552,12 @@
       "source": "review_rule:burnaby_r1_099",
       "target": "canonical_rule_key:permitted_use_use_child_care_facility_in_the_r1_district_located_on_a_lot_that_does_not_contain_a_dwelling_unit_or_any_other_principal_use",
       "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:burnaby_r1_099",
+      "target": "canonical_rule_key:permitted_use_use_child_care_facility_in_the_r1_district_located_on_a_lot_that_does_not_contain_a_dwelling_unit_or_any_other_principal_use",
+      "type": "supports_field",
       "field": "rule_object"
     },
     {
@@ -9670,13 +9571,6 @@
       "target": "canonical_rule_key:permitted_use_use_child_care_facility_in_the_r1_district_located_on_a_lot_that_does_not_contain_a_dwelling_unit_or_any_other_principal_use",
       "type": "supports_field",
       "field": "applies_to"
-    },
-    {
-      "source": "review_rule:burnaby_r1_099",
-      "target": "canonical_rule_key:permitted_use_use_child_care_facility_in_the_r1_district_located_on_a_lot_that_does_not_contain_a_dwelling_unit_or_any_other_principal_use",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_101",
@@ -9708,9 +9602,14 @@
     {
       "source": "review_rule:burnaby_r1_101",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
-      "type": "missing_field",
-      "field": "condition",
-      "gap": "text_condition_not_supported"
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:burnaby_r1_101",
+      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
+      "type": "supports_field",
+      "field": "scope"
     },
     {
       "source": "review_rule:burnaby_r1_101",
@@ -9723,22 +9622,8 @@
       "source": "review_rule:burnaby_r1_101",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
       "type": "missing_field",
-      "field": "scope",
-      "gap": "constraint_scope_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_101",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
-      "type": "missing_field",
       "field": "operator",
       "gap": "operator_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_101",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
-      "type": "missing_field",
-      "field": "rule_object",
-      "gap": "rule_object_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_102",
@@ -9771,14 +9656,13 @@
       "source": "review_rule:burnaby_r1_102",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
       "type": "supports_field",
-      "field": "operator"
+      "field": "rule_object"
     },
     {
       "source": "review_rule:burnaby_r1_102",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
-      "type": "missing_field",
-      "field": "condition",
-      "gap": "text_condition_not_supported"
+      "type": "supports_field",
+      "field": "scope"
     },
     {
       "source": "review_rule:burnaby_r1_102",
@@ -9791,15 +9675,8 @@
       "source": "review_rule:burnaby_r1_102",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
       "type": "missing_field",
-      "field": "scope",
-      "gap": "constraint_scope_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_102",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
-      "type": "missing_field",
-      "field": "rule_object",
-      "gap": "rule_object_not_supported"
+      "field": "operator",
+      "gap": "operator_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_103",
@@ -9832,14 +9709,13 @@
       "source": "review_rule:burnaby_r1_103",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_1_0_m_or_less_above_grade_allowed_permitted",
       "type": "supports_field",
-      "field": "scope"
+      "field": "rule_object"
     },
     {
       "source": "review_rule:burnaby_r1_103",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_1_0_m_or_less_above_grade_allowed_permitted",
-      "type": "missing_field",
-      "field": "condition",
-      "gap": "text_condition_not_supported"
+      "type": "supports_field",
+      "field": "scope"
     },
     {
       "source": "review_rule:burnaby_r1_103",
@@ -9854,13 +9730,6 @@
       "type": "missing_field",
       "field": "operator",
       "gap": "operator_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_103",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_1_0_m_or_less_above_grade_allowed_permitted",
-      "type": "missing_field",
-      "field": "rule_object",
-      "gap": "rule_object_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_105",
@@ -9911,77 +9780,8 @@
       "source": "review_rule:burnaby_r1_105",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_0_9_m",
       "type": "missing_field",
-      "field": "condition",
-      "gap": "text_condition_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_105",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_0_9_m",
-      "type": "missing_field",
       "field": "applies_to",
       "gap": "applies_to_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_as_per_section_6_9",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "evidence_unit:pipeline5_merged_rule_0102",
-      "type": "cites"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "candidate_rule:pipeline5_merged_rule_0102",
-      "type": "from_candidate"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_as_per_section_6_9",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_as_per_section_6_9",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_as_per_section_6_9",
-      "type": "missing_field",
-      "field": "condition",
-      "gap": "text_condition_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_as_per_section_6_9",
-      "type": "missing_field",
-      "field": "applies_to",
-      "gap": "applies_to_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_as_per_section_6_9",
-      "type": "missing_field",
-      "field": "scope",
-      "gap": "constraint_scope_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_as_per_section_6_9",
-      "type": "missing_field",
-      "field": "operator",
-      "gap": "operator_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_107",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_as_per_section_6_9",
-      "type": "missing_field",
-      "field": "rule_object",
-      "gap": "rule_object_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_108",
@@ -10013,6 +9813,12 @@
     {
       "source": "review_rule:burnaby_r1_108",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:burnaby_r1_108",
+      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
       "type": "missing_field",
       "field": "condition",
       "gap": "text_condition_not_supported"
@@ -10023,13 +9829,6 @@
       "type": "missing_field",
       "field": "applies_to",
       "gap": "applies_to_not_supported"
-    },
-    {
-      "source": "review_rule:burnaby_r1_108",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_allowed_permitted",
-      "type": "missing_field",
-      "field": "scope",
-      "gap": "constraint_scope_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_108",
@@ -10082,12 +9881,6 @@
       "source": "review_rule:burnaby_r1_109",
       "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_1_2_m",
       "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "review_rule:burnaby_r1_109",
-      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_1_2_m",
-      "type": "supports_field",
       "field": "scope"
     },
     {
@@ -10105,55 +9898,11 @@
       "gap": "applies_to_not_supported"
     },
     {
-      "source": "review_rule:burnaby_r1_111",
-      "target": "canonical_rule_key:setback_projection_cross_reference_yards_projection_subject_to_section_6_12",
-      "type": "same_canonical_key"
-    },
-    {
-      "source": "review_rule:burnaby_r1_111",
-      "target": "evidence_unit:pipeline5_merged_rule_0106_api_01",
-      "type": "cites"
-    },
-    {
-      "source": "review_rule:burnaby_r1_111",
-      "target": "candidate_rule:pipeline5_merged_rule_0106_api_01",
-      "type": "from_candidate"
-    },
-    {
-      "source": "review_rule:burnaby_r1_111",
-      "target": "canonical_rule_key:setback_projection_cross_reference_yards_projection_subject_to_section_6_12",
-      "type": "supports_field",
-      "field": "value"
-    },
-    {
-      "source": "review_rule:burnaby_r1_111",
-      "target": "canonical_rule_key:setback_projection_cross_reference_yards_projection_subject_to_section_6_12",
-      "type": "supports_field",
-      "field": "unit"
-    },
-    {
-      "source": "review_rule:burnaby_r1_111",
-      "target": "canonical_rule_key:setback_projection_cross_reference_yards_projection_subject_to_section_6_12",
-      "type": "supports_field",
-      "field": "operator"
-    },
-    {
-      "source": "review_rule:burnaby_r1_111",
-      "target": "canonical_rule_key:setback_projection_cross_reference_yards_projection_subject_to_section_6_12",
-      "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "review_rule:burnaby_r1_111",
-      "target": "canonical_rule_key:setback_projection_cross_reference_yards_projection_subject_to_section_6_12",
-      "type": "supports_field",
-      "field": "scope"
-    },
-    {
-      "source": "review_rule:burnaby_r1_111",
-      "target": "canonical_rule_key:setback_projection_cross_reference_yards_projection_subject_to_section_6_12",
-      "type": "supports_field",
-      "field": "applies_to"
+      "source": "review_rule:burnaby_r1_109",
+      "target": "canonical_rule_key:building_separation_building_separation_projection_project_into_the_required_minimum_separation_between_buildings_on_the_same_lot_1_2_m",
+      "type": "missing_field",
+      "field": "rule_object",
+      "gap": "rule_object_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_113",
@@ -10243,12 +9992,6 @@
       "source": "review_rule:burnaby_r1_121",
       "target": "canonical_rule_key:fire_access_corridor_heritage_irregular_lots_permitted_all_dwelling_units_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
       "type": "supports_field",
-      "field": "rule_object"
-    },
-    {
-      "source": "review_rule:burnaby_r1_121",
-      "target": "canonical_rule_key:fire_access_corridor_heritage_irregular_lots_permitted_all_dwelling_units_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
-      "type": "supports_field",
       "field": "scope"
     },
     {
@@ -10263,6 +10006,13 @@
       "type": "missing_field",
       "field": "condition",
       "gap": "text_condition_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_121",
+      "target": "canonical_rule_key:fire_access_corridor_heritage_irregular_lots_permitted_all_dwelling_units_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "missing_field",
+      "field": "rule_object",
+      "gap": "rule_object_not_supported"
     },
     {
       "source": "review_rule:burnaby_r1_122",
@@ -10792,6 +10542,185 @@
       "gap": "text_condition_not_supported"
     },
     {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "canonical_rule_key:building_separation_heritage_section_101_5_1_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_applicable",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "evidence_unit:pipeline5_merged_rule_0125",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "candidate_rule:pipeline5_merged_rule_0125",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "canonical_rule_key:building_separation_heritage_section_101_5_1_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_applicable",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "canonical_rule_key:building_separation_heritage_section_101_5_1_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_applicable",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "canonical_rule_key:building_separation_heritage_section_101_5_1_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_applicable",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "canonical_rule_key:building_separation_heritage_section_101_5_1_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_applicable",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "canonical_rule_key:building_separation_heritage_section_101_5_1_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_applicable",
+      "type": "missing_field",
+      "field": "condition",
+      "gap": "text_condition_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "canonical_rule_key:building_separation_heritage_section_101_5_1_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_applicable",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_131",
+      "target": "canonical_rule_key:building_separation_heritage_section_101_5_1_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_applicable",
+      "type": "missing_field",
+      "field": "rule_object",
+      "gap": "rule_object_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "canonical_rule_key:building_separation_heritage_off_street_parking_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_required",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "evidence_unit:pipeline5_merged_rule_0126",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "candidate_rule:pipeline5_merged_rule_0126",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "canonical_rule_key:building_separation_heritage_off_street_parking_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_required",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "canonical_rule_key:building_separation_heritage_off_street_parking_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_required",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "canonical_rule_key:building_separation_heritage_off_street_parking_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_required",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "canonical_rule_key:building_separation_heritage_off_street_parking_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_required",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "canonical_rule_key:building_separation_heritage_off_street_parking_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_required",
+      "type": "missing_field",
+      "field": "condition",
+      "gap": "text_condition_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "canonical_rule_key:building_separation_heritage_off_street_parking_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_required",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_132",
+      "target": "canonical_rule_key:building_separation_heritage_off_street_parking_exemption_lots_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_not_required",
+      "type": "missing_field",
+      "field": "rule_object",
+      "gap": "rule_object_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "canonical_rule_key:building_separation_heritage_non_conforming_driveways_driveways_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "evidence_unit:pipeline5_merged_rule_0127",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "candidate_rule:pipeline5_merged_rule_0127",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "canonical_rule_key:building_separation_heritage_non_conforming_driveways_driveways_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "canonical_rule_key:building_separation_heritage_non_conforming_driveways_driveways_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "canonical_rule_key:building_separation_heritage_non_conforming_driveways_driveways_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "canonical_rule_key:building_separation_heritage_non_conforming_driveways_driveways_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "canonical_rule_key:building_separation_heritage_non_conforming_driveways_driveways_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "canonical_rule_key:building_separation_heritage_non_conforming_driveways_driveways_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "missing_field",
+      "field": "condition",
+      "gap": "text_condition_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_133",
+      "target": "canonical_rule_key:building_separation_heritage_non_conforming_driveways_driveways_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
+      "type": "missing_field",
+      "field": "rule_object",
+      "gap": "rule_object_not_supported"
+    },
+    {
       "source": "review_rule:burnaby_r1_134",
       "target": "canonical_rule_key:setback_heritage_parking_in_required_yards_parking_lots_in_the_r1_district_on_the_community_heritage_register_subject_to_approval_of_the_director_of_planning_and_development_and_registration_of_a_section_219_covenant_protecting_the_heritage_resource_allowed",
       "type": "same_canonical_key"
@@ -10906,6 +10835,60 @@
       "type": "missing_field",
       "field": "condition",
       "gap": "text_condition_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_142",
+      "target": "canonical_rule_key:building_separation_additional_regulations_cross_reference_zoning_regulations_applies_schedule_8",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:burnaby_r1_142",
+      "target": "evidence_unit:pipeline5_merged_rule_0136",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:burnaby_r1_142",
+      "target": "candidate_rule:pipeline5_merged_rule_0136",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:burnaby_r1_142",
+      "target": "canonical_rule_key:building_separation_additional_regulations_cross_reference_zoning_regulations_applies_schedule_8",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:burnaby_r1_142",
+      "target": "canonical_rule_key:building_separation_additional_regulations_cross_reference_zoning_regulations_applies_schedule_8",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:burnaby_r1_142",
+      "target": "canonical_rule_key:building_separation_additional_regulations_cross_reference_zoning_regulations_applies_schedule_8",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:burnaby_r1_142",
+      "target": "canonical_rule_key:building_separation_additional_regulations_cross_reference_zoning_regulations_applies_schedule_8",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_142",
+      "target": "canonical_rule_key:building_separation_additional_regulations_cross_reference_zoning_regulations_applies_schedule_8",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "review_rule:burnaby_r1_142",
+      "target": "canonical_rule_key:building_separation_additional_regulations_cross_reference_zoning_regulations_applies_schedule_8",
+      "type": "missing_field",
+      "field": "rule_object",
+      "gap": "rule_object_not_supported"
     },
     {
       "source": "candidate_rule:pipeline5_merged_rule_0001",
@@ -14837,7 +14820,7 @@
     "node_type_counts": [
       {
         "name": "canonical_rule_key",
-        "count": 167
+        "count": 173
       },
       {
         "name": "evidence_unit",
@@ -14859,7 +14842,7 @@
     "edge_type_counts": [
       {
         "name": "supports_field",
-        "count": 501
+        "count": 506
       },
       {
         "name": "same_scope",
@@ -14887,7 +14870,7 @@
       },
       {
         "name": "missing_field",
-        "count": 82
+        "count": 71
       }
     ]
   }

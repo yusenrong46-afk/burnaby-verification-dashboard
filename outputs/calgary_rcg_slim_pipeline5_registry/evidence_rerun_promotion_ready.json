@@ -1,0 +1,48 @@
+[
+  {
+    "original_rule_id": "calgary_rcg_013",
+    "original_candidate_id": "local_merged_rule_0013",
+    "retry_candidate_id": "local_merged_rule_0013__rerun__local_merged_rule_0010",
+    "rule_object": "height",
+    "constraint_scope": "building",
+    "applies_to": "height",
+    "condition": "",
+    "operator": "<=",
+    "value": "7.5",
+    "unit": "m",
+    "original_evidence_id": "local_merged_rule_0013",
+    "retry_evidence_id": "local_merged_rule_0010",
+    "retry_evidence_page": 396,
+    "retry_evidence_type": "clause",
+    "retry_evidence_quote": "building 7.5 m (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 ilding setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area requ...",
+    "repairable_fields": [
+      "applies_to",
+      "scope",
+      "text_consensus_candidate"
+    ],
+    "best_repair_confidence": 1.0,
+    "original_support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "applies_to_not_supported",
+      "constraint_scope_not_supported"
+    ],
+    "retry_decision": "verified",
+    "retry_support_gaps": [],
+    "retry_support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "retry_proof_type": "text_evidence",
+    "retry_table_proof_status": "none",
+    "promotion_ready": true,
+    "promotion_risk_flags": [],
+    "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks."
+  }
+]

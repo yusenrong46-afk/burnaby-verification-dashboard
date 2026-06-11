@@ -1,0 +1,28 @@
+[
+  {
+    "scope_key": "skateboard_and_sports_ramp_envelope::skateboard_ramp_envelope_count",
+    "rule_object": "skateboard_and_sports_ramp_envelope",
+    "constraint_scope": "skateboard_ramp_envelope_count",
+    "applies_to": "number of skateboard and sports ramp envelopes per parcel",
+    "variants": [
+      {
+        "value": "1",
+        "unit": "",
+        "operator": "=",
+        "direction": "eq",
+        "sources": [
+          "gemini_text_block"
+        ]
+      },
+      {
+        "value": "1",
+        "unit": "units",
+        "operator": "<=",
+        "direction": "max",
+        "sources": [
+          "gemini_text_block"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,831 @@
+{
+  "mode": "shadow_evidence_rerun",
+  "notes": [
+    "Reruns do not mutate verified_rules.json.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no risk flags.",
+    "Synthetic retry candidates keep the original source_stream so they cannot create fake consensus."
+  ],
+  "attempt_count": 16,
+  "verified_after_rerun_count": 0,
+  "promotion_ready_count": 0,
+  "review_after_rerun_count": 8,
+  "rejected_after_rerun_count": 8,
+  "skipped_count": 5,
+  "attempts": [
+    {
+      "original_rule_id": "vancouver_rs_012",
+      "original_candidate_id": "pipeline5_merged_rule_0012",
+      "retry_candidate_id": "pipeline5_merged_rule_0012__rerun__vancouver_generic_graph_pack_007__page_0008__local_003",
+      "rule_object": "computation_method",
+      "constraint_scope": "computation_basis",
+      "applies_to": "computation of floor area, floor space ratio, yards, site coverage, impermeability, number of buildings on site and dwelling unit density",
+      "condition": "must be based on the site width and area at the time of development, prior to any subdivision into individual freehold rowhouse parcels",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_002",
+      "retry_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_003",
+      "retry_evidence_page": 8,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and frontage for each freehold rowhouse parcel is 5.0 m. Section 11 11.3.7.1 Computation of floor area, floor space ratio, yards, site coverage, impermeability, number of buildings o...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_015",
+      "original_candidate_id": "pipeline5_merged_rule_0015",
+      "retry_candidate_id": "pipeline5_merged_rule_0015__rerun__vancouver_generic_graph_pack_006__page_0008__local_005",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_floor_area_ratio",
+      "applies_to": "floor area",
+      "condition": "for a laneway house, must not exceed the lesser of 0.25 multiplied by the site area and 186 m2",
+      "operator": "<=",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_007",
+      "retry_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "retry_evidence_page": 8,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site. loor space ratio, ya...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_016",
+      "original_candidate_id": "pipeline5_merged_rule_0016",
+      "retry_candidate_id": "pipeline5_merged_rule_0016__rerun__vancouver_generic_graph_pack_006__page_0008__local_005",
+      "rule_object": "floor_area",
+      "constraint_scope": "laneway_house_floor_area_limit",
+      "applies_to": "floor area",
+      "condition": "for a laneway house, must not exceed the lesser of 0.25 multiplied by the site area and 186 m2",
+      "operator": "<=",
+      "value": "186",
+      "unit": "m2",
+      "original_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_008",
+      "retry_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "retry_evidence_page": 8,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site. loor space ratio, ya...",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_019",
+      "original_candidate_id": "pipeline5_merged_rule_0019",
+      "retry_candidate_id": "pipeline5_merged_rule_0019__rerun__vancouver_generic_graph_pack_006__page_0008__local_005",
+      "rule_object": "director_consideration",
+      "constraint_scope": "laneway_house_reduced_site_width_considerations",
+      "applies_to": "Director of Planning consideration of massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines",
+      "condition": "for a laneway house, to reduce the minimum site width",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_011",
+      "retry_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "retry_evidence_page": 8,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site. loor space ratio, ya...",
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_027",
+      "original_candidate_id": "pipeline5_merged_rule_0027",
+      "retry_candidate_id": "pipeline5_merged_rule_0027__rerun__vancouver_generic_graph_pack_006__page_0008__local_005",
+      "rule_object": "floor_area_computation",
+      "constraint_scope": "laneway_house_floor_area_inclusion_all_floors",
+      "applies_to": "all_floors",
+      "condition": "for a laneway house, including earthen floor, measured to the extreme outer limits of the building",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_003",
+      "retry_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_005",
+      "retry_evidence_page": 8,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site. loor space ratio, ya...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_028",
+      "original_candidate_id": "pipeline5_merged_rule_0028",
+      "retry_candidate_id": "pipeline5_merged_rule_0028__rerun__vancouver_generic_graph_pack_009__page_0009__local_003",
+      "rule_object": "floor_area_computation",
+      "constraint_scope": "laneway_house_floor_area_inclusion_stairways_etc",
+      "applies_to": "stairways_and_similar_features",
+      "condition": "for a laneway house, including stairways, fire escapes, elevator shafts and other features that the Director of Planning considers similar, measured by their gross cross-sectional areas and included in the measurements for each floor at which they are located",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_004",
+      "retry_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_003",
+      "retry_evidence_page": 9,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(a) all floors, including earthen floor, measured to the extreme outer limits of the building; Section 11 11.3.8.8 Computation of floor area for a laneway house must include: (a) all floors, including earthen floor, measured to the extreme outer limits of t...",
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_030",
+      "original_candidate_id": "pipeline5_merged_rule_0030",
+      "retry_candidate_id": "pipeline5_merged_rule_0030__rerun__vancouver_generic_graph_pack_009__page_0009__local_004",
+      "rule_object": "parking_space",
+      "constraint_scope": "laneway_house_parking_space_open_sides",
+      "applies_to": "open_sides",
+      "condition": "for each parking space used for off-street parking floor area exclusion in a laneway house",
+      "operator": ">=",
+      "value": "2",
+      "unit": "",
+      "original_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_007",
+      "retry_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_004",
+      "retry_evidence_page": 9,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(b) stairways, fire escapes, elevator shafts and other features that the Director of Planning considers similar, measured by their gross cross-sectional areas and included in the measurements for each floor at which they are located; and Section 11 11.3.8.8...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_033",
+      "original_candidate_id": "pipeline5_merged_rule_0033",
+      "retry_candidate_id": "pipeline5_merged_rule_0033__rerun__vancouver_generic_graph_pack_007__page_0008__local_007",
+      "rule_object": "guard_rail",
+      "constraint_scope": "laneway_house_guard_rail_height_limit",
+      "applies_to": "height",
+      "condition": "for guard rails protecting entries, porches, and verandahs excluded from laneway house floor area, which must not exceed the required minimum height",
+      "operator": "<=",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_010",
+      "retry_evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_007",
+      "retry_evidence_page": 8,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(a) 0.25 multiplied by the site area; and ite width and frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway House 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary su...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_035",
+      "original_candidate_id": "pipeline5_merged_rule_0035",
+      "retry_candidate_id": "pipeline5_merged_rule_0035__rerun__vancouver_generic_graph_pack_009__page_0009__local_010",
+      "rule_object": "ceiling_height",
+      "constraint_scope": "laneway_house_excluded_entry_porch_verandah_ceiling_height",
+      "applies_to": "ceiling_height",
+      "condition": "of the total area being excluded (entries, porches, verandahs) for a laneway house, measured from the entry, porch or verandah floor, excluding roof structure",
+      "operator": "<=",
+      "value": "3.1",
+      "unit": "m",
+      "original_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_012",
+      "retry_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_010",
+      "retry_evidence_page": 9,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(i) they are open or protected by guard rails that do not exceed the required minimum height, thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length; (b) balconies and d...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_036",
+      "original_candidate_id": "pipeline5_merged_rule_0036",
+      "retry_candidate_id": "pipeline5_merged_rule_0036__rerun__vancouver_generic_graph_pack_009__page_0009__local_012",
+      "rule_object": "roof",
+      "constraint_scope": "laneway_house_roof_joist_pitch",
+      "applies_to": "joist_pitch",
+      "condition": "roof joists must have a minimum 7:12 pitch and the related ceiling maintains the same pitch as the roof joists, for floor area exclusion under sloping roof/ceiling in a laneway house",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+      "retry_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_012",
+      "retry_evidence_page": 9,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(iii) the ceiling height, excluding roof structure, of the total area being excluded does not exceed 3.1 m measured from the entry, porch or verandah floor; that the total area of these exclusions does not exceed 8% of the permitted floor area; (c) entries,...",
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_040",
+      "original_candidate_id": "pipeline5_merged_rule_0040",
+      "retry_candidate_id": "pipeline5_merged_rule_0040__rerun__vancouver_generic_graph_pack_009__page_0009__local_013",
+      "rule_object": "floor_area_exclusion",
+      "constraint_scope": "laneway_house_undeveloped_floor_exclusion_hatch",
+      "applies_to": "undeveloped_floors",
+      "condition": "for a laneway house, areas of undeveloped floors located above the highest storey or partial storey and to which there is no permanent means of access other than a hatch",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_017",
+      "retry_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+      "retry_evidence_page": 9,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(d) areas of floors existing, proposed or as may be extended over open-to-below space located directly below sloping roof rafters or a sloping ceiling where the ceiling is directly attached to the underside of sloping roof rafters, and where the roof joists...",
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_041",
+      "original_candidate_id": "pipeline5_merged_rule_0041",
+      "retry_candidate_id": "pipeline5_merged_rule_0041__rerun__vancouver_generic_graph_pack_009__page_0009__local_013",
+      "rule_object": "ceiling_height",
+      "constraint_scope": "laneway_house_undeveloped_floor_exclusion_ceiling_height",
+      "applies_to": "adjacent_storey_ceiling_height",
+      "condition": "ceiling height of a storey or partial storey adjacent to undeveloped floors to be excluded from laneway house floor area",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "original_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_018",
+      "retry_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+      "retry_evidence_page": 9,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(d) areas of floors existing, proposed or as may be extended over open-to-below space located directly below sloping roof rafters or a sloping ceiling where the ceiling is directly attached to the underside of sloping roof rafters, and where the roof joists...",
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_042",
+      "original_candidate_id": "pipeline5_merged_rule_0042",
+      "retry_candidate_id": "pipeline5_merged_rule_0042__rerun__vancouver_generic_graph_pack_009__page_0009__local_013",
+      "rule_object": "ceiling_height",
+      "constraint_scope": "laneway_house_below_grade_floor_exclusion_ceiling_height",
+      "applies_to": "below_grade_floor_ceiling_height",
+      "condition": "ceiling height of floors located at or below finished grade to be excluded from laneway house floor area",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "original_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_019",
+      "retry_evidence_id": "vancouver_generic_graph_pack_009__page_0009__local_013",
+      "retry_evidence_page": 9,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(d) areas of floors existing, proposed or as may be extended over open-to-below space located directly below sloping roof rafters or a sloping ceiling where the ceiling is directly attached to the underside of sloping roof rafters, and where the roof joists...",
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_003",
+      "original_candidate_id": "pipeline5_merged_rule_0003",
+      "retry_candidate_id": "pipeline5_merged_rule_0003__rerun__vancouver_generic_graph_pack_006__page_0008__local_015",
+      "rule_object": "rear_setback",
+      "constraint_scope": "laneway_house_rear_setback",
+      "applies_to": "laneway house",
+      "condition": "from the ultimate rear property line",
+      "operator": ">=",
+      "value": "0.9",
+      "unit": "m",
+      "original_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_016",
+      "retry_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_015",
+      "retry_evidence_page": 8,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The buildin...",
+      "repairable_fields": [
+        "operator",
+        "applies_to"
+      ],
+      "best_repair_confidence": 0.923,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_004",
+      "original_candidate_id": "pipeline5_merged_rule_0004",
+      "retry_candidate_id": "pipeline5_merged_rule_0004__rerun__vancouver_generic_graph_pack_006__page_0008__local_015",
+      "rule_object": "side_setback",
+      "constraint_scope": "laneway_house_side_setback",
+      "applies_to": "laneway house",
+      "condition": "from each side property line",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "original_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_017",
+      "retry_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_015",
+      "retry_evidence_page": 8,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The buildin...",
+      "repairable_fields": [
+        "operator",
+        "applies_to"
+      ],
+      "best_repair_confidence": 0.923,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_002",
+      "original_candidate_id": "pipeline5_merged_rule_0002",
+      "retry_candidate_id": "pipeline5_merged_rule_0002__rerun__vancouver_generic_graph_pack_006__page_0008__local_016",
+      "rule_object": "building_separation",
+      "constraint_scope": "laneway_house_separation_distance",
+      "applies_to": "laneway house",
+      "condition": "measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+      "operator": ">=",
+      "value": "4.9",
+      "unit": "m",
+      "original_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_015",
+      "retry_evidence_id": "vancouver_generic_graph_pack_006__page_0008__local_016",
+      "retry_evidence_page": 8,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(b) 0.9 m from the ultimate rear property line; and house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the...",
+      "repairable_fields": [
+        "operator",
+        "applies_to"
+      ],
+      "best_repair_confidence": 0.892,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    }
+  ],
+  "verified_after_rerun": [],
+  "promotion_ready": [],
+  "skipped": [
+    {
+      "rule_id": "vancouver_rs_001",
+      "candidate_id": "pipeline5_merged_rule_0001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "vancouver_rs_005",
+      "candidate_id": "pipeline5_merged_rule_0005",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "vancouver_rs_009",
+      "candidate_id": "pipeline5_merged_rule_0009",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.923
+    },
+    {
+      "rule_id": "vancouver_rs_011",
+      "candidate_id": "pipeline5_merged_rule_0011",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.769
+    },
+    {
+      "rule_id": "vancouver_rs_010",
+      "candidate_id": "pipeline5_merged_rule_0010",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.731
+    }
+  ]
+}

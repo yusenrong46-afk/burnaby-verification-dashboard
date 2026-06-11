@@ -1,4 +1,4 @@
-# Burnaby R1 Benchmark Report
+# burnaby_r1 Benchmark Report
 
 ## Quality Gates
 
@@ -18,8 +18,8 @@
 - Candidate rules: 142
 - Verified rules: 30
 - Review rules: 63
-- Rejected rules: 16
-- Not-used / traceability-only rules: 33
+- Rejected rules: 35
+- Not-used / traceability-only rules: 14
 - Candidate recall: 1.00
 - Verified recall: 0.90
 - Verified or review recall: 1.00
@@ -35,36 +35,36 @@
 
 ## Top Review / Rejection Reasons
 
-- `pipeline5_text_candidate_requires_review`: 74
-- `rule_object_not_supported`: 46
-- `operator_not_supported`: 38
+- `pipeline5_text_candidate_requires_review`: 75
 - `applies_to_not_supported`: 35
-- `outside_current_rule_contract`: 30
-- `text_condition_not_supported`: 30
-- `table_cell_candidate_requires_review`: 29
-- `table_evidence_candidate_requires_review`: 29
-- `rule_family_direction_mismatch`: 25
+- `rule_object_not_supported`: 35
+- `operator_not_supported`: 29
+- `table_cell_candidate_requires_review`: 27
+- `table_evidence_candidate_requires_review`: 27
+- `rule_family_direction_mismatch`: 26
 - `table_column_not_target_scope`: 19
+- `text_condition_not_supported`: 19
+- `rule_object_unit_not_compatible`: 15
 
 ## Evidence Quality
 
 - Evidence units: 142
-- Mean evidence quality score: 0.81
+- Mean evidence quality score: 0.82
 - Candidate/evidence match rate: 1.00
-- Candidate value grounding rate: 0.97
+- Candidate value grounding rate: 0.88
 - Candidate unit grounding rate: 1.00
 - Table context completion rate: 1.00
 
 ## Proof / Bayesian-Lite Triage
 
 - Proof trace completion rate: 1.00
-- Supported claims: 974
-- Refuted claims: 4
-- Not-enough-info claims: 158
-- Mean evidence strength: 0.73
-- High-priority review rules: 5
-- Table proof rules: 62
-- Complete table proofs: 10
+- Supported claims: 976
+- Refuted claims: 12
+- Not-enough-info claims: 148
+- Mean evidence strength: 0.72
+- High-priority review rules: 8
+- Table proof rules: 61
+- Complete table proofs: 9
 - Partial table proofs: 52
 - Refuted table proofs: 0
 - Proof/decision mismatches: 0
@@ -72,7 +72,7 @@
 ### Top Evidence Quality Issues
 
 - `missing_bbox`: 61
-- `evidence_text_not_in_source_context`: 61
+- `evidence_text_not_in_source_context`: 54
 - `incomplete_table_context`: 26
 
 ## Proposal Metrics

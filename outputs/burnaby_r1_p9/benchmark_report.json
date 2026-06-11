@@ -1,0 +1,842 @@
+{
+  "benchmark": "burnaby_r1",
+  "outputs_evaluated": "outputs/burnaby_r1_p9",
+  "rule_metrics": {
+    "gold_rule_count": 29,
+    "candidate_rule_count": 72,
+    "verified_rule_count": 0,
+    "review_rule_count": 52,
+    "rejected_rule_count": 14,
+    "not_used_rule_count": 6,
+    "candidate_recall": 0.5517241379310345,
+    "verified_gold_recall": 0.0,
+    "verified_or_review_recall": 0.5862068965517241,
+    "extraction_coverage_recall": 0.7586206896551724,
+    "verifier_retention_rate": 0.7727272727272727,
+    "verifier_rejected_gold_rule_ids": [
+      "br1_sep_001",
+      "br1_sep_002",
+      "br1_sep_003",
+      "br1_sep_004",
+      "br1_setback_006"
+    ],
+    "not_used_gold_rule_ids": [
+      "br1_sep_001",
+      "br1_sep_002",
+      "br1_sep_003",
+      "br1_sep_004",
+      "br1_setback_006"
+    ],
+    "unextracted_gold_rule_ids": [
+      "br1_fire_001",
+      "br1_fire_002",
+      "br1_fire_003",
+      "br1_heritage_001",
+      "br1_heritage_002",
+      "br1_heritage_003",
+      "br1_units_001"
+    ],
+    "verified_precision": 0.0,
+    "false_verified_count": 0,
+    "false_verified_rule_ids": [],
+    "verified_source_support_failed_count": 0,
+    "verified_source_support_failures": [],
+    "retrieval_recall": null,
+    "retrieval_recall_applicable": false,
+    "retrieved_gold_rule_ids": [],
+    "missed_candidate_gold_rule_ids": [
+      "br1_units_001",
+      "br1_height_003",
+      "br1_setback_001",
+      "br1_setback_002",
+      "br1_setback_005",
+      "br1_fire_001",
+      "br1_fire_002",
+      "br1_fire_003",
+      "br1_heritage_001",
+      "br1_heritage_002",
+      "br1_heritage_003",
+      "br1_storeys_002",
+      "br1_storeys_003"
+    ],
+    "missed_verified_gold_rule_ids": [
+      "br1_use_001",
+      "br1_units_001",
+      "br1_lot_area_001",
+      "br1_height_001",
+      "br1_height_002",
+      "br1_height_003",
+      "br1_height_004",
+      "br1_setback_001",
+      "br1_setback_002",
+      "br1_setback_003",
+      "br1_setback_004",
+      "br1_setback_005",
+      "br1_setback_006",
+      "br1_setback_007",
+      "br1_sep_001",
+      "br1_sep_002",
+      "br1_sep_003",
+      "br1_fire_001",
+      "br1_fire_002",
+      "br1_fire_003",
+      "br1_heritage_001",
+      "br1_heritage_002",
+      "br1_heritage_003",
+      "br1_use_002",
+      "br1_height_006",
+      "br1_height_005",
+      "br1_storeys_002",
+      "br1_storeys_003",
+      "br1_sep_004"
+    ],
+    "missed_verified_or_review_gold_rule_ids": [
+      "br1_units_001",
+      "br1_setback_006",
+      "br1_sep_001",
+      "br1_sep_002",
+      "br1_sep_003",
+      "br1_fire_001",
+      "br1_fire_002",
+      "br1_fire_003",
+      "br1_heritage_001",
+      "br1_heritage_002",
+      "br1_heritage_003",
+      "br1_sep_004"
+    ],
+    "top_review_reasons": [
+      {
+        "reason": "pipeline5_text_candidate_requires_review",
+        "count": 72
+      },
+      {
+        "reason": "unresolved_exception_cue",
+        "count": 32
+      },
+      {
+        "reason": "rule_object_unit_not_compatible",
+        "count": 13
+      },
+      {
+        "reason": "rule_family_direction_mismatch",
+        "count": 10
+      },
+      {
+        "reason": "upstream_extraction_requested_review",
+        "count": 10
+      },
+      {
+        "reason": "cross_reference_only",
+        "count": 9
+      },
+      {
+        "reason": "rule_object_not_supported",
+        "count": 8
+      },
+      {
+        "reason": "operator_not_supported",
+        "count": 7
+      },
+      {
+        "reason": "applies_to_not_supported",
+        "count": 2
+      },
+      {
+        "reason": "text_condition_not_supported",
+        "count": 2
+      }
+    ],
+    "evidence_quality": {
+      "evidence_unit_count": 12,
+      "candidate_rule_count": 72,
+      "mean_evidence_quality_score": 1.0,
+      "candidate_evidence_match_rate": 1.0,
+      "candidate_value_grounding_rate": 1.0,
+      "candidate_unit_grounding_rate": 1.0,
+      "table_evidence_count": 0,
+      "table_context_completion_rate": 0.0,
+      "top_evidence_quality_issues": []
+    },
+    "proof_metrics": {
+      "proof_trace_completion_rate": 1.0,
+      "supported_claim_count": 508,
+      "refuted_claim_count": 1,
+      "not_enough_info_claim_count": 67,
+      "mean_evidence_strength": 0.776,
+      "high_priority_review_count": 18,
+      "table_proof_count": 0,
+      "table_proof_complete_count": 0,
+      "table_proof_partial_count": 0,
+      "table_proof_refuted_count": 0,
+      "proof_decision_mismatch_count": 0
+    },
+    "matched_candidates": [
+      {
+        "gold_id": "br1_use_001",
+        "rule_id": "pipeline5_merged_rule_0001",
+        "score": 10,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_lot_area_001",
+        "rule_id": "pipeline5_merged_rule_0022",
+        "score": 13,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_height_001",
+        "rule_id": "pipeline5_merged_rule_0037",
+        "score": 14,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_height_002",
+        "rule_id": "pipeline5_merged_rule_0038",
+        "score": 14,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_height_004",
+        "rule_id": "pipeline5_merged_rule_0040",
+        "score": 13,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_setback_003",
+        "rule_id": "pipeline5_merged_rule_0045",
+        "score": 12,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_setback_004",
+        "rule_id": "pipeline5_merged_rule_0046",
+        "score": 13,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_setback_006",
+        "rule_id": "pipeline5_merged_rule_0048",
+        "score": 14,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_setback_007",
+        "rule_id": "pipeline5_merged_rule_0047",
+        "score": 13,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_sep_001",
+        "rule_id": "pipeline5_merged_rule_0050",
+        "score": 13,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_sep_002",
+        "rule_id": "pipeline5_merged_rule_0051",
+        "score": 14,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_sep_003",
+        "rule_id": "pipeline5_merged_rule_0052",
+        "score": 14,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_use_002",
+        "rule_id": "pipeline5_merged_rule_0004",
+        "score": 7,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_height_006",
+        "rule_id": "pipeline5_merged_rule_0033",
+        "score": 12,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_height_005",
+        "rule_id": "pipeline5_merged_rule_0034",
+        "score": 12,
+        "source_page": null
+      },
+      {
+        "gold_id": "br1_sep_004",
+        "rule_id": "pipeline5_merged_rule_0049",
+        "score": 12,
+        "source_page": null
+      }
+    ],
+    "matched_verified": [],
+    "matched_review": [
+      {
+        "gold_id": "br1_use_001",
+        "rule_id": "burnaby_r1_001",
+        "score": 10,
+        "source_page": 1
+      },
+      {
+        "gold_id": "br1_lot_area_001",
+        "rule_id": "burnaby_r1_022",
+        "score": 13,
+        "source_page": 1
+      },
+      {
+        "gold_id": "br1_height_001",
+        "rule_id": "burnaby_r1_037",
+        "score": 14,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_height_002",
+        "rule_id": "burnaby_r1_038",
+        "score": 14,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_height_003",
+        "rule_id": "burnaby_r1_039",
+        "score": 13,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_height_004",
+        "rule_id": "burnaby_r1_040",
+        "score": 13,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_setback_001",
+        "rule_id": "burnaby_r1_043",
+        "score": 13,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_setback_002",
+        "rule_id": "burnaby_r1_042",
+        "score": 13,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_setback_003",
+        "rule_id": "burnaby_r1_045",
+        "score": 12,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_setback_004",
+        "rule_id": "burnaby_r1_042",
+        "score": 14,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_setback_005",
+        "rule_id": "burnaby_r1_045",
+        "score": 14,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_setback_007",
+        "rule_id": "burnaby_r1_047",
+        "score": 13,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_use_002",
+        "rule_id": "burnaby_r1_001",
+        "score": 7,
+        "source_page": 1
+      },
+      {
+        "gold_id": "br1_height_006",
+        "rule_id": "burnaby_r1_033",
+        "score": 12,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_height_005",
+        "rule_id": "burnaby_r1_034",
+        "score": 12,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_storeys_002",
+        "rule_id": "burnaby_r1_035",
+        "score": 12,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_storeys_003",
+        "rule_id": "burnaby_r1_036",
+        "score": 12,
+        "source_page": 2
+      }
+    ],
+    "matched_not_used": [
+      {
+        "gold_id": "br1_setback_006",
+        "rule_id": "burnaby_r1_048",
+        "score": 15,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_sep_001",
+        "rule_id": "burnaby_r1_049",
+        "score": 13,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_sep_002",
+        "rule_id": "burnaby_r1_051",
+        "score": 14,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_sep_003",
+        "rule_id": "burnaby_r1_049",
+        "score": 14,
+        "source_page": 2
+      },
+      {
+        "gold_id": "br1_sep_004",
+        "rule_id": "burnaby_r1_049",
+        "score": 12,
+        "source_page": 2
+      }
+    ]
+  },
+  "proposal_metrics": {
+    "proposal_case_count": 10,
+    "proposal_decision_accuracy": 0.4,
+    "proposal_case_accuracy": 0.3,
+    "false_approval_count": 0,
+    "false_approval_cases": [],
+    "false_rejection_count": 0,
+    "false_rejection_cases": [],
+    "field_expectation_mismatch_count": 7,
+    "field_expectation_mismatch_cases": [
+      "approved_verified_core_flat",
+      "approved_verified_core_sloping_exact",
+      "reject_flat_roof_height",
+      "reject_front_rear_separation",
+      "needs_review_lane_yard",
+      "needs_review_fire_access",
+      "approve_all_verified_setbacks_and_separations"
+    ],
+    "needs_review_count": 10
+  },
+  "proposal_results": [
+    {
+      "case_id": "approved_verified_core_flat",
+      "description": "A mostly compliant proposal that still needs review because the accessory-specific setback rule is not verified in the active Pipeline 5 GIS contract.",
+      "decision": "needs_review",
+      "expected_decision": "needs_review",
+      "matches_expected": false,
+      "decision_matches_expected": true,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [],
+      "failed_checks_match_expected": true,
+      "actual_review_checks": [
+        "accessory_rear_yard_setback_m",
+        "front_rear_principal_separation_m",
+        "rear_principal_height_m",
+        "rear_rear_principal_separation_m"
+      ],
+      "expected_review_checks": [
+        "accessory_rear_yard_setback_m"
+      ],
+      "review_checks_match_expected": false,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "rear_principal_height_m",
+          "label": "Rear principal building height",
+          "actual_value": 6.8,
+          "reason": "rule_not_verified",
+          "review_rule_id": "burnaby_r1_038",
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "front_rear_principal_separation_m",
+          "label": "Front/rear principal building separation",
+          "actual_value": 6.2,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "rear_rear_principal_separation_m",
+          "label": "Rear/rear principal building separation",
+          "actual_value": 2.5,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "accessory_rear_yard_setback_m",
+          "label": "Accessory building interior rear-yard setback",
+          "actual_value": 1.6,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    },
+    {
+      "case_id": "approved_verified_core_sloping_exact",
+      "description": "Boundary-value proposal where height and separations are covered by verified rules and pass exactly.",
+      "decision": "needs_review",
+      "expected_decision": "approved",
+      "matches_expected": false,
+      "decision_matches_expected": false,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [],
+      "failed_checks_match_expected": true,
+      "actual_review_checks": [
+        "front_rear_principal_separation_m",
+        "rear_principal_height_m",
+        "rear_rear_principal_separation_m"
+      ],
+      "expected_review_checks": [],
+      "review_checks_match_expected": false,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "rear_principal_height_m",
+          "label": "Rear principal building height",
+          "actual_value": 7.5,
+          "reason": "rule_not_verified",
+          "review_rule_id": "burnaby_r1_037",
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "front_rear_principal_separation_m",
+          "label": "Front/rear principal building separation",
+          "actual_value": 6.0,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "rear_rear_principal_separation_m",
+          "label": "Rear/rear principal building separation",
+          "actual_value": 2.4,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    },
+    {
+      "case_id": "reject_flat_roof_height",
+      "description": "The flat-roof rear-principal height exceeds the verified 7.0 m maximum.",
+      "decision": "needs_review",
+      "expected_decision": "rejected",
+      "matches_expected": false,
+      "decision_matches_expected": false,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [
+        "rear_principal_height_m"
+      ],
+      "failed_checks_match_expected": false,
+      "actual_review_checks": [
+        "rear_principal_height_m"
+      ],
+      "expected_review_checks": [],
+      "review_checks_match_expected": false,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "rear_principal_height_m",
+          "label": "Rear principal building height",
+          "actual_value": 7.4,
+          "reason": "rule_not_verified",
+          "review_rule_id": "burnaby_r1_038",
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    },
+    {
+      "case_id": "reject_front_rear_separation",
+      "description": "Front-to-rear principal separation is below the verified 6.0 m minimum.",
+      "decision": "needs_review",
+      "expected_decision": "rejected",
+      "matches_expected": false,
+      "decision_matches_expected": false,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [
+        "front_rear_principal_separation_m"
+      ],
+      "failed_checks_match_expected": false,
+      "actual_review_checks": [
+        "front_rear_principal_separation_m"
+      ],
+      "expected_review_checks": [],
+      "review_checks_match_expected": false,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "front_rear_principal_separation_m",
+          "label": "Front/rear principal building separation",
+          "actual_value": 5.5,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    },
+    {
+      "case_id": "reject_accessory_rear_yard",
+      "description": "Accessory rear-yard setback appears unsafe, but the active Pipeline 5 GIS contract does not yet verify the accessory-specific setback rule.",
+      "decision": "needs_review",
+      "expected_decision": "needs_review",
+      "matches_expected": true,
+      "decision_matches_expected": true,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [],
+      "failed_checks_match_expected": true,
+      "actual_review_checks": [
+        "accessory_rear_yard_setback_m"
+      ],
+      "expected_review_checks": [
+        "accessory_rear_yard_setback_m"
+      ],
+      "review_checks_match_expected": true,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "accessory_rear_yard_setback_m",
+          "label": "Accessory building interior rear-yard setback",
+          "actual_value": 1.2,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    },
+    {
+      "case_id": "needs_review_lane_yard",
+      "description": "Lane-yard setback is verified in the active Pipeline 5 GIS contract, so a proposal below 1.5 m should be rejected.",
+      "decision": "needs_review",
+      "expected_decision": "rejected",
+      "matches_expected": false,
+      "decision_matches_expected": false,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [
+        "lane_yard_setback_m"
+      ],
+      "failed_checks_match_expected": false,
+      "actual_review_checks": [
+        "lane_yard_setback_m"
+      ],
+      "expected_review_checks": [],
+      "review_checks_match_expected": false,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "lane_yard_setback_m",
+          "label": "Lane-yard setback",
+          "actual_value": 1.4,
+          "reason": "rule_not_verified",
+          "review_rule_id": "burnaby_r1_045",
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    },
+    {
+      "case_id": "needs_review_rear_principal_rear_yard",
+      "description": "Rear-principal rear-yard setback is in the review queue, so the system must not approve it yet.",
+      "decision": "needs_review",
+      "expected_decision": "needs_review",
+      "matches_expected": true,
+      "decision_matches_expected": true,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [],
+      "failed_checks_match_expected": true,
+      "actual_review_checks": [
+        "rear_principal_rear_yard_setback_m"
+      ],
+      "expected_review_checks": [
+        "rear_principal_rear_yard_setback_m"
+      ],
+      "review_checks_match_expected": true,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "rear_principal_rear_yard_setback_m",
+          "label": "Rear principal building interior rear-yard setback",
+          "actual_value": 3.2,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    },
+    {
+      "case_id": "needs_review_fire_access",
+      "description": "Fire access corridor width and vertical-clearance rules are verified, so unsafe proposals should be rejected.",
+      "decision": "needs_review",
+      "expected_decision": "rejected",
+      "matches_expected": false,
+      "decision_matches_expected": false,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [
+        "fire_access_corridor_clearance_m",
+        "fire_access_corridor_width_m"
+      ],
+      "failed_checks_match_expected": false,
+      "actual_review_checks": [
+        "fire_access_corridor_clearance_m",
+        "fire_access_corridor_width_m"
+      ],
+      "expected_review_checks": [],
+      "review_checks_match_expected": false,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "fire_access_corridor_width_m",
+          "label": "Fire access corridor width",
+          "actual_value": 0.8,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "fire_access_corridor_clearance_m",
+          "label": "Fire access corridor vertical clearance",
+          "actual_value": 2.4,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    },
+    {
+      "case_id": "needs_review_heritage_coverage",
+      "description": "Heritage lot-coverage exception is currently extracted but not verified.",
+      "decision": "needs_review",
+      "expected_decision": "needs_review",
+      "matches_expected": true,
+      "decision_matches_expected": true,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [],
+      "failed_checks_match_expected": true,
+      "actual_review_checks": [
+        "impervious_surface_percent",
+        "lot_coverage_percent"
+      ],
+      "expected_review_checks": [
+        "impervious_surface_percent",
+        "lot_coverage_percent"
+      ],
+      "review_checks_match_expected": true,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "lot_coverage_percent",
+          "label": "Lot coverage",
+          "actual_value": 61,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "impervious_surface_percent",
+          "label": "Impervious surface coverage",
+          "actual_value": 69,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    },
+    {
+      "case_id": "approve_all_verified_setbacks_and_separations",
+      "description": "Positive control: every field is covered by a verified rule and passes it, so the proposal must be APPROVED. Falsifies 'the system can never approve'.",
+      "decision": "needs_review",
+      "expected_decision": "approved",
+      "matches_expected": false,
+      "decision_matches_expected": false,
+      "actual_failed_checks": [],
+      "expected_failed_checks": [],
+      "failed_checks_match_expected": true,
+      "actual_review_checks": [
+        "front_rear_principal_separation_m",
+        "lane_yard_setback_m",
+        "rear_rear_principal_separation_m",
+        "street_flanking_yard_setback_m",
+        "street_front_yard_setback_m"
+      ],
+      "expected_review_checks": [],
+      "review_checks_match_expected": false,
+      "passed_checks": [],
+      "failed_checks": [],
+      "review_checks": [
+        {
+          "field": "lane_yard_setback_m",
+          "label": "Lane-yard setback",
+          "actual_value": 2.0,
+          "reason": "rule_not_verified",
+          "review_rule_id": "burnaby_r1_045",
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "street_front_yard_setback_m",
+          "label": "Front street-yard setback",
+          "actual_value": 4.5,
+          "reason": "rule_not_verified",
+          "review_rule_id": "burnaby_r1_043",
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "street_flanking_yard_setback_m",
+          "label": "Flanking street-yard setback",
+          "actual_value": 3.2,
+          "reason": "rule_not_verified",
+          "review_rule_id": "burnaby_r1_044",
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "front_rear_principal_separation_m",
+          "label": "Front/rear principal building separation",
+          "actual_value": 6.5,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        },
+        {
+          "field": "rear_rear_principal_separation_m",
+          "label": "Rear/rear principal building separation",
+          "actual_value": 3.0,
+          "reason": "rule_not_verified",
+          "review_rule_id": null,
+          "message": "No verified rule covers this proposal field."
+        }
+      ]
+    }
+  ],
+  "quality_gates": {
+    "passed": false,
+    "gates": {
+      "verified_precision_is_1": false,
+      "false_verified_is_0": true,
+      "false_approval_is_0": true,
+      "retrieval_recall_at_least_0_95": true,
+      "verified_or_review_recall_at_least_0_90": false,
+      "verified_source_support_failures_is_0": true,
+      "proposal_decision_accuracy_is_1": false,
+      "proposal_case_accuracy_is_1": false,
+      "proposal_field_expectations_match": false
+    }
+  }
+}

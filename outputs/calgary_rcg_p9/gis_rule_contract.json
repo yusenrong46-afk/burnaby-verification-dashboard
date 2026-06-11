@@ -1,0 +1,411 @@
+{
+  "city": "Calgary",
+  "zone": "RCG",
+  "source_document": null,
+  "source_url": null,
+  "input_mode": "pipeline9_rag",
+  "schema_version": "1.1",
+  "rules": [
+    {
+      "rule_id": "calgary_rcg_210",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "accessory_building_height_limit",
+      "applies_to": "Accessory Residential Building",
+      "operator": "<=",
+      "value": "4.6",
+      "value_numeric": 4.6,
+      "unit": "m",
+      "condition": "measured from the finished floor of the building",
+      "exception": "",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 386,
+        "evidence_id": "calgary_generic_graph_pack_064__page_0386__local_003",
+        "quote": "residential building is 1.0 metres. (6) The height of an Accessory Residential Building must not exceed: 67P2008 (a) 4.6 metres, measured from the finished floor of the building; 46P2019 (b) 3.0 metres at any eaveline, when measured from the finished floor of the building; or (c) one storey, which may include an attic space that: (i) is accessed by a removable ladder; (ii) does not have windows; (iii) is used by the occupants of the main residential building for placement of personal items; and (iv) has a maximum height of 1.5 metres when measured from the attic floor to the underside of any rafter."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_218",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "privacy_wall_maximum_height",
+      "applies_to": "privacy wall",
+      "operator": "<=",
+      "value": "3.0",
+      "value_numeric": 3.0,
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 390,
+        "evidence_id": "calgary_generic_graph_pack_066__page_0390__local_003",
+        "quote": "(iii) the privacy wall is a minimum of 2.0 metres in height and a maximum of 3.0 metres in height; and 27P2011 (c) must not have a balcony with a height greater than 6.0 metres, when measured vertically at any point from grade to the platform of the balcony. (3) Where a Contextual Single Detached Dwelling is located on a parcel with a parcel width less than or equal to 10.0 metres the maximum building depth is the greater of: (a) 65.0 per cent of the parcel depth; or (b) the contextual building depth average. (4) Where a Contextual Single Detached Dwelling is located on a parcel with a parcel width greater than 10 metres the maximum"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_234",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "backyard_suite_rear_setback",
+      "applies_to": "Backyard Suite",
+      "operator": ">=",
+      "value": "1.5",
+      "value_numeric": 1.5,
+      "unit": "m",
+      "condition": "for any portion of the building used as a Backyard Suite",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 395,
+        "evidence_id": "calgary_generic_graph_pack_072__page_0395__local_006",
+        "quote": "352 Backyard Suite 12P2012, 24P2014 352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (2) Unless otherwise specified in the district, for a Backyard Suite, the minimum building setback from a side property line is 1.2 metres for any portion of the building used as a Backyard Suite."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_236",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "minimum_building_setback",
+      "applies_to": "building",
+      "operator": ">=",
+      "value": "0.6",
+      "value_numeric": 0.6,
+      "unit": "m",
+      "condition": "from the shared property line to a street or a lane",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 396,
+        "evidence_id": "calgary_generic_graph_pack_074__page_0396__local_003",
+        "quote": "street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1);"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_244",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "backyard_suite_balcony_setback",
+      "applies_to": "balcony attached to a Backyard Suite",
+      "operator": ">=",
+      "value": "0.6",
+      "value_numeric": 0.6,
+      "unit": "m",
+      "condition": "projecting into a required setback area from a property line shared with a street or a lane",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 397,
+        "evidence_id": "calgary_generic_graph_pack_079__page_0397__local_003",
+        "quote": "(9) A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres from the property line."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_289",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "building_height_single_detached_conditional",
+      "applies_to": "Single Detached Dwelling",
+      "operator": "<=",
+      "value": "11.0",
+      "value_numeric": 11.0,
+      "unit": "m",
+      "condition": "where the area of the parcel is equal to or greater than 400.0 square metres and the parcel width is equal to or greater than 10.0 metres",
+      "exception": "",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 451,
+        "evidence_id": "calgary_generic_graph_pack_137__page_0451__local_004",
+        "quote": "487 Building Height 487 (1) Unless otherwise referenced in subsection (2), the maximum building 13P2008 height is 10.0 metres for a Single Detached Dwelling. (2) The maximum building height is 11.0 metres for Single Detached Dwellings where: (a) the area of the parcel is equal to or greater than 400.0 square metres; and (b) the parcel width is equal to or greater than 10.0 metres. 57P2008 (3) The maximum building height for Duplex Dwellings and Semi‑detached Dwellings is 11.0 metres. (4) The maximum building height for all other uses is 10.0 metres."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_292",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "building_height_other_uses",
+      "applies_to": "all other uses",
+      "operator": "<=",
+      "value": "10.0",
+      "value_numeric": 10.0,
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 451,
+        "evidence_id": "calgary_generic_graph_pack_137__page_0451__local_004",
+        "quote": "487 Building Height 487 (1) Unless otherwise referenced in subsection (2), the maximum building 13P2008 height is 10.0 metres for a Single Detached Dwelling. (2) The maximum building height is 11.0 metres for Single Detached Dwellings where: (a) the area of the parcel is equal to or greater than 400.0 square metres; and (b) the parcel width is equal to or greater than 10.0 metres. 57P2008 (3) The maximum building height for Duplex Dwellings and Semi‑detached Dwellings is 11.0 metres. (4) The maximum building height for all other uses is 10.0 metres."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_314",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "calgary_generic_graph_pack_161__page_0483__local_004_547_12_1",
+      "applies_to": "rear property line",
+      "operator": ">=",
+      "value": "7.5",
+      "value_numeric": 7.5,
+      "unit": "m",
+      "condition": "Unless otherwise referenced in subsections (2), (3) or (4)",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 483,
+        "evidence_id": "calgary_generic_graph_pack_161__page_0483__local_004",
+        "quote": "547.12 Building Setback from Rear Property Line 547.12 (1) Unless otherwise referenced in subsections (2), (3) or (4) the minimum building setback from a rear property line is 7.5 metres. (2) On a laneless parcel the minimum building setback from a rear property line is 5.0 metres where all the required motor vehicle parking stalls are provided in a private garage. (3) The minimum building setback from a rear property line shared with a carriage house lot is 1.2 meters where all the required motor vehicle parking stalls are provided in a private garage. (4) On a laned parcel the minimum building setback from a rear property line shared with a lane is 0.6 metres where all the required motor vehicle parking stalls:"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_315",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "calgary_generic_graph_pack_161__page_0483__local_004_547_12_2",
+      "applies_to": "rear property line",
+      "operator": ">=",
+      "value": "5.0",
+      "value_numeric": 5.0,
+      "unit": "m",
+      "condition": "On a laneless parcel where all the required motor vehicle parking stalls are provided in a private garage",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 483,
+        "evidence_id": "calgary_generic_graph_pack_161__page_0483__local_004",
+        "quote": "547.12 Building Setback from Rear Property Line 547.12 (1) Unless otherwise referenced in subsections (2), (3) or (4) the minimum building setback from a rear property line is 7.5 metres. (2) On a laneless parcel the minimum building setback from a rear property line is 5.0 metres where all the required motor vehicle parking stalls are provided in a private garage. (3) The minimum building setback from a rear property line shared with a carriage house lot is 1.2 meters where all the required motor vehicle parking stalls are provided in a private garage. (4) On a laned parcel the minimum building setback from a rear property line shared with a lane is 0.6 metres where all the required motor vehicle parking stalls:"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_316",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "calgary_generic_graph_pack_161__page_0483__local_004_547_12_3",
+      "applies_to": "rear property line",
+      "operator": ">=",
+      "value": "1.2",
+      "value_numeric": 1.2,
+      "unit": "m",
+      "condition": "shared with a carriage house lot where all the required motor vehicle parking stalls are provided in a private garage",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 483,
+        "evidence_id": "calgary_generic_graph_pack_161__page_0483__local_004",
+        "quote": "547.12 Building Setback from Rear Property Line 547.12 (1) Unless otherwise referenced in subsections (2), (3) or (4) the minimum building setback from a rear property line is 7.5 metres. (2) On a laneless parcel the minimum building setback from a rear property line is 5.0 metres where all the required motor vehicle parking stalls are provided in a private garage. (3) The minimum building setback from a rear property line shared with a carriage house lot is 1.2 meters where all the required motor vehicle parking stalls are provided in a private garage. (4) On a laned parcel the minimum building setback from a rear property line shared with a lane is 0.6 metres where all the required motor vehicle parking stalls:"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_317",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "calgary_generic_graph_pack_161__page_0483__local_004_547_12_4",
+      "applies_to": "rear property line",
+      "operator": ">=",
+      "value": "0.6",
+      "value_numeric": 0.6,
+      "unit": "m",
+      "condition": "On a laned parcel shared with a lane where all the required motor vehicle parking stalls are provided in a private garage and have direct, individual access to the lane",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 483,
+        "evidence_id": "calgary_generic_graph_pack_161__page_0483__local_004",
+        "quote": "547.12 Building Setback from Rear Property Line 547.12 (1) Unless otherwise referenced in subsections (2), (3) or (4) the minimum building setback from a rear property line is 7.5 metres. (2) On a laneless parcel the minimum building setback from a rear property line is 5.0 metres where all the required motor vehicle parking stalls are provided in a private garage. (3) The minimum building setback from a rear property line shared with a carriage house lot is 1.2 meters where all the required motor vehicle parking stalls are provided in a private garage. (4) On a laned parcel the minimum building setback from a rear property line shared with a lane is 0.6 metres where all the required motor vehicle parking stalls:"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_321",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "calgary_generic_graph_pack_164__page_0484__local_002_backyard_suite_height",
+      "applies_to": "Backyard Suite",
+      "operator": "<=",
+      "value": "10.0",
+      "value_numeric": 10.0,
+      "unit": "m",
+      "condition": "on a laned parcel",
+      "exception": "",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 484,
+        "evidence_id": "calgary_generic_graph_pack_164__page_0484__local_002",
+        "quote": "(2) The maximum height of a Backyard Suite on a laned parcel is 10.0 metres."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_351",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "setback_area_depth_lrt_corridor_street",
+      "applies_to": "setback area depth",
+      "operator": ">=",
+      "value": "6.0",
+      "value_numeric": 6.0,
+      "unit": "m",
+      "condition": "Where the parcel shares a property line with an LRT corridor or street",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 794,
+        "evidence_id": "calgary_generic_graph_pack_210__page_0794__local_005",
+        "quote": "(a) with an LRT corridor or street, the setback area must have a minimum depth of 6.0 metres; (b) with a lane that separates the parcel from a parcel designated as a residential district, the setback area must have a minimum depth of 6.0 metres; and (c) with a lane, in all other cases, the setback area must have a minimum depth of 3.0 metres."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_353",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "setback_area_depth_lane_other",
+      "applies_to": "setback area depth",
+      "operator": ">=",
+      "value": "3.0",
+      "value_numeric": 3.0,
+      "unit": "m",
+      "condition": "Where the parcel shares a property line with a lane, in all other cases",
+      "exception": "",
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 794,
+        "evidence_id": "calgary_generic_graph_pack_210__page_0794__local_005",
+        "quote": "(a) with an LRT corridor or street, the setback area must have a minimum depth of 6.0 metres; (b) with a lane that separates the parcel from a parcel designated as a residential district, the setback area must have a minimum depth of 6.0 metres; and (c) with a lane, in all other cases, the setback area must have a minimum depth of 3.0 metres."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_356",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "fence_height_beyond_foremost",
+      "applies_to": "fence",
+      "operator": "<=",
+      "value": "1.2",
+      "value_numeric": 1.2,
+      "unit": "m",
+      "condition": "above grade at any point along a fence line, for that portion of the fence extending beyond the foremost portion of all buildings on the parcel",
+      "exception": "",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 825,
+        "evidence_id": "calgary_generic_graph_pack_212__page_0825__local_007",
+        "quote": "1120 Fences 1120 The height of a fence above grade at any point along a fence line must not exceed: (a) 1.2 metres for that portion of the fence extending beyond the foremost portion of all buildings on the parcel; (b) 2.0 metres for that portion of the fence that does not extend beyond the foremost portion of all buildings on the parcel; and (c) 2.5 metres to the highest point of a gateway provided that the gateway does not exceed more than 2.5 metres in length."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_358",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "gateway_height",
+      "applies_to": "gateway",
+      "operator": "<=",
+      "value": "2.5",
+      "value_numeric": 2.5,
+      "unit": "m",
+      "condition": "above grade at any point along a fence line, to the highest point of a gateway, provided that the gateway does not exceed more than 2.5 metres in length",
+      "exception": "",
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 825,
+        "evidence_id": "calgary_generic_graph_pack_212__page_0825__local_007",
+        "quote": "1120 Fences 1120 The height of a fence above grade at any point along a fence line must not exceed: (a) 1.2 metres for that portion of the fence extending beyond the foremost portion of all buildings on the parcel; (b) 2.0 metres for that portion of the fence that does not extend beyond the foremost portion of all buildings on the parcel; and (c) 2.5 metres to the highest point of a gateway provided that the gateway does not exceed more than 2.5 metres in length."
+      }
+    }
+  ]
+}

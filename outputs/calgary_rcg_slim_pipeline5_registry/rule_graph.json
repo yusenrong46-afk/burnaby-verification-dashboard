@@ -1,0 +1,2806 @@
+{
+  "purpose": "Diagnostic graph for rule/evidence relationships. Analysis only; verifier decisions are unchanged.",
+  "node_count": 87,
+  "edge_count": 366,
+  "nodes": [
+    {
+      "id": "evidence_unit:local_merged_rule_0001",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0001",
+      "page": 395,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0002",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0002",
+      "page": 395,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0003",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0003",
+      "page": 395,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0004",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0004",
+      "page": 395,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0005",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0005",
+      "page": 395,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0006",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0006",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0007",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0007",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0008",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0008",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0009",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0009",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0010",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0010",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0011",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0011",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0012",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0012",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0013",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0013",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0014",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0014",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0015",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0015",
+      "page": 396,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0016",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0016",
+      "page": 397,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0017",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0017",
+      "page": 397,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0018",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0018",
+      "page": 397,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0019",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0019",
+      "page": 397,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0020",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0020",
+      "page": 397,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0021",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0021",
+      "page": 398,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0022",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0022",
+      "page": 398,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0023",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0023",
+      "page": 399,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "evidence_unit:local_merged_rule_0024",
+      "type": "evidence_unit",
+      "label": "local_merged_rule_0024",
+      "page": 399,
+      "evidence_type": "clause"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0001",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0001",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "100.0",
+      "unit": "m2"
+    },
+    {
+      "id": "canonical_rule_key:floor_area_max_floor_area_floor_area_100_0_m2",
+      "type": "canonical_rule_key",
+      "label": "floor_area__max_floor_area__floor_area____100_0__m2"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0002",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0002",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "13.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:floor_area_max_floor_area_floor_area_13_0_m",
+      "type": "canonical_rule_key",
+      "label": "floor_area__max_floor_area__floor_area____13_0__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0003",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0003",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "10.0",
+      "unit": "%"
+    },
+    {
+      "id": "canonical_rule_key:floor_area_max_floor_area_floor_area_10_0",
+      "type": "canonical_rule_key",
+      "label": "floor_area__max_floor_area__floor_area____10_0__"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0004",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0004",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "1.5",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:setback_min_setback_setback_1_5_m",
+      "type": "canonical_rule_key",
+      "label": "setback__min_setback__setback____1_5__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0005",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0005",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "canonical_rule_key",
+      "label": "setback__min_setback__setback____0_6__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0006",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0006",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "operator": ">=",
+      "value": "5.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:building_separation_building_separation_building_separation_5_0_m",
+      "type": "canonical_rule_key",
+      "label": "building_separation__building_separation__building_separation____5_0__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0007",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0007",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:building_separation_building_separation_building_separation_0_6_m",
+      "type": "canonical_rule_key",
+      "label": "building_separation__building_separation__building_separation____0_6__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0008",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0008",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "operator": ">=",
+      "value": "40.0",
+      "unit": "%"
+    },
+    {
+      "id": "canonical_rule_key:building_separation_building_separation_building_separation_40_0",
+      "type": "canonical_rule_key",
+      "label": "building_separation__building_separation__building_separation____40_0__"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0009",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0009",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "operator": ">=",
+      "value": "3.1",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:building_separation_building_separation_building_separation_3_1_m",
+      "type": "canonical_rule_key",
+      "label": "building_separation__building_separation__building_separation____3_1__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0010",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0010",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "canonical_rule_key",
+      "label": "height__building__height____7_5__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0011",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0011",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "5.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:height_building_height_5_0_m",
+      "type": "canonical_rule_key",
+      "label": "height__building__height____5_0__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0012",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0012",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "3.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:height_building_height_3_0_m",
+      "type": "canonical_rule_key",
+      "label": "height__building__height____3_0__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0013",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0013",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0014",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0014",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "2.5",
+      "unit": "m2"
+    },
+    {
+      "id": "canonical_rule_key:floor_area_max_floor_area_floor_area_2_5_m2",
+      "type": "canonical_rule_key",
+      "label": "floor_area__max_floor_area__floor_area____2_5__m2"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0015",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0015",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "75.0",
+      "unit": "m2"
+    },
+    {
+      "id": "canonical_rule_key:floor_area_max_floor_area_floor_area_75_0_m2",
+      "type": "canonical_rule_key",
+      "label": "floor_area__max_floor_area__floor_area____75_0__m2"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0016",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0016",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "10.0",
+      "unit": "%"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0017",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0017",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "4.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:setback_min_setback_setback_4_0_m",
+      "type": "canonical_rule_key",
+      "label": "setback__min_setback__setback____4_0__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0018",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0018",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:setback_min_setback_setback_2_0_m",
+      "type": "canonical_rule_key",
+      "label": "setback__min_setback__setback____2_0__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0019",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0019",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "canonical_rule_key",
+      "label": "setback__min_setback__setback____3_0__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0020",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0020",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0021",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0021",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "6.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:setback_min_setback_setback_6_0_m",
+      "type": "canonical_rule_key",
+      "label": "setback__min_setback__setback____6_0__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0022",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0022",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0023",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0023",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m"
+    },
+    {
+      "id": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "canonical_rule_key",
+      "label": "height__building__height____1_0__m"
+    },
+    {
+      "id": "candidate_rule:local_merged_rule_0024",
+      "type": "candidate_rule",
+      "label": "local_merged_rule_0024",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m"
+    },
+    {
+      "id": "verified_rule:calgary_rcg_004",
+      "type": "verified_rule",
+      "label": "calgary_rcg_004",
+      "decision": "verified",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "1.5",
+      "unit": "m"
+    },
+    {
+      "id": "verified_rule:calgary_rcg_006",
+      "type": "verified_rule",
+      "label": "calgary_rcg_006",
+      "decision": "verified",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "operator": ">=",
+      "value": "5.0",
+      "unit": "m"
+    },
+    {
+      "id": "verified_rule:calgary_rcg_010",
+      "type": "verified_rule",
+      "label": "calgary_rcg_010",
+      "decision": "verified",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m"
+    },
+    {
+      "id": "verified_rule:calgary_rcg_011",
+      "type": "verified_rule",
+      "label": "calgary_rcg_011",
+      "decision": "verified",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "5.0",
+      "unit": "m"
+    },
+    {
+      "id": "verified_rule:calgary_rcg_020",
+      "type": "verified_rule",
+      "label": "calgary_rcg_020",
+      "decision": "verified",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m"
+    },
+    {
+      "id": "verified_rule:calgary_rcg_021",
+      "type": "verified_rule",
+      "label": "calgary_rcg_021",
+      "decision": "verified",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "6.0",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_001",
+      "type": "review_rule",
+      "label": "calgary_rcg_001",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "100.0",
+      "unit": "m2"
+    },
+    {
+      "id": "review_rule:calgary_rcg_005",
+      "type": "review_rule",
+      "label": "calgary_rcg_005",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_007",
+      "type": "review_rule",
+      "label": "calgary_rcg_007",
+      "decision": "review_needed",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_009",
+      "type": "review_rule",
+      "label": "calgary_rcg_009",
+      "decision": "review_needed",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "operator": ">=",
+      "value": "3.1",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_012",
+      "type": "review_rule",
+      "label": "calgary_rcg_012",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "3.0",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_013",
+      "type": "review_rule",
+      "label": "calgary_rcg_013",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_014",
+      "type": "review_rule",
+      "label": "calgary_rcg_014",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "2.5",
+      "unit": "m2"
+    },
+    {
+      "id": "review_rule:calgary_rcg_015",
+      "type": "review_rule",
+      "label": "calgary_rcg_015",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "75.0",
+      "unit": "m2"
+    },
+    {
+      "id": "review_rule:calgary_rcg_017",
+      "type": "review_rule",
+      "label": "calgary_rcg_017",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "4.0",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_018",
+      "type": "review_rule",
+      "label": "calgary_rcg_018",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_019",
+      "type": "review_rule",
+      "label": "calgary_rcg_019",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_022",
+      "type": "review_rule",
+      "label": "calgary_rcg_022",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_023",
+      "type": "review_rule",
+      "label": "calgary_rcg_023",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m"
+    },
+    {
+      "id": "review_rule:calgary_rcg_024",
+      "type": "review_rule",
+      "label": "calgary_rcg_024",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m"
+    }
+  ],
+  "edges": [
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_100_0_m2",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "evidence_unit:local_merged_rule_0001",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_13_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "evidence_unit:local_merged_rule_0002",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0003",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_10_0",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0003",
+      "target": "evidence_unit:local_merged_rule_0003",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "canonical_rule_key:setback_min_setback_setback_1_5_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "evidence_unit:local_merged_rule_0004",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "evidence_unit:local_merged_rule_0005",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0006",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_5_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0006",
+      "target": "evidence_unit:local_merged_rule_0006",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0007",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_0_6_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0007",
+      "target": "evidence_unit:local_merged_rule_0007",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0008",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_40_0",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0008",
+      "target": "evidence_unit:local_merged_rule_0008",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0009",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_3_1_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0009",
+      "target": "evidence_unit:local_merged_rule_0009",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "evidence_unit:local_merged_rule_0010",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "canonical_rule_key:height_building_height_5_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "evidence_unit:local_merged_rule_0011",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "canonical_rule_key:height_building_height_3_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "evidence_unit:local_merged_rule_0012",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0013",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0013",
+      "target": "evidence_unit:local_merged_rule_0013",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0014",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_2_5_m2",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0014",
+      "target": "evidence_unit:local_merged_rule_0014",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0015",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_75_0_m2",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0015",
+      "target": "evidence_unit:local_merged_rule_0015",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0016",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_10_0",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0016",
+      "target": "evidence_unit:local_merged_rule_0016",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "canonical_rule_key:setback_min_setback_setback_4_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "evidence_unit:local_merged_rule_0017",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "canonical_rule_key:setback_min_setback_setback_2_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "evidence_unit:local_merged_rule_0018",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0019",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0019",
+      "target": "evidence_unit:local_merged_rule_0019",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0020",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0020",
+      "target": "evidence_unit:local_merged_rule_0020",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0021",
+      "target": "canonical_rule_key:setback_min_setback_setback_6_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0021",
+      "target": "evidence_unit:local_merged_rule_0021",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0022",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0022",
+      "target": "evidence_unit:local_merged_rule_0022",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0023",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0023",
+      "target": "evidence_unit:local_merged_rule_0023",
+      "type": "cites"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0024",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0024",
+      "target": "evidence_unit:local_merged_rule_0024",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_004",
+      "target": "canonical_rule_key:setback_min_setback_setback_1_5_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_004",
+      "target": "evidence_unit:local_merged_rule_0004",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_004",
+      "target": "candidate_rule:local_merged_rule_0004",
+      "type": "from_candidate"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_004",
+      "target": "canonical_rule_key:setback_min_setback_setback_1_5_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_004",
+      "target": "canonical_rule_key:setback_min_setback_setback_1_5_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_004",
+      "target": "canonical_rule_key:setback_min_setback_setback_1_5_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_004",
+      "target": "canonical_rule_key:setback_min_setback_setback_1_5_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_004",
+      "target": "canonical_rule_key:setback_min_setback_setback_1_5_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_004",
+      "target": "canonical_rule_key:setback_min_setback_setback_1_5_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_006",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_5_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_006",
+      "target": "evidence_unit:local_merged_rule_0006",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_006",
+      "target": "candidate_rule:local_merged_rule_0006",
+      "type": "from_candidate"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_006",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_5_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_006",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_5_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_006",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_5_0_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_006",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_5_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_006",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_5_0_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_006",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_5_0_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_010",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_010",
+      "target": "evidence_unit:local_merged_rule_0010",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_010",
+      "target": "candidate_rule:local_merged_rule_0010",
+      "type": "from_candidate"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_010",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_010",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_010",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_010",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_010",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_010",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_011",
+      "target": "canonical_rule_key:height_building_height_5_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_011",
+      "target": "evidence_unit:local_merged_rule_0011",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_011",
+      "target": "candidate_rule:local_merged_rule_0011",
+      "type": "from_candidate"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_011",
+      "target": "canonical_rule_key:height_building_height_5_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_011",
+      "target": "canonical_rule_key:height_building_height_5_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_011",
+      "target": "canonical_rule_key:height_building_height_5_0_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_011",
+      "target": "canonical_rule_key:height_building_height_5_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_011",
+      "target": "canonical_rule_key:height_building_height_5_0_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_011",
+      "target": "canonical_rule_key:height_building_height_5_0_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_020",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_020",
+      "target": "evidence_unit:local_merged_rule_0020",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_020",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "from_candidate"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_020",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_020",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_020",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_020",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_020",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_020",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_021",
+      "target": "canonical_rule_key:setback_min_setback_setback_6_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_021",
+      "target": "evidence_unit:local_merged_rule_0021",
+      "type": "cites"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_021",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "from_candidate"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_021",
+      "target": "canonical_rule_key:setback_min_setback_setback_6_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_021",
+      "target": "canonical_rule_key:setback_min_setback_setback_6_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_021",
+      "target": "canonical_rule_key:setback_min_setback_setback_6_0_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_021",
+      "target": "canonical_rule_key:setback_min_setback_setback_6_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_021",
+      "target": "canonical_rule_key:setback_min_setback_setback_6_0_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "verified_rule:calgary_rcg_021",
+      "target": "canonical_rule_key:setback_min_setback_setback_6_0_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "review_rule:calgary_rcg_001",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_100_0_m2",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_001",
+      "target": "evidence_unit:local_merged_rule_0001",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_001",
+      "target": "candidate_rule:local_merged_rule_0001",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_001",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_100_0_m2",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_001",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_100_0_m2",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_001",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_100_0_m2",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_001",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_100_0_m2",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:calgary_rcg_001",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_100_0_m2",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "review_rule:calgary_rcg_001",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_100_0_m2",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_005",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_005",
+      "target": "evidence_unit:local_merged_rule_0005",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_005",
+      "target": "candidate_rule:local_merged_rule_0005",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_005",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_005",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_005",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_005",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_005",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "missing_field",
+      "field": "scope",
+      "gap": "constraint_scope_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_005",
+      "target": "canonical_rule_key:setback_min_setback_setback_0_6_m",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_007",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_0_6_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_007",
+      "target": "evidence_unit:local_merged_rule_0007",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_007",
+      "target": "candidate_rule:local_merged_rule_0007",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_007",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_0_6_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_007",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_0_6_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_007",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_0_6_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:calgary_rcg_007",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_0_6_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_007",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_0_6_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:calgary_rcg_007",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_0_6_m",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_009",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_3_1_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_009",
+      "target": "evidence_unit:local_merged_rule_0009",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_009",
+      "target": "candidate_rule:local_merged_rule_0009",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_009",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_3_1_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_009",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_3_1_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_009",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_3_1_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:calgary_rcg_009",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_3_1_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_009",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_3_1_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:calgary_rcg_009",
+      "target": "canonical_rule_key:building_separation_building_separation_building_separation_3_1_m",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_012",
+      "target": "canonical_rule_key:height_building_height_3_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_012",
+      "target": "evidence_unit:local_merged_rule_0012",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_012",
+      "target": "candidate_rule:local_merged_rule_0012",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_012",
+      "target": "canonical_rule_key:height_building_height_3_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_012",
+      "target": "canonical_rule_key:height_building_height_3_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_012",
+      "target": "canonical_rule_key:height_building_height_3_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_012",
+      "target": "canonical_rule_key:height_building_height_3_0_m",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_012",
+      "target": "canonical_rule_key:height_building_height_3_0_m",
+      "type": "missing_field",
+      "field": "scope",
+      "gap": "constraint_scope_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_012",
+      "target": "canonical_rule_key:height_building_height_3_0_m",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_013",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_013",
+      "target": "evidence_unit:local_merged_rule_0013",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_013",
+      "target": "candidate_rule:local_merged_rule_0013",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_013",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_013",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_013",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:calgary_rcg_013",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_013",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_013",
+      "target": "canonical_rule_key:height_building_height_7_5_m",
+      "type": "missing_field",
+      "field": "scope",
+      "gap": "constraint_scope_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_014",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_2_5_m2",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_014",
+      "target": "evidence_unit:local_merged_rule_0014",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_014",
+      "target": "candidate_rule:local_merged_rule_0014",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_014",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_2_5_m2",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_014",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_2_5_m2",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_014",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_2_5_m2",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:calgary_rcg_014",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_2_5_m2",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_014",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_2_5_m2",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:calgary_rcg_014",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_2_5_m2",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_015",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_75_0_m2",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_015",
+      "target": "evidence_unit:local_merged_rule_0015",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_015",
+      "target": "candidate_rule:local_merged_rule_0015",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_015",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_75_0_m2",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_015",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_75_0_m2",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_015",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_75_0_m2",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:calgary_rcg_015",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_75_0_m2",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_015",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_75_0_m2",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:calgary_rcg_015",
+      "target": "canonical_rule_key:floor_area_max_floor_area_floor_area_75_0_m2",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_017",
+      "target": "canonical_rule_key:setback_min_setback_setback_4_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_017",
+      "target": "evidence_unit:local_merged_rule_0017",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_017",
+      "target": "candidate_rule:local_merged_rule_0017",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_017",
+      "target": "canonical_rule_key:setback_min_setback_setback_4_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_017",
+      "target": "canonical_rule_key:setback_min_setback_setback_4_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_017",
+      "target": "canonical_rule_key:setback_min_setback_setback_4_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_017",
+      "target": "canonical_rule_key:setback_min_setback_setback_4_0_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:calgary_rcg_017",
+      "target": "canonical_rule_key:setback_min_setback_setback_4_0_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "review_rule:calgary_rcg_017",
+      "target": "canonical_rule_key:setback_min_setback_setback_4_0_m",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_018",
+      "target": "canonical_rule_key:setback_min_setback_setback_2_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_018",
+      "target": "evidence_unit:local_merged_rule_0018",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_018",
+      "target": "candidate_rule:local_merged_rule_0018",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_018",
+      "target": "canonical_rule_key:setback_min_setback_setback_2_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_018",
+      "target": "canonical_rule_key:setback_min_setback_setback_2_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_018",
+      "target": "canonical_rule_key:setback_min_setback_setback_2_0_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:calgary_rcg_018",
+      "target": "canonical_rule_key:setback_min_setback_setback_2_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_018",
+      "target": "canonical_rule_key:setback_min_setback_setback_2_0_m",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_018",
+      "target": "canonical_rule_key:setback_min_setback_setback_2_0_m",
+      "type": "missing_field",
+      "field": "scope",
+      "gap": "constraint_scope_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_019",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_019",
+      "target": "evidence_unit:local_merged_rule_0019",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_019",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_019",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_019",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_019",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:calgary_rcg_019",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_019",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_019",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "missing_field",
+      "field": "scope",
+      "gap": "constraint_scope_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_022",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_022",
+      "target": "evidence_unit:local_merged_rule_0022",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_022",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_022",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_022",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_022",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "supports_field",
+      "field": "operator"
+    },
+    {
+      "source": "review_rule:calgary_rcg_022",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_022",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "missing_field",
+      "field": "applies_to",
+      "gap": "applies_to_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_022",
+      "target": "canonical_rule_key:setback_min_setback_setback_3_0_m",
+      "type": "missing_field",
+      "field": "scope",
+      "gap": "constraint_scope_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_023",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_023",
+      "target": "evidence_unit:local_merged_rule_0023",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_023",
+      "target": "candidate_rule:local_merged_rule_0023",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_023",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_023",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_023",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_023",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:calgary_rcg_023",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "review_rule:calgary_rcg_023",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "review_rule:calgary_rcg_024",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "same_canonical_key"
+    },
+    {
+      "source": "review_rule:calgary_rcg_024",
+      "target": "evidence_unit:local_merged_rule_0024",
+      "type": "cites"
+    },
+    {
+      "source": "review_rule:calgary_rcg_024",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "from_candidate"
+    },
+    {
+      "source": "review_rule:calgary_rcg_024",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "value"
+    },
+    {
+      "source": "review_rule:calgary_rcg_024",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "unit"
+    },
+    {
+      "source": "review_rule:calgary_rcg_024",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "rule_object"
+    },
+    {
+      "source": "review_rule:calgary_rcg_024",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "scope"
+    },
+    {
+      "source": "review_rule:calgary_rcg_024",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "supports_field",
+      "field": "applies_to"
+    },
+    {
+      "source": "review_rule:calgary_rcg_024",
+      "target": "canonical_rule_key:height_building_height_1_0_m",
+      "type": "missing_field",
+      "field": "operator",
+      "gap": "operator_not_supported"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0003",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0007",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0007",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0006",
+      "target": "candidate_rule:local_merged_rule_0011",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0013",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0019",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0023",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "same_value_unit"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0002",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0003",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0014",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0015",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "candidate_rule:local_merged_rule_0003",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "candidate_rule:local_merged_rule_0014",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "candidate_rule:local_merged_rule_0015",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0003",
+      "target": "candidate_rule:local_merged_rule_0014",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0003",
+      "target": "candidate_rule:local_merged_rule_0015",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0003",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0014",
+      "target": "candidate_rule:local_merged_rule_0015",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0014",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0015",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0005",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0017",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0018",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0017",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0018",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0018",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0019",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0019",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0019",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0020",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0020",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0021",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0006",
+      "target": "candidate_rule:local_merged_rule_0007",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0006",
+      "target": "candidate_rule:local_merged_rule_0008",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0006",
+      "target": "candidate_rule:local_merged_rule_0009",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0007",
+      "target": "candidate_rule:local_merged_rule_0008",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0007",
+      "target": "candidate_rule:local_merged_rule_0009",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0008",
+      "target": "candidate_rule:local_merged_rule_0009",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0011",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0012",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0013",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0023",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "candidate_rule:local_merged_rule_0012",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "candidate_rule:local_merged_rule_0013",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "candidate_rule:local_merged_rule_0023",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "candidate_rule:local_merged_rule_0013",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "candidate_rule:local_merged_rule_0023",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0013",
+      "target": "candidate_rule:local_merged_rule_0023",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0013",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0023",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "same_scope"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0002",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0003",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0014",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0015",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0001",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "candidate_rule:local_merged_rule_0003",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "candidate_rule:local_merged_rule_0014",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "candidate_rule:local_merged_rule_0015",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0002",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0003",
+      "target": "candidate_rule:local_merged_rule_0014",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0003",
+      "target": "candidate_rule:local_merged_rule_0015",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0003",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0014",
+      "target": "candidate_rule:local_merged_rule_0015",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0014",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0015",
+      "target": "candidate_rule:local_merged_rule_0016",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0005",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0017",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0018",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0004",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0017",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0018",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0005",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0018",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0017",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "candidate_rule:local_merged_rule_0019",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0018",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0019",
+      "target": "candidate_rule:local_merged_rule_0020",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0019",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0019",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0020",
+      "target": "candidate_rule:local_merged_rule_0021",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0020",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0021",
+      "target": "candidate_rule:local_merged_rule_0022",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0006",
+      "target": "candidate_rule:local_merged_rule_0007",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0006",
+      "target": "candidate_rule:local_merged_rule_0008",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0006",
+      "target": "candidate_rule:local_merged_rule_0009",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0007",
+      "target": "candidate_rule:local_merged_rule_0008",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0007",
+      "target": "candidate_rule:local_merged_rule_0009",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0008",
+      "target": "candidate_rule:local_merged_rule_0009",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0011",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0012",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0013",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0023",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0010",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "candidate_rule:local_merged_rule_0012",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "candidate_rule:local_merged_rule_0013",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "candidate_rule:local_merged_rule_0023",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0011",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "candidate_rule:local_merged_rule_0013",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "candidate_rule:local_merged_rule_0023",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0012",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0013",
+      "target": "candidate_rule:local_merged_rule_0023",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0013",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "conflicts_with"
+    },
+    {
+      "source": "candidate_rule:local_merged_rule_0023",
+      "target": "candidate_rule:local_merged_rule_0024",
+      "type": "conflicts_with"
+    }
+  ],
+  "summary": {
+    "node_type_counts": [
+      {
+        "name": "evidence_unit",
+        "count": 24
+      },
+      {
+        "name": "candidate_rule",
+        "count": 24
+      },
+      {
+        "name": "canonical_rule_key",
+        "count": 19
+      },
+      {
+        "name": "review_rule",
+        "count": 14
+      },
+      {
+        "name": "verified_rule",
+        "count": 6
+      }
+    ],
+    "edge_type_counts": [
+      {
+        "name": "supports_field",
+        "count": 98
+      },
+      {
+        "name": "same_scope",
+        "count": 64
+      },
+      {
+        "name": "conflicts_with",
+        "count": 64
+      },
+      {
+        "name": "same_canonical_key",
+        "count": 44
+      },
+      {
+        "name": "cites",
+        "count": 44
+      },
+      {
+        "name": "missing_field",
+        "count": 22
+      },
+      {
+        "name": "from_candidate",
+        "count": 20
+      },
+      {
+        "name": "same_value_unit",
+        "count": 10
+      }
+    ]
+  }
+}

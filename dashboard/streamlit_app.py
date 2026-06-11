@@ -5,14 +5,119 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 from collections import Counter
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT_DIR = ROOT / "outputs" / "burnaby_r1_slim_pipeline5_registry"
+OUTPUTS_ROOT = ROOT / "outputs"
+OUTPUT_DIR_SUFFIX = "_slim_pipeline5_registry"
+# Pipeline 9 (graph-RAG extraction) verifier outputs sit next to the P5
+# registries as <city>_p9/. Same verifier, second upstream — the dashboard
+# treats them as another selectable "city" so reviewers see the P9 lane.
+P9_DIR_SUFFIX = "_p9"
+DEFAULT_OUTPUT_DIR = OUTPUTS_ROOT / "burnaby_r1_slim_pipeline5_registry"
 SOURCE_DOCUMENT_URL = "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf"
+
+# Color semantics used across the whole dashboard. Presentation only.
+STATUS_COLORS = {
+    "verified": "#1a7f37",
+    "review": "#9a6700",
+    "rejected": "#cf222e",
+    "not_used": "#57606a",
+}
+
+# Map centroids keyed by city prefix (first token of the output dir name).
+# Used only to center the DEMO map view; they are not parcel data.
+CITY_CENTROIDS = {
+    "burnaby": (49.2488, -122.9805),
+    "vancouver": (49.2827, -123.1207),
+    "calgary": (51.0447, -114.0719),
+}
+
+# gis_felt_export geometry targets that behave like lot-line setbacks.
+LOT_LINE_TARGETS = {
+    "front_lot_line": "front",
+    "rear_lot_line": "rear",
+    "side_lot_line": "side",
+    "lane": "lane",
+}
+
+# Demo lot used by the map, the 3D envelope, and the SVG fallback.
+# It is a representative rectangle, NOT a real parcel.
+DEMO_LOT_WIDTH_M = 30.0
+DEMO_LOT_DEPTH_M = 40.0
+
+# Active source-document URL for the selected city (module-level so the
+# many detail panels stay simple). Falls back to the Burnaby PDF.
+_ACTIVE_SOURCE = {"url": SOURCE_DOCUMENT_URL, "label": "source bylaw PDF"}
+
+
+def discover_city_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
+    """Return city output dirs that contain verified_rules.json, sorted by name.
+
+    Any new city (e.g. calgary) appears automatically once its
+    `<city>_..._slim_pipeline5_registry/verified_rules.json` exists on disk.
+    """
+    if not outputs_root.is_dir():
+        return []
+    return sorted(
+        path
+        for path in outputs_root.iterdir()
+        if path.is_dir()
+        and (path.name.endswith(OUTPUT_DIR_SUFFIX) or path.name.endswith(P9_DIR_SUFFIX))
+        and (path / "verified_rules.json").exists()
+    )
+
+
+def city_key_from_dir(output_dir: Path) -> str:
+    """Return the city prefix for an output dir, e.g. burnaby_r1_... -> burnaby."""
+    return output_dir.name.split("_")[0].lower()
+
+
+def city_stem_from_dir(output_dir: Path) -> str:
+    """Return the full city stem, e.g. burnaby_r1_slim_pipeline5_registry ->
+    burnaby_r1 and vancouver_rs_p9 -> vancouver_rs.
+
+    The short ``city_key`` ('burnaby') is right for centroids and labels but
+    WRONG for artifact paths — every on-disk artifact uses the full stem
+    ('burnaby_r1'), which is why path lookups must come through here.
+    """
+    name = output_dir.name
+    for suffix in (OUTPUT_DIR_SUFFIX, P9_DIR_SUFFIX):
+        if name.endswith(suffix):
+            return name[: -len(suffix)]
+    return name
+
+
+def bylaw_index_path(output_dir: Path) -> Path | None:
+    """Resolve the bylaw-RAG index for an output dir.
+
+    A P5 registry carries its own index; a P9 run borrows the sibling P5
+    registry's index for the SAME city stem (same bylaw corpus). Previously
+    this path was built from the short city_key, which never matched a real
+    directory — the legal-context expander silently rendered nothing.
+    """
+    own = output_dir / "bylaw_rag_index.json"
+    if own.exists():
+        return own
+    sibling = OUTPUTS_ROOT / f"{city_stem_from_dir(output_dir)}{OUTPUT_DIR_SUFFIX}" / "bylaw_rag_index.json"
+    if sibling.exists():
+        return sibling
+    return None
+
+
+def city_label_from_dir(output_dir: Path) -> str:
+    """Human-readable label for the sidebar selector, e.g. 'Burnaby R1'."""
+    is_p9 = output_dir.name.endswith(P9_DIR_SUFFIX)
+    stem = city_stem_from_dir(output_dir)
+    parts = [part for part in stem.split("_") if part]
+    if not parts:
+        return output_dir.name
+    label = parts[0].capitalize() + (" " + " ".join(part.upper() for part in parts[1:]) if parts[1:] else "")
+    return f"{label} — Pipeline 9" if is_p9 else label
 
 
 def load_output_data(output_dir: Path) -> dict[str, Any]:
@@ -31,18 +136,18 @@ def load_output_data(output_dir: Path) -> dict[str, Any]:
         "router": _read_json(output_dir / "review_router.json", {"items": [], "summary": {}}),
         "resolution": _read_json(output_dir / "review_resolution.json", {"items": [], "summary": {}}),
         "rule_graph": _read_json(output_dir / "rule_graph.json", {"nodes": [], "edges": [], "summary": {}}),
-        "cache": _read_json(output_dir / "verification_cache.json", {"entries": []}),
         "semantic": _read_json(output_dir / "semantic_review_report.json", {"items": [], "summary": {}}),
         "bundle_promotion": _read_json(output_dir / "bundle_promotion_report.json", {"promoted_rules": []}),
+        "source_repair": _read_json(output_dir / "source_repair_report.json", {"items": [], "status_counts": {}}),
+        "review_assistant_packets": _read_json(output_dir / "review_assistant_packets.json", {"items": []}),
         "evidence_units": _read_json(output_dir / "evidence_units.json", []),
         "verified": _read_json(output_dir / "verified_rules.json", []),
         "review": _read_json(output_dir / "review_needed.json", []),
-        "rejected": _read_json(output_dir / "rejected_rules.json", []),
-        "not_used": _read_json(output_dir / "not_used.json", []),
-        "consensus": _read_json(output_dir / "rule_consensus.json", []),
-        "conflicts": _read_json(output_dir / "rule_conflicts.json", []),
         "felt_export": _read_json(output_dir / "felt_export_manifest.json", {}),
         "preflight": _read_json(output_dir / "pipeline5_extraction_preflight.json", {}),
+        # v2 additions (additive; every existing key above is unchanged).
+        "gis_export": _read_json(output_dir / "gis_felt_export.json", {}),
+        "buildable_envelope": _read_json(output_dir / "buildable_envelope.json", {}),
     }
 
 
@@ -89,7 +194,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
     args, _ = parser.parse_known_args()
-    output_dir = Path(args.output_dir).expanduser()
+    cli_output_dir = Path(args.output_dir).expanduser().resolve()
 
     try:
         import streamlit as st
@@ -97,13 +202,39 @@ def main() -> None:
         raise SystemExit("Streamlit is not installed. Run `pip install -r requirements.txt`.") from exc
 
     st.set_page_config(
-        page_title="Burnaby Verification Dashboard",
+        page_title="BC Zoning Verification Dashboard",
         page_icon="BV",
         layout="wide",
         initial_sidebar_state="expanded",
     )
     _style(st)
+
+    # City selector: scan outputs/ for any *_slim_pipeline5_registry dir with
+    # verified_rules.json. New cities appear automatically; nothing is hardcoded.
+    city_dirs = discover_city_output_dirs()
+    if cli_output_dir.is_dir() and cli_output_dir not in city_dirs:
+        city_dirs = [*city_dirs, cli_output_dir]
+    if not city_dirs:
+        st.error(f"No verifier output directories found under `{OUTPUTS_ROOT}`.")
+        return
+    default_index = next(
+        (index for index, path in enumerate(city_dirs) if path == cli_output_dir),
+        next((index for index, path in enumerate(city_dirs) if path.name.startswith("burnaby_r1")), 0),
+    )
+    st.sidebar.header("City")
+    output_dir = st.sidebar.selectbox(
+        "Verifier output",
+        city_dirs,
+        index=default_index,
+        format_func=city_label_from_dir,
+    )
+    city_key = city_key_from_dir(output_dir)
+    city_label = city_label_from_dir(output_dir)
+
     data = load_output_data(output_dir)
+    source_url = str(data.get("gis_export", {}).get("source_url") or "").strip()
+    _ACTIVE_SOURCE["url"] = source_url or SOURCE_DOCUMENT_URL
+    _ACTIVE_SOURCE["label"] = f"{city_label} bylaw PDF"
 
     st.sidebar.header("Filters")
     st.sidebar.caption(str(output_dir))
@@ -123,56 +254,81 @@ def main() -> None:
         rule_objects=rule_objects,
     )
 
-    _render_header(st)
+    _render_header(st, city_label)
     _render_kpis(st, data, filtered_items)
     _render_guidance(st)
 
-    tabs = st.tabs(
-        [
-            "Overview",
-            "Evidence Intelligence",
-            "Review",
-            "Review Resolution",
-            "Bundle Rerun",
-            "Semantic Review",
-            "Rule Graph",
-            "Candidate vs Verified",
-            "Evidence Repair",
-            "Evidence Rerun",
-            "Safe Tuning",
-            "Felt Export",
-            "Verification Structure",
-            "Extraction Preflight",
-        ]
-    )
-    with tabs[0]:
+    # v2 layout: the previous flat 14-tab strip is grouped into six top-level
+    # sections. Every original tab is preserved inside its section.
+    sections = st.tabs(["Overview", "Rules", "Review", "Evidence & Proof", "GIS & Map", "System"])
+
+    with sections[0]:
         _overview_tab(st, data)
-    with tabs[1]:
-        _evidence_intelligence_tab(st, data["intelligence"])
-    with tabs[2]:
-        _review_router_tab(st, data["router"])
-    with tabs[3]:
-        _review_resolution_tab(st, data["resolution"])
-    with tabs[4]:
-        _bundle_rerun_tab(st, data["bundle_rerun"])
-    with tabs[5]:
-        _semantic_review_tab(st, data["semantic"])
-    with tabs[6]:
-        _rule_graph_tab(st, data["rule_graph"])
-    with tabs[7]:
-        _candidate_compare_tab(st, filtered_items, data["review"], data["verified"])
-    with tabs[8]:
-        _repair_tab(st, data["repair"])
-    with tabs[9]:
-        _rerun_tab(st, data["rerun"], data["evidence_units"])
-    with tabs[10]:
-        _safe_tuning_tab(st, data["safe_tuning"], data["evidence_units"])
-    with tabs[11]:
-        _felt_export_tab(st, data["felt_export"], output_dir)
-    with tabs[12]:
-        _structure_tab(st)
-    with tabs[13]:
-        _preflight_tab(st, data["preflight"])
+        _pipeline_comparison_tab(st, output_dir)
+
+    with sections[1]:
+        rule_tabs = st.tabs(["Candidate vs Verified", "Rule Graph"])
+        with rule_tabs[0]:
+            _candidate_compare_tab(
+                st,
+                filtered_items,
+                data["review"],
+                data["verified"],
+                output_dir,
+                {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]},
+            )
+        with rule_tabs[1]:
+            _rule_graph_tab(st, data["rule_graph"])
+
+    with sections[2]:
+        review_tabs = st.tabs(["Review", "Review Assistant", "Review Resolution", "Semantic Review"])
+        with review_tabs[0]:
+            _review_router_tab(st, data["router"])
+        with review_tabs[1]:
+            _review_assistant_tab(
+                st,
+                data["review_assistant_packets"],
+                data["review"],
+                output_dir,
+                {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]},
+            )
+        with review_tabs[2]:
+            _review_resolution_tab(st, data["resolution"])
+        with review_tabs[3]:
+            _semantic_review_tab(st, data["semantic"])
+
+    with sections[3]:
+        evidence_tabs = st.tabs(
+            ["Evidence Intelligence", "Evidence Repair", "Evidence Rerun", "Bundle Rerun", "Bylaw"]
+        )
+        with evidence_tabs[0]:
+            _evidence_intelligence_tab(st, data["intelligence"])
+        with evidence_tabs[1]:
+            _repair_tab(st, data["repair"])
+        with evidence_tabs[2]:
+            _rerun_tab(st, data["rerun"], data["evidence_units"])
+        with evidence_tabs[3]:
+            _bundle_rerun_tab(st, data["bundle_rerun"])
+        with evidence_tabs[4]:
+            _bylaw_tab(st, data)
+
+    with sections[4]:
+        gis_tabs = st.tabs(["Map", "3D Envelope", "Felt Export"])
+        with gis_tabs[0]:
+            _map_tab(st, data, city_key)
+        with gis_tabs[1]:
+            _envelope_3d_tab(st, data, output_dir)
+        with gis_tabs[2]:
+            _felt_export_tab(st, data["felt_export"], output_dir)
+
+    with sections[5]:
+        system_tabs = st.tabs(["Safe Tuning", "Verification Structure", "Extraction Preflight"])
+        with system_tabs[0]:
+            _safe_tuning_tab(st, data["safe_tuning"], data["evidence_units"])
+        with system_tabs[1]:
+            _structure_tab(st)
+        with system_tabs[2]:
+            _preflight_tab(st, data["preflight"])
 
 
 def _overview_tab(st: Any, data: dict[str, Any]) -> None:
@@ -203,6 +359,195 @@ def _overview_tab(st: Any, data: dict[str, Any]) -> None:
         for flag in rule.get("potential_mistake_flags", [])
     )
     _bar_table(st, dict(flags.most_common(12)))
+
+
+def pipeline_comparison_rows(output_dir: Path) -> list[dict[str, Any]]:
+    """Return P5/P9 comparison rows for the selected city stem."""
+    stem = city_stem_from_dir(output_dir)
+    candidates = [
+        ("Pipeline 5", OUTPUTS_ROOT / f"{stem}{OUTPUT_DIR_SUFFIX}"),
+        ("Pipeline 9", OUTPUTS_ROOT / f"{stem}{P9_DIR_SUFFIX}"),
+    ]
+    rows: list[dict[str, Any]] = []
+    for label, path in candidates:
+        summary = _read_json(path / "slim_summary.json", {})
+        benchmark = _read_json(path / "benchmark_report.json", {})
+        metrics = benchmark.get("rule_metrics", {})
+        gates = benchmark.get("quality_gates", {})
+        rows.append(
+            {
+                "pipeline": label,
+                "path": path.name,
+                "candidates": summary.get("candidate_rule_count"),
+                "evidence": summary.get("evidence_unit_count"),
+                "verified": summary.get("verified_rule_count"),
+                "review": summary.get("review_rule_count"),
+                "rejected": summary.get("rejected_rule_count"),
+                "not_used": summary.get("not_used_rule_count"),
+                "precision": metrics.get("verified_precision"),
+                "false_verified": metrics.get("false_verified_count"),
+                "verified_or_review_recall": metrics.get("verified_or_review_recall"),
+                "gate_status": pipeline_gate_status(summary, benchmark),
+            }
+        )
+    return rows
+
+
+def pipeline_gate_status(summary: dict[str, Any], benchmark: dict[str, Any]) -> str:
+    """Human label for benchmark state; keeps P9 failures honest."""
+    if not summary:
+        return "missing"
+    quality = benchmark.get("quality_gates", {})
+    if quality.get("passed") is True:
+        return "pass"
+    metrics = benchmark.get("rule_metrics", {})
+    false_verified = int(metrics.get("false_verified_count") or 0)
+    false_approval = int(metrics.get("false_approval_count") or 0)
+    candidates = int(summary.get("candidate_rule_count") or 0)
+    verified = int(summary.get("verified_rule_count") or 0)
+    review = int(summary.get("review_rule_count") or 0)
+    rejected = int(summary.get("rejected_rule_count") or 0)
+    not_used = int(summary.get("not_used_rule_count") or 0)
+    if false_verified or false_approval:
+        return "unsafe / needs fix"
+    if verified == 0 and review:
+        return "fail-closed"
+    if candidates and not_used >= max(1, verified + review + rejected):
+        return "scope mismatch"
+    return "needs review"
+
+
+def _pipeline_comparison_tab(st: Any, output_dir: Path) -> None:
+    st.subheader("Pipeline Comparison")
+    st.caption("Same verifier, different upstream extractors. Failed gates are shown honestly; review/rejected rules are not GIS-safe.")
+    rows = pipeline_comparison_rows(output_dir)
+    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+
+
+def _packet_by_rule_id(packet_report: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    return {str(item.get("rule_id") or ""): item for item in packet_report.get("items", [])}
+
+
+def _review_assistant_tab(
+    st: Any,
+    packet_report: dict[str, Any],
+    review_rules: list[dict[str, Any]],
+    output_dir: Path,
+    evidence_by_id: dict[str, dict[str, Any]],
+) -> None:
+    st.subheader("Interactive Review Assistant")
+    st.caption(
+        "Advisory only. This panel explains review items and prepares bounded context for an optional LLM; "
+        "it cannot approve rules or write GIS outputs."
+    )
+    packet_by_rule = _packet_by_rule_id(packet_report)
+    if not review_rules:
+        st.info("No review-needed rules in this output.")
+        return
+    options = [str(rule.get("rule_id")) for rule in review_rules if rule.get("rule_id")]
+    selected_id = st.selectbox("Review item", options, key=f"assistant_rule_{output_dir.name}")
+    rule = _by_rule_id(review_rules, selected_id)
+    packet = packet_by_rule.get(selected_id, {})
+    if not packet:
+        st.warning("No prebuilt review assistant packet found. Rerun the slim verifier to generate review_assistant_packets.json.")
+        packet = _fallback_packet(rule)
+
+    left, right = st.columns([1, 1])
+    with left:
+        st.markdown("#### Candidate")
+        st.table([compact_rule_row(rule)])
+        st.markdown("#### Why It Is Held")
+        st.write(_list_text(rule.get("support_gaps", [])))
+        st.info(packet.get("suggested_next_action") or "Inspect the source evidence before any verifier rerun.")
+    with right:
+        source = packet.get("source", {})
+        st.markdown("#### Evidence Packet")
+        st.caption(f"Page {source.get('page') or 'unknown'} · evidence `{source.get('evidence_id') or ''}` · repair `{source.get('repair_status') or 'unknown'}`")
+        st.markdown("*Original extractor evidence*")
+        st.code(source.get("original_evidence") or _source_text(rule), language="text")
+        st.markdown("*Repaired source context*")
+        repaired = source.get("repaired_context")
+        if repaired:
+            st.code(repaired, language="text")
+        else:
+            st.caption("No repaired context available.")
+
+    _legal_context_expander(st, output_dir, rule, evidence_by_id)
+
+    st.markdown("#### Ask The Review Assistant")
+    question = st.text_input(
+        "Question for this item",
+        key=f"assistant_q_{output_dir.name}_{selected_id}",
+        placeholder="e.g. why is the operator missing, or what evidence would repair this?",
+    )
+    prompt = _assistant_prompt(packet, question)
+    with st.expander("Bounded LLM context"):
+        st.code(prompt, language="text")
+    if question:
+        answer = _optional_llm_review_answer(prompt)
+        if answer:
+            st.markdown("#### LLM Draft")
+            st.write(answer)
+            st.caption("Draft only. Any proposed repair must be rerun through the deterministic verifier.")
+        else:
+            st.info("No LLM key/client available. Use the bounded context above with a reviewer or keep using retrieval-only review.")
+
+
+def _fallback_packet(rule: dict[str, Any]) -> dict[str, Any]:
+    source = rule.get("source", {}) if isinstance(rule.get("source"), dict) else {}
+    return {
+        "rule_id": rule.get("rule_id"),
+        "candidate_rule": compact_rule_row(rule),
+        "support_gaps": list(rule.get("support_gaps", [])),
+        "suggested_next_action": "Inspect the source evidence and rerun deterministic verification only after evidence is repaired.",
+        "source": {
+            "page": source.get("page"),
+            "evidence_id": source.get("evidence_id"),
+            "original_evidence": source.get("evidence_text"),
+            "repaired_context": source.get("source_context"),
+            "repair_status": "fallback",
+        },
+    }
+
+
+def _assistant_prompt(packet: dict[str, Any], question: str) -> str:
+    context = packet.get("llm_context") or {
+        "instruction": "Advisory only. Do not approve or verify.",
+        "rule": packet.get("candidate_rule", {}),
+        "support_gaps": packet.get("support_gaps", []),
+        "original_evidence": (packet.get("source") or {}).get("original_evidence"),
+        "repaired_context": (packet.get("source") or {}).get("repaired_context"),
+        "suggested_next_action": packet.get("suggested_next_action"),
+    }
+    return (
+        f"{context.get('instruction')}\n\n"
+        f"Rule: {json.dumps(context.get('rule', {}), ensure_ascii=False)}\n"
+        f"Support gaps: {', '.join(str(gap) for gap in context.get('support_gaps', [])) or 'none'}\n"
+        f"Original evidence: {context.get('original_evidence') or ''}\n"
+        f"Repaired context: {context.get('repaired_context') or ''}\n"
+        f"Suggested next action: {context.get('suggested_next_action') or ''}\n\n"
+        f"Reviewer question: {question or 'Explain why this item is still in review.'}\n\n"
+        "Answer briefly. Cite only the evidence above. Do not say this rule is approved or verified."
+    )
+
+
+def _optional_llm_review_answer(prompt: str) -> str | None:
+    api_key = os.getenv("ANTHROPIC_API_KEY") or os.getenv("CLAUDE_API_KEY")
+    if not api_key:
+        return None
+    try:  # pragma: no cover - optional interactive network path
+        import anthropic
+
+        client = anthropic.Anthropic(api_key=api_key)
+        response = client.messages.create(
+            model=os.getenv("CLAUDE_MODEL", "claude-opus-4-8"),
+            max_tokens=700,
+            system="You are an advisory zoning review assistant. Never approve or verify rules.",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return "\n".join(block.text for block in response.content if getattr(block, "type", "") == "text").strip()
+    except Exception as error:
+        return f"LLM unavailable: {type(error).__name__}: {error}"
 
 
 def _evidence_intelligence_tab(st: Any, report: dict[str, Any]) -> None:
@@ -529,11 +874,113 @@ def _rule_graph_tab(st: Any, graph: dict[str, Any]) -> None:
         st.info("No graph output found. Rerun the slim verifier.")
 
 
+def p9_provenance_summary(rule: dict[str, Any], evidence_by_id: dict[str, dict[str, Any]]) -> dict[str, Any] | None:
+    """Collect the Pipeline 9 lane for one review rule, or None for P5 rules.
+
+    Pure data (no streamlit) so tests can pin it: provenance identifies where
+    the RAG candidate came from (pack, lane, pseudo->original page, upstream
+    filter action), and the evidence comparison shows the RAG block text next
+    to the re-anchored authentic source window — or flags the mismatch that
+    forced the rule to review.
+    """
+    candidate = rule.get("candidate") or {}
+    provenance = candidate.get("p9_provenance") or rule.get("p9_provenance") or {}
+    if not provenance:
+        return None
+    evidence = evidence_by_id.get(str(candidate.get("evidence_id") or rule.get("source_evidence_id") or "")) or {}
+    return {
+        "pack": provenance.get("rag_pack_id"),
+        "lane": provenance.get("rag_lane"),
+        "applicability": provenance.get("rag_applicability"),
+        "pseudo_page": provenance.get("pseudo_page"),
+        "original_page": provenance.get("original_page_number"),
+        "filter_action": provenance.get("target_filter_action"),
+        "block_id": provenance.get("block_id") or provenance.get("source_id"),
+        "rag_text": str(evidence.get("evidence_text") or ""),
+        "reanchored": bool(evidence.get("reanchored_to_source")),
+        "mismatched": bool(evidence.get("rag_context_mismatch")),
+        "source_window": str(evidence.get("source_context") or "") if evidence.get("reanchored_to_source") else "",
+    }
+
+
+def _legal_context_expander(
+    st: Any,
+    output_dir: Path,
+    rule: dict[str, Any],
+    evidence_by_id: dict[str, dict[str, Any]] | None = None,
+) -> None:
+    """Retrieved FULL bylaw sections for a review rule (advisory context).
+
+    The reviewer's recurring question is 'is there a qualifier NEARBY that the
+    extractor missed?' — this answers it in place: the rule's own sentence is
+    the retrieval query against the city's bylaw-RAG index, and hits come back
+    section-expanded (the whole numbered provision, not a fragment).
+    """
+    lane = p9_provenance_summary(rule, evidence_by_id or {})
+    index_path = bylaw_index_path(output_dir)
+    if index_path is None and lane is None:
+        return
+    with st.expander("Legal context (retrieved bylaw sections — advisory)"):
+        if lane:
+            st.markdown("**Pipeline 9 provenance**")
+            st.caption(
+                f"pack `{lane['pack']}` | lane {lane['lane']} ({lane['applicability']}) | "
+                f"pseudo page {lane['pseudo_page']} → bylaw page {lane['original_page']} | "
+                f"upstream filter: {lane['filter_action']} | block `{lane['block_id']}`"
+            )
+            if lane["mismatched"]:
+                st.warning(
+                    "RAG context mismatch: this block's text was NOT found on its claimed "
+                    "source page — the candidate is forced to review."
+                )
+            if lane["reanchored"] and lane["source_window"]:
+                rag_col, source_col = st.columns(2)
+                with rag_col:
+                    st.markdown("*RAG block text (Pipeline 9)*")
+                    st.markdown(
+                        f"<div class='bylaw-section'>{html.escape(_short_display_quote(lane['rag_text']))}</div>",
+                        unsafe_allow_html=True,
+                    )
+                with source_col:
+                    st.markdown("*Re-anchored source window (authentic page)*")
+                    st.markdown(
+                        f"<div class='bylaw-section'>{html.escape(_short_display_quote(lane['source_window']))}</div>",
+                        unsafe_allow_html=True,
+                    )
+            st.caption("Provenance is display-only — upstream labels never promote a candidate.")
+        if index_path is None:
+            return
+        try:
+            from burnaby_prototype.bylaw_rag import load_index
+
+            query = " ".join(
+                str(rule.get(field) or "")
+                for field in ("rule_object", "applies_to", "constraint_scope", "condition", "value", "unit")
+            )
+            hits = load_index(index_path).ask(query, top_k=3)
+        except Exception as error:  # pragma: no cover - optional dep path
+            st.caption(f"Retrieval unavailable: {error}")
+            return
+        if not hits:
+            st.caption("No related sections retrieved.")
+            return
+        for hit in hits:
+            label = hit.get("section") or hit.get("chunk_id")
+            st.markdown(
+                f"<div class='bylaw-section'><b>[{html.escape(str(label))}]</b><br>"
+                f"{html.escape(_short_display_quote(hit.get('section_text') or hit.get('text') or ''))}</div>",
+                unsafe_allow_html=True,
+            )
+        st.caption("Retrieved context only — it cannot change the rule's decision.")
+
+
 def _candidate_compare_tab(
     st: Any,
     triage_items: list[dict[str, Any]],
     review_rules: list[dict[str, Any]],
     verified_rules: list[dict[str, Any]],
+    output_dir: Path = DEFAULT_OUTPUT_DIR,
+    evidence_by_id: dict[str, dict[str, Any]] | None = None,
 ) -> None:
     st.subheader("Candidate vs Verified")
     st.caption("Use this view to compare the candidate claim against the closest already-verified rule before deciding whether to tune the verifier or repair evidence.")
@@ -543,6 +990,7 @@ def _candidate_compare_tab(
     options = [item["rule_id"] for item in triage_items]
     selected_id = st.selectbox("Review rule", options)
     review_rule = _by_rule_id(review_rules, selected_id)
+    _legal_context_expander(st, output_dir, review_rule, evidence_by_id)
     triage_item = next((item for item in triage_items if item["rule_id"] == selected_id), {})
     semantic_match_id = triage_item.get("semantic_verified_rule_id") or review_rule.get("semantic_verified_rule_id")
     lexical_match_id = triage_item.get("similar_verified_rule_id") or review_rule.get("similar_verified_rule_id")
@@ -870,20 +1318,659 @@ def _preflight_tab(st: Any, preflight: dict[str, Any]) -> None:
         return
     checks = preflight.get("checks", {})
     st.table([{"check": key, "status": "OK" if value else "MISSING"} for key, value in checks.items()])
-    if preflight.get("can_use_saved_registry"):
+    # The preflight script (scripts/run_pipeline5_extraction.py) only emits
+    # checks/blockers/can_execute, so the saved-registry status is derived from
+    # its saved_final_registry_exists check rather than from keys it never writes.
+    if checks.get("saved_final_registry_exists"):
         st.success("Saved Pipeline 5 registry found. The verifier can run from this saved extraction output.")
     else:
-        st.error("Saved registry missing: " + ", ".join(preflight.get("saved_registry_blockers", [])))
+        failed_checks = [name for name, passed in checks.items() if not passed]
+        st.error("Saved registry missing: " + (", ".join(failed_checks) or "saved_final_registry_exists"))
 
-    execution_blockers = preflight.get("execution_blockers") or preflight.get("blockers") or []
+    execution_blockers = preflight.get("blockers") or []
     if execution_blockers:
         st.warning("Full notebook execution still needs: " + ", ".join(execution_blockers))
     else:
         st.success("Pipeline 5 notebook execution is ready.")
     st.json({
         key: preflight.get(key)
-        for key in ("pipeline5_dir", "notebook", "final_registry", "can_use_saved_registry", "can_execute")
+        for key in ("pipeline5_dir", "notebook", "final_registry", "can_execute")
     })
+
+
+# ---------------------------------------------------------------------------
+# v2: demo-lot geometry helpers (shared by the Map tab, the SVG fallback, and
+# scripts/build_envelope_3d.py). All values come straight from verified-only
+# exports; the lot itself is a representative demo rectangle, NOT a parcel.
+# ---------------------------------------------------------------------------
+
+
+def lot_line_constraints(gis_export: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
+    """Group gis_felt_export constraints by demo-lot side (front/rear/side/lane)."""
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for constraint in gis_export.get("constraints", []):
+        side = LOT_LINE_TARGETS.get(str(constraint.get("geometry_target")))
+        if side is not None and constraint.get("value_numeric") is not None:
+            grouped.setdefault(side, []).append(constraint)
+    return grouped
+
+
+def governing_lot_line_setbacks(gis_export: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    """Most restrictive setback per side (max value, since setbacks are `>=`)."""
+    return {
+        side: max(entries, key=lambda entry: float(entry["value_numeric"]))
+        for side, entries in lot_line_constraints(gis_export).items()
+    }
+
+
+def export_max_height(gis_export: dict[str, Any]) -> dict[str, Any] | None:
+    """Tallest verified height constraint (m) from gis_felt_export constraints."""
+    candidates = [
+        constraint
+        for constraint in gis_export.get("constraints", [])
+        if "height" in str(constraint.get("parameter_key", ""))
+        and str(constraint.get("unit", "")).strip() == "m"
+        and constraint.get("value_numeric") is not None
+    ]
+    if not candidates:
+        return None
+    return max(candidates, key=lambda entry: float(entry["value_numeric"]))
+
+
+def envelope_governing_setbacks(envelope: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    """Most restrictive setback per lot line from buildable_envelope.json."""
+    governing: dict[str, dict[str, Any]] = {}
+    for lot_line, entries in (envelope.get("lot_line_setbacks_m") or {}).items():
+        valid = [entry for entry in entries if entry.get("value_numeric") is not None]
+        if valid:
+            governing[lot_line] = max(valid, key=lambda entry: float(entry["value_numeric"]))
+    return governing
+
+
+def envelope_max_height(envelope: dict[str, Any]) -> dict[str, Any] | None:
+    """Tallest verified height limit across roles, with its role attached."""
+    best: dict[str, Any] | None = None
+    for role, entries in (envelope.get("max_height_m_by_role") or {}).items():
+        for entry in entries:
+            if entry.get("value_numeric") is None:
+                continue
+            if best is None or float(entry["value_numeric"]) > float(best["value_numeric"]):
+                best = {**entry, "role": role}
+    return best
+
+
+def envelope_max_storeys(envelope: dict[str, Any]) -> dict[str, Any] | None:
+    """Highest verified storey limit across roles, with its role attached."""
+    best: dict[str, Any] | None = None
+    for role, entries in (envelope.get("max_storeys_by_role") or {}).items():
+        for entry in entries:
+            if entry.get("value_numeric") is None:
+                continue
+            if best is None or float(entry["value_numeric"]) > float(best["value_numeric"]):
+                best = {**entry, "role": role}
+    return best
+
+
+def demo_footprint_insets(setbacks: dict[str, dict[str, Any]]) -> dict[str, float]:
+    """Map governing buildable_envelope setbacks onto the 4-sided demo lot.
+
+    The demo lot has no lane, so lane setbacks are reported in tables but do
+    not inset the footprint.
+    """
+    return {
+        "front": float(setbacks.get("front_lot_line", {}).get("value_numeric") or 0.0),
+        "rear": float(setbacks.get("rear_lot_line", {}).get("value_numeric") or 0.0),
+        "side": float(setbacks.get("side_lot_line", {}).get("value_numeric") or 0.0),
+    }
+
+
+def build_envelope_svg(envelope: dict[str, Any]) -> str:
+    """Plan-view SVG fallback for the 3D envelope viewer.
+
+    Always renders without any optional dependency: demo lot rectangle, the
+    setback-inset buildable footprint, and annotated setback arrows carrying
+    values and governing rule ids. Returns well-formed standalone SVG.
+    """
+    setbacks = envelope_governing_setbacks(envelope or {})
+    insets = demo_footprint_insets(setbacks)
+    height = envelope_max_height(envelope or {})
+    storeys = envelope_max_storeys(envelope or {})
+
+    scale = 8.0  # px per metre
+    margin_x, margin_y = 200.0, 60.0
+    lot_w, lot_d = DEMO_LOT_WIDTH_M * scale, DEMO_LOT_DEPTH_M * scale
+    width, height_px = lot_w + 2 * margin_x, lot_d + 2 * margin_y + 40
+    lot_x, lot_y = margin_x, margin_y  # rear (top) at lot_y, front (bottom) at lot_y + lot_d
+
+    fp_x = lot_x + insets["side"] * scale
+    fp_y = lot_y + insets["rear"] * scale
+    fp_w = max(lot_w - 2 * insets["side"] * scale, 0.0)
+    fp_h = max(lot_d - (insets["front"] + insets["rear"]) * scale, 0.0)
+
+    def _label(entry: dict[str, Any], name: str) -> str:
+        value = entry.get("value_numeric")
+        return f"{name} {value} {entry.get('unit') or 'm'} ({entry.get('rule_id')})" if value is not None else name
+
+    parts: list[str] = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:g} {height_px:g}" '
+        f'width="{width:g}" height="{height_px:g}" role="img" aria-label="Buildable envelope plan view">',
+        "<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'>"
+        "<path d='M 0 0 L 10 5 L 0 10 z' fill='#cf222e'/></marker></defs>",
+        f"<rect x='0' y='0' width='{width:g}' height='{height_px:g}' fill='#ffffff'/>",
+        f"<text x='{lot_x:g}' y='{margin_y - 32:g}' font-size='16' font-weight='700' fill='#172033'>"
+        f"{html.escape(str(envelope.get('city') or ''))} {html.escape(str(envelope.get('zone') or ''))} buildable envelope — plan view</text>",
+        f"<text x='{lot_x:g}' y='{margin_y - 14:g}' font-size='12' fill='#57606a'>"
+        f"Demo lot {DEMO_LOT_WIDTH_M:g} m x {DEMO_LOT_DEPTH_M:g} m (representative, not a real parcel). Front lot line at bottom.</text>",
+        # Lot rectangle.
+        f"<rect x='{lot_x:g}' y='{lot_y:g}' width='{lot_w:g}' height='{lot_d:g}' fill='#f1f4f7' stroke='#57606a' stroke-width='2'/>",
+        # Buildable footprint after governing setbacks.
+        f"<rect x='{fp_x:g}' y='{fp_y:g}' width='{fp_w:g}' height='{fp_h:g}' fill='#1a7f37' fill-opacity='0.22' stroke='#1a7f37' stroke-width='2'/>",
+    ]
+
+    mid_x, mid_y = lot_x + lot_w / 2, lot_y + lot_d / 2
+    arrows: list[tuple[str, str, float, float, float, float, float, float, str]] = []
+    front = setbacks.get("front_lot_line")
+    if front:
+        arrows.append(("front", _label(front, "front"), mid_x, lot_y + lot_d, mid_x, fp_y + fp_h, mid_x + 8, lot_y + lot_d - insets["front"] * scale / 2, "start"))
+    rear = setbacks.get("rear_lot_line")
+    if rear:
+        arrows.append(("rear", _label(rear, "rear"), mid_x, lot_y, mid_x, fp_y, mid_x + 8, lot_y + insets["rear"] * scale / 2 + 4, "start"))
+    side = setbacks.get("side_lot_line")
+    if side:
+        arrows.append(("side-left", _label(side, "side"), lot_x, mid_y, fp_x, mid_y, lot_x - 8, mid_y - 8, "end"))
+        arrows.append(("side-right", _label(side, "side"), lot_x + lot_w, mid_y, fp_x + fp_w, mid_y, lot_x + lot_w + 8, mid_y - 8, "start"))
+    for _key, label, x1, y1, x2, y2, tx, ty, anchor in arrows:
+        parts.append(
+            f"<line x1='{x1:g}' y1='{y1:g}' x2='{x2:g}' y2='{y2:g}' stroke='#cf222e' stroke-width='2' marker-end='url(#arrow)'/>"
+        )
+        parts.append(
+            f"<text x='{tx:g}' y='{ty:g}' font-size='12' fill='#172033' text-anchor='{anchor}'>{html.escape(label)}</text>"
+        )
+
+    notes_y = lot_y + lot_d + 24
+    note_lines: list[str] = []
+    if height:
+        note_lines.append(_label(height, "max height") + f" — {height.get('role')}" + (f", {height.get('condition')}" if height.get("condition") else ""))
+    if storeys:
+        note_lines.append(_label(storeys, "max storeys") + f" — {storeys.get('role')}")
+    lane = setbacks.get("lane_lot_line")
+    if lane:
+        note_lines.append(_label(lane, "lane setback") + " — demo lot has no lane; shown for reference only")
+    for index, line in enumerate(note_lines):
+        parts.append(
+            f"<text x='{lot_x:g}' y='{notes_y + index * 16:g}' font-size='12' fill='#57606a'>{html.escape(line)}</text>"
+        )
+    parts.append("</svg>")
+    return "".join(parts)
+
+
+def _map_tab(st: Any, data: dict[str, Any], city_key: str) -> None:
+    """City-centered pydeck map with a DEMO parcel showing verified constraints."""
+    st.subheader("Constraint Map (Demo Parcel)")
+    st.caption(
+        f"Representative {DEMO_LOT_WIDTH_M:g} m x {DEMO_LOT_DEPTH_M:g} m demo lot placed at the {city_key} city "
+        "centroid. It is NOT a real parcel; it only visualizes verified setback and height constraints."
+    )
+    gis_export = data.get("gis_export", {})
+    if not gis_export:
+        st.info("No gis_felt_export.json found for this city. Rerun the slim verifier.")
+        return
+    try:
+        import pydeck as pdk
+    except ModuleNotFoundError:
+        st.info("pydeck not installed — pip install -e .[map]")
+        return
+    centroid = CITY_CENTROIDS.get(city_key)
+    if centroid is None:
+        st.info(f"No map centroid configured for city prefix `{city_key}`. Add one to CITY_CENTROIDS.")
+        return
+
+    import math
+
+    lat0, lon0 = centroid
+    m_per_deg_lat = 111_320.0
+    m_per_deg_lon = m_per_deg_lat * math.cos(math.radians(lat0))
+
+    def _corner(dx_m: float, dy_m: float) -> list[float]:
+        return [lon0 + dx_m / m_per_deg_lon, lat0 + dy_m / m_per_deg_lat]
+
+    half_w, half_d = DEMO_LOT_WIDTH_M / 2, DEMO_LOT_DEPTH_M / 2
+
+    def _rect(x_min: float, x_max: float, y_min: float, y_max: float) -> list[list[float]]:
+        return [_corner(x_min, y_min), _corner(x_max, y_min), _corner(x_max, y_max), _corner(x_min, y_max)]
+
+    def _tooltip(constraint: dict[str, Any], note: str) -> str:
+        quote = _short_display_quote(constraint.get("source_quote", ""), 180)
+        return (
+            f"<b>{html.escape(str(constraint.get('parameter_key')))}</b><br/>"
+            f"{html.escape(str(constraint.get('operator')))} {html.escape(str(constraint.get('value')))} "
+            f"{html.escape(str(constraint.get('unit') or ''))}<br/>"
+            f"rule: {html.escape(str(constraint.get('source_rule_id')))}<br/>"
+            f"{html.escape(note)}<br/><i>{html.escape(quote)}</i>"
+        )
+
+    setbacks = governing_lot_line_setbacks(gis_export)
+    flat_polygons: list[dict[str, Any]] = [
+        {
+            "polygon": _rect(-half_w, half_w, -half_d, half_d),
+            "fill": [87, 96, 106, 40],
+            "tooltip": f"<b>Demo lot</b><br/>{DEMO_LOT_WIDTH_M:g} m x {DEMO_LOT_DEPTH_M:g} m representative lot (front at south edge). Not a real parcel.",
+        }
+    ]
+    # Setback strips (no-build bands between the lot line and the inset footprint).
+    front = float(setbacks.get("front", {}).get("value_numeric") or 0.0)
+    rear = float(setbacks.get("rear", {}).get("value_numeric") or 0.0)
+    side = float(setbacks.get("side", {}).get("value_numeric") or 0.0)
+    strip_specs = [
+        ("front", _rect(-half_w, half_w, -half_d, -half_d + front), front),
+        ("rear", _rect(-half_w, half_w, half_d - rear, half_d), rear),
+        ("side", _rect(-half_w, -half_w + side, -half_d, half_d), side),
+        ("side", _rect(half_w - side, half_w, -half_d, half_d), side),
+    ]
+    for side_key, polygon, inset in strip_specs:
+        constraint = setbacks.get(side_key)
+        if constraint is None or inset <= 0:
+            continue
+        flat_polygons.append(
+            {
+                "polygon": polygon,
+                "fill": [207, 34, 46, 70],
+                "tooltip": _tooltip(constraint, f"{side_key} setback band (no-build)"),
+            }
+        )
+
+    layers = [
+        pdk.Layer(
+            "PolygonLayer",
+            data=flat_polygons,
+            get_polygon="polygon",
+            get_fill_color="fill",
+            get_line_color=[87, 96, 106, 220],
+            line_width_min_pixels=1,
+            stroked=True,
+            pickable=True,
+        )
+    ]
+
+    height = export_max_height(gis_export)
+    if height is not None:
+        prism = [
+            {
+                "polygon": _rect(-half_w + side, half_w - side, -half_d + front, half_d - rear),
+                "height": float(height["value_numeric"]),
+                "tooltip": _tooltip(height, "buildable footprint extruded to the max verified height"),
+            }
+        ]
+        layers.append(
+            pdk.Layer(
+                "PolygonLayer",
+                data=prism,
+                get_polygon="polygon",
+                get_fill_color=[26, 127, 55, 130],
+                get_line_color=[26, 127, 55, 255],
+                get_elevation="height",
+                extruded=True,
+                stroked=True,
+                pickable=True,
+            )
+        )
+    else:
+        st.caption("No verified height constraint found, so the footprint is drawn flat.")
+
+    st.pydeck_chart(
+        pdk.Deck(
+            layers=layers,
+            initial_view_state=pdk.ViewState(latitude=lat0, longitude=lon0, zoom=17.4, pitch=45, bearing=0),
+            tooltip={"html": "{tooltip}"},
+            map_style="light",
+        )
+    )
+
+    st.markdown("#### Constraints behind this demo lot")
+    rows = []
+    for side_key, entries in sorted(lot_line_constraints(gis_export).items()):
+        for constraint in entries:
+            rows.append(
+                {
+                    "side": side_key,
+                    "parameter_key": constraint.get("parameter_key"),
+                    "operator": constraint.get("operator"),
+                    "value": constraint.get("value_numeric"),
+                    "unit": constraint.get("unit"),
+                    "condition": constraint.get("condition"),
+                    "rule_id": constraint.get("source_rule_id"),
+                    "evidence": _short_display_quote(constraint.get("source_quote", ""), 140),
+                }
+            )
+    if height is not None:
+        rows.append(
+            {
+                "side": "height",
+                "parameter_key": height.get("parameter_key"),
+                "operator": height.get("operator"),
+                "value": height.get("value_numeric"),
+                "unit": height.get("unit"),
+                "condition": height.get("condition"),
+                "rule_id": height.get("source_rule_id"),
+                "evidence": _short_display_quote(height.get("source_quote", ""), 140),
+            }
+        )
+    if rows:
+        st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    else:
+        st.info("No lot-line or height constraints in gis_felt_export.json for this city.")
+    st.caption("Bands use the most restrictive verified variant per lot line; conditional variants are listed in the table.")
+
+
+def load_bylaw_sections(bylaw_dir: Path) -> list[dict[str, str]]:
+    """Load extracted bylaw text from data/bylaws/<city>/, tolerating many shapes.
+
+    A parallel extraction effort owns that folder, so this reader is
+    deliberately defensive: it renders whatever sections it can find and
+    returns [] when nothing usable exists.
+    """
+    if not bylaw_dir.is_dir():
+        return []
+    sections: list[dict[str, str]] = []
+    # Metadata sidecars (e.g. provenance.json) are not bylaw text.
+    skipped_stems = {"provenance", "manifest", "metadata", "config"}
+    json_paths = sorted(path for path in bylaw_dir.glob("*.json") if path.stem.lower() not in skipped_stems)
+    preferred = bylaw_dir / "extracted_text.json"
+    if preferred in json_paths:
+        json_paths = [preferred, *[path for path in json_paths if path != preferred]]
+    for path in json_paths:
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        sections.extend(extract_bylaw_sections(payload))
+        if sections:
+            return sections
+    for path in sorted([*bylaw_dir.glob("*.txt"), *bylaw_dir.glob("*.md")]):
+        try:
+            text = path.read_text(encoding="utf-8").strip()
+        except OSError:
+            continue
+        if text:
+            sections.append({"title": path.stem, "text": text})
+    return sections
+
+
+def extract_bylaw_sections(payload: Any) -> list[dict[str, str]]:
+    """Normalize an unknown extraction payload into [{title, text}, ...]."""
+    title_keys = ("section", "section_id", "id", "anchor", "number", "title", "heading", "name")
+    text_keys = ("text", "content", "body", "raw_text", "section_text")
+
+    def _from_dict_item(item: dict[str, Any], fallback_title: str) -> dict[str, str] | None:
+        text = next((str(item[key]) for key in text_keys if isinstance(item.get(key), str) and item[key].strip()), "")
+        if not text:
+            return None
+        title = next((str(item[key]) for key in title_keys if item.get(key) not in (None, "")), fallback_title)
+        heading = next((str(item[key]) for key in ("title", "heading") if item.get(key) not in (None, "")), "")
+        if heading and heading != title:
+            title = f"{title} — {heading}"
+        return {"title": title, "text": text}
+
+    sections: list[dict[str, str]] = []
+    if isinstance(payload, str):
+        if payload.strip():
+            sections.append({"title": "Extracted text", "text": payload})
+    elif isinstance(payload, list):
+        for index, item in enumerate(payload, start=1):
+            if isinstance(item, dict):
+                section = _from_dict_item(item, f"Section {index}")
+                if section:
+                    sections.append(section)
+            elif isinstance(item, str) and item.strip():
+                sections.append({"title": f"Section {index}", "text": item})
+    elif isinstance(payload, dict):
+        nested = payload.get("sections")
+        if isinstance(nested, (list, dict)):
+            return extract_bylaw_sections(nested if isinstance(nested, list) else [
+                {"title": key, **(value if isinstance(value, dict) else {"text": str(value)})}
+                for key, value in nested.items()
+            ])
+        direct = _from_dict_item(payload, "Extracted text")
+        if direct:
+            sections.append(direct)
+        else:
+            # Loose {key: text} shape: only accept prose-like values so
+            # metadata payloads (urls, hashes, timestamps) are not mistaken
+            # for bylaw sections.
+            for key, value in payload.items():
+                if isinstance(value, str) and len(value.split()) >= 8:
+                    sections.append({"title": str(key), "text": value})
+                elif isinstance(value, dict):
+                    section = _from_dict_item(value, str(key))
+                    if section:
+                        sections.append(section)
+    return sections
+
+
+def highlight_evidence(section_text: str, quote: str) -> tuple[str, bool]:
+    """Mark the cited evidence inside section text via simple substring markup.
+
+    Both sides are whitespace-normalized; progressively shorter quote prefixes
+    are tried so truncated evidence quotes still anchor. Returns escaped HTML
+    plus whether a match was found.
+    """
+    normalized = " ".join(str(section_text or "").split())
+    words = " ".join(str(quote or "").split()).rstrip(". ").removesuffix("...").split()
+    for length in (len(words), 24, 16, 10, 6):
+        needle = " ".join(words[:length])
+        if len(needle) < 12:
+            break
+        index = normalized.lower().find(needle.lower())
+        if index >= 0:
+            end = index + len(needle)
+            return (
+                html.escape(normalized[:index])
+                + "<mark class='evidence-hit'>"
+                + html.escape(normalized[index:end])
+                + "</mark>"
+                + html.escape(normalized[end:]),
+                True,
+            )
+    return html.escape(normalized), False
+
+
+def _rule_evidence_quote(rule: dict[str, Any]) -> str:
+    """Best evidence text for a rule: source text, then any proof-trace quote."""
+    quote = _source_text(rule)
+    if quote:
+        return quote
+    proof_trace = rule.get("proof_trace")
+    if isinstance(proof_trace, dict):
+        for entry in proof_trace.values():
+            if isinstance(entry, dict) and entry.get("evidence_quote"):
+                return str(entry["evidence_quote"])
+    return ""
+
+
+def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
+    """Local hybrid-RAG retrieval over the city's bylaw corpus. ADVISORY only:
+    answers are retrieved clauses with section ids — never a verification."""
+    index_path = bylaw_index_path(output_dir)
+    city_stem = city_stem_from_dir(output_dir)
+    st.markdown("#### Ask the bylaw")
+    if index_path is None:
+        st.info(
+            "No retrieval index yet — build it with "
+            f"`.venv/bin/python scripts/build_rag_index.py --city {city_stem}`."
+        )
+        return
+    question = st.text_input(
+        "Question (retrieval is local BM25+dense with section expansion; results are clauses, not advice)",
+        key=f"rag_q_{city_stem}",
+        placeholder="e.g. what is the maximum height for a backyard suite",
+    )
+    if not question:
+        return
+    try:
+        from burnaby_prototype.bylaw_rag import load_index
+
+        hits = load_index(index_path).ask(question, top_k=4)
+    except Exception as error:  # pragma: no cover - depends on optional deps
+        st.warning(f"Retrieval unavailable: {error}")
+        return
+    if not hits:
+        st.info("No clause shares any term with that question — try the bylaw's own vocabulary.")
+        return
+    for hit in hits:
+        label = hit.get("section") or hit.get("chunk_id")
+        st.markdown(
+            f"<div class='bylaw-section'><b>[{html.escape(str(label))}]</b> "
+            f"score {hit['score']:.4f}<br>{html.escape(_short_display_quote(hit.get('section_text') or hit.get('text') or ''))}</div>",
+            unsafe_allow_html=True,
+        )
+    st.caption("Advisory retrieval — the verified rule set remains the only executable output.")
+
+
+def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
+    """Section-anchored bylaw text with rule-picked evidence highlighting."""
+    st.subheader("Bylaw Text")
+    output_dir = Path(data.get("output_dir") or DEFAULT_OUTPUT_DIR)
+    bylaw_dir = ROOT / "data" / "bylaws" / city_stem_from_dir(output_dir)
+    sections = load_bylaw_sections(bylaw_dir)
+    _ask_the_bylaw_panel(st, output_dir)
+
+    rules = [(rule, "verified") for rule in data["verified"]] + [(rule, "review") for rule in data["review"]]
+    rule_options = {
+        f"{rule.get('rule_id')} [{status}] — {_humanize(rule.get('rule_object'))}": rule
+        for rule, status in rules
+        if rule.get("rule_id")
+    }
+
+    if not sections:
+        st.info(
+            f"No extracted bylaw text found under `{bylaw_dir}` yet — falling back to the "
+            "evidence-units view. Once extraction lands there, this tab shows section-anchored bylaw text."
+        )
+        if rule_options:
+            selected = st.selectbox("Rule", list(rule_options), key="bylaw_rule_fallback")
+            rule = rule_options[selected]
+            quote = _rule_evidence_quote(rule)
+            if quote:
+                st.markdown("#### Cited evidence")
+                st.markdown(
+                    f"<div class='bylaw-section'><mark class='evidence-hit'>{html.escape(_short_display_quote(quote))}</mark></div>",
+                    unsafe_allow_html=True,
+                )
+        evidence_units = data.get("evidence_units", [])
+        if evidence_units:
+            st.markdown("#### Evidence units")
+            rows = [
+                {
+                    "evidence_id": unit.get("evidence_id"),
+                    "page": unit.get("page"),
+                    "type": unit.get("evidence_type"),
+                    "section": unit.get("section"),
+                    "text": _short_display_quote(unit.get("evidence_text", ""), 200),
+                }
+                for unit in evidence_units[:250]
+            ]
+            st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+        return
+
+    st.caption(f"{len(sections)} extracted section(s) from `{bylaw_dir}`. Pick a rule to highlight its cited evidence.")
+    selected_rule_label = st.selectbox("Rule", ["(none)", *rule_options], key="bylaw_rule_picker")
+    quote = ""
+    if selected_rule_label != "(none)":
+        quote = _rule_evidence_quote(rule_options[selected_rule_label])
+        if not quote:
+            st.caption("This rule carries no evidence quote; sections are shown without highlighting.")
+
+    matched_index = 0
+    highlighted: dict[int, str] = {}
+    if quote:
+        for index, section in enumerate(sections):
+            markup, hit = highlight_evidence(section["text"], quote)
+            if hit:
+                highlighted[index] = markup
+                if len(highlighted) == 1:
+                    matched_index = index
+        if highlighted:
+            st.success(f"Evidence found in {len(highlighted)} section(s).")
+        else:
+            st.warning("The cited evidence text was not found verbatim in any extracted section.")
+
+    titles = [section["title"] for section in sections]
+    picked = st.selectbox("Section", range(len(titles)), index=matched_index, format_func=lambda i: titles[i], key="bylaw_section_picker")
+    body = highlighted.get(picked) or html.escape(" ".join(sections[picked]["text"].split()))
+    st.markdown(
+        f"<div class='bylaw-section'><h4>{html.escape(sections[picked]['title'])}</h4>{body}</div>",
+        unsafe_allow_html=True,
+    )
+
+
+def _envelope_3d_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
+    """Three.js buildable-envelope viewer with an always-available SVG fallback."""
+    st.subheader("3D Buildable Envelope")
+    envelope = data.get("buildable_envelope", {})
+    if not envelope:
+        st.info(
+            "No buildable_envelope.json for this city yet. The 3D viewer and plan view appear once the "
+            "verified-only envelope export exists in the output directory."
+        )
+        return
+    st.caption(
+        f"Demo {DEMO_LOT_WIDTH_M:g} m x {DEMO_LOT_DEPTH_M:g} m lot (representative, not a real parcel), "
+        "derived only from verified rules in buildable_envelope.json."
+    )
+
+    html_path = output_dir / "envelope_3d.html"
+    if html_path.exists():
+        try:
+            # Prefer the modern embed API; components.v1.html is deprecated in
+            # streamlit >= 1.58 but kept as a fallback for older installs.
+            if hasattr(st, "iframe"):
+                st.iframe(html_path, height=640)
+            else:
+                from streamlit.components.v1 import html as components_html
+
+                components_html(html_path.read_text(encoding="utf-8"), height=640)
+            st.caption("Three.js viewer (CDN). Drag to orbit; hover faces for the governing rule.")
+        except Exception:  # embed support varies by streamlit version
+            st.info("Inline embedding unavailable in this Streamlit version — showing the SVG plan view only.")
+    else:
+        st.info(
+            "Three.js viewer not built yet. Run: "
+            f"`.venv/bin/python scripts/build_envelope_3d.py --output-dir {output_dir}`"
+        )
+
+    st.markdown("#### Plan view (always available, printable)")
+    st.markdown(build_envelope_svg(envelope), unsafe_allow_html=True)
+
+    governing = envelope_governing_setbacks(envelope)
+    rows = [
+        {
+            "constraint": lot_line,
+            "value": entry.get("value_numeric"),
+            "unit": entry.get("unit"),
+            "operator": entry.get("operator"),
+            "condition": entry.get("condition"),
+            "applies_to": entry.get("applies_to"),
+            "rule_id": entry.get("rule_id"),
+        }
+        for lot_line, entry in sorted(governing.items())
+    ]
+    for picker, name in ((envelope_max_height, "max_height"), (envelope_max_storeys, "max_storeys")):
+        entry = picker(envelope)
+        if entry:
+            rows.append(
+                {
+                    "constraint": f"{name} ({entry.get('role')})",
+                    "value": entry.get("value_numeric"),
+                    "unit": entry.get("unit"),
+                    "operator": entry.get("operator"),
+                    "condition": entry.get("condition"),
+                    "applies_to": entry.get("applies_to"),
+                    "rule_id": entry.get("rule_id"),
+                }
+            )
+    if rows:
+        st.markdown("#### Governing constraints (most restrictive verified variant per family)")
+        st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
 
 
 def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> None:
@@ -893,7 +1980,6 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
     proposal = benchmark.get("proposal_metrics", {})
     counts = validation.get("bucket_counts", {})
     review_counts = _named_counts(data.get("router", {}).get("summary", {}).get("action_counts", []))
-    rerun = data.get("rerun", {})
     intelligence = data.get("intelligence", {})
     bundle_rerun = data.get("bundle_rerun", {})
     bundle_promotion = data.get("bundle_promotion", {})
@@ -902,35 +1988,42 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
     # These KPI cards put the two most actionable review-reduction paths in the
     # first screen: alternate evidence and safe verifier tuning.
     cards = [
-        ("Verified", counts.get("verified", 0)),
-        ("Review", counts.get("review_needed", 0)),
-        ("Filtered Review", len(filtered_items)),
-        ("Better Evidence", review_counts.get("retry_with_better_evidence", 0)),
-        ("Bundle Safe Retry", intelligence.get("safe_retry_count", 0)),
-        ("Promoted By Bundle", bundle_promotion.get("promotion_count", 0)),
-        ("Bundle Ready", bundle_rerun.get("promotion_ready_count", 0)),
-        ("Evidence-Fix Path", resolution.get("can_promote_after_evidence_fix_count", 0)),
-        ("Semantic Near-Match", semantic.get("high_similarity_count", 0)),
-        ("Precision", f"{metrics.get('verified_precision', 0):.2f}"),
-        ("False Approvals", proposal.get("false_approval_count", 0)),
+        ("Verified", counts.get("verified", 0), "verified"),
+        ("Review", counts.get("review_needed", 0), "review"),
+        ("Filtered Review", len(filtered_items), "review"),
+        ("Better Evidence", review_counts.get("retry_with_better_evidence", 0), ""),
+        ("Bundle Safe Retry", intelligence.get("safe_retry_count", 0), ""),
+        ("Promoted By Bundle", bundle_promotion.get("promotion_count", 0), "verified"),
+        ("Bundle Ready", bundle_rerun.get("promotion_ready_count", 0), ""),
+        ("Evidence-Fix Path", resolution.get("can_promote_after_evidence_fix_count", 0), ""),
+        ("Semantic Near-Match", semantic.get("high_similarity_count", 0), ""),
+        ("Precision", f"{metrics.get('verified_precision', 0):.2f}", "verified"),
+        ("False Approvals", proposal.get("false_approval_count", 0), "rejected"),
     ]
     cards_html = "".join(
-        f"<div class='metric'><div class='metric-label'>{html.escape(label)}</div>"
+        f"<div class='metric{' metric-' + tone if tone else ''}'>"
+        f"<div class='metric-label'>{html.escape(label)}</div>"
         f"<div class='metric-value'>{html.escape(str(value))}</div></div>"
-        for label, value in cards
+        for label, value, tone in cards
     )
     st.markdown(f"<div class='metric-grid'>{cards_html}</div>", unsafe_allow_html=True)
 
 
-def _render_header(st: Any) -> None:
+def _render_header(st: Any, city_label: str = "Burnaby R1") -> None:
     """Render a compact product-style header for the review console."""
     st.markdown(
-        """
+        f"""
 <div class="app-header">
   <div>
     <div class="eyebrow">Verification Review Console</div>
-    <h1>Burnaby Verification Dashboard</h1>
+    <h1>{html.escape(city_label)} Verification Dashboard</h1>
     <p>Inspect review rules, compare candidate claims against verified rules, and identify the safest path to reduce review volume.</p>
+  </div>
+  <div class="status-legend">
+    <span class="status-pill status-verified">verified</span>
+    <span class="status-pill status-review">review</span>
+    <span class="status-pill status-rejected">rejected</span>
+    <span class="status-pill status-not_used">not_used</span>
   </div>
 </div>
 """,
@@ -1048,7 +2141,7 @@ def _rule_sentence(rule: dict[str, Any]) -> str:
     value_text = _format_value_unit(value, unit)
     operator_phrase = _operator_phrase(rule.get("operator"), rule.get("constraint_type"), value_text)
 
-    scope_phrase = f" for {_articleless(scope)}" if scope else ""
+    scope_phrase = f" for {scope.strip()}" if scope else ""
     sentence = f"{subject}: {rule_object}{scope_phrase} {operator_phrase}"
     if condition:
         sentence += f" when {condition}"
@@ -1263,27 +2356,6 @@ def _safe_tuning_detail_sentences(item: dict[str, Any]) -> list[str]:
     ]
 
 
-def _audit_detail_sentences(item: dict[str, Any]) -> list[str]:
-    """Explain one review audit item in plain English."""
-    action = item.get("action_bucket") or "unclassified"
-    likely = item.get("likely_status") or "unknown"
-    score = _display_value(item.get("likely_correct_score"))
-    gaps = _list_text(item.get("support_gaps", []))
-    repair_evidence = item.get("best_repair_evidence_id") or "none"
-    action_reason = _sentence_fragment(item.get("action_reason") or "no action reason recorded")
-    next_step = _sentence_fragment(
-        item.get("next_step")
-        or "inspect the evidence and decide whether this needs evidence repair, verifier tuning, or legal review"
-    )
-    return [
-        f"Candidate claim: {_rule_sentence(item)}",
-        f"The audit bucket is `{action}` because: {action_reason}.",
-        f"The likely status is `{likely}` with score {score}. Blocking gaps: {gaps}.",
-        f"Suggested repair evidence: {repair_evidence}.",
-        f"Next human action: {next_step}.",
-    ]
-
-
 def _bylaw_lookup_panel(st: Any, evidence: dict[str, Any], rule_like: dict[str, Any]) -> None:
     """Tell a reviewer how to find and verify the rule in the source bylaw."""
     page = evidence.get("page") or rule_like.get("page")
@@ -1294,7 +2366,7 @@ def _bylaw_lookup_panel(st: Any, evidence: dict[str, Any], rule_like: dict[str, 
     page_text = f"page `{page}`" if page not in (None, "") else "the cited section/page from the evidence packet"
     st.markdown(
         f"""
-1. Open the [Burnaby R1 bylaw PDF]({SOURCE_DOCUMENT_URL}).
+1. Open the [{_ACTIVE_SOURCE['label']}]({_ACTIVE_SOURCE['url']}).
 2. Go to {page_text}. If the PDF page number is offset, use text search instead.
 3. Search for the phrase below, then compare the candidate's value, unit, operator, scope, and condition against the bylaw wording.
 4. If the passage contains words like `except`, `subject to`, `notwithstanding`, `unless`, or a covenant condition, keep the rule in human review unless the condition is explicitly modeled.
@@ -1353,11 +2425,6 @@ def _list_text(values: Any) -> str:
     return ", ".join(str(value) for value in values)
 
 
-def _sentence_fragment(value: Any) -> str:
-    """Return text that can be safely embedded before a final period."""
-    return str(value or "").strip().rstrip(".")
-
-
 def _bar_table(st: Any, counts: dict[str, Any]) -> None:
     rows = [{"name": key, "count": value} for key, value in counts.items()]
     _bar_rows(st, rows, "name", "count")
@@ -1380,32 +2447,58 @@ def _bar_rows(st: Any, rows: list[dict[str, Any]], label_key: str, value_key: st
 
 
 def _style(st: Any) -> None:
+    # Design system: typography scale, spacing, KPI cards, and STRICT status
+    # color semantics (verified green, review amber, rejected red, not_used grey)
+    # reused by every status-coded element below. Presentation only.
     st.markdown(
         """
 <style>
+:root {
+  --status-verified: #1a7f37;
+  --status-review: #9a6700;
+  --status-rejected: #cf222e;
+  --status-not-used: #57606a;
+  --ink: #172033;
+  --ink-soft: #5d6875;
+  --line: #d9e0e8;
+}
 html, body, [class*="css"] {font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;}
 .block-container {padding-top: 1.5rem; max-width: 1500px;}
-.app-header {border:1px solid #d9e0e8; border-radius:8px; padding:18px 20px; background:linear-gradient(180deg,#ffffff,#f7fafc); margin-bottom:14px;}
-.app-header h1 {font-size:30px; line-height:1.15; margin:2px 0 6px; color:#172033; letter-spacing:0;}
+h1 {font-size:30px;} h2 {font-size:24px;} h3 {font-size:19px;} h4 {font-size:16px;}
+.app-header {display:flex; justify-content:space-between; align-items:flex-start; gap:16px; border:1px solid var(--line); border-radius:8px; padding:18px 20px; background:linear-gradient(180deg,#ffffff,#f7fafc); margin-bottom:14px;}
+.app-header h1 {font-size:30px; line-height:1.15; margin:2px 0 6px; color:var(--ink); letter-spacing:0;}
 .app-header p {margin:0; color:#526070; font-size:15px;}
 .eyebrow {font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#2563eb; font-weight:700;}
+.status-legend {display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;}
+.status-pill {font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; color:#fff; letter-spacing:.02em;}
+.status-pill.status-verified, .status-verified-bg {background:var(--status-verified);}
+.status-pill.status-review, .status-review-bg {background:var(--status-review);}
+.status-pill.status-rejected, .status-rejected-bg {background:var(--status-rejected);}
+.status-pill.status-not_used, .status-not_used-bg {background:var(--status-not-used);}
 .metric-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr)); gap:10px; margin:12px 0 18px;}
 .metric {border:1px solid #d7dde5; border-radius:8px; padding:13px 14px; background:#fff; box-shadow:0 1px 2px rgba(15,23,42,.04); min-height:86px;}
-.metric-label {font-size:10px; line-height:1.25; color:#5d6875; text-transform:uppercase; font-weight:700; overflow-wrap:normal;}
+.metric-verified {border-top:4px solid var(--status-verified);}
+.metric-review {border-top:4px solid var(--status-review);}
+.metric-rejected {border-top:4px solid var(--status-rejected);}
+.metric-not_used {border-top:4px solid var(--status-not-used);}
+.metric-label {font-size:10px; line-height:1.25; color:var(--ink-soft); text-transform:uppercase; font-weight:700; overflow-wrap:normal;}
 .metric-value {font-size:25px; font-weight:750; color:#111827;}
 .guidance-grid, .action-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:12px 0 20px;}
-.guide-card, .action-card {border:1px solid #d9e0e8; border-radius:8px; background:#fff; padding:14px 15px;}
-.guide-card b {display:block; color:#172033; margin-bottom:5px;}
-.guide-card span, .action-card p {color:#5d6875; font-size:14px; margin:0;}
-.action-value {font-size:28px; font-weight:760; color:#0f766e;}
-.action-title {font-weight:720; color:#172033; margin:1px 0 4px;}
-.sentence-card {border:1px solid #d9e0e8; border-radius:8px; padding:15px 16px; min-height:142px; background:#fff; box-shadow:0 1px 2px rgba(15,23,42,.04);}
+.guide-card, .action-card {border:1px solid var(--line); border-radius:8px; background:#fff; padding:14px 15px;}
+.guide-card b {display:block; color:var(--ink); margin-bottom:5px;}
+.guide-card span, .action-card p {color:var(--ink-soft); font-size:14px; margin:0;}
+.action-value {font-size:28px; font-weight:760; color:var(--status-verified);}
+.action-title {font-weight:720; color:var(--ink); margin:1px 0 4px;}
+.sentence-card {border:1px solid var(--line); border-radius:8px; padding:15px 16px; min-height:142px; background:#fff; box-shadow:0 1px 2px rgba(15,23,42,.04);}
 .sentence-card p {font-size:17px; line-height:1.45; color:#111827; margin:8px 0 10px;}
 .sentence-card span {font-size:12px; color:#667085;}
 .sentence-title {font-size:12px; text-transform:uppercase; letter-spacing:.06em; font-weight:760;}
-.sentence-review {border-top:4px solid #d97706;}
-.sentence-verified {border-top:4px solid #0f766e;}
-.sentence-neutral {border-top:4px solid #64748b;}
+.sentence-review {border-top:4px solid var(--status-review);}
+.sentence-verified {border-top:4px solid var(--status-verified);}
+.sentence-neutral {border-top:4px solid var(--status-not-used);}
+.bylaw-section {border:1px solid var(--line); border-radius:8px; background:#fff; padding:14px 16px; margin:8px 0; line-height:1.6; color:var(--ink); white-space:pre-wrap;}
+.bylaw-section h4 {margin:0 0 8px; color:var(--ink);}
+mark.evidence-hit {background:#fff3bf; border-bottom:2px solid var(--status-review); padding:1px 2px; border-radius:2px;}
 .detail-sentence {display:grid; grid-template-columns:28px 1fr; gap:8px; border:1px solid #d9e0e8; border-radius:8px; background:#fff; padding:11px 13px; margin:7px 0;}
 .detail-sentence b {color:#2563eb;}
 .detail-sentence span {color:#172033; line-height:1.45;}
@@ -1446,10 +2539,6 @@ def _source_text(rule: dict[str, Any]) -> str:
 
 def _humanize(value: Any) -> str:
     return str(value or "").replace("_", " ").strip()
-
-
-def _articleless(value: str) -> str:
-    return value.strip()
 
 
 def _format_value_unit(value: Any, unit: str) -> str:

@@ -1,0 +1,591 @@
+{
+  "purpose": "Reviewer-facing resolution labels. Advisory only; does not promote rules.",
+  "review_rule_count": 15,
+  "items": [
+    {
+      "rule_id": "vancouver_rs_001",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_002__rule_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "computation_basis",
+      "applies_to": "site",
+      "operator": "",
+      "value": null,
+      "unit": null,
+      "condition": null,
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "source_page": 8.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_002",
+      "resolution": "operator_or_direction_issue",
+      "next_step_type": "confirm_operator_direction",
+      "human_next_step": "Confirm whether the bylaw says minimum, maximum, required, permitted, or an exception to those.",
+      "candidate_sentence": "site has a floor area rule.",
+      "evidence_sentence": "11.3.7.1 Computation of floor area, floor space ratio, yards, site coverage, impermeability, number of buildings on site and dwelling unit density must be based on the site width and area at the time of development, prior to any subdivision into individual...",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_007",
+      "semantic_score": 0.345,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8.0; evidence_id vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_002"
+    },
+    {
+      "rule_id": "vancouver_rs_003",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004__rule_001",
+      "rule_object": "permitted_use",
+      "constraint_scope": "",
+      "applies_to": "Laneway House",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "condition": null,
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "source_page": 8.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004",
+      "resolution": "operator_or_direction_issue",
+      "next_step_type": "confirm_operator_direction",
+      "human_next_step": "Confirm whether the bylaw says minimum, maximum, required, permitted, or an exception to those.",
+      "candidate_sentence": "Laneway House has a permitted use rule.",
+      "evidence_sentence": "11.3.8 Laneway House",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_007",
+      "semantic_score": 0.225,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8.0; evidence_id vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004"
+    },
+    {
+      "rule_id": "vancouver_rs_005",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2__rule_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": null,
+      "unit": null,
+      "condition": null,
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "source_page": 8.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+      "resolution": "close_match_but_guardrail_blocked",
+      "next_step_type": "manual_guardrail_check",
+      "human_next_step": "The meaning is close, but a core legal field differs. Do not promote unless the mismatch is resolved from source text.",
+      "candidate_sentence": "laneway house has a floor area rule.",
+      "evidence_sentence": "11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of:",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_007",
+      "semantic_score": 0.642,
+      "semantic_guardrail_blockers": [
+        "different_unit"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8.0; evidence_id vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2"
+    },
+    {
+      "rule_id": "vancouver_rs_009",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "total",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": "186",
+      "unit": "sq. m",
+      "condition": "",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has floor area <= 186 sq. m.",
+      "evidence_sentence": "(b) 186 sq. m .",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_007",
+      "semantic_score": 0.71,
+      "semantic_guardrail_blockers": [
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": "verified",
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": true,
+      "where_to_find_it": "page 8.0; evidence_id vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008"
+    },
+    {
+      "rule_id": "vancouver_rs_016",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1__rule_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "separation_from_main_house",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "4.9",
+      "unit": "m",
+      "condition": "",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has building separation >= 4.9 m.",
+      "evidence_sentence": "11.3.8.6 A laneway house must be at least: | (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site;",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_013",
+      "semantic_score": 0.378,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_rule_object"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8.0; evidence_id vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1"
+    },
+    {
+      "rule_id": "vancouver_rs_017",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2__rule_001",
+      "rule_object": "setback",
+      "constraint_scope": "rear_yard",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "0.9",
+      "unit": "m",
+      "condition": "",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has setback >= 0.9 m.",
+      "evidence_sentence": "11.3.8.6 A laneway house must be at least: | (b) 0.9 m from the ultimate rear property line; and",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_013",
+      "semantic_score": 0.325,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_rule_object"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8.0; evidence_id vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2"
+    },
+    {
+      "rule_id": "vancouver_rs_018",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015__rule_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "separation_from_main_house",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "4.9",
+      "unit": "m",
+      "condition": "measured across the width of the site",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has building separation >= 4.9 m when measured across the width of the site.",
+      "evidence_sentence": "(a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site;",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_013",
+      "semantic_score": 0.383,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_rule_object",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8.0; evidence_id vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015"
+    },
+    {
+      "rule_id": "vancouver_rs_019",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016__rule_001",
+      "rule_object": "setback",
+      "constraint_scope": "rear_yard",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "0.9",
+      "unit": "m",
+      "condition": "",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has setback >= 0.9 m.",
+      "evidence_sentence": "(b) 0.9 m from the ultimate rear property line; and",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_013",
+      "semantic_score": 0.325,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_rule_object",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8.0; evidence_id vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016"
+    },
+    {
+      "rule_id": "vancouver_rs_020",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_017__rule_001",
+      "rule_object": "setback",
+      "constraint_scope": "side_yard",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "condition": "",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_017",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has setback >= 1.2 m.",
+      "evidence_sentence": "(c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width.",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_013",
+      "semantic_score": 0.314,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "different_rule_object",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8.0; evidence_id vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_017"
+    },
+    {
+      "rule_id": "vancouver_rs_024",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002__rule_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "computation",
+      "applies_to": "laneway house",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "condition": null,
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "source_page": 9.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002",
+      "resolution": "needs_second_source_consensus",
+      "next_step_type": "find_independent_corroboration",
+      "human_next_step": "Find table-backed or independent text evidence for the same text candidate before promotion.",
+      "candidate_sentence": "laneway house has a floor area rule.",
+      "evidence_sentence": "11.3.8.8 Computation of floor area for a laneway house must include:",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_007",
+      "semantic_score": 0.47,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 9.0; evidence_id vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002"
+    },
+    {
+      "rule_id": "vancouver_rs_025",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003__rule_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "all_floors",
+      "applies_to": "all_floors",
+      "operator": "",
+      "value": null,
+      "unit": null,
+      "condition": null,
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 9.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "all_floors has a floor area rule.",
+      "evidence_sentence": "(a) all floors, including earthen floor, measured to the extreme outer limits of the building;",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_007",
+      "semantic_score": 0.371,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 9.0; evidence_id vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003"
+    },
+    {
+      "rule_id": "vancouver_rs_026",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004__rule_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "gross_cross_sectional_area",
+      "applies_to": "floor_area_measurement",
+      "operator": "",
+      "value": null,
+      "unit": null,
+      "condition": null,
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 9.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "floor_area_measurement has a floor area rule.",
+      "evidence_sentence": "(b) stairways, fire escapes, elevator shafts and other features that the Director of Planning considers similar, measured by their gross cross-sectional areas and included in the measurements for each floor at which they are located; and",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_007",
+      "semantic_score": 0.327,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 9.0; evidence_id vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004"
+    },
+    {
+      "rule_id": "vancouver_rs_027",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005__rule_001",
+      "rule_object": "height",
+      "constraint_scope": "floor_above_distance",
+      "applies_to": "floor_area_calculation",
+      "operator": "<=",
+      "value": "3.7",
+      "unit": "m",
+      "condition": "distance from a floor to the floor above or, where there is no floor above, to the top of the roof joists exceeds 3.7 m",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "source_page": 9.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005",
+      "resolution": "operator_or_direction_issue",
+      "next_step_type": "confirm_operator_direction",
+      "human_next_step": "Confirm whether the bylaw says minimum, maximum, required, permitted, or an exception to those.",
+      "candidate_sentence": "floor_area_calculation has height <= 3.7 m when distance from a floor to the floor above or, where there is no floor above, to the top of the roof joists exceeds 3.7 m.",
+      "evidence_sentence": "(c) where the distance from a floor to the floor above or, where there is no floor above, to the top of the roof joists, exceeds 3.7 m, an amount equal to the area of the floor below the excess height.",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_013",
+      "semantic_score": 0.553,
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 9.0; evidence_id vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005"
+    },
+    {
+      "rule_id": "vancouver_rs_028",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_006__rule_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "computation",
+      "applies_to": "laneway house",
+      "operator": "",
+      "value": null,
+      "unit": null,
+      "condition": null,
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "source_page": 9.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_006",
+      "resolution": "operator_or_direction_issue",
+      "next_step_type": "confirm_operator_direction",
+      "human_next_step": "Confirm whether the bylaw says minimum, maximum, required, permitted, or an exception to those.",
+      "candidate_sentence": "laneway house has a floor area rule.",
+      "evidence_sentence": "11.3.8.9 Computation of floor area for a laneway house must exclude:",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_007",
+      "semantic_score": 0.474,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_unit",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 9.0; evidence_id vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_006"
+    },
+    {
+      "rule_id": "vancouver_rs_036",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012__rule_001",
+      "rule_object": "height",
+      "constraint_scope": "excluded_area",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": null,
+      "unit": null,
+      "condition": "total area being excluded",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "source_page": 9.0,
+      "source_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012",
+      "resolution": "human_legal_review",
+      "next_step_type": "legal_exception_or_override_review",
+      "human_next_step": "Resolve exception, covenant, approval, or notwithstanding language manually.",
+      "candidate_sentence": "laneway house has a height rule when total area being excluded.",
+      "evidence_sentence": "(iii) the ceiling height, excluding roof structure, of the total area being excluded does not exceed",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_013",
+      "semantic_score": 0.574,
+      "semantic_guardrail_blockers": [
+        "different_unit",
+        "exception_or_override_unresolved"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 9.0; evidence_id vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012"
+    }
+  ],
+  "summary": {
+    "resolution_counts": [
+      {
+        "name": "upstream_extraction_issue",
+        "count": 8
+      },
+      {
+        "name": "operator_or_direction_issue",
+        "count": 4
+      },
+      {
+        "name": "close_match_but_guardrail_blocked",
+        "count": 1
+      },
+      {
+        "name": "needs_second_source_consensus",
+        "count": 1
+      },
+      {
+        "name": "human_legal_review",
+        "count": 1
+      }
+    ],
+    "next_step_type_counts": [
+      {
+        "name": "fix_candidate_rule_family",
+        "count": 8
+      },
+      {
+        "name": "confirm_operator_direction",
+        "count": 4
+      },
+      {
+        "name": "manual_guardrail_check",
+        "count": 1
+      },
+      {
+        "name": "find_independent_corroboration",
+        "count": 1
+      },
+      {
+        "name": "legal_exception_or_override_review",
+        "count": 1
+      }
+    ],
+    "promotable_now_count": 0,
+    "can_promote_after_evidence_fix_count": 0,
+    "duplicate_or_degraded_count": 0,
+    "recommendations": [
+      "Keep exception, covenant, and notwithstanding language in human legal review."
+    ]
+  }
+}

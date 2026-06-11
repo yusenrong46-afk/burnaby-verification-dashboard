@@ -1,0 +1,332 @@
+[
+  {
+    "original_rule_id": "vancouver_rs_009",
+    "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001",
+    "retry_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001__rerun__bundle_vancouver_rs_009",
+    "rule_object": "floor_area",
+    "constraint_scope": "total",
+    "applies_to": "laneway house",
+    "condition": "",
+    "operator": "<=",
+    "value": "186",
+    "unit": "sq. m",
+    "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+    "bundle_evidence_id": "bundle::vancouver_rs_009",
+    "bundle_evidence_ids": [
+      "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+      "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1",
+      "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+      "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008"
+    ],
+    "bundle_provenance_key": "page:8.0",
+    "bundle_evidence_type": "clause",
+    "bundle_score": 0.763,
+    "bundle_missing_fields": [
+      "scope"
+    ],
+    "bundle_sentence": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008 supports unit, value; vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2 supports applies_to, operator, rule_object, unit, value; vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2 supports applies_to, operator, rule_object; vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1 supports applies_to, operator, rule_object.",
+    "retry_decision": "verified",
+    "retry_support_gaps": [],
+    "retry_support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "retry_proof_type": "text_evidence",
+    "promotion_ready": true,
+    "promotion_risk_flags": [],
+    "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks.",
+    "bundle_evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of:\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1] 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (a) 0.25 multiplied by the site area; and\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2] 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m .\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008] (b) 186 sq. m .",
+    "verified_rule": {
+      "rule_id": "vancouver_rs_046",
+      "rule_object": "floor_area",
+      "constraint_type": "maximum",
+      "constraint_scope": "total",
+      "applies_to": "laneway house",
+      "value": "186",
+      "unit": "sq. m",
+      "operator": "<=",
+      "condition": "",
+      "exception": "",
+      "gis_relevance": "context",
+      "verification_status": "verified",
+      "verification_decision": "verified",
+      "verification_label": "supported",
+      "canonical_rule_key": "floor_area__total__laneway_house____186__sq_m",
+      "proof_type": "text_evidence",
+      "table_proof_status": "none",
+      "text_span_proof_status": "partial",
+      "proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit condition claim"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "text_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit condition claim"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "text_span_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "floor area",
+          "reason": "rule-object cue appears in text evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "not exceed",
+          "reason": "text wording supports <= / maximum"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "y house must not exceed the lesser of: | (b) 186 sq. m .\n[vancouver_section_11_2026_02__11_3_",
+          "reason": "value appears in text evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "sq. m",
+          "reason": "unit appears in text evidence"
+        },
+        "constraint_scope": {
+          "label": "not_enough_info",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "claim words are not sufficiently visible in text evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "applies_to words appear in text evidence"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit condition claim"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "no explicit exception claim and no unresolved exception cue"
+        }
+      },
+      "table_proof_trace": {},
+      "merged_proof_trace": {
+        "rule_object": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "cited evidence supports the canonical rule object"
+        },
+        "constraint_scope": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "scope words are grounded in local evidence"
+        },
+        "applies_to": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "applies_to words are grounded in local evidence"
+        },
+        "operator": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "operator wording is supported by evidence"
+        },
+        "value": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "value appears in cited evidence"
+        },
+        "unit": {
+          "label": "supported",
+          "evidence_field": "evidence_text",
+          "evidence_quote": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: [vancouver_section_11_2026_02__11_3_7_1__0008__unit_...",
+          "reason": "unit appears in cited evidence and is compatible"
+        },
+        "condition": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit condition claim"
+        },
+        "exception": {
+          "label": "supported",
+          "evidence_field": "",
+          "evidence_quote": "",
+          "reason": "candidate has no explicit exception claim"
+        }
+      },
+      "proof_decision_mismatch": false,
+      "proof_decision_mismatches": [],
+      "evidence_strength": 0.883,
+      "review_priority": "verified",
+      "support_gaps": [],
+      "support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "normalization_trace": [
+        {
+          "field": "constraint_type",
+          "before": "max",
+          "after": "maximum",
+          "reason": "canonical field normalization"
+        }
+      ],
+      "review_reason": "all critical evidence checks passed",
+      "source": {
+        "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+        "url": "",
+        "page": 8.0,
+        "section": null,
+        "evidence_id": "bundle::vancouver_rs_009",
+        "evidence_type": "clause",
+        "evidence_text": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of:\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1] 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (a) 0.25 multiplied by the site area; and\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2] 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m .\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008] (b) 186 sq. m .",
+        "source_context": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of:\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1] 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (a) 0.25 multiplied by the site area; and\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2] 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m .\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008] (b) 186 sq. m .",
+        "inherited_parent_context": null,
+        "local_context": "[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2] 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of:\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1] 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (a) 0.25 multiplied by the site area; and\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2] 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m .\n[vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008] (b) 186 sq. m .",
+        "source_section": null,
+        "source_heading": null,
+        "table_title": "",
+        "row_header": "",
+        "column_header": "",
+        "cell_value": "",
+        "bbox": null,
+        "table_parser": null
+      },
+      "candidate": {
+        "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001__rerun__bundle_vancouver_rs_009",
+        "evidence_id": "bundle::vancouver_rs_009",
+        "rule_object": "floor_area",
+        "constraint_type": "max",
+        "constraint_scope": "total",
+        "applies_to": "laneway house",
+        "operator": "<=",
+        "value": "186",
+        "unit": "sq. m",
+        "condition": "",
+        "exception": "",
+        "source_stream": "vancouver_pipeline_text",
+        "extraction_method": "vancouver_prototype",
+        "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001",
+        "original_rule_id": "vancouver_rs_009",
+        "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+        "evidence_bundle_rerun": true
+      }
+    }
+  }
+]

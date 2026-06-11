@@ -1,0 +1,1065 @@
+{
+  "suggestion_count": 14,
+  "alternative_evidence_count": 14,
+  "retry_candidate_count": 14,
+  "suggestions": [
+    {
+      "rule_id": "calgary_rcg_001",
+      "candidate_id": "local_merged_rule_0001",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "condition": "",
+      "operator": "<=",
+      "value": "100.0",
+      "unit": "m2",
+      "current_evidence_id": "local_merged_rule_0001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0002",
+          "page": 395,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 13.0 m (2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-1..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0003",
+          "page": 395,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 10.0 % (3) The maximum floor area of a Secondary Suite may be relaxed by the Development Authority to a maximum of 10.0 per cent. property line for the main residential building. (2) Except as otherwise stated in subsections (2.1) and (3), the maxi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0004",
+          "page": 395,
+          "evidence_type": "clause",
+          "raw_score": 10.6,
+          "repair_confidence": 0.815,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 1.5 m 352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (b) 0.6 metres for any portion of the building used as a private garage. bov..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_005",
+      "candidate_id": "local_merged_rule_0005",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0005",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0004",
+          "page": 395,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 1.5 m 352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (b) 0.6 metres for any portion of the building used as a private garage. bov..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0007",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 0.6 m (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0008",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 40.0 % (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_007",
+      "candidate_id": "local_merged_rule_0007",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "condition": "",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0007",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0008",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 40.0 % (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0009",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 3.1 m (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0010",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 7.5 m (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 ilding setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area requ..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_009",
+      "candidate_id": "local_merged_rule_0009",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "condition": "",
+      "operator": ">=",
+      "value": "3.1",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0009",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0007",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 0.6 m (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0008",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 40.0 % (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0006",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 10.6,
+          "repair_confidence": 0.815,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 5.0 m (3) Unless otherwise referenced in subsections (3.1) and (3.2), a minimum separation of 5.0 metres is required between the closest façade of the main residential building to the closest façade of a Backyard Suite. 10P2019 PART 5 - DIVISION 1:..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_012",
+      "candidate_id": "local_merged_rule_0012",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "3.0",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0012",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0011",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 5.0 m (4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear proper..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0013",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 7.5 m (4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear proper..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0017",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 4.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_013",
+      "candidate_id": "local_merged_rule_0013",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0013",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0010",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 7.5 m (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 ilding setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area requ..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0011",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 5.0 m (4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear proper..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0012",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 3.0 m (4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear proper..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_014",
+      "candidate_id": "local_merged_rule_0014",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "condition": "",
+      "operator": "<=",
+      "value": "2.5",
+      "unit": "m2",
+      "current_evidence_id": "local_merged_rule_0014",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0015",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 75.0 m2 (5) The maximum floor area of a Backyard Suite, excluding any area covered by stairways and internal landings not exceeding 2.5 square metres, is 75.0 square metres. d (iii) each have a maximum length of 3.1 metres 10P2019 (4) Unless otherw..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0001",
+          "page": 395,
+          "evidence_type": "clause",
+          "raw_score": 10.6,
+          "repair_confidence": 0.815,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 100.0 m2 (2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0002",
+          "page": 395,
+          "evidence_type": "clause",
+          "raw_score": 10.6,
+          "repair_confidence": 0.815,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 13.0 m (2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-1..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_015",
+      "candidate_id": "local_merged_rule_0015",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "condition": "",
+      "operator": "<=",
+      "value": "75.0",
+      "unit": "m2",
+      "current_evidence_id": "local_merged_rule_0015",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0014",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 2.5 m2 (5) The maximum floor area of a Backyard Suite, excluding any area covered by stairways and internal landings not exceeding 2.5 square metres, is 75.0 square metres. d (iii) each have a maximum length of 3.1 metres 10P2019 (4) Unless otherwi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0001",
+          "page": 395,
+          "evidence_type": "clause",
+          "raw_score": 10.6,
+          "repair_confidence": 0.815,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 100.0 m2 (2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0002",
+          "page": 395,
+          "evidence_type": "clause",
+          "raw_score": 10.6,
+          "repair_confidence": 0.815,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 13.0 m (2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-1..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_017",
+      "candidate_id": "local_merged_rule_0017",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "4.0",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0017",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0018",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 2.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0019",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 3.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0004",
+          "page": 395,
+          "evidence_type": "clause",
+          "raw_score": 9.3,
+          "repair_confidence": 0.715,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 1.5 m 352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (b) 0.6 metres for any portion of the building used as a private garage. bov..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_018",
+      "candidate_id": "local_merged_rule_0018",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0018",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0017",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 4.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0019",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 3.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0020",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 0.6 m (9) A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres from the property line. and (ii) the privacy wall is a minimum..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_019",
+      "candidate_id": "local_merged_rule_0019",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0019",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0017",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 4.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0018",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 2.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0020",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 0.6 m (9) A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres from the property line. and (ii) the privacy wall is a minimum..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_022",
+      "candidate_id": "local_merged_rule_0022",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0022",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0017",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 4.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0018",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 2.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0019",
+          "page": 397,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 3.0 m (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared wi..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_023",
+      "candidate_id": "local_merged_rule_0023",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0023",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0024",
+          "page": 399,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 1.0 m (3) When the difference between the average building reference points at the front corners of the parcel and those at the rear of the parcel is less than 1.0 metres, the building height must not be greater than the height plane that: (a) begi..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0010",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 9.3,
+          "repair_confidence": 0.715,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 7.5 m (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 ilding setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area requ..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0011",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 9.3,
+          "repair_confidence": 0.715,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 5.0 m (4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear proper..."
+        }
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_024",
+      "candidate_id": "local_merged_rule_0024",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "condition": "",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m",
+      "current_evidence_id": "local_merged_rule_0024",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "local_merged_rule_0023",
+          "page": 399,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 1.0 m (2) When the difference between the average building reference point at the front corners of the parcel and those at the rear of the parcel is greater than or equal to 1.0 metres, the building height must not be greater than a height plane th..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0010",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 9.3,
+          "repair_confidence": 0.715,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 7.5 m (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 ilding setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area requ..."
+        },
+        {
+          "evidence_id": "local_merged_rule_0011",
+          "page": 396,
+          "evidence_type": "clause",
+          "raw_score": 9.3,
+          "repair_confidence": 0.715,
+          "match_reasons": [
+            "alternative_evidence",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "building 5.0 m (4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear proper..."
+        }
+      ]
+    }
+  ]
+}

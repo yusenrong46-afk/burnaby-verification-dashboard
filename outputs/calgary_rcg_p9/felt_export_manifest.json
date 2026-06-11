@@ -1,0 +1,14 @@
+{
+  "purpose": "Felt dashboard table layers; only felt_verified_rules.csv is authoritative for GIS.",
+  "verified_rules_csv": "felt_verified_rules.csv",
+  "review_rules_csv": "felt_review_rules.csv",
+  "evidence_rerun_csv": "felt_evidence_rerun.csv",
+  "verified_rule_count": 16,
+  "review_rule_count": 348,
+  "rerun_attempt_count": 307,
+  "authoritative_file": "gis_rule_contract.json",
+  "notes": [
+    "Review and rerun exports are for inspection only.",
+    "Do not use review_needed or rerun rows to calculate geometry until they become verified."
+  ]
+}

@@ -1,0 +1,21 @@
+flowchart LR
+  A[Pipeline 5 Candidate Rules] --> C[Normalize + Evidence Lookup]
+  B[Pipeline 5 Evidence Packets] --> C
+  C --> D[Deterministic Verification]
+  D --> E[verified_rules.json]
+  D --> F[review_needed.json]
+  D --> G[rejected_rules.json]
+  D --> H[not_used.json]
+  F --> K[Evidence Intelligence]
+  K --> L[Evidence Bundle Rerun]
+  K --> M[Review Decision Tree]
+  C --> N[Rule Graph]
+  E --> I[GIS/Felt verified-only export]
+  E --> J[Benchmark]
+  F --> J
+  G --> J
+  H --> J
+  K --> O[Dashboard]
+  L --> O
+  M --> O
+  N --> O

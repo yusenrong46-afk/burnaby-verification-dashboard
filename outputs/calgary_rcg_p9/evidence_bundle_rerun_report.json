@@ -1,0 +1,3446 @@
+{
+  "mode": "shadow_evidence_bundle_rerun",
+  "notes": [
+    "Bundle reruns do not mutate verified_rules.json.",
+    "Bundle score and safe_retry are advisory only.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no support gaps or risk flags."
+  ],
+  "attempt_count": 17,
+  "verified_after_rerun_count": 0,
+  "promotion_ready_count": 0,
+  "review_after_rerun_count": 13,
+  "rejected_after_rerun_count": 4,
+  "skipped_count": 331,
+  "attempts": [
+    {
+      "original_rule_id": "calgary_rcg_147",
+      "original_candidate_id": "pipeline5_merged_rule_0147",
+      "retry_candidate_id": "pipeline5_merged_rule_0147__rerun__bundle_calgary_rcg_147",
+      "rule_object": "setback",
+      "constraint_scope": "above_grade_components_setback",
+      "applies_to": "above grade components setback",
+      "condition": "from any property line; includes a deck, walkway, supporting member, heater or mechanical equipment",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_016__page_0095__local_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_147",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_211__page_0825__local_006"
+      ],
+      "bundle_provenance_key": "page:825",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_016__page_0095__local_002 supports applies_to, condition, rule_object, scope, unit, value; calgary_generic_graph_pack_211__page_0825__local_006 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_061__page_0384__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_161__page_0483__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_211__page_0825__local_006] 1119 Retaining Walls 1119 (1) A retaining wall must be less than 1.2 metres in height when 16P2018 measured from the lowest grade at any point adjacent to the retaining wall to the highest grade retained by the retaining wall. (2) A minimum horizontal separation of 1.0 metres must be maintained between retaining walls on a parcel.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_238",
+      "original_candidate_id": "pipeline5_merged_rule_0238",
+      "retry_candidate_id": "pipeline5_merged_rule_0238__rerun__bundle_calgary_rcg_238",
+      "rule_object": "height",
+      "constraint_scope": "maximum_building_height_backyard_suite",
+      "applies_to": "backyard_suite",
+      "condition": "Unless otherwise referenced in subsection (4.1)",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_074__page_0396__local_004",
+      "bundle_evidence_id": "bundle::calgary_rcg_238",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_074__page_0396__local_003",
+        "calgary_generic_graph_pack_074__page_0396__local_004"
+      ],
+      "bundle_provenance_key": "page:396",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_074__page_0396__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_074__page_0396__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_137__page_0451__local_004 supports condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_004__page_0062__local_002 supports applies_to, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_074__page_0396__local_003] street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1);\n[calgary_generic_graph_pack_074__page_0396__local_004] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 (4.1) The maximum building height for a Backyard Suite is:",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_266",
+      "original_candidate_id": "pipeline5_merged_rule_0266",
+      "retry_candidate_id": "pipeline5_merged_rule_0266__rerun__bundle_calgary_rcg_266",
+      "rule_object": "parcel_width",
+      "constraint_scope": "minimum_parcel_width_backyard_secondary_suite_9m",
+      "applies_to": "parcel",
+      "condition": "for a parcel containing a Backyard Suite or Secondary Suite in a Contextual Single Detached Dwelling or Single Detached Dwelling",
+      "operator": ">=",
+      "value": "9.0",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_116__page_0429__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_266",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_108__page_0420__local_003",
+        "calgary_generic_graph_pack_109__page_0420__local_004"
+      ],
+      "bundle_provenance_key": "page:420",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_116__page_0429__local_005 supports applies_to, condition, rule_object, scope, unit, value; calgary_generic_graph_pack_108__page_0420__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_109__page_0420__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_114__page_0429__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_108__page_0420__local_003] 407 Rules 407 In addition to the rules in this District, all uses in this District must comply with: (a) the General Rules for Low Density Residential Land Use Districts referenced in Part 5, Division 1; (b) the Rules Governing All Districts referenced in Part 3; and (c) the applicable Uses And Use Rules referenced in Part 4.\n[calgary_generic_graph_pack_109__page_0420__local_004] 408 Number of Main Residential Buildings on a Parcel 13P2008 408 The maximum number of main residential buildings on a parcel is one.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_267",
+      "original_candidate_id": "pipeline5_merged_rule_0267",
+      "retry_candidate_id": "pipeline5_merged_rule_0267__rerun__bundle_calgary_rcg_267",
+      "rule_object": "parcel_width",
+      "constraint_scope": "minimum_parcel_width_backyard_secondary_suite_7.5m",
+      "applies_to": "parcel",
+      "condition": "for a parcel containing a Backyard Suite or Secondary Suite in a Contextual Single Detached Dwelling or Single Detached Dwelling where 3.0 or more motor vehicle parking stalls are provided on the parcel",
+      "operator": ">=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_116__page_0429__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_267",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_108__page_0420__local_003",
+        "calgary_generic_graph_pack_109__page_0420__local_004"
+      ],
+      "bundle_provenance_key": "page:420",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_116__page_0429__local_005 supports applies_to, condition, rule_object, scope, unit, value; calgary_generic_graph_pack_108__page_0420__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_109__page_0420__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_114__page_0429__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_108__page_0420__local_003] 407 Rules 407 In addition to the rules in this District, all uses in this District must comply with: (a) the General Rules for Low Density Residential Land Use Districts referenced in Part 5, Division 1; (b) the Rules Governing All Districts referenced in Part 3; and (c) the applicable Uses And Use Rules referenced in Part 4.\n[calgary_generic_graph_pack_109__page_0420__local_004] 408 Number of Main Residential Buildings on a Parcel 13P2008 408 The maximum number of main residential buildings on a parcel is one.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_285",
+      "original_candidate_id": "pipeline5_merged_rule_0285",
+      "retry_candidate_id": "pipeline5_merged_rule_0285__rerun__bundle_calgary_rcg_285",
+      "rule_object": "parcel_width",
+      "constraint_scope": "parcel_width_backyard_suite_9.0",
+      "applies_to": "parcel width",
+      "condition": "for a parcel containing a Backyard Suite or Secondary Suite in a Single Detached Dwelling",
+      "operator": ">=",
+      "value": "9.0",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_136__page_0448__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_285",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_108__page_0420__local_003",
+        "calgary_generic_graph_pack_109__page_0420__local_004"
+      ],
+      "bundle_provenance_key": "page:420",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_136__page_0448__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_108__page_0420__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_109__page_0420__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_114__page_0429__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_108__page_0420__local_003] 407 Rules 407 In addition to the rules in this District, all uses in this District must comply with: (a) the General Rules for Low Density Residential Land Use Districts referenced in Part 5, Division 1; (b) the Rules Governing All Districts referenced in Part 3; and (c) the applicable Uses And Use Rules referenced in Part 4.\n[calgary_generic_graph_pack_109__page_0420__local_004] 408 Number of Main Residential Buildings on a Parcel 13P2008 408 The maximum number of main residential buildings on a parcel is one.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_286",
+      "original_candidate_id": "pipeline5_merged_rule_0286",
+      "retry_candidate_id": "pipeline5_merged_rule_0286__rerun__bundle_calgary_rcg_286",
+      "rule_object": "parcel_width",
+      "constraint_scope": "parcel_width_backyard_suite_7.5",
+      "applies_to": "parcel width",
+      "condition": "for a parcel containing a Backyard Suite or Secondary Suite in a Single Detached Dwelling where:",
+      "operator": ">=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_136__page_0448__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_286",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_108__page_0420__local_003",
+        "calgary_generic_graph_pack_109__page_0420__local_004"
+      ],
+      "bundle_provenance_key": "page:420",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_136__page_0448__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_108__page_0420__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_109__page_0420__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_114__page_0429__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_108__page_0420__local_003] 407 Rules 407 In addition to the rules in this District, all uses in this District must comply with: (a) the General Rules for Low Density Residential Land Use Districts referenced in Part 5, Division 1; (b) the Rules Governing All Districts referenced in Part 3; and (c) the applicable Uses And Use Rules referenced in Part 4.\n[calgary_generic_graph_pack_109__page_0420__local_004] 408 Number of Main Residential Buildings on a Parcel 13P2008 408 The maximum number of main residential buildings on a parcel is one.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_288",
+      "original_candidate_id": "pipeline5_merged_rule_0288",
+      "retry_candidate_id": "pipeline5_merged_rule_0288__rerun__bundle_calgary_rcg_288",
+      "rule_object": "height",
+      "constraint_scope": "building_height_single_detached_standard",
+      "applies_to": "Single Detached Dwelling",
+      "condition": "Unless otherwise referenced in subsection (2)",
+      "operator": "<=",
+      "value": "10.0",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_137__page_0451__local_004",
+      "bundle_evidence_id": "bundle::calgary_rcg_288",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_137__page_0451__local_004",
+        "calgary_generic_graph_pack_138__page_0451__local_005"
+      ],
+      "bundle_provenance_key": "page:451",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_137__page_0451__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_138__page_0451__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_164__page_0484__local_002 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_165__page_0484__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_137__page_0451__local_004] 487 Building Height 487 (1) Unless otherwise referenced in subsection (2), the maximum building 13P2008 height is 10.0 metres for a Single Detached Dwelling. (2) The maximum building height is 11.0 metres for Single Detached Dwellings where: (a) the area of the parcel is equal to or greater than 400.0 square metres; and (b) the parcel width is equal to or greater than 10.0 metres. 57P2008 (3) The maximum building height for Duplex Dwellings and Semi‑detached Dwellings is 11.0 metres. (4) The maximum building height for all other uses is 10.0 metres.\n[calgary_generic_graph_pack_138__page_0451__local_005] 488 Motor Vehicle Parking Stalls 488 (1) Unless otherwise referenced in subsection (2) and (3), the minimum 28P2009, 76P2019 number of motor vehicle parking stalls is the requirement referenced in Part 4. (2) The minimum number of motor vehicle parking stalls for each Single Detached Dwelling is 2.0 stalls per Dwelling Unit where: (a) the parcel width is less than 9.0 metres and the parcel is part of a plan of subdivision approved after September 7, 1982; or (b) the area of the parcel is less than 270.0 square metres and the parcel is part of a plan of subdivision approved after September 7, 1982. (3) The minimum number of motor vehicle parking stalls for a",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_346",
+      "original_candidate_id": "pipeline5_merged_rule_0346",
+      "retry_candidate_id": "pipeline5_merged_rule_0346__rerun__bundle_calgary_rcg_346",
+      "rule_object": "floor_space_ratio",
+      "constraint_scope": "maximum_floor_area_ratio_m_h2",
+      "applies_to": "floor area ratio",
+      "condition": "for all buildings on parcels designated M-H2 District, as indicated by the number following the letter \"f\" on the Land Use District Maps",
+      "operator": "<=",
+      "value": "5.0",
+      "unit": "",
+      "original_evidence_id": "calgary_generic_graph_pack_187__page_0555__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_346",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_186__page_0555__local_004",
+        "calgary_generic_graph_pack_187__page_0555__local_005"
+      ],
+      "bundle_provenance_key": "page:555",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_187__page_0555__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_186__page_0555__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_192__page_0561__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_193__page_0561__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_186__page_0555__local_004] 649 Rules 649 In addition to the rules in this District, all uses in this District must comply with: (a) the General Rules for Multi-Residential Land Use Districts referenced in Part 6, Division 1; (b) the Rules Governing All Districts referenced in Part 3; and (c) the applicable Uses And Use Rules referenced in Part 4. 7P2011\n[calgary_generic_graph_pack_187__page_0555__local_005] 650 Maximum Floor Area Ratio 650 (1) The maximum floor area ratio is 5.0. (2) The maximum floor area ratio for all buildings on parcels designated M-H2 District is the number following the letter “f” when indicated on the Land Use District Maps, which must be less than 5.0.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_349",
+      "original_candidate_id": "pipeline5_merged_rule_0349",
+      "retry_candidate_id": "pipeline5_merged_rule_0349__rerun__bundle_calgary_rcg_349",
+      "rule_object": "floor_space_ratio",
+      "constraint_scope": "calgary_generic_graph_pack_193__page_0561__local_005_661_2_min",
+      "applies_to": "floor area ratio",
+      "condition": "for all buildings on parcels designated M-H3 District, where the maximum floor area ratio is indicated by the number following the letter \"f\" on the Land Use District Maps",
+      "operator": ">=",
+      "value": "5.0",
+      "unit": "",
+      "original_evidence_id": "calgary_generic_graph_pack_193__page_0561__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_349",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_192__page_0561__local_004",
+        "calgary_generic_graph_pack_193__page_0561__local_005"
+      ],
+      "bundle_provenance_key": "page:561",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_193__page_0561__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_192__page_0561__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_186__page_0555__local_004 supports applies_to, condition, operator, rule_object, unit, value; calgary_generic_graph_pack_187__page_0555__local_005 supports applies_to, condition, operator, rule_object, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_192__page_0561__local_004] 660 Rules 660 In addition to the rules in this District, all uses in this District must comply with: (a) the General Rules for Multi-Residential Land Use Districts referenced in Part 6, Division 1; (b) the Rules Governing All Districts referenced in Part 3; and (c) the applicable Uses And Use Rules referenced in Part 4.\n[calgary_generic_graph_pack_193__page_0561__local_005] 661 Floor Area Ratio 661 (1) The maximum floor area ratio is 11.0. (2) The maximum floor area ratio for all buildings on parcels designated M-H3 District is the number following the letter “f” when indicated on the Land Use District Maps, which must be greater than 5.0 and less than 11.0.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_350",
+      "original_candidate_id": "pipeline5_merged_rule_0350",
+      "retry_candidate_id": "pipeline5_merged_rule_0350__rerun__bundle_calgary_rcg_350",
+      "rule_object": "floor_space_ratio",
+      "constraint_scope": "calgary_generic_graph_pack_193__page_0561__local_005_661_2_max",
+      "applies_to": "floor area ratio",
+      "condition": "for all buildings on parcels designated M-H3 District, where the maximum floor area ratio is indicated by the number following the letter \"f\" on the Land Use District Maps",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "",
+      "original_evidence_id": "calgary_generic_graph_pack_193__page_0561__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_350",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_192__page_0561__local_004",
+        "calgary_generic_graph_pack_193__page_0561__local_005"
+      ],
+      "bundle_provenance_key": "page:561",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_193__page_0561__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_192__page_0561__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_186__page_0555__local_004 supports applies_to, condition, operator, rule_object, unit; calgary_generic_graph_pack_187__page_0555__local_005 supports applies_to, condition, operator, rule_object, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_192__page_0561__local_004] 660 Rules 660 In addition to the rules in this District, all uses in this District must comply with: (a) the General Rules for Multi-Residential Land Use Districts referenced in Part 6, Division 1; (b) the Rules Governing All Districts referenced in Part 3; and (c) the applicable Uses And Use Rules referenced in Part 4.\n[calgary_generic_graph_pack_193__page_0561__local_005] 661 Floor Area Ratio 661 (1) The maximum floor area ratio is 11.0. (2) The maximum floor area ratio for all buildings on parcels designated M-H3 District is the number following the letter “f” when indicated on the Land Use District Maps, which must be greater than 5.0 and less than 11.0.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_352",
+      "original_candidate_id": "pipeline5_merged_rule_0352",
+      "retry_candidate_id": "pipeline5_merged_rule_0352__rerun__bundle_calgary_rcg_352",
+      "rule_object": "setback_area",
+      "constraint_scope": "setback_area_depth_lane_residential",
+      "applies_to": "setback area depth",
+      "condition": "Where the parcel shares a property line with a lane that separates the parcel from a parcel designated as a residential district",
+      "operator": ">=",
+      "value": "6.0",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_210__page_0794__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_352",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_210__page_0794__local_005"
+      ],
+      "bundle_provenance_key": "page:794",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_210__page_0794__local_005 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_083__page_0398__local_004 supports applies_to, condition, operator, rule_object, scope, unit; calgary_generic_graph_pack_074__page_0396__local_003 supports applies_to, condition, operator, rule_object, scope, unit; calgary_generic_graph_pack_122__page_0438__local_004 supports applies_to, condition, operator, rule_object, scope, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_210__page_0794__local_005] (a) with an LRT corridor or street, the setback area must have a minimum depth of 6.0 metres; (b) with a lane that separates the parcel from a parcel designated as a residential district, the setback area must have a minimum depth of 6.0 metres; and (c) with a lane, in all other cases, the setback area must have a minimum depth of 3.0 metres.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_355",
+      "original_candidate_id": "pipeline5_merged_rule_0355",
+      "retry_candidate_id": "pipeline5_merged_rule_0355__rerun__bundle_calgary_rcg_355",
+      "rule_object": "retaining_wall",
+      "constraint_scope": "retaining_wall_separation",
+      "applies_to": "horizontal separation",
+      "condition": "between retaining walls on a parcel",
+      "operator": ">=",
+      "value": "1.0",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_211__page_0825__local_006",
+      "bundle_evidence_id": "bundle::calgary_rcg_355",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_211__page_0825__local_006",
+        "calgary_generic_graph_pack_212__page_0825__local_007"
+      ],
+      "bundle_provenance_key": "page:825",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_211__page_0825__local_006 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_212__page_0825__local_007 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_074__page_0396__local_004 supports applies_to, condition, operator, rule_object, scope, unit; calgary_generic_graph_pack_075__page_0396__local_002 supports applies_to, condition, operator, rule_object, scope, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_211__page_0825__local_006] 1119 Retaining Walls 1119 (1) A retaining wall must be less than 1.2 metres in height when 16P2018 measured from the lowest grade at any point adjacent to the retaining wall to the highest grade retained by the retaining wall. (2) A minimum horizontal separation of 1.0 metres must be maintained between retaining walls on a parcel.\n[calgary_generic_graph_pack_212__page_0825__local_007] 1120 Fences 1120 The height of a fence above grade at any point along a fence line must not exceed: (a) 1.2 metres for that portion of the fence extending beyond the foremost portion of all buildings on the parcel; (b) 2.0 metres for that portion of the fence that does not extend beyond the foremost portion of all buildings on the parcel; and (c) 2.5 metres to the highest point of a gateway provided that the gateway does not exceed more than 2.5 metres in length.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_405",
+      "original_candidate_id": "pipeline5_merged_rule_0405",
+      "retry_candidate_id": "pipeline5_merged_rule_0405__rerun__bundle_calgary_rcg_405",
+      "rule_object": "separation",
+      "constraint_scope": "backyard_suite_separation",
+      "applies_to": "separation between closest façade of main residential building and closest façade of Backyard Suite",
+      "condition": "Where portions of a Backyard Suite meet the requirements of subsection (3.1) and (3.2) and is adjacent to the main residential building and the Backyard Suite",
+      "operator": ">=",
+      "value": "5.0",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_075__page_0396__local_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_405",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_074__page_0396__local_003",
+        "calgary_generic_graph_pack_074__page_0396__local_004",
+        "calgary_generic_graph_pack_075__page_0396__local_002"
+      ],
+      "bundle_provenance_key": "page:396",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_075__page_0396__local_002 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_074__page_0396__local_003 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_074__page_0396__local_004 supports applies_to, condition, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_212__page_0825__local_007 supports applies_to, condition, operator, rule_object, scope, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_074__page_0396__local_003] street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1);\n[calgary_generic_graph_pack_074__page_0396__local_004] (4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019 (4.1) The maximum building height for a Backyard Suite is:\n[calgary_generic_graph_pack_075__page_0396__local_002] (3.1) and (3.2), a minimum separation of 5.0 metres is required between the closest façade of the main residential building to the closest façade of a Backyard Suite. 10P2019 (a) is adjacent to the main residential building and the Backyard Suite; and (a) Where portions of a Backyard Suite meet the requirements of subsection",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_290",
+      "original_candidate_id": "pipeline5_merged_rule_0290",
+      "retry_candidate_id": "pipeline5_merged_rule_0290__rerun__bundle_calgary_rcg_290",
+      "rule_object": "height",
+      "constraint_scope": "building_height_duplex",
+      "applies_to": "Duplex Dwelling",
+      "condition": "",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_137__page_0451__local_004",
+      "bundle_evidence_id": "bundle::calgary_rcg_290",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_137__page_0451__local_004",
+        "calgary_generic_graph_pack_138__page_0451__local_005"
+      ],
+      "bundle_provenance_key": "page:451",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_137__page_0451__local_004 supports applies_to, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_138__page_0451__local_005 supports applies_to, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_164__page_0484__local_002 supports applies_to, operator, rule_object, scope, unit; calgary_generic_graph_pack_165__page_0484__local_003 supports applies_to, operator, rule_object, scope, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_137__page_0451__local_004] 487 Building Height 487 (1) Unless otherwise referenced in subsection (2), the maximum building 13P2008 height is 10.0 metres for a Single Detached Dwelling. (2) The maximum building height is 11.0 metres for Single Detached Dwellings where: (a) the area of the parcel is equal to or greater than 400.0 square metres; and (b) the parcel width is equal to or greater than 10.0 metres. 57P2008 (3) The maximum building height for Duplex Dwellings and Semi‑detached Dwellings is 11.0 metres. (4) The maximum building height for all other uses is 10.0 metres.\n[calgary_generic_graph_pack_138__page_0451__local_005] 488 Motor Vehicle Parking Stalls 488 (1) Unless otherwise referenced in subsection (2) and (3), the minimum 28P2009, 76P2019 number of motor vehicle parking stalls is the requirement referenced in Part 4. (2) The minimum number of motor vehicle parking stalls for each Single Detached Dwelling is 2.0 stalls per Dwelling Unit where: (a) the parcel width is less than 9.0 metres and the parcel is part of a plan of subdivision approved after September 7, 1982; or (b) the area of the parcel is less than 270.0 square metres and the parcel is part of a plan of subdivision approved after September 7, 1982. (3) The minimum number of motor vehicle parking stalls for a",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_291",
+      "original_candidate_id": "pipeline5_merged_rule_0291",
+      "retry_candidate_id": "pipeline5_merged_rule_0291__rerun__bundle_calgary_rcg_291",
+      "rule_object": "height",
+      "constraint_scope": "building_height_semi_detached",
+      "applies_to": "Semi-detached Dwelling",
+      "condition": "",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "m",
+      "original_evidence_id": "calgary_generic_graph_pack_137__page_0451__local_004",
+      "bundle_evidence_id": "bundle::calgary_rcg_291",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_137__page_0451__local_004",
+        "calgary_generic_graph_pack_138__page_0451__local_005"
+      ],
+      "bundle_provenance_key": "page:451",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_137__page_0451__local_004 supports applies_to, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_138__page_0451__local_005 supports applies_to, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_068__page_0392__local_004 supports applies_to, operator, rule_object, scope, unit; calgary_generic_graph_pack_164__page_0484__local_002 supports applies_to, operator, rule_object, scope, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_137__page_0451__local_004] 487 Building Height 487 (1) Unless otherwise referenced in subsection (2), the maximum building 13P2008 height is 10.0 metres for a Single Detached Dwelling. (2) The maximum building height is 11.0 metres for Single Detached Dwellings where: (a) the area of the parcel is equal to or greater than 400.0 square metres; and (b) the parcel width is equal to or greater than 10.0 metres. 57P2008 (3) The maximum building height for Duplex Dwellings and Semi‑detached Dwellings is 11.0 metres. (4) The maximum building height for all other uses is 10.0 metres.\n[calgary_generic_graph_pack_138__page_0451__local_005] 488 Motor Vehicle Parking Stalls 488 (1) Unless otherwise referenced in subsection (2) and (3), the minimum 28P2009, 76P2019 number of motor vehicle parking stalls is the requirement referenced in Part 4. (2) The minimum number of motor vehicle parking stalls for each Single Detached Dwelling is 2.0 stalls per Dwelling Unit where: (a) the parcel width is less than 9.0 metres and the parcel is part of a plan of subdivision approved after September 7, 1982; or (b) the area of the parcel is less than 270.0 square metres and the parcel is part of a plan of subdivision approved after September 7, 1982. (3) The minimum number of motor vehicle parking stalls for a",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_345",
+      "original_candidate_id": "pipeline5_merged_rule_0345",
+      "retry_candidate_id": "pipeline5_merged_rule_0345__rerun__bundle_calgary_rcg_345",
+      "rule_object": "floor_space_ratio",
+      "constraint_scope": "maximum_floor_area_ratio",
+      "applies_to": "floor area ratio",
+      "condition": "",
+      "operator": "<=",
+      "value": "5.0",
+      "unit": "",
+      "original_evidence_id": "calgary_generic_graph_pack_187__page_0555__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_345",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_186__page_0555__local_004",
+        "calgary_generic_graph_pack_187__page_0555__local_005"
+      ],
+      "bundle_provenance_key": "page:555",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_187__page_0555__local_005 supports applies_to, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_186__page_0555__local_004 supports applies_to, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_192__page_0561__local_004 supports applies_to, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_193__page_0561__local_005 supports applies_to, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_186__page_0555__local_004] 649 Rules 649 In addition to the rules in this District, all uses in this District must comply with: (a) the General Rules for Multi-Residential Land Use Districts referenced in Part 6, Division 1; (b) the Rules Governing All Districts referenced in Part 3; and (c) the applicable Uses And Use Rules referenced in Part 4. 7P2011\n[calgary_generic_graph_pack_187__page_0555__local_005] 650 Maximum Floor Area Ratio 650 (1) The maximum floor area ratio is 5.0. (2) The maximum floor area ratio for all buildings on parcels designated M-H2 District is the number following the letter “f” when indicated on the Land Use District Maps, which must be less than 5.0.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_347",
+      "original_candidate_id": "pipeline5_merged_rule_0347",
+      "retry_candidate_id": "pipeline5_merged_rule_0347__rerun__bundle_calgary_rcg_347",
+      "rule_object": "floor_space_ratio",
+      "constraint_scope": "calgary_generic_graph_pack_193__page_0561__local_005_661_1",
+      "applies_to": "floor area ratio",
+      "condition": "",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "",
+      "original_evidence_id": "calgary_generic_graph_pack_193__page_0561__local_005",
+      "bundle_evidence_id": "bundle::calgary_rcg_347",
+      "bundle_evidence_ids": [
+        "calgary_generic_graph_pack_192__page_0561__local_004",
+        "calgary_generic_graph_pack_193__page_0561__local_005"
+      ],
+      "bundle_provenance_key": "page:561",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "calgary_generic_graph_pack_193__page_0561__local_005 supports applies_to, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_192__page_0561__local_004 supports applies_to, operator, rule_object, scope, unit, value; calgary_generic_graph_pack_186__page_0555__local_004 supports applies_to, operator, rule_object, unit; calgary_generic_graph_pack_187__page_0555__local_005 supports applies_to, operator, rule_object, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[calgary_generic_graph_pack_192__page_0561__local_004] 660 Rules 660 In addition to the rules in this District, all uses in this District must comply with: (a) the General Rules for Multi-Residential Land Use Districts referenced in Part 6, Division 1; (b) the Rules Governing All Districts referenced in Part 3; and (c) the applicable Uses And Use Rules referenced in Part 4.\n[calgary_generic_graph_pack_193__page_0561__local_005] 661 Floor Area Ratio 661 (1) The maximum floor area ratio is 11.0. (2) The maximum floor area ratio for all buildings on parcels designated M-H3 District is the number following the letter “f” when indicated on the Land Use District Maps, which must be greater than 5.0 and less than 11.0.",
+      "verified_rule": null
+    }
+  ],
+  "verified_after_rerun": [],
+  "promotion_ready": [],
+  "skipped": [
+    {
+      "rule_id": "calgary_rcg_010",
+      "candidate_id": "pipeline5_merged_rule_0010",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_011",
+      "candidate_id": "pipeline5_merged_rule_0011",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_012",
+      "candidate_id": "pipeline5_merged_rule_0012",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_013",
+      "candidate_id": "pipeline5_merged_rule_0013",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_014",
+      "candidate_id": "pipeline5_merged_rule_0014",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_015",
+      "candidate_id": "pipeline5_merged_rule_0015",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_016",
+      "candidate_id": "pipeline5_merged_rule_0016",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_017",
+      "candidate_id": "pipeline5_merged_rule_0017",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_018",
+      "candidate_id": "pipeline5_merged_rule_0018",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_019",
+      "candidate_id": "pipeline5_merged_rule_0019",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_020",
+      "candidate_id": "pipeline5_merged_rule_0020",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_022",
+      "candidate_id": "pipeline5_merged_rule_0022",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_023",
+      "candidate_id": "pipeline5_merged_rule_0023",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_024",
+      "candidate_id": "pipeline5_merged_rule_0024",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_025",
+      "candidate_id": "pipeline5_merged_rule_0025",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_026",
+      "candidate_id": "pipeline5_merged_rule_0026",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_027",
+      "candidate_id": "pipeline5_merged_rule_0027",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_028",
+      "candidate_id": "pipeline5_merged_rule_0028",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_029",
+      "candidate_id": "pipeline5_merged_rule_0029",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_030",
+      "candidate_id": "pipeline5_merged_rule_0030",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_031",
+      "candidate_id": "pipeline5_merged_rule_0031",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_032",
+      "candidate_id": "pipeline5_merged_rule_0032",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_033",
+      "candidate_id": "pipeline5_merged_rule_0033",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_034",
+      "candidate_id": "pipeline5_merged_rule_0034",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_035",
+      "candidate_id": "pipeline5_merged_rule_0035",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_036",
+      "candidate_id": "pipeline5_merged_rule_0036",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_037",
+      "candidate_id": "pipeline5_merged_rule_0037",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_038",
+      "candidate_id": "pipeline5_merged_rule_0038",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_039",
+      "candidate_id": "pipeline5_merged_rule_0039",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_040",
+      "candidate_id": "pipeline5_merged_rule_0040",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_041",
+      "candidate_id": "pipeline5_merged_rule_0041",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_042",
+      "candidate_id": "pipeline5_merged_rule_0042",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_043",
+      "candidate_id": "pipeline5_merged_rule_0043",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_044",
+      "candidate_id": "pipeline5_merged_rule_0044",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_045",
+      "candidate_id": "pipeline5_merged_rule_0045",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_046",
+      "candidate_id": "pipeline5_merged_rule_0046",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_047",
+      "candidate_id": "pipeline5_merged_rule_0047",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_048",
+      "candidate_id": "pipeline5_merged_rule_0048",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_049",
+      "candidate_id": "pipeline5_merged_rule_0049",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_050",
+      "candidate_id": "pipeline5_merged_rule_0050",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_051",
+      "candidate_id": "pipeline5_merged_rule_0051",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_052",
+      "candidate_id": "pipeline5_merged_rule_0052",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_053",
+      "candidate_id": "pipeline5_merged_rule_0053",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_054",
+      "candidate_id": "pipeline5_merged_rule_0054",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_055",
+      "candidate_id": "pipeline5_merged_rule_0055",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_056",
+      "candidate_id": "pipeline5_merged_rule_0056",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_057",
+      "candidate_id": "pipeline5_merged_rule_0057",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_058",
+      "candidate_id": "pipeline5_merged_rule_0058",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_059",
+      "candidate_id": "pipeline5_merged_rule_0059",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_060",
+      "candidate_id": "pipeline5_merged_rule_0060",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_061",
+      "candidate_id": "pipeline5_merged_rule_0061",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_062",
+      "candidate_id": "pipeline5_merged_rule_0062",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_063",
+      "candidate_id": "pipeline5_merged_rule_0063",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_064",
+      "candidate_id": "pipeline5_merged_rule_0064",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_065",
+      "candidate_id": "pipeline5_merged_rule_0065",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_066",
+      "candidate_id": "pipeline5_merged_rule_0066",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_067",
+      "candidate_id": "pipeline5_merged_rule_0067",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_068",
+      "candidate_id": "pipeline5_merged_rule_0068",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_069",
+      "candidate_id": "pipeline5_merged_rule_0069",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_070",
+      "candidate_id": "pipeline5_merged_rule_0070",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_071",
+      "candidate_id": "pipeline5_merged_rule_0071",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_072",
+      "candidate_id": "pipeline5_merged_rule_0072",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_073",
+      "candidate_id": "pipeline5_merged_rule_0073",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_074",
+      "candidate_id": "pipeline5_merged_rule_0074",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_075",
+      "candidate_id": "pipeline5_merged_rule_0075",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_076",
+      "candidate_id": "pipeline5_merged_rule_0076",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_077",
+      "candidate_id": "pipeline5_merged_rule_0077",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_078",
+      "candidate_id": "pipeline5_merged_rule_0078",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_079",
+      "candidate_id": "pipeline5_merged_rule_0079",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_080",
+      "candidate_id": "pipeline5_merged_rule_0080",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_081",
+      "candidate_id": "pipeline5_merged_rule_0081",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_082",
+      "candidate_id": "pipeline5_merged_rule_0082",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_083",
+      "candidate_id": "pipeline5_merged_rule_0083",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_084",
+      "candidate_id": "pipeline5_merged_rule_0084",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_085",
+      "candidate_id": "pipeline5_merged_rule_0085",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_086",
+      "candidate_id": "pipeline5_merged_rule_0086",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_087",
+      "candidate_id": "pipeline5_merged_rule_0087",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_088",
+      "candidate_id": "pipeline5_merged_rule_0088",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_093",
+      "candidate_id": "pipeline5_merged_rule_0093",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_094",
+      "candidate_id": "pipeline5_merged_rule_0094",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_095",
+      "candidate_id": "pipeline5_merged_rule_0095",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_096",
+      "candidate_id": "pipeline5_merged_rule_0096",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_097",
+      "candidate_id": "pipeline5_merged_rule_0097",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_098",
+      "candidate_id": "pipeline5_merged_rule_0098",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_099",
+      "candidate_id": "pipeline5_merged_rule_0099",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_100",
+      "candidate_id": "pipeline5_merged_rule_0100",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_101",
+      "candidate_id": "pipeline5_merged_rule_0101",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_102",
+      "candidate_id": "pipeline5_merged_rule_0102",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_103",
+      "candidate_id": "pipeline5_merged_rule_0103",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_104",
+      "candidate_id": "pipeline5_merged_rule_0104",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_105",
+      "candidate_id": "pipeline5_merged_rule_0105",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_106",
+      "candidate_id": "pipeline5_merged_rule_0106",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_107",
+      "candidate_id": "pipeline5_merged_rule_0107",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_108",
+      "candidate_id": "pipeline5_merged_rule_0108",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_109",
+      "candidate_id": "pipeline5_merged_rule_0109",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_110",
+      "candidate_id": "pipeline5_merged_rule_0110",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_111",
+      "candidate_id": "pipeline5_merged_rule_0111",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_112",
+      "candidate_id": "pipeline5_merged_rule_0112",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_113",
+      "candidate_id": "pipeline5_merged_rule_0113",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_114",
+      "candidate_id": "pipeline5_merged_rule_0114",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_115",
+      "candidate_id": "pipeline5_merged_rule_0115",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_116",
+      "candidate_id": "pipeline5_merged_rule_0116",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_117",
+      "candidate_id": "pipeline5_merged_rule_0117",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_118",
+      "candidate_id": "pipeline5_merged_rule_0118",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_119",
+      "candidate_id": "pipeline5_merged_rule_0119",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_120",
+      "candidate_id": "pipeline5_merged_rule_0120",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_121",
+      "candidate_id": "pipeline5_merged_rule_0121",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_122",
+      "candidate_id": "pipeline5_merged_rule_0122",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_123",
+      "candidate_id": "pipeline5_merged_rule_0123",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_124",
+      "candidate_id": "pipeline5_merged_rule_0124",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_125",
+      "candidate_id": "pipeline5_merged_rule_0125",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_129",
+      "candidate_id": "pipeline5_merged_rule_0129",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_130",
+      "candidate_id": "pipeline5_merged_rule_0130",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_131",
+      "candidate_id": "pipeline5_merged_rule_0131",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_132",
+      "candidate_id": "pipeline5_merged_rule_0132",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_133",
+      "candidate_id": "pipeline5_merged_rule_0133",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_134",
+      "candidate_id": "pipeline5_merged_rule_0134",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_135",
+      "candidate_id": "pipeline5_merged_rule_0135",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_136",
+      "candidate_id": "pipeline5_merged_rule_0136",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_137",
+      "candidate_id": "pipeline5_merged_rule_0137",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_138",
+      "candidate_id": "pipeline5_merged_rule_0138",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_139",
+      "candidate_id": "pipeline5_merged_rule_0139",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_140",
+      "candidate_id": "pipeline5_merged_rule_0140",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_141",
+      "candidate_id": "pipeline5_merged_rule_0141",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_143",
+      "candidate_id": "pipeline5_merged_rule_0143",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_144",
+      "candidate_id": "pipeline5_merged_rule_0144",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_149",
+      "candidate_id": "pipeline5_merged_rule_0149",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_156",
+      "candidate_id": "pipeline5_merged_rule_0156",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_182",
+      "candidate_id": "pipeline5_merged_rule_0182",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_190",
+      "candidate_id": "pipeline5_merged_rule_0190",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_246",
+      "candidate_id": "pipeline5_merged_rule_0246",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_247",
+      "candidate_id": "pipeline5_merged_rule_0247",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_248",
+      "candidate_id": "pipeline5_merged_rule_0248",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_249",
+      "candidate_id": "pipeline5_merged_rule_0249",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_250",
+      "candidate_id": "pipeline5_merged_rule_0250",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_251",
+      "candidate_id": "pipeline5_merged_rule_0251",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_252",
+      "candidate_id": "pipeline5_merged_rule_0252",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_253",
+      "candidate_id": "pipeline5_merged_rule_0253",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_254",
+      "candidate_id": "pipeline5_merged_rule_0254",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_255",
+      "candidate_id": "pipeline5_merged_rule_0255",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_256",
+      "candidate_id": "pipeline5_merged_rule_0256",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_257",
+      "candidate_id": "pipeline5_merged_rule_0257",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_262",
+      "candidate_id": "pipeline5_merged_rule_0262",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_263",
+      "candidate_id": "pipeline5_merged_rule_0263",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_264",
+      "candidate_id": "pipeline5_merged_rule_0264",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_265",
+      "candidate_id": "pipeline5_merged_rule_0265",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_269",
+      "candidate_id": "pipeline5_merged_rule_0269",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_273",
+      "candidate_id": "pipeline5_merged_rule_0273",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_274",
+      "candidate_id": "pipeline5_merged_rule_0274",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_275",
+      "candidate_id": "pipeline5_merged_rule_0275",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_276",
+      "candidate_id": "pipeline5_merged_rule_0276",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_277",
+      "candidate_id": "pipeline5_merged_rule_0277",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_278",
+      "candidate_id": "pipeline5_merged_rule_0278",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_295",
+      "candidate_id": "pipeline5_merged_rule_0295",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_296",
+      "candidate_id": "pipeline5_merged_rule_0296",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_297",
+      "candidate_id": "pipeline5_merged_rule_0297",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_298",
+      "candidate_id": "pipeline5_merged_rule_0298",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_299",
+      "candidate_id": "pipeline5_merged_rule_0299",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_302",
+      "candidate_id": "pipeline5_merged_rule_0302",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_303",
+      "candidate_id": "pipeline5_merged_rule_0303",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_307",
+      "candidate_id": "pipeline5_merged_rule_0307",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_308",
+      "candidate_id": "pipeline5_merged_rule_0308",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_309",
+      "candidate_id": "pipeline5_merged_rule_0309",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_310",
+      "candidate_id": "pipeline5_merged_rule_0310",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_311",
+      "candidate_id": "pipeline5_merged_rule_0311",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_318",
+      "candidate_id": "pipeline5_merged_rule_0318",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_322",
+      "candidate_id": "pipeline5_merged_rule_0322",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_323",
+      "candidate_id": "pipeline5_merged_rule_0323",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_328",
+      "candidate_id": "pipeline5_merged_rule_0328",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_329",
+      "candidate_id": "pipeline5_merged_rule_0329",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_348",
+      "candidate_id": "pipeline5_merged_rule_0348",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_374",
+      "candidate_id": "pipeline5_merged_rule_0374",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_376",
+      "candidate_id": "pipeline5_merged_rule_0376",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_379",
+      "candidate_id": "pipeline5_merged_rule_0379",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_380",
+      "candidate_id": "pipeline5_merged_rule_0380",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_382",
+      "candidate_id": "pipeline5_merged_rule_0382",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_383",
+      "candidate_id": "pipeline5_merged_rule_0383",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_385",
+      "candidate_id": "pipeline5_merged_rule_0385",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_392",
+      "candidate_id": "pipeline5_merged_rule_0392",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_393",
+      "candidate_id": "pipeline5_merged_rule_0393",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_394",
+      "candidate_id": "pipeline5_merged_rule_0394",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_395",
+      "candidate_id": "pipeline5_merged_rule_0395",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_396",
+      "candidate_id": "pipeline5_merged_rule_0396",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_397",
+      "candidate_id": "pipeline5_merged_rule_0397",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_398",
+      "candidate_id": "pipeline5_merged_rule_0398",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_399",
+      "candidate_id": "pipeline5_merged_rule_0399",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_400",
+      "candidate_id": "pipeline5_merged_rule_0400",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_401",
+      "candidate_id": "pipeline5_merged_rule_0401",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_402",
+      "candidate_id": "pipeline5_merged_rule_0402",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_403",
+      "candidate_id": "pipeline5_merged_rule_0403",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_404",
+      "candidate_id": "pipeline5_merged_rule_0404",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_409",
+      "candidate_id": "pipeline5_merged_rule_0409",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_412",
+      "candidate_id": "pipeline5_merged_rule_0412",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_413",
+      "candidate_id": "pipeline5_merged_rule_0413",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_414",
+      "candidate_id": "pipeline5_merged_rule_0414",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_415",
+      "candidate_id": "pipeline5_merged_rule_0415",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_416",
+      "candidate_id": "pipeline5_merged_rule_0416",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_417",
+      "candidate_id": "pipeline5_merged_rule_0417",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_418",
+      "candidate_id": "pipeline5_merged_rule_0418",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_419",
+      "candidate_id": "pipeline5_merged_rule_0419",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_420",
+      "candidate_id": "pipeline5_merged_rule_0420",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_421",
+      "candidate_id": "pipeline5_merged_rule_0421",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_422",
+      "candidate_id": "pipeline5_merged_rule_0422",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_423",
+      "candidate_id": "pipeline5_merged_rule_0423",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_424",
+      "candidate_id": "pipeline5_merged_rule_0424",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_425",
+      "candidate_id": "pipeline5_merged_rule_0425",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 1.0,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_154",
+      "candidate_id": "pipeline5_merged_rule_0154",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 0.921,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_155",
+      "candidate_id": "pipeline5_merged_rule_0155",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 0.921,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_183",
+      "candidate_id": "pipeline5_merged_rule_0183",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 0.921,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_187",
+      "candidate_id": "pipeline5_merged_rule_0187",
+      "reason": "bundle_value_not_in_single_source",
+      "bundle_score": 0.921,
+      "blocked_by": []
+    },
+    {
+      "rule_id": "calgary_rcg_089",
+      "candidate_id": "pipeline5_merged_rule_0089",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_090",
+      "candidate_id": "pipeline5_merged_rule_0090",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_091",
+      "candidate_id": "pipeline5_merged_rule_0091",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_092",
+      "candidate_id": "pipeline5_merged_rule_0092",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_128",
+      "candidate_id": "pipeline5_merged_rule_0128",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_142",
+      "candidate_id": "pipeline5_merged_rule_0142",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_146",
+      "candidate_id": "pipeline5_merged_rule_0146",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_152",
+      "candidate_id": "pipeline5_merged_rule_0152",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_181",
+      "candidate_id": "pipeline5_merged_rule_0181",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_188",
+      "candidate_id": "pipeline5_merged_rule_0188",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_209",
+      "candidate_id": "pipeline5_merged_rule_0209",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_211",
+      "candidate_id": "pipeline5_merged_rule_0211",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_213",
+      "candidate_id": "pipeline5_merged_rule_0213",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_215",
+      "candidate_id": "pipeline5_merged_rule_0215",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_216",
+      "candidate_id": "pipeline5_merged_rule_0216",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_219",
+      "candidate_id": "pipeline5_merged_rule_0219",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_220",
+      "candidate_id": "pipeline5_merged_rule_0220",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_226",
+      "candidate_id": "pipeline5_merged_rule_0226",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_235",
+      "candidate_id": "pipeline5_merged_rule_0235",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_237",
+      "candidate_id": "pipeline5_merged_rule_0237",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_259",
+      "candidate_id": "pipeline5_merged_rule_0259",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_260",
+      "candidate_id": "pipeline5_merged_rule_0260",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_270",
+      "candidate_id": "pipeline5_merged_rule_0270",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_271",
+      "candidate_id": "pipeline5_merged_rule_0271",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_272",
+      "candidate_id": "pipeline5_merged_rule_0272",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_279",
+      "candidate_id": "pipeline5_merged_rule_0279",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_280",
+      "candidate_id": "pipeline5_merged_rule_0280",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_282",
+      "candidate_id": "pipeline5_merged_rule_0282",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_283",
+      "candidate_id": "pipeline5_merged_rule_0283",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_284",
+      "candidate_id": "pipeline5_merged_rule_0284",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_287",
+      "candidate_id": "pipeline5_merged_rule_0287",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_293",
+      "candidate_id": "pipeline5_merged_rule_0293",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_294",
+      "candidate_id": "pipeline5_merged_rule_0294",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_300",
+      "candidate_id": "pipeline5_merged_rule_0300",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_301",
+      "candidate_id": "pipeline5_merged_rule_0301",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_306",
+      "candidate_id": "pipeline5_merged_rule_0306",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_312",
+      "candidate_id": "pipeline5_merged_rule_0312",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_313",
+      "candidate_id": "pipeline5_merged_rule_0313",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_319",
+      "candidate_id": "pipeline5_merged_rule_0319",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_341",
+      "candidate_id": "pipeline5_merged_rule_0341",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_354",
+      "candidate_id": "pipeline5_merged_rule_0354",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_357",
+      "candidate_id": "pipeline5_merged_rule_0357",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_359",
+      "candidate_id": "pipeline5_merged_rule_0359",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_361",
+      "candidate_id": "pipeline5_merged_rule_0361",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_364",
+      "candidate_id": "pipeline5_merged_rule_0364",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_365",
+      "candidate_id": "pipeline5_merged_rule_0365",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_366",
+      "candidate_id": "pipeline5_merged_rule_0366",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_367",
+      "candidate_id": "pipeline5_merged_rule_0367",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_368",
+      "candidate_id": "pipeline5_merged_rule_0368",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_191",
+      "candidate_id": "pipeline5_merged_rule_0191",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_192",
+      "candidate_id": "pipeline5_merged_rule_0192",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_193",
+      "candidate_id": "pipeline5_merged_rule_0193",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_198",
+      "candidate_id": "pipeline5_merged_rule_0198",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_199",
+      "candidate_id": "pipeline5_merged_rule_0199",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_233",
+      "candidate_id": "pipeline5_merged_rule_0233",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_339",
+      "candidate_id": "pipeline5_merged_rule_0339",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_340",
+      "candidate_id": "pipeline5_merged_rule_0340",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_344",
+      "candidate_id": "pipeline5_merged_rule_0344",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_407",
+      "candidate_id": "pipeline5_merged_rule_0407",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_148",
+      "candidate_id": "pipeline5_merged_rule_0148",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.7,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_157",
+      "candidate_id": "pipeline5_merged_rule_0157",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.7,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_177",
+      "candidate_id": "pipeline5_merged_rule_0177",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.7,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_126",
+      "candidate_id": "pipeline5_merged_rule_0126",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_127",
+      "candidate_id": "pipeline5_merged_rule_0127",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_145",
+      "candidate_id": "pipeline5_merged_rule_0145",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_186",
+      "candidate_id": "pipeline5_merged_rule_0186",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_228",
+      "candidate_id": "pipeline5_merged_rule_0228",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_245",
+      "candidate_id": "pipeline5_merged_rule_0245",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_324",
+      "candidate_id": "pipeline5_merged_rule_0324",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_325",
+      "candidate_id": "pipeline5_merged_rule_0325",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_330",
+      "candidate_id": "pipeline5_merged_rule_0330",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_331",
+      "candidate_id": "pipeline5_merged_rule_0331",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_377",
+      "candidate_id": "pipeline5_merged_rule_0377",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_378",
+      "candidate_id": "pipeline5_merged_rule_0378",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_381",
+      "candidate_id": "pipeline5_merged_rule_0381",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.691,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_217",
+      "candidate_id": "pipeline5_merged_rule_0217",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.621,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_261",
+      "candidate_id": "pipeline5_merged_rule_0261",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.621,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_281",
+      "candidate_id": "pipeline5_merged_rule_0281",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.621,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_189",
+      "candidate_id": "pipeline5_merged_rule_0189",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.613,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_375",
+      "candidate_id": "pipeline5_merged_rule_0375",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.613,
+      "blocked_by": [
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_001",
+      "candidate_id": "pipeline5_merged_rule_0001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_006",
+      "candidate_id": "pipeline5_merged_rule_0006",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_009",
+      "candidate_id": "pipeline5_merged_rule_0009",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_204",
+      "candidate_id": "pipeline5_merged_rule_0204",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_208",
+      "candidate_id": "pipeline5_merged_rule_0208",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_214",
+      "candidate_id": "pipeline5_merged_rule_0214",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_221",
+      "candidate_id": "pipeline5_merged_rule_0221",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_337",
+      "candidate_id": "pipeline5_merged_rule_0337",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_005",
+      "candidate_id": "pipeline5_merged_rule_0005",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_007",
+      "candidate_id": "pipeline5_merged_rule_0007",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_150",
+      "candidate_id": "pipeline5_merged_rule_0150",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_151",
+      "candidate_id": "pipeline5_merged_rule_0151",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_195",
+      "candidate_id": "pipeline5_merged_rule_0195",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_205",
+      "candidate_id": "pipeline5_merged_rule_0205",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_222",
+      "candidate_id": "pipeline5_merged_rule_0222",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_229",
+      "candidate_id": "pipeline5_merged_rule_0229",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_230",
+      "candidate_id": "pipeline5_merged_rule_0230",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_231",
+      "candidate_id": "pipeline5_merged_rule_0231",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_239",
+      "candidate_id": "pipeline5_merged_rule_0239",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_240",
+      "candidate_id": "pipeline5_merged_rule_0240",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_332",
+      "candidate_id": "pipeline5_merged_rule_0332",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_342",
+      "candidate_id": "pipeline5_merged_rule_0342",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_408",
+      "candidate_id": "pipeline5_merged_rule_0408",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.47,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_202",
+      "candidate_id": "pipeline5_merged_rule_0202",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.463,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_203",
+      "candidate_id": "pipeline5_merged_rule_0203",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.463,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_391",
+      "candidate_id": "pipeline5_merged_rule_0391",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.463,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_336",
+      "candidate_id": "pipeline5_merged_rule_0336",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.391,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_389",
+      "candidate_id": "pipeline5_merged_rule_0389",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.391,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_333",
+      "candidate_id": "pipeline5_merged_rule_0333",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.311,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_334",
+      "candidate_id": "pipeline5_merged_rule_0334",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.311,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_004",
+      "candidate_id": "pipeline5_merged_rule_0004",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.161,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_153",
+      "candidate_id": "pipeline5_merged_rule_0153",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.161,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_196",
+      "candidate_id": "pipeline5_merged_rule_0196",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.161,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_206",
+      "candidate_id": "pipeline5_merged_rule_0206",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.161,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_207",
+      "candidate_id": "pipeline5_merged_rule_0207",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.161,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_243",
+      "candidate_id": "pipeline5_merged_rule_0243",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.161,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_304",
+      "candidate_id": "pipeline5_merged_rule_0304",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.161,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_305",
+      "candidate_id": "pipeline5_merged_rule_0305",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.161,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_343",
+      "candidate_id": "pipeline5_merged_rule_0343",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.161,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_194",
+      "candidate_id": "pipeline5_merged_rule_0194",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.083,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_335",
+      "candidate_id": "pipeline5_merged_rule_0335",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.083,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:operator"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1877 @@
+{
+  "mode": "shadow_evidence_rerun",
+  "notes": [
+    "Reruns do not mutate verified_rules.json.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no risk flags.",
+    "Synthetic retry candidates keep the original source_stream so they cannot create fake consensus."
+  ],
+  "attempt_count": 36,
+  "verified_after_rerun_count": 0,
+  "promotion_ready_count": 0,
+  "review_after_rerun_count": 10,
+  "rejected_after_rerun_count": 26,
+  "skipped_count": 16,
+  "attempts": [
+    {
+      "original_rule_id": "burnaby_r1_008",
+      "original_candidate_id": "pipeline5_merged_rule_0008",
+      "retry_candidate_id": "pipeline5_merged_rule_0008__rerun__burnaby_generic_graph_pack_004__page_0001__local_006",
+      "rule_object": "boarding_use",
+      "constraint_scope": "boarding_use_max_boarders",
+      "applies_to": "boarders",
+      "condition": "Accessory Use",
+      "operator": "<=",
+      "value": "2",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_002__page_0001__local_004",
+      "retry_evidence_id": "burnaby_generic_graph_pack_004__page_0001__local_006",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10 m Corner Lot - Lane 6.2 m 10 m Lot Area .3 Minimum Lot Area - 281 m2 Maximum...",
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_018",
+      "original_candidate_id": "pipeline5_merged_rule_0018",
+      "retry_candidate_id": "pipeline5_merged_rule_0018__rerun__burnaby_generic_graph_pack_002__page_0001__local_004",
+      "rule_object": "lot_area",
+      "constraint_scope": "burnaby_generic_graph_pack_004__rowhouse_max_lot_area",
+      "applies_to": "lot_area",
+      "condition": "for Rowhouse",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "original_evidence_id": "burnaby_generic_graph_pack_004__page_0001__local_006",
+      "retry_evidence_id": "burnaby_generic_graph_pack_002__page_0001__local_004",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regu...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_022",
+      "original_candidate_id": "pipeline5_merged_rule_0022",
+      "retry_candidate_id": "pipeline5_merged_rule_0022__rerun__burnaby_generic_graph_pack_002__page_0001__local_004",
+      "rule_object": "lot_area",
+      "constraint_scope": "burnaby_generic_graph_pack_004__ssmu_min_lot_area",
+      "applies_to": "lot_area",
+      "condition": "for Small-Scale Multi-Unit",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "original_evidence_id": "burnaby_generic_graph_pack_004__page_0001__local_006",
+      "retry_evidence_id": "burnaby_generic_graph_pack_002__page_0001__local_004",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regu...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_023",
+      "original_candidate_id": "pipeline5_merged_rule_0023",
+      "retry_candidate_id": "pipeline5_merged_rule_0023__rerun__burnaby_generic_graph_pack_007__page_0002__local_003",
+      "rule_object": "covenant",
+      "constraint_scope": "burnaby_generic_graph_pack_004__rowhouse_covenant_requirement",
+      "applies_to": "Section 219 Covenant",
+      "condition": "At the time of registration of the subdivision plan to create two or more rowhouse lots, to ensure that all adjoining rowhouse",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_004__page_0001__local_006",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_003",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Interior Side Yard 0 m, except 1.2 m 1.2 m 1.2 m 1.2 m for end unit lots Minimum Separation of Buildings on the Same Lot .4 .5 Between Front Principals - 2.4 m 2.4 m 2.4 m Between Rear Principals - 2.4 m 2.4 m 2.4 m Between Front & Rear Principals 6.0 m Bet...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_024",
+      "original_candidate_id": "pipeline5_merged_rule_0024",
+      "retry_candidate_id": "pipeline5_merged_rule_0024__rerun__burnaby_generic_graph_pack_007__page_0002__local_002",
+      "rule_object": "lot_area",
+      "constraint_scope": "min_lot_area_4_units",
+      "applies_to": "lot area",
+      "condition": "for 4 Units Only, Small-Scale Multi-Unit",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Maximum Height Front Principal Buildings Height sloping roof: 10 m | flat roof: 9.5 m Storeys (basement inclusive) 3 storeys 2.5 storeys 3 storeys Rear Principal Buildings Height sloping roof: 7.5 m | flat roof: 7.0 m Storeys (basement inclusive) 2 storeys...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_025",
+      "original_candidate_id": "pipeline5_merged_rule_0025",
+      "retry_candidate_id": "pipeline5_merged_rule_0025__rerun__burnaby_generic_graph_pack_002__page_0001__local_004",
+      "rule_object": "lot_area",
+      "constraint_scope": "max_lot_area_rowhouse",
+      "applies_to": "lot area",
+      "condition": "for Rowhouse",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_id": "burnaby_generic_graph_pack_002__page_0001__local_004",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regu...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_031",
+      "original_candidate_id": "pipeline5_merged_rule_0031",
+      "retry_candidate_id": "pipeline5_merged_rule_0031__rerun__burnaby_generic_graph_pack_007__page_0002__local_002",
+      "rule_object": "impervious_surface",
+      "constraint_scope": "max_impervious_surfaces_rowhouse_or_ssmu_3_to_4",
+      "applies_to": "impervious surface area",
+      "condition": "for Rowhouse or Small-Scale Multi-Unit 3 to 4 Units",
+      "operator": "<=",
+      "value": "70",
+      "unit": "%",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Maximum Height Front Principal Buildings Height sloping roof: 10 m | flat roof: 9.5 m Storeys (basement inclusive) 3 storeys 2.5 storeys 3 storeys Rear Principal Buildings Height sloping roof: 7.5 m | flat roof: 7.0 m Storeys (basement inclusive) 2 storeys...",
+      "repairable_fields": [
+        "operator"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_032",
+      "original_candidate_id": "pipeline5_merged_rule_0032",
+      "retry_candidate_id": "pipeline5_merged_rule_0032__rerun__burnaby_generic_graph_pack_007__page_0002__local_002",
+      "rule_object": "impervious_surface",
+      "constraint_scope": "max_impervious_surfaces_ssmu_1_to_3_or_1_to_2",
+      "applies_to": "impervious surface area",
+      "condition": "for Small-Scale Multi-Unit 1 to 3 Units or 1 to 2 Units",
+      "operator": "<=",
+      "value": "60",
+      "unit": "%",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Maximum Height Front Principal Buildings Height sloping roof: 10 m | flat roof: 9.5 m Storeys (basement inclusive) 3 storeys 2.5 storeys 3 storeys Rear Principal Buildings Height sloping roof: 7.5 m | flat roof: 7.0 m Storeys (basement inclusive) 2 storeys...",
+      "repairable_fields": [
+        "operator"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_033",
+      "original_candidate_id": "pipeline5_merged_rule_0033",
+      "retry_candidate_id": "pipeline5_merged_rule_0033__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "height",
+      "constraint_scope": "max_height_front_principal_sloping",
+      "applies_to": "height",
+      "condition": "Front Principal Buildings, sloping roof",
+      "operator": "<=",
+      "value": "10",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_034",
+      "original_candidate_id": "pipeline5_merged_rule_0034",
+      "retry_candidate_id": "pipeline5_merged_rule_0034__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "height",
+      "constraint_scope": "max_height_front_principal_flat",
+      "applies_to": "height",
+      "condition": "Front Principal Buildings, flat roof",
+      "operator": "<=",
+      "value": "9.5",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_035",
+      "original_candidate_id": "pipeline5_merged_rule_0035",
+      "retry_candidate_id": "pipeline5_merged_rule_0035__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "height",
+      "constraint_scope": "max_storeys_front_principal_3",
+      "applies_to": "height",
+      "condition": "Front Principal Buildings, Rowhouse or Small-Scale Multi-Unit 3 to 4 Units",
+      "operator": "<=",
+      "value": "3",
+      "unit": "storeys",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_036",
+      "original_candidate_id": "pipeline5_merged_rule_0036",
+      "retry_candidate_id": "pipeline5_merged_rule_0036__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "height",
+      "constraint_scope": "max_storeys_front_principal_2_5",
+      "applies_to": "height",
+      "condition": "Front Principal Buildings, Small-Scale Multi-Unit 1 to 3 Units or 1 to 2 Units",
+      "operator": "<=",
+      "value": "2.5",
+      "unit": "storeys",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_037",
+      "original_candidate_id": "pipeline5_merged_rule_0037",
+      "retry_candidate_id": "pipeline5_merged_rule_0037__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "height",
+      "constraint_scope": "max_height_rear_principal_sloping",
+      "applies_to": "height",
+      "condition": "Rear Principal Buildings, sloping roof",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_038",
+      "original_candidate_id": "pipeline5_merged_rule_0038",
+      "retry_candidate_id": "pipeline5_merged_rule_0038__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "height",
+      "constraint_scope": "max_height_rear_principal_flat",
+      "applies_to": "height",
+      "condition": "Rear Principal Buildings, flat roof",
+      "operator": "<=",
+      "value": "7.0",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_039",
+      "original_candidate_id": "pipeline5_merged_rule_0039",
+      "retry_candidate_id": "pipeline5_merged_rule_0039__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "height",
+      "constraint_scope": "max_storeys_rear_principal",
+      "applies_to": "height",
+      "condition": "Rear Principal Buildings",
+      "operator": "<=",
+      "value": "2",
+      "unit": "storeys",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_040",
+      "original_candidate_id": "pipeline5_merged_rule_0040",
+      "retry_candidate_id": "pipeline5_merged_rule_0040__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "height",
+      "constraint_scope": "max_height_accessory_buildings",
+      "applies_to": "height",
+      "condition": "Accessory Buildings",
+      "operator": "<=",
+      "value": "4.0",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_041",
+      "original_candidate_id": "pipeline5_merged_rule_0041",
+      "retry_candidate_id": "pipeline5_merged_rule_0041__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "height",
+      "constraint_scope": "max_storeys_accessory_buildings",
+      "applies_to": "height",
+      "condition": "Accessory Buildings",
+      "operator": "<=",
+      "value": "1",
+      "unit": "storeys",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": false,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_042",
+      "original_candidate_id": "pipeline5_merged_rule_0042",
+      "retry_candidate_id": "pipeline5_merged_rule_0042__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "setback",
+      "constraint_scope": "min_street_yard_setback_rowhouse",
+      "applies_to": "street yard setback",
+      "condition": "Rowhouse",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_043",
+      "original_candidate_id": "pipeline5_merged_rule_0043",
+      "retry_candidate_id": "pipeline5_merged_rule_0043__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "setback",
+      "constraint_scope": "min_front_yard_setback_ssmu",
+      "applies_to": "front yard setback",
+      "condition": "Small-Scale Multi-Unit",
+      "operator": ">=",
+      "value": "4.0",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_044",
+      "original_candidate_id": "pipeline5_merged_rule_0044",
+      "retry_candidate_id": "pipeline5_merged_rule_0044__rerun__burnaby_generic_graph_pack_007__page_0002__local_001",
+      "rule_object": "setback",
+      "constraint_scope": "min_flanking_yard_setback_ssmu",
+      "applies_to": "flanking yard setback",
+      "condition": "Small-Scale Multi-Unit",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites) Units Units Units Network Area Only 4 Units Only: Minimum Lot Area - - 281 m...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_045",
+      "original_candidate_id": "pipeline5_merged_rule_0045",
+      "retry_candidate_id": "pipeline5_merged_rule_0045__rerun__burnaby_generic_graph_pack_007__page_0002__local_003",
+      "rule_object": "setback",
+      "constraint_scope": "min_lane_yard_setback",
+      "applies_to": "lane yard setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "1.5",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_003",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Interior Side Yard 0 m, except 1.2 m 1.2 m 1.2 m 1.2 m for end unit lots Minimum Separation of Buildings on the Same Lot .4 .5 Between Front Principals - 2.4 m 2.4 m 2.4 m Between Rear Principals - 2.4 m 2.4 m 2.4 m Between Front & Rear Principals 6.0 m Bet...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unresolved_exception_cue",
+        "cross_reference_only"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_046",
+      "original_candidate_id": "pipeline5_merged_rule_0046",
+      "retry_candidate_id": "pipeline5_merged_rule_0046__rerun__burnaby_generic_graph_pack_007__page_0002__local_003",
+      "rule_object": "setback",
+      "constraint_scope": "min_interior_rear_yard_setback",
+      "applies_to": "interior rear yard setback",
+      "condition": "",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_003",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Interior Side Yard 0 m, except 1.2 m 1.2 m 1.2 m 1.2 m for end unit lots Minimum Separation of Buildings on the Same Lot .4 .5 Between Front Principals - 2.4 m 2.4 m 2.4 m Between Rear Principals - 2.4 m 2.4 m 2.4 m Between Front & Rear Principals 6.0 m Bet...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "cross_reference_only"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_047",
+      "original_candidate_id": "pipeline5_merged_rule_0047",
+      "retry_candidate_id": "pipeline5_merged_rule_0047__rerun__burnaby_generic_graph_pack_007__page_0002__local_002",
+      "rule_object": "setback",
+      "constraint_scope": "min_interior_side_yard_setback_rowhouse",
+      "applies_to": "interior side yard setback",
+      "condition": "Rowhouse",
+      "operator": ">=",
+      "value": "0",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_003",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Maximum Height Front Principal Buildings Height sloping roof: 10 m | flat roof: 9.5 m Storeys (basement inclusive) 3 storeys 2.5 storeys 3 storeys Rear Principal Buildings Height sloping roof: 7.5 m | flat roof: 7.0 m Storeys (basement inclusive) 2 storeys...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_053",
+      "original_candidate_id": "pipeline5_merged_rule_0053",
+      "retry_candidate_id": "pipeline5_merged_rule_0053__rerun__burnaby_generic_graph_pack_004__page_0001__local_006",
+      "rule_object": "lot_area",
+      "constraint_scope": "max_lot_area_rowhouse_exception",
+      "applies_to": "lot area",
+      "condition": "may exceed 280 m2, subject to registration of a Section 219 Covenant prohibiting the construction of more than 3 dwelling units on the lot",
+      "operator": "permitted",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_003",
+      "retry_evidence_id": "burnaby_generic_graph_pack_004__page_0001__local_006",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10 m Corner Lot - Lane 6.2 m 10 m Lot Area .3 Minimum Lot Area - 281 m2 Maximum...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_054",
+      "original_candidate_id": "pipeline5_merged_rule_0054",
+      "retry_candidate_id": "pipeline5_merged_rule_0054__rerun__burnaby_generic_graph_pack_007__page_0002__local_002",
+      "rule_object": "setback",
+      "constraint_scope": "interior_side_yard_setback_rowhouse_exemption",
+      "applies_to": "interior side yard setback",
+      "condition": "for rowhouse dwelling units on a lot line between two",
+      "operator": ">=",
+      "value": "0",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_003",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Maximum Height Front Principal Buildings Height sloping roof: 10 m | flat roof: 9.5 m Storeys (basement inclusive) 3 storeys 2.5 storeys 3 storeys Rear Principal Buildings Height sloping roof: 7.5 m | flat roof: 7.0 m Storeys (basement inclusive) 2 storeys...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_055",
+      "original_candidate_id": "pipeline5_merged_rule_0055",
+      "retry_candidate_id": "pipeline5_merged_rule_0055__rerun__burnaby_generic_graph_pack_009__page_0004__local_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "min_3_bedroom_units_1_to_3",
+      "applies_to": "3+ bedroom units",
+      "condition": "for a lot with 1 to 3 total dwelling units",
+      "operator": ">=",
+      "value": "1",
+      "unit": "units",
+      "original_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_001",
+      "retry_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_002",
+      "retry_evidence_page": 4,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5....",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_056",
+      "original_candidate_id": "pipeline5_merged_rule_0056",
+      "retry_candidate_id": "pipeline5_merged_rule_0056__rerun__burnaby_generic_graph_pack_009__page_0004__local_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "min_3_bedroom_units_4_to_6",
+      "applies_to": "3+ bedroom units",
+      "condition": "for a lot with 4 to 6 total dwelling units",
+      "operator": ">=",
+      "value": "2",
+      "unit": "units",
+      "original_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_001",
+      "retry_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_002",
+      "retry_evidence_page": 4,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with multiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5....",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_061",
+      "original_candidate_id": "pipeline5_merged_rule_0061",
+      "retry_candidate_id": "pipeline5_merged_rule_0061__rerun__burnaby_generic_graph_pack_009__page_0004__local_001",
+      "rule_object": "pedestrian_walkway",
+      "constraint_scope": "pedestrian_walkway_srow",
+      "applies_to": "statutory right of way registered in favour of the City",
+      "condition": "for contiguous rowhouse lots",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_001",
+      "retry_evidence_page": 4,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.5 Use-Specific Regulations 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 to 3 Units 4 to 6 Units Minimum 3+ Bedroom Units: 1 Unit 2 Unit...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_062",
+      "original_candidate_id": "pipeline5_merged_rule_0062",
+      "retry_candidate_id": "pipeline5_merged_rule_0062__rerun__burnaby_generic_graph_pack_009__page_0004__local_001",
+      "rule_object": "pedestrian_walkway",
+      "constraint_scope": "pedestrian_walkway_illumination_accessibility",
+      "applies_to": "illuminated and publicly accessible pedestrian walkway",
+      "condition": "for contiguous rowhouse lots",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_001",
+      "retry_evidence_page": 4,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.5 Use-Specific Regulations 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 to 3 Units 4 to 6 Units Minimum 3+ Bedroom Units: 1 Unit 2 Unit...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_063",
+      "original_candidate_id": "pipeline5_merged_rule_0063",
+      "retry_candidate_id": "pipeline5_merged_rule_0063__rerun__burnaby_generic_graph_pack_009__page_0004__local_001",
+      "rule_object": "pedestrian_walkway",
+      "constraint_scope": "pedestrian_walkway_link",
+      "applies_to": "links the fronting street with the parallel lane, street, or trail network at the rear of the lot",
+      "condition": "for contiguous rowhouse lots",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_002",
+      "retry_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_001",
+      "retry_evidence_page": 4,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.5 Use-Specific Regulations 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 to 3 Units 4 to 6 Units Minimum 3+ Bedroom Units: 1 Unit 2 Unit...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_064",
+      "original_candidate_id": "pipeline5_merged_rule_0064",
+      "retry_candidate_id": "pipeline5_merged_rule_0064__rerun__burnaby_generic_graph_pack_010__page_0004__local_004",
+      "rule_object": "small_scale_multi_unit_lot",
+      "constraint_scope": "compliance_section_101_4",
+      "applies_to": "development regulations under Section 101.4",
+      "condition": "for small-scale multi-unit lots with 1 to 3 units",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_003",
+      "retry_evidence_id": "burnaby_generic_graph_pack_010__page_0004__local_004",
+      "retry_evidence_page": 4,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.5.5 Accessory Buildings, Structures, and Uses (1) Parking: (a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at the rear of the lot when accessible from an abutting lane or street. Where there is no direct a...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_065",
+      "original_candidate_id": "pipeline5_merged_rule_0065",
+      "retry_candidate_id": "pipeline5_merged_rule_0065__rerun__burnaby_generic_graph_pack_007__page_0002__local_003",
+      "rule_object": "permitted_projections",
+      "constraint_scope": "burnaby_permitted_projections_compliance",
+      "applies_to": "permitted projections into required yards",
+      "condition": "subject to Section 6.12",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_011__page_0005__local_004",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_003",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Interior Side Yard 0 m, except 1.2 m 1.2 m 1.2 m 1.2 m for end unit lots Minimum Separation of Buildings on the Same Lot .4 .5 Between Front Principals - 2.4 m 2.4 m 2.4 m Between Rear Principals - 2.4 m 2.4 m 2.4 m Between Front & Rear Principals 6.0 m Bet...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_069",
+      "original_candidate_id": "pipeline5_merged_rule_0069",
+      "retry_candidate_id": "pipeline5_merged_rule_0069__rerun__burnaby_generic_graph_pack_004__page_0001__local_006",
+      "rule_object": "development_regulations",
+      "constraint_scope": "burnaby_generic_graph_pack_012__page_0005__local_001_comply_101_4",
+      "applies_to": "1 to 3 small-scale multi-unit dwelling units on a lot",
+      "condition": "under section 101.4",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_012__page_0005__local_001",
+      "retry_evidence_id": "burnaby_generic_graph_pack_004__page_0001__local_006",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10 m Corner Lot - Lane 6.2 m 10 m Lot Area .3 Minimum Lot Area - 281 m2 Maximum...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_070",
+      "original_candidate_id": "pipeline5_merged_rule_0070",
+      "retry_candidate_id": "pipeline5_merged_rule_0070__rerun__burnaby_generic_graph_pack_009__page_0004__local_003",
+      "rule_object": "parking_location",
+      "constraint_scope": "parking_location_rear",
+      "applies_to": "parking",
+      "condition": "when accessible from an abutting lane or street",
+      "operator": "required",
+      "value": "",
+      "unit": "",
+      "original_evidence_id": "burnaby_generic_graph_pack_010__page_0004__local_004",
+      "retry_evidence_id": "burnaby_generic_graph_pack_009__page_0004__local_003",
+      "retry_evidence_page": 4,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(b) it meets the development regulations under Section 101.4 for small-scale multi-unit lots with 1 to 3 units; and ss than 560 m2, subject to the condition that it is included as part of a comprehensive development plan to which the provisions of the Compr...",
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_071",
+      "original_candidate_id": "pipeline5_merged_rule_0071",
+      "retry_candidate_id": "pipeline5_merged_rule_0071__rerun__burnaby_generic_graph_pack_007__page_0002__local_002",
+      "rule_object": "height",
+      "constraint_scope": "below_grade_garage_height_above_ground",
+      "applies_to": "garage or carport below grade",
+      "condition": "above the surface of the surrounding ground",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_010__page_0004__local_004",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Maximum Height Front Principal Buildings Height sloping roof: 10 m | flat roof: 9.5 m Storeys (basement inclusive) 3 storeys 2.5 storeys 3 storeys Rear Principal Buildings Height sloping roof: 7.5 m | flat roof: 7.0 m Storeys (basement inclusive) 2 storeys...",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 0.985,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_072",
+      "original_candidate_id": "pipeline5_merged_rule_0072",
+      "retry_candidate_id": "pipeline5_merged_rule_0072__rerun__burnaby_generic_graph_pack_007__page_0002__local_002",
+      "rule_object": "setback",
+      "constraint_scope": "below_grade_garage_setback",
+      "applies_to": "garage or carport below grade",
+      "condition": "from a lot line",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "original_evidence_id": "burnaby_generic_graph_pack_010__page_0004__local_004",
+      "retry_evidence_id": "burnaby_generic_graph_pack_007__page_0002__local_002",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Maximum Height Front Principal Buildings Height sloping roof: 10 m | flat roof: 9.5 m Storeys (basement inclusive) 3 storeys 2.5 storeys 3 storeys Rear Principal Buildings Height sloping roof: 7.5 m | flat roof: 7.0 m Storeys (basement inclusive) 2 storeys...",
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 0.985,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    }
+  ],
+  "verified_after_rerun": [],
+  "promotion_ready": [],
+  "skipped": [
+    {
+      "rule_id": "burnaby_r1_002",
+      "candidate_id": "pipeline5_merged_rule_0002",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_003",
+      "candidate_id": "pipeline5_merged_rule_0003",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_005",
+      "candidate_id": "pipeline5_merged_rule_0005",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_006",
+      "candidate_id": "pipeline5_merged_rule_0006",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_007",
+      "candidate_id": "pipeline5_merged_rule_0007",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_009",
+      "candidate_id": "pipeline5_merged_rule_0009",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_010",
+      "candidate_id": "pipeline5_merged_rule_0010",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_011",
+      "candidate_id": "pipeline5_merged_rule_0011",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_013",
+      "candidate_id": "pipeline5_merged_rule_0013",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_026",
+      "candidate_id": "pipeline5_merged_rule_0026",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_027",
+      "candidate_id": "pipeline5_merged_rule_0027",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_028",
+      "candidate_id": "pipeline5_merged_rule_0028",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_029",
+      "candidate_id": "pipeline5_merged_rule_0029",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_030",
+      "candidate_id": "pipeline5_merged_rule_0030",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_001",
+      "candidate_id": "pipeline5_merged_rule_0001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.962
+    },
+    {
+      "rule_id": "burnaby_r1_004",
+      "candidate_id": "pipeline5_merged_rule_0004",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.923
+    }
+  ]
+}

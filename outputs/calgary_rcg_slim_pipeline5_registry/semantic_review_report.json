@@ -1,0 +1,1789 @@
+{
+  "purpose": "Advisory semantic-signature comparison for review rules. It never verifies rules.",
+  "review_rule_count": 14,
+  "verified_rule_count": 6,
+  "high_similarity_count": 1,
+  "embedding": {
+    "available": true,
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "mode": "embedding",
+    "notes": [
+      "Embedding scores are advisory and cannot verify rules.",
+      "Deterministic support checks remain the only promotion path."
+    ]
+  },
+  "items": [
+    {
+      "rule_id": "calgary_rcg_013",
+      "candidate_id": "local_merged_rule_0013",
+      "canonical_rule_key": "height__building__height____7_5__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 7.5,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "height"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_010",
+          "semantic_score": 0.877,
+          "structured_score": 0.81,
+          "embedding_score": 1.0,
+          "combined_semantic_score": 0.877,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_011",
+          "semantic_score": 0.71,
+          "structured_score": 0.67,
+          "embedding_score": 0.932,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_006",
+          "semantic_score": 0.292,
+          "structured_score": 0.18,
+          "embedding_score": 0.501,
+          "combined_semantic_score": 0.292,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value_bucket",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "building_separation",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.877,
+      "best_structured_score": 0.81,
+      "best_embedding_score": 1.0,
+      "best_combined_semantic_score": 0.877,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_scope_review",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_005",
+      "candidate_id": "local_merged_rule_0005",
+      "canonical_rule_key": "setback__min_setback__setback____0_6__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.6,
+        "unit": "m",
+        "scope_concepts": [
+          "min",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "setback_area"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_004",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.98,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_020",
+          "semantic_score": 0.71,
+          "structured_score": 0.97,
+          "embedding_score": 1.0,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_021",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.962,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.77,
+      "best_embedding_score": 0.98,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_007",
+      "candidate_id": "local_merged_rule_0007",
+      "canonical_rule_key": "building_separation__building_separation__building_separation____0_6__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.6,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "separation"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_006",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.974,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "building_separation",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_020",
+          "semantic_score": 0.46,
+          "structured_score": 0.48,
+          "embedding_score": 0.423,
+          "combined_semantic_score": 0.46,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_021",
+          "semantic_score": 0.325,
+          "structured_score": 0.28,
+          "embedding_score": 0.409,
+          "combined_semantic_score": 0.325,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.77,
+      "best_embedding_score": 0.974,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_009",
+      "candidate_id": "local_merged_rule_0009",
+      "canonical_rule_key": "building_separation__building_separation__building_separation____3_1__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.1,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "separation"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_006",
+          "semantic_score": 0.71,
+          "structured_score": 0.83,
+          "embedding_score": 0.966,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "building_separation",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_021",
+          "semantic_score": 0.357,
+          "structured_score": 0.34,
+          "embedding_score": 0.389,
+          "combined_semantic_score": 0.357,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_004",
+          "semantic_score": 0.327,
+          "structured_score": 0.28,
+          "embedding_score": 0.413,
+          "combined_semantic_score": 0.327,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.83,
+      "best_embedding_score": 0.966,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_012",
+      "candidate_id": "local_merged_rule_0012",
+      "canonical_rule_key": "height__building__height____3_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "height"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_010",
+          "semantic_score": 0.71,
+          "structured_score": 0.67,
+          "embedding_score": 0.903,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_011",
+          "semantic_score": 0.71,
+          "structured_score": 0.67,
+          "embedding_score": 0.914,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_006",
+          "semantic_score": 0.307,
+          "structured_score": 0.18,
+          "embedding_score": 0.542,
+          "combined_semantic_score": 0.307,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value_bucket",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "building_separation",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.67,
+      "best_embedding_score": 0.903,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_017",
+      "candidate_id": "local_merged_rule_0017",
+      "canonical_rule_key": "setback__min_setback__setback____4_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 4.0,
+        "unit": "m",
+        "scope_concepts": [
+          "min",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "setback_area"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_004",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.946,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_020",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.939,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_021",
+          "semantic_score": 0.71,
+          "structured_score": 0.83,
+          "embedding_score": 0.915,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.77,
+      "best_embedding_score": 0.946,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_018",
+      "candidate_id": "local_merged_rule_0018",
+      "canonical_rule_key": "setback__min_setback__setback____2_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "m",
+        "scope_concepts": [
+          "min",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "setback_area"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_004",
+          "semantic_score": 0.71,
+          "structured_score": 0.83,
+          "embedding_score": 0.958,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_020",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.95,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_021",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.92,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.83,
+      "best_embedding_score": 0.958,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_019",
+      "candidate_id": "local_merged_rule_0019",
+      "canonical_rule_key": "setback__min_setback__setback____3_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "min",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "setback_area"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_004",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.954,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_020",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.949,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_021",
+          "semantic_score": 0.71,
+          "structured_score": 0.83,
+          "embedding_score": 0.923,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.77,
+      "best_embedding_score": 0.954,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_022",
+      "candidate_id": "local_merged_rule_0022",
+      "canonical_rule_key": "setback__min_setback__setback____3_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "min",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "setback_area"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_004",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.954,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_020",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": 0.949,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_021",
+          "semantic_score": 0.71,
+          "structured_score": 0.83,
+          "embedding_score": 0.923,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "min_setback",
+          "verified_applies_to": "setback",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.77,
+      "best_embedding_score": 0.954,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_023",
+      "candidate_id": "local_merged_rule_0023",
+      "canonical_rule_key": "height__building__height____1_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "height"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_010",
+          "semantic_score": 0.71,
+          "structured_score": 0.61,
+          "embedding_score": 0.902,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_011",
+          "semantic_score": 0.71,
+          "structured_score": 0.61,
+          "embedding_score": 0.919,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_006",
+          "semantic_score": 0.267,
+          "structured_score": 0.12,
+          "embedding_score": 0.541,
+          "combined_semantic_score": 0.267,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "building_separation",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.61,
+      "best_embedding_score": 0.902,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_024",
+      "candidate_id": "local_merged_rule_0024",
+      "canonical_rule_key": "height__building__height____1_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "m",
+        "scope_concepts": [],
+        "applies_to_concepts": [
+          "height"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_010",
+          "semantic_score": 0.71,
+          "structured_score": 0.61,
+          "embedding_score": 0.902,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_011",
+          "semantic_score": 0.71,
+          "structured_score": 0.61,
+          "embedding_score": 0.919,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "applies_to_concept_overlap",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_006",
+          "semantic_score": 0.267,
+          "structured_score": 0.12,
+          "embedding_score": 0.541,
+          "combined_semantic_score": 0.267,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "building_separation",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.61,
+      "best_embedding_score": 0.902,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_014",
+      "candidate_id": "local_merged_rule_0014",
+      "canonical_rule_key": "floor_area__max_floor_area__floor_area____2_5__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.5,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor",
+          "max"
+        ],
+        "applies_to_concepts": [
+          "area",
+          "floor"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_011",
+          "semantic_score": 0.292,
+          "structured_score": 0.16,
+          "embedding_score": 0.537,
+          "combined_semantic_score": 0.292,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_010",
+          "semantic_score": 0.282,
+          "structured_score": 0.16,
+          "embedding_score": 0.509,
+          "combined_semantic_score": 0.282,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_006",
+          "semantic_score": 0.169,
+          "structured_score": 0.0,
+          "embedding_score": 0.483,
+          "combined_semantic_score": 0.169,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "building_separation",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.292,
+      "best_structured_score": 0.16,
+      "best_embedding_score": 0.537,
+      "best_combined_semantic_score": 0.292,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_015",
+      "candidate_id": "local_merged_rule_0015",
+      "canonical_rule_key": "floor_area__max_floor_area__floor_area____75_0__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 75.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor",
+          "max"
+        ],
+        "applies_to_concepts": [
+          "area",
+          "floor"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_011",
+          "semantic_score": 0.284,
+          "structured_score": 0.16,
+          "embedding_score": 0.514,
+          "combined_semantic_score": 0.284,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_010",
+          "semantic_score": 0.282,
+          "structured_score": 0.16,
+          "embedding_score": 0.509,
+          "combined_semantic_score": 0.282,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_006",
+          "semantic_score": 0.172,
+          "structured_score": 0.0,
+          "embedding_score": 0.491,
+          "combined_semantic_score": 0.172,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "building_separation",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.284,
+      "best_structured_score": 0.16,
+      "best_embedding_score": 0.514,
+      "best_combined_semantic_score": 0.284,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_001",
+      "candidate_id": "local_merged_rule_0001",
+      "canonical_rule_key": "floor_area__max_floor_area__floor_area____100_0__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "max",
+        "value_bucket": "100_plus",
+        "value_numeric": 100.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor",
+          "max"
+        ],
+        "applies_to_concepts": [
+          "area",
+          "floor"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_011",
+          "semantic_score": 0.276,
+          "structured_score": 0.16,
+          "embedding_score": 0.491,
+          "combined_semantic_score": 0.276,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_010",
+          "semantic_score": 0.268,
+          "structured_score": 0.16,
+          "embedding_score": 0.468,
+          "combined_semantic_score": 0.268,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "building",
+          "verified_applies_to": "height",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_006",
+          "semantic_score": 0.17,
+          "structured_score": 0.0,
+          "embedding_score": 0.485,
+          "combined_semantic_score": 0.17,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "embedding_similarity"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "building_separation",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.276,
+      "best_structured_score": 0.16,
+      "best_embedding_score": 0.491,
+      "best_combined_semantic_score": 0.276,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "unresolved_exception_cue"
+      ]
+    }
+  ],
+  "summary": {
+    "semantic_action_counts": [
+      {
+        "name": "close_meaning_guardrail_blocked",
+        "count": 10
+      },
+      {
+        "name": "no_close_verified_analogue",
+        "count": 3
+      },
+      {
+        "name": "close_meaning_scope_review",
+        "count": 1
+      }
+    ]
+  },
+  "notes": [
+    "Semantic score uses normalized structured fields plus optional MiniLM embeddings.",
+    "Embedding similarity is advisory and cannot clear support gaps.",
+    "Guardrails cap high similarity when core legal fields disagree."
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "benchmark": "calgary_rcg",
+  "outputs_evaluated": "outputs/calgary_rcg_p9",
+  "rule_metrics": {
+    "gold_rule_count": 8,
+    "candidate_rule_count": 428,
+    "verified_rule_count": 16,
+    "review_rule_count": 348,
+    "rejected_rule_count": 56,
+    "not_used_rule_count": 8,
+    "candidate_recall": 0.625,
+    "verified_gold_recall": 0.25,
+    "verified_or_review_recall": 0.75,
+    "extraction_coverage_recall": 0.75,
+    "verifier_retention_rate": 1.0,
+    "verifier_rejected_gold_rule_ids": [],
+    "not_used_gold_rule_ids": [],
+    "unextracted_gold_rule_ids": [
+      "cal_height_side_edge_001",
+      "cal_setback_front_deemed_001"
+    ],
+    "verified_precision": 0.25,
+    "false_verified_count": 12,
+    "false_verified_rule_ids": [
+      "calgary_rcg_210",
+      "calgary_rcg_218",
+      "calgary_rcg_289",
+      "calgary_rcg_292",
+      "calgary_rcg_314",
+      "calgary_rcg_315",
+      "calgary_rcg_316",
+      "calgary_rcg_321",
+      "calgary_rcg_351",
+      "calgary_rcg_353",
+      "calgary_rcg_356",
+      "calgary_rcg_358"
+    ],
+    "verified_source_support_failed_count": 0,
+    "verified_source_support_failures": [],
+    "retrieval_recall": null,
+    "retrieval_recall_applicable": false,
+    "retrieved_gold_rule_ids": [],
+    "missed_candidate_gold_rule_ids": [
+      "cal_setback_rear_001",
+      "cal_height_side_edge_001",
+      "cal_setback_front_deemed_001"
+    ],
+    "missed_verified_gold_rule_ids": [
+      "cal_separation_001",
+      "cal_height_001",
+      "cal_height_side_edge_001",
+      "cal_floor_area_001",
+      "cal_floor_area_secondary_001",
+      "cal_setback_front_deemed_001"
+    ],
+    "missed_verified_or_review_gold_rule_ids": [
+      "cal_height_side_edge_001",
+      "cal_setback_front_deemed_001"
+    ],
+    "top_review_reasons": [
+      {
+        "reason": "pipeline5_text_candidate_requires_review",
+        "count": 401
+      },
+      {
+        "reason": "operator_not_supported",
+        "count": 186
+      },
+      {
+        "reason": "upstream_extraction_requested_review",
+        "count": 82
+      },
+      {
+        "reason": "rule_object_not_supported",
+        "count": 69
+      },
+      {
+        "reason": "rule_family_direction_mismatch",
+        "count": 56
+      },
+      {
+        "reason": "rule_object_unit_not_compatible",
+        "count": 46
+      },
+      {
+        "reason": "unresolved_exception_cue",
+        "count": 38
+      },
+      {
+        "reason": "applies_to_not_supported",
+        "count": 36
+      },
+      {
+        "reason": "value_not_found_in_evidence",
+        "count": 10
+      },
+      {
+        "reason": "outside_current_rule_contract",
+        "count": 8
+      }
+    ],
+    "evidence_quality": {
+      "evidence_unit_count": 152,
+      "candidate_rule_count": 428,
+      "mean_evidence_quality_score": 0.989,
+      "candidate_evidence_match_rate": 1.0,
+      "candidate_value_grounding_rate": 0.979,
+      "candidate_unit_grounding_rate": 0.743,
+      "table_evidence_count": 0,
+      "table_context_completion_rate": 0.0,
+      "top_evidence_quality_issues": [
+        {
+          "issue": "evidence_text_not_in_source_context",
+          "count": 9
+        }
+      ]
+    },
+    "proof_metrics": {
+      "proof_trace_completion_rate": 1.0,
+      "supported_claim_count": 2987,
+      "refuted_claim_count": 14,
+      "not_enough_info_claim_count": 423,
+      "mean_evidence_strength": 0.759,
+      "high_priority_review_count": 30,
+      "table_proof_count": 0,
+      "table_proof_complete_count": 0,
+      "table_proof_partial_count": 0,
+      "table_proof_refuted_count": 0,
+      "proof_decision_mismatch_count": 0
+    },
+    "matched_candidates": [
+      {
+        "gold_id": "cal_separation_001",
+        "rule_id": "pipeline5_merged_rule_0405",
+        "score": 11,
+        "source_page": null
+      },
+      {
+        "gold_id": "cal_height_001",
+        "rule_id": "pipeline5_merged_rule_0238",
+        "score": 11,
+        "source_page": null
+      },
+      {
+        "gold_id": "cal_floor_area_001",
+        "rule_id": "pipeline5_merged_rule_0239",
+        "score": 11,
+        "source_page": null
+      },
+      {
+        "gold_id": "cal_floor_area_secondary_001",
+        "rule_id": "pipeline5_merged_rule_0230",
+        "score": 11,
+        "source_page": null
+      },
+      {
+        "gold_id": "cal_setback_balcony_001",
+        "rule_id": "pipeline5_merged_rule_0244",
+        "score": 11,
+        "source_page": null
+      }
+    ],
+    "matched_verified": [
+      {
+        "gold_id": "cal_setback_rear_001",
+        "rule_id": "calgary_rcg_234",
+        "score": 11,
+        "source_page": 395
+      },
+      {
+        "gold_id": "cal_setback_balcony_001",
+        "rule_id": "calgary_rcg_236",
+        "score": 11,
+        "source_page": 396
+      }
+    ],
+    "matched_review": [
+      {
+        "gold_id": "cal_separation_001",
+        "rule_id": "calgary_rcg_405",
+        "score": 11,
+        "source_page": 396
+      },
+      {
+        "gold_id": "cal_height_001",
+        "rule_id": "calgary_rcg_238",
+        "score": 11,
+        "source_page": 396
+      },
+      {
+        "gold_id": "cal_floor_area_001",
+        "rule_id": "calgary_rcg_239",
+        "score": 11,
+        "source_page": 396
+      },
+      {
+        "gold_id": "cal_floor_area_secondary_001",
+        "rule_id": "calgary_rcg_230",
+        "score": 11,
+        "source_page": 395
+      },
+      {
+        "gold_id": "cal_setback_balcony_001",
+        "rule_id": "calgary_rcg_389",
+        "score": 11,
+        "source_page": 196
+      }
+    ],
+    "matched_not_used": []
+  },
+  "proposal_metrics": {
+    "proposal_case_count": 0,
+    "proposal_decision_accuracy": 0.0,
+    "proposal_case_accuracy": 0.0,
+    "false_approval_count": 0,
+    "false_approval_cases": [],
+    "false_rejection_count": 0,
+    "false_rejection_cases": [],
+    "field_expectation_mismatch_count": 0,
+    "field_expectation_mismatch_cases": [],
+    "needs_review_count": 0
+  },
+  "proposal_results": [],
+  "quality_gates": {
+    "passed": false,
+    "gates": {
+      "verified_precision_is_1": false,
+      "false_verified_is_0": false,
+      "false_approval_is_0": true,
+      "retrieval_recall_at_least_0_95": true,
+      "verified_or_review_recall_at_least_0_90": false,
+      "verified_source_support_failures_is_0": true
+    }
+  }
+}

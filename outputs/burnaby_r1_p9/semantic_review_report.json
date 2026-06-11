@@ -1,0 +1,2151 @@
+{
+  "purpose": "Advisory semantic-signature comparison for review rules. It never verifies rules.",
+  "review_rule_count": 52,
+  "verified_rule_count": 0,
+  "high_similarity_count": 0,
+  "embedding": {
+    "available": false,
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "mode": "structured_only",
+    "reason": "no_rules_to_compare",
+    "notes": [
+      "Embedding backend unavailable; semantic review used structured signatures only.",
+      "Install/cache sentence-transformers/all-MiniLM-L6-v2 to enable embedding ranking."
+    ]
+  },
+  "items": [
+    {
+      "rule_id": "burnaby_r1_001",
+      "candidate_id": "pipeline5_merged_rule_0001",
+      "canonical_rule_key": "permitted_use__permitted_use_small_scale_multi_unit_housing__small_scale_multi_unit_housing__principal_use__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "housing",
+          "multi",
+          "permitted",
+          "scale",
+          "small",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "housing",
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": [
+          "principal",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_002",
+      "candidate_id": "pipeline5_merged_rule_0002",
+      "canonical_rule_key": "permitted_use__permitted_use_rowhouse_dwellings__rowhouse_dwellings__principal_use_subject_to_use_specific_regulations_101_5_2__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "dwelling",
+          "permitted",
+          "rowhouse",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "dwelling",
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "101",
+          "principal",
+          "regulation",
+          "specific",
+          "subject",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_003",
+      "candidate_id": "pipeline5_merged_rule_0003",
+      "canonical_rule_key": "permitted_use__permitted_use_boarding_lodging_rooming_house__boarding_lodging_or_rooming_house__principal_use_subject_to_use_specific_regulations_101_5_3__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "boarding",
+          "house",
+          "lodging",
+          "permitted",
+          "rooming",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "boarding",
+          "house",
+          "lodging",
+          "rooming"
+        ],
+        "condition_concepts": [
+          "101",
+          "principal",
+          "regulation",
+          "specific",
+          "subject",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_004",
+      "candidate_id": "pipeline5_merged_rule_0004",
+      "canonical_rule_key": "permitted_use__permitted_use_group_home__group_home__principal_use__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "group",
+          "home",
+          "permitted",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "group",
+          "home"
+        ],
+        "condition_concepts": [
+          "principal",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_005",
+      "candidate_id": "pipeline5_merged_rule_0005",
+      "canonical_rule_key": "permitted_use__permitted_use_supportive_housing_category_a__supportive_housing_category_a__principal_use_subject_to_use_specific_regulations_101_5_4__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "category",
+          "housing",
+          "permitted",
+          "supportive",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "category",
+          "housing",
+          "supportive"
+        ],
+        "condition_concepts": [
+          "101",
+          "principal",
+          "regulation",
+          "specific",
+          "subject",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_006",
+      "candidate_id": "pipeline5_merged_rule_0006",
+      "canonical_rule_key": "permitted_use__permitted_use_child_care_facilities__child_care_facilities__principal_use_subject_to_use_specific_regulations_101_5_6__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "care",
+          "child",
+          "facility",
+          "permitted",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "care",
+          "child",
+          "facility"
+        ],
+        "condition_concepts": [
+          "101",
+          "principal",
+          "regulation",
+          "specific",
+          "subject",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_007",
+      "candidate_id": "pipeline5_merged_rule_0007",
+      "canonical_rule_key": "permitted_use__permitted_use_boarding_use__boarding_use__accessory_use_up_to_2_boarders__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "boarding",
+          "permitted",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "boarding",
+          "use"
+        ],
+        "condition_concepts": [
+          "accessory",
+          "boarder",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_008",
+      "candidate_id": "pipeline5_merged_rule_0008",
+      "canonical_rule_key": "lot_area__boarding_use_max_boarders__boarders__accessory_use____2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": null,
+        "scope_concepts": [
+          "boarder",
+          "boarding",
+          "max",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "boarder"
+        ],
+        "condition_concepts": [
+          "accessory",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_009",
+      "candidate_id": "pipeline5_merged_rule_0009",
+      "canonical_rule_key": "permitted_use__permitted_use_home_occupations__home_occupations__accessory_use_subject_to_use_specific_regulations_6_8_6_8a__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "home",
+          "occupation",
+          "permitted",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "home",
+          "occupation"
+        ],
+        "condition_concepts": [
+          "accessory",
+          "regulation",
+          "specific",
+          "subject",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_010",
+      "candidate_id": "pipeline5_merged_rule_0010",
+      "canonical_rule_key": "permitted_use__permitted_use_urban_agriculture__urban_agriculture__accessory_use_subject_to_use_specific_regulations_6_30__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "agriculture",
+          "permitted",
+          "urban",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "agriculture",
+          "urban"
+        ],
+        "condition_concepts": [
+          "accessory",
+          "regulation",
+          "specific",
+          "subject",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_011",
+      "candidate_id": "pipeline5_merged_rule_0011",
+      "canonical_rule_key": "permitted_use__permitted_use_accessory_buildings_structures_uses__accessory_buildings_structures_and_uses__accessory_use_subject_to_use_specific_regulations_101_5_5_6_6__permitted",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "accessory",
+          "permitted",
+          "structure",
+          "use"
+        ],
+        "applies_to_concepts": [
+          "accessory",
+          "structure",
+          "use"
+        ],
+        "condition_concepts": [
+          "101",
+          "accessory",
+          "regulation",
+          "specific",
+          "subject",
+          "use"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_013",
+      "candidate_id": "pipeline5_merged_rule_0013",
+      "canonical_rule_key": "permitted_use__accessory_buildings_minimum_separations__accessory_buildings__within_the_minimum_separations_between_principal_buildings__prohibited",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "eq",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "accessory",
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "accessory"
+        ],
+        "condition_concepts": [
+          "between",
+          "principal",
+          "separation",
+          "within"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_018",
+      "candidate_id": "pipeline5_merged_rule_0018",
+      "canonical_rule_key": "lot_area__burnaby_generic_graph_pack_004_rowhouse_max_lot_area__lot_area__for_rowhouse____280__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "max",
+        "value_bucket": "100_plus",
+        "value_numeric": 280.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "004",
+          "area",
+          "burnaby",
+          "generic",
+          "graph",
+          "max",
+          "pack",
+          "rowhouse"
+        ],
+        "applies_to_concepts": [
+          "area"
+        ],
+        "condition_concepts": [
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_022",
+      "candidate_id": "pipeline5_merged_rule_0022",
+      "canonical_rule_key": "lot_area__burnaby_generic_graph_pack_004_ssmu_min_lot_area__lot_area__for_small_scale_multi_unit____281__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "100_plus",
+        "value_numeric": 281.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "004",
+          "area",
+          "burnaby",
+          "generic",
+          "graph",
+          "min",
+          "pack",
+          "ssmu"
+        ],
+        "applies_to_concepts": [
+          "area"
+        ],
+        "condition_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_023",
+      "candidate_id": "pipeline5_merged_rule_0023",
+      "canonical_rule_key": "lot_area__burnaby_generic_graph_pack_004_rowhouse_covenant_requirement__section_219_covenant__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots_to_ensure_that_all_adjoining_rowhouse__required",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "004",
+          "burnaby",
+          "covenant",
+          "generic",
+          "graph",
+          "pack",
+          "requirement",
+          "rowhouse"
+        ],
+        "applies_to_concepts": [
+          "219",
+          "covenant",
+          "section"
+        ],
+        "condition_concepts": [
+          "adjoining",
+          "create",
+          "ensure",
+          "more",
+          "plan",
+          "registration",
+          "rowhouse",
+          "subdivision",
+          "that",
+          "time",
+          "two"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_024",
+      "candidate_id": "pipeline5_merged_rule_0024",
+      "canonical_rule_key": "lot_area__min_lot_area_4_units__lot_area__for_4_units_only_small_scale_multi_unit____281__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "100_plus",
+        "value_numeric": 281.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "min"
+        ],
+        "applies_to_concepts": [
+          "area"
+        ],
+        "condition_concepts": [
+          "multi",
+          "only",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_025",
+      "candidate_id": "pipeline5_merged_rule_0025",
+      "canonical_rule_key": "lot_area__max_lot_area_rowhouse__lot_area__for_rowhouse____280__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "max",
+        "value_bucket": "100_plus",
+        "value_numeric": 280.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "max",
+          "rowhouse"
+        ],
+        "applies_to_concepts": [
+          "area"
+        ],
+        "condition_concepts": [
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_026",
+      "candidate_id": "pipeline5_merged_rule_0026",
+      "canonical_rule_key": "lot_coverage__max_lot_coverage_under_567__lot_coverage__for_lots_less_than_567_m2____40__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 40.0,
+        "unit": "%",
+        "scope_concepts": [
+          "567",
+          "coverage",
+          "max",
+          "under"
+        ],
+        "applies_to_concepts": [
+          "coverage"
+        ],
+        "condition_concepts": [
+          "567",
+          "less",
+          "than"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_027",
+      "candidate_id": "pipeline5_merged_rule_0027",
+      "canonical_rule_key": "lot_coverage__max_lot_coverage_over_567__lot_coverage__for_lots_greater_than_567_m2____30__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 30.0,
+        "unit": "%",
+        "scope_concepts": [
+          "567",
+          "coverage",
+          "max",
+          "over"
+        ],
+        "applies_to_concepts": [
+          "coverage"
+        ],
+        "condition_concepts": [
+          "567",
+          "greater",
+          "than"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_028",
+      "candidate_id": "pipeline5_merged_rule_0028",
+      "canonical_rule_key": "lot_coverage__max_lot_coverage_all_buildings_rowhouse__lot_coverage__for_rowhouse_all_buildings____55__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 55.0,
+        "unit": "%",
+        "scope_concepts": [
+          "coverage",
+          "max",
+          "rowhouse"
+        ],
+        "applies_to_concepts": [
+          "coverage"
+        ],
+        "condition_concepts": [
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_029",
+      "candidate_id": "pipeline5_merged_rule_0029",
+      "canonical_rule_key": "lot_coverage__max_lot_coverage_all_buildings_ssmu_1_to_3__lot_coverage__for_small_scale_multi_unit_1_to_3_units_all_buildings____40__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 40.0,
+        "unit": "%",
+        "scope_concepts": [
+          "coverage",
+          "max",
+          "ssmu"
+        ],
+        "applies_to_concepts": [
+          "coverage"
+        ],
+        "condition_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_030",
+      "candidate_id": "pipeline5_merged_rule_0030",
+      "canonical_rule_key": "lot_coverage__max_lot_coverage_all_buildings_ssmu_other__lot_coverage__for_small_scale_multi_unit_all_buildings____45__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 45.0,
+        "unit": "%",
+        "scope_concepts": [
+          "coverage",
+          "max",
+          "other",
+          "ssmu"
+        ],
+        "applies_to_concepts": [
+          "coverage"
+        ],
+        "condition_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_031",
+      "candidate_id": "pipeline5_merged_rule_0031",
+      "canonical_rule_key": "impervious_surface__max_impervious_surfaces_rowhouse_or_ssmu_3_to_4__impervious_surface_area__for_rowhouse_or_small_scale_multi_unit_3_to_4_units____70__",
+      "signature": {
+        "rule_object": "impervious_surface",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 70.0,
+        "unit": "%",
+        "scope_concepts": [
+          "impervious",
+          "max",
+          "rowhouse",
+          "ssmu",
+          "surface"
+        ],
+        "applies_to_concepts": [
+          "area",
+          "impervious",
+          "surface"
+        ],
+        "condition_concepts": [
+          "multi",
+          "rowhouse",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_032",
+      "candidate_id": "pipeline5_merged_rule_0032",
+      "canonical_rule_key": "impervious_surface__max_impervious_surfaces_ssmu_1_to_3_or_1_to_2__impervious_surface_area__for_small_scale_multi_unit_1_to_3_units_or_1_to_2_units____60__",
+      "signature": {
+        "rule_object": "impervious_surface",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 60.0,
+        "unit": "%",
+        "scope_concepts": [
+          "impervious",
+          "max",
+          "ssmu",
+          "surface"
+        ],
+        "applies_to_concepts": [
+          "area",
+          "impervious",
+          "surface"
+        ],
+        "condition_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_033",
+      "candidate_id": "pipeline5_merged_rule_0033",
+      "canonical_rule_key": "height__max_height_front_principal_sloping__front_principal_buildings__front_principal_buildings_sloping_roof____10__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 10.0,
+        "unit": "m",
+        "scope_concepts": [
+          "front",
+          "height",
+          "max",
+          "principal",
+          "sloping"
+        ],
+        "applies_to_concepts": [
+          "front",
+          "principal"
+        ],
+        "condition_concepts": [
+          "front",
+          "principal",
+          "roof",
+          "sloping"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_034",
+      "candidate_id": "pipeline5_merged_rule_0034",
+      "canonical_rule_key": "height__max_height_front_principal_flat__front_principal_buildings__front_principal_buildings_flat_roof____9_5__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 9.5,
+        "unit": "m",
+        "scope_concepts": [
+          "flat",
+          "front",
+          "height",
+          "max",
+          "principal"
+        ],
+        "applies_to_concepts": [
+          "front",
+          "principal"
+        ],
+        "condition_concepts": [
+          "flat",
+          "front",
+          "principal",
+          "roof"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_035",
+      "candidate_id": "pipeline5_merged_rule_0035",
+      "canonical_rule_key": "storeys__max_storeys_front_principal_3__front_principal_buildings__front_principal_buildings_rowhouse_or_small_scale_multi_unit_3_to_4_units____3__storeys",
+      "signature": {
+        "rule_object": "storeys",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "storeys",
+        "scope_concepts": [
+          "front",
+          "max",
+          "principal",
+          "storey"
+        ],
+        "applies_to_concepts": [
+          "front",
+          "principal"
+        ],
+        "condition_concepts": [
+          "front",
+          "multi",
+          "principal",
+          "rowhouse",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_036",
+      "candidate_id": "pipeline5_merged_rule_0036",
+      "canonical_rule_key": "storeys__max_storeys_front_principal_2_5__front_principal_buildings__front_principal_buildings_small_scale_multi_unit_1_to_3_units_or_1_to_2_units____2_5__storeys",
+      "signature": {
+        "rule_object": "storeys",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.5,
+        "unit": "storeys",
+        "scope_concepts": [
+          "front",
+          "max",
+          "principal",
+          "storey"
+        ],
+        "applies_to_concepts": [
+          "front",
+          "principal"
+        ],
+        "condition_concepts": [
+          "front",
+          "multi",
+          "principal",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_037",
+      "candidate_id": "pipeline5_merged_rule_0037",
+      "canonical_rule_key": "height__max_height_rear_principal_sloping__rear_principal_buildings__rear_principal_buildings_sloping_roof____7_5__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 7.5,
+        "unit": "m",
+        "scope_concepts": [
+          "height",
+          "max",
+          "principal",
+          "rear",
+          "sloping"
+        ],
+        "applies_to_concepts": [
+          "principal",
+          "rear"
+        ],
+        "condition_concepts": [
+          "principal",
+          "rear",
+          "roof",
+          "sloping"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_038",
+      "candidate_id": "pipeline5_merged_rule_0038",
+      "canonical_rule_key": "height__max_height_rear_principal_flat__rear_principal_buildings__rear_principal_buildings_flat_roof____7_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 7.0,
+        "unit": "m",
+        "scope_concepts": [
+          "flat",
+          "height",
+          "max",
+          "principal",
+          "rear"
+        ],
+        "applies_to_concepts": [
+          "principal",
+          "rear"
+        ],
+        "condition_concepts": [
+          "flat",
+          "principal",
+          "rear",
+          "roof"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_039",
+      "candidate_id": "pipeline5_merged_rule_0039",
+      "canonical_rule_key": "storeys__max_storeys_rear_principal__rear_principal_buildings__rear_principal_buildings____2__storeys",
+      "signature": {
+        "rule_object": "storeys",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "storeys",
+        "scope_concepts": [
+          "max",
+          "principal",
+          "rear",
+          "storey"
+        ],
+        "applies_to_concepts": [
+          "principal",
+          "rear"
+        ],
+        "condition_concepts": [
+          "principal",
+          "rear"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_040",
+      "candidate_id": "pipeline5_merged_rule_0040",
+      "canonical_rule_key": "height__max_height_accessory_buildings__accessory_buildings__accessory_buildings____4_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 4.0,
+        "unit": "m",
+        "scope_concepts": [
+          "accessory",
+          "height",
+          "max"
+        ],
+        "applies_to_concepts": [
+          "accessory"
+        ],
+        "condition_concepts": [
+          "accessory"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_041",
+      "candidate_id": "pipeline5_merged_rule_0041",
+      "canonical_rule_key": "storeys__max_storeys_accessory_buildings__accessory_buildings__accessory_buildings____1__storeys",
+      "signature": {
+        "rule_object": "storeys",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "storeys",
+        "scope_concepts": [
+          "accessory",
+          "max",
+          "storey"
+        ],
+        "applies_to_concepts": [
+          "accessory"
+        ],
+        "condition_concepts": [
+          "accessory"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_042",
+      "candidate_id": "pipeline5_merged_rule_0042",
+      "canonical_rule_key": "setback__min_street_yard_setback_rowhouse__street_yard_setback__rowhouse____3_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "min",
+          "rowhouse",
+          "setback_area",
+          "street"
+        ],
+        "applies_to_concepts": [
+          "setback_area",
+          "street"
+        ],
+        "condition_concepts": [
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_043",
+      "candidate_id": "pipeline5_merged_rule_0043",
+      "canonical_rule_key": "setback__street_yard_front__front_yard_setback__small_scale_multi_unit____4_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 4.0,
+        "unit": "m",
+        "scope_concepts": [
+          "front",
+          "setback_area",
+          "street"
+        ],
+        "applies_to_concepts": [
+          "front",
+          "setback_area"
+        ],
+        "condition_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_044",
+      "candidate_id": "pipeline5_merged_rule_0044",
+      "canonical_rule_key": "setback__street_yard_flanking__flanking_yard_setback__small_scale_multi_unit____3_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "flanking",
+          "setback_area",
+          "street"
+        ],
+        "applies_to_concepts": [
+          "flanking",
+          "setback_area"
+        ],
+        "condition_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_045",
+      "candidate_id": "pipeline5_merged_rule_0045",
+      "canonical_rule_key": "setback__lane_yard__lane_yard_setback____1_5__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.5,
+        "unit": "m",
+        "scope_concepts": [
+          "lane",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "lane",
+          "setback_area"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_046",
+      "candidate_id": "pipeline5_merged_rule_0046",
+      "canonical_rule_key": "setback__interior_rear_yard__rear_principal_buildings____3_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "interior",
+          "rear",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "principal",
+          "rear"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_047",
+      "candidate_id": "pipeline5_merged_rule_0047",
+      "canonical_rule_key": "setback__min_interior_side_yard_setback_rowhouse__interior_side_yard_setback__rowhouse____0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.0,
+        "unit": "m",
+        "scope_concepts": [
+          "interior",
+          "min",
+          "rowhouse",
+          "setback_area",
+          "side"
+        ],
+        "applies_to_concepts": [
+          "interior",
+          "setback_area",
+          "side"
+        ],
+        "condition_concepts": [
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_053",
+      "candidate_id": "pipeline5_merged_rule_0053",
+      "canonical_rule_key": "lot_area__max_lot_area_rowhouse_exception__lot_area__may_exceed_280_m2_subject_to_registration_of_a_section_219_covenant_prohibiting_the_construction_of_more_than_3_dwelling_units_on_the_lot__permitted",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "area",
+          "exception",
+          "max",
+          "rowhouse"
+        ],
+        "applies_to_concepts": [
+          "area"
+        ],
+        "condition_concepts": [
+          "219",
+          "280",
+          "construction",
+          "covenant",
+          "dwelling",
+          "exceed",
+          "may",
+          "more",
+          "prohibiting",
+          "registration",
+          "section",
+          "subject",
+          "than"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_054",
+      "candidate_id": "pipeline5_merged_rule_0054",
+      "canonical_rule_key": "setback__interior_side_yard_setback_rowhouse_exemption__interior_side_yard_setback__for_rowhouse_dwelling_units_on_a_lot_line_between_two____0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.0,
+        "unit": "m",
+        "scope_concepts": [
+          "exemption",
+          "interior",
+          "rowhouse",
+          "setback_area",
+          "side"
+        ],
+        "applies_to_concepts": [
+          "interior",
+          "setback_area",
+          "side"
+        ],
+        "condition_concepts": [
+          "between",
+          "dwelling",
+          "line",
+          "rowhouse",
+          "two"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_055",
+      "candidate_id": "pipeline5_merged_rule_0055",
+      "canonical_rule_key": "dwelling_units__min_3_bedroom_units_1_to_3__3_bedroom_units__for_a_lot_with_1_to_3_total_dwelling_units____1__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.0,
+        "unit": "units",
+        "scope_concepts": [
+          "bedroom",
+          "min"
+        ],
+        "applies_to_concepts": [
+          "bedroom"
+        ],
+        "condition_concepts": [
+          "dwelling",
+          "total"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_056",
+      "candidate_id": "pipeline5_merged_rule_0056",
+      "canonical_rule_key": "dwelling_units__min_3_bedroom_units_4_to_6__3_bedroom_units__for_a_lot_with_4_to_6_total_dwelling_units____2__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "units",
+        "scope_concepts": [
+          "bedroom",
+          "min"
+        ],
+        "applies_to_concepts": [
+          "bedroom"
+        ],
+        "condition_concepts": [
+          "dwelling",
+          "total"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_061",
+      "candidate_id": "pipeline5_merged_rule_0061",
+      "canonical_rule_key": "dwelling_units__pedestrian_walkway_srow__statutory_right_of_way_registered_in_favour_of_the_city__for_contiguous_rowhouse_lots__required",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "required",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "pedestrian",
+          "srow",
+          "walkway"
+        ],
+        "applies_to_concepts": [
+          "city",
+          "favour",
+          "registered",
+          "right",
+          "statutory",
+          "way"
+        ],
+        "condition_concepts": [
+          "contiguous",
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_062",
+      "candidate_id": "pipeline5_merged_rule_0062",
+      "canonical_rule_key": "dwelling_units__pedestrian_walkway_illumination_accessibility__illuminated_and_publicly_accessible_pedestrian_walkway__for_contiguous_rowhouse_lots__required",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "required",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "accessibility",
+          "illumination",
+          "pedestrian",
+          "walkway"
+        ],
+        "applies_to_concepts": [
+          "accessible",
+          "illuminated",
+          "pedestrian",
+          "publicly",
+          "walkway"
+        ],
+        "condition_concepts": [
+          "contiguous",
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_063",
+      "candidate_id": "pipeline5_merged_rule_0063",
+      "canonical_rule_key": "dwelling_units__pedestrian_walkway_link__links_the_fronting_street_with_the_parallel_lane_street_or_trail_network_at_the_rear_of_the_lot__for_contiguous_rowhouse_lots__required",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "required",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "link",
+          "pedestrian",
+          "walkway"
+        ],
+        "applies_to_concepts": [
+          "fronting",
+          "lane",
+          "link",
+          "network",
+          "parallel",
+          "rear",
+          "street",
+          "trail"
+        ],
+        "condition_concepts": [
+          "contiguous",
+          "rowhouse"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_064",
+      "candidate_id": "pipeline5_merged_rule_0064",
+      "canonical_rule_key": "floor_area__compliance_section_101_4__development_regulations_under_section_101_4__for_small_scale_multi_unit_lots_with_1_to_3_units__required",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "required",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "101",
+          "compliance",
+          "section"
+        ],
+        "applies_to_concepts": [
+          "101",
+          "development",
+          "regulation",
+          "section",
+          "under"
+        ],
+        "condition_concepts": [
+          "multi",
+          "scale",
+          "small"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_065",
+      "candidate_id": "pipeline5_merged_rule_0065",
+      "canonical_rule_key": "dwelling_units__burnaby_permitted_projections_compliance__permitted_projections_into_required_yards__subject_to_section_6_12__required",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "required",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "burnaby",
+          "compliance",
+          "permitted",
+          "projection"
+        ],
+        "applies_to_concepts": [
+          "into",
+          "permitted",
+          "projection",
+          "required",
+          "setback_area"
+        ],
+        "condition_concepts": [
+          "section",
+          "subject"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_069",
+      "candidate_id": "pipeline5_merged_rule_0069",
+      "canonical_rule_key": "dwelling_units__burnaby_generic_graph_pack_012_page_0005_local_001_comply_101_4__1_to_3_small_scale_multi_unit_dwelling_units_on_a_lot__under_section_101_4__required",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "required",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "0005",
+          "001",
+          "012",
+          "101",
+          "burnaby",
+          "comply",
+          "generic",
+          "graph",
+          "local",
+          "pack",
+          "page"
+        ],
+        "applies_to_concepts": [
+          "dwelling",
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": [
+          "101",
+          "section",
+          "under"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_070",
+      "candidate_id": "pipeline5_merged_rule_0070",
+      "canonical_rule_key": "floor_area__parking_location_rear__parking__when_accessible_from_an_abutting_lane_or_street__required",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "required",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "location",
+          "parking",
+          "rear"
+        ],
+        "applies_to_concepts": [
+          "parking"
+        ],
+        "condition_concepts": [
+          "abutting",
+          "accessible",
+          "from",
+          "lane",
+          "street",
+          "when"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_071",
+      "candidate_id": "pipeline5_merged_rule_0071",
+      "canonical_rule_key": "height__below_grade_garage_height_above_ground__garage_or_carport_below_grade__above_the_surface_of_the_surrounding_ground____1_2__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [
+          "above",
+          "below",
+          "garage",
+          "grade",
+          "ground",
+          "height"
+        ],
+        "applies_to_concepts": [
+          "below",
+          "carport",
+          "garage",
+          "grade"
+        ],
+        "condition_concepts": [
+          "above",
+          "ground",
+          "surface",
+          "surrounding"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_072",
+      "candidate_id": "pipeline5_merged_rule_0072",
+      "canonical_rule_key": "setback__below_grade_garage_setback__garage_or_carport_below_grade__from_a_lot_line____1_2__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [
+          "below",
+          "garage",
+          "grade",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "below",
+          "carport",
+          "garage",
+          "grade"
+        ],
+        "condition_concepts": [
+          "from",
+          "line"
+        ]
+      },
+      "best_verified_matches": [],
+      "best_semantic_score": 0.0,
+      "best_structured_score": 0.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ]
+    }
+  ],
+  "summary": {
+    "semantic_action_counts": [
+      {
+        "name": "no_close_verified_analogue",
+        "count": 52
+      }
+    ]
+  },
+  "notes": [
+    "Semantic score uses normalized structured fields plus optional MiniLM embeddings.",
+    "Embedding similarity is advisory and cannot clear support gaps.",
+    "Guardrails cap high similarity when core legal fields disagree."
+  ]
+}

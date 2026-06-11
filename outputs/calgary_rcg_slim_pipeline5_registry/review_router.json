@@ -1,0 +1,1107 @@
+{
+  "purpose": "Single reviewer-facing queue. Advisory only; verification decisions remain in verified/review/rejected/not_used outputs.",
+  "review_rule_count": 14,
+  "items": [
+    {
+      "rule_id": "calgary_rcg_014",
+      "candidate_id": "local_merged_rule_0014",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "2.5",
+      "unit": "m2",
+      "source_evidence_id": "local_merged_rule_0014",
+      "review_category": "scope_review",
+      "likely_status": "weak",
+      "priority": "high",
+      "triage_priority": "high",
+      "review_rank": 50,
+      "priority_rank": 50,
+      "action_bucket": "scope_review",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `scope_review`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "scope_review",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, unresolved_exception_cue in page 396; section 352(5); evidence_id local_merged_rule_0014. Suggested stronger evidence: local_merged_rule_0015. Semantic match: calgary_rcg_011 (score 0.29, blockers different_numeric_value, different_rule_object, different_unit, exception_or_override_unresolved).",
+      "candidate_sentence": "floor_area has floor area <= 2.5 m2.",
+      "evidence_sentence": "(5) The maximum floor area of a Backyard Suite, excluding any area covered by stairways and internal landings not exceeding 2.5 square metres, is 75.0 square metres.",
+      "bundle_sentence": "local_merged_rule_0014 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0015 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0001 supports applies_to, operator, rule_object, scope, unit; local_merged_rule_0002 supports applies_to, operator, rule_object, scope, unit.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 396; section 352(5); evidence_id local_merged_rule_0014",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "likely_correct_score": 0.497,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, unresolved_exception_cue",
+      "suggested_fix": "Resolve exception/override wording before promotion.",
+      "potential_mistake_flags": [
+        "exception_or_override_unresolved",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_004",
+      "similar_verified_score": 0.239,
+      "best_repair_evidence_id": "local_merged_rule_0015",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.391,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "exception"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_011",
+      "semantic_score": 0.292,
+      "semantic_structured_score": 0.16,
+      "semantic_embedding_score": 0.537,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_015",
+      "candidate_id": "local_merged_rule_0015",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "75.0",
+      "unit": "m2",
+      "source_evidence_id": "local_merged_rule_0015",
+      "review_category": "scope_review",
+      "likely_status": "weak",
+      "priority": "high",
+      "triage_priority": "high",
+      "review_rank": 50,
+      "priority_rank": 50,
+      "action_bucket": "scope_review",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `scope_review`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "scope_review",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, unresolved_exception_cue in page 396; section 352(5); evidence_id local_merged_rule_0015. Suggested stronger evidence: local_merged_rule_0014. Semantic match: calgary_rcg_011 (score 0.28, blockers different_numeric_value, different_rule_object, different_unit, exception_or_override_unresolved).",
+      "candidate_sentence": "floor_area has floor area <= 75.0 m2.",
+      "evidence_sentence": "(5) The maximum floor area of a Backyard Suite, excluding any area covered by stairways and internal landings not exceeding 2.5 square metres, is 75.0 square metres.",
+      "bundle_sentence": "local_merged_rule_0015 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0014 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0001 supports applies_to, operator, rule_object, scope, unit; local_merged_rule_0002 supports applies_to, operator, rule_object, scope, unit.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 396; section 352(5); evidence_id local_merged_rule_0015",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "likely_correct_score": 0.497,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, unresolved_exception_cue",
+      "suggested_fix": "Resolve exception/override wording before promotion.",
+      "potential_mistake_flags": [
+        "exception_or_override_unresolved",
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_004",
+      "similar_verified_score": 0.239,
+      "best_repair_evidence_id": "local_merged_rule_0014",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.391,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "exception"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_011",
+      "semantic_score": 0.284,
+      "semantic_structured_score": 0.16,
+      "semantic_embedding_score": 0.514,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_001",
+      "candidate_id": "local_merged_rule_0001",
+      "decision": "review_needed",
+      "rule_object": "floor_area",
+      "constraint_scope": "max_floor_area",
+      "applies_to": "floor_area",
+      "operator": "<=",
+      "value": "100.0",
+      "unit": "m2",
+      "source_evidence_id": "local_merged_rule_0001",
+      "review_category": "operator_review",
+      "likely_status": "weak",
+      "priority": "high",
+      "triage_priority": "high",
+      "review_rank": 55,
+      "priority_rank": 55,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported, unresolved_exception_cue in page 395; section 351(2); evidence_id local_merged_rule_0001. Suggested stronger evidence: local_merged_rule_0002. Semantic match: calgary_rcg_011 (score 0.28, blockers different_numeric_value, different_rule_object, different_unit, exception_or_override_unresolved, missing_core_evidence).",
+      "candidate_sentence": "floor_area has floor area <= 100.0 m2.",
+      "evidence_sentence": "(2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-1, R-1s and 24P20...",
+      "bundle_sentence": "local_merged_rule_0001 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0002 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0003 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0004 supports applies_to, operator, rule_object, scope, unit.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 395; section 351(2); evidence_id local_merged_rule_0001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "likely_correct_score": 0.453,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported, unresolved_exception_cue",
+      "suggested_fix": "Resolve exception/override wording before promotion.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing",
+        "exception_or_override_unresolved"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_006",
+      "similar_verified_score": 0.203,
+      "best_repair_evidence_id": "local_merged_rule_0002",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.391,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "exception"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_011",
+      "semantic_score": 0.276,
+      "semantic_structured_score": 0.16,
+      "semantic_embedding_score": 0.491,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit",
+        "exception_or_override_unresolved",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_007",
+      "candidate_id": "local_merged_rule_0007",
+      "decision": "review_needed",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0007",
+      "review_category": "scope_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 126,
+      "priority_rank": 1126,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `rerun_with_evidence_bundle`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported in page 396; section 352(3.2); evidence_id local_merged_rule_0007. Suggested stronger evidence: local_merged_rule_0008. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_006 (score 0.71, blockers different_numeric_value).",
+      "candidate_sentence": "building_separation has building separation >= 0.6 m.",
+      "evidence_sentence": "(3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property...",
+      "bundle_sentence": "local_merged_rule_0007 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0008 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0009 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 396; section 352(3.2); evidence_id local_merged_rule_0007",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "likely_correct_score": 0.729,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_006",
+      "similar_verified_score": 0.639,
+      "best_repair_evidence_id": "local_merged_rule_0008",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.921,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_006",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.77,
+      "semantic_embedding_score": 0.974,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_009",
+      "candidate_id": "local_merged_rule_0009",
+      "decision": "review_needed",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "building_separation",
+      "operator": ">=",
+      "value": "3.1",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0009",
+      "review_category": "scope_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 126,
+      "priority_rank": 1126,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `rerun_with_evidence_bundle`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported in page 396; section 352(3.2); evidence_id local_merged_rule_0009. Suggested stronger evidence: local_merged_rule_0007. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_006 (score 0.71, blockers different_numeric_value).",
+      "candidate_sentence": "building_separation has building separation >= 3.1 m.",
+      "evidence_sentence": "(3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property...",
+      "bundle_sentence": "local_merged_rule_0009 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0007 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0008 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0006 supports applies_to, operator, rule_object, scope, unit.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 396; section 352(3.2); evidence_id local_merged_rule_0009",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "likely_correct_score": 0.729,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_006",
+      "similar_verified_score": 0.639,
+      "best_repair_evidence_id": "local_merged_rule_0007",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.921,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_006",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.83,
+      "semantic_embedding_score": 0.966,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_013",
+      "candidate_id": "local_merged_rule_0013",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0013",
+      "review_category": "scope_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 138,
+      "priority_rank": 1138,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `rerun_with_evidence_bundle`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported in page 396; section 352(4.1); evidence_id local_merged_rule_0013. Suggested stronger evidence: local_merged_rule_0010. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_010 (score 0.88, blockers none).",
+      "candidate_sentence": "height has height <= 7.5 m.",
+      "evidence_sentence": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear property line shared...",
+      "bundle_sentence": "local_merged_rule_0013 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0011 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0012 supports applies_to, operator, rule_object, unit, value.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 396; section 352(4.1); evidence_id local_merged_rule_0013",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "likely_correct_score": 0.614,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded",
+        "scope_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_011",
+      "similar_verified_score": 1.0,
+      "best_repair_evidence_id": "local_merged_rule_0010",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "verified",
+      "rerun_promotion_ready": true,
+      "bundle_score": 0.763,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [
+        "scope"
+      ],
+      "bundle_rerun_decision": "verified",
+      "bundle_rerun_promotion_ready": true,
+      "semantic_review_class": "high_confidence_near_duplicate",
+      "semantic_verified_rule_id": "calgary_rcg_010",
+      "semantic_score": 0.877,
+      "semantic_structured_score": 0.81,
+      "semantic_embedding_score": 1.0,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_scope_review",
+      "semantic_guardrail_blockers": []
+    },
+    {
+      "rule_id": "calgary_rcg_022",
+      "candidate_id": "local_merged_rule_0022",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0022",
+      "review_category": "scope_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 144,
+      "priority_rank": 1144,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `rerun_with_evidence_bundle`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported in page 398; section 358(3); evidence_id local_merged_rule_0022. Suggested stronger evidence: local_merged_rule_0017. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_004 (score 0.71, blockers different_numeric_value).",
+      "candidate_sentence": "setback has setback >= 3.0 m.",
+      "evidence_sentence": "(3) The building setback from the front property line for a Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling in the Developed Area is deemed to conform with the requirements of this Bylaw if: (a) the Duplex Dwelling, Semi-detached Dwellin...",
+      "bundle_sentence": "local_merged_rule_0022 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0017 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0018 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0019 supports applies_to, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 398; section 358(3); evidence_id local_merged_rule_0022",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "likely_correct_score": 0.554,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded",
+        "scope_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_021",
+      "similar_verified_score": 1.0,
+      "best_repair_evidence_id": "local_merged_rule_0017",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.921,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_004",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.77,
+      "semantic_embedding_score": 0.954,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_018",
+      "candidate_id": "local_merged_rule_0018",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0018",
+      "review_category": "scope_review",
+      "likely_status": "weak",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 147,
+      "priority_rank": 1147,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `rerun_with_evidence_bundle`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported in page 397; section 352(8); evidence_id local_merged_rule_0018. Suggested stronger evidence: local_merged_rule_0017. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_004 (score 0.71, blockers different_numeric_value).",
+      "candidate_sentence": "setback has setback >= 2.0 m.",
+      "evidence_sentence": "(8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel des...",
+      "bundle_sentence": "local_merged_rule_0018 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0017 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0019 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0020 supports applies_to, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 397; section 352(8); evidence_id local_merged_rule_0018",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "likely_correct_score": 0.523,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded",
+        "scope_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_020",
+      "similar_verified_score": 0.74,
+      "best_repair_evidence_id": "local_merged_rule_0017",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.921,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_004",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.83,
+      "semantic_embedding_score": 0.958,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_019",
+      "candidate_id": "local_merged_rule_0019",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "3.0",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0019",
+      "review_category": "scope_review",
+      "likely_status": "weak",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 147,
+      "priority_rank": 1147,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `rerun_with_evidence_bundle`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported in page 397; section 352(8); evidence_id local_merged_rule_0019. Suggested stronger evidence: local_merged_rule_0017. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_004 (score 0.71, blockers different_numeric_value).",
+      "candidate_sentence": "setback has setback >= 3.0 m.",
+      "evidence_sentence": "(8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel des...",
+      "bundle_sentence": "local_merged_rule_0019 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0017 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0018 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0020 supports applies_to, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 397; section 352(8); evidence_id local_merged_rule_0019",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "likely_correct_score": 0.523,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded",
+        "scope_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_020",
+      "similar_verified_score": 0.74,
+      "best_repair_evidence_id": "local_merged_rule_0017",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.921,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_004",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.77,
+      "semantic_embedding_score": 0.954,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_024",
+      "candidate_id": "local_merged_rule_0024",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0024",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 230,
+      "priority_rank": 2230,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported in page 399; section 360(3); evidence_id local_merged_rule_0024. Suggested stronger evidence: local_merged_rule_0023. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_010 (score 0.71, blockers different_numeric_value, missing_core_evidence).",
+      "candidate_sentence": "height has height <= 1.0 m.",
+      "evidence_sentence": "(3) When the difference between the average building reference points at the front corners of the parcel and those at the rear of the parcel is less than 1.0 metres, the building height must not be greater than the height plane that: (a) begins at the highe...",
+      "bundle_sentence": "local_merged_rule_0024 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0023 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, unit; local_merged_rule_0011 supports applies_to, operator, rule_object, unit.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 399; section 360(3); evidence_id local_merged_rule_0024",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.687,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_011",
+      "similar_verified_score": 0.619,
+      "best_repair_evidence_id": "local_merged_rule_0023",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.843,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_010",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.61,
+      "semantic_embedding_score": 0.902,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_023",
+      "candidate_id": "local_merged_rule_0023",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0023",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 231,
+      "priority_rank": 2231,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported in page 399; section 360(2); evidence_id local_merged_rule_0023. Suggested stronger evidence: local_merged_rule_0024. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_010 (score 0.71, blockers different_numeric_value, missing_core_evidence).",
+      "candidate_sentence": "height has height <= 1.0 m.",
+      "evidence_sentence": "(2) When the difference between the average building reference point at the front corners of the parcel and those at the rear of the parcel is greater than or equal to 1.0 metres, the building height must not be greater than a height plane that: (a) begins...",
+      "bundle_sentence": "local_merged_rule_0023 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0024 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0010 supports applies_to, operator, rule_object, unit; local_merged_rule_0011 supports applies_to, operator, rule_object, unit.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 399; section 360(2); evidence_id local_merged_rule_0023",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.684,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_011",
+      "similar_verified_score": 0.596,
+      "best_repair_evidence_id": "local_merged_rule_0024",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.843,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_010",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.61,
+      "semantic_embedding_score": 0.902,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_017",
+      "candidate_id": "local_merged_rule_0017",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "4.0",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0017",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 235,
+      "priority_rank": 2235,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported in page 397; section 352(8); evidence_id local_merged_rule_0017. Suggested stronger evidence: local_merged_rule_0018. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_004 (score 0.71, blockers different_numeric_value, missing_core_evidence).",
+      "candidate_sentence": "setback has setback >= 4.0 m.",
+      "evidence_sentence": "(8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a property line shared with a parcel des...",
+      "bundle_sentence": "local_merged_rule_0017 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0018 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0019 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0006 supports applies_to, operator, rule_object, scope, unit.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 397; section 352(8); evidence_id local_merged_rule_0017",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.641,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_020",
+      "similar_verified_score": 0.74,
+      "best_repair_evidence_id": "local_merged_rule_0018",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.921,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_004",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.77,
+      "semantic_embedding_score": 0.946,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_012",
+      "candidate_id": "local_merged_rule_0012",
+      "decision": "review_needed",
+      "rule_object": "height",
+      "constraint_scope": "building",
+      "applies_to": "height",
+      "operator": "<=",
+      "value": "3.0",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0012",
+      "review_category": "operator_review",
+      "likely_status": "weak",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 257,
+      "priority_rank": 2257,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported, operator_not_supported in page 396; section 352(4.1); evidence_id local_merged_rule_0012. Suggested stronger evidence: local_merged_rule_0011. Evidence bundle is safe to rerun through the verifier. Semantic match: calgary_rcg_010 (score 0.71, blockers different_numeric_value, missing_core_evidence).",
+      "candidate_sentence": "height has height <= 3.0 m.",
+      "evidence_sentence": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district; (b) 3.0 metres measured from grade at a rear property line shared...",
+      "bundle_sentence": "local_merged_rule_0012 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0011 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0013 supports applies_to, operator, rule_object, unit, value; local_merged_rule_0017 supports applies_to, operator, rule_object, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 396; section 352(4.1); evidence_id local_merged_rule_0012",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.416,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing",
+        "applies_to_not_grounded",
+        "scope_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_011",
+      "similar_verified_score": 1.0,
+      "best_repair_evidence_id": "local_merged_rule_0011",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.763,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [
+        "scope"
+      ],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_010",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.67,
+      "semantic_embedding_score": 0.903,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_005",
+      "candidate_id": "local_merged_rule_0005",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "min_setback",
+      "applies_to": "setback",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "source_evidence_id": "local_merged_rule_0005",
+      "review_category": "operator_review",
+      "likely_status": "likely_wrong_or_noise",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 266,
+      "priority_rank": 2266,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported, operator_not_supported in page 395; section 352(1); evidence_id local_merged_rule_0005. Suggested stronger evidence: local_merged_rule_0004. Semantic match: calgary_rcg_004 (score 0.71, blockers different_numeric_value, missing_core_evidence).",
+      "candidate_sentence": "setback has setback >= 0.6 m.",
+      "evidence_sentence": "352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (b) 0.6 metres for any portion of the building used as a private garage.",
+      "bundle_sentence": "local_merged_rule_0005 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0007 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0008 supports applies_to, operator, rule_object, scope, unit, value; local_merged_rule_0009 supports applies_to, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 395; section 352(1); evidence_id local_merged_rule_0005",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "likely_correct_score": 0.33,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported, operator_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "operator_direction_or_wording_missing",
+        "applies_to_not_grounded",
+        "scope_not_grounded"
+      ],
+      "similar_verified_rule_id": "calgary_rcg_004",
+      "similar_verified_score": 1.0,
+      "best_repair_evidence_id": "local_merged_rule_0004",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.771,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "calgary_rcg_004",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.77,
+      "semantic_embedding_score": 0.98,
+      "semantic_match_type": "structured_plus_embedding",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ]
+    }
+  ],
+  "summary": {
+    "category_counts": [
+      {
+        "name": "scope_review",
+        "count": 8
+      },
+      {
+        "name": "operator_review",
+        "count": 6
+      }
+    ],
+    "action_counts": [
+      {
+        "name": "operator_review",
+        "count": 6
+      },
+      {
+        "name": "rerun_with_evidence_bundle",
+        "count": 6
+      },
+      {
+        "name": "scope_review",
+        "count": 2
+      }
+    ],
+    "priority_counts": [
+      {
+        "name": "medium",
+        "count": 6
+      },
+      {
+        "name": "low",
+        "count": 5
+      },
+      {
+        "name": "high",
+        "count": 3
+      }
+    ],
+    "likelihood_counts": [
+      {
+        "name": "plausible",
+        "count": 7
+      },
+      {
+        "name": "weak",
+        "count": 6
+      },
+      {
+        "name": "likely_wrong_or_noise",
+        "count": 1
+      }
+    ],
+    "semantic_review_counts": [
+      {
+        "name": "guardrail_blocked_low_similarity",
+        "count": 13
+      },
+      {
+        "name": "high_confidence_near_duplicate",
+        "count": 1
+      }
+    ],
+    "top_blocking_reasons": [
+      {
+        "name": "pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported",
+        "count": 4
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, operator_not_supported",
+        "count": 3
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, applies_to_not_supported, unresolved_exception_cue",
+        "count": 2
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
+        "count": 2
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, applies_to_not_supported, constraint_scope_not_supported, operator_not_supported",
+        "count": 2
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, operator_not_supported, unresolved_exception_cue",
+        "count": 1
+      }
+    ],
+    "top_support_gaps": [
+      {
+        "name": "pipeline5_text_candidate_requires_review",
+        "count": 14
+      },
+      {
+        "name": "applies_to_not_supported",
+        "count": 10
+      },
+      {
+        "name": "operator_not_supported",
+        "count": 6
+      },
+      {
+        "name": "constraint_scope_not_supported",
+        "count": 6
+      },
+      {
+        "name": "unresolved_exception_cue",
+        "count": 3
+      }
+    ],
+    "action_descriptions": {
+      "retry_with_better_evidence": "Rerun candidate against a different, stronger evidence packet.",
+      "safe_verifier_tuning_candidate": "Inspect whether a general verifier/table rule can safely reduce review.",
+      "evidence_packet_repair_candidate": "Repair evidence attachment first; current suggestion is not strong enough to rerun.",
+      "needs_second_source_consensus": "Find independent text/table consensus before promotion.",
+      "semantic_duplicate_review": "Compare a high-similarity review item against an already verified rule; usually a duplicate/degraded extraction.",
+      "semantic_guardrail_review": "Close semantic match, but core guardrails disagree; inspect manually instead of tuning.",
+      "human_legal_review": "Resolve exception or cross-family conflict manually.",
+      "upstream_candidate_issue": "Return likely extraction/normalization issue upstream.",
+      "defer_low_priority": "Leave in review until broader benchmark evidence exists."
+    },
+    "recommendations": []
+  }
+}

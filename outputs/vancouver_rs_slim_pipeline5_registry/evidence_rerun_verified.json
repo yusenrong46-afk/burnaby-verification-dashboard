@@ -1,0 +1,51 @@
+[
+  {
+    "original_rule_id": "vancouver_rs_009",
+    "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001",
+    "retry_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+    "rule_object": "floor_area",
+    "constraint_scope": "total",
+    "applies_to": "laneway house",
+    "condition": "",
+    "operator": "<=",
+    "value": "186",
+    "unit": "sq. m",
+    "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+    "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+    "retry_evidence_page": 8.0,
+    "retry_evidence_type": "clause",
+    "retry_evidence_quote": "11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m . 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m .",
+    "repairable_fields": [
+      "operator",
+      "rule_object",
+      "applies_to",
+      "text_consensus_candidate"
+    ],
+    "best_repair_confidence": 1.0,
+    "original_support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "applies_to_not_supported",
+      "constraint_scope_not_supported",
+      "operator_not_supported",
+      "rule_object_not_supported"
+    ],
+    "retry_decision": "verified",
+    "retry_support_gaps": [],
+    "retry_support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "retry_proof_type": "text_evidence",
+    "retry_table_proof_status": "none",
+    "promotion_ready": true,
+    "promotion_risk_flags": [],
+    "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks."
+  }
+]

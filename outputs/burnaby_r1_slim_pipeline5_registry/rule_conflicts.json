@@ -84,7 +84,8 @@
         "operator": ">=",
         "direction": "min",
         "sources": [
-          "gemini_table_image"
+          "gemini_table_image",
+          "gemini_text_block"
         ]
       },
       {
@@ -149,15 +150,6 @@
         "direction": "min",
         "sources": [
           "gemini_table_image"
-        ]
-      },
-      {
-        "value": "1",
-        "unit": "dwelling unit",
-        "operator": ">=",
-        "direction": "min",
-        "sources": [
-          "gemini_text_block"
         ]
       },
       {

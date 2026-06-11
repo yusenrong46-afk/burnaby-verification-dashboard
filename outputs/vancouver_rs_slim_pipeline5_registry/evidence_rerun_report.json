@@ -1,0 +1,622 @@
+{
+  "mode": "shadow_evidence_rerun",
+  "notes": [
+    "Reruns do not mutate verified_rules.json.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no risk flags.",
+    "Synthetic retry candidates keep the original source_stream so they cannot create fake consensus."
+  ],
+  "attempt_count": 10,
+  "verified_after_rerun_count": 1,
+  "promotion_ready_count": 1,
+  "review_after_rerun_count": 8,
+  "rejected_after_rerun_count": 1,
+  "skipped_count": 5,
+  "attempts": [
+    {
+      "original_rule_id": "vancouver_rs_005",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1",
+      "rule_object": "floor_area",
+      "constraint_scope": "",
+      "applies_to": "laneway house",
+      "condition": null,
+      "operator": "<=",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1",
+      "retry_evidence_page": 8.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (a) 0.25 multiplied by the site area; and 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (a) 0.25 multiplied by the site area; and",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_009",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+      "rule_object": "floor_area",
+      "constraint_scope": "total",
+      "applies_to": "laneway house",
+      "condition": "",
+      "operator": "<=",
+      "value": "186",
+      "unit": "sq. m",
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+      "retry_evidence_page": 8.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m . 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m .",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "verified",
+      "retry_support_gaps": [],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": true,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks."
+    },
+    {
+      "original_rule_id": "vancouver_rs_024",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002__rule_001__rerun__vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_2",
+      "rule_object": "floor_area",
+      "constraint_scope": "computation",
+      "applies_to": "laneway house",
+      "condition": null,
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_2",
+      "retry_evidence_page": 9.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.9 Computation of floor area for a laneway house must exclude: | (b) balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8%...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_036",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+      "rule_object": "ceiling_height",
+      "constraint_scope": "excluded_area",
+      "applies_to": "laneway house",
+      "condition": "total area being excluded",
+      "operator": "<=",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. | 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site ar...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_026",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+      "rule_object": "floor_area",
+      "constraint_scope": "gross_cross_sectional_area",
+      "applies_to": "floor_area_measurement",
+      "condition": null,
+      "operator": "",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+      "retry_evidence_page": 8.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of:",
+      "repairable_fields": [
+        "rule_object"
+      ],
+      "best_repair_confidence": 0.908,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_018",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1",
+      "rule_object": "building_separation",
+      "constraint_scope": "separation_from_main_house",
+      "applies_to": "laneway house",
+      "condition": "measured across the width of the site",
+      "operator": ">=",
+      "value": "4.9",
+      "unit": "m",
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1",
+      "retry_evidence_page": 8.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.6 A laneway house must be at least: | (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; 11.3.8.6 A laneway house must be at least: | (a) 4.9 m, measured across...",
+      "repairable_fields": [
+        "operator",
+        "applies_to"
+      ],
+      "best_repair_confidence": 0.892,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_025",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+      "rule_object": "floor_area",
+      "constraint_scope": "all_floors",
+      "applies_to": "all_floors",
+      "condition": null,
+      "operator": "",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+      "retry_evidence_page": 8.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: 11.3.8 Laneway House | 11.3.8.2 The floor area for a laneway house must not exceed the lesser of:",
+      "repairable_fields": [
+        "rule_object"
+      ],
+      "best_repair_confidence": 0.869,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_019",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2",
+      "rule_object": "setback",
+      "constraint_scope": "rear_yard",
+      "applies_to": "laneway house",
+      "condition": "",
+      "operator": ">=",
+      "value": "0.9",
+      "unit": "m",
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2",
+      "retry_evidence_page": 8.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.6 A laneway house must be at least: | (b) 0.9 m from the ultimate rear property line; and 11.3.8.6 A laneway house must be at least: | (b) 0.9 m from the ultimate rear property line; and",
+      "repairable_fields": [
+        "operator",
+        "applies_to"
+      ],
+      "best_repair_confidence": 0.831,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_003",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_1",
+      "rule_object": "permitted_use",
+      "constraint_scope": "",
+      "applies_to": "Laneway House",
+      "condition": null,
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_1",
+      "retry_evidence_page": 8.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8 Laneway House | 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the sit...",
+      "repairable_fields": [
+        "operator"
+      ],
+      "best_repair_confidence": 0.769,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "vancouver_rs_027",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+      "rule_object": "ceiling_height",
+      "constraint_scope": "floor_above_distance",
+      "applies_to": "floor_area_calculation",
+      "condition": "distance from a floor to the floor above or, where there is no floor above, to the top of the roof joists exceeds 3.7 m",
+      "operator": "<=",
+      "value": "3.7",
+      "unit": "m",
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. | 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site ar...",
+      "repairable_fields": [
+        "operator"
+      ],
+      "best_repair_confidence": 0.654,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    }
+  ],
+  "verified_after_rerun": [
+    {
+      "original_rule_id": "vancouver_rs_009",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+      "rule_object": "floor_area",
+      "constraint_scope": "total",
+      "applies_to": "laneway house",
+      "condition": "",
+      "operator": "<=",
+      "value": "186",
+      "unit": "sq. m",
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+      "retry_evidence_page": 8.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m . 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m .",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "verified",
+      "retry_support_gaps": [],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": true,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks."
+    }
+  ],
+  "promotion_ready": [
+    {
+      "original_rule_id": "vancouver_rs_009",
+      "original_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001",
+      "retry_candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001__rerun__vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+      "rule_object": "floor_area",
+      "constraint_scope": "total",
+      "applies_to": "laneway house",
+      "condition": "",
+      "operator": "<=",
+      "value": "186",
+      "unit": "sq. m",
+      "original_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+      "retry_evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+      "retry_evidence_page": 8.0,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m . 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: | (b) 186 sq. m .",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "verified",
+      "retry_support_gaps": [],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": true,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks."
+    }
+  ],
+  "skipped": [
+    {
+      "rule_id": "vancouver_rs_028",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_006__rule_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.908
+    },
+    {
+      "rule_id": "vancouver_rs_001",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_002__rule_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.831
+    },
+    {
+      "rule_id": "vancouver_rs_016",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1__rule_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.7
+    },
+    {
+      "rule_id": "vancouver_rs_017",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2__rule_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.6
+    },
+    {
+      "rule_id": "vancouver_rs_020",
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_017__rule_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.523
+    }
+  ]
+}

@@ -1,0 +1,581 @@
+[
+  {
+    "rule_id": "vancouver_rs_020",
+    "rule_object": "height",
+    "constraint_type": "maximum",
+    "constraint_scope": "laneway_house_maximum_height_meters",
+    "applies_to": "building height",
+    "value": "8.5",
+    "unit": "m",
+    "operator": "<=",
+    "condition": "for a laneway house",
+    "exception": "",
+    "gis_relevance": "context",
+    "verification_status": "verified",
+    "verification_decision": "verified",
+    "verification_label": "supported",
+    "canonical_rule_key": "height__laneway_house_maximum_height_meters__building_height__for_a_laneway_house____8_5__m",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "height",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "maximum",
+        "reason": "text wording supports <= / maximum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "g height for a laneway house must not exceed 8.5 m and 2 storeys.\need the lesser of: (a) 0.25",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "m",
+        "reason": "unit appears in text evidence"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "scope words appear in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.845,
+    "review_priority": "verified",
+    "support_gaps": [],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "normalization_trace": [],
+    "review_reason": "all critical evidence checks passed",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 8,
+      "section": null,
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+      "evidence_type": "clause",
+      "evidence_text": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys.",
+      "source_context": "eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property l",
+      "inherited_parent_context": null,
+      "local_context": "ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district ",
+      "source_section": null,
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "pipeline5_merged_rule_0020",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "laneway_house_maximum_height_meters",
+      "applies_to": "building height",
+      "operator": "<=",
+      "value": "8.5",
+      "unit": "m",
+      "condition": "for a laneway house",
+      "exception": "",
+      "source_stream": "gemini_text_block",
+      "extraction_method": "pipeline9_rag",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "p9_provenance": {
+        "original_page_number": 8,
+        "pseudo_page": 6,
+        "rag_pack_id": "vancouver_generic_graph_pack_007",
+        "rag_lane": "district_dimensional_overrides_packs",
+        "rag_applicability": "district_dimensional_override",
+        "target_filter_action": "kept_target_hit",
+        "source_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+        "block_id": "vancouver_generic_graph_pack_007__page_0008__local_012"
+      }
+    }
+  },
+  {
+    "rule_id": "vancouver_rs_021",
+    "rule_object": "storeys",
+    "constraint_type": "maximum",
+    "constraint_scope": "laneway_house_maximum_height_storeys",
+    "applies_to": "building height",
+    "value": "2",
+    "unit": "storeys",
+    "operator": "<=",
+    "condition": "for a laneway house",
+    "exception": "",
+    "gis_relevance": "context",
+    "verification_status": "verified",
+    "verification_decision": "verified",
+    "verification_label": "supported",
+    "canonical_rule_key": "storeys__laneway_house_maximum_height_storeys__building_height__for_a_laneway_house____2__storeys",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "storeys",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "maximum",
+        "reason": "text wording supports <= / maximum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "or a laneway house must not exceed 8.5 m and 2 storeys.\need the lesser of: (a) 0.25 multipl",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "storeys",
+        "reason": "unit appears in text evidence"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "scope words appear in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.845,
+    "review_priority": "verified",
+    "support_gaps": [],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "normalization_trace": [
+      {
+        "field": "rule_object",
+        "before": "height",
+        "after": "storeys",
+        "reason": "height/storeys split inferred from unit and maximum-height context"
+      }
+    ],
+    "review_reason": "all critical evidence checks passed",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 8,
+      "section": null,
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+      "evidence_type": "clause",
+      "evidence_text": "11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys.",
+      "source_context": "eed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property l",
+      "inherited_parent_context": null,
+      "local_context": "ct on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district ",
+      "source_section": null,
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "pipeline5_merged_rule_0021",
+      "evidence_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "laneway_house_maximum_height_storeys",
+      "applies_to": "building height",
+      "operator": "<=",
+      "value": "2",
+      "unit": "storeys",
+      "condition": "for a laneway house",
+      "exception": "",
+      "source_stream": "gemini_text_block",
+      "extraction_method": "pipeline9_rag",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "p9_provenance": {
+        "original_page_number": 8,
+        "pseudo_page": 6,
+        "rag_pack_id": "vancouver_generic_graph_pack_007",
+        "rag_lane": "district_dimensional_overrides_packs",
+        "rag_applicability": "district_dimensional_override",
+        "target_filter_action": "kept_target_hit",
+        "source_id": "vancouver_generic_graph_pack_007__page_0008__local_012",
+        "block_id": "vancouver_generic_graph_pack_007__page_0008__local_012"
+      }
+    }
+  }
+]

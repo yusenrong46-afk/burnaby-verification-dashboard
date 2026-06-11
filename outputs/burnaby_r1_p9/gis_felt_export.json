@@ -1,0 +1,195 @@
+{
+  "schema_version": "gis_felt_export_v1",
+  "city": "Burnaby",
+  "zone": "R1",
+  "source_document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+  "source_url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+  "input_mode": "pipeline9_rag",
+  "consumer_notes": [
+    "This export is derived only from verified_rules.json.",
+    "Review, rejected, and not_used rules are not executable constraints.",
+    "Map consumers should display review_blockers as warnings, not apply them as zoning logic."
+  ],
+  "map_layer_requirements": [],
+  "buildable_area_parameters": {},
+  "constraints": [],
+  "review_blockers": {
+    "count": 52,
+    "category_counts": [
+      {
+        "name": "text_candidate_needs_consensus",
+        "count": 21
+      },
+      {
+        "name": "unresolved_exception",
+        "count": 18
+      },
+      {
+        "name": "operator_uncertain",
+        "count": 4
+      },
+      {
+        "name": "upstream_review_requested",
+        "count": 4
+      },
+      {
+        "name": "possible_rule_object_mismatch",
+        "count": 3
+      },
+      {
+        "name": "general_review",
+        "count": 2
+      }
+    ],
+    "action_counts": [
+      {
+        "name": "human_legal_review",
+        "count": 18
+      },
+      {
+        "name": "retry_with_better_evidence",
+        "count": 18
+      },
+      {
+        "name": "needs_second_source_consensus",
+        "count": 15
+      },
+      {
+        "name": "evidence_packet_repair_candidate",
+        "count": 1
+      }
+    ],
+    "rule_family_counts": [
+      {
+        "name": "permitted_use",
+        "count": 11
+      },
+      {
+        "name": "setback",
+        "count": 8
+      },
+      {
+        "name": "dwelling_units",
+        "count": 7
+      },
+      {
+        "name": "lot_area",
+        "count": 7
+      },
+      {
+        "name": "height",
+        "count": 6
+      },
+      {
+        "name": "lot_coverage",
+        "count": 5
+      },
+      {
+        "name": "storeys",
+        "count": 4
+      },
+      {
+        "name": "floor_area",
+        "count": 2
+      },
+      {
+        "name": "impervious_surface",
+        "count": 2
+      }
+    ],
+    "example_blockers": [
+      {
+        "rule_id": "burnaby_r1_001",
+        "rule_object": "permitted_use",
+        "review_category": "text_candidate_needs_consensus",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded"
+      },
+      {
+        "rule_id": "burnaby_r1_002",
+        "rule_object": "permitted_use",
+        "review_category": "text_candidate_needs_consensus",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded"
+      },
+      {
+        "rule_id": "burnaby_r1_003",
+        "rule_object": "permitted_use",
+        "review_category": "text_candidate_needs_consensus",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded"
+      },
+      {
+        "rule_id": "burnaby_r1_004",
+        "rule_object": "permitted_use",
+        "review_category": "text_candidate_needs_consensus",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded"
+      },
+      {
+        "rule_id": "burnaby_r1_005",
+        "rule_object": "permitted_use",
+        "review_category": "text_candidate_needs_consensus",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded"
+      },
+      {
+        "rule_id": "burnaby_r1_006",
+        "rule_object": "permitted_use",
+        "review_category": "text_candidate_needs_consensus",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded"
+      },
+      {
+        "rule_id": "burnaby_r1_007",
+        "rule_object": "permitted_use",
+        "review_category": "text_candidate_needs_consensus",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded"
+      },
+      {
+        "rule_id": "burnaby_r1_008",
+        "rule_object": "lot_area",
+        "review_category": "possible_rule_object_mismatch",
+        "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; rule family direction mismatch; the cited evidence does not support the proposed rule object"
+      }
+    ]
+  },
+  "not_used_summary": {
+    "count": 6,
+    "top_reasons": [
+      {
+        "name": "cross_reference_only",
+        "count": 6
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review",
+        "count": 6
+      },
+      {
+        "name": "unresolved_exception_cue",
+        "count": 5
+      },
+      {
+        "name": "rule_object_not_supported",
+        "count": 4
+      },
+      {
+        "name": "operator_not_supported",
+        "count": 2
+      },
+      {
+        "name": "text_condition_not_supported",
+        "count": 2
+      }
+    ],
+    "example_rule_ids": [
+      "burnaby_r1_012",
+      "burnaby_r1_048",
+      "burnaby_r1_049",
+      "burnaby_r1_050",
+      "burnaby_r1_051",
+      "burnaby_r1_052"
+    ]
+  },
+  "export_counts": {
+    "verified_rule_count": 0,
+    "gis_constraint_count": 0,
+    "buildable_area_parameter_count": 0,
+    "review_blocker_rule_count": 52,
+    "not_used_rule_count": 6
+  }
+}

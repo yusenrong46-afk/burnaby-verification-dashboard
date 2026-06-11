@@ -1,0 +1,204 @@
+{
+  "benchmark": "vancouver_rs",
+  "outputs_evaluated": "outputs/vancouver_rs_p9",
+  "rule_metrics": {
+    "gold_rule_count": 7,
+    "candidate_rule_count": 43,
+    "verified_rule_count": 2,
+    "review_rule_count": 22,
+    "rejected_rule_count": 13,
+    "not_used_rule_count": 6,
+    "candidate_recall": 0.5714285714285714,
+    "verified_gold_recall": 0.2857142857142857,
+    "verified_or_review_recall": 1.0,
+    "extraction_coverage_recall": 1.0,
+    "verifier_retention_rate": 1.0,
+    "verifier_rejected_gold_rule_ids": [],
+    "not_used_gold_rule_ids": [],
+    "unextracted_gold_rule_ids": [],
+    "verified_precision": 1.0,
+    "false_verified_count": 0,
+    "false_verified_rule_ids": [],
+    "verified_source_support_failed_count": 0,
+    "verified_source_support_failures": [],
+    "retrieval_recall": null,
+    "retrieval_recall_applicable": false,
+    "retrieved_gold_rule_ids": [],
+    "missed_candidate_gold_rule_ids": [
+      "van_setback_rear_001",
+      "van_setback_side_001",
+      "van_storeys_001"
+    ],
+    "missed_verified_gold_rule_ids": [
+      "van_coverage_001",
+      "van_separation_001",
+      "van_setback_rear_001",
+      "van_setback_side_001",
+      "van_floor_area_001"
+    ],
+    "missed_verified_or_review_gold_rule_ids": [],
+    "top_review_reasons": [
+      {
+        "reason": "pipeline5_text_candidate_requires_review",
+        "count": 40
+      },
+      {
+        "reason": "rule_object_not_supported",
+        "count": 19
+      },
+      {
+        "reason": "operator_not_supported",
+        "count": 12
+      },
+      {
+        "reason": "rule_object_unit_not_compatible",
+        "count": 11
+      },
+      {
+        "reason": "outside_current_rule_contract",
+        "count": 8
+      },
+      {
+        "reason": "applies_to_not_supported",
+        "count": 7
+      },
+      {
+        "reason": "rule_family_direction_mismatch",
+        "count": 7
+      },
+      {
+        "reason": "text_condition_not_supported",
+        "count": 4
+      },
+      {
+        "reason": "unresolved_exception_cue",
+        "count": 4
+      },
+      {
+        "reason": "upstream_extraction_requested_review",
+        "count": 4
+      }
+    ],
+    "evidence_quality": {
+      "evidence_unit_count": 35,
+      "candidate_rule_count": 43,
+      "mean_evidence_quality_score": 1.0,
+      "candidate_evidence_match_rate": 1.0,
+      "candidate_value_grounding_rate": 1.0,
+      "candidate_unit_grounding_rate": 0.953,
+      "table_evidence_count": 0,
+      "table_context_completion_rate": 0.0,
+      "top_evidence_quality_issues": []
+    },
+    "proof_metrics": {
+      "proof_trace_completion_rate": 1.0,
+      "supported_claim_count": 273,
+      "refuted_claim_count": 2,
+      "not_enough_info_claim_count": 69,
+      "mean_evidence_strength": 0.681,
+      "high_priority_review_count": 1,
+      "table_proof_count": 0,
+      "table_proof_complete_count": 0,
+      "table_proof_partial_count": 0,
+      "table_proof_refuted_count": 0,
+      "proof_decision_mismatch_count": 0
+    },
+    "matched_candidates": [
+      {
+        "gold_id": "van_height_001",
+        "rule_id": "pipeline5_merged_rule_0020",
+        "score": 11,
+        "source_page": null
+      },
+      {
+        "gold_id": "van_coverage_001",
+        "rule_id": "pipeline5_merged_rule_0022",
+        "score": 11,
+        "source_page": null
+      },
+      {
+        "gold_id": "van_separation_001",
+        "rule_id": "pipeline5_merged_rule_0002",
+        "score": 11,
+        "source_page": null
+      },
+      {
+        "gold_id": "van_floor_area_001",
+        "rule_id": "pipeline5_merged_rule_0016",
+        "score": 11,
+        "source_page": null
+      }
+    ],
+    "matched_verified": [
+      {
+        "gold_id": "van_height_001",
+        "rule_id": "vancouver_rs_020",
+        "score": 11,
+        "source_page": 8
+      },
+      {
+        "gold_id": "van_storeys_001",
+        "rule_id": "vancouver_rs_021",
+        "score": 11,
+        "source_page": 8
+      }
+    ],
+    "matched_review": [
+      {
+        "gold_id": "van_coverage_001",
+        "rule_id": "vancouver_rs_022",
+        "score": 11,
+        "source_page": 8
+      },
+      {
+        "gold_id": "van_separation_001",
+        "rule_id": "vancouver_rs_002",
+        "score": 11,
+        "source_page": 8
+      },
+      {
+        "gold_id": "van_setback_rear_001",
+        "rule_id": "vancouver_rs_003",
+        "score": 11,
+        "source_page": 8
+      },
+      {
+        "gold_id": "van_setback_side_001",
+        "rule_id": "vancouver_rs_004",
+        "score": 11,
+        "source_page": 8
+      },
+      {
+        "gold_id": "van_floor_area_001",
+        "rule_id": "vancouver_rs_016",
+        "score": 11,
+        "source_page": 8
+      }
+    ],
+    "matched_not_used": []
+  },
+  "proposal_metrics": {
+    "proposal_case_count": 0,
+    "proposal_decision_accuracy": 0.0,
+    "proposal_case_accuracy": 0.0,
+    "false_approval_count": 0,
+    "false_approval_cases": [],
+    "false_rejection_count": 0,
+    "false_rejection_cases": [],
+    "field_expectation_mismatch_count": 0,
+    "field_expectation_mismatch_cases": [],
+    "needs_review_count": 0
+  },
+  "proposal_results": [],
+  "quality_gates": {
+    "passed": true,
+    "gates": {
+      "verified_precision_is_1": true,
+      "false_verified_is_0": true,
+      "false_approval_is_0": true,
+      "retrieval_recall_at_least_0_95": true,
+      "verified_or_review_recall_at_least_0_90": true,
+      "verified_source_support_failures_is_0": true
+    }
+  }
+}

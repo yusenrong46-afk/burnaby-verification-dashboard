@@ -1,0 +1,22 @@
+{
+  "mode": "guarded_bundle_promotion",
+  "promotion_count": 0,
+  "review_removed_count": 0,
+  "rejected_promotion_count": 1,
+  "promoted_rule_ids": [],
+  "promoted_rules": [],
+  "rejected_promotions": [
+    {
+      "original_rule_id": "vancouver_rs_009",
+      "blockers": [
+        "bundle_missing_fields_present"
+      ],
+      "retry_decision": "verified"
+    }
+  ],
+  "notes": [
+    "Promotion requires deterministic bundle rerun to return verified.",
+    "Bundle score alone cannot promote a rule.",
+    "Rules with support gaps, proof mismatches, or exception/covenant language stay in review."
+  ]
+}

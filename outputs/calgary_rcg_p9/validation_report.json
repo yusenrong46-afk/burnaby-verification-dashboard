@@ -1,0 +1,599 @@
+{
+  "pipeline": "slim_verification_first",
+  "input_mode": "pipeline9_rag",
+  "output_dir": "outputs/calgary_rcg_p9",
+  "candidate_rule_count": 428,
+  "bucket_counts": {
+    "verified": 16,
+    "review_needed": 348,
+    "rejected": 56,
+    "not_used": 8
+  },
+  "bucket_rates": {
+    "verified": 0.037,
+    "review_needed": 0.813,
+    "rejected": 0.131,
+    "not_used": 0.019
+  },
+  "evidence_quality": {
+    "evidence_unit_count": 152,
+    "candidate_rule_count": 428,
+    "mean_evidence_quality_score": 0.989,
+    "candidate_evidence_match_rate": 1.0,
+    "candidate_value_grounding_rate": 0.979,
+    "candidate_unit_grounding_rate": 0.743,
+    "table_evidence_count": 0,
+    "table_context_completion_rate": 0.0,
+    "top_evidence_quality_issues": [
+      {
+        "issue": "evidence_text_not_in_source_context",
+        "count": 9
+      }
+    ]
+  },
+  "review_triage": {
+    "category_counts": [
+      {
+        "name": "operator_uncertain",
+        "count": 147
+      },
+      {
+        "name": "text_candidate_needs_consensus",
+        "count": 98
+      },
+      {
+        "name": "unresolved_exception",
+        "count": 30
+      },
+      {
+        "name": "possible_rule_object_mismatch",
+        "count": 30
+      },
+      {
+        "name": "upstream_review_requested",
+        "count": 19
+      },
+      {
+        "name": "general_review",
+        "count": 9
+      },
+      {
+        "name": "missing_condition_evidence",
+        "count": 7
+      },
+      {
+        "name": "missing_applies_to",
+        "count": 6
+      },
+      {
+        "name": "missing_scope_evidence",
+        "count": 2
+      }
+    ],
+    "likelihood_counts": [
+      {
+        "name": "plausible",
+        "count": 210
+      },
+      {
+        "name": "likely_correct",
+        "count": 66
+      },
+      {
+        "name": "weak",
+        "count": 58
+      },
+      {
+        "name": "likely_wrong_or_noise",
+        "count": 14
+      }
+    ],
+    "priority_counts": [
+      {
+        "name": "low",
+        "count": 184
+      },
+      {
+        "name": "medium",
+        "count": 133
+      },
+      {
+        "name": "high",
+        "count": 31
+      }
+    ],
+    "top_blocking_reasons": [
+      {
+        "name": "pipeline5_text_candidate_requires_review, operator_not_supported",
+        "count": 100
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review",
+        "count": 98
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, rule_object_not_supported",
+        "count": 26
+      },
+      {
+        "name": "upstream_extraction_requested_review, pipeline5_text_candidate_requires_review, operator_not_supported",
+        "count": 24
+      },
+      {
+        "name": "upstream_extraction_requested_review, pipeline5_text_candidate_requires_review",
+        "count": 13
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch",
+        "count": 8
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, unresolved_exception_cue",
+        "count": 7
+      },
+      {
+        "name": "upstream_extraction_requested_review, pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported",
+        "count": 7
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, operator_not_supported, unresolved_exception_cue",
+        "count": 6
+      },
+      {
+        "name": "upstream_extraction_requested_review",
+        "count": 5
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, text_condition_not_supported, operator_not_supported",
+        "count": 5
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, applies_to_not_supported, operator_not_supported",
+        "count": 4
+      }
+    ]
+  },
+  "evidence_intelligence": {
+    "review_rule_count": 348,
+    "evidence_index_count": 152,
+    "safe_retry_count": 227,
+    "blocked_count": 121,
+    "summary": {
+      "next_action_counts": [
+        {
+          "name": "rerun_with_evidence_bundle",
+          "count": 227
+        },
+        {
+          "name": "human_legal_review",
+          "count": 94
+        },
+        {
+          "name": "retry_with_better_evidence",
+          "count": 15
+        },
+        {
+          "name": "blocked_review",
+          "count": 12
+        }
+      ],
+      "primary_category_counts": [
+        {
+          "name": "bundle_safe_retry",
+          "count": 227
+        },
+        {
+          "name": "blocked",
+          "count": 121
+        }
+      ],
+      "missing_field_counts": [
+        {
+          "name": "operator",
+          "count": 36
+        },
+        {
+          "name": "exception",
+          "count": 30
+        },
+        {
+          "name": "applies_to",
+          "count": 2
+        },
+        {
+          "name": "rule_object",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "evidence_repair": {
+    "suggestion_count": 338,
+    "alternative_evidence_count": 338,
+    "retry_candidate_count": 307
+  },
+  "evidence_rerun": {
+    "attempt_count": 307,
+    "verified_after_rerun_count": 0,
+    "promotion_ready_count": 0,
+    "review_after_rerun_count": 268,
+    "rejected_after_rerun_count": 39,
+    "skipped_count": 31
+  },
+  "evidence_bundle_rerun": {
+    "attempt_count": 17,
+    "verified_after_rerun_count": 0,
+    "promotion_ready_count": 0,
+    "review_after_rerun_count": 13,
+    "rejected_after_rerun_count": 4,
+    "skipped_count": 331
+  },
+  "bundle_promotion": {
+    "promotion_count": 0,
+    "review_removed_count": 0,
+    "rejected_promotion_count": 0,
+    "promoted_rule_ids": []
+  },
+  "review_audit": {
+    "action_counts": [
+      {
+        "name": "retry_with_better_evidence",
+        "count": 288
+      },
+      {
+        "name": "human_legal_review",
+        "count": 30
+      },
+      {
+        "name": "evidence_packet_repair_candidate",
+        "count": 15
+      },
+      {
+        "name": "defer_low_priority",
+        "count": 9
+      },
+      {
+        "name": "needs_second_source_consensus",
+        "count": 6
+      }
+    ],
+    "category_counts": [
+      {
+        "name": "operator_uncertain",
+        "count": 147
+      },
+      {
+        "name": "text_candidate_needs_consensus",
+        "count": 98
+      },
+      {
+        "name": "possible_rule_object_mismatch",
+        "count": 30
+      },
+      {
+        "name": "unresolved_exception",
+        "count": 30
+      },
+      {
+        "name": "upstream_review_requested",
+        "count": 19
+      },
+      {
+        "name": "general_review",
+        "count": 9
+      },
+      {
+        "name": "missing_condition_evidence",
+        "count": 7
+      },
+      {
+        "name": "missing_applies_to",
+        "count": 6
+      },
+      {
+        "name": "missing_scope_evidence",
+        "count": 2
+      }
+    ],
+    "action_descriptions": {
+      "retry_with_better_evidence": "Rerun candidate against a different, stronger evidence packet.",
+      "safe_verifier_tuning_candidate": "Inspect whether a general verifier/table rule can safely reduce review.",
+      "evidence_packet_repair_candidate": "Repair evidence attachment first; current suggestion is not strong enough to rerun.",
+      "needs_second_source_consensus": "Find independent text/table consensus before promotion.",
+      "semantic_duplicate_review": "Compare a high-similarity review item against an already verified rule; usually a duplicate/degraded extraction.",
+      "semantic_guardrail_review": "Close semantic match, but core guardrails disagree; inspect manually instead of tuning.",
+      "human_legal_review": "Resolve exception or cross-family conflict manually.",
+      "upstream_candidate_issue": "Return likely extraction/normalization issue upstream.",
+      "defer_low_priority": "Leave in review until broader benchmark evidence exists."
+    },
+    "top_support_gaps": [
+      {
+        "name": "pipeline5_text_candidate_requires_review",
+        "count": 338
+      },
+      {
+        "name": "operator_not_supported",
+        "count": 163
+      },
+      {
+        "name": "upstream_extraction_requested_review",
+        "count": 67
+      },
+      {
+        "name": "rule_object_not_supported",
+        "count": 52
+      },
+      {
+        "name": "unresolved_exception_cue",
+        "count": 30
+      },
+      {
+        "name": "applies_to_not_supported",
+        "count": 25
+      },
+      {
+        "name": "rule_family_direction_mismatch",
+        "count": 18
+      },
+      {
+        "name": "text_condition_not_supported",
+        "count": 7
+      },
+      {
+        "name": "constraint_scope_not_supported",
+        "count": 2
+      },
+      {
+        "name": "allowance_trigger_threshold",
+        "count": 1
+      }
+    ],
+    "recommendations": [
+      "Start with 288 rules that can be rerun against stronger evidence.",
+      "Repair evidence attachments for 15 rules before changing verifier logic.",
+      "Keep 30 exception/conflict rules in human legal review."
+    ]
+  },
+  "review_resolution": {
+    "review_rule_count": 348,
+    "summary": {
+      "resolution_counts": [
+        {
+          "name": "operator_or_direction_issue",
+          "count": 154
+        },
+        {
+          "name": "needs_second_source_consensus",
+          "count": 98
+        },
+        {
+          "name": "upstream_extraction_issue",
+          "count": 41
+        },
+        {
+          "name": "human_legal_review",
+          "count": 36
+        },
+        {
+          "name": "low_priority_defer",
+          "count": 12
+        },
+        {
+          "name": "scope_or_applies_to_evidence_needed",
+          "count": 5
+        },
+        {
+          "name": "close_match_but_guardrail_blocked",
+          "count": 1
+        },
+        {
+          "name": "condition_evidence_needed",
+          "count": 1
+        }
+      ],
+      "next_step_type_counts": [
+        {
+          "name": "confirm_operator_direction",
+          "count": 154
+        },
+        {
+          "name": "find_independent_corroboration",
+          "count": 98
+        },
+        {
+          "name": "fix_candidate_rule_family",
+          "count": 41
+        },
+        {
+          "name": "legal_exception_or_override_review",
+          "count": 36
+        },
+        {
+          "name": "defer_until_more_evidence",
+          "count": 12
+        },
+        {
+          "name": "find_scope_context",
+          "count": 5
+        },
+        {
+          "name": "manual_guardrail_check",
+          "count": 1
+        },
+        {
+          "name": "find_condition_span",
+          "count": 1
+        }
+      ],
+      "promotable_now_count": 0,
+      "can_promote_after_evidence_fix_count": 3,
+      "duplicate_or_degraded_count": 0,
+      "recommendations": [
+        "Prioritize finding condition spans; these are often close to verified but missing legal qualifiers.",
+        "Prioritize table headers, row labels, and nearby prose for scope/applies_to gaps.",
+        "Keep exception, covenant, and notwithstanding language in human legal review."
+      ]
+    }
+  },
+  "rule_graph": {
+    "node_count": 1525,
+    "edge_count": 4344,
+    "summary": {
+      "node_type_counts": [
+        {
+          "name": "canonical_rule_key",
+          "count": 581
+        },
+        {
+          "name": "candidate_rule",
+          "count": 428
+        },
+        {
+          "name": "review_rule",
+          "count": 348
+        },
+        {
+          "name": "evidence_unit",
+          "count": 152
+        },
+        {
+          "name": "verified_rule",
+          "count": 16
+        }
+      ],
+      "edge_type_counts": [
+        {
+          "name": "supports_field",
+          "count": 1942
+        },
+        {
+          "name": "same_canonical_key",
+          "count": 792
+        },
+        {
+          "name": "cites",
+          "count": 792
+        },
+        {
+          "name": "from_candidate",
+          "count": 364
+        },
+        {
+          "name": "missing_field",
+          "count": 249
+        },
+        {
+          "name": "same_value_unit",
+          "count": 182
+        },
+        {
+          "name": "same_scope",
+          "count": 22
+        },
+        {
+          "name": "conflicts_with",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "verification_cache": {
+    "cache_enabled": true,
+    "entry_count": 428,
+    "cache_hit_count": 428,
+    "safe_reuse_count": 427,
+    "cache_miss_count": 0,
+    "cache_mode": "diagnostic_reuse_ready"
+  },
+  "semantic_review": {
+    "review_rule_count": 348,
+    "verified_rule_count": 16,
+    "high_similarity_count": 1,
+    "summary": {
+      "semantic_action_counts": [
+        {
+          "name": "no_close_verified_analogue",
+          "count": 331
+        },
+        {
+          "name": "close_meaning_guardrail_blocked",
+          "count": 12
+        },
+        {
+          "name": "close_meaning_scope_review",
+          "count": 3
+        },
+        {
+          "name": "close_meaning_general_review",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "safe_tuning": {
+    "candidate_count": 0,
+    "tuning_type_counts": []
+  },
+  "felt_export": {
+    "purpose": "Felt dashboard table layers; only felt_verified_rules.csv is authoritative for GIS.",
+    "verified_rules_csv": "felt_verified_rules.csv",
+    "review_rules_csv": "felt_review_rules.csv",
+    "evidence_rerun_csv": "felt_evidence_rerun.csv",
+    "verified_rule_count": 16,
+    "review_rule_count": 348,
+    "rerun_attempt_count": 307,
+    "authoritative_file": "gis_rule_contract.json",
+    "notes": [
+      "Review and rerun exports are for inspection only.",
+      "Do not use review_needed or rerun rows to calculate geometry until they become verified."
+    ]
+  },
+  "top_review_reasons": [
+    {
+      "reason": "pipeline5_text_candidate_requires_review",
+      "count": 401
+    },
+    {
+      "reason": "operator_not_supported",
+      "count": 186
+    },
+    {
+      "reason": "upstream_extraction_requested_review",
+      "count": 82
+    },
+    {
+      "reason": "rule_object_not_supported",
+      "count": 69
+    },
+    {
+      "reason": "rule_family_direction_mismatch",
+      "count": 56
+    },
+    {
+      "reason": "rule_object_unit_not_compatible",
+      "count": 46
+    },
+    {
+      "reason": "unresolved_exception_cue",
+      "count": 38
+    },
+    {
+      "reason": "applies_to_not_supported",
+      "count": 36
+    },
+    {
+      "reason": "value_not_found_in_evidence",
+      "count": 10
+    },
+    {
+      "reason": "text_condition_not_supported",
+      "count": 8
+    }
+  ],
+  "notes": [
+    "verified is the only bucket eligible for downstream rule consumption",
+    "review_needed means plausible but not fully proven",
+    "rejected means contradiction or unsafe malformed candidate",
+    "not_used means traceability-only or outside the current validation contract"
+  ]
+}

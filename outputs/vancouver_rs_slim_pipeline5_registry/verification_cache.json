@@ -1,0 +1,1638 @@
+{
+  "cache_enabled": true,
+  "cache_mode": "diagnostic_reuse_ready",
+  "verifier_version": "fsr-family-cue-extras-v3",
+  "run_context_hash": "ee659b0bb1fde980d3d92cd33fa59acc719a73c0c0c7526f0bc9f6c4554a2777",
+  "entry_count": 45,
+  "cache_hit_count": 45,
+  "safe_reuse_count": 45,
+  "cache_miss_count": 0,
+  "entries": [
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_002__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_002",
+      "cache_key": "7355211f0bac7d31daf14ae9c3e8541667b84ade74e7c11d01ae361202d6a69b",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_002__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "reference",
+          "constraint_scope": "computation_basis",
+          "applies_to": "site",
+          "operator": "",
+          "value": null,
+          "unit": null,
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_002",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_002",
+        "evidence_text_hash": "c74cee96d767c5dc0c6ac73af96e1e12f0280daabda635bd4f9fd25b726b6aef",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_003__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_003",
+      "cache_key": "4fd8e34e63569a88dd1f34adde91df59ebbc990e4ebe4cf8c7c21b71f857880c",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_003__rule_001",
+          "rule_object": "site_dimension",
+          "constraint_type": "min",
+          "constraint_scope": "site_width",
+          "applies_to": "fee simple subdivision",
+          "operator": ">=",
+          "value": "5.0",
+          "unit": "m",
+          "condition": "fee simple subdivision",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_003",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_003",
+        "evidence_text_hash": "a02422ae4233922a684f14e109223a6284d4c4c9969494ba754535860cb4b7b1",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004",
+      "cache_key": "6ad27eb1e0eb58afb60c9d718b0bf4ddb238b13dd7c8c4b8f785ec00c49298b0",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_003",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004__rule_001",
+          "rule_object": "permitted_use",
+          "constraint_type": "permitted",
+          "constraint_scope": "",
+          "applies_to": "Laneway House",
+          "operator": "allowed",
+          "value": null,
+          "unit": null,
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_004",
+        "evidence_text_hash": "9b47101448df10beb27f750942c99d59c409af684a05e5f801aec4fcc869330f",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_1__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_1",
+      "cache_key": "a186b5f43fbb7f857985eb6983ac946b2b3bf718688f2c0466fac5c60b2d7a97",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "rejected",
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_004",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_1__rule_001",
+          "rule_object": "use_combination",
+          "constraint_type": "required",
+          "constraint_scope": "site",
+          "applies_to": "laneway house",
+          "operator": "in combination with",
+          "value": "single detached house, single detached house with secondary suite, or child day care facility",
+          "unit": "",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_1",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_1",
+        "evidence_text_hash": "a1395f65bc49bd65c5614541af846f130d748f75df0c8b6f5fc5a62b69b95352",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+      "cache_key": "ac8e24d44e9258dbf3581252fbefe1a0003065971763288fc409a717e38f5b2b",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_005",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "max",
+          "constraint_scope": "",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": null,
+          "unit": null,
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_004_2",
+        "evidence_text_hash": "59adcb2f859aa0abfa28b54c252196fa980138a5b00509981a52eab4cee2327b",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1",
+      "cache_key": "beff18d112fd75daa9678deab512876b36c80f02cc89f05b90e76ad67076e3cd",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "rejected",
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_006",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "max",
+          "constraint_scope": "site_area",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "0.25",
+          "unit": "multiplied by the site area",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_1",
+        "evidence_text_hash": "6a1a3046491287978c70dd1c03d088ed322c3c1efe27066a7f9d9e419f5f9437",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+      "cache_key": "82e7f01afe125e8d5ea9b78f9edb2b8ed935078896afa0a438bdd5afb83a9210",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "verified",
+      "decision": "verified",
+      "rule_id": "vancouver_rs_007",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "max",
+          "constraint_scope": "",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "186",
+          "unit": "sq. m",
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_006_2",
+        "evidence_text_hash": "071b818078334eeaff59ccb259600da6740f9ba4399b34f09d6c3cf43446db3c",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_007__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_007",
+      "cache_key": "053301895b7a73cb1b5dd57ef51b1386a91efe638ac6ccee08f60d8e13e9dac6",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "rejected",
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_008",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_007__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "formula",
+          "constraint_scope": "site_area",
+          "applies_to": "laneway_house",
+          "operator": "multiplied by",
+          "value": "0.25",
+          "unit": "multiplied by the site area",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_007",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_007",
+        "evidence_text_hash": "12c4420c30b0f896cbbaa881472d74d77d86439a78e3a0f626eddfac0e322dbc",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+      "cache_key": "8769960f1b12dbb420639625adfa47be03294feac95ce4bf0be525b967e32122",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_009",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "max",
+          "constraint_scope": "total",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "186",
+          "unit": "sq. m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_008",
+        "evidence_text_hash": "4ed7623b24d54d7ae4c7fef6fb49fab162938e6492fe85da65d73976584f3b51",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_009__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_009",
+      "cache_key": "4dd0b91f503fd1377b9bdd105711850fe5ebfe0b6f51b553f6f2a326cc1fd319",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_010",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_009__rule_001",
+          "rule_object": "site_dimension",
+          "constraint_type": "min",
+          "constraint_scope": "site_width",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "9.8",
+          "unit": "m",
+          "condition": null,
+          "exception": "Director of Planning may reduce the minimum site width if",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_009",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_009",
+        "evidence_text_hash": "811ca2035a8e9e7d40e13a7da74b040c75fef66660147a26f7cf3e97fa42f85b",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_010__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_010",
+      "cache_key": "ad64a82d88110dfc0a812f2f72a92cb30e866d847a0223077c6c94ba29d7ffc6",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_011",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_010__rule_001",
+          "rule_object": "site_dimension",
+          "constraint_type": "min",
+          "constraint_scope": "site_width",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "7.3",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_010",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_010",
+        "evidence_text_hash": "ad400defe77df45297584d593b9f636c4aad36d2e1d7862f22a698078837ecd9",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_011__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_011",
+      "cache_key": "5dde972afeb46c48cd047055270bd6d899a6ee769dbb9a04a294ed16f4268b05",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_012",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_011__rule_001",
+          "rule_object": "other",
+          "constraint_type": "required",
+          "constraint_scope": "",
+          "applies_to": "Laneway House",
+          "operator": "",
+          "value": null,
+          "unit": "",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_011",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_011",
+        "evidence_text_hash": "33bb1cdd27e7fddfa8f091c2f11f0764fb411a84ecf86ba48a837de01efca32d",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_012__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_012",
+      "cache_key": "9d2991397b886b710023c4eaf13032a787625e8a0d331a8cda2a1d8ae9de5083",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "verified",
+      "decision": "verified",
+      "rule_id": "vancouver_rs_013",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_012__rule_001",
+          "rule_object": "height",
+          "constraint_type": "max",
+          "constraint_scope": "",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "8.5",
+          "unit": "m",
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_012",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_012",
+        "evidence_text_hash": "a75cf612ff0696c651ac596c0054a41d36a33056c81681b00d61ac69d9a181e2",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_013__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_013",
+      "cache_key": "163b97fee65a6df0ffe6c0db3df460044089abda8cbee1394479a6f865b2a6a4",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "verified",
+      "decision": "verified",
+      "rule_id": "vancouver_rs_014",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_013__rule_001",
+          "rule_object": "lot_coverage",
+          "constraint_type": "max",
+          "constraint_scope": "site",
+          "applies_to": "site with a laneway house",
+          "operator": "<=",
+          "value": "50",
+          "unit": "%",
+          "condition": "site with a laneway house",
+          "exception": "despite the maximum permitted site coverage in an applicable district schedule",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_013",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_013",
+        "evidence_text_hash": "76ff301b4bab177682591bf90ad0546d267f7d42f2cd5ca4c17388355dc2d157",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_014__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_014",
+      "cache_key": "8ab1cbffbac03300912d5cf0c45f63ddd762a54a2f5d0c49983726a237c5773f",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_015",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_014__rule_001",
+          "rule_object": "other",
+          "constraint_type": "min",
+          "constraint_scope": "laneway_house",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": null,
+          "unit": null,
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_014",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_014",
+        "evidence_text_hash": "5cfe45160d5bac220cf85fd77f6d49866d428793f4d025bc6cfc72a7cda5503a",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1",
+      "cache_key": "df09d40a5f5ec770d8f7895e4df564138c2861fdccf3aa4760df00e8e15ede5c",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_016",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1__rule_001",
+          "rule_object": "building_separation",
+          "constraint_type": "min",
+          "constraint_scope": "separation_from_main_house",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "4.9",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_1",
+        "evidence_text_hash": "b9c851ef9b3bb2c65cbdea7758ab09b90b84be5a798b0a4efaf0f0a7839cc61a",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2",
+      "cache_key": "a2b90bdc8d4f3148201b246a947ebf5e16a81318fdb0d9541280a07598280d7d",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_017",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2__rule_001",
+          "rule_object": "setback",
+          "constraint_type": "min",
+          "constraint_scope": "rear_yard",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "0.9",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_014_2",
+        "evidence_text_hash": "9062385d8684b99a47ec54ff53047bbec0dd877cfbb908a35f60ad9050494297",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015",
+      "cache_key": "5bcdeba23ec89983e29f8ed925433b1c7666a11beb56895ce098594b3085b309",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_018",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015__rule_001",
+          "rule_object": "building_separation",
+          "constraint_type": "min",
+          "constraint_scope": "separation_from_main_house",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "4.9",
+          "unit": "m",
+          "condition": "measured across the width of the site",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_015",
+        "evidence_text_hash": "d8f291ab4c93fc57d4efebc48492afc4dd149990bf1a9af92a1454e7e6060980",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016",
+      "cache_key": "861f9fbca0e8d2de57f01f58cf93cfcce41e25ad690666bf8ab6370543475f64",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_019",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016__rule_001",
+          "rule_object": "setback",
+          "constraint_type": "min",
+          "constraint_scope": "rear_yard",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "0.9",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_016",
+        "evidence_text_hash": "515a1d4d6d486366ea01d181c11435d424d929e901672d92d94818e5995611a0",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_017__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_017",
+      "cache_key": "80be6278b733aafd8dca9dc256d1185aa0012f721e8fe368e68d4abef5f61952",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_020",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_017__rule_001",
+          "rule_object": "setback",
+          "constraint_type": "min",
+          "constraint_scope": "side_yard",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "1.2",
+          "unit": "m",
+          "condition": "",
+          "exception": "Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_017",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_017",
+        "evidence_text_hash": "1ea150be3e11432edc00bb215fa4712bcce0e91bb848ee578374fee243ac43a5",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_018__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_018",
+      "cache_key": "cf29a6061983d411240042056ab94ef60c3ed9dc20648ef78fb323017b216837",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_021",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_018__rule_001",
+          "rule_object": "bedroom_count",
+          "constraint_type": "required",
+          "constraint_scope": "separate_bedrooms",
+          "applies_to": "laneway house",
+          "operator": "",
+          "value": null,
+          "unit": null,
+          "condition": "Except for a laneway house with no separate bedrooms",
+          "exception": "laneway house with no separate bedrooms",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_018",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_018",
+        "evidence_text_hash": "e91d537c1f747ca24c8b13939a371125d96f79136d048d11e87146047d99d0c2",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_019__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_019",
+      "cache_key": "29c0a59ae1e81fe13a9f36ed5da7f4e0bc81102b533ae8641b851f2826388320",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_022",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_019__rule_001",
+          "rule_object": "habitable_room_area",
+          "constraint_type": "min",
+          "constraint_scope": "main_habitable_room",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "16.7",
+          "unit": "sq. m",
+          "condition": "not a bedroom",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_019",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_019",
+        "evidence_text_hash": "bd564dcf42f5ca446a31e687474bfc2f12943825f324f71659850dcac7560fea",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_020__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_020",
+      "cache_key": "7a4dadf554705fd670fdfba8f9c862afaf7d6213477c26f52e7a61b78b0b72ee",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_023",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_020__rule_001",
+          "rule_object": "bedroom_area",
+          "constraint_type": "min",
+          "constraint_scope": "",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "8.4",
+          "unit": "sq. m",
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_020",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_020",
+        "evidence_text_hash": "0e5923de8918489a32cce8ed8440e9ae71ebb8e7f4c60254c03fcf6ebd327a2c",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002",
+      "cache_key": "97d64ae38ccd19cbc10d2d2c6a761648f0f08590eec1abc755e44821e7cf5761",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_024",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "permitted",
+          "constraint_scope": "computation",
+          "applies_to": "laneway house",
+          "operator": "allowed",
+          "value": null,
+          "unit": null,
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_002",
+        "evidence_text_hash": "9206075320f13e776b7927b6be3fc8f31ea2ba6c506c3cfc50c6a2073a5efe5d",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003",
+      "cache_key": "d3e6c7d0d521647540933c51c59bc5f3271f4bb1b69d10c97dbf9cbb97d01670",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_025",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "definition",
+          "constraint_scope": "all_floors",
+          "applies_to": "all_floors",
+          "operator": "",
+          "value": null,
+          "unit": null,
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_003",
+        "evidence_text_hash": "beb07513256c2def038910d6a8a6ceee8c0f6db0bd0df6f2a0c54d467098cfd9",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004",
+      "cache_key": "968e0de31496b744223f368adffca1ef3b221e622d53fb1cba73760ebe596a99",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_026",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "other",
+          "constraint_scope": "gross_cross_sectional_area",
+          "applies_to": "floor_area_measurement",
+          "operator": "",
+          "value": null,
+          "unit": null,
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_004",
+        "evidence_text_hash": "db3403ca1b4ab817c694665233fa469fcf3ceb88635331e135c0fb094b8ae9dc",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005",
+      "cache_key": "5f7350eb7c28f8fb830742bc9ca0ae41d7aa842e588d994f6cc1a80516855332",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_027",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005__rule_001",
+          "rule_object": "ceiling_height",
+          "constraint_type": "exception",
+          "constraint_scope": "floor_above_distance",
+          "applies_to": "floor_area_calculation",
+          "operator": "<=",
+          "value": "3.7",
+          "unit": "m",
+          "condition": "distance from a floor to the floor above or, where there is no floor above, to the top of the roof joists exceeds 3.7 m",
+          "exception": "an amount equal to the area of the floor below the excess height",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_005",
+        "evidence_text_hash": "eceb40fefd4e667addc5732fa220ff87e648e2958903147ac84be372336271c0",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_006__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_006",
+      "cache_key": "98776a59e97067449f20a2897d4e53a3e13c3f0b62d8dcb2084cc409f1cc3a28",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_028",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_006__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "other",
+          "constraint_scope": "computation",
+          "applies_to": "laneway house",
+          "operator": "",
+          "value": null,
+          "unit": null,
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_006",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_006",
+        "evidence_text_hash": "d67ac667d44527582adad41943e3e31d28baa12ad7ce725f3cac1229121b2bbc",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_1__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_1",
+      "cache_key": "4ced348fbf0eb094267367839b77a129e3a9266dcfc6f07962b61a5bd65cab68",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "rejected",
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_029",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_1__rule_001",
+          "rule_object": "openness",
+          "constraint_type": "exception",
+          "constraint_scope": "off_street_parking",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "2",
+          "unit": "sides",
+          "condition": "each parking space is open on at least 2 sides and does not exceed 7.3 m in length",
+          "exception": "floors or portions thereof that are used for off-street parking",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_1",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_1",
+        "evidence_text_hash": "1e0da7ff81b0d28eb66ef7c0426a484cfe3aa5403fd5105aabf9112a14f42707",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_2__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_2",
+      "cache_key": "61b1803b72846750014b380abdb674f70897be8f8dbf1363012ed98868f73a50",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "rejected",
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_030",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_2__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "max",
+          "constraint_scope": "exclusion",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "8",
+          "unit": "percent",
+          "condition": "exclusions include balconies and decks and other appurtenances considered similar by the Director of Planning",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_2",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_heading_plus_clause_006_2",
+        "evidence_text_hash": "e90ad4d812016bd25cb8e9e69dd05bcbe77880e319a413f74b436a5d0c2d51fa",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_007__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_007",
+      "cache_key": "4f1a1f7d2f1cf4c98f9f989b937819ec3204c6036bcc91d78d1da62e6ef7b8d4",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_031",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_007__rule_001",
+          "rule_object": "openness",
+          "constraint_type": "min",
+          "constraint_scope": "open_sides",
+          "applies_to": "floors or portions thereof that are used for off-street parking",
+          "operator": ">=",
+          "value": "2",
+          "unit": "sides",
+          "condition": "floors or portions thereof that are used for off-street parking",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_007",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_007",
+        "evidence_text_hash": "f3c77971fb07e799d34039f0bc830b52ef11b8f66a8de66ee33356b26a611026",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_008__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_008",
+      "cache_key": "2fc38be47e4169d7e34dfcd82ab84856f64852a58ca8dfeaddbf9990b38eeed1",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "rejected",
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_032",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_008__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "max",
+          "constraint_scope": "exclusion",
+          "applies_to": "balconies and decks",
+          "operator": "<=",
+          "value": "8",
+          "unit": "%",
+          "condition": "provided that",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_008",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_008",
+        "evidence_text_hash": "f5fe9e4d022d13cea6b3a654baad4862074fb1186444ece74333cb5880e668a7",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_009__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_009",
+      "cache_key": "0db29e879ff79bf25a0ae19e4260f1c7dc4cced340e11a6aa8c041f552dc85b5",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_033",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_009__rule_001",
+          "rule_object": "access",
+          "constraint_type": "conditional",
+          "constraint_scope": "entries",
+          "applies_to": "laneway house",
+          "operator": "",
+          "value": null,
+          "unit": null,
+          "condition": "if",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_009",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_009",
+        "evidence_text_hash": "7329f4894cb6878bcdc370b0c3a293c706b61c7c5a90a0aed1f10273888166a4",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_010__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_010",
+      "cache_key": "cc3e130ad5bc9e8faa57a86e229c123cb345c811045a61d32606c195a6d7fe53",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "rejected",
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_034",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "non_numeric_value_for_numeric_rule",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_010__rule_001",
+          "rule_object": "other",
+          "constraint_type": "max",
+          "constraint_scope": "guard_rail",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "required minimum height",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_010",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_010",
+        "evidence_text_hash": "973e4ae7a8326134ded75d269cc3fa8fcc5631aea1906b6173ef819ce8fa102c",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_011__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_011",
+      "cache_key": "38cf1815ed34f54d9b9b94309afd82d585bfcd8ee9db04367e8a5749940c52b4",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "rejected",
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_035",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_011__rule_001",
+          "rule_object": "floor_area",
+          "constraint_type": "max",
+          "constraint_scope": "exclusion",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "13",
+          "unit": "percent",
+          "condition": "combined with balcony and deck exclusions under section 11.3.8.9(b)",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_011",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_011",
+        "evidence_text_hash": "6be43b4cf822e82ca2940aa8a80d3c23c97c773e7e1c00ff3fc8309228c28849",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012",
+      "cache_key": "71c504a42d81f0591466227b2607e37dddd40e9f7014d398733124ab2bf86811",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "review_needed",
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_036",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012__rule_001",
+          "rule_object": "ceiling_height",
+          "constraint_type": "max",
+          "constraint_scope": "excluded_area",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": null,
+          "unit": null,
+          "condition": "total area being excluded",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_012",
+        "evidence_text_hash": "6720386b5860af5abb4a19a368a5dad66d06947c73c5f53c7130c9970ac82078",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_001__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_001",
+      "cache_key": "32d0f960275279f76545dab6dbe2cd4173e414899b7a2c873e9b0cc987758e62",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_037",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_001__rule_001",
+          "rule_object": "reference",
+          "constraint_type": "reference",
+          "constraint_scope": "",
+          "applies_to": "Laneway House",
+          "operator": "",
+          "value": null,
+          "unit": null,
+          "condition": null,
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_001",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_001",
+        "evidence_text_hash": "3dcbd301154b25c65340471b7121c7aa5f4b02c90c7d1ba73ff7bb2b7ba12d9a",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_002__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_002",
+      "cache_key": "dabc74995e9c19ea661bba4bc43f364df53ebdf7b743192718cc1e17c2cc7af6",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_038",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_002__rule_001",
+          "rule_object": "use_combination",
+          "constraint_type": "permitted",
+          "constraint_scope": "combination",
+          "applies_to": "laneway house",
+          "operator": "allowed",
+          "value": null,
+          "unit": null,
+          "condition": "only permitted if",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_002",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_002",
+        "evidence_text_hash": "5e57de833ef6598574642de59688618c0fc8a1d085e29953321dadf678c5d96d",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_003__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_003",
+      "cache_key": "d0328d90b551b114b00188b21958a2c635932135aef6f55ce03b03a6f2b95109",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "rejected",
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_039",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "unit_not_found_in_evidence",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_003__rule_001",
+          "rule_object": "use_count",
+          "constraint_type": "max",
+          "constraint_scope": "site",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "1",
+          "unit": "count",
+          "condition": "only 1 laneway house and 1 child day care facility on the site",
+          "exception": null,
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_003",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_003",
+        "evidence_text_hash": "002dc06dba131099edf3d17850aa91ca1dd3770935947392fc312d94c7c040e6",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_004__rule_001",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_004",
+      "cache_key": "d4cbda33ae2490a7301f2e40b50d55b5274526d24b63249e19956a2b29691cb4",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_040",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_004__rule_001",
+          "rule_object": "building_conversion",
+          "constraint_type": "required",
+          "constraint_scope": "building",
+          "applies_to": "child day care facility",
+          "operator": "",
+          "value": "single detached house or single detached house with secondary suite",
+          "unit": "",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_004",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_11__0010__unit_001__ev_text_004",
+        "evidence_text_hash": "185512bd38f6a02124b031e1b00402880b645fe7e7d7fa9ec66a8b5e259ba9f7",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_0041",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+      "cache_key": "6bee7d9f9bbd85aa31f28aa68e44b4946287f780e555090a5debe2960089923c",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "verified",
+      "decision": "verified",
+      "rule_id": "vancouver_rs_041",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_0041",
+          "rule_object": "lot_coverage",
+          "constraint_type": "max",
+          "constraint_scope": "site_area_fraction",
+          "applies_to": null,
+          "operator": "<=",
+          "value": "50",
+          "unit": "%",
+          "condition": "for a site with a laneway house",
+          "exception": "Despite the maximum permitted site coverage in an applicable district schedule",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+        "evidence_text_hash": "e637fb6014d9b63552eda4b74b60d5b31fa8fef6c67336373c50b97642e00e33",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_0042",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+      "cache_key": "91ea733fda3a2c293353a66fa1d3a1fb14438f6172e695eb196c6a2c3f5e169f",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "verified",
+      "decision": "verified",
+      "rule_id": "vancouver_rs_042",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_0042",
+          "rule_object": "height",
+          "constraint_type": "max",
+          "constraint_scope": "",
+          "applies_to": null,
+          "operator": "<=",
+          "value": "2",
+          "unit": "storeys",
+          "condition": "for a laneway house",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_heading_plus_clause_012_1",
+        "evidence_text_hash": "e637fb6014d9b63552eda4b74b60d5b31fa8fef6c67336373c50b97642e00e33",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_0043",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_019",
+      "cache_key": "275020747bcc92ded607bebd0c7930f26800eee36d8483e2f6fbc6fadbc77ed6",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_043",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_0043",
+          "rule_object": "bedroom_area",
+          "constraint_type": "min",
+          "constraint_scope": "main_habitable_room",
+          "applies_to": null,
+          "operator": ">=",
+          "value": "2.1",
+          "unit": "sq. m",
+          "condition": "minimum dimension measured between finished wall surfaces",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_019",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_019",
+        "evidence_text_hash": "bd564dcf42f5ca446a31e687474bfc2f12943825f324f71659850dcac7560fea",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_0044",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_020",
+      "cache_key": "f77ff96bac39dbc05096a6ad2b8d7fe507c2ea29148d645e4736c6d647d5816c",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_044",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_0044",
+          "rule_object": "bedroom_area",
+          "constraint_type": "min",
+          "constraint_scope": "",
+          "applies_to": null,
+          "operator": ">=",
+          "value": "2.1",
+          "unit": "sq. m",
+          "condition": "at least 1 bedroom",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_020",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_7_1__0008__unit_001__ev_text_020",
+        "evidence_text_hash": "0e5923de8918489a32cce8ed8440e9ae71ebb8e7f4c60254c03fcf6ebd327a2c",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    },
+    {
+      "candidate_id": "vancouver_0045",
+      "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_007",
+      "cache_key": "ede40e0f1dda67b61f1083abdc4f55516442a8f61b584526cc197824616b6f36",
+      "cache_hit": true,
+      "safe_to_reuse": true,
+      "previous_decision": "not_used",
+      "decision": "not_used",
+      "rule_id": "vancouver_rs_045",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported",
+        "outside_current_rule_contract"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_0045",
+          "rule_object": "openness",
+          "constraint_type": "max",
+          "constraint_scope": "open_sides",
+          "applies_to": null,
+          "operator": "<=",
+          "value": "7.3",
+          "unit": "m",
+          "condition": "floors or portions thereof that are used for off-street parking",
+          "exception": "",
+          "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_007",
+          "source_stream": "vancouver_pipeline_text",
+          "extraction_method": "vancouver_prototype"
+        },
+        "evidence_id": "vancouver_section_11_2026_02__11_3_8_8__0009__unit_001__ev_text_007",
+        "evidence_text_hash": "f3c77971fb07e799d34039f0bc830b52ef11b8f66a8de66ee33356b26a611026",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "fsr-family-cue-extras-v3"
+      }
+    }
+  ],
+  "notes": [
+    "Cache keys include candidate core fields, cited evidence text, config hash, and verifier version.",
+    "The run-level candidate context is hashed once at report level (run_context_hash), not inside per-candidate keys, so one changed candidate cannot invalidate every other entry.",
+    "safe_to_reuse requires a cache hit, an unchanged report-level run_context_hash, and a matching decision; it is computed after verification as a would-skipping-have-been-safe diagnostic.",
+    "This report identifies reusable results but does not skip deterministic verification yet.",
+    "Skipping requires additional tests for run-level source agreement and cross-family collision dependencies."
+  ]
+}
