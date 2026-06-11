@@ -2,7 +2,12 @@
 
 Streamlit deployment package for the verification dashboard. The app is read-only:
 it loads committed verifier artifacts from `outputs/` and never reruns extraction,
-verification, benchmark evaluation, GIS export, RAG indexing, or LLM review.
+verification, benchmark evaluation, GIS export, or RAG indexing.
+
+The `Source Evidence > Ask The Bylaw` page is an advisory RAG chatbot. It
+retrieves committed bylaw index sections first, sends bounded context to a small
+LLM only when a secret key is configured, and falls back to retrieval-only mode
+otherwise. Chat answers never approve rules or write GIS outputs.
 
 ## Run Locally
 
@@ -45,3 +50,17 @@ are not presented as passing outputs.
   `review_assistant_packets.json` are advisory/debug artifacts for human review.
 - The Review Assistant panel is advisory only. It may summarize bounded evidence
   context, but it cannot approve rules or write GIS outputs.
+
+## Optional RAG Chat LLM
+
+Set Streamlit Cloud secrets:
+
+```toml
+BYLAW_RAG_PROVIDER = "gemini"
+BYLAW_RAG_MODEL = "gemini-2.0-flash-lite"
+GEMINI_API_KEY = "..."
+```
+
+The dashboard also supports `OPENAI_API_KEY` with `BYLAW_RAG_PROVIDER =
+"openai"` and `ANTHROPIC_API_KEY` with `BYLAW_RAG_PROVIDER = "anthropic"`.
+Secrets must stay in Streamlit Cloud settings; do not commit them.

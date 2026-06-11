@@ -6,6 +6,10 @@ import argparse
 import html
 import json
 import os
+import re
+import urllib.error
+import urllib.parse
+import urllib.request
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -147,6 +151,26 @@ RAW_VALUE_COLUMNS = {
     "confidence",
     "count",
     "rows",
+}
+
+RAG_CHAT_TOP_K = 4
+RAG_CONTEXT_CHAR_LIMIT = 7000
+RAG_CONTEXT_PER_HIT_LIMIT = 1800
+
+RAG_QUERY_SYNONYMS = {
+    "tall": ("height",),
+    "high": ("height",),
+    "taller": ("height",),
+    "big": ("floor", "area", "size"),
+    "large": ("floor", "area", "size"),
+    "size": ("floor", "area"),
+    "far": ("setback", "distance"),
+    "close": ("setback", "separation", "distance"),
+    "distance": ("setback", "separation"),
+    "wide": ("width",),
+    "floors": ("storeys",),
+    "levels": ("storeys",),
+    "garage": ("parking",),
 }
 
 
@@ -1960,44 +1984,357 @@ def _rule_evidence_quote(rule: dict[str, Any]) -> str:
     return ""
 
 
+def _rag_chat_key(city_stem: str) -> str:
+    return f"bylaw_rag_chat::{city_stem}"
+
+
+def _rag_tokenize(text: str) -> list[str]:
+    return re.findall(r"[a-z0-9]+(?:\.[0-9]+)*", str(text or "").lower())
+
+
+def _rag_query_terms(question: str) -> list[str]:
+    tokens = _rag_tokenize(question)
+    expanded = list(tokens)
+    seen = set(tokens)
+    for token in tokens:
+        for extra in RAG_QUERY_SYNONYMS.get(token, ()):
+            if extra not in seen:
+                seen.add(extra)
+                expanded.append(extra)
+    return expanded
+
+
+def _dashboard_rag_hits(index_path: Path, question: str, top_k: int = RAG_CHAT_TOP_K) -> list[dict[str, Any]]:
+    """Return bylaw RAG hits with a standalone fallback for Streamlit Cloud.
+
+    The deployment repo intentionally contains only the dashboard and JSON
+    outputs, not the full Python package. Locally we use ``bylaw_rag.py`` when
+    it is importable; on cloud we read ``bylaw_rag_index.json`` directly and
+    run a small lexical retriever with section expansion.
+    """
+    try:
+        from burnaby_prototype.bylaw_rag import load_index
+
+        return load_index(index_path).ask(question, top_k=top_k)
+    except Exception:
+        return _standalone_rag_hits(index_path, question, top_k=top_k)
+
+
+def _standalone_rag_hits(index_path: Path, question: str, top_k: int = RAG_CHAT_TOP_K) -> list[dict[str, Any]]:
+    payload = _read_json(index_path, {})
+    chunks = [chunk for chunk in payload.get("chunks", []) if str(chunk.get("text") or "").strip()]
+    query_terms = _rag_query_terms(question)
+    query_set = set(query_terms)
+    if not chunks or not query_set:
+        return []
+
+    scored: list[tuple[float, dict[str, Any], set[str]]] = []
+    for chunk in chunks:
+        text = str(chunk.get("text") or "")
+        tokens = set(_rag_tokenize(text))
+        overlap = tokens & query_set
+        if not overlap:
+            continue
+        exact_value_bonus = sum(1 for term in query_set if re.fullmatch(r"\d+(?:\.\d+)?", term) and term in tokens)
+        score = (len(overlap) + exact_value_bonus) / max(len(query_set), 1)
+        scored.append((score, chunk, overlap))
+    scored.sort(key=lambda item: (-item[0], str(item[1].get("chunk_id") or "")))
+
+    by_section: dict[str, list[dict[str, Any]]] = {}
+    for chunk in chunks:
+        section = str(chunk.get("section") or "")
+        if section:
+            by_section.setdefault(section, []).append(chunk)
+
+    results: list[dict[str, Any]] = []
+    for rank, (score, chunk, overlap) in enumerate(scored[:top_k], start=1):
+        section = str(chunk.get("section") or "")
+        siblings = by_section.get(section, [])
+        expanded = "\n".join(str(sib.get("text") or "") for sib in siblings) if len(siblings) > 1 else str(chunk.get("text") or "")
+        results.append(
+            {
+                **chunk,
+                "score": round(score, 6),
+                "signals": {"standalone_rank": rank, "matched_terms": sorted(overlap)[:12]},
+                "section_text": expanded,
+            }
+        )
+    return results
+
+
+def _bounded_rag_hits(hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    bounded: list[dict[str, Any]] = []
+    remaining = RAG_CONTEXT_CHAR_LIMIT
+    for hit in hits:
+        text = str(hit.get("section_text") or hit.get("text") or "")
+        if remaining <= 0:
+            break
+        excerpt = text[: min(RAG_CONTEXT_PER_HIT_LIMIT, remaining)]
+        remaining -= len(excerpt)
+        bounded.append({**hit, "section_text": excerpt, "text": excerpt})
+    return bounded
+
+
+def _grounded_bylaw_prompt(question: str, hits: list[dict[str, Any]]) -> str:
+    bounded_hits = _bounded_rag_hits(hits)
+    try:
+        from burnaby_prototype.bylaw_rag import grounded_answer_prompt
+
+        base = grounded_answer_prompt(question, bounded_hits)
+    except Exception:
+        sections = "\n\n".join(
+            f"[{hit.get('section') or hit.get('chunk_id')}] {hit.get('section_text') or hit.get('text')}"
+            for hit in bounded_hits
+        )
+        base = (
+            "Answer the question using ONLY the bylaw sections below. Cite the section number in "
+            "brackets for every claim. If the sections do not answer the question, say that the "
+            "retrieved sections do not answer it. Do not speculate.\n\n"
+            f"SECTIONS:\n{sections}\n\nQUESTION: {question}"
+        )
+    return (
+        "You are an advisory zoning bylaw chatbot for human reviewers. "
+        "Do not approve, verify, or reject rules. GIS uses only verified_rules.json. "
+        "Give a concise answer, cite only the retrieved sections, and say when the evidence is insufficient.\n\n"
+        f"{base}"
+    )
+
+
+def _retrieval_only_bylaw_answer(question: str, hits: list[dict[str, Any]]) -> str:
+    labels = ", ".join(f"[{hit.get('section') or hit.get('chunk_id')}]" for hit in hits[:3])
+    return (
+        "I found related bylaw sections, but no deployed LLM key is configured for this dashboard. "
+        f"Use the retrieved source sections below ({labels}) to answer the question. "
+        "I am not generating a legal answer in retrieval-only mode."
+    )
+
+
+def _rag_source_rows(hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    rows = []
+    for hit in hits:
+        rows.append(
+            {
+                "section": hit.get("section") or hit.get("chunk_id"),
+                "page": hit.get("page"),
+                "score": hit.get("score"),
+                "signals": ", ".join(f"{key}: {value}" for key, value in (hit.get("signals") or {}).items()),
+                "excerpt": _short_display_quote(hit.get("section_text") or hit.get("text") or "", 360),
+            }
+        )
+    return rows
+
+
+def _render_bylaw_chat_message(st: Any, message: dict[str, Any]) -> None:
+    with st.chat_message(message.get("role", "assistant")):
+        st.markdown(message.get("content") or "")
+        sources = message.get("sources") or []
+        if sources:
+            with st.expander("Retrieved source sections"):
+                st.dataframe(_display_rows(_rag_source_rows(sources)), width="stretch", hide_index=True)
+
+
+def _secret_value(st: Any | None, name: str) -> str:
+    value = os.getenv(name)
+    if value:
+        return value
+    if st is None:
+        return ""
+    try:
+        secret = st.secrets.get(name, "")
+    except Exception:
+        return ""
+    return str(secret or "")
+
+
+def _bylaw_llm_status(st: Any | None = None) -> dict[str, Any]:
+    preferred = (_secret_value(st, "BYLAW_RAG_PROVIDER") or "").strip().lower()
+    gemini_key = (
+        _secret_value(st, "GEMINI_API_KEY")
+        or _secret_value(st, "GOOGLE_API_KEY")
+        or _secret_value(st, "GOOGLE_GENAI_API_KEY")
+    )
+    openai_key = _secret_value(st, "OPENAI_API_KEY")
+    anthropic_key = _secret_value(st, "ANTHROPIC_API_KEY") or _secret_value(st, "CLAUDE_API_KEY")
+
+    def _status(provider: str, key: str, model: str) -> dict[str, Any]:
+        return {
+            "provider": provider,
+            "model": _secret_value(st, "BYLAW_RAG_MODEL") or model,
+            "available": bool(key),
+            "configured": bool(key),
+        }
+
+    if preferred in {"gemini", "google"}:
+        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or "gemini-2.0-flash-lite")
+    if preferred in {"openai", "openai-compatible"}:
+        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or "gpt-4o-mini")
+    if preferred in {"anthropic", "claude"}:
+        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or "claude-3-5-haiku-latest")
+    if gemini_key:
+        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or "gemini-2.0-flash-lite")
+    if openai_key:
+        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or "gpt-4o-mini")
+    if anthropic_key:
+        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or "claude-3-5-haiku-latest")
+    return {"provider": "none", "model": "", "available": False, "configured": False}
+
+
+def _optional_bylaw_llm_answer(prompt: str, st: Any | None = None) -> str | None:
+    status = _bylaw_llm_status(st)
+    if not status.get("available"):
+        return None
+    provider = status["provider"]
+    if provider == "gemini":
+        key = _secret_value(st, "GEMINI_API_KEY") or _secret_value(st, "GOOGLE_API_KEY") or _secret_value(st, "GOOGLE_GENAI_API_KEY")
+        return _gemini_answer(prompt, key, status["model"])
+    if provider == "openai":
+        return _openai_answer(prompt, _secret_value(st, "OPENAI_API_KEY"), status["model"], st)
+    if provider == "anthropic":
+        key = _secret_value(st, "ANTHROPIC_API_KEY") or _secret_value(st, "CLAUDE_API_KEY")
+        return _anthropic_answer(prompt, key, status["model"])
+    return None
+
+
+def _post_json(url: str, payload: dict[str, Any], headers: dict[str, str], timeout: int = 35) -> dict[str, Any]:
+    request = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={**headers, "Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        body = error.read().decode("utf-8", errors="replace")[:500]
+        return {"_error": f"HTTP {error.code}: {body}"}
+    except Exception as error:
+        return {"_error": f"{type(error).__name__}: {error}"}
+
+
+def _gemini_answer(prompt: str, api_key: str, model: str) -> str:
+    model_name = str(model or "gemini-2.0-flash-lite").removeprefix("models/")
+    url = (
+        "https://generativelanguage.googleapis.com/v1beta/models/"
+        f"{urllib.parse.quote(model_name, safe='-._~')}:generateContent?key={urllib.parse.quote(api_key)}"
+    )
+    payload = {
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": 0.0, "maxOutputTokens": 700},
+    }
+    data = _post_json(url, payload, {})
+    if data.get("_error"):
+        return f"LLM unavailable: {data['_error']}"
+    parts = (((data.get("candidates") or [{}])[0].get("content") or {}).get("parts") or [])
+    text = "\n".join(str(part.get("text") or "") for part in parts).strip()
+    return text or "The LLM returned no text."
+
+
+def _openai_answer(prompt: str, api_key: str, model: str, st: Any | None = None) -> str:
+    base_url = (_secret_value(st, "OPENAI_BASE_URL") or "https://api.openai.com/v1").rstrip("/")
+    payload = {
+        "model": model or "gpt-4o-mini",
+        "temperature": 0.0,
+        "max_tokens": 700,
+        "messages": [
+            {"role": "system", "content": "You answer only from retrieved zoning bylaw excerpts. Never approve or verify rules."},
+            {"role": "user", "content": prompt},
+        ],
+    }
+    data = _post_json(f"{base_url}/chat/completions", payload, {"Authorization": f"Bearer {api_key}"})
+    if data.get("_error"):
+        return f"LLM unavailable: {data['_error']}"
+    return str((((data.get("choices") or [{}])[0].get("message") or {}).get("content") or "")).strip() or "The LLM returned no text."
+
+
+def _anthropic_answer(prompt: str, api_key: str, model: str) -> str:
+    payload = {
+        "model": model or "claude-3-5-haiku-latest",
+        "max_tokens": 700,
+        "temperature": 0.0,
+        "system": "You answer only from retrieved zoning bylaw excerpts. Never approve or verify rules.",
+        "messages": [{"role": "user", "content": prompt}],
+    }
+    data = _post_json(
+        "https://api.anthropic.com/v1/messages",
+        payload,
+        {"x-api-key": api_key, "anthropic-version": "2023-06-01"},
+    )
+    if data.get("_error"):
+        return f"LLM unavailable: {data['_error']}"
+    blocks = data.get("content") or []
+    return "\n".join(str(block.get("text") or "") for block in blocks if block.get("type") == "text").strip() or "The LLM returned no text."
+
+
 def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
     """Local hybrid-RAG retrieval over the city's bylaw corpus. ADVISORY only:
     answers are retrieved clauses with section ids — never a verification."""
     index_path = bylaw_index_path(output_dir)
     city_stem = city_stem_from_dir(output_dir)
-    st.markdown("#### Search nearby bylaw text")
+    st.markdown("#### Bylaw Chat")
+    llm_status = _bylaw_llm_status(st)
+    if llm_status.get("available"):
+        st.success(f"Mode: LLM + RAG ({llm_status['provider']} / {llm_status['model']})")
+    else:
+        st.warning("Mode: retrieval-only. Add a small LLM key in Streamlit secrets to generate grounded chat answers.")
+        with st.expander("How to enable deployed LLM + RAG"):
+            st.markdown(
+                "Add one provider key in Streamlit Cloud secrets. Gemini is the lightest default path for this dashboard."
+            )
+            st.code(
+                """# Streamlit Cloud secrets example
+BYLAW_RAG_PROVIDER = "gemini"
+BYLAW_RAG_MODEL = "gemini-2.0-flash-lite"
+GEMINI_API_KEY = "..."  # keep this in secrets only""",
+                language="toml",
+            )
     if index_path is None:
         st.info(
             "No retrieval index yet — build it with "
             f"`.venv/bin/python scripts/build_rag_index.py --city {city_stem}`."
         )
         return
-    question = st.text_input(
-        "Search question",
-        key=f"rag_q_{city_stem}",
-        placeholder="e.g. what is the maximum height for a backyard suite",
-        help="This searches retrieved bylaw sections. It does not verify or approve rules.",
+
+    chat_key = _rag_chat_key(city_stem)
+    st.session_state.setdefault(chat_key, [])
+    controls = st.columns([1, 5])
+    if controls[0].button("Clear chat", key=f"clear_{chat_key}"):
+        st.session_state[chat_key] = []
+    controls[1].caption(
+        "Ask bylaw questions in plain English. Answers are advisory and cite retrieved source sections."
     )
+
+    if not st.session_state[chat_key]:
+        st.info("Try: `What is the maximum height?` or `What setback applies to a backyard suite?`")
+    for message in st.session_state[chat_key]:
+        _render_bylaw_chat_message(st, message)
+
+    question = st.chat_input("Ask the bylaw...", key=f"rag_chat_input_{city_stem}")
     if not question:
         return
-    try:
-        from burnaby_prototype.bylaw_rag import load_index
 
-        hits = load_index(index_path).ask(question, top_k=4)
-    except Exception as error:  # pragma: no cover - depends on optional deps
-        st.warning(f"Retrieval unavailable: {error}")
-        return
+    user_message = {"role": "user", "content": question}
+    st.session_state[chat_key].append(user_message)
+    _render_bylaw_chat_message(st, user_message)
+
+    hits = _dashboard_rag_hits(index_path, question, top_k=RAG_CHAT_TOP_K)
     if not hits:
-        st.info("No related clause found. Try the bylaw's own words, such as setback, height, storey, or parcel.")
-        return
-    for hit in hits:
-        label = hit.get("section") or hit.get("chunk_id")
-        st.markdown(
-            f"<div class='bylaw-section'><b>[{html.escape(str(label))}]</b> "
-            f"score {hit['score']:.4f}<br>{html.escape(_short_display_quote(hit.get('section_text') or hit.get('text') or ''))}</div>",
-            unsafe_allow_html=True,
+        answer = (
+            "I could not find a related bylaw section for that question. Try the bylaw's own terms, "
+            "such as setback, height, storey, parcel, coverage, or suite."
         )
-    st.caption("Advisory retrieval. The verified rule set remains the only executable output.")
+        assistant_message = {"role": "assistant", "content": answer, "sources": []}
+        st.session_state[chat_key].append(assistant_message)
+        _render_bylaw_chat_message(st, assistant_message)
+        return
+
+    bounded_hits = _bounded_rag_hits(hits)
+    prompt = _grounded_bylaw_prompt(question, bounded_hits)
+    answer = _optional_bylaw_llm_answer(prompt, st) or _retrieval_only_bylaw_answer(question, bounded_hits)
+    assistant_message = {"role": "assistant", "content": answer, "sources": bounded_hits}
+    st.session_state[chat_key].append(assistant_message)
+    _render_bylaw_chat_message(st, assistant_message)
+    st.caption("RAG chat is advisory. It cannot verify rules, approve proposals, or write GIS outputs.")
 
 
 def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
