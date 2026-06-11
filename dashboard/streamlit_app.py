@@ -55,6 +55,101 @@ DEMO_LOT_DEPTH_M = 40.0
 _ACTIVE_SOURCE = {"url": SOURCE_DOCUMENT_URL, "label": "source bylaw PDF"}
 
 
+PLAIN_LABELS = {
+    "verified": "Verified",
+    "review": "Needs review",
+    "review_needed": "Needs review",
+    "rejected": "Rejected",
+    "not_used": "Out of scope",
+    "human_legal_review": "Needs legal review",
+    "operator_review": "Check direction words",
+    "rerun_with_evidence_bundle": "Try stronger evidence",
+    "retry_with_better_evidence": "Try stronger evidence",
+    "condition_evidence_needed": "Find condition evidence",
+    "scope_review": "Check legal scope",
+    "semantic_guardrail_review": "Meaning looks close, but support is missing",
+    "semantic_duplicate_review": "Possible duplicate",
+    "fix_candidate_or_rule_family_mapping": "Fix extracted rule type",
+    "defer_low_priority": "Lower priority",
+    "missing_applies_to": "Missing what the rule applies to",
+    "missing_condition_evidence": "Missing condition evidence",
+    "missing_scope_evidence": "Missing scope evidence",
+    "general_review": "General review",
+    "operator_uncertain": "Direction word is unclear",
+    "near_verified_table_context": "Near verified table wording",
+    "text_candidate_needs_consensus": "Only one text source supports it",
+    "unresolved_exception": "Possible exception or qualifier",
+    "possible_rule_object_mismatch": "Possible wrong rule type",
+    "upstream_review_requested": "Extractor asked for review",
+    "plausible": "Plausible",
+    "likely_correct": "Likely correct",
+    "weak": "Weak support",
+    "likely_wrong_or_noise": "Likely wrong or noise",
+    "guardrail_blocked_low_similarity": "Not close enough to verified rules",
+    "high_confidence_near_duplicate": "Likely duplicate",
+    "close_semantic_match": "Close meaning match",
+    "no_close_semantic_match": "No close meaning match",
+    "operator_not_supported": "Direction word not proven",
+    "scope_not_supported": "Scope not proven",
+    "applies_to_not_supported": "Applies-to text not proven",
+    "condition_not_supported": "Condition not proven",
+    "unit_not_supported": "Unit not proven",
+    "value_not_supported": "Number not proven",
+    "rule_object_not_supported": "Rule type not proven",
+    "rag_context_mismatch": "Extractor text did not match the source page",
+    "pass": "Pass",
+    "fail-closed": "Fail-closed",
+    "scope mismatch": "Scope mismatch",
+    "unsafe / needs fix": "Unsafe / needs fix",
+    "needs review": "Needs review",
+    "missing": "Missing",
+}
+
+
+HELP_TEXT = {
+    "human_legal_review": "The evidence may be real, but the rule depends on legal interpretation, an exception, or a condition that the verifier should not guess.",
+    "operator_review": "The number is present, but the source text does not safely prove whether it is a minimum, maximum, or exact requirement.",
+    "rerun_with_evidence_bundle": "There may be enough source text if several nearby evidence snippets are combined, but it still must pass the deterministic verifier.",
+    "retry_with_better_evidence": "The candidate may be correct, but the current evidence packet is too weak. Find a stronger source passage first.",
+    "condition_evidence_needed": "The candidate depends on a condition, qualifier, exception, or branch that needs explicit source support.",
+    "scope_review": "The candidate may use the right number but for the wrong legal scope, object, or building type.",
+    "semantic_guardrail_review": "The meaning resembles a verified rule, but similarity is advisory only and cannot approve it.",
+    "semantic_duplicate_review": "This may already be covered by a verified rule. Check before adding another rule.",
+    "fix_candidate_or_rule_family_mapping": "The extractor likely assigned the wrong rule family, such as treating a definition as a numeric zoning rule.",
+    "defer_low_priority": "This item is probably outside the verifier's numeric GIS contract or has weak support.",
+    "fail-closed": "The verifier avoided unsafe approvals, but too many true rules may still be stuck in review.",
+    "scope mismatch": "The extractor produced many candidates outside the verifier's current numeric zoning contract.",
+    "unsafe / needs fix": "At least one false verified rule or false approval was found. Do not use this output for GIS.",
+    "pass": "The benchmark gates passed for the current contract.",
+}
+
+
+RAW_VALUE_COLUMNS = {
+    "rule_id",
+    "source_rule_id",
+    "matched_verified",
+    "semantic_match",
+    "evidence_id",
+    "current_evidence",
+    "best_evidence",
+    "original_evidence",
+    "retry_evidence",
+    "bundle_ids",
+    "file",
+    "path",
+    "url",
+    "quote",
+    "evidence",
+    "source_window",
+    "value",
+    "unit",
+    "score",
+    "confidence",
+    "count",
+    "rows",
+}
+
+
 def discover_city_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
     """Return city output dirs that contain verified_rules.json, sorted by name.
 
@@ -175,18 +270,18 @@ def filter_triage_items(
 def compact_rule_row(rule: dict[str, Any]) -> dict[str, Any]:
     """Return one table row with the fields reviewers need first."""
     return {
-        "rule_id": rule.get("rule_id"),
-        "rule_object": rule.get("rule_object"),
-        "scope": rule.get("constraint_scope"),
-        "applies_to": rule.get("applies_to"),
-        "operator": rule.get("operator"),
-        "value": rule.get("value"),
-        "unit": rule.get("unit"),
-        "category": rule.get("review_category"),
-        "priority": rule.get("triage_priority") or rule.get("review_priority"),
-        "likely": rule.get("likely_status"),
-        "score": rule.get("likely_correct_score"),
-        "gaps": ", ".join(str(gap) for gap in rule.get("support_gaps", [])[:4]),
+        "Rule ID": rule.get("rule_id"),
+        "Rule family": _plain_label(rule.get("rule_object")),
+        "Scope": _plain_label(rule.get("constraint_scope")),
+        "Applies to": _plain_label(rule.get("applies_to")),
+        "Direction": _operator_short(rule.get("operator"), rule.get("constraint_type")),
+        "Value": rule.get("value"),
+        "Unit": rule.get("unit"),
+        "Why review": _plain_label(rule.get("review_category")),
+        "Urgency": _plain_label(rule.get("triage_priority") or rule.get("review_priority")),
+        "Likely outcome": _plain_label(rule.get("likely_status")),
+        "Score": rule.get("likely_correct_score"),
+        "Missing proof": _plain_join(rule.get("support_gaps", [])[:4]),
     }
 
 
@@ -221,12 +316,13 @@ def main() -> None:
         (index for index, path in enumerate(city_dirs) if path == cli_output_dir),
         next((index for index, path in enumerate(city_dirs) if path.name.startswith("burnaby_r1")), 0),
     )
-    st.sidebar.header("City")
+    st.sidebar.header("Dataset")
     output_dir = st.sidebar.selectbox(
-        "Verifier output",
+        "City and extractor",
         city_dirs,
         index=default_index,
         format_func=city_label_from_dir,
+        help="Pick a city output. Pipeline 5 and Pipeline 9 are shown separately because they are different upstream extractors.",
     )
     city_key = city_key_from_dir(output_dir)
     city_label = city_label_from_dir(output_dir)
@@ -236,15 +332,35 @@ def main() -> None:
     _ACTIVE_SOURCE["url"] = source_url or SOURCE_DOCUMENT_URL
     _ACTIVE_SOURCE["label"] = f"{city_label} bylaw PDF"
 
-    st.sidebar.header("Filters")
-    st.sidebar.caption(str(output_dir))
+    st.sidebar.header("Review filters")
+    st.sidebar.caption(f"Loaded: {output_dir.name}")
     # Review annotations now live on review_needed.json; the old standalone
     # triage view duplicated the same queue.
     triage_items = data["review"]
-    categories = st.sidebar.multiselect("Review category", _unique(triage_items, "review_category"))
-    priorities = st.sidebar.multiselect("Priority", _unique(triage_items, "triage_priority"))
-    likelihoods = st.sidebar.multiselect("Likely status", _unique(triage_items, "likely_status"))
-    rule_objects = st.sidebar.multiselect("Rule object", _unique(triage_items, "rule_object"))
+    categories = st.sidebar.multiselect(
+        "Why it needs review",
+        _unique(triage_items, "review_category"),
+        format_func=_plain_label,
+        help="The main reason the verifier would not prove the rule.",
+    )
+    priorities = st.sidebar.multiselect(
+        "Urgency",
+        _unique(triage_items, "triage_priority"),
+        format_func=_plain_label,
+        help="A reviewer triage hint. It does not change verification.",
+    )
+    likelihoods = st.sidebar.multiselect(
+        "Likely outcome",
+        _unique(triage_items, "likely_status"),
+        format_func=_plain_label,
+        help="Advisory estimate only; it never promotes a rule.",
+    )
+    rule_objects = st.sidebar.multiselect(
+        "Rule family",
+        _unique(triage_items, "rule_object"),
+        format_func=_plain_label,
+        help="Setback, height, lot coverage, permitted use, and similar rule families.",
+    )
     _sidebar_guidance(st)
     filtered_items = filter_triage_items(
         triage_items,
@@ -258,17 +374,25 @@ def main() -> None:
     _render_kpis(st, data, filtered_items)
     _render_guidance(st)
 
-    # v2 layout: the previous flat 14-tab strip is grouped into six top-level
-    # sections. Every original tab is preserved inside its section.
-    sections = st.tabs(["Overview", "Rules", "Review", "Evidence & Proof", "GIS & Map", "System"])
+    # Reviewer-first layout: keep the first screen small, and move engineering
+    # diagnostics behind one advanced selector.
+    sections = st.tabs(["Status", "Review Workbench", "Source Evidence", "GIS Handoff", "Advanced"])
 
     with sections[0]:
         _overview_tab(st, data)
         _pipeline_comparison_tab(st, output_dir)
 
     with sections[1]:
-        rule_tabs = st.tabs(["Candidate vs Verified", "Rule Graph"])
-        with rule_tabs[0]:
+        review_tabs = st.tabs(["Review One Rule", "Compare With Verified", "Queue Summary"])
+        with review_tabs[0]:
+            _review_assistant_tab(
+                st,
+                data["review_assistant_packets"],
+                data["review"],
+                output_dir,
+                {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]},
+            )
+        with review_tabs[1]:
             _candidate_compare_tab(
                 st,
                 filtered_items,
@@ -277,43 +401,20 @@ def main() -> None:
                 output_dir,
                 {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]},
             )
-        with rule_tabs[1]:
-            _rule_graph_tab(st, data["rule_graph"])
+        with review_tabs[2]:
+            _review_router_tab(st, data["router"])
 
     with sections[2]:
-        review_tabs = st.tabs(["Review", "Review Assistant", "Review Resolution", "Semantic Review"])
-        with review_tabs[0]:
-            _review_router_tab(st, data["router"])
-        with review_tabs[1]:
-            _review_assistant_tab(
-                st,
-                data["review_assistant_packets"],
-                data["review"],
-                output_dir,
-                {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]},
-            )
-        with review_tabs[2]:
-            _review_resolution_tab(st, data["resolution"])
-        with review_tabs[3]:
-            _semantic_review_tab(st, data["semantic"])
-
-    with sections[3]:
-        evidence_tabs = st.tabs(
-            ["Evidence Intelligence", "Evidence Repair", "Evidence Rerun", "Bundle Rerun", "Bylaw"]
-        )
+        evidence_tabs = st.tabs(["Ask The Bylaw", "Evidence Repair", "Shadow Reruns"])
         with evidence_tabs[0]:
-            _evidence_intelligence_tab(st, data["intelligence"])
+            _bylaw_tab(st, data)
         with evidence_tabs[1]:
             _repair_tab(st, data["repair"])
         with evidence_tabs[2]:
             _rerun_tab(st, data["rerun"], data["evidence_units"])
-        with evidence_tabs[3]:
-            _bundle_rerun_tab(st, data["bundle_rerun"])
-        with evidence_tabs[4]:
-            _bylaw_tab(st, data)
 
-    with sections[4]:
-        gis_tabs = st.tabs(["Map", "3D Envelope", "Felt Export"])
+    with sections[3]:
+        gis_tabs = st.tabs(["Demo Map", "3D Envelope", "Felt Export"])
         with gis_tabs[0]:
             _map_tab(st, data, city_key)
         with gis_tabs[1]:
@@ -321,44 +422,88 @@ def main() -> None:
         with gis_tabs[2]:
             _felt_export_tab(st, data["felt_export"], output_dir)
 
-    with sections[5]:
-        system_tabs = st.tabs(["Safe Tuning", "Verification Structure", "Extraction Preflight"])
-        with system_tabs[0]:
-            _safe_tuning_tab(st, data["safe_tuning"], data["evidence_units"])
-        with system_tabs[1]:
-            _structure_tab(st)
-        with system_tabs[2]:
-            _preflight_tab(st, data["preflight"])
+    with sections[4]:
+        _advanced_tab(st, data, output_dir)
 
 
 def _overview_tab(st: Any, data: dict[str, Any]) -> None:
     validation = data["validation"]
     benchmark = data["benchmark"]
     counts = validation.get("bucket_counts", {})
+    metrics = benchmark.get("rule_metrics", {})
+    proposal = benchmark.get("proposal_metrics", {})
+    gates = benchmark.get("quality_gates", {}).get("gates", {})
+
+    st.subheader("Current Status")
     _action_summary(st, data)
-    left, right = st.columns([1, 1])
+    left, right = st.columns([1.2, 1])
     with left:
-        st.subheader("Bucket Mix")
+        st.markdown("#### Decision mix")
         _bar_table(st, counts)
     with right:
-        st.subheader("Quality Gates")
-        gates = benchmark.get("quality_gates", {}).get("gates", {})
-        rows = [{"gate": key, "passed": value} for key, value in gates.items()]
-        st.table(rows)
+        st.markdown("#### Benchmark gates")
+        gate_rows = [{"gate": _plain_label(key), "status": "pass" if value else "needs attention"} for key, value in gates.items()]
+        if gate_rows:
+            st.dataframe(_display_rows(gate_rows), width="stretch", hide_index=True)
+        else:
+            st.info("No benchmark gates found for this output.")
+        st.caption(
+            f"Verified precision: {_display_value(metrics.get('verified_precision', 0))}. "
+            f"False verified: {metrics.get('false_verified_count', 0)}. "
+            f"False approvals: {proposal.get('false_approval_count', 0)}."
+        )
 
-    st.subheader("Review Categories")
-    _bar_rows(st, data["router"].get("summary", {}).get("category_counts", []), "name", "count")
+    with st.expander("Extra review breakdown"):
+        review_left, review_right = st.columns(2)
+        with review_left:
+            st.markdown("#### Why items need review")
+            _bar_rows(st, data["router"].get("summary", {}).get("category_counts", []), "name", "count")
+        with review_right:
+            st.markdown("#### Suggested next work")
+            _bar_rows(st, data["router"].get("summary", {}).get("action_counts", []), "name", "count")
+        flags = Counter(
+            flag
+            for rule in data["review"]
+            for flag in rule.get("potential_mistake_flags", [])
+        )
+        if flags:
+            st.markdown("#### Potential extraction mistakes")
+            _bar_table(st, dict(flags.most_common(12)))
 
-    st.subheader("Review Action Buckets")
-    _bar_rows(st, data["router"].get("summary", {}).get("action_counts", []), "name", "count")
 
-    st.subheader("Potential Mistakes")
-    flags = Counter(
-        flag
-        for rule in data["review"]
-        for flag in rule.get("potential_mistake_flags", [])
+def _advanced_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
+    st.subheader("Advanced Diagnostics")
+    st.caption("Engineering and audit views. These explain why the system behaved a certain way; they do not approve rules.")
+    diagnostic = st.selectbox(
+        "Diagnostic view",
+        [
+            "Rule Graph",
+            "Review Resolution",
+            "Semantic Review",
+            "Evidence Intelligence",
+            "Evidence Bundle Rerun",
+            "Safe Verifier Tuning",
+            "Verification Structure",
+            "Extraction Preflight",
+        ],
+        help="Keep this section for debugging, tuning, and audit. The main review workflow is in Review Workbench.",
     )
-    _bar_table(st, dict(flags.most_common(12)))
+    if diagnostic == "Rule Graph":
+        _rule_graph_tab(st, data["rule_graph"])
+    elif diagnostic == "Review Resolution":
+        _review_resolution_tab(st, data["resolution"])
+    elif diagnostic == "Semantic Review":
+        _semantic_review_tab(st, data["semantic"])
+    elif diagnostic == "Evidence Intelligence":
+        _evidence_intelligence_tab(st, data["intelligence"])
+    elif diagnostic == "Evidence Bundle Rerun":
+        _bundle_rerun_tab(st, data["bundle_rerun"])
+    elif diagnostic == "Safe Verifier Tuning":
+        _safe_tuning_tab(st, data["safe_tuning"], data["evidence_units"])
+    elif diagnostic == "Verification Structure":
+        _structure_tab(st)
+    elif diagnostic == "Extraction Preflight":
+        _preflight_tab(st, data["preflight"])
 
 
 def pipeline_comparison_rows(output_dir: Path) -> list[dict[str, Any]]:
@@ -374,12 +519,13 @@ def pipeline_comparison_rows(output_dir: Path) -> list[dict[str, Any]]:
         benchmark = _read_json(path / "benchmark_report.json", {})
         metrics = benchmark.get("rule_metrics", {})
         gates = benchmark.get("quality_gates", {})
+        status = pipeline_gate_status(summary, benchmark)
         rows.append(
             {
                 "pipeline": label,
                 "path": path.name,
                 "candidates": summary.get("candidate_rule_count"),
-                "evidence": summary.get("evidence_unit_count"),
+                "evidence_blocks": summary.get("evidence_unit_count"),
                 "verified": summary.get("verified_rule_count"),
                 "review": summary.get("review_rule_count"),
                 "rejected": summary.get("rejected_rule_count"),
@@ -387,7 +533,8 @@ def pipeline_comparison_rows(output_dir: Path) -> list[dict[str, Any]]:
                 "precision": metrics.get("verified_precision"),
                 "false_verified": metrics.get("false_verified_count"),
                 "verified_or_review_recall": metrics.get("verified_or_review_recall"),
-                "gate_status": pipeline_gate_status(summary, benchmark),
+                "gate_status": status,
+                "status_meaning": HELP_TEXT.get(status, ""),
             }
         )
     return rows
@@ -419,7 +566,7 @@ def pipeline_gate_status(summary: dict[str, Any], benchmark: dict[str, Any]) -> 
 
 def _pipeline_comparison_tab(st: Any, output_dir: Path) -> None:
     st.subheader("Pipeline Comparison")
-    st.caption("Same verifier, different upstream extractors. Failed gates are shown honestly; review/rejected rules are not GIS-safe.")
+    st.caption("Same verifier, different upstream extractors. Failed gates are shown honestly; only verified rules are GIS-safe.")
     rows = pipeline_comparison_rows(output_dir)
     st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
 
@@ -435,17 +582,23 @@ def _review_assistant_tab(
     output_dir: Path,
     evidence_by_id: dict[str, dict[str, Any]],
 ) -> None:
-    st.subheader("Interactive Review Assistant")
+    st.subheader("Review One Rule")
     st.caption(
-        "Advisory only. This panel explains review items and prepares bounded context for an optional LLM; "
-        "it cannot approve rules or write GIS outputs."
+        "Pick a held rule, inspect the source evidence, and ask an optional LLM for an explanation. The LLM cannot approve anything."
     )
     packet_by_rule = _packet_by_rule_id(packet_report)
     if not review_rules:
         st.info("No review-needed rules in this output.")
         return
     options = [str(rule.get("rule_id")) for rule in review_rules if rule.get("rule_id")]
-    selected_id = st.selectbox("Review item", options, key=f"assistant_rule_{output_dir.name}")
+    rule_lookup = {str(rule.get("rule_id")): rule for rule in review_rules if rule.get("rule_id")}
+    selected_id = st.selectbox(
+        "Rule to inspect",
+        options,
+        key=f"assistant_rule_{output_dir.name}",
+        format_func=lambda rule_id: _rule_option_label(rule_lookup.get(str(rule_id), {})),
+        help="These are candidates the verifier refused to prove. Pick one to inspect its evidence and missing support.",
+    )
     rule = _by_rule_id(review_rules, selected_id)
     packet = packet_by_rule.get(selected_id, {})
     if not packet:
@@ -456,16 +609,19 @@ def _review_assistant_tab(
     with left:
         st.markdown("#### Candidate")
         st.table([compact_rule_row(rule)])
-        st.markdown("#### Why It Is Held")
+        st.markdown("#### Why this needs review")
         st.write(_list_text(rule.get("support_gaps", [])))
         st.info(packet.get("suggested_next_action") or "Inspect the source evidence before any verifier rerun.")
     with right:
         source = packet.get("source", {})
-        st.markdown("#### Evidence Packet")
-        st.caption(f"Page {source.get('page') or 'unknown'} · evidence `{source.get('evidence_id') or ''}` · repair `{source.get('repair_status') or 'unknown'}`")
-        st.markdown("*Original extractor evidence*")
+        st.markdown("#### Source evidence")
+        st.caption(
+            f"Page {source.get('page') or 'unknown'} · evidence `{source.get('evidence_id') or ''}` · "
+            f"context status: {_plain_label(source.get('repair_status') or 'unknown')}"
+        )
+        st.markdown("*Extractor evidence*")
         st.code(source.get("original_evidence") or _source_text(rule), language="text")
-        st.markdown("*Repaired source context*")
+        st.markdown("*Source context added before verification*")
         repaired = source.get("repaired_context")
         if repaired:
             st.code(repaired, language="text")
@@ -474,14 +630,14 @@ def _review_assistant_tab(
 
     _legal_context_expander(st, output_dir, rule, evidence_by_id)
 
-    st.markdown("#### Ask The Review Assistant")
+    st.markdown("#### Ask for an explanation")
     question = st.text_input(
-        "Question for this item",
+        "Reviewer question",
         key=f"assistant_q_{output_dir.name}_{selected_id}",
         placeholder="e.g. why is the operator missing, or what evidence would repair this?",
     )
     prompt = _assistant_prompt(packet, question)
-    with st.expander("Bounded LLM context"):
+    with st.expander("Prompt sent to optional LLM"):
         st.code(prompt, language="text")
     if question:
         answer = _optional_llm_review_answer(prompt)
@@ -607,26 +763,26 @@ def _evidence_intelligence_tab(st: Any, report: dict[str, Any]) -> None:
 
 def _review_router_tab(st: Any, report: dict[str, Any]) -> None:
     items = report.get("items", [])
-    st.subheader("Review Decision Tree")
-    st.caption("One explicit route per review item. It tells the human what to check next; it does not change verifier decisions.")
+    st.subheader("Queue Summary")
+    st.caption("A plain-language worklist for the rules still in review. These labels guide reviewers; they do not approve rules.")
     summary = report.get("summary", {})
     left, middle, right = st.columns(3)
     with left:
-        st.markdown("### Action Buckets")
+        st.markdown("#### Suggested work")
         _bar_rows(st, summary.get("action_counts", []), "name", "count")
     with middle:
-        st.markdown("### Review Categories")
+        st.markdown("#### Why held")
         _bar_rows(st, summary.get("category_counts", []), "name", "count")
     with right:
-        st.markdown("### Semantic Classes")
+        st.markdown("#### Meaning check")
         _bar_rows(st, summary.get("semantic_review_counts", []), "name", "count")
 
     if not items:
         st.info("No review router output found. Rerun the slim verifier.")
         return
-    actions = st.multiselect("Action bucket", _unique(items, "action_bucket"))
-    categories = st.multiselect("Decision category", _unique(items, "review_category"))
-    semantic_classes = st.multiselect("Semantic class", _unique(items, "semantic_review_class"))
+    actions = st.multiselect("Suggested work", _unique(items, "action_bucket"), format_func=_plain_label)
+    categories = st.multiselect("Why held", _unique(items, "review_category"), format_func=_plain_label)
+    semantic_classes = st.multiselect("Meaning check", _unique(items, "semantic_review_class"), format_func=_plain_label)
     visible = items
     if actions:
         visible = [item for item in visible if item.get("action_bucket") in actions]
@@ -636,25 +792,29 @@ def _review_router_tab(st: Any, report: dict[str, Any]) -> None:
         visible = [item for item in visible if item.get("semantic_review_class") in semantic_classes]
     rows = [
         {
-            "rule_id": item.get("rule_id"),
-            "category": item.get("review_category"),
-            "action": item.get("action_bucket"),
-            "priority": item.get("priority"),
-            "rule_object": item.get("rule_object"),
-            "semantic_class": item.get("semantic_review_class"),
-            "semantic_score": item.get("semantic_score"),
-            "semantic_match": item.get("semantic_verified_rule_id"),
-            "semantic_blockers": ", ".join(item.get("semantic_guardrail_blockers", [])),
-            "bundle_safe": item.get("bundle_safe_retry"),
-            "bundle_ready": item.get("bundle_rerun_promotion_ready"),
-            "decision_path": " > ".join(item.get("decision_path", [])),
-            "next_step": item.get("next_step"),
+            "Rule ID": item.get("rule_id"),
+            "Why held": item.get("review_category"),
+            "Suggested work": item.get("action_bucket"),
+            "Explanation": HELP_TEXT.get(str(item.get("action_bucket") or ""), ""),
+            "Urgency": item.get("priority"),
+            "Rule family": item.get("rule_object"),
+            "Meaning check": item.get("semantic_review_class"),
+            "Meaning score": item.get("semantic_score"),
+            "Closest verified rule": item.get("semantic_verified_rule_id"),
+            "Still missing": ", ".join(item.get("semantic_guardrail_blockers", [])),
+            "Evidence bundle safe": item.get("bundle_safe_retry"),
+            "Bundle ready": item.get("bundle_rerun_promotion_ready"),
+            "Next step": item.get("next_step"),
         }
         for item in visible[:250]
     ]
     st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
     if visible:
-        selected = st.selectbox("Decision tree detail", [item["rule_id"] for item in visible])
+        selected = st.selectbox(
+            "Queue item detail",
+            [item["rule_id"] for item in visible],
+            format_func=lambda rule_id: _rule_option_label(next((item for item in visible if item.get("rule_id") == rule_id), {})),
+        )
         item = next(candidate for candidate in visible if candidate["rule_id"] == selected)
         _detail_sentence_panel(
             st,
@@ -698,8 +858,8 @@ def _review_resolution_tab(st: Any, report: dict[str, Any]) -> None:
     if not items:
         st.info("No review resolution output found. Rerun the slim verifier.")
         return
-    buckets = st.multiselect("Resolution", _unique(items, "resolution"))
-    next_steps = st.multiselect("Next step type", _unique(items, "next_step_type"))
+    buckets = st.multiselect("Resolution", _unique(items, "resolution"), format_func=_plain_label)
+    next_steps = st.multiselect("Next step type", _unique(items, "next_step_type"), format_func=_plain_label)
     visible = items
     if buckets:
         visible = [item for item in visible if item.get("resolution") in buckets]
@@ -808,7 +968,7 @@ def _semantic_review_tab(st: Any, report: dict[str, Any]) -> None:
     if not items:
         st.info("No semantic review report found. Rerun the slim verifier.")
         return
-    threshold = st.slider("Minimum semantic score", 0.0, 1.0, 0.70, 0.05)
+    threshold = st.slider("Minimum meaning score", 0.0, 1.0, 0.70, 0.05)
     visible = [item for item in items if float(item.get("best_semantic_score") or 0.0) >= threshold]
     rows = []
     for item in visible[:250]:
@@ -841,7 +1001,7 @@ def _semantic_review_tab(st: Any, report: dict[str, Any]) -> None:
                 f"The match reasons are: {_list_text(top.get('match_reasons', []))}.",
                 f"Guardrails passed: {_list_text(top.get('semantic_guardrails', []))}. Blockers: {_list_text(top.get('semantic_guardrail_blockers', []))}.",
                 f"The verifier still blocks this candidate because of: {_list_text(item.get('support_gaps', []))}.",
-                f"Suggested semantic action: `{item.get('semantic_next_action')}`.",
+                f"Suggested meaning-review action: {_plain_label(item.get('semantic_next_action'))}.",
                 "This comparison prioritizes review only. It cannot verify a rule.",
             ],
             {"evidence_quote": json.dumps(item.get("signature", {}), indent=2)},
@@ -867,7 +1027,7 @@ def _rule_graph_tab(st: Any, graph: dict[str, Any]) -> None:
         _bar_rows(st, summary.get("edge_type_counts", []), "name", "count")
     edges = graph.get("edges", [])
     if edges:
-        edge_types = st.multiselect("Edge type", _unique(edges, "type"))
+        edge_types = st.multiselect("Edge type", _unique(edges, "type"), format_func=_plain_label)
         visible = [edge for edge in edges if not edge_types or edge.get("type") in edge_types]
         st.dataframe(_display_rows(visible[:500]), width="stretch", hide_index=True)
     else:
@@ -920,9 +1080,9 @@ def _legal_context_expander(
     index_path = bylaw_index_path(output_dir)
     if index_path is None and lane is None:
         return
-    with st.expander("Legal context (retrieved bylaw sections — advisory)"):
+    with st.expander("Nearby bylaw text"):
         if lane:
-            st.markdown("**Pipeline 9 provenance**")
+            st.markdown("**Pipeline 9 source trace**")
             st.caption(
                 f"pack `{lane['pack']}` | lane {lane['lane']} ({lane['applicability']}) | "
                 f"pseudo page {lane['pseudo_page']} → bylaw page {lane['original_page']} | "
@@ -930,24 +1090,23 @@ def _legal_context_expander(
             )
             if lane["mismatched"]:
                 st.warning(
-                    "RAG context mismatch: this block's text was NOT found on its claimed "
-                    "source page — the candidate is forced to review."
+                    "Source mismatch: this extractor block was not found on its claimed source page, so the candidate stays in review."
                 )
             if lane["reanchored"] and lane["source_window"]:
                 rag_col, source_col = st.columns(2)
                 with rag_col:
-                    st.markdown("*RAG block text (Pipeline 9)*")
+                    st.markdown("*Extractor text*")
                     st.markdown(
                         f"<div class='bylaw-section'>{html.escape(_short_display_quote(lane['rag_text']))}</div>",
                         unsafe_allow_html=True,
                     )
                 with source_col:
-                    st.markdown("*Re-anchored source window (authentic page)*")
+                    st.markdown("*Matched source page text*")
                     st.markdown(
                         f"<div class='bylaw-section'>{html.escape(_short_display_quote(lane['source_window']))}</div>",
                         unsafe_allow_html=True,
                     )
-            st.caption("Provenance is display-only — upstream labels never promote a candidate.")
+            st.caption("Source trace is display-only. Upstream labels never approve a rule.")
         if index_path is None:
             return
         try:
@@ -971,7 +1130,7 @@ def _legal_context_expander(
                 f"{html.escape(_short_display_quote(hit.get('section_text') or hit.get('text') or ''))}</div>",
                 unsafe_allow_html=True,
             )
-        st.caption("Retrieved context only — it cannot change the rule's decision.")
+        st.caption("Retrieved context only. It cannot change the rule's decision.")
 
 
 def _candidate_compare_tab(
@@ -982,13 +1141,18 @@ def _candidate_compare_tab(
     output_dir: Path = DEFAULT_OUTPUT_DIR,
     evidence_by_id: dict[str, dict[str, Any]] | None = None,
 ) -> None:
-    st.subheader("Candidate vs Verified")
-    st.caption("Use this view to compare the candidate claim against the closest already-verified rule before deciding whether to tune the verifier or repair evidence.")
+    st.subheader("Compare With Verified Rules")
+    st.caption("Use this when a review item looks like a rule that was already proven. Similarity is only a review aid.")
     if not triage_items:
         st.info("No review items match the current filters.")
         return
     options = [item["rule_id"] for item in triage_items]
-    selected_id = st.selectbox("Review rule", options)
+    triage_lookup = {str(item.get("rule_id")): item for item in triage_items}
+    selected_id = st.selectbox(
+        "Rule to compare",
+        options,
+        format_func=lambda rule_id: _rule_option_label(triage_lookup.get(str(rule_id), {})),
+    )
     review_rule = _by_rule_id(review_rules, selected_id)
     _legal_context_expander(st, output_dir, review_rule, evidence_by_id)
     triage_item = next((item for item in triage_items if item["rule_id"] == selected_id), {})
@@ -996,12 +1160,12 @@ def _candidate_compare_tab(
     lexical_match_id = triage_item.get("similar_verified_rule_id") or review_rule.get("similar_verified_rule_id")
     verified_rule = _by_rule_id(verified_rules, semantic_match_id or lexical_match_id)
 
-    st.markdown("### Sentence-Level Claim Comparison")
+    st.markdown("### Claim comparison")
     sentence_left, sentence_right = st.columns(2)
     with sentence_left:
         _sentence_card(
             st,
-            "Review candidate claim",
+            "Candidate in review",
             _rule_sentence(review_rule),
             "review",
             "Generated from the candidate's normalized fields.",
@@ -1010,7 +1174,7 @@ def _candidate_compare_tab(
         if verified_rule:
             _sentence_card(
                 st,
-                "Closest verified claim",
+                "Closest verified rule",
                 _rule_sentence(verified_rule),
                 "verified",
                 f"Semantic score: {triage_item.get('semantic_score') or review_rule.get('semantic_score') or 'n/a'}; lexical score: {triage_item.get('similar_verified_score')}",
@@ -1018,26 +1182,26 @@ def _candidate_compare_tab(
         else:
             _sentence_card(
                 st,
-                "Closest verified claim",
+                "Closest verified rule",
                 "No verified comparison rule was found for this review item.",
                 "neutral",
                 "Use evidence repair or manual review instead.",
             )
 
     if verified_rule:
-        st.markdown("#### Field Differences")
+        st.markdown("#### Field differences")
         st.dataframe(_display_rows(_field_comparison_rows(review_rule, verified_rule)), width="stretch", hide_index=True)
 
     left, right = st.columns(2)
     with left:
-        st.markdown("### Review Candidate")
+        st.markdown("### Candidate in review")
         st.table([compact_rule_row(review_rule)])
         st.markdown("#### Evidence")
         st.code(_source_text(review_rule), language="text")
-        st.markdown("#### Suggested Fix")
+        st.markdown("#### Suggested next step")
         st.write(triage_item.get("suggested_fix"))
     with right:
-        st.markdown("### Closest Verified Rule")
+        st.markdown("### Closest verified rule")
         if verified_rule:
             st.table([compact_rule_row(verified_rule)])
             st.markdown(f"Semantic score: `{triage_item.get('semantic_score') or review_rule.get('semantic_score') or 'n/a'}`")
@@ -1049,27 +1213,32 @@ def _candidate_compare_tab(
 
 def _repair_tab(st: Any, repair: dict[str, Any]) -> None:
     suggestions = repair.get("suggestions", [])
-    st.subheader(f"Evidence Repair Suggestions ({len(suggestions)})")
+    st.subheader(f"Evidence Repair ({len(suggestions)})")
+    st.caption("Find stronger source passages for candidates held in review. A repair suggestion still has to pass the verifier.")
     rows = []
     for item in suggestions[:200]:
         top = item.get("top_evidence", [{}])[0] if item.get("top_evidence") else {}
         rows.append(
             {
-                "rule_id": item.get("rule_id"),
-                "can_retry": item.get("can_retry_verification"),
-                "confidence": item.get("best_repair_confidence"),
-                "rule_object": item.get("rule_object"),
-                "value": item.get("value"),
-                "unit": item.get("unit"),
-                "current_evidence": item.get("current_evidence_id"),
-                "best_evidence": top.get("evidence_id"),
-                "repairable_fields": ", ".join(item.get("repairable_fields", [])),
-                "match_reasons": ", ".join(top.get("match_reasons", [])),
+                "Rule ID": item.get("rule_id"),
+                "Can retry verifier": item.get("can_retry_verification"),
+                "Confidence": item.get("best_repair_confidence"),
+                "Rule family": item.get("rule_object"),
+                "Value": item.get("value"),
+                "Unit": item.get("unit"),
+                "Current evidence": item.get("current_evidence_id"),
+                "Best evidence": top.get("evidence_id"),
+                "Fields repair may help": ", ".join(item.get("repairable_fields", [])),
+                "Why this evidence matched": ", ".join(top.get("match_reasons", [])),
             }
         )
     st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
     if suggestions:
-        selected = st.selectbox("Suggestion detail", [item["rule_id"] for item in suggestions])
+        selected = st.selectbox(
+            "Repair detail",
+            [item["rule_id"] for item in suggestions],
+            format_func=lambda rule_id: _rule_option_label(next((item for item in suggestions if item.get("rule_id") == rule_id), {})),
+        )
         item = next(item for item in suggestions if item["rule_id"] == selected)
         top_evidence = item.get("top_evidence", [{}])[0] if item.get("top_evidence") else {}
         _detail_sentence_panel(
@@ -1086,8 +1255,8 @@ def _repair_tab(st: Any, repair: dict[str, Any]) -> None:
 def _rerun_tab(st: Any, rerun: dict[str, Any], evidence_units: list[dict[str, Any]]) -> None:
     attempts = rerun.get("attempts", [])
     verified = rerun.get("verified_after_rerun", [])
-    st.subheader("Evidence Rerun")
-    st.caption("Shadow-mode verifier reruns. These do not automatically promote rules into verified_rules.json.")
+    st.subheader("Shadow Reruns")
+    st.caption("Test stronger evidence without changing verified_rules.json. Promotion still requires deterministic proof and benchmark safety.")
     metric_cols = st.columns(6)
     metric_cols[0].metric("Attempts", rerun.get("attempt_count", len(attempts)))
     metric_cols[1].metric("Verified After Rerun", rerun.get("verified_after_rerun_count", len(verified)))
@@ -1101,9 +1270,9 @@ def _rerun_tab(st: Any, rerun: dict[str, Any], evidence_units: list[dict[str, An
         return
 
     left, middle, right = st.columns([1, 1, 1])
-    decisions = left.multiselect("Decision", _unique(attempts, "retry_decision"))
-    rule_objects = middle.multiselect("Rule object", _unique(attempts, "rule_object"))
-    only_ready = right.checkbox("Promotion-ready only")
+    decisions = left.multiselect("Rerun result", _unique(attempts, "retry_decision"), format_func=_plain_label)
+    rule_objects = middle.multiselect("Rule family", _unique(attempts, "rule_object"), format_func=_plain_label)
+    only_ready = right.checkbox("Passed shadow checks only")
     visible = attempts
     if decisions:
         visible = [item for item in visible if item.get("retry_decision") in decisions]
@@ -1114,42 +1283,46 @@ def _rerun_tab(st: Any, rerun: dict[str, Any], evidence_units: list[dict[str, An
 
     ready_rows = [
         {
-            "rule_id": item.get("original_rule_id"),
-            "rule_object": item.get("rule_object"),
-            "scope": item.get("constraint_scope"),
-            "operator": item.get("operator"),
-            "value": item.get("value"),
-            "unit": item.get("unit"),
-            "retry_evidence": item.get("retry_evidence_id"),
-            "confidence": item.get("repair_confidence"),
+            "Rule ID": item.get("original_rule_id"),
+            "Rule family": item.get("rule_object"),
+            "Scope": item.get("constraint_scope"),
+            "Direction": _operator_short(item.get("operator"), item.get("constraint_type")),
+            "Value": item.get("value"),
+            "Unit": item.get("unit"),
+            "Retry evidence": item.get("retry_evidence_id"),
+            "Confidence": item.get("repair_confidence"),
         }
         for item in attempts
         if item.get("promotion_ready")
     ]
     if ready_rows:
-        st.markdown("### Promotion-Ready Shadow Verifications")
+        st.markdown("### Passed shadow checks")
         st.dataframe(_display_rows(ready_rows), width="stretch", hide_index=True)
 
     rows = [
         {
-            "rule_id": item.get("original_rule_id"),
-            "decision": item.get("retry_decision"),
-            "rule_object": item.get("rule_object"),
-            "value": item.get("value"),
-            "unit": item.get("unit"),
-            "original_evidence": item.get("original_evidence_id"),
-            "retry_evidence": item.get("retry_evidence_id"),
-            "confidence": item.get("repair_confidence"),
-            "promotion_ready": item.get("promotion_ready"),
-            "risk_flags": ", ".join(item.get("promotion_risk_flags", [])),
-            "gaps": ", ".join(item.get("retry_support_gaps", [])[:4]),
+            "Rule ID": item.get("original_rule_id"),
+            "Rerun result": item.get("retry_decision"),
+            "Rule family": item.get("rule_object"),
+            "Value": item.get("value"),
+            "Unit": item.get("unit"),
+            "Original evidence": item.get("original_evidence_id"),
+            "Retry evidence": item.get("retry_evidence_id"),
+            "Confidence": item.get("repair_confidence"),
+            "Ready for promotion": item.get("promotion_ready"),
+            "Risk flags": ", ".join(item.get("promotion_risk_flags", [])),
+            "Still missing": ", ".join(item.get("retry_support_gaps", [])[:4]),
         }
         for item in visible[:250]
     ]
-    st.markdown(f"### Rerun Attempts ({len(visible)})")
+    st.markdown(f"### Shadow rerun attempts ({len(visible)})")
     st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
     if visible:
-        selected = st.selectbox("Rerun detail", [item["original_rule_id"] for item in visible])
+        selected = st.selectbox(
+            "Shadow rerun detail",
+            [item["original_rule_id"] for item in visible],
+            format_func=lambda rule_id: _rule_option_label(next((item for item in visible if item.get("original_rule_id") == rule_id), {})),
+        )
         item = next(item for item in visible if item["original_rule_id"] == selected)
         evidence = _evidence_by_id(evidence_units, item.get("retry_evidence_id"))
         _detail_sentence_panel(
@@ -1180,7 +1353,7 @@ def _safe_tuning_tab(st: Any, report: dict[str, Any], evidence_units: list[dict[
         st.info("No safe verifier tuning candidates found.")
         return
 
-    tuning_types = st.multiselect("Tuning type", _unique(items, "tuning_type"))
+    tuning_types = st.multiselect("Tuning type", _unique(items, "tuning_type"), format_func=_plain_label)
     visible = [item for item in items if not tuning_types or item.get("tuning_type") in tuning_types]
     rows = [
         {
@@ -1792,7 +1965,7 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
     answers are retrieved clauses with section ids — never a verification."""
     index_path = bylaw_index_path(output_dir)
     city_stem = city_stem_from_dir(output_dir)
-    st.markdown("#### Ask the bylaw")
+    st.markdown("#### Search nearby bylaw text")
     if index_path is None:
         st.info(
             "No retrieval index yet — build it with "
@@ -1800,9 +1973,10 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
         )
         return
     question = st.text_input(
-        "Question (retrieval is local BM25+dense with section expansion; results are clauses, not advice)",
+        "Search question",
         key=f"rag_q_{city_stem}",
         placeholder="e.g. what is the maximum height for a backyard suite",
+        help="This searches retrieved bylaw sections. It does not verify or approve rules.",
     )
     if not question:
         return
@@ -1814,7 +1988,7 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
         st.warning(f"Retrieval unavailable: {error}")
         return
     if not hits:
-        st.info("No clause shares any term with that question — try the bylaw's own vocabulary.")
+        st.info("No related clause found. Try the bylaw's own words, such as setback, height, storey, or parcel.")
         return
     for hit in hits:
         label = hit.get("section") or hit.get("chunk_id")
@@ -1823,12 +1997,12 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
             f"score {hit['score']:.4f}<br>{html.escape(_short_display_quote(hit.get('section_text') or hit.get('text') or ''))}</div>",
             unsafe_allow_html=True,
         )
-    st.caption("Advisory retrieval — the verified rule set remains the only executable output.")
+    st.caption("Advisory retrieval. The verified rule set remains the only executable output.")
 
 
 def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
     """Section-anchored bylaw text with rule-picked evidence highlighting."""
-    st.subheader("Bylaw Text")
+    st.subheader("Ask The Bylaw")
     output_dir = Path(data.get("output_dir") or DEFAULT_OUTPUT_DIR)
     bylaw_dir = ROOT / "data" / "bylaws" / city_stem_from_dir(output_dir)
     sections = load_bylaw_sections(bylaw_dir)
@@ -1872,8 +2046,8 @@ def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
             st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
         return
 
-    st.caption(f"{len(sections)} extracted section(s) from `{bylaw_dir}`. Pick a rule to highlight its cited evidence.")
-    selected_rule_label = st.selectbox("Rule", ["(none)", *rule_options], key="bylaw_rule_picker")
+    st.caption(f"{len(sections)} extracted source section(s) loaded. Pick a rule to highlight its cited evidence.")
+    selected_rule_label = st.selectbox("Rule evidence to highlight", ["(none)", *rule_options], key="bylaw_rule_picker")
     quote = ""
     if selected_rule_label != "(none)":
         quote = _rule_evidence_quote(rule_options[selected_rule_label])
@@ -1895,7 +2069,7 @@ def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
             st.warning("The cited evidence text was not found verbatim in any extracted section.")
 
     titles = [section["title"] for section in sections]
-    picked = st.selectbox("Section", range(len(titles)), index=matched_index, format_func=lambda i: titles[i], key="bylaw_section_picker")
+    picked = st.selectbox("Source section", range(len(titles)), index=matched_index, format_func=lambda i: titles[i], key="bylaw_section_picker")
     body = highlighted.get(picked) or html.escape(" ".join(sections[picked]["text"].split()))
     st.markdown(
         f"<div class='bylaw-section'><h4>{html.escape(sections[picked]['title'])}</h4>{body}</div>",
@@ -1979,25 +2153,13 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
     metrics = benchmark.get("rule_metrics", {})
     proposal = benchmark.get("proposal_metrics", {})
     counts = validation.get("bucket_counts", {})
-    review_counts = _named_counts(data.get("router", {}).get("summary", {}).get("action_counts", []))
-    intelligence = data.get("intelligence", {})
-    bundle_rerun = data.get("bundle_rerun", {})
-    bundle_promotion = data.get("bundle_promotion", {})
-    semantic = data.get("semantic", {})
-    resolution = data.get("resolution", {}).get("summary", {})
-    # These KPI cards put the two most actionable review-reduction paths in the
-    # first screen: alternate evidence and safe verifier tuning.
+    # Keep the KPI row small: safety status first, then review volume.
     cards = [
         ("Verified", counts.get("verified", 0), "verified"),
-        ("Review", counts.get("review_needed", 0), "review"),
-        ("Filtered Review", len(filtered_items), "review"),
-        ("Better Evidence", review_counts.get("retry_with_better_evidence", 0), ""),
-        ("Bundle Safe Retry", intelligence.get("safe_retry_count", 0), ""),
-        ("Promoted By Bundle", bundle_promotion.get("promotion_count", 0), "verified"),
-        ("Bundle Ready", bundle_rerun.get("promotion_ready_count", 0), ""),
-        ("Evidence-Fix Path", resolution.get("can_promote_after_evidence_fix_count", 0), ""),
-        ("Semantic Near-Match", semantic.get("high_similarity_count", 0), ""),
+        ("Needs review", counts.get("review_needed", 0), "review"),
+        ("Shown after filters", len(filtered_items), "review"),
         ("Precision", f"{metrics.get('verified_precision', 0):.2f}", "verified"),
+        ("False verified", metrics.get("false_verified_count", 0), "rejected"),
         ("False Approvals", proposal.get("false_approval_count", 0), "rejected"),
     ]
     cards_html = "".join(
@@ -2016,14 +2178,14 @@ def _render_header(st: Any, city_label: str = "Burnaby R1") -> None:
 <div class="app-header">
   <div>
     <div class="eyebrow">Verification Review Console</div>
-    <h1>{html.escape(city_label)} Verification Dashboard</h1>
-    <p>Inspect review rules, compare candidate claims against verified rules, and identify the safest path to reduce review volume.</p>
+    <h1>{html.escape(city_label)} Rule Review</h1>
+    <p>Use verified rules for GIS, send uncertain rules to review, and inspect the source text before changing the verifier.</p>
   </div>
   <div class="status-legend">
-    <span class="status-pill status-verified">verified</span>
-    <span class="status-pill status-review">review</span>
-    <span class="status-pill status-rejected">rejected</span>
-    <span class="status-pill status-not_used">not_used</span>
+    <span class="status-pill status-verified">Verified</span>
+    <span class="status-pill status-review">Needs review</span>
+    <span class="status-pill status-rejected">Rejected</span>
+    <span class="status-pill status-not_used">Out of scope</span>
   </div>
 </div>
 """,
@@ -2036,9 +2198,9 @@ def _render_guidance(st: Any) -> None:
     st.markdown(
         """
 <div class="guidance-grid">
-  <div class="guide-card"><b>1. Start with filters</b><span>Use category, priority, likely status, and rule object to narrow the review queue.</span></div>
-  <div class="guide-card"><b>2. Compare meaning</b><span>Open Candidate vs Verified and read the sentence-level claim comparison before checking tables.</span></div>
-  <div class="guide-card"><b>3. Pick the next action</b><span>Use Evidence Repair, Evidence Rerun, and the Review tab to decide whether the issue is evidence, verifier tuning, or legal review.</span></div>
+  <div class="guide-card"><b>Start with review workbench</b><span>Pick one rule, read why it was held, then inspect the original and repaired source text.</span></div>
+  <div class="guide-card"><b>Use source evidence</b><span>Ask the bylaw or search the cited page before deciding whether the candidate is real.</span></div>
+  <div class="guide-card"><b>Keep GIS strict</b><span>Only verified rules drive GIS exports. Review, rerun, and LLM output are advisory.</span></div>
 </div>
 """,
         unsafe_allow_html=True,
@@ -2047,13 +2209,13 @@ def _render_guidance(st: Any) -> None:
 
 def _sidebar_guidance(st: Any) -> None:
     """Keep short usage instructions visible near the filters."""
-    with st.sidebar.expander("How to use this dashboard", expanded=False):
+    with st.sidebar.expander("Decision language", expanded=False):
         st.markdown(
             """
-1. Filter the review queue to one category or rule object.
-2. Use `Candidate vs Verified` to compare the generated rule sentence with the closest verified rule sentence.
-3. If the meaning matches, check whether `Evidence Rerun` or the `Review` tab says it is safe to tune.
-4. If the issue involves exceptions, conflicts, or legal scope, keep it in human review.
+- **Verified**: exact source support exists for the rule fields.
+- **Needs review**: the candidate may be true, but proof is incomplete.
+- **Rejected**: the candidate conflicts with the verifier contract or source support.
+- **Out of scope**: useful context, but not a numeric GIS rule.
 """
         )
 
@@ -2061,34 +2223,30 @@ def _sidebar_guidance(st: Any) -> None:
 def _action_summary(st: Any, data: dict[str, Any]) -> None:
     """Surface the highest-value review-volume reduction paths."""
     review_counts = _named_counts(data.get("router", {}).get("summary", {}).get("action_counts", []))
-    promotion = data.get("bundle_promotion", {})
-    semantic = data.get("semantic", {})
     resolution = data.get("resolution", {}).get("summary", {})
+    evidence_path = (
+        review_counts.get("rerun_with_evidence_bundle", 0)
+        + review_counts.get("retry_with_better_evidence", 0)
+        + review_counts.get("condition_evidence_needed", 0)
+        + resolution.get("can_promote_after_evidence_fix_count", 0)
+    )
+    legal_path = review_counts.get("human_legal_review", 0) + review_counts.get("scope_review", 0)
+    operator_path = review_counts.get("operator_review", 0)
     cards = [
         (
-            "Guarded bundle promotions",
-            promotion.get("promotion_count", 0),
-            "Review rules moved to verified only after deterministic bundle rerun passed.",
+            "Can improve with better source evidence",
+            evidence_path,
+            "Start here. These candidates may be held because the evidence packet is incomplete.",
         ),
         (
-            "Retry with better evidence",
-            review_counts.get("retry_with_better_evidence", 0),
-            "Repair evidence packets before changing verifier logic.",
+            "Need direction-word check",
+            operator_path,
+            "The number is visible, but the source must prove minimum, maximum, or exact wording.",
         ),
         (
-            "Safe verifier tuning",
-            review_counts.get("safe_verifier_tuning_candidate", 0),
-            "Candidates likely need general rule-pattern support.",
-        ),
-        (
-            "Resolution evidence-fix path",
-            resolution.get("can_promote_after_evidence_fix_count", 0),
-            "Remaining review items that may be repairable by stronger deterministic evidence, not by semantic score.",
-        ),
-        (
-            "Semantic near-matches",
-            semantic.get("high_similarity_count", 0),
-            "Meaning-similar review items to inspect, not automatic approvals.",
+            "Need legal scope review",
+            legal_path,
+            "These involve exceptions, scope, or interpretation. Keep them out of GIS unless proven.",
         ),
     ]
     html_cards = []
@@ -2148,6 +2306,17 @@ def _rule_sentence(rule: dict[str, Any]) -> str:
     if exception:
         sentence += f", except {exception}"
     return sentence.rstrip(" .") + "."
+
+
+def _rule_option_label(rule: dict[str, Any]) -> str:
+    if not rule:
+        return ""
+    rule_id = str(rule.get("rule_id") or rule.get("original_rule_id") or "").strip()
+    family = _plain_label(rule.get("rule_object"))
+    value = _format_value_unit(rule.get("value"), str(rule.get("unit") or ""))
+    reason = _plain_label(rule.get("review_category") or rule.get("action_bucket") or rule.get("retry_decision"))
+    parts = [part for part in (rule_id, family, value, reason) if part]
+    return " | ".join(parts)
 
 
 def _operator_phrase(operator: Any, constraint_type: Any, value_text: str) -> str:
@@ -2248,15 +2417,15 @@ def _intelligence_detail_sentences(item: dict[str, Any]) -> list[str]:
 
 def _router_detail_sentences(item: dict[str, Any]) -> list[str]:
     """Explain one decision-tree route in plain English."""
-    path = " -> ".join(item.get("decision_path", [])) or "no path recorded"
+    path = " -> ".join(_plain_label(part) for part in item.get("decision_path", [])) or "no path recorded"
     semantic_match = item.get("semantic_verified_rule_id") or "none"
     semantic_score = _display_value(item.get("semantic_score"))
     semantic_blockers = _list_text(item.get("semantic_guardrail_blockers", [])) or "none"
     return [
         f"Candidate claim: {item.get('candidate_sentence') or _rule_sentence(item)}",
         f"Original evidence says: {item.get('evidence_sentence') or 'no evidence sentence available'}",
-        f"The review tree routed this to `{item.get('review_category')}` with action `{item.get('action_bucket')}`.",
-        f"Semantic review class: `{item.get('semantic_review_class')}`. Closest verified match: `{semantic_match}` with score {semantic_score}; blockers: {semantic_blockers}.",
+        f"The review queue classifies this as {_plain_label(item.get('review_category'))} and suggests: {_plain_label(item.get('action_bucket'))}.",
+        f"Meaning check: {_plain_label(item.get('semantic_review_class'))}. Closest verified match: `{semantic_match}` with score {semantic_score}; blockers: {semantic_blockers}.",
         f"Decision path: {path}.",
         f"Human instruction: {item.get('human_instruction')}",
         f"Evidence bundle summary: {item.get('bundle_sentence')}",
@@ -2275,10 +2444,10 @@ def _resolution_detail_sentences(item: dict[str, Any]) -> list[str]:
     return [
         f"Candidate claim: {item.get('candidate_sentence') or _rule_sentence(item)}",
         f"Original evidence says: {item.get('evidence_sentence') or 'no evidence sentence available'}",
-        f"The final resolution is `{item.get('resolution')}`, so the next step is `{item.get('next_step_type')}`.",
+        f"The final resolution is {_plain_label(item.get('resolution'))}, so the next step is {_plain_label(item.get('next_step_type'))}.",
         f"This item {can_fix}. Support gaps: {_list_text(item.get('support_gaps', []))}.",
-        f"Closest semantic verified match: `{semantic}` with score {score}. Guardrail blockers: {_list_text(item.get('semantic_guardrail_blockers', []))}.",
-        f"Bundle rerun decision: `{item.get('bundle_rerun_decision')}` with gaps {_list_text(item.get('bundle_rerun_gaps', []))}.",
+        f"Closest meaning match: `{semantic}` with score {score}. Still missing: {_list_text(item.get('semantic_guardrail_blockers', []))}.",
+        f"Bundle rerun decision: {_plain_label(item.get('bundle_rerun_decision'))} with gaps {_list_text(item.get('bundle_rerun_gaps', []))}.",
         f"Human next step: {item.get('human_next_step')}",
         f"Where to check in the bylaw: {item.get('where_to_find_it')}",
     ]
@@ -2286,12 +2455,12 @@ def _resolution_detail_sentences(item: dict[str, Any]) -> list[str]:
 
 def _bundle_rerun_detail_sentences(item: dict[str, Any]) -> list[str]:
     """Explain one evidence-bundle rerun result in plain English."""
-    decision = str(item.get("retry_decision") or "unknown")
+    decision = _plain_label(item.get("retry_decision") or "unknown")
     ready = "promotion-ready" if item.get("promotion_ready") else "not promotion-ready"
     return [
         f"Candidate claim: {_rule_sentence(item)}",
         f"The rerun used bundle `{item.get('bundle_evidence_id')}` built from: {_list_text(item.get('bundle_evidence_ids', []))}.",
-        f"The deterministic verifier returned `{decision}` with gaps: {_list_text(item.get('retry_support_gaps', []))}.",
+        f"The deterministic verifier returned {decision} with gaps: {_list_text(item.get('retry_support_gaps', []))}.",
         f"The result is {ready}. Risk flags: {_list_text(item.get('promotion_risk_flags', []))}.",
         f"Recommendation: {item.get('promotion_recommendation') or 'keep in review until the verifier and benchmark support promotion'}.",
     ]
@@ -2326,14 +2495,14 @@ def _bundle_rows(item: dict[str, Any]) -> list[dict[str, Any]]:
 
 def _rerun_detail_sentences(item: dict[str, Any]) -> list[str]:
     """Explain one shadow rerun result in plain English."""
-    decision = str(item.get("retry_decision") or "unknown")
+    decision = _plain_label(item.get("retry_decision") or "unknown")
     gaps = _list_text(item.get("retry_support_gaps", [])) or "none"
     risk_flags = _list_text(item.get("promotion_risk_flags", [])) or "none"
     promotion = "promotion-ready" if item.get("promotion_ready") else "not promotion-ready"
     return [
         f"Candidate claim: {_rule_sentence(item)}",
         f"The rerun replaced original evidence `{item.get('original_evidence_id')}` with retry evidence `{item.get('retry_evidence_id')}`.",
-        f"The deterministic verifier returned `{decision}` with support gaps: {gaps}.",
+        f"The deterministic verifier returned {decision} with support gaps: {gaps}.",
         f"The shadow result is {promotion}. Promotion risk flags: {risk_flags}.",
         f"Recommendation: {item.get('promotion_recommendation') or 'inspect before promotion'}.",
     ]
@@ -2344,13 +2513,13 @@ def _safe_tuning_detail_sentences(item: dict[str, Any]) -> list[str]:
     gaps = _list_text(item.get("support_gaps", []))
     tests = _list_text(item.get("required_tests", []))
     guardrails = _list_text(item.get("guardrails", []))
-    rerun = item.get("rerun_decision") or "not rerun"
+    rerun = _plain_label(item.get("rerun_decision") or "not rerun")
     rerun_ready = "promotion-ready" if item.get("rerun_promotion_ready") else "not promotion-ready"
     return [
         f"Candidate claim: {_rule_sentence(item)}",
-        f"This is a `{item.get('tuning_type')}` tuning candidate because the blocking gaps are: {gaps}.",
+        f"This is a {_plain_label(item.get('tuning_type'))} tuning candidate because the blocking gaps are: {gaps}.",
         f"Proposed experiment: {item.get('proposed_experiment')}",
-        f"Evidence rerun status: `{rerun}`, {rerun_ready}.",
+        f"Evidence rerun status: {rerun}, {rerun_ready}.",
         f"Required validation: {tests}.",
         f"Guardrails that must remain true: {guardrails}.",
     ]
@@ -2421,8 +2590,8 @@ def _list_text(values: Any) -> str:
     if not values:
         return "none"
     if isinstance(values, str):
-        return values
-    return ", ".join(str(value) for value in values)
+        return _plain_label(values)
+    return ", ".join(_plain_label(value) for value in values)
 
 
 def _bar_table(st: Any, counts: dict[str, Any]) -> None:
@@ -2437,11 +2606,16 @@ def _bar_rows(st: Any, rows: list[dict[str, Any]], label_key: str, value_key: st
     max_value = max(float(row.get(value_key) or 0) for row in rows) or 1.0
     html_rows = []
     for row in rows:
-        label = html.escape(str(row.get(label_key) or ""))
+        raw_label = str(row.get(label_key) or "")
+        label = html.escape(_plain_label(raw_label))
+        help_text = HELP_TEXT.get(raw_label, "")
         value = float(row.get(value_key) or 0)
         width = int((value / max_value) * 100)
         html_rows.append(
-            f"<div class='bar-row'><span>{label}</span><div class='bar-track'><div class='bar-fill' style='width:{width}%'></div></div><b>{int(value)}</b></div>"
+            "<div class='bar-row'>"
+            f"<span title='{html.escape(help_text)}'>{label}</span>"
+            f"<div class='bar-track'><div class='bar-fill' style='width:{width}%'></div></div>"
+            f"<b>{int(value)}</b></div>"
         )
     st.markdown("\n".join(html_rows), unsafe_allow_html=True)
 
@@ -2538,7 +2712,47 @@ def _source_text(rule: dict[str, Any]) -> str:
 
 
 def _humanize(value: Any) -> str:
-    return str(value or "").replace("_", " ").strip()
+    return _plain_label(value)
+
+
+def _plain_label(value: Any) -> str:
+    """Convert internal ids into reviewer-facing labels."""
+    if value in (None, ""):
+        return ""
+    text = str(value).strip()
+    if text in PLAIN_LABELS:
+        return PLAIN_LABELS[text]
+    if "," in text:
+        return ", ".join(_plain_label(part.strip()) for part in text.split(","))
+    if " > " in text:
+        return " > ".join(_plain_label(part.strip()) for part in text.split(" > "))
+    cleaned = text.replace("_", " ").strip()
+    if cleaned.isupper():
+        return cleaned
+    return cleaned[:1].upper() + cleaned[1:]
+
+
+def _plain_join(values: Any) -> str:
+    if not values:
+        return "none"
+    if isinstance(values, str):
+        return _plain_label(values)
+    return ", ".join(_plain_label(value) for value in values)
+
+
+def _operator_short(operator: Any, constraint_type: Any = None) -> str:
+    text = f"{operator or ''} {constraint_type or ''}".lower()
+    if any(token in text for token in ("<=", "maximum", "max", "not_exceed")):
+        return "No more than"
+    if any(token in text for token in (">=", "minimum", "min", "at_least")):
+        return "At least"
+    if ">" in text:
+        return "More than"
+    if "<" in text:
+        return "Less than"
+    if "=" in text or "equal" in text:
+        return "Exactly"
+    return _plain_label(operator or constraint_type or "")
 
 
 def _format_value_unit(value: Any, unit: str) -> str:
@@ -2554,7 +2768,25 @@ def _clean_value(value: Any) -> str:
 
 def _display_rows(rows: list[dict[str, Any]]) -> list[dict[str, str]]:
     """Convert mixed JSON values into stable Streamlit table strings."""
-    return [{key: _display_value(value) for key, value in row.items()} for row in rows]
+    return [
+        {
+            _display_key(key): _display_table_value(key, value)
+            for key, value in row.items()
+        }
+        for row in rows
+    ]
+
+
+def _display_key(key: Any) -> str:
+    return _plain_label(key)
+
+
+def _display_table_value(key: Any, value: Any) -> str:
+    rendered = _display_value(value)
+    key_text = str(key).lower()
+    if any(raw in key_text for raw in RAW_VALUE_COLUMNS):
+        return rendered
+    return _plain_label(rendered)
 
 
 def _display_value(value: Any) -> str:
