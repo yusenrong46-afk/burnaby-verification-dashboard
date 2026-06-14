@@ -1,0 +1,1293 @@
+{
+  "mode": "shadow_evidence_rerun",
+  "notes": [
+    "Reruns do not mutate verified_rules.json.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no risk flags.",
+    "Synthetic retry candidates keep the original source_stream so they cannot create fake consensus."
+  ],
+  "attempt_count": 25,
+  "verified_after_rerun_count": 0,
+  "promotion_ready_count": 0,
+  "review_after_rerun_count": 6,
+  "rejected_after_rerun_count": 16,
+  "skipped_count": 0,
+  "attempts": [
+    {
+      "original_rule_id": "calgary_rcg_001",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0001_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0001_001__rerun__v3_pack_0374_ev_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "principal building",
+      "condition": "property line shared with a street or a lane",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0001_ev_001",
+      "retry_evidence_id": "v3_pack_0374_ev_001",
+      "retry_evidence_page": 385,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "minimum building setback for an Accessory Residential Building is: (a) 1.2 metres from a side or rear property line shared with a street action of the Development Authority. (7) deleted 43P2016 (8) A Power Generation Facility – Small with a capacity greater...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "enumerated_branch_condition_missing",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_002",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0001_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0001_002__rerun__v3_pack_0001_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "minimum separation area required in subsection (3)",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0001_ev_002",
+      "retry_evidence_id": "v3_pack_0001_ev_001",
+      "retry_evidence_page": 396,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres in residential building to the closest façade of a Backyard Suite. 10P2019 (3.1) The minimum façade separation in subsection (3) may be reduc...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_003",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0001_003",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0001_003__rerun__v3_pack_0001_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "amenity space required in subsection (3.1)",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0001_ev_003",
+      "retry_evidence_id": "v3_pack_0001_ev_001",
+      "retry_evidence_page": 396,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres in residential building to the closest façade of a Backyard Suite. 10P2019 (3.1) The minimum façade separation in subsection (3) may be reduc...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_004",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0001_004",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0001_004__rerun__v3_pack_0113_ev_001",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "principal building",
+      "condition": "of the length of the façade on each storey for the total combined length of all projections",
+      "operator": "<=",
+      "value": "40.0",
+      "unit": "%",
+      "original_evidence_id": "v3_pack_0001_ev_004",
+      "retry_evidence_id": "v3_pack_0113_ev_001",
+      "retry_evidence_page": 407,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "The maximum parcel coverage is 40.0 per cent of the area of a parcel, which must be reduced by 21.0 square metres for each required motor vehicle parking stall that is not provided in a private garage. PART 5 - DIVISION 2: R-C1L & R-C1Ls 374 Parcel Area 374...",
+      "repairable_fields": [
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported",
+        "coefficient_operand_not_value"
+      ],
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "outside_target_section",
+        "coefficient_operand_not_value"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_006",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0002_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0002_001__rerun__v3_pack_0002_ev_002",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "privacy wall",
+      "condition": "balcony includes a privacy wall",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_id": "v3_pack_0002_ev_002",
+      "retry_evidence_page": 397,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "and a maximum of 3.0 metres in height ) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privacy wall that screens the balcony from a pr...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_007",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0002_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0002_002__rerun__v3_pack_0002_ev_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "privacy wall",
+      "condition": "balcony includes a privacy wall",
+      "operator": "<=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0002_ev_002",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 397,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "the privacy wall is a minimum of 2.0 metres in height n 16P2018 less than 1.5 metres. (c) deleted 16P2018 (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a str...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_008",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0002_003",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0002_003__rerun__v3_pack_0002_ev_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "balcony",
+      "condition": "balcony is setback less than 4.0 metres from the shared property line",
+      "operator": "<",
+      "value": "4.0",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0002_ev_003",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 397,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "the privacy wall is a minimum of 2.0 metres in height n 16P2018 less than 1.5 metres. (c) deleted 16P2018 (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a str...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_011",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0005_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0005_001__rerun__v3_pack_0001_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "closest façade of the main residential building to the closest façade of a Backyard Suite",
+      "operator": ">=",
+      "value": "5.0",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0005_ev_001",
+      "retry_evidence_id": "v3_pack_0001_ev_001",
+      "retry_evidence_page": 396,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres in residential building to the closest façade of a Backyard Suite. 10P2019 (3.1) The minimum façade separation in subsection (3) may be reduc...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_020",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0012_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0012_001__rerun__v3_pack_0006_ev_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "floor_area",
+      "applies_to": "backyard suite",
+      "condition": "",
+      "operator": "<=",
+      "value": "75.0",
+      "unit": "m2",
+      "original_evidence_id": "v3_pack_0012_ev_001",
+      "retry_evidence_id": "v3_pack_0006_ev_001",
+      "retry_evidence_page": 396,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district tion (3) or the amenity space required in subsection (3.1); (b) Projectio...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_117",
+      "original_candidate_id": "calgary_rcg_v3clause_v3_pack_0001_001",
+      "retry_candidate_id": "calgary_rcg_v3clause_v3_pack_0001_001__rerun__v3_pack_0001_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "Backyard Suite",
+      "condition": "",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0001_v3_clause_ev_001",
+      "retry_evidence_id": "v3_pack_0001_ev_001",
+      "retry_evidence_page": 396,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres in residential building to the closest façade of a Backyard Suite. 10P2019 (3.1) The minimum façade separation in subsection (3) may be reduc...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_123",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_001__rerun__v3_pack_0374_ev_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "principal building",
+      "condition": "property line shared with a street or a lane",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0001_ev_001",
+      "retry_evidence_id": "v3_pack_0374_ev_001",
+      "retry_evidence_page": 385,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "minimum building setback for an Accessory Residential Building is: (a) 1.2 metres from a side or rear property line shared with a street action of the Development Authority. (7) deleted 43P2016 (8) A Power Generation Facility – Small with a capacity greater...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "enumerated_branch_condition_missing",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_124",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_002__rerun__v3_pack_0001_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "minimum separation area required in subsection (3)",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0001_ev_002",
+      "retry_evidence_id": "v3_pack_0001_ev_001",
+      "retry_evidence_page": 396,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres in residential building to the closest façade of a Backyard Suite. 10P2019 (3.1) The minimum façade separation in subsection (3) may be reduc...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_125",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_003",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_003__rerun__v3_pack_0001_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "amenity space required in subsection (3.1)",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0001_ev_003",
+      "retry_evidence_id": "v3_pack_0001_ev_001",
+      "retry_evidence_page": 396,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres in residential building to the closest façade of a Backyard Suite. 10P2019 (3.1) The minimum façade separation in subsection (3) may be reduc...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_126",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_004",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_004__rerun__v3_pack_0113_ev_001",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "principal building",
+      "condition": "of the length of the façade on each storey for the total combined length of all projections",
+      "operator": "<=",
+      "value": "40.0",
+      "unit": "%",
+      "original_evidence_id": "v3_repair_pack_0001_ev_004",
+      "retry_evidence_id": "v3_pack_0113_ev_001",
+      "retry_evidence_page": 407,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "The maximum parcel coverage is 40.0 per cent of the area of a parcel, which must be reduced by 21.0 square metres for each required motor vehicle parking stall that is not provided in a private garage. PART 5 - DIVISION 2: R-C1L & R-C1Ls 374 Parcel Area 374...",
+      "repairable_fields": [
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported",
+        "coefficient_operand_not_value"
+      ],
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "outside_target_section",
+        "coefficient_operand_not_value"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_129",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0009_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0009_001__rerun__v3_pack_0002_ev_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "privacy wall",
+      "condition": "balcony is setback less than 4.0 metres from the shared property line",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0009_ev_001",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 397,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "the privacy wall is a minimum of 2.0 metres in height n 16P2018 less than 1.5 metres. (c) deleted 16P2018 (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a str...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_130",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0009_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0009_002__rerun__v3_pack_0002_ev_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "privacy wall",
+      "condition": "balcony is setback less than 4.0 metres from the shared property line",
+      "operator": "<=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0009_ev_002",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 397,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "the privacy wall is a minimum of 2.0 metres in height n 16P2018 less than 1.5 metres. (c) deleted 16P2018 (8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a str...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_136",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0014_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0014_001__rerun__v3_pack_0001_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "closest façade of the main residential building to the closest façade of a Backyard Suite",
+      "operator": ">=",
+      "value": "5.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0014_ev_001",
+      "retry_evidence_id": "v3_pack_0001_ev_001",
+      "retry_evidence_page": 396,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres in residential building to the closest façade of a Backyard Suite. 10P2019 (3.1) The minimum façade separation in subsection (3) may be reduc...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_141",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0018_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0018_001__rerun__v3_pack_0006_ev_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "floor_area",
+      "applies_to": "backyard suite",
+      "condition": "",
+      "operator": "<=",
+      "value": "75.0",
+      "unit": "m2",
+      "original_evidence_id": "v3_repair_pack_0018_ev_001",
+      "retry_evidence_id": "v3_pack_0006_ev_001",
+      "retry_evidence_page": 396,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district tion (3) or the amenity space required in subsection (3.1); (b) Projectio...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_174",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0047_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0047_002__rerun__v3_pack_0111_ev_002",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "Accessory Residential Building",
+      "condition": "to any eaveline, when measured from the finished floor of the building",
+      "operator": "<=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0047_ev_002",
+      "retry_evidence_id": "v3_pack_0111_ev_002",
+      "retry_evidence_page": 386,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "(b) 3.0 metres at any eaveline, when measured from the finished floor of the building 12P2010, 16P2018 (5) The minimum distance between any façade of an Accessory Residential Building 10.0 square metres or more and a main residential building is 1.0 metres....",
+      "repairable_fields": [
+        "operator",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ],
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_223",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0078_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0078_001__rerun__v3_repair_pack_0078_ev_002",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "measured at the shared property line",
+      "operator": "<=",
+      "value": "7.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0078_ev_001",
+      "retry_evidence_id": "v3_repair_pack_0078_ev_002",
+      "retry_evidence_page": 472,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "and (b) increases at a 45 degree angle to a maximum of 11.0 metres d (4), the maximum building height is 11.0 metres measured from grade. (2) Where a building setback is required from a property line shared with another parcel designated with a low density...",
+      "repairable_fields": [
+        "applies_to",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_224",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0078_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0078_002__rerun__v3_repair_pack_0078_ev_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "increases at a 45 degree angle",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0078_ev_002",
+      "retry_evidence_id": "v3_repair_pack_0078_ev_001",
+      "retry_evidence_page": 472,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line foremost front façade of the immediately adjac...",
+      "repairable_fields": [
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_016",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0009_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0009_001__rerun__v3_pack_0004_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "private amenity space",
+      "condition": "secondary suite",
+      "operator": ">=",
+      "value": "7.5",
+      "unit": "m2",
+      "original_evidence_id": "v3_pack_0009_ev_001",
+      "retry_evidence_id": "v3_pack_0004_ev_001",
+      "retry_evidence_page": 395,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "The maximum floor area of a Secondary Suite may be relaxed by the Development Authority to a maximum of 10.0 per cent. dary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-...",
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "best_repair_confidence": 0.869,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_021",
+      "original_candidate_id": "calgary_rcg_native_v3_pack_0013_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_pack_0013_001__rerun__v3_pack_0004_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "private amenity space",
+      "condition": "for a backyard suite",
+      "operator": ">=",
+      "value": "7.5",
+      "unit": "m2",
+      "original_evidence_id": "v3_pack_0013_ev_001",
+      "retry_evidence_id": "v3_pack_0004_ev_001",
+      "retry_evidence_page": 395,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "The maximum floor area of a Secondary Suite may be relaxed by the Development Authority to a maximum of 10.0 per cent. dary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-...",
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "best_repair_confidence": 0.869,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_137",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0016_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0016_001__rerun__v3_pack_0004_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "private amenity space",
+      "condition": "secondary suite",
+      "operator": ">=",
+      "value": "7.5",
+      "unit": "m2",
+      "original_evidence_id": "v3_repair_pack_0016_ev_001",
+      "retry_evidence_id": "v3_pack_0004_ev_001",
+      "retry_evidence_page": 395,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "The maximum floor area of a Secondary Suite may be relaxed by the Development Authority to a maximum of 10.0 per cent. dary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-...",
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "best_repair_confidence": 0.869,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "calgary_rcg_139",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0017_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0017_001__rerun__v3_pack_0004_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "private amenity space",
+      "condition": "",
+      "operator": ">=",
+      "value": "7.5",
+      "unit": "m2",
+      "original_evidence_id": "v3_repair_pack_0017_ev_001",
+      "retry_evidence_id": "v3_pack_0004_ev_001",
+      "retry_evidence_page": 395,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "The maximum floor area of a Secondary Suite may be relaxed by the Development Authority to a maximum of 10.0 per cent. dary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-...",
+      "repairable_fields": [
+        "applies_to"
+      ],
+      "best_repair_confidence": 0.869,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    }
+  ],
+  "verified_after_rerun": [],
+  "promotion_ready": [],
+  "skipped": []
+}

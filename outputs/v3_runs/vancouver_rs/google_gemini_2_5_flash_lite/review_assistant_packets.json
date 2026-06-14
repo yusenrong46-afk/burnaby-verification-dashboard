@@ -1,0 +1,613 @@
+{
+  "purpose": "Bounded advisory packets for dashboard review and optional LLM chat. Not a verification input.",
+  "advisory_only": true,
+  "packet_count": 11,
+  "items": [
+    {
+      "rule_id": "vancouver_rs_004",
+      "candidate_id": "vancouver_rs_native_v3_pack_0002_001",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "floor_area",
+        "constraint_scope": "floor_area",
+        "applies_to": "main habitable room",
+        "operator": ">=",
+        "value": "16.7",
+        "unit": "m2",
+        "condition": "no separate bedrooms",
+        "exception": ""
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "review_category": "possible_rule_object_mismatch",
+      "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_pack_0002_ev_001",
+        "original_evidence": "1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2",
+        "repaired_context": "must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house must include: (a) 1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces; and (b) at least 1 bedroom with a minimum size of 8.4 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces. City of Vancouver February 2026 Zoning and Development By-law Page 8",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "floor_area",
+          "constraint_scope": "floor_area",
+          "applies_to": "main habitable room",
+          "operator": ">=",
+          "value": "16.7",
+          "unit": "m2",
+          "condition": "no separate bedrooms",
+          "exception": ""
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "rule_family_direction_mismatch",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2",
+        "repaired_context": "must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house must include: (a) 1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces; and (b) at least 1 bedroom with a minimum size of 8.4 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces. City of Vancouver February 2026 Zoning and Development By-law Page 8",
+        "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_005",
+      "candidate_id": "vancouver_rs_native_v3_pack_0002_002",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "floor_area",
+        "constraint_scope": "floor_area",
+        "applies_to": "bedroom",
+        "operator": ">=",
+        "value": "8.4",
+        "unit": "m2",
+        "condition": "no separate bedrooms",
+        "exception": ""
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "review_category": "possible_rule_object_mismatch",
+      "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_pack_0002_ev_002",
+        "original_evidence": "at least 1 bedroom with a minimum size of 8.4 m2",
+        "repaired_context": "(b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house must include: (a) 1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces; and (b) at least 1 bedroom with a minimum size of 8.4 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces. City of Vancouver February 2026 Zoning and Development By-law Page 8",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "floor_area",
+          "constraint_scope": "floor_area",
+          "applies_to": "bedroom",
+          "operator": ">=",
+          "value": "8.4",
+          "unit": "m2",
+          "condition": "no separate bedrooms",
+          "exception": ""
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "rule_family_direction_mismatch",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "at least 1 bedroom with a minimum size of 8.4 m2",
+        "repaired_context": "(b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house must include: (a) 1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces; and (b) at least 1 bedroom with a minimum size of 8.4 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces. City of Vancouver February 2026 Zoning and Development By-law Page 8",
+        "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_011",
+      "candidate_id": "vancouver_rs_native_v3_pack_0007_001",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "setback",
+        "constraint_scope": "setback",
+        "applies_to": "laneway house",
+        "operator": ">=",
+        "value": "4.9",
+        "unit": "m",
+        "condition": "from the single detached house or single detached house with secondary suite on the site",
+        "exception": ""
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "review_category": "possible_rule_object_mismatch",
+      "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_pack_0007_ev_001",
+        "original_evidence": "A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+        "repaired_context": "site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house...",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "setback",
+          "constraint_scope": "setback",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "4.9",
+          "unit": "m",
+          "condition": "from the single detached house or single detached house with secondary suite on the site",
+          "exception": ""
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+        "repaired_context": "site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house...",
+        "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_012",
+      "candidate_id": "vancouver_rs_native_v3_pack_0007_002",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "setback",
+        "constraint_scope": "setback",
+        "applies_to": "laneway house",
+        "operator": ">=",
+        "value": "0.9",
+        "unit": "m",
+        "condition": "from the ultimate rear property line",
+        "exception": ""
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_pack_0007_ev_002",
+        "original_evidence": "(b) 0.9 m from the ultimate rear property line",
+        "repaired_context": "eed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (b) 0.9 m from the ultimate rear property line",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page",
+          "parent_lead_in_attached"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "setback",
+          "constraint_scope": "setback",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "0.9",
+          "unit": "m",
+          "condition": "from the ultimate rear property line",
+          "exception": ""
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "applies_to_not_supported",
+          "operator_not_supported",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "(b) 0.9 m from the ultimate rear property line",
+        "repaired_context": "eed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (b) 0.9 m from the ultimate rear property line",
+        "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_013",
+      "candidate_id": "vancouver_rs_native_v3_pack_0007_003",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "setback",
+        "constraint_scope": "setback",
+        "applies_to": "laneway house",
+        "operator": ">=",
+        "value": "1.2",
+        "unit": "m",
+        "condition": "from each side property line",
+        "exception": "Director of Planning may reduce this requirement for sites less than 10.1 m in width"
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_pack_0007_ev_003",
+        "original_evidence": "(c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+        "repaired_context": "eed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page",
+          "parent_lead_in_attached"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "setback",
+          "constraint_scope": "setback",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "1.2",
+          "unit": "m",
+          "condition": "from each side property line",
+          "exception": "Director of Planning may reduce this requirement for sites less than 10.1 m in width"
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "applies_to_not_supported",
+          "operator_not_supported",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "(c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+        "repaired_context": "eed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+        "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_020",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0001_001",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "floor_area",
+        "constraint_scope": "floor_area",
+        "applies_to": "main habitable room that is not a bedroom",
+        "operator": ">=",
+        "value": "16.7",
+        "unit": "m2",
+        "condition": "Except for a laneway house with no separate bedrooms",
+        "exception": ""
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "review_category": "possible_rule_object_mismatch",
+      "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_repair_pack_0001_ev_001",
+        "original_evidence": "1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2",
+        "repaired_context": "must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house must include: (a) 1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces; and (b) at least 1 bedroom with a minimum size of 8.4 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces. City of Vancouver February 2026 Zoning and Development By-law Page 8",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "floor_area",
+          "constraint_scope": "floor_area",
+          "applies_to": "main habitable room that is not a bedroom",
+          "operator": ">=",
+          "value": "16.7",
+          "unit": "m2",
+          "condition": "Except for a laneway house with no separate bedrooms",
+          "exception": ""
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "rule_family_direction_mismatch",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2",
+        "repaired_context": "must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house must include: (a) 1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces; and (b) at least 1 bedroom with a minimum size of 8.4 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces. City of Vancouver February 2026 Zoning and Development By-law Page 8",
+        "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_021",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0001_002",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "floor_area",
+        "constraint_scope": "floor_area",
+        "applies_to": "bedroom",
+        "operator": ">=",
+        "value": "8.4",
+        "unit": "m2",
+        "condition": "Except for a laneway house with no separate bedrooms",
+        "exception": ""
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "review_category": "possible_rule_object_mismatch",
+      "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_repair_pack_0001_ev_002",
+        "original_evidence": "at least 1 bedroom with a minimum size of 8.4 m2",
+        "repaired_context": "(b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house must include: (a) 1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces; and (b) at least 1 bedroom with a minimum size of 8.4 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces. City of Vancouver February 2026 Zoning and Development By-law Page 8",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "floor_area",
+          "constraint_scope": "floor_area",
+          "applies_to": "bedroom",
+          "operator": ">=",
+          "value": "8.4",
+          "unit": "m2",
+          "condition": "Except for a laneway house with no separate bedrooms",
+          "exception": ""
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "rule_family_direction_mismatch",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "at least 1 bedroom with a minimum size of 8.4 m2",
+        "repaired_context": "(b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house must include: (a) 1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces; and (b) at least 1 bedroom with a minimum size of 8.4 m2 and a minimum dimension of 2.1 m measured between finished wall surfaces. City of Vancouver February 2026 Zoning and Development By-law Page 8",
+        "suggested_next_action": "Find a second independent source or stronger source context; do not approve from one weak text block."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_022",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0004_001",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "floor_area",
+        "constraint_scope": "floor_area",
+        "applies_to": "laneway house",
+        "operator": "<=",
+        "value": "0.25",
+        "unit": "m2",
+        "condition": "lesser of (a) 0.25 multiplied by the site area; and (b) 186 m2",
+        "exception": ""
+      },
+      "support_gaps": [
+        "coefficient_operand_not_value"
+      ],
+      "review_category": "general_review",
+      "suggested_next_action": "Human review should inspect the cited source and keep the rule out of GIS unless deterministic verification passes.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_repair_pack_0004_ev_001",
+        "original_evidence": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2.",
+        "repaired_context": "ivision into individual freehold rowhouse parcels. 11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway House 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines....",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "floor_area",
+          "constraint_scope": "floor_area",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "0.25",
+          "unit": "m2",
+          "condition": "lesser of (a) 0.25 multiplied by the site area; and (b) 186 m2",
+          "exception": ""
+        },
+        "support_gaps": [
+          "coefficient_operand_not_value"
+        ],
+        "original_evidence": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2.",
+        "repaired_context": "ivision into individual freehold rowhouse parcels. 11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway House 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines....",
+        "suggested_next_action": "Human review should inspect the cited source and keep the rule out of GIS unless deterministic verification passes."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_024",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_001",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "setback",
+        "constraint_scope": "setback",
+        "applies_to": "laneway house",
+        "operator": "<=",
+        "value": "4.9",
+        "unit": "m",
+        "condition": "measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+        "exception": ""
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_repair_pack_0006_ev_001",
+        "original_evidence": "A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+        "repaired_context": "site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house...",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "setback",
+          "constraint_scope": "setback",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "4.9",
+          "unit": "m",
+          "condition": "measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+          "exception": ""
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "rule_family_direction_mismatch",
+          "operator_not_supported",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+        "repaired_context": "site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site; (b) 0.9 m from the ultimate rear property line; and (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width. 11.3.8.7 Except for a laneway house with no separate bedrooms, a laneway house...",
+        "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_025",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_002",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "setback",
+        "constraint_scope": "setback",
+        "applies_to": "laneway house",
+        "operator": "<=",
+        "value": "0.9",
+        "unit": "m",
+        "condition": "from the ultimate rear property line",
+        "exception": ""
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_repair_pack_0006_ev_002",
+        "original_evidence": "(b) 0.9 m from the ultimate rear property line",
+        "repaired_context": "eed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (b) 0.9 m from the ultimate rear property line",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page",
+          "parent_lead_in_attached"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "setback",
+          "constraint_scope": "setback",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "0.9",
+          "unit": "m",
+          "condition": "from the ultimate rear property line",
+          "exception": ""
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "rule_family_direction_mismatch",
+          "applies_to_not_supported",
+          "operator_not_supported",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "(b) 0.9 m from the ultimate rear property line",
+        "repaired_context": "eed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (b) 0.9 m from the ultimate rear property line",
+        "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited."
+      }
+    },
+    {
+      "rule_id": "vancouver_rs_026",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_003",
+      "advisory_only": true,
+      "candidate_rule": {
+        "rule_object": "setback",
+        "constraint_scope": "setback",
+        "applies_to": "laneway house",
+        "operator": "<=",
+        "value": "1.2",
+        "unit": "m",
+        "condition": "from each side property line",
+        "exception": "Director of Planning may reduce this requirement for sites less than 10.1 m in width"
+      },
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "review_category": "operator_uncertain",
+      "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited.",
+      "source": {
+        "page": 8,
+        "evidence_id": "v3_repair_pack_0006_ev_003",
+        "original_evidence": "(c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+        "repaired_context": "eed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+        "repair_status": "reanchored",
+        "repair_actions": [
+          "reanchored_to_source_page",
+          "parent_lead_in_attached"
+        ]
+      },
+      "p9_provenance": null,
+      "llm_context": {
+        "instruction": "Advisory only. Explain why this rule is in review and what source evidence would be needed. Do not approve, verify, or rewrite GIS outputs.",
+        "rule": {
+          "rule_object": "setback",
+          "constraint_scope": "setback",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "1.2",
+          "unit": "m",
+          "condition": "from each side property line",
+          "exception": "Director of Planning may reduce this requirement for sites less than 10.1 m in width"
+        },
+        "support_gaps": [
+          "pipeline5_text_candidate_requires_review",
+          "rule_family_direction_mismatch",
+          "applies_to_not_supported",
+          "operator_not_supported",
+          "rule_object_not_supported"
+        ],
+        "original_evidence": "(c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+        "repaired_context": "eed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at least: (c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+        "suggested_next_action": "Look for an operator in parent heading or lead-in text: minimum, maximum, required, permitted, or prohibited."
+      }
+    }
+  ]
+}

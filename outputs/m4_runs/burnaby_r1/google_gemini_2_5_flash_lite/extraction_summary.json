@@ -1,0 +1,18 @@
+{
+  "pipeline": "native_rag_llm_extraction_m4",
+  "city": "burnaby_r1",
+  "model": "google/gemini-2.5-flash-lite",
+  "dry_run": false,
+  "discovery_mode": "m4",
+  "retrieval_pack_count": 95,
+  "seed_pack_count": 87,
+  "repair_pack_count": 8,
+  "evidence_unit_count": 101,
+  "candidate_rule_count": 101,
+  "pass1_candidate_rule_count": 93,
+  "repair_candidate_rule_count": 8,
+  "matrix_candidate_count": 81,
+  "cache_hit_count": 41,
+  "extraction_error_count": 3,
+  "safety_contract": "M4 extraction proposes candidates only. Deterministic verification decides."
+}

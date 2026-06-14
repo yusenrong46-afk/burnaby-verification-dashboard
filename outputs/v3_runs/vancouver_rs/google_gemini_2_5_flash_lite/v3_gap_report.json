@@ -1,0 +1,87 @@
+{
+  "report": "v3_gap_report",
+  "city": "vancouver_rs",
+  "pipeline": "native_v3_rag_llm",
+  "advisory_gold_fields": true,
+  "safety_contract": "V3 extracts and repairs evidence packs; deterministic verifier decides.",
+  "pdf_page_count": 22,
+  "source_chunk_count": 251,
+  "pack_count": 120,
+  "model": "google/gemini-2.5-flash-lite",
+  "candidate_rule_count": 31,
+  "verified_rule_count": 12,
+  "review_rule_count": 11,
+  "rejected_rule_count": 8,
+  "not_used_rule_count": 0,
+  "false_verified_count": 0,
+  "verified_source_support_failed_count": 0,
+  "verified_precision": 1.0,
+  "verified_or_review_recall": 1.0,
+  "extraction_coverage_recall": 1.0,
+  "verifier_retention_rate": 1.0,
+  "top_support_gaps": [
+    {
+      "reason": "pipeline5_text_candidate_requires_review",
+      "count": 18
+    },
+    {
+      "reason": "rule_object_not_supported",
+      "count": 13
+    },
+    {
+      "reason": "rule_object_unit_not_compatible",
+      "count": 8
+    },
+    {
+      "reason": "rule_family_direction_mismatch",
+      "count": 7
+    },
+    {
+      "reason": "applies_to_not_supported",
+      "count": 6
+    },
+    {
+      "reason": "coefficient_operand_not_value",
+      "count": 6
+    },
+    {
+      "reason": "operator_not_supported",
+      "count": 5
+    },
+    {
+      "reason": "unresolved_exception_cue",
+      "count": 4
+    },
+    {
+      "reason": "enumerated_branch_condition_missing",
+      "count": 2
+    },
+    {
+      "reason": "unit_not_found_in_evidence",
+      "count": 1
+    }
+  ],
+  "estimated_cost_usd": 0.008153,
+  "latency_ms": 80318,
+  "extraction_error_count": 0,
+  "extraction_errors": [],
+  "missed_rules": {
+    "unextracted_gold_rule_ids": [],
+    "verifier_rejected_gold_rule_ids": [],
+    "not_used_gold_rule_ids": [],
+    "missed_verified_or_review_gold_rule_ids": []
+  },
+  "v2_comparison": {
+    "candidate_rule_count": 17,
+    "verified_rule_count": 10,
+    "review_rule_count": 3,
+    "false_verified_count": 0,
+    "verified_or_review_recall": 0.4285714285714286,
+    "extraction_coverage_recall": 0.4285714285714286
+  },
+  "interpretation": [
+    "V3 preserved the false_verified_count = 0 safety target for this city.",
+    "V3 improved verified-or-review recall versus V2.",
+    "Missed-rule IDs are evaluation-only and are not used by V3 runtime extraction."
+  ]
+}

@@ -1,0 +1,1448 @@
+{
+  "purpose": "Single reviewer-facing queue. Advisory only; verification decisions remain in verified/review/rejected/not_used outputs.",
+  "review_rule_count": 19,
+  "items": [
+    {
+      "rule_id": "burnaby_r1_073",
+      "candidate_id": "burnaby_r1_v2matrix_064",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "interior_side_yard",
+      "applies_to": "All Buildings",
+      "operator": ">=",
+      "value": "0",
+      "unit": "m",
+      "source_evidence_id": "burnaby_r1_matrix_p2_t0_b0_064",
+      "review_category": "human_legal_review",
+      "likely_status": "plausible",
+      "priority": "high",
+      "triage_priority": "high",
+      "review_rank": 24,
+      "priority_rank": 24,
+      "action_bucket": "human_legal_review",
+      "action_reason": "Decision tree step `7:exception_covenant_notwithstanding` routed this to `human_legal_review`: Resolve exception/covenant/notwithstanding wording manually.",
+      "next_action": "human_legal_review",
+      "next_step": "Resolve exception/covenant/notwithstanding wording manually.",
+      "human_instruction": "Resolve exception/covenant/notwithstanding wording manually. Check unresolved_exception_cue in page 2; evidence_id burnaby_r1_matrix_p2_t0_b0_064. Semantic match: burnaby_r1_058 (score 0.59, blockers different_numeric_value, exception_or_override_unresolved).",
+      "candidate_sentence": "All Buildings has setback >= 0 m when end unit lots.",
+      "evidence_sentence": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | Rowhouse 1 to 3 Units | 0 m, except 1.2 m\nfor end unit lots",
+      "bundle_sentence": "burnaby_r1_matrix_p2_t0_b0_064 supports condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_049 supports condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_056 supports condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_060 supports condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "7:exception_covenant_notwithstanding"
+      ],
+      "where_to_find_it": "page 2; evidence_id burnaby_r1_matrix_p2_t0_b0_064",
+      "support_gaps": [
+        "unresolved_exception_cue"
+      ],
+      "likely_correct_score": 0.758,
+      "blocking_reason": "unresolved_exception_cue",
+      "suggested_fix": "Resolve exception/override wording before promotion.",
+      "potential_mistake_flags": [
+        "exception_or_override_unresolved"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_058",
+      "similar_verified_score": 1.0,
+      "best_repair_evidence_id": null,
+      "best_repair_confidence": 0.0,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.391,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "exception"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_058",
+      "semantic_score": 0.593,
+      "semantic_structured_score": 0.593,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_005",
+      "candidate_id": "burnaby_r1_native_v3_pack_0006_003",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "street yards",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "source_evidence_id": "v3_pack_0006_ev_003",
+      "review_category": "condition_evidence_needed",
+      "likely_status": "plausible",
+      "priority": "high",
+      "triage_priority": "high",
+      "review_rank": 30,
+      "priority_rank": 30,
+      "action_bucket": "condition_evidence_needed",
+      "action_reason": "Decision tree step `6:condition_missing` routed this to `condition_evidence_needed`: Find the clause or table header that proves the condition.",
+      "next_action": "condition_evidence_needed",
+      "next_step": "Find the clause or table header that proves the condition.",
+      "human_instruction": "Find the clause or table header that proves the condition. Check pipeline5_text_candidate_requires_review, text_condition_not_supported in page 6; section 101(1); evidence_id v3_pack_0006_ev_003. Suggested stronger evidence: v3_pack_0006_ev_001. Semantic match: burnaby_r1_074 (score 0.71, blockers different_numeric_value).",
+      "candidate_sentence": "street yards has setback >= 2.0 m when heritage lots.",
+      "evidence_sentence": "lot line setbacks for street yards may meet a minimum of 2.0 m",
+      "bundle_sentence": "v3_pack_0006_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0004_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0004_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "6:condition_missing"
+      ],
+      "where_to_find_it": "page 6; section 101(1); evidence_id v3_pack_0006_ev_003",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "likely_correct_score": 0.701,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported",
+      "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
+      "potential_mistake_flags": [
+        "condition_not_in_cited_text"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_058",
+      "similar_verified_score": 0.805,
+      "best_repair_evidence_id": "v3_pack_0006_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_074",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.76,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_100",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0004_003",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "street yards",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "source_evidence_id": "v3_repair_pack_0004_ev_003",
+      "review_category": "condition_evidence_needed",
+      "likely_status": "plausible",
+      "priority": "high",
+      "triage_priority": "high",
+      "review_rank": 30,
+      "priority_rank": 30,
+      "action_bucket": "condition_evidence_needed",
+      "action_reason": "Decision tree step `6:condition_missing` routed this to `condition_evidence_needed`: Find the clause or table header that proves the condition.",
+      "next_action": "condition_evidence_needed",
+      "next_step": "Find the clause or table header that proves the condition.",
+      "human_instruction": "Find the clause or table header that proves the condition. Check pipeline5_text_candidate_requires_review, text_condition_not_supported in page 6; section 101(1); evidence_id v3_repair_pack_0004_ev_003. Suggested stronger evidence: v3_pack_0006_ev_001. Semantic match: burnaby_r1_074 (score 0.71, blockers different_numeric_value).",
+      "candidate_sentence": "street yards has setback >= 2.0 m when heritage lots.",
+      "evidence_sentence": "lot line setbacks for street yards may meet a minimum of 2.0 m",
+      "bundle_sentence": "v3_repair_pack_0004_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0004_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0006_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "6:condition_missing"
+      ],
+      "where_to_find_it": "page 6; section 101(1); evidence_id v3_repair_pack_0004_ev_003",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "likely_correct_score": 0.701,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, text_condition_not_supported",
+      "suggested_fix": "Find evidence span that includes the material condition, not only the value/unit.",
+      "potential_mistake_flags": [
+        "condition_not_in_cited_text"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_058",
+      "similar_verified_score": 0.805,
+      "best_repair_evidence_id": "v3_pack_0006_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_074",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.76,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_009",
+      "candidate_id": "burnaby_r1_native_v3_pack_0057_001",
+      "decision": "review_needed",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "lot",
+      "operator": "<=",
+      "value": "6",
+      "unit": "units",
+      "source_evidence_id": "v3_pack_0057_ev_001",
+      "review_category": "almost_verified",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 110,
+      "priority_rank": 1110,
+      "action_bucket": "rerun_with_evidence_bundle",
+      "action_reason": "Decision tree step `9:bundle_safe_retry_available` routed this to `rerun_with_evidence_bundle`: Rerun using the evidence bundle; promote only if deterministic verifier passes.",
+      "next_action": "rerun_with_evidence_bundle",
+      "next_step": "Rerun using the evidence bundle; promote only if deterministic verifier passes.",
+      "human_instruction": "Rerun using the evidence bundle; promote only if deterministic verifier passes. Check pipeline5_text_candidate_requires_review in page 1; section 101.1; evidence_id v3_pack_0057_ev_001. Suggested stronger evidence: v3_pack_0045_v3_clause_ev_002. Evidence bundle is safe to rerun through the verifier. Semantic match: burnaby_r1_013 (score 0.74, blockers none).",
+      "candidate_sentence": "lot has dwelling units <= 6 units.",
+      "evidence_sentence": "up to a maximum of 6 dwelling units on a lot",
+      "bundle_sentence": "v3_pack_0057_ev_001 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "9:bundle_safe_retry_available"
+      ],
+      "where_to_find_it": "page 1; section 101.1; evidence_id v3_pack_0057_ev_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.889,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_010",
+      "similar_verified_score": 0.644,
+      "best_repair_evidence_id": "v3_pack_0045_v3_clause_ev_002",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.921,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "review_needed",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "close_semantic_match",
+      "semantic_verified_rule_id": "burnaby_r1_013",
+      "semantic_score": 0.74,
+      "semantic_structured_score": 0.74,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "close_meaning_general_review",
+      "semantic_guardrail_blockers": []
+    },
+    {
+      "rule_id": "burnaby_r1_016",
+      "candidate_id": "burnaby_r1_v2matrix_007",
+      "decision": "review_needed",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "Rowhouse 1 to 3 Units",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "source_evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+      "review_category": "operator_review",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 110,
+      "priority_rank": 1110,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check rule_family_direction_mismatch in page 2; evidence_id burnaby_r1_matrix_p2_t0_b0_007. Semantic match: burnaby_r1_014 (score 0.60, blockers different_direction, different_numeric_value).",
+      "candidate_sentence": "Rowhouse 1 to 3 Units has lot area <= 280 m2.",
+      "evidence_sentence": "Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2",
+      "bundle_sentence": "burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_013 supports applies_to, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 2; evidence_id burnaby_r1_matrix_p2_t0_b0_007",
+      "support_gaps": [
+        "rule_family_direction_mismatch"
+      ],
+      "likely_correct_score": 0.896,
+      "blocking_reason": "rule_family_direction_mismatch",
+      "suggested_fix": "Inspect proof trace and support gaps.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_014",
+      "similar_verified_score": 0.703,
+      "best_repair_evidence_id": null,
+      "best_repair_confidence": 0.0,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.771,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_014",
+      "semantic_score": 0.6,
+      "semantic_structured_score": 0.6,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_093",
+      "candidate_id": "burnaby_r1_v3clause_v3_pack_0045_003",
+      "decision": "review_needed",
+      "rule_object": "permitted_use",
+      "constraint_scope": "use",
+      "applies_to": "Principal Use",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "source_evidence_id": "v3_pack_0045_v3_clause_ev_003",
+      "review_category": "defer_low_priority",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 116,
+      "priority_rank": 1116,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "Decision tree step `10:defer_low_priority` routed this to `defer_low_priority`: Keep in review until more evidence or a general verifier rule is justified.",
+      "next_action": "defer_low_priority",
+      "next_step": "Keep in review until more evidence or a general verifier rule is justified.",
+      "human_instruction": "Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 1; section 101.2; evidence_id v3_pack_0045_v3_clause_ev_003. Suggested stronger evidence: v3_pack_0045_v3_clause_ev_002. Semantic match: burnaby_r1_080 (score 0.02, blockers different_direction, different_rule_object, different_unit).",
+      "candidate_sentence": "Principal Use has a permitted use rule when Group Home.",
+      "evidence_sentence": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory...",
+      "bundle_sentence": "v3_pack_0045_v3_clause_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0057_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0045_v3_clause_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0002_ev_001 supports applies_to, condition, operator, scope, unit, value.",
+      "decision_path": [
+        "10:defer_low_priority"
+      ],
+      "where_to_find_it": "page 1; section 101.2; evidence_id v3_pack_0045_v3_clause_ev_003",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.834,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_085",
+      "similar_verified_score": 0.188,
+      "best_repair_evidence_id": "v3_pack_0045_v3_clause_ev_002",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_080",
+      "semantic_score": 0.023,
+      "semantic_structured_score": 0.023,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_003",
+      "candidate_id": "burnaby_r1_native_v3_pack_0006_001",
+      "decision": "review_needed",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "lot",
+      "operator": "<=",
+      "value": "60",
+      "unit": "%",
+      "source_evidence_id": "v3_pack_0006_ev_001",
+      "review_category": "semantic_guardrail_review",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 120,
+      "priority_rank": 1120,
+      "action_bucket": "semantic_guardrail_review",
+      "action_reason": "Decision tree step `9a:semantic_guardrail_blocked` routed this to `semantic_guardrail_review`: Compare the close verified match, but do not relax verification because core legal fields or guardrails disagree.",
+      "next_action": "semantic_guardrail_review",
+      "next_step": "Compare the close verified match, but do not relax verification because core legal fields or guardrails disagree.",
+      "human_instruction": "Compare the close verified match, but do not relax verification because core legal fields or guardrails disagree. Check pipeline5_text_candidate_requires_review in page 6; section 101(1); evidence_id v3_pack_0006_ev_001. Semantic match: burnaby_r1_017 (score 0.71, blockers different_numeric_value).",
+      "candidate_sentence": "lot has lot coverage <= 60 % when heritage lots.",
+      "evidence_sentence": "maximum lot coverage as set out in Section 101.4 may be increased up to 60%",
+      "bundle_sentence": "v3_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, condition, operator, rule_object, scope, value.",
+      "decision_path": [
+        "9a:semantic_guardrail_blocked"
+      ],
+      "where_to_find_it": "page 6; section 101(1); evidence_id v3_pack_0006_ev_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.794,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_020",
+      "similar_verified_score": 0.55,
+      "best_repair_evidence_id": "v3_pack_0006_ev_003",
+      "best_repair_confidence": 0.931,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.541,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "unit"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_017",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.76,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_008",
+      "candidate_id": "burnaby_r1_native_v3_pack_0044_001",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "lane_yard",
+      "applies_to": "projections into required lane yards",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "source_evidence_id": "v3_pack_0044_ev_001",
+      "review_category": "operator_review",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 120,
+      "priority_rank": 1120,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, rule_family_direction_mismatch in page 5; section 101(2); evidence_id v3_pack_0044_ev_001. Suggested stronger evidence: v3_repair_pack_0008_ev_001. Semantic match: burnaby_r1_065 (score 0.54, blockers different_direction, different_numeric_value).",
+      "candidate_sentence": "projections into required lane yards has setback <= 0.8 m when in the R1 District.",
+      "evidence_sentence": "projections into required lane yards are limited to a maximum of 0.8 m",
+      "bundle_sentence": "v3_pack_0044_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0008_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit; v3_repair_pack_0004_ev_001 supports applies_to, condition, operator, rule_object, scope, unit.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 5; section 101(2); evidence_id v3_pack_0044_ev_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "likely_correct_score": 0.79,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch",
+      "suggested_fix": "Inspect proof trace and support gaps.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_058",
+      "similar_verified_score": 0.511,
+      "best_repair_evidence_id": "v3_repair_pack_0008_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.7,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_065",
+      "semantic_score": 0.54,
+      "semantic_structured_score": 0.54,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_098",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0004_001",
+      "decision": "review_needed",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "lot",
+      "operator": "<=",
+      "value": "60",
+      "unit": "%",
+      "source_evidence_id": "v3_repair_pack_0004_ev_001",
+      "review_category": "semantic_guardrail_review",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 120,
+      "priority_rank": 1120,
+      "action_bucket": "semantic_guardrail_review",
+      "action_reason": "Decision tree step `9a:semantic_guardrail_blocked` routed this to `semantic_guardrail_review`: Compare the close verified match, but do not relax verification because core legal fields or guardrails disagree.",
+      "next_action": "semantic_guardrail_review",
+      "next_step": "Compare the close verified match, but do not relax verification because core legal fields or guardrails disagree.",
+      "human_instruction": "Compare the close verified match, but do not relax verification because core legal fields or guardrails disagree. Check pipeline5_text_candidate_requires_review in page 6; section 101(1); evidence_id v3_repair_pack_0004_ev_001. Semantic match: burnaby_r1_017 (score 0.71, blockers different_numeric_value).",
+      "candidate_sentence": "lot has lot coverage <= 60 % when heritage lots.",
+      "evidence_sentence": "maximum lot coverage as set out in Section 101.4 may be increased up to 60%",
+      "bundle_sentence": "v3_repair_pack_0004_ev_001 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, condition, operator, rule_object, scope, value.",
+      "decision_path": [
+        "9a:semantic_guardrail_blocked"
+      ],
+      "where_to_find_it": "page 6; section 101(1); evidence_id v3_repair_pack_0004_ev_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.794,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_020",
+      "similar_verified_score": 0.55,
+      "best_repair_evidence_id": "v3_pack_0006_ev_001",
+      "best_repair_confidence": 0.931,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "rerun_decision": null,
+      "rerun_promotion_ready": null,
+      "bundle_score": 0.541,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "unit"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_017",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.76,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_103",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0008_001",
+      "decision": "review_needed",
+      "rule_object": "setback",
+      "constraint_scope": "lane_yard",
+      "applies_to": "projections into required lane yards",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "source_evidence_id": "v3_repair_pack_0008_ev_001",
+      "review_category": "operator_review",
+      "likely_status": "likely_correct",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 120,
+      "priority_rank": 1120,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, rule_family_direction_mismatch in page 5; section 101(2); evidence_id v3_repair_pack_0008_ev_001. Suggested stronger evidence: v3_pack_0044_ev_001. Semantic match: burnaby_r1_065 (score 0.54, blockers different_direction, different_numeric_value).",
+      "candidate_sentence": "projections into required lane yards has setback <= 0.8 m when in the R1 District.",
+      "evidence_sentence": "projections into required lane yards are limited to a maximum of 0.8 m",
+      "bundle_sentence": "v3_repair_pack_0008_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0044_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit; v3_repair_pack_0004_ev_001 supports applies_to, condition, operator, rule_object, scope, unit.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 5; section 101(2); evidence_id v3_repair_pack_0008_ev_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "likely_correct_score": 0.79,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch",
+      "suggested_fix": "Inspect proof trace and support gaps.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_058",
+      "similar_verified_score": 0.511,
+      "best_repair_evidence_id": "v3_pack_0044_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.7,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_065",
+      "semantic_score": 0.54,
+      "semantic_structured_score": 0.54,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_092",
+      "candidate_id": "burnaby_r1_v3clause_v3_pack_0045_002",
+      "decision": "review_needed",
+      "rule_object": "permitted_use",
+      "constraint_scope": "district",
+      "applies_to": "Small-Scale Multi-Unit Housing",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "source_evidence_id": "v3_pack_0045_v3_clause_ev_002",
+      "review_category": "defer_low_priority",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 122,
+      "priority_rank": 1122,
+      "action_bucket": "defer_low_priority",
+      "action_reason": "Decision tree step `10:defer_low_priority` routed this to `defer_low_priority`: Keep in review until more evidence or a general verifier rule is justified.",
+      "next_action": "defer_low_priority",
+      "next_step": "Keep in review until more evidence or a general verifier rule is justified.",
+      "human_instruction": "Keep in review until more evidence or a general verifier rule is justified. Check pipeline5_text_candidate_requires_review in page 1; section 101.2; evidence_id v3_pack_0045_v3_clause_ev_002. Suggested stronger evidence: v3_pack_0045_v3_clause_ev_003. Semantic match: burnaby_r1_014 (score 0.05, blockers different_direction, different_rule_object, different_unit).",
+      "candidate_sentence": "Small-Scale Multi-Unit Housing has a permitted use rule.",
+      "evidence_sentence": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory...",
+      "bundle_sentence": "v3_pack_0045_v3_clause_ev_002 supports applies_to, operator, rule_object, scope, unit, value; v3_pack_0057_ev_001 supports applies_to, operator, rule_object, scope, unit, value; v3_pack_0045_v3_clause_ev_003 supports applies_to, operator, rule_object, scope, unit, value; v3_repair_pack_0003_ev_001 supports applies_to, operator, unit, value.",
+      "decision_path": [
+        "10:defer_low_priority"
+      ],
+      "where_to_find_it": "page 1; section 101.2; evidence_id v3_pack_0045_v3_clause_ev_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "likely_correct_score": 0.774,
+      "blocking_reason": "pipeline5_text_candidate_requires_review",
+      "suggested_fix": "Look for table or second text source asserting the exact same rule.",
+      "potential_mistake_flags": [],
+      "similar_verified_rule_id": "burnaby_r1_085",
+      "similar_verified_score": 0.185,
+      "best_repair_evidence_id": "v3_pack_0045_v3_clause_ev_003",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.771,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_014",
+      "semantic_score": 0.053,
+      "semantic_structured_score": 0.053,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_001",
+      "candidate_id": "burnaby_r1_native_v3_pack_0002_001",
+      "decision": "review_needed",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lot",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "source_evidence_id": "v3_pack_0002_ev_001",
+      "review_category": "scope_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 134,
+      "priority_rank": 1134,
+      "action_bucket": "scope_review",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `scope_review`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "scope_review",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported in page 1; section 101.3; evidence_id v3_pack_0002_ev_001. Suggested stronger evidence: v3_pack_0002_ev_002. Semantic match: burnaby_r1_014 (score 0.90, blockers none).",
+      "candidate_sentence": "rowhouse lot has lot area >= 281 m2 when minimum.",
+      "evidence_sentence": "Minimum Lot Area - 281 m2",
+      "bundle_sentence": "v3_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 1; section 101.3; evidence_id v3_pack_0002_ev_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "likely_correct_score": 0.653,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_014",
+      "similar_verified_score": 0.707,
+      "best_repair_evidence_id": "v3_pack_0002_ev_002",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "high_confidence_near_duplicate",
+      "semantic_verified_rule_id": "burnaby_r1_014",
+      "semantic_score": 0.9,
+      "semantic_structured_score": 0.9,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "close_meaning_scope_review",
+      "semantic_guardrail_blockers": []
+    },
+    {
+      "rule_id": "burnaby_r1_094",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0001_001",
+      "decision": "review_needed",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lots",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "source_evidence_id": "v3_repair_pack_0001_ev_001",
+      "review_category": "scope_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 135,
+      "priority_rank": 1135,
+      "action_bucket": "scope_review",
+      "action_reason": "Decision tree step `5:scope_or_applies_to_missing` routed this to `scope_review`: Check row/column/header/prose context for the correct legal scope.",
+      "next_action": "scope_review",
+      "next_step": "Check row/column/header/prose context for the correct legal scope.",
+      "human_instruction": "Check row/column/header/prose context for the correct legal scope. Check pipeline5_text_candidate_requires_review, applies_to_not_supported in page 1; section 101.3; evidence_id v3_repair_pack_0001_ev_001. Suggested stronger evidence: v3_pack_0002_ev_001. Semantic match: burnaby_r1_014 (score 0.90, blockers none).",
+      "candidate_sentence": "rowhouse lots has lot area >= 281 m2 when at the time of registration of the subdivision plan to create two or more rowhouse lots.",
+      "evidence_sentence": "Minimum Lot Area - 281 m2",
+      "bundle_sentence": "v3_repair_pack_0001_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0002_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0045_v3_clause_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "5:scope_or_applies_to_missing"
+      ],
+      "where_to_find_it": "page 1; section 101.3; evidence_id v3_repair_pack_0001_ev_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "likely_correct_score": 0.639,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_014",
+      "similar_verified_score": 0.59,
+      "best_repair_evidence_id": "v3_pack_0002_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "review_needed",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "high_confidence_near_duplicate",
+      "semantic_verified_rule_id": "burnaby_r1_014",
+      "semantic_score": 0.9,
+      "semantic_structured_score": 0.9,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "close_meaning_scope_review",
+      "semantic_guardrail_blockers": []
+    },
+    {
+      "rule_id": "burnaby_r1_002",
+      "candidate_id": "burnaby_r1_native_v3_pack_0002_002",
+      "decision": "review_needed",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lot",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "source_evidence_id": "v3_pack_0002_ev_002",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 136,
+      "priority_rank": 1136,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, applies_to_not_supported in page 1; section 101.3; evidence_id v3_pack_0002_ev_002. Suggested stronger evidence: v3_pack_0002_ev_001. Semantic match: burnaby_r1_014 (score 0.60, blockers different_direction, different_numeric_value).",
+      "candidate_sentence": "rowhouse lot has lot area <= 280 m2 when maximum.",
+      "evidence_sentence": "Maximum Lot Area 280 m2",
+      "bundle_sentence": "v3_pack_0002_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 1; section 101.3; evidence_id v3_pack_0002_ev_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ],
+      "likely_correct_score": 0.633,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, applies_to_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_014",
+      "similar_verified_score": 0.537,
+      "best_repair_evidence_id": "v3_pack_0002_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.7,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_014",
+      "semantic_score": 0.6,
+      "semantic_structured_score": 0.6,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_095",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0001_002",
+      "decision": "review_needed",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lots",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "source_evidence_id": "v3_repair_pack_0001_ev_002",
+      "review_category": "operator_review",
+      "likely_status": "plausible",
+      "priority": "medium",
+      "triage_priority": "medium",
+      "review_rank": 136,
+      "priority_rank": 1136,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, applies_to_not_supported in page 1; section 101.3; evidence_id v3_repair_pack_0001_ev_002. Suggested stronger evidence: v3_pack_0002_ev_001. Semantic match: burnaby_r1_014 (score 0.60, blockers different_direction, different_numeric_value).",
+      "candidate_sentence": "rowhouse lots has lot area <= 280 m2 when at the time of registration of the subdivision plan to create two or more rowhouse lots.",
+      "evidence_sentence": "Maximum Lot Area 280 m2",
+      "bundle_sentence": "v3_repair_pack_0001_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0002_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0045_v3_clause_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 1; section 101.3; evidence_id v3_repair_pack_0001_ev_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ],
+      "likely_correct_score": 0.628,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, applies_to_not_supported",
+      "suggested_fix": "Recover row/header or local text that names the affected building/use type.",
+      "potential_mistake_flags": [
+        "applies_to_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_014",
+      "similar_verified_score": 0.498,
+      "best_repair_evidence_id": "v3_pack_0002_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.7,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_014",
+      "semantic_score": 0.6,
+      "semantic_structured_score": 0.6,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_007",
+      "candidate_id": "burnaby_r1_native_v3_pack_0034_002",
+      "decision": "review_needed",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "height",
+      "applies_to": "All dwelling units",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "source_evidence_id": "v3_pack_0034_ev_002",
+      "review_category": "upstream_extraction_issue",
+      "likely_status": "plausible",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 241,
+      "priority_rank": 2241,
+      "action_bucket": "fix_candidate_or_rule_family_mapping",
+      "action_reason": "Decision tree step `4:rule_family_unsupported` routed this to `fix_candidate_or_rule_family_mapping`: Check whether extraction chose the wrong rule family.",
+      "next_action": "fix_candidate_or_rule_family_mapping",
+      "next_step": "Check whether extraction chose the wrong rule family.",
+      "human_instruction": "Check whether extraction chose the wrong rule family. Check pipeline5_text_candidate_requires_review, rule_object_not_supported in page 6; section 101(2); evidence_id v3_pack_0034_ev_002. Suggested stronger evidence: v3_pack_0034_ev_001. Semantic match: burnaby_r1_006 (score 0.67, blockers different_numeric_value).",
+      "candidate_sentence": "All dwelling units has fire access corridor >= 2.5 m when clear of any projections or obstructions.",
+      "evidence_sentence": "is clear of any projections or obstructions to a minimum of 2.5 m in height",
+      "bundle_sentence": "v3_pack_0034_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0034_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0007_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0007_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "4:rule_family_unsupported"
+      ],
+      "where_to_find_it": "page 6; section 101(2); evidence_id v3_pack_0034_ev_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.579,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_object_not_supported",
+      "suggested_fix": "Check whether Pipeline 5 attached the value to the wrong rule family.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_006",
+      "similar_verified_score": 0.707,
+      "best_repair_evidence_id": "v3_pack_0034_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_006",
+      "semantic_score": 0.67,
+      "semantic_structured_score": 0.67,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_102",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0007_002",
+      "decision": "review_needed",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "height",
+      "applies_to": "All dwelling units",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "source_evidence_id": "v3_repair_pack_0007_ev_002",
+      "review_category": "upstream_extraction_issue",
+      "likely_status": "plausible",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 241,
+      "priority_rank": 2241,
+      "action_bucket": "fix_candidate_or_rule_family_mapping",
+      "action_reason": "Decision tree step `4:rule_family_unsupported` routed this to `fix_candidate_or_rule_family_mapping`: Check whether extraction chose the wrong rule family.",
+      "next_action": "fix_candidate_or_rule_family_mapping",
+      "next_step": "Check whether extraction chose the wrong rule family.",
+      "human_instruction": "Check whether extraction chose the wrong rule family. Check pipeline5_text_candidate_requires_review, rule_object_not_supported in page 6; section 101(2); evidence_id v3_repair_pack_0007_ev_002. Suggested stronger evidence: v3_pack_0034_ev_001. Semantic match: burnaby_r1_006 (score 0.67, blockers different_numeric_value).",
+      "candidate_sentence": "All dwelling units has fire access corridor >= 2.5 m when clear of any projections or obstructions.",
+      "evidence_sentence": "is clear of any projections or obstructions to a minimum of 2.5 m in height",
+      "bundle_sentence": "v3_repair_pack_0007_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0034_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_pack_0034_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0007_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "4:rule_family_unsupported"
+      ],
+      "where_to_find_it": "page 6; section 101(2); evidence_id v3_repair_pack_0007_ev_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.579,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, rule_object_not_supported",
+      "suggested_fix": "Check whether Pipeline 5 attached the value to the wrong rule family.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_006",
+      "similar_verified_score": 0.707,
+      "best_repair_evidence_id": "v3_pack_0034_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.85,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_006",
+      "semantic_score": 0.67,
+      "semantic_structured_score": 0.67,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_096",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0003_001",
+      "decision": "review_needed",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "lot",
+      "operator": "=",
+      "value": "4",
+      "unit": "units",
+      "source_evidence_id": "v3_repair_pack_0003_ev_001",
+      "review_category": "operator_review",
+      "likely_status": "likely_wrong_or_noise",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 259,
+      "priority_rank": 2259,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, operator_not_supported, rule_object_not_supported, range_bound_not_maximum in page 2; evidence_id v3_repair_pack_0003_ev_001. Suggested stronger evidence: burnaby_r1_matrix_p2_t0_b0_001. Semantic match: burnaby_r1_012 (score 0.58, blockers different_direction, missing_core_evidence).",
+      "candidate_sentence": "lot has dwelling units = 4 units when 4 Units Only.",
+      "evidence_sentence": "4 Units Only",
+      "bundle_sentence": "v3_repair_pack_0003_ev_001 supports condition, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, condition, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, condition, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, condition, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 2; evidence_id v3_repair_pack_0003_ev_001",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "likely_correct_score": 0.394,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, operator_not_supported, rule_object_not_supported, range_bound_not_maximum",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family",
+        "operator_direction_or_wording_missing"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_012",
+      "similar_verified_score": 0.6,
+      "best_repair_evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+      "best_repair_confidence": 0.903,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object"
+      ],
+      "rerun_decision": "rejected",
+      "rerun_promotion_ready": false,
+      "bundle_score": 0.691,
+      "bundle_safe_retry": false,
+      "bundle_missing_fields": [
+        "operator"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_promotion_ready": null,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_012",
+      "semantic_score": 0.58,
+      "semantic_structured_score": 0.58,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "no_close_verified_analogue",
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "missing_core_evidence"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_097",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0003_002",
+      "decision": "review_needed",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "lot",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "source_evidence_id": "v3_repair_pack_0003_ev_002",
+      "review_category": "operator_review",
+      "likely_status": "likely_wrong_or_noise",
+      "priority": "low",
+      "triage_priority": "low",
+      "review_rank": 273,
+      "priority_rank": 2273,
+      "action_bucket": "operator_review",
+      "action_reason": "Decision tree step `3:operator_missing_or_refuted` routed this to `operator_review`: Confirm the legal direction: maximum/minimum/required/permitted.",
+      "next_action": "operator_review",
+      "next_step": "Confirm the legal direction: maximum/minimum/required/permitted.",
+      "human_instruction": "Confirm the legal direction: maximum/minimum/required/permitted. Check pipeline5_text_candidate_requires_review, constraint_scope_not_supported, operator_not_supported, rule_object_not_supported in page 2; evidence_id v3_repair_pack_0003_ev_002. Suggested stronger evidence: v3_pack_0002_ev_001. Evidence bundle is safe to rerun through the verifier. Semantic match: burnaby_r1_014 (score 0.71, blockers missing_core_evidence).",
+      "candidate_sentence": "lot has lot area >= 281 m2.",
+      "evidence_sentence": "281 m2",
+      "bundle_sentence": "v3_repair_pack_0003_ev_002 supports scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, operator, rule_object, scope, unit, value.",
+      "decision_path": [
+        "3:operator_missing_or_refuted"
+      ],
+      "where_to_find_it": "page 2; evidence_id v3_repair_pack_0003_ev_002",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "likely_correct_score": 0.257,
+      "blocking_reason": "pipeline5_text_candidate_requires_review, constraint_scope_not_supported, operator_not_supported, rule_object_not_supported",
+      "suggested_fix": "Find wording such as minimum, maximum, required, permitted, not less, or not exceed.",
+      "potential_mistake_flags": [
+        "possible_wrong_rule_family",
+        "operator_direction_or_wording_missing",
+        "scope_not_grounded"
+      ],
+      "similar_verified_rule_id": "burnaby_r1_014",
+      "similar_verified_score": 0.735,
+      "best_repair_evidence_id": "v3_pack_0002_ev_001",
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "rerun_decision": "verified",
+      "rerun_promotion_ready": true,
+      "bundle_score": 0.921,
+      "bundle_safe_retry": true,
+      "bundle_missing_fields": [],
+      "bundle_rerun_decision": "rejected",
+      "bundle_rerun_promotion_ready": false,
+      "semantic_review_class": "guardrail_blocked_low_similarity",
+      "semantic_verified_rule_id": "burnaby_r1_014",
+      "semantic_score": 0.71,
+      "semantic_structured_score": 0.9,
+      "semantic_embedding_score": null,
+      "semantic_match_type": "structured_only",
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "semantic_guardrail_blockers": [
+        "missing_core_evidence"
+      ]
+    }
+  ],
+  "summary": {
+    "category_counts": [
+      {
+        "name": "operator_review",
+        "count": 7
+      },
+      {
+        "name": "condition_evidence_needed",
+        "count": 2
+      },
+      {
+        "name": "defer_low_priority",
+        "count": 2
+      },
+      {
+        "name": "semantic_guardrail_review",
+        "count": 2
+      },
+      {
+        "name": "scope_review",
+        "count": 2
+      },
+      {
+        "name": "upstream_extraction_issue",
+        "count": 2
+      },
+      {
+        "name": "human_legal_review",
+        "count": 1
+      },
+      {
+        "name": "almost_verified",
+        "count": 1
+      }
+    ],
+    "action_counts": [
+      {
+        "name": "operator_review",
+        "count": 7
+      },
+      {
+        "name": "condition_evidence_needed",
+        "count": 2
+      },
+      {
+        "name": "defer_low_priority",
+        "count": 2
+      },
+      {
+        "name": "semantic_guardrail_review",
+        "count": 2
+      },
+      {
+        "name": "scope_review",
+        "count": 2
+      },
+      {
+        "name": "fix_candidate_or_rule_family_mapping",
+        "count": 2
+      },
+      {
+        "name": "human_legal_review",
+        "count": 1
+      },
+      {
+        "name": "rerun_with_evidence_bundle",
+        "count": 1
+      }
+    ],
+    "priority_counts": [
+      {
+        "name": "medium",
+        "count": 12
+      },
+      {
+        "name": "low",
+        "count": 4
+      },
+      {
+        "name": "high",
+        "count": 3
+      }
+    ],
+    "likelihood_counts": [
+      {
+        "name": "plausible",
+        "count": 10
+      },
+      {
+        "name": "likely_correct",
+        "count": 7
+      },
+      {
+        "name": "likely_wrong_or_noise",
+        "count": 2
+      }
+    ],
+    "semantic_review_counts": [
+      {
+        "name": "guardrail_blocked_low_similarity",
+        "count": 16
+      },
+      {
+        "name": "high_confidence_near_duplicate",
+        "count": 2
+      },
+      {
+        "name": "close_semantic_match",
+        "count": 1
+      }
+    ],
+    "top_blocking_reasons": [
+      {
+        "name": "pipeline5_text_candidate_requires_review",
+        "count": 5
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, text_condition_not_supported",
+        "count": 2
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch",
+        "count": 2
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, applies_to_not_supported",
+        "count": 2
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, applies_to_not_supported",
+        "count": 2
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, rule_object_not_supported",
+        "count": 2
+      },
+      {
+        "name": "unresolved_exception_cue",
+        "count": 1
+      },
+      {
+        "name": "rule_family_direction_mismatch",
+        "count": 1
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, operator_not_supported, rule_object_not_supported, range_bound_not_maximum",
+        "count": 1
+      },
+      {
+        "name": "pipeline5_text_candidate_requires_review, constraint_scope_not_supported, operator_not_supported, rule_object_not_supported",
+        "count": 1
+      }
+    ],
+    "top_support_gaps": [
+      {
+        "name": "pipeline5_text_candidate_requires_review",
+        "count": 17
+      },
+      {
+        "name": "rule_family_direction_mismatch",
+        "count": 5
+      },
+      {
+        "name": "applies_to_not_supported",
+        "count": 4
+      },
+      {
+        "name": "rule_object_not_supported",
+        "count": 4
+      },
+      {
+        "name": "text_condition_not_supported",
+        "count": 2
+      },
+      {
+        "name": "operator_not_supported",
+        "count": 2
+      },
+      {
+        "name": "unresolved_exception_cue",
+        "count": 1
+      },
+      {
+        "name": "range_bound_not_maximum",
+        "count": 1
+      },
+      {
+        "name": "constraint_scope_not_supported",
+        "count": 1
+      }
+    ],
+    "action_descriptions": {
+      "retry_with_better_evidence": "Rerun candidate against a different, stronger evidence packet.",
+      "safe_verifier_tuning_candidate": "Inspect whether a general verifier/table rule can safely reduce review.",
+      "evidence_packet_repair_candidate": "Repair evidence attachment first; current suggestion is not strong enough to rerun.",
+      "needs_second_source_consensus": "Find independent text/table consensus before promotion.",
+      "semantic_duplicate_review": "Compare a high-similarity review item against an already verified rule; usually a duplicate/degraded extraction.",
+      "semantic_guardrail_review": "Close semantic match, but core guardrails disagree; inspect manually instead of tuning.",
+      "human_legal_review": "Resolve exception or cross-family conflict manually.",
+      "upstream_candidate_issue": "Return likely extraction/normalization issue upstream.",
+      "defer_low_priority": "Leave in review until broader benchmark evidence exists."
+    },
+    "recommendations": [
+      "Keep 2 close semantic matches blocked until their guardrail mismatch is resolved.",
+      "Keep 1 exception/conflict rules in human legal review."
+    ]
+  }
+}

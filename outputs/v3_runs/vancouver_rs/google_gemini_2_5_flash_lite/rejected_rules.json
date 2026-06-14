@@ -1,0 +1,2419 @@
+[
+  {
+    "rule_id": "vancouver_rs_001",
+    "rule_object": "floor_area",
+    "constraint_type": "maximum",
+    "constraint_scope": "floor_area",
+    "applies_to": "parking space",
+    "value": "7.3",
+    "unit": "m",
+    "operator": "<=",
+    "condition": "parking space is open on at least 2 sides",
+    "exception": "",
+    "gis_relevance": "context",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "floor_area__floor_area__parking_space__parking_space_is_open_on_at_least_2_sides____7_3__m",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "floor area",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length ional areas and included in the measurements for each floor at which they are located; and (c) where the distance from a floor to the floor above or, where the...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "floor area",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "not exceed",
+        "reason": "text wording supports <= / maximum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "open on at least 2 sides and does not exceed 7.3 m in length\nional areas and included in the",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "m",
+        "reason": "unit appears in text evidence"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length ional areas and included in the measurements for each floor at which they are located; and (c) where the distance from a floor to the floor above or, where the...",
+        "reason": "scope words appear in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length ional areas and included in the measurements for each floor at which they are located; and (c) where the distance from a floor to the floor above or, where the...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length ional areas and included in the measurements for each floor at which they are located; and (c) where the distance from a floor to the floor above or, where the...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "floor area",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length;...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "parking space is open on at least 2 sides and does not exceed 7.3 m in length ional areas and included in the measurements for each floor at which they are located; and (c) where the distance from a floor to the floor above or, where the...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.545,
+    "review_priority": "low",
+    "support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "rule_object_not_supported",
+      "rule_object_unit_not_compatible"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": false,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "applicability": null,
+    "matrix_bands": null,
+    "normalization_trace": [],
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited evidence does not support the proposed rule object; the unit is not compatible with the proposed rule object",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 9,
+      "section": null,
+      "evidence_id": "v3_pack_0001_ev_001",
+      "evidence_type": "clause",
+      "evidence_text": "parking space is open on at least 2 sides and does not exceed 7.3 m in length",
+      "source_context": "ional areas and included in the measurements for each floor at which they are located; and (c) where the distance from a floor to the floor above or, where there is no floor above, to the top of the roof joists, exceeds 3.7 m, an amount equal to the area of the floor below the excess height. 11.3.8.9 Computation of floor area for a laneway house must exclude: (a) floors or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length; (b) balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (c) entries, porches and verandahs, if: (i) they are open or protected by guard rails that do not exceed the required minimum height, (ii) the total area of these exclusions, when combined with the balcony and deck exclusions under ",
+      "inherited_parent_context": null,
+      "local_context": "rs or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length; (b) balconies and decks, and any other appurtenances that the Director of Plan",
+      "source_section": "11.3.8.9",
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "vancouver_rs_native_v3_pack_0001_001",
+      "evidence_id": "v3_pack_0001_ev_001",
+      "rule_object": "floor_area",
+      "constraint_type": "maximum",
+      "constraint_scope": "floor_area",
+      "applies_to": "parking space",
+      "operator": "<=",
+      "value": "7.3",
+      "unit": "m",
+      "condition": "parking space is open on at least 2 sides",
+      "exception": "",
+      "source_stream": "native_rag_llm",
+      "extraction_method": "native_rag_llm_v3",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "native_provenance": {
+        "pack_id": "v3_pack_0001",
+        "chunk_id": "vancouver_rs_11.3.8.9_076",
+        "source_quote_supported": true,
+        "v2_run_id": "vancouver_rs_google_gemini_2_5_flash_lite_3f9a2e726a54",
+        "model": "google/gemini-2.5-flash-lite",
+        "v3_final": true
+      }
+    },
+    "proof_dag_ref": "vancouver_rs_001::proof_dag",
+    "proof_dag_summary": {
+      "support_gap_count": 3,
+      "status_counts": {
+        "supported": 7,
+        "refuted": 0,
+        "not_enough_info": 2,
+        "not_applicable": 1
+      }
+    }
+  },
+  {
+    "rule_id": "vancouver_rs_002",
+    "rule_object": "floor_area",
+    "constraint_type": "maximum",
+    "constraint_scope": "floor_area",
+    "applies_to": "total area of exclusions",
+    "value": "8",
+    "unit": "%",
+    "operator": "<=",
+    "condition": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing",
+    "exception": "",
+    "gis_relevance": "context",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "floor_area__floor_area__total_area_of_exclusions__balconies_and_decks_and_any_other_appurtenances_that_the_director_of_planning_considers_similar_to_the_foregoing____8__",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area eds 3.7 m, an amount equal to the area of the floor below the excess height. 11.3.8.9 Computation of floor area for a laneway house must exclude: (a) floors or...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "floor area",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "not exceed",
+        "reason": "text wording supports <= / maximum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "tal area of these exclusions does not exceed 8% of the permitted floor area\neds 3.7 m, an a",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area eds 3.7 m, an amount equal to the area of the floor below the excess height. 11.3.8.9 Computation of floor area for a laneway house must exclude: (a) floors or...",
+        "reason": "unit is not visible in text evidence"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area eds 3.7 m, an amount equal to the area of the floor below the excess height. 11.3.8.9 Computation of floor area for a laneway house must exclude: (a) floors or...",
+        "reason": "scope words appear in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area eds 3.7 m, an amount equal to the area of the floor below the excess height. 11.3.8.9 Computation of floor area for a laneway house must exclude: (a) floors or...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area eds 3.7 m, an amount equal to the area of the floor below the excess height. 11.3.8.9 Computation of floor area for a laneway house must exclude: (a) floors or...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions does not exceed 8% of the permitted floor area eds 3.7 m, an amount equal to the area of the floor below the excess height. 11.3.8.9 Computation of floor area for a laneway house must exclude: (a) floors or...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.666,
+    "review_priority": "low",
+    "support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "unresolved_exception_cue",
+      "rule_object_unit_not_compatible",
+      "coefficient_operand_not_value"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "applicability": null,
+    "matrix_bands": null,
+    "normalization_trace": [],
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the evidence contains exception or override wording that needs review; the unit is not compatible with the proposed rule object; the value is a ratio coefficient (e.g. 0.25 multiplied by the site area), not an absolute cap",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 9,
+      "section": null,
+      "evidence_id": "v3_pack_0001_ev_002",
+      "evidence_type": "clause",
+      "evidence_text": "total area of these exclusions does not exceed 8% of the permitted floor area",
+      "source_context": "eds 3.7 m, an amount equal to the area of the floor below the excess height. 11.3.8.9 Computation of floor area for a laneway house must exclude: (a) floors or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length; (b) balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (c) entries, porches and verandahs, if: (i) they are open or protected by guard rails that do not exceed the required minimum height, (ii) the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area, and (iii) the ceiling height, excluding roof structure, of the total area being excluded does not exceed 3.1 m measured from the entry, porc",
+      "inherited_parent_context": null,
+      "local_context": " the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (c) entries, porches and verandahs, if: (i) they are open or protected by guar",
+      "source_section": "11.3.8.9",
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "vancouver_rs_native_v3_pack_0001_002",
+      "evidence_id": "v3_pack_0001_ev_002",
+      "rule_object": "floor_area",
+      "constraint_type": "maximum",
+      "constraint_scope": "floor_area",
+      "applies_to": "total area of exclusions",
+      "operator": "<=",
+      "value": "8",
+      "unit": "%",
+      "condition": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing",
+      "exception": "",
+      "source_stream": "native_rag_llm",
+      "extraction_method": "native_rag_llm_v3",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "native_provenance": {
+        "pack_id": "v3_pack_0001",
+        "chunk_id": "vancouver_rs_11.3.8.9_076",
+        "source_quote_supported": true,
+        "v2_run_id": "vancouver_rs_google_gemini_2_5_flash_lite_3f9a2e726a54",
+        "model": "google/gemini-2.5-flash-lite",
+        "v3_final": true
+      }
+    },
+    "proof_dag_ref": "vancouver_rs_002::proof_dag",
+    "proof_dag_summary": {
+      "support_gap_count": 4,
+      "status_counts": {
+        "supported": 8,
+        "refuted": 0,
+        "not_enough_info": 2,
+        "not_applicable": 1
+      }
+    }
+  },
+  {
+    "rule_id": "vancouver_rs_003",
+    "rule_object": "floor_area",
+    "constraint_type": "maximum",
+    "constraint_scope": "floor_area",
+    "applies_to": "total area of exclusions",
+    "value": "13",
+    "unit": "%",
+    "operator": "<=",
+    "condition": "entries, porches and verandahs, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above",
+    "exception": "",
+    "gis_relevance": "context",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "floor_area__floor_area__total_area_of_exclusions__entries_porches_and_verandahs_when_combined_with_the_balcony_and_deck_exclusions_under_section_11_3_8_9_b_above____13__",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area d that each parking space is open on at least 2 sides and does not exceed...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "floor area",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "not exceed",
+        "reason": "text wording supports <= / maximum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "r section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area\nd that each par",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area d that each parking space is open on at least 2 sides and does not exceed...",
+        "reason": "unit is not visible in text evidence"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area d that each parking space is open on at least 2 sides and does not exceed...",
+        "reason": "scope words appear in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area d that each parking space is open on at least 2 sides and does not exceed...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area d that each parking space is open on at least 2 sides and does not exceed...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area otected by guard rails that do not exceed the required minimum height, (i...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area d that each parking space is open on at least 2 sides and does not exceed...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.666,
+    "review_priority": "low",
+    "support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "enumerated_branch_condition_missing",
+      "unresolved_exception_cue",
+      "rule_object_unit_not_compatible",
+      "coefficient_operand_not_value"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "applicability": null,
+    "matrix_bands": null,
+    "normalization_trace": [],
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the clause lists several values by condition (e.g. side vs rear) and the rule does not prove which branch its value belongs to; the evidence contains exception or override wording that needs review; the unit is not compatible with the proposed rule object; the value is a ratio coefficient (e.g. 0.25 multiplied by the site area), not an absolute cap",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 9,
+      "section": null,
+      "evidence_id": "v3_pack_0001_ev_003",
+      "evidence_type": "clause",
+      "evidence_text": "total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area",
+      "source_context": "d that each parking space is open on at least 2 sides and does not exceed 7.3 m in length; (b) balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (c) entries, porches and verandahs, if: (i) they are open or protected by guard rails that do not exceed the required minimum height, (ii) the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area, and (iii) the ceiling height, excluding roof structure, of the total area being excluded does not exceed 3.1 m measured from the entry, porch or verandah floor; (d) areas of floors existing, proposed or as may be extended over open-to-below space located directly below sloping roof rafters or a sloping ceiling where the ceiling is directly attached to the underside of sloping roof rafters, and where the roof joists have a minimum 7:12 pitch and",
+      "inherited_parent_context": null,
+      "local_context": "otected by guard rails that do not exceed the required minimum height, (ii) the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area, and (iii) the ceiling height, excluding roof structure, of the total area bein",
+      "source_section": "11.3.8.9",
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "vancouver_rs_native_v3_pack_0001_003",
+      "evidence_id": "v3_pack_0001_ev_003",
+      "rule_object": "floor_area",
+      "constraint_type": "maximum",
+      "constraint_scope": "floor_area",
+      "applies_to": "total area of exclusions",
+      "operator": "<=",
+      "value": "13",
+      "unit": "%",
+      "condition": "entries, porches and verandahs, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above",
+      "exception": "",
+      "source_stream": "native_rag_llm",
+      "extraction_method": "native_rag_llm_v3",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "native_provenance": {
+        "pack_id": "v3_pack_0001",
+        "chunk_id": "vancouver_rs_11.3.8.9_076",
+        "source_quote_supported": true,
+        "v2_run_id": "vancouver_rs_google_gemini_2_5_flash_lite_3f9a2e726a54",
+        "model": "google/gemini-2.5-flash-lite",
+        "v3_final": true
+      }
+    },
+    "proof_dag_ref": "vancouver_rs_003::proof_dag",
+    "proof_dag_summary": {
+      "support_gap_count": 5,
+      "status_counts": {
+        "supported": 8,
+        "refuted": 0,
+        "not_enough_info": 3,
+        "not_applicable": 1
+      }
+    }
+  },
+  {
+    "rule_id": "vancouver_rs_008",
+    "rule_object": "floor_area",
+    "constraint_type": "maximum",
+    "constraint_scope": "floor_area",
+    "applies_to": "laneway house",
+    "value": "0.25",
+    "unit": "%",
+    "operator": "<=",
+    "condition": "multiplied by the site area",
+    "exception": "",
+    "gis_relevance": "context",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "floor_area__floor_area__laneway_house__multiplied_by_the_site_area____0_25__",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "refuted",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "unit is absent from evidence or incompatible with rule object"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ivision into individual freehold rowhouse parcels. 11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and fro...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "refuted",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "unit is absent from evidence or incompatible with rule object"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "floor area",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "not exceed",
+        "reason": "text wording supports <= / maximum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "way house must not exceed the lesser of: (a) 0.25 multiplied by the site area;\nivision into in",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ivision into individual freehold rowhouse parcels. 11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and fro...",
+        "reason": "unit is not visible in text evidence"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ivision into individual freehold rowhouse parcels. 11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and fro...",
+        "reason": "scope words appear in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ivision into individual freehold rowhouse parcels. 11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and fro...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ivision into individual freehold rowhouse parcels. 11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and fro...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "refuted",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "unit is absent from evidence or incompatible with rule object"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed th...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; ivision into individual freehold rowhouse parcels. 11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and fro...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.509,
+    "review_priority": "low",
+    "support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "unit_not_found_in_evidence",
+      "rule_object_unit_not_compatible",
+      "coefficient_operand_not_value"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": false,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "applicability": null,
+    "matrix_bands": null,
+    "normalization_trace": [],
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the proposed unit is not visible in the cited evidence; the unit is not compatible with the proposed rule object; the value is a ratio coefficient (e.g. 0.25 multiplied by the site area), not an absolute cap",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 8,
+      "section": null,
+      "evidence_id": "v3_pack_0004_ev_001",
+      "evidence_type": "clause",
+      "evidence_text": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area;",
+      "source_context": "ivision into individual freehold rowhouse parcels. 11.3.7.2 For the purpose of fee simple subdivision, the minimum site width and frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway House 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the",
+      "inherited_parent_context": null,
+      "local_context": "ly on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, e",
+      "source_section": "11.3.8.2",
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "vancouver_rs_native_v3_pack_0004_001",
+      "evidence_id": "v3_pack_0004_ev_001",
+      "rule_object": "floor_area",
+      "constraint_type": "maximum",
+      "constraint_scope": "floor_area",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": "0.25",
+      "unit": "%",
+      "condition": "multiplied by the site area",
+      "exception": "",
+      "source_stream": "native_rag_llm",
+      "extraction_method": "native_rag_llm_v3",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "native_provenance": {
+        "pack_id": "v3_pack_0004",
+        "chunk_id": "vancouver_rs_11.3.8.2_069",
+        "source_quote_supported": true,
+        "v2_run_id": "vancouver_rs_google_gemini_2_5_flash_lite_3f9a2e726a54",
+        "model": "google/gemini-2.5-flash-lite",
+        "v3_final": true
+      }
+    },
+    "proof_dag_ref": "vancouver_rs_008::proof_dag",
+    "proof_dag_summary": {
+      "support_gap_count": 4,
+      "status_counts": {
+        "supported": 7,
+        "refuted": 1,
+        "not_enough_info": 2,
+        "not_applicable": 1
+      }
+    }
+  },
+  {
+    "rule_id": "vancouver_rs_010",
+    "rule_object": "lot_area",
+    "constraint_type": "minimum",
+    "constraint_scope": "lot_area",
+    "applies_to": "laneway house",
+    "value": "9.8",
+    "unit": "m",
+    "operator": ">=",
+    "condition": "minimum site width",
+    "exception": "Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines.",
+    "gis_relevance": "context",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "lot_area__lot_area__laneway_house__minimum_site_width____9_8__m",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "area",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "exception words appear in evidence"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "exception words appear in evidence"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "area",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "minimum",
+        "reason": "text wording supports >= / minimum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "he minimum site width for a laneway house is 9.8 m\n frontage for each freehold rowhouse parce",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "m",
+        "reason": "unit appears in text evidence"
+      },
+      "constraint_scope": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway House 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house w...",
+        "reason": "claim words are not sufficiently visible in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway House 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house w...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway House 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house w...",
+        "reason": "exception words appear in text evidence"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "area",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the...",
+        "reason": "exception words appear in evidence"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.584,
+    "review_priority": "low",
+    "support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "rule_object_not_supported",
+      "rule_object_unit_not_compatible"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": false,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "applicability": null,
+    "matrix_bands": null,
+    "normalization_trace": [],
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited evidence does not support the proposed rule object; the unit is not compatible with the proposed rule object",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 8,
+      "section": null,
+      "evidence_id": "v3_pack_0006_ev_001",
+      "evidence_type": "clause",
+      "evidence_text": "The minimum site width for a laneway house is 9.8 m",
+      "source_context": " frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway House 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a si",
+      "inherited_parent_context": null,
+      "local_context": "d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a)",
+      "source_section": "11.3.8.3",
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "vancouver_rs_native_v3_pack_0006_001",
+      "evidence_id": "v3_pack_0006_ev_001",
+      "rule_object": "lot_area",
+      "constraint_type": "minimum",
+      "constraint_scope": "lot_area",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "9.8",
+      "unit": "m",
+      "condition": "minimum site width",
+      "exception": "Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines.",
+      "source_stream": "native_rag_llm",
+      "extraction_method": "native_rag_llm_v3",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "native_provenance": {
+        "pack_id": "v3_pack_0006",
+        "chunk_id": "vancouver_rs_11.3.8.3_070",
+        "source_quote_supported": true,
+        "v2_run_id": "vancouver_rs_google_gemini_2_5_flash_lite_3f9a2e726a54",
+        "model": "google/gemini-2.5-flash-lite",
+        "v3_final": true
+      }
+    },
+    "proof_dag_ref": "vancouver_rs_010::proof_dag",
+    "proof_dag_summary": {
+      "support_gap_count": 3,
+      "status_counts": {
+        "supported": 8,
+        "refuted": 0,
+        "not_enough_info": 2,
+        "not_applicable": 0
+      }
+    }
+  },
+  {
+    "rule_id": "vancouver_rs_029",
+    "rule_object": "floor_area",
+    "constraint_type": "maximum",
+    "constraint_scope": "floor_area",
+    "applies_to": "laneway house",
+    "value": "8",
+    "unit": "%",
+    "operator": "<=",
+    "condition": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing",
+    "exception": "",
+    "gis_relevance": "context",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "floor_area__floor_area__laneway_house__balconies_and_decks_and_any_other_appurtenances_that_the_director_of_planning_considers_similar_to_the_foregoing____8__",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area ed; and (c) where the dist...",
+        "reason": "final support gap remains: applies_to_not_supported",
+        "decision_gap": "applies_to_not_supported"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area ed; and (c) where the dist...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "floor area",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "not exceed",
+        "reason": "text wording supports <= / maximum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "tal area of these exclusions does not exceed 8% of the permitted floor area\ned; and (c) whe",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area ed; and (c) where the dist...",
+        "reason": "unit is not visible in text evidence"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area ed; and (c) where the dist...",
+        "reason": "scope words appear in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area ed; and (c) where the dist...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area ed; and (c) where the dist...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area ed; and (c) where the dist...",
+        "reason": "final support gap remains: applies_to_not_supported",
+        "decision_gap": "applies_to_not_supported"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area king space is open on at l...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area ed; and (c) where the dist...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.59,
+    "review_priority": "low",
+    "support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "applies_to_not_supported",
+      "unresolved_exception_cue",
+      "rule_object_unit_not_compatible",
+      "coefficient_operand_not_value"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": false,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "applicability": null,
+    "matrix_bands": null,
+    "normalization_trace": [],
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the applies_to field is not clearly grounded; the evidence contains exception or override wording that needs review; the unit is not compatible with the proposed rule object; the value is a ratio coefficient (e.g. 0.25 multiplied by the site area), not an absolute cap",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 9,
+      "section": null,
+      "evidence_id": "v3_repair_pack_0011_ev_001",
+      "evidence_type": "clause",
+      "evidence_text": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area",
+      "source_context": "ed; and (c) where the distance from a floor to the floor above or, where there is no floor above, to the top of the roof joists, exceeds 3.7 m, an amount equal to the area of the floor below the excess height. 11.3.8.9 Computation of floor area for a laneway house must exclude: (a) floors or portions thereof that are used for off-street parking, provided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length; (b) balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (c) entries, porches and verandahs, if: (i) they are open or protected by guard rails that do not exceed the required minimum height, (ii) the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area, and (iii) the ceiling height, excluding roof structure, of the total area being excluded does not exceed 3.1 m measured from the entry, porc",
+      "inherited_parent_context": null,
+      "local_context": "king space is open on at least 2 sides and does not exceed 7.3 m in length; (b) balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (c) entries, porches and verandahs, if: (i) they are open or protected by guar",
+      "source_section": "11.3.8.9",
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0011_001",
+      "evidence_id": "v3_repair_pack_0011_ev_001",
+      "rule_object": "floor_area",
+      "constraint_type": "maximum",
+      "constraint_scope": "floor_area",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": "8",
+      "unit": "%",
+      "condition": "balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing",
+      "exception": "",
+      "source_stream": "native_rag_llm",
+      "extraction_method": "native_rag_llm_v3",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "native_provenance": {
+        "pack_id": "v3_repair_pack_0011",
+        "chunk_id": "vancouver_rs_11.3.8.9_076",
+        "source_quote_supported": true,
+        "v2_run_id": "vancouver_rs_google_gemini_2_5_flash_lite_3f9a2e726a54",
+        "model": "google/gemini-2.5-flash-lite",
+        "v3_final": true
+      }
+    },
+    "proof_dag_ref": "vancouver_rs_029::proof_dag",
+    "proof_dag_summary": {
+      "support_gap_count": 5,
+      "status_counts": {
+        "supported": 7,
+        "refuted": 0,
+        "not_enough_info": 3,
+        "not_applicable": 1
+      }
+    }
+  },
+  {
+    "rule_id": "vancouver_rs_030",
+    "rule_object": "floor_area",
+    "constraint_type": "maximum",
+    "constraint_scope": "floor_area",
+    "applies_to": "laneway house",
+    "value": "13",
+    "unit": "%",
+    "operator": "<=",
+    "condition": "entries, porches and verandahs, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above",
+    "exception": "",
+    "gis_relevance": "context",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "floor_area__floor_area__laneway_house__entries_porches_and_verandahs_when_combined_with_the_balcony_and_deck_exclusions_under_section_11_3_8_9_b_above____13__",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area vided that each parking space is open on at least 2 sides and does no...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "floor area",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "not exceed",
+        "reason": "text wording supports <= / maximum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "r section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area\nvided that each",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area vided that each parking space is open on at least 2 sides and does no...",
+        "reason": "unit is not visible in text evidence"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area vided that each parking space is open on at least 2 sides and does no...",
+        "reason": "scope words appear in text evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area vided that each parking space is open on at least 2 sides and does no...",
+        "reason": "claim words are not sufficiently visible in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area vided that each parking space is open on at least 2 sides and does no...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "applies_to words are not grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area r protected by guard rails that do not exceed the required minimum he...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area vided that each parking space is open on at least 2 sides and does no...",
+        "reason": "exception wording appears but candidate has no resolved exception"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.59,
+    "review_priority": "low",
+    "support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "enumerated_branch_condition_missing",
+      "applies_to_not_supported",
+      "unresolved_exception_cue",
+      "rule_object_unit_not_compatible",
+      "coefficient_operand_not_value"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": false,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "applicability": null,
+    "matrix_bands": null,
+    "normalization_trace": [],
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the clause lists several values by condition (e.g. side vs rear) and the rule does not prove which branch its value belongs to; the applies_to field is not clearly grounded; the evidence contains exception or override wording that needs review; the unit is not compatible with the proposed rule object; the value is a ratio coefficient (e.g. 0.25 multiplied by the site area), not an absolute cap",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 9,
+      "section": null,
+      "evidence_id": "v3_repair_pack_0011_ev_002",
+      "evidence_type": "clause",
+      "evidence_text": "the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area",
+      "source_context": "vided that each parking space is open on at least 2 sides and does not exceed 7.3 m in length; (b) balconies and decks, and any other appurtenances that the Director of Planning considers similar to the foregoing, provided that the total area of these exclusions does not exceed 8% of the permitted floor area; (c) entries, porches and verandahs, if: (i) they are open or protected by guard rails that do not exceed the required minimum height, (ii) the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area, and (iii) the ceiling height, excluding roof structure, of the total area being excluded does not exceed 3.1 m measured from the entry, porch or verandah floor; (d) areas of floors existing, proposed or as may be extended over open-to-below space located directly below sloping roof rafters or a sloping ceiling where the ceiling is directly attached to the underside of sloping roof rafters, and where the roof joists have a minimum 7:12 pitch and",
+      "inherited_parent_context": null,
+      "local_context": "r protected by guard rails that do not exceed the required minimum height, (ii) the total area of these exclusions, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above, does not exceed 13% of the permitted floor area, and (iii) the ceiling height, excluding roof structure, of the total area bein",
+      "source_section": "11.3.8.9",
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0011_002",
+      "evidence_id": "v3_repair_pack_0011_ev_002",
+      "rule_object": "floor_area",
+      "constraint_type": "maximum",
+      "constraint_scope": "floor_area",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": "13",
+      "unit": "%",
+      "condition": "entries, porches and verandahs, when combined with the balcony and deck exclusions under section 11.3.8.9(b) above",
+      "exception": "",
+      "source_stream": "native_rag_llm",
+      "extraction_method": "native_rag_llm_v3",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "native_provenance": {
+        "pack_id": "v3_repair_pack_0011",
+        "chunk_id": "vancouver_rs_11.3.8.9_076",
+        "source_quote_supported": true,
+        "v2_run_id": "vancouver_rs_google_gemini_2_5_flash_lite_3f9a2e726a54",
+        "model": "google/gemini-2.5-flash-lite",
+        "v3_final": true
+      }
+    },
+    "proof_dag_ref": "vancouver_rs_030::proof_dag",
+    "proof_dag_summary": {
+      "support_gap_count": 6,
+      "status_counts": {
+        "supported": 7,
+        "refuted": 0,
+        "not_enough_info": 4,
+        "not_applicable": 1
+      }
+    }
+  },
+  {
+    "rule_id": "vancouver_rs_031",
+    "rule_object": "lot_area",
+    "constraint_type": "minimum",
+    "constraint_scope": "lot_area",
+    "applies_to": "laneway house",
+    "value": "9.8",
+    "unit": "m",
+    "operator": ">=",
+    "condition": "minimum site width",
+    "exception": "Director of Planning may reduce if site is at least 7.3 m in width and Director considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines",
+    "gis_relevance": "context",
+    "verification_status": "unsupported",
+    "verification_decision": "rejected",
+    "verification_label": "refuted",
+    "canonical_rule_key": "lot_area__lot_area__laneway_house__minimum_site_width____9_8__m",
+    "proof_type": "text_evidence",
+    "table_proof_status": "none",
+    "text_span_proof_status": "partial",
+    "proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "area",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "exception words appear in evidence"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "cited evidence does not support the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "exception words appear in evidence"
+      }
+    },
+    "text_span_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "area",
+        "reason": "rule-object cue appears in text evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "minimum",
+        "reason": "text wording supports >= / minimum"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "he minimum site width for a laneway house is 9.8 m, except that the Director of Planning may",
+        "reason": "value appears in text evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "m",
+        "reason": "unit appears in text evidence"
+      },
+      "constraint_scope": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway H...",
+        "reason": "claim words are not sufficiently visible in text evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway H...",
+        "reason": "applies_to words appear in text evidence"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "condition looks like a heading or non-material label"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway H...",
+        "reason": "exception words appear in text evidence"
+      }
+    },
+    "table_proof_trace": {},
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "not_enough_info",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "area",
+        "reason": "final support gap remains: rule_object_not_supported",
+        "decision_gap": "rule_object_not_supported"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2...",
+        "reason": "exception words appear in evidence"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.584,
+    "review_priority": "low",
+    "support_gaps": [
+      "pipeline5_text_candidate_requires_review",
+      "rule_object_not_supported",
+      "rule_object_unit_not_compatible"
+    ],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": false,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "applicability": null,
+    "matrix_bands": null,
+    "normalization_trace": [],
+    "review_reason": "Pipeline 5 text-block rules are held for review until the GIS text-rule contract is expanded; the cited evidence does not support the proposed rule object; the unit is not compatible with the proposed rule object",
+    "source": {
+      "document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "url": "",
+      "page": 8,
+      "section": null,
+      "evidence_id": "v3_repair_pack_0013_ev_001",
+      "evidence_type": "clause",
+      "evidence_text": "The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width",
+      "source_context": " frontage for each freehold rowhouse parcel is 5.0 m. 11.3.8 Laneway House 11.3.8.1 A laneway house is only permitted in combination with a single detached house, single detached house with secondary suite, or child day care facility, and only on a site that provides vehicular access from the rear of the site. 11.3.8.2 The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines. 11.3.8.4 The building height for a laneway house must not exceed 8.5 m and 2 storeys. 11.3.8.5 Despite the maximum permitted site coverage in an applicable district schedule, for a site with a laneway house, the maximum site coverage is 50% of the site area. 11.3.8.6 A laneway house must be at leas",
+      "inherited_parent_context": null,
+      "local_context": "d the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2. 11.3.8.3 The minimum site width for a laneway house is 9.8 m, except that the Director of Planning may reduce the minimum site width if: (a) the site is at least 7.3 m in width; and (b) the Director of Planning considers massing, overlook and impact on nei",
+      "source_section": "11.3.8.3",
+      "source_heading": null,
+      "table_title": null,
+      "row_header": null,
+      "column_header": null,
+      "cell_value": null,
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0013_001",
+      "evidence_id": "v3_repair_pack_0013_ev_001",
+      "rule_object": "lot_area",
+      "constraint_type": "minimum",
+      "constraint_scope": "lot_area",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "9.8",
+      "unit": "m",
+      "condition": "minimum site width",
+      "exception": "Director of Planning may reduce if site is at least 7.3 m in width and Director considers massing, overlook and impact on neighbourhood privacy and all applicable Council policies and guidelines",
+      "source_stream": "native_rag_llm",
+      "extraction_method": "native_rag_llm_v3",
+      "extraction_final_action": "",
+      "extraction_review_reasons": [],
+      "native_provenance": {
+        "pack_id": "v3_repair_pack_0013",
+        "chunk_id": "vancouver_rs_11.3.8.3_070",
+        "source_quote_supported": true,
+        "v2_run_id": "vancouver_rs_google_gemini_2_5_flash_lite_3f9a2e726a54",
+        "model": "google/gemini-2.5-flash-lite",
+        "v3_final": true
+      }
+    },
+    "proof_dag_ref": "vancouver_rs_031::proof_dag",
+    "proof_dag_summary": {
+      "support_gap_count": 3,
+      "status_counts": {
+        "supported": 8,
+        "refuted": 0,
+        "not_enough_info": 2,
+        "not_applicable": 0
+      }
+    }
+  }
+]

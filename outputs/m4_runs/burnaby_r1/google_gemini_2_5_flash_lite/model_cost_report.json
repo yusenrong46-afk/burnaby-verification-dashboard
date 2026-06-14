@@ -1,0 +1,41 @@
+{
+  "city": "burnaby_r1",
+  "model": "google/gemini-2.5-flash-lite",
+  "dry_run": false,
+  "pack_count": 95,
+  "cache_hit_count": 41,
+  "input_chars": 105134,
+  "output_chars": 4892,
+  "estimated_input_tokens": 26284,
+  "estimated_output_tokens": 1224,
+  "estimated_cost_usd": 0.003131,
+  "latency_ms": 124302,
+  "extraction_error_count": 3,
+  "extraction_errors": [
+    {
+      "pack_id": "m4_pack_0001",
+      "chunk_id": "burnaby_r1_101.4_004",
+      "section": "101.4",
+      "page": 2,
+      "error": "model did not return valid JSON",
+      "source": "sqlite_cache"
+    },
+    {
+      "pack_id": "m4_pack_0087",
+      "chunk_id": "burnaby_r1_101.7.2_036",
+      "section": "101.7.2",
+      "page": 7,
+      "error": "OpenRouter request timed out after 90s",
+      "source": "sqlite_cache"
+    },
+    {
+      "pack_id": "v3_repair_pack_0003",
+      "chunk_id": "burnaby_r1_101.4_004",
+      "section": "101.4",
+      "page": 2,
+      "error": "model did not return valid JSON",
+      "source": "sqlite_cache"
+    }
+  ],
+  "pricing_note": "Estimated from character count and planning price table; OpenRouter billing is authoritative."
+}

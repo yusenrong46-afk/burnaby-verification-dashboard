@@ -1,0 +1,3598 @@
+{
+  "purpose": "Advisory semantic-signature comparison for review rules. It never verifies rules.",
+  "review_rule_count": 28,
+  "verified_rule_count": 10,
+  "high_similarity_count": 6,
+  "embedding": {
+    "available": false,
+    "model": null,
+    "mode": "structured_only",
+    "reason": "disabled",
+    "notes": [
+      "Embedding semantic review disabled; using structured signatures only."
+    ]
+  },
+  "items": [
+    {
+      "rule_id": "calgary_rcg_012",
+      "candidate_id": "calgary_rcg_native_v3_pack_0006_001",
+      "canonical_rule_key": "height__height__backyard_suite__measured_from_grade_at_a_side_property_line_shared_with_a_parcel_designated_with_a_low_density_residential_district____5_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 5.0,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "backyard",
+          "suite"
+        ],
+        "condition_concepts": [
+          "density",
+          "designated",
+          "district",
+          "from",
+          "grade",
+          "line",
+          "low",
+          "measured",
+          "parcel",
+          "property",
+          "residential",
+          "shared",
+          "side"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 1.0,
+          "structured_score": 1.0,
+          "embedding_score": null,
+          "combined_semantic_score": 1.0,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.71,
+          "structured_score": 0.83,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.392,
+          "structured_score": 0.392,
+          "embedding_score": null,
+          "combined_semantic_score": 0.392,
+          "semantic_guardrails": [
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 1.0,
+      "best_structured_score": 1.0,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 1.0,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_general_review",
+      "support_gaps": [
+        "upstream_extraction_requested_review"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_014",
+      "candidate_id": "calgary_rcg_native_v3_pack_0006_003",
+      "canonical_rule_key": "height__height__backyard_suite__increases_at_a_45_degree_angle_to_a_maximum_of_7_5_metres_at_a_proportional_distance_from_the_shared_property_line____7_5__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 7.5,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "backyard",
+          "suite"
+        ],
+        "condition_concepts": [
+          "angle",
+          "degree",
+          "distance",
+          "from",
+          "increase",
+          "line",
+          "metre",
+          "property",
+          "proportional",
+          "shared"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.97,
+          "structured_score": 0.97,
+          "embedding_score": null,
+          "combined_semantic_score": 0.97,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.71,
+          "structured_score": 0.836,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.25,
+          "structured_score": 0.25,
+          "embedding_score": null,
+          "combined_semantic_score": 0.25,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.97,
+      "best_structured_score": 0.97,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.97,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_general_review",
+      "support_gaps": [
+        "upstream_extraction_requested_review"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_011",
+      "candidate_id": "calgary_rcg_native_v3_pack_0005_001",
+      "canonical_rule_key": "building_separation__building_separation__principal_building__closest_fa_ade_of_the_main_residential_building_to_the_closest_fa_ade_of_a_backyard_suite____5_0__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 5.0,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "ade",
+          "backyard",
+          "closest",
+          "main",
+          "residential",
+          "suite"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.922,
+          "structured_score": 0.922,
+          "embedding_score": null,
+          "combined_semantic_score": 0.922,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_122",
+          "semantic_score": 0.34,
+          "structured_score": 0.34,
+          "embedding_score": null,
+          "combined_semantic_score": 0.34,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "front setback",
+          "verified_applies_to": "Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.322,
+          "structured_score": 0.322,
+          "embedding_score": null,
+          "combined_semantic_score": 0.322,
+          "semantic_guardrails": [
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.922,
+      "best_structured_score": 0.922,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.922,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_scope_review",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_136",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0014_001",
+      "canonical_rule_key": "building_separation__building_separation__principal_building__closest_fa_ade_of_the_main_residential_building_to_the_closest_fa_ade_of_a_backyard_suite____5_0__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 5.0,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "ade",
+          "backyard",
+          "closest",
+          "main",
+          "residential",
+          "suite"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.922,
+          "structured_score": 0.922,
+          "embedding_score": null,
+          "combined_semantic_score": 0.922,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_122",
+          "semantic_score": 0.34,
+          "structured_score": 0.34,
+          "embedding_score": null,
+          "combined_semantic_score": 0.34,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "front setback",
+          "verified_applies_to": "Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.322,
+          "structured_score": 0.322,
+          "embedding_score": null,
+          "combined_semantic_score": 0.322,
+          "semantic_guardrails": [
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.922,
+      "best_structured_score": 0.922,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.922,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_scope_review",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_001",
+      "candidate_id": "calgary_rcg_native_v3_pack_0001_001",
+      "canonical_rule_key": "setback__setback__principal_building__property_line_shared_with_a_street_or_a_lane____0_6__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.6,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "lane",
+          "line",
+          "property",
+          "shared",
+          "street"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_009",
+          "semantic_score": 0.912,
+          "structured_score": 0.912,
+          "embedding_score": null,
+          "combined_semantic_score": 0.912,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_128",
+          "semantic_score": 0.912,
+          "structured_score": 0.912,
+          "embedding_score": null,
+          "combined_semantic_score": 0.912,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_018",
+          "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.912,
+      "best_structured_score": 0.912,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.912,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_scope_review",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_123",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0001_001",
+      "canonical_rule_key": "setback__setback__principal_building__property_line_shared_with_a_street_or_a_lane____0_6__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.6,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "lane",
+          "line",
+          "property",
+          "shared",
+          "street"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_009",
+          "semantic_score": 0.912,
+          "structured_score": 0.912,
+          "embedding_score": null,
+          "combined_semantic_score": 0.912,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_128",
+          "semantic_score": 0.912,
+          "structured_score": 0.912,
+          "embedding_score": null,
+          "combined_semantic_score": 0.912,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_018",
+          "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.912,
+      "best_structured_score": 0.912,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.912,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_scope_review",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_007",
+      "candidate_id": "calgary_rcg_native_v3_pack_0002_002",
+      "canonical_rule_key": "height__height__privacy_wall__balcony_includes_a_privacy_wall____3_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "privacy",
+          "wall"
+        ],
+        "condition_concepts": [
+          "balcony",
+          "include",
+          "privacy",
+          "wall"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.18,
+          "structured_score": 0.18,
+          "embedding_score": null,
+          "combined_semantic_score": 0.18,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.76,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_013",
+      "candidate_id": "calgary_rcg_native_v3_pack_0006_002",
+      "canonical_rule_key": "height__height__backyard_suite__measured_from_grade_at_a_rear_property_line_shared_with_a_parcel_designated_with_a_low_density_residential_district____3_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "backyard",
+          "suite"
+        ],
+        "condition_concepts": [
+          "density",
+          "designated",
+          "district",
+          "from",
+          "grade",
+          "line",
+          "low",
+          "measured",
+          "parcel",
+          "property",
+          "rear",
+          "residential",
+          "shared"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.71,
+          "structured_score": 0.83,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.71,
+          "structured_score": 0.856,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.252,
+          "structured_score": 0.252,
+          "embedding_score": null,
+          "combined_semantic_score": 0.252,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.83,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "upstream_extraction_requested_review"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_020",
+      "candidate_id": "calgary_rcg_native_v3_pack_0012_001",
+      "canonical_rule_key": "floor_area__floor_area__backyard_suite____75_0__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 75.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor"
+        ],
+        "applies_to_concepts": [
+          "backyard",
+          "suite"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_120",
+          "semantic_score": 0.71,
+          "structured_score": 0.723,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "Secondary Suite",
+          "verified_operator": "<=",
+          "verified_value": "100.0",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_121",
+          "semantic_score": 0.71,
+          "structured_score": 0.97,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "75.0",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.23,
+          "structured_score": 0.23,
+          "embedding_score": null,
+          "combined_semantic_score": 0.23,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.723,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_117",
+      "candidate_id": "calgary_rcg_v3clause_v3_pack_0001_001",
+      "canonical_rule_key": "building_separation__building_separation__backyard_suite____0_6__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.6,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "backyard",
+          "suite"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_009",
+          "semantic_score": 0.515,
+          "structured_score": 0.515,
+          "embedding_score": null,
+          "combined_semantic_score": 0.515,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_128",
+          "semantic_score": 0.515,
+          "structured_score": 0.515,
+          "embedding_score": null,
+          "combined_semantic_score": 0.515,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.77,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_130",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0009_002",
+      "canonical_rule_key": "height__height__privacy_wall__balcony_is_setback_less_than_4_0_metres_from_the_shared_property_line____3_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "privacy",
+          "wall"
+        ],
+        "condition_concepts": [
+          "balcony",
+          "from",
+          "less",
+          "line",
+          "metre",
+          "property",
+          "setback_area",
+          "shared",
+          "than"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.71,
+          "structured_score": 0.767,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.18,
+          "structured_score": 0.18,
+          "embedding_score": null,
+          "combined_semantic_score": 0.18,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.76,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_141",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0018_001",
+      "canonical_rule_key": "floor_area__floor_area__backyard_suite____75_0__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 75.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor"
+        ],
+        "applies_to_concepts": [
+          "backyard",
+          "suite"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_120",
+          "semantic_score": 0.71,
+          "structured_score": 0.723,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "Secondary Suite",
+          "verified_operator": "<=",
+          "verified_value": "100.0",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_121",
+          "semantic_score": 0.71,
+          "structured_score": 0.97,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "75.0",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.23,
+          "structured_score": 0.23,
+          "embedding_score": null,
+          "combined_semantic_score": 0.23,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.723,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_174",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0047_002",
+      "canonical_rule_key": "height__height__accessory_residential_building__to_any_eaveline_when_measured_from_the_finished_floor_of_the_building____3_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 3.0,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "accessory",
+          "residential"
+        ],
+        "condition_concepts": [
+          "any",
+          "eaveline",
+          "finished",
+          "floor",
+          "from",
+          "measured",
+          "when"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.71,
+          "structured_score": 0.763,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.18,
+          "structured_score": 0.18,
+          "embedding_score": null,
+          "combined_semantic_score": 0.18,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.76,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_223",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0078_001",
+      "canonical_rule_key": "height__height__principal_building__measured_at_the_shared_property_line____7_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 7.0,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "line",
+          "measured",
+          "property",
+          "shared"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.71,
+          "structured_score": 0.769,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.18,
+          "structured_score": 0.18,
+          "embedding_score": null,
+          "combined_semantic_score": 0.18,
+          "semantic_guardrails": [
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.76,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_002",
+      "candidate_id": "calgary_rcg_native_v3_pack_0001_002",
+      "canonical_rule_key": "building_separation__building_separation__principal_building__minimum_separation_area_required_in_subsection_3____0_6__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.6,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "area",
+          "required",
+          "separation",
+          "subsection"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_009",
+          "semantic_score": 0.484,
+          "structured_score": 0.484,
+          "embedding_score": null,
+          "combined_semantic_score": 0.484,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_128",
+          "semantic_score": 0.484,
+          "structured_score": 0.484,
+          "embedding_score": null,
+          "combined_semantic_score": 0.484,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.7,
+      "best_structured_score": 0.7,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.7,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_003",
+      "candidate_id": "calgary_rcg_native_v3_pack_0001_003",
+      "canonical_rule_key": "building_separation__building_separation__principal_building__amenity_space_required_in_subsection_3_1____0_6__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.6,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "amenity",
+          "required",
+          "space",
+          "subsection"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_009",
+          "semantic_score": 0.482,
+          "structured_score": 0.482,
+          "embedding_score": null,
+          "combined_semantic_score": 0.482,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_128",
+          "semantic_score": 0.482,
+          "structured_score": 0.482,
+          "embedding_score": null,
+          "combined_semantic_score": 0.482,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.7,
+      "best_structured_score": 0.7,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.7,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_124",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0001_002",
+      "canonical_rule_key": "building_separation__building_separation__principal_building__minimum_separation_area_required_in_subsection_3____0_6__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.6,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "area",
+          "required",
+          "separation",
+          "subsection"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_009",
+          "semantic_score": 0.484,
+          "structured_score": 0.484,
+          "embedding_score": null,
+          "combined_semantic_score": 0.484,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_128",
+          "semantic_score": 0.484,
+          "structured_score": 0.484,
+          "embedding_score": null,
+          "combined_semantic_score": 0.484,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.7,
+      "best_structured_score": 0.7,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.7,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_125",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0001_003",
+      "canonical_rule_key": "building_separation__building_separation__principal_building__amenity_space_required_in_subsection_3_1____0_6__m",
+      "signature": {
+        "rule_object": "building_separation",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.6,
+        "unit": "m",
+        "scope_concepts": [
+          "separation"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "amenity",
+          "required",
+          "space",
+          "subsection"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_009",
+          "semantic_score": 0.482,
+          "structured_score": 0.482,
+          "embedding_score": null,
+          "combined_semantic_score": 0.482,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_128",
+          "semantic_score": 0.482,
+          "structured_score": 0.482,
+          "embedding_score": null,
+          "combined_semantic_score": 0.482,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.7,
+      "best_structured_score": 0.7,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.7,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_224",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0078_002",
+      "canonical_rule_key": "height__height__principal_building__increases_at_a_45_degree_angle____11_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 11.0,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "angle",
+          "degree",
+          "increase"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.7,
+          "structured_score": 0.7,
+          "embedding_score": null,
+          "combined_semantic_score": 0.7,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_121",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "75.0",
+          "verified_unit": "m2"
+        }
+      ],
+      "best_semantic_score": 0.7,
+      "best_structured_score": 0.7,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.7,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_008",
+      "candidate_id": "calgary_rcg_native_v3_pack_0002_003",
+      "canonical_rule_key": "setback__setback__balcony__balcony_is_setback_less_than_4_0_metres_from_the_shared_property_line____4_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 4.0,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "balcony"
+        ],
+        "condition_concepts": [
+          "balcony",
+          "from",
+          "less",
+          "line",
+          "metre",
+          "property",
+          "setback_area",
+          "shared",
+          "than"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_009",
+          "semantic_score": 0.567,
+          "structured_score": 0.567,
+          "embedding_score": null,
+          "combined_semantic_score": 0.567,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_128",
+          "semantic_score": 0.567,
+          "structured_score": 0.567,
+          "embedding_score": null,
+          "combined_semantic_score": 0.567,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "balcony attached to a Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "0.6",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_018",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.567,
+      "best_structured_score": 0.567,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.567,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_129",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0009_001",
+      "canonical_rule_key": "height__height__privacy_wall__balcony_is_setback_less_than_4_0_metres_from_the_shared_property_line____2_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "privacy",
+          "wall"
+        ],
+        "condition_concepts": [
+          "balcony",
+          "from",
+          "less",
+          "line",
+          "metre",
+          "property",
+          "setback_area",
+          "shared",
+          "than"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.547,
+          "structured_score": 0.547,
+          "embedding_score": null,
+          "combined_semantic_score": 0.547,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_018",
+          "semantic_score": 0.34,
+          "structured_score": 0.34,
+          "embedding_score": null,
+          "combined_semantic_score": 0.34,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.547,
+      "best_structured_score": 0.547,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.547,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_006",
+      "candidate_id": "calgary_rcg_native_v3_pack_0002_001",
+      "canonical_rule_key": "height__height__privacy_wall__balcony_includes_a_privacy_wall____2_0__m",
+      "signature": {
+        "rule_object": "height",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "privacy",
+          "wall"
+        ],
+        "condition_concepts": [
+          "balcony",
+          "include",
+          "privacy",
+          "wall"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_018",
+          "semantic_score": 0.34,
+          "structured_score": 0.34,
+          "embedding_score": null,
+          "combined_semantic_score": 0.34,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_021",
+      "candidate_id": "calgary_rcg_native_v3_pack_0013_001",
+      "canonical_rule_key": "lot_area__lot_area__private_amenity_space__for_a_backyard_suite____7_5__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 7.5,
+        "unit": "m2",
+        "scope_concepts": [
+          "area"
+        ],
+        "applies_to_concepts": [
+          "amenity",
+          "private",
+          "space"
+        ],
+        "condition_concepts": [
+          "backyard",
+          "suite"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.228,
+          "structured_score": 0.228,
+          "embedding_score": null,
+          "combined_semantic_score": 0.228,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_122",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "front setback",
+          "verified_applies_to": "Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.2,
+          "structured_score": 0.2,
+          "embedding_score": null,
+          "combined_semantic_score": 0.2,
+          "semantic_guardrails": [
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_value"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.228,
+      "best_structured_score": 0.228,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.228,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_016",
+      "candidate_id": "calgary_rcg_native_v3_pack_0009_001",
+      "canonical_rule_key": "lot_area__lot_area__private_amenity_space__secondary_suite____7_5__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 7.5,
+        "unit": "m2",
+        "scope_concepts": [
+          "area"
+        ],
+        "applies_to_concepts": [
+          "amenity",
+          "private",
+          "space"
+        ],
+        "condition_concepts": [
+          "secondary",
+          "suite"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.223,
+          "structured_score": 0.223,
+          "embedding_score": null,
+          "combined_semantic_score": 0.223,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_122",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "front setback",
+          "verified_applies_to": "Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.2,
+          "structured_score": 0.2,
+          "embedding_score": null,
+          "combined_semantic_score": 0.2,
+          "semantic_guardrails": [
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_value"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.223,
+      "best_structured_score": 0.223,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.223,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_137",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0016_001",
+      "canonical_rule_key": "lot_area__lot_area__private_amenity_space__secondary_suite____7_5__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 7.5,
+        "unit": "m2",
+        "scope_concepts": [
+          "area"
+        ],
+        "applies_to_concepts": [
+          "amenity",
+          "private",
+          "space"
+        ],
+        "condition_concepts": [
+          "secondary",
+          "suite"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.223,
+          "structured_score": 0.223,
+          "embedding_score": null,
+          "combined_semantic_score": 0.223,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_122",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "front setback",
+          "verified_applies_to": "Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.2,
+          "structured_score": 0.2,
+          "embedding_score": null,
+          "combined_semantic_score": 0.2,
+          "semantic_guardrails": [
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_value"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.223,
+      "best_structured_score": 0.223,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.223,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_004",
+      "candidate_id": "calgary_rcg_native_v3_pack_0001_004",
+      "canonical_rule_key": "lot_coverage__lot_coverage__principal_building__of_the_length_of_the_fa_ade_on_each_storey_for_the_total_combined_length_of_all_projections____40_0__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 40.0,
+        "unit": "%",
+        "scope_concepts": [
+          "coverage"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "ade",
+          "combined",
+          "each",
+          "length",
+          "projection",
+          "storey",
+          "total"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_121",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "75.0",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported",
+        "coefficient_operand_not_value"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_126",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0001_004",
+      "canonical_rule_key": "lot_coverage__lot_coverage__principal_building__of_the_length_of_the_fa_ade_on_each_storey_for_the_total_combined_length_of_all_projections____40_0__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 40.0,
+        "unit": "%",
+        "scope_concepts": [
+          "coverage"
+        ],
+        "applies_to_concepts": [
+          "principal"
+        ],
+        "condition_concepts": [
+          "ade",
+          "combined",
+          "each",
+          "length",
+          "projection",
+          "storey",
+          "total"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_121",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "75.0",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_119",
+          "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": "<=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported",
+        "coefficient_operand_not_value"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_139",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0017_001",
+      "canonical_rule_key": "lot_area__lot_area__private_amenity_space____7_5__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 7.5,
+        "unit": "m2",
+        "scope_concepts": [
+          "area"
+        ],
+        "applies_to_concepts": [
+          "amenity",
+          "private",
+          "space"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "calgary_rcg_118",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Backyard Suite",
+          "verified_operator": ">=",
+          "verified_value": "5.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_122",
+          "semantic_score": 0.22,
+          "structured_score": 0.22,
+          "embedding_score": null,
+          "combined_semantic_score": 0.22,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "front setback",
+          "verified_applies_to": "Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling",
+          "verified_operator": ">=",
+          "verified_value": "6.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "calgary_rcg_019",
+          "semantic_score": 0.2,
+          "structured_score": 0.2,
+          "embedding_score": null,
+          "combined_semantic_score": 0.2,
+          "semantic_guardrails": [
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_value"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "backyard suite",
+          "verified_operator": "<=",
+          "verified_value": "7.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.22,
+      "best_structured_score": 0.22,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.22,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_direction"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "different_rule_object",
+        "different_unit"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ]
+    }
+  ],
+  "summary": {
+    "semantic_action_counts": [
+      {
+        "name": "no_close_verified_analogue",
+        "count": 14
+      },
+      {
+        "name": "close_meaning_guardrail_blocked",
+        "count": 8
+      },
+      {
+        "name": "close_meaning_scope_review",
+        "count": 4
+      },
+      {
+        "name": "close_meaning_general_review",
+        "count": 2
+      }
+    ]
+  },
+  "notes": [
+    "Semantic score uses normalized structured fields plus optional MiniLM embeddings.",
+    "Embedding similarity is advisory and cannot clear support gaps.",
+    "Guardrails cap high similarity when core legal fields disagree."
+  ]
+}

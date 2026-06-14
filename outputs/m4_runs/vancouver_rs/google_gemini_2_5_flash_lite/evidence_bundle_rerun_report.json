@@ -1,0 +1,136 @@
+{
+  "mode": "shadow_evidence_bundle_rerun",
+  "notes": [
+    "Bundle reruns do not mutate verified_rules.json.",
+    "Bundle score and safe_retry are advisory only.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no support gaps or risk flags."
+  ],
+  "attempt_count": 0,
+  "verified_after_rerun_count": 0,
+  "promotion_ready_count": 0,
+  "review_after_rerun_count": 0,
+  "rejected_after_rerun_count": 0,
+  "skipped_count": 11,
+  "attempts": [],
+  "verified_after_rerun": [],
+  "promotion_ready": [],
+  "skipped": [
+    {
+      "rule_id": "vancouver_rs_022",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0004_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_020",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0001_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.7,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_021",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0001_002",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.7,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_004",
+      "candidate_id": "vancouver_rs_native_m4_pack_0002_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.313,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_005",
+      "candidate_id": "vancouver_rs_native_m4_pack_0002_002",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.313,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_011",
+      "candidate_id": "vancouver_rs_native_m4_pack_0007_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.313,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_012",
+      "candidate_id": "vancouver_rs_native_m4_pack_0007_002",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.313,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_013",
+      "candidate_id": "vancouver_rs_native_m4_pack_0007_003",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.313,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_024",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.313,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_025",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_002",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.313,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_026",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_003",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.313,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,832 @@
+{
+  "mode": "shadow_evidence_rerun",
+  "notes": [
+    "Reruns do not mutate verified_rules.json.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no risk flags.",
+    "Synthetic retry candidates keep the original source_stream so they cannot create fake consensus."
+  ],
+  "attempt_count": 15,
+  "verified_after_rerun_count": 1,
+  "promotion_ready_count": 1,
+  "review_after_rerun_count": 5,
+  "rejected_after_rerun_count": 9,
+  "skipped_count": 2,
+  "attempts": [
+    {
+      "original_rule_id": "burnaby_r1_001",
+      "original_candidate_id": "burnaby_r1_native_v3_pack_0002_001",
+      "retry_candidate_id": "burnaby_r1_native_v3_pack_0002_001__rerun__v3_pack_0002_ev_002",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lot",
+      "condition": "minimum",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "original_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_id": "v3_pack_0002_ev_002",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwe...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_002",
+      "original_candidate_id": "burnaby_r1_native_v3_pack_0002_002",
+      "retry_candidate_id": "burnaby_r1_native_v3_pack_0002_002__rerun__v3_pack_0002_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lot",
+      "condition": "maximum",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "original_evidence_id": "v3_pack_0002_ev_002",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_005",
+      "original_candidate_id": "burnaby_r1_native_v3_pack_0006_003",
+      "retry_candidate_id": "burnaby_r1_native_v3_pack_0006_003__rerun__v3_pack_0006_ev_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "street yards",
+      "condition": "heritage lots",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0006_ev_003",
+      "retry_evidence_id": "v3_pack_0006_ev_001",
+      "retry_evidence_page": 6,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_007",
+      "original_candidate_id": "burnaby_r1_native_v3_pack_0034_002",
+      "retry_candidate_id": "burnaby_r1_native_v3_pack_0034_002__rerun__v3_pack_0034_ev_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "fire access corridor",
+      "condition": "clear of any projections or obstructions",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0034_ev_002",
+      "retry_evidence_id": "v3_pack_0034_ev_001",
+      "retry_evidence_page": 6,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units...",
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_008",
+      "original_candidate_id": "burnaby_r1_native_v3_pack_0044_001",
+      "retry_candidate_id": "burnaby_r1_native_v3_pack_0044_001__rerun__v3_repair_pack_0008_ev_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "projections into required lane yards",
+      "condition": "in the R1 District",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "original_evidence_id": "v3_pack_0044_ev_001",
+      "retry_evidence_id": "v3_repair_pack_0008_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_009",
+      "original_candidate_id": "burnaby_r1_native_v3_pack_0057_001",
+      "retry_candidate_id": "burnaby_r1_native_v3_pack_0057_001__rerun__v3_pack_0045_v3_clause_ev_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "lot",
+      "condition": "",
+      "operator": "<=",
+      "value": "6",
+      "unit": "units",
+      "original_evidence_id": "v3_pack_0057_ev_001",
+      "retry_evidence_id": "v3_pack_0045_v3_clause_ev_002",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_092",
+      "original_candidate_id": "burnaby_r1_v3clause_v3_pack_0045_002",
+      "retry_candidate_id": "burnaby_r1_v3clause_v3_pack_0045_002__rerun__v3_pack_0045_v3_clause_ev_003",
+      "rule_object": "permitted_use",
+      "constraint_scope": "district",
+      "applies_to": "Small-Scale Multi-Unit Housing",
+      "condition": "",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "v3_pack_0045_v3_clause_ev_002",
+      "retry_evidence_id": "v3_pack_0045_v3_clause_ev_003",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_093",
+      "original_candidate_id": "burnaby_r1_v3clause_v3_pack_0045_003",
+      "retry_candidate_id": "burnaby_r1_v3clause_v3_pack_0045_003__rerun__v3_pack_0045_v3_clause_ev_002",
+      "rule_object": "permitted_use",
+      "constraint_scope": "use",
+      "applies_to": "Principal Use",
+      "condition": "Group Home",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "v3_pack_0045_v3_clause_ev_003",
+      "retry_evidence_id": "v3_pack_0045_v3_clause_ev_002",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_094",
+      "original_candidate_id": "burnaby_r1_native_v3_repair_pack_0001_001",
+      "retry_candidate_id": "burnaby_r1_native_v3_repair_pack_0001_001__rerun__v3_pack_0002_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lots",
+      "condition": "at the time of registration of the subdivision plan to create two or more rowhouse lots",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "original_evidence_id": "v3_repair_pack_0001_ev_001",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_095",
+      "original_candidate_id": "burnaby_r1_native_v3_repair_pack_0001_002",
+      "retry_candidate_id": "burnaby_r1_native_v3_repair_pack_0001_002__rerun__v3_pack_0002_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lots",
+      "condition": "at the time of registration of the subdivision plan to create two or more rowhouse lots",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "original_evidence_id": "v3_repair_pack_0001_ev_002",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_097",
+      "original_candidate_id": "burnaby_r1_native_v3_repair_pack_0003_002",
+      "retry_candidate_id": "burnaby_r1_native_v3_repair_pack_0003_002__rerun__v3_pack_0002_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "lot",
+      "condition": "",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "original_evidence_id": "v3_repair_pack_0003_ev_002",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3...",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "verified",
+      "retry_support_gaps": [],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": true,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks."
+    },
+    {
+      "original_rule_id": "burnaby_r1_100",
+      "original_candidate_id": "burnaby_r1_native_v3_repair_pack_0004_003",
+      "retry_candidate_id": "burnaby_r1_native_v3_repair_pack_0004_003__rerun__v3_pack_0006_ev_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "street yards",
+      "condition": "heritage lots",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0004_ev_003",
+      "retry_evidence_id": "v3_pack_0006_ev_001",
+      "retry_evidence_page": 6,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_102",
+      "original_candidate_id": "burnaby_r1_native_v3_repair_pack_0007_002",
+      "retry_candidate_id": "burnaby_r1_native_v3_repair_pack_0007_002__rerun__v3_pack_0034_ev_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "fire access corridor",
+      "condition": "clear of any projections or obstructions",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0007_ev_002",
+      "retry_evidence_id": "v3_pack_0034_ev_001",
+      "retry_evidence_page": 6,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units...",
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_103",
+      "original_candidate_id": "burnaby_r1_native_v3_repair_pack_0008_001",
+      "retry_candidate_id": "burnaby_r1_native_v3_repair_pack_0008_001__rerun__v3_pack_0044_ev_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "projections into required lane yards",
+      "condition": "in the R1 District",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0008_ev_001",
+      "retry_evidence_id": "v3_pack_0044_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_096",
+      "original_candidate_id": "burnaby_r1_native_v3_repair_pack_0003_001",
+      "retry_candidate_id": "burnaby_r1_native_v3_repair_pack_0003_001__rerun__burnaby_r1_matrix_p2_t0_b0_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "lot",
+      "condition": "4 Units Only",
+      "operator": "=",
+      "value": "4",
+      "unit": "units",
+      "original_evidence_id": "v3_repair_pack_0003_ev_001",
+      "retry_evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "table_cell",
+      "retry_evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Reg...",
+      "repairable_fields": [
+        "rule_object"
+      ],
+      "best_repair_confidence": 0.903,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "table_natural_logic_refuted",
+      "retry_table_proof_status": "refuted",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    }
+  ],
+  "verified_after_rerun": [
+    {
+      "original_rule_id": "burnaby_r1_097",
+      "original_candidate_id": "burnaby_r1_native_v3_repair_pack_0003_002",
+      "retry_candidate_id": "burnaby_r1_native_v3_repair_pack_0003_002__rerun__v3_pack_0002_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "lot",
+      "condition": "",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "original_evidence_id": "v3_repair_pack_0003_ev_002",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3...",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "verified",
+      "retry_support_gaps": [],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": true,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks."
+    }
+  ],
+  "promotion_ready": [
+    {
+      "original_rule_id": "burnaby_r1_097",
+      "original_candidate_id": "burnaby_r1_native_v3_repair_pack_0003_002",
+      "retry_candidate_id": "burnaby_r1_native_v3_repair_pack_0003_002__rerun__v3_pack_0002_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "lot",
+      "condition": "",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "original_evidence_id": "v3_repair_pack_0003_ev_002",
+      "retry_evidence_id": "v3_pack_0002_ev_001",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3...",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "verified",
+      "retry_support_gaps": [],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": true,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Candidate can be considered for manual promotion after benchmark/adversarial checks."
+    }
+  ],
+  "skipped": [
+    {
+      "rule_id": "burnaby_r1_003",
+      "candidate_id": "burnaby_r1_native_v3_pack_0006_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.931
+    },
+    {
+      "rule_id": "burnaby_r1_098",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0004_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.931
+    }
+  ]
+}

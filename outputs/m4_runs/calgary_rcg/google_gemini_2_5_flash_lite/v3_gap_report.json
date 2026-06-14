@@ -1,0 +1,126 @@
+{
+  "report": "v3_gap_report",
+  "city": "calgary_rcg",
+  "pipeline": "native_m4_rag_llm",
+  "discovery_mode": "m4",
+  "advisory_gold_fields": true,
+  "safety_contract": "M4 extracts and repairs evidence packs; deterministic verifier decides.",
+  "pdf_page_count": 1053,
+  "source_chunk_count": 3558,
+  "pack_count": 1400,
+  "m4_source_corpus": {
+    "path": "/Users/thomas/Documents/Capstone_prototype/Burnaby_prototype/benchmark/source_corpus/calgary_rcg",
+    "corpus_version": "m4_source_corpus_1",
+    "numeric_clause_count": 1106,
+    "rule_like_numeric_clause_count": 1044,
+    "selected_rule_like_numeric_coverage": 1.0
+  },
+  "model": "google/gemini-2.5-flash-lite",
+  "candidate_rule_count": 306,
+  "verified_rule_count": 11,
+  "review_rule_count": 43,
+  "rejected_rule_count": 35,
+  "not_used_rule_count": 217,
+  "false_verified_count": 0,
+  "verified_source_support_failed_count": 0,
+  "verified_precision": 1.0,
+  "verified_or_review_recall": 1.0,
+  "extraction_coverage_recall": 1.0,
+  "verifier_retention_rate": 1.0,
+  "top_support_gaps": [
+    {
+      "reason": "upstream_extraction_requested_review",
+      "count": 273
+    },
+    {
+      "reason": "pipeline5_text_candidate_requires_review",
+      "count": 243
+    },
+    {
+      "reason": "outside_target_section",
+      "count": 240
+    },
+    {
+      "reason": "enumerated_branch_condition_missing",
+      "count": 99
+    },
+    {
+      "reason": "applies_to_not_supported",
+      "count": 93
+    },
+    {
+      "reason": "constraint_scope_not_supported",
+      "count": 56
+    },
+    {
+      "reason": "rule_object_not_supported",
+      "count": 50
+    },
+    {
+      "reason": "operator_not_supported",
+      "count": 38
+    },
+    {
+      "reason": "rule_object_unit_not_compatible",
+      "count": 24
+    },
+    {
+      "reason": "rule_family_direction_mismatch",
+      "count": 21
+    }
+  ],
+  "estimated_cost_usd": 0.09968,
+  "latency_ms": 1052737,
+  "extraction_error_count": 4,
+  "extraction_errors": [
+    {
+      "pack_id": "m4_pack_0095",
+      "chunk_id": "calgary_rcg_table_053_r001",
+      "section": "",
+      "page": 967,
+      "error": "model did not return valid JSON"
+    },
+    {
+      "pack_id": "m4_pack_0197",
+      "chunk_id": "calgary_rcg_995.3_2309",
+      "section": "995(3)",
+      "page": 788,
+      "error": "model did not return valid JSON"
+    },
+    {
+      "pack_id": "m4_pack_0409",
+      "chunk_id": "calgary_rcg_table_062_r002",
+      "section": "",
+      "page": 972,
+      "error": "OpenRouter request timed out after 90s"
+    },
+    {
+      "pack_id": "m4_pack_0448",
+      "chunk_id": "calgary_rcg_table_069_r004",
+      "section": "",
+      "page": 977,
+      "error": "OpenRouter request timed out after 90s"
+    }
+  ],
+  "missed_rules": {
+    "unextracted_gold_rule_ids": [],
+    "verifier_rejected_gold_rule_ids": [],
+    "not_used_gold_rule_ids": [
+      "cal_setback_front_deemed_001"
+    ],
+    "missed_verified_or_review_gold_rule_ids": []
+  },
+  "v2_comparison": {
+    "candidate_rule_count": 177,
+    "verified_rule_count": 8,
+    "review_rule_count": 27,
+    "false_verified_count": 0,
+    "verified_or_review_recall": 0.25,
+    "extraction_coverage_recall": 0.125
+  },
+  "interpretation": [
+    "M4 preserved the false_verified_count = 0 safety target for this city.",
+    "M4 improved verified-or-review recall versus V2.",
+    "Missed-rule IDs are evaluation-only and are not used by M4 runtime extraction."
+  ]
+}

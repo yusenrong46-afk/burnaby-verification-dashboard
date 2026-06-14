@@ -1,0 +1,96 @@
+{
+  "report": "v3_gap_report",
+  "city": "calgary_rcg",
+  "pipeline": "native_v3_rag_llm",
+  "advisory_gold_fields": true,
+  "safety_contract": "V3 extracts and repairs evidence packs; deterministic verifier decides.",
+  "pdf_page_count": 1053,
+  "source_chunk_count": 3558,
+  "pack_count": 500,
+  "model": "google/gemini-2.5-flash-lite",
+  "candidate_rule_count": 225,
+  "verified_rule_count": 10,
+  "review_rule_count": 28,
+  "rejected_rule_count": 28,
+  "not_used_rule_count": 159,
+  "false_verified_count": 0,
+  "verified_source_support_failed_count": 0,
+  "verified_precision": 1.0,
+  "verified_or_review_recall": 1.0,
+  "extraction_coverage_recall": 1.0,
+  "verifier_retention_rate": 1.0,
+  "top_support_gaps": [
+    {
+      "reason": "upstream_extraction_requested_review",
+      "count": 190
+    },
+    {
+      "reason": "pipeline5_text_candidate_requires_review",
+      "count": 179
+    },
+    {
+      "reason": "outside_target_section",
+      "count": 177
+    },
+    {
+      "reason": "enumerated_branch_condition_missing",
+      "count": 80
+    },
+    {
+      "reason": "constraint_scope_not_supported",
+      "count": 54
+    },
+    {
+      "reason": "applies_to_not_supported",
+      "count": 48
+    },
+    {
+      "reason": "rule_object_not_supported",
+      "count": 31
+    },
+    {
+      "reason": "operator_not_supported",
+      "count": 24
+    },
+    {
+      "reason": "rule_object_unit_not_compatible",
+      "count": 22
+    },
+    {
+      "reason": "rule_family_direction_mismatch",
+      "count": 15
+    }
+  ],
+  "estimated_cost_usd": 0.043808,
+  "latency_ms": 380201,
+  "extraction_error_count": 1,
+  "extraction_errors": [
+    {
+      "pack_id": "v3_pack_0472",
+      "chunk_id": "calgary_rcg_716.1_1711",
+      "section": "716(1)",
+      "page": 594,
+      "error": "model did not return valid JSON",
+      "source": "sqlite_cache"
+    }
+  ],
+  "missed_rules": {
+    "unextracted_gold_rule_ids": [],
+    "verifier_rejected_gold_rule_ids": [],
+    "not_used_gold_rule_ids": [],
+    "missed_verified_or_review_gold_rule_ids": []
+  },
+  "v2_comparison": {
+    "candidate_rule_count": 96,
+    "verified_rule_count": 7,
+    "review_rule_count": 12,
+    "false_verified_count": 0,
+    "verified_or_review_recall": 0.25,
+    "extraction_coverage_recall": 0.125
+  },
+  "interpretation": [
+    "V3 preserved the false_verified_count = 0 safety target for this city.",
+    "V3 improved verified-or-review recall versus V2.",
+    "Missed-rule IDs are evaluation-only and are not used by V3 runtime extraction."
+  ]
+}

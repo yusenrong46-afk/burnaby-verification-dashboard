@@ -1,0 +1,422 @@
+{
+  "purpose": "Reviewer-facing resolution labels. Advisory only; does not promote rules.",
+  "review_rule_count": 11,
+  "items": [
+    {
+      "rule_id": "vancouver_rs_004",
+      "candidate_id": "vancouver_rs_native_v3_pack_0002_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "floor_area",
+      "applies_to": "main habitable room",
+      "operator": ">=",
+      "value": "16.7",
+      "unit": "m2",
+      "condition": "no separate bedrooms",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_pack_0002_ev_001",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "main habitable room has floor area >= 16.7 m2 when no separate bedrooms.",
+      "evidence_sentence": "1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_009",
+      "semantic_score": 0.54,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.7; evidence_id v3_pack_0002_ev_001"
+    },
+    {
+      "rule_id": "vancouver_rs_005",
+      "candidate_id": "vancouver_rs_native_v3_pack_0002_002",
+      "rule_object": "floor_area",
+      "constraint_scope": "floor_area",
+      "applies_to": "bedroom",
+      "operator": ">=",
+      "value": "8.4",
+      "unit": "m2",
+      "condition": "no separate bedrooms",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_pack_0002_ev_002",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "bedroom has floor area >= 8.4 m2 when no separate bedrooms.",
+      "evidence_sentence": "at least 1 bedroom with a minimum size of 8.4 m2",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_009",
+      "semantic_score": 0.54,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.7; evidence_id v3_pack_0002_ev_002"
+    },
+    {
+      "rule_id": "vancouver_rs_011",
+      "candidate_id": "vancouver_rs_native_v3_pack_0007_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "4.9",
+      "unit": "m",
+      "condition": "from the single detached house or single detached house with secondary suite on the site",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_pack_0007_ev_001",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has setback >= 4.9 m when from the single detached house or single detached house with secondary suite on the site.",
+      "evidence_sentence": "A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_017",
+      "semantic_score": 0.69,
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.6; evidence_id v3_pack_0007_ev_001"
+    },
+    {
+      "rule_id": "vancouver_rs_012",
+      "candidate_id": "vancouver_rs_native_v3_pack_0007_002",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "0.9",
+      "unit": "m",
+      "condition": "from the ultimate rear property line",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_pack_0007_ev_002",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has setback >= 0.9 m when from the ultimate rear property line.",
+      "evidence_sentence": "(b) 0.9 m from the ultimate rear property line",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_017",
+      "semantic_score": 0.71,
+      "semantic_guardrail_blockers": [
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.6; evidence_id v3_pack_0007_ev_002"
+    },
+    {
+      "rule_id": "vancouver_rs_013",
+      "candidate_id": "vancouver_rs_native_v3_pack_0007_003",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "laneway house",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "condition": "from each side property line",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_pack_0007_ev_003",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has setback >= 1.2 m when from each side property line.",
+      "evidence_sentence": "(c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_018",
+      "semantic_score": 0.71,
+      "semantic_guardrail_blockers": [
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.6; evidence_id v3_pack_0007_ev_003"
+    },
+    {
+      "rule_id": "vancouver_rs_020",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0001_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "floor_area",
+      "applies_to": "main habitable room that is not a bedroom",
+      "operator": ">=",
+      "value": "16.7",
+      "unit": "m2",
+      "condition": "Except for a laneway house with no separate bedrooms",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_repair_pack_0001_ev_001",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "main habitable room that is not a bedroom has floor area >= 16.7 m2 when Except for a laneway house with no separate bedrooms.",
+      "evidence_sentence": "1 main habitable room that is not a bedroom, with a minimum size of 16.7 m2",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_009",
+      "semantic_score": 0.54,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.7; evidence_id v3_repair_pack_0001_ev_001"
+    },
+    {
+      "rule_id": "vancouver_rs_021",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0001_002",
+      "rule_object": "floor_area",
+      "constraint_scope": "floor_area",
+      "applies_to": "bedroom",
+      "operator": ">=",
+      "value": "8.4",
+      "unit": "m2",
+      "condition": "Except for a laneway house with no separate bedrooms",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_repair_pack_0001_ev_002",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "bedroom has floor area >= 8.4 m2 when Except for a laneway house with no separate bedrooms.",
+      "evidence_sentence": "at least 1 bedroom with a minimum size of 8.4 m2",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_009",
+      "semantic_score": 0.54,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.7; evidence_id v3_repair_pack_0001_ev_002"
+    },
+    {
+      "rule_id": "vancouver_rs_022",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0004_001",
+      "rule_object": "floor_area",
+      "constraint_scope": "floor_area",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": "0.25",
+      "unit": "m2",
+      "condition": "lesser of (a) 0.25 multiplied by the site area; and (b) 186 m2",
+      "support_gaps": [
+        "coefficient_operand_not_value"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_repair_pack_0004_ev_001",
+      "resolution": "close_match_but_guardrail_blocked",
+      "next_step_type": "manual_guardrail_check",
+      "human_next_step": "The meaning is close, but a core legal field differs. Do not promote unless the mismatch is resolved from source text.",
+      "candidate_sentence": "laneway house has floor area <= 0.25 m2 when lesser of (a) 0.25 multiplied by the site area; and (b) 186 m2.",
+      "evidence_sentence": "The floor area for a laneway house must not exceed the lesser of: (a) 0.25 multiplied by the site area; and (b) 186 m2.",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_009",
+      "semantic_score": 0.71,
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.2; evidence_id v3_repair_pack_0004_ev_001"
+    },
+    {
+      "rule_id": "vancouver_rs_024",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": "4.9",
+      "unit": "m",
+      "condition": "measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_repair_pack_0006_ev_001",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has setback <= 4.9 m when measured across the width of the site, from the single detached house or single detached house with secondary suite on the site.",
+      "evidence_sentence": "A laneway house must be at least: (a) 4.9 m, measured across the width of the site, from the single detached house or single detached house with secondary suite on the site",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_017",
+      "semantic_score": 0.53,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.6; evidence_id v3_repair_pack_0006_ev_001"
+    },
+    {
+      "rule_id": "vancouver_rs_025",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_002",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": "0.9",
+      "unit": "m",
+      "condition": "from the ultimate rear property line",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_repair_pack_0006_ev_002",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has setback <= 0.9 m when from the ultimate rear property line.",
+      "evidence_sentence": "(b) 0.9 m from the ultimate rear property line",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_017",
+      "semantic_score": 0.71,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.6; evidence_id v3_repair_pack_0006_ev_002"
+    },
+    {
+      "rule_id": "vancouver_rs_026",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_003",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "laneway house",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "condition": "from each side property line",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "source_page": 8,
+      "source_evidence_id": "v3_repair_pack_0006_ev_003",
+      "resolution": "upstream_extraction_issue",
+      "next_step_type": "fix_candidate_rule_family",
+      "human_next_step": "Send this back to extraction/normalization; the cited evidence does not prove the selected rule family.",
+      "candidate_sentence": "laneway house has setback <= 1.2 m when from each side property line.",
+      "evidence_sentence": "(c) 1.2 m from each side property line, except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+      "promotable_now": false,
+      "can_promote_after_evidence_fix": false,
+      "semantic_verified_rule_id": "vancouver_rs_018",
+      "semantic_score": 0.71,
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "missing_core_evidence"
+      ],
+      "bundle_rerun_decision": null,
+      "bundle_rerun_gaps": [],
+      "bundle_rerun_promotion_ready": false,
+      "where_to_find_it": "page 8; section 11.3.8.6; evidence_id v3_repair_pack_0006_ev_003"
+    }
+  ],
+  "summary": {
+    "resolution_counts": [
+      {
+        "name": "upstream_extraction_issue",
+        "count": 10
+      },
+      {
+        "name": "close_match_but_guardrail_blocked",
+        "count": 1
+      }
+    ],
+    "next_step_type_counts": [
+      {
+        "name": "fix_candidate_rule_family",
+        "count": 10
+      },
+      {
+        "name": "manual_guardrail_check",
+        "count": 1
+      }
+    ],
+    "promotable_now_count": 0,
+    "can_promote_after_evidence_fix_count": 0,
+    "duplicate_or_degraded_count": 0,
+    "recommendations": [
+      "No immediate resolution action dominates the queue."
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "pipeline": "v3_full_bylaw_bakeoff",
+  "city": "vancouver_rs",
+  "pdf_hash": "80f30e5782fe5a62b1a6a7f768713f93fdea120245739831394d6b14b0555111",
+  "config_hash": "bc7150136f4ded1d7a9c55cc1c38c585d4c123f3fd070a198cde39f5e1bc0d5e",
+  "prompt_template_hash": "9b32be46a52cbe5e89a3fb5c7f0b87247d55dc90ec66f9c3351ed36b579625d9",
+  "discovery_version": "v3_discovery_1",
+  "source": {
+    "source_layer": "v3_full_bylaw_discovery",
+    "discovery_version": "v3_discovery_1",
+    "source_chunk_count": 251,
+    "evidence_pack_count": 120,
+    "page_count": 21,
+    "first_page": 1,
+    "last_page": 21,
+    "packed_page_count": 19,
+    "lane_counts": [
+      {
+        "name": "family_query",
+        "count": 13
+      },
+      {
+        "name": "section_neighbor",
+        "count": 40
+      },
+      {
+        "name": "seed_discovery",
+        "count": 19
+      },
+      {
+        "name": "target_section_expansion",
+        "count": 48
+      }
+    ],
+    "advisory_only": true,
+    "city": "vancouver_rs",
+    "source_pdf": "/Users/thomas/Documents/Capstone_prototype/Burnaby_prototype/data/bylaws/vancouver_rs/source.pdf",
+    "pdf_hash": "80f30e5782fe5a62b1a6a7f768713f93fdea120245739831394d6b14b0555111",
+    "config_hash": "bc7150136f4ded1d7a9c55cc1c38c585d4c123f3fd070a198cde39f5e1bc0d5e",
+    "discovery_hash": "285c5acc27bf82ee630a60ab80477bdcd9edfc8ad9788e17c67bcbd183739f50",
+    "cache_db": "/Users/thomas/Documents/Capstone_prototype/Burnaby_prototype/outputs/v2_runs/verification_runs.sqlite"
+  },
+  "runs": [
+    {
+      "model": "google/gemini-2.5-flash-lite",
+      "output_dir": "/Users/thomas/Documents/Capstone_prototype/Burnaby_prototype/outputs/v3_runs/vancouver_rs/google_gemini_2_5_flash_lite",
+      "candidate_rule_count": 31,
+      "evidence_unit_count": 31,
+      "repair_pack_count": 14,
+      "estimated_cost_usd": 0.008153,
+      "latency_ms": 80318,
+      "verified_rule_count": 12,
+      "review_rule_count": 11,
+      "rejected_rule_count": 8,
+      "false_verified_count": 0,
+      "verified_precision": 1.0,
+      "verified_or_review_recall": 1.0
+    }
+  ],
+  "safety_contract": "LLM/RAG propose or explain; deterministic verifier decides."
+}

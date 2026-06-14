@@ -1,0 +1,58 @@
+[
+  {
+    "scope_key": "building_separation::building_separation",
+    "rule_object": "building_separation",
+    "constraint_scope": "building_separation",
+    "applies_to": "principal building",
+    "value": "0.6",
+    "unit": "m",
+    "operator": ">=",
+    "agreeing_sources": [
+      "native_rag_llm",
+      "native_v3_clause"
+    ],
+    "source_count": 2
+  },
+  {
+    "scope_key": "building_separation::building_separation",
+    "rule_object": "building_separation",
+    "constraint_scope": "building_separation",
+    "applies_to": "principal building",
+    "value": "5.0",
+    "unit": "m",
+    "operator": ">=",
+    "agreeing_sources": [
+      "native_rag_llm",
+      "native_v3_clause"
+    ],
+    "source_count": 2
+  },
+  {
+    "scope_key": "floor_area::floor_area",
+    "rule_object": "floor_area",
+    "constraint_scope": "floor_area",
+    "applies_to": "principal building",
+    "value": "75.0",
+    "unit": "m2",
+    "operator": "<=",
+    "agreeing_sources": [
+      "native_rag_llm",
+      "native_v3_clause"
+    ],
+    "source_count": 2
+  },
+  {
+    "scope_key": "height::height",
+    "rule_object": "height",
+    "constraint_scope": "height",
+    "applies_to": "privacy wall",
+    "value": "5.0",
+    "unit": "m",
+    "operator": "<=",
+    "agreeing_sources": [
+      "native_rag_llm",
+      "native_v3_clause"
+    ],
+    "source_count": 2
+  }
+]

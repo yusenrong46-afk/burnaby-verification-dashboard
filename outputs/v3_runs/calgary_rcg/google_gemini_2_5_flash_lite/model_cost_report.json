@@ -1,0 +1,25 @@
+{
+  "city": "calgary_rcg",
+  "model": "google/gemini-2.5-flash-lite",
+  "dry_run": false,
+  "pack_count": 580,
+  "cache_hit_count": 580,
+  "input_chars": 1434611,
+  "output_chars": 77663,
+  "estimated_input_tokens": 358653,
+  "estimated_output_tokens": 19417,
+  "estimated_cost_usd": 0.043808,
+  "latency_ms": 380201,
+  "extraction_error_count": 1,
+  "extraction_errors": [
+    {
+      "pack_id": "v3_pack_0472",
+      "chunk_id": "calgary_rcg_716.1_1711",
+      "section": "716(1)",
+      "page": 594,
+      "error": "model did not return valid JSON",
+      "source": "sqlite_cache"
+    }
+  ],
+  "pricing_note": "Estimated from character count and planning price table; OpenRouter billing is authoritative."
+}

@@ -1,0 +1,616 @@
+{
+  "schema_version": "1.0",
+  "family_rows": [
+    {
+      "family": "Setback",
+      "family_key": "setback",
+      "candidates": 23,
+      "verified": 18,
+      "review": 5,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "Pipeline5 text candidate requires review",
+      "top_hold_reason_code": "pipeline5_text_candidate_requires_review",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Height",
+      "family_key": "height",
+      "candidates": 22,
+      "verified": 20,
+      "review": 0,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "",
+      "top_hold_reason_code": "",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Building separation",
+      "family_key": "building_separation",
+      "candidates": 14,
+      "verified": 14,
+      "review": 0,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "",
+      "top_hold_reason_code": "",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Storeys",
+      "family_key": "storeys",
+      "candidates": 12,
+      "verified": 12,
+      "review": 0,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "",
+      "top_hold_reason_code": "",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Lot area",
+      "family_key": "lot_area",
+      "candidates": 8,
+      "verified": 2,
+      "review": 6,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "Pipeline5 text candidate requires review",
+      "top_hold_reason_code": "pipeline5_text_candidate_requires_review",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Lot coverage",
+      "family_key": "lot_coverage",
+      "candidates": 7,
+      "verified": 5,
+      "review": 2,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "Pipeline5 text candidate requires review",
+      "top_hold_reason_code": "pipeline5_text_candidate_requires_review",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Impervious surface",
+      "family_key": "impervious_surface",
+      "candidates": 6,
+      "verified": 6,
+      "review": 0,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "",
+      "top_hold_reason_code": "",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Dwelling units",
+      "family_key": "dwelling_units",
+      "candidates": 6,
+      "verified": 4,
+      "review": 2,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "Pipeline5 text candidate requires review",
+      "top_hold_reason_code": "pipeline5_text_candidate_requires_review",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Fire access corridor",
+      "family_key": "fire_access_corridor",
+      "candidates": 2,
+      "verified": 2,
+      "review": 2,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "Pipeline5 text candidate requires review",
+      "top_hold_reason_code": "pipeline5_text_candidate_requires_review",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Permitted use",
+      "family_key": "permitted_use",
+      "candidates": 2,
+      "verified": 0,
+      "review": 2,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "Pipeline5 text candidate requires review",
+      "top_hold_reason_code": "pipeline5_text_candidate_requires_review",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    },
+    {
+      "family": "Automatic sprinkler",
+      "family_key": "automatic_sprinkler",
+      "candidates": 1,
+      "verified": 1,
+      "review": 0,
+      "rejected": 0,
+      "not_used": 0,
+      "top_hold_reason": "",
+      "top_hold_reason_code": "",
+      "gold": 0,
+      "gold_verified": 0,
+      "gold_review": 0,
+      "coverage": null
+    }
+  ],
+  "gold_gaps": [],
+  "matrix": {
+    "columns": [
+      "Rowhouse (1-3 units)",
+      "SSMU 1-2 units",
+      "SSMU 3-4 units",
+      "SSMU 5-6 units (FTN only)"
+    ],
+    "rows": [
+      {
+        "label": "Dwelling units",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "3 units",
+            "rule_id": "burnaby_r1_010",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "2 units",
+            "rule_id": "burnaby_r1_011",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "4 units",
+            "rule_id": "burnaby_r1_012",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "6 units",
+            "rule_id": "burnaby_r1_013",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Lot area",
+        "cells": [
+          {
+            "status": "review",
+            "text": "281 m2",
+            "rule_id": "burnaby_r1_001",
+            "reason": "pipeline5_text_candidate_requires_review; applies_to_not_supported"
+          },
+          {
+            "status": "review",
+            "text": "281 m2",
+            "rule_id": "burnaby_r1_097",
+            "reason": "pipeline5_text_candidate_requires_review; constraint_scope_not_supported"
+          },
+          {
+            "status": "verified",
+            "text": "281 m2",
+            "rule_id": "burnaby_r1_014",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "281 m2",
+            "rule_id": "burnaby_r1_015",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Lot coverage",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "55 %",
+            "rule_id": "burnaby_r1_017",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "40 %",
+            "rule_id": "burnaby_r1_018",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "40 %",
+            "rule_id": "burnaby_r1_020",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "45 %",
+            "rule_id": "burnaby_r1_021",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Impervious surface",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "70 %",
+            "rule_id": "burnaby_r1_004",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "70 %",
+            "rule_id": "burnaby_r1_004",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "70 %",
+            "rule_id": "burnaby_r1_004",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "70 %",
+            "rule_id": "burnaby_r1_004",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Height - accessory",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "4.0 m",
+            "rule_id": "burnaby_r1_050",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "4.0 m",
+            "rule_id": "burnaby_r1_052",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "4.0 m",
+            "rule_id": "burnaby_r1_054",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "4.0 m",
+            "rule_id": "burnaby_r1_056",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Height - flat",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "9.5 m",
+            "rule_id": "burnaby_r1_027",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "9.5 m",
+            "rule_id": "burnaby_r1_029",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "9.5 m",
+            "rule_id": "burnaby_r1_031",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "9.5 m",
+            "rule_id": "burnaby_r1_033",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Height - sloping",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "10 m",
+            "rule_id": "burnaby_r1_026",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "10 m",
+            "rule_id": "burnaby_r1_028",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "10 m",
+            "rule_id": "burnaby_r1_030",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "10 m",
+            "rule_id": "burnaby_r1_032",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Storeys",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "3 storeys",
+            "rule_id": "burnaby_r1_034",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "2.5 storeys",
+            "rule_id": "burnaby_r1_035",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "3 storeys",
+            "rule_id": "burnaby_r1_036",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "3 storeys",
+            "rule_id": "burnaby_r1_037",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Storeys - accessory",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "1 storeys",
+            "rule_id": "burnaby_r1_051",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "1 storeys",
+            "rule_id": "burnaby_r1_053",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "1 storeys",
+            "rule_id": "burnaby_r1_055",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "1 storeys",
+            "rule_id": "burnaby_r1_057",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Setback - interior side yard",
+        "cells": [
+          {
+            "status": "review",
+            "text": "0 m",
+            "rule_id": "burnaby_r1_073",
+            "reason": "unresolved_exception_cue"
+          },
+          {
+            "status": "na",
+            "text": "n/a",
+            "rule_id": "",
+            "reason": ""
+          },
+          {
+            "status": "na",
+            "text": "n/a",
+            "rule_id": "",
+            "reason": ""
+          },
+          {
+            "status": "na",
+            "text": "n/a",
+            "rule_id": "",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Setback - lane yard",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "1.5 m",
+            "rule_id": "burnaby_r1_065",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "1.5 m",
+            "rule_id": "burnaby_r1_066",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "1.5 m",
+            "rule_id": "burnaby_r1_067",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "1.5 m",
+            "rule_id": "burnaby_r1_068",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Setback - setback",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "3.0 m",
+            "rule_id": "burnaby_r1_058",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "3.0 m",
+            "rule_id": "burnaby_r1_070",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "3.0 m",
+            "rule_id": "burnaby_r1_071",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "3.0 m",
+            "rule_id": "burnaby_r1_072",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Setback - street yard flanking",
+        "cells": [
+          {
+            "status": "na",
+            "text": "n/a",
+            "rule_id": "",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "3.0 m",
+            "rule_id": "burnaby_r1_060",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "3.0 m",
+            "rule_id": "burnaby_r1_062",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "3.0 m",
+            "rule_id": "burnaby_r1_064",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Setback - street yard front",
+        "cells": [
+          {
+            "status": "na",
+            "text": "n/a",
+            "rule_id": "",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "4.0 m",
+            "rule_id": "burnaby_r1_059",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "4.0 m",
+            "rule_id": "burnaby_r1_061",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "4.0 m",
+            "rule_id": "burnaby_r1_063",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "label": "Building separation - building separation",
+        "cells": [
+          {
+            "status": "verified",
+            "text": "6.0 m",
+            "rule_id": "burnaby_r1_083",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "2.4 m",
+            "rule_id": "burnaby_r1_077",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "2.4 m",
+            "rule_id": "burnaby_r1_078",
+            "reason": ""
+          },
+          {
+            "status": "verified",
+            "text": "2.4 m",
+            "rule_id": "burnaby_r1_079",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  }
+}

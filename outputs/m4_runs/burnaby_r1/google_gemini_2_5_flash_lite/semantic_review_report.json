@@ -1,0 +1,2112 @@
+{
+  "purpose": "Advisory semantic-signature comparison for review rules. It never verifies rules.",
+  "review_rule_count": 17,
+  "verified_rule_count": 84,
+  "high_similarity_count": 2,
+  "embedding": {
+    "available": false,
+    "model": null,
+    "mode": "structured_only",
+    "reason": "disabled",
+    "notes": [
+      "Embedding semantic review disabled; using structured signatures only."
+    ]
+  },
+  "items": [
+    {
+      "rule_id": "burnaby_r1_001",
+      "candidate_id": "burnaby_r1_native_m4_pack_0002_001",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_lots__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots____281__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "100_plus",
+        "value_numeric": 281.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area"
+        ],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "create",
+          "more",
+          "plan",
+          "registration",
+          "rowhouse",
+          "subdivision",
+          "time",
+          "two"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_014",
+          "semantic_score": 0.9,
+          "structured_score": 0.9,
+          "embedding_score": null,
+          "combined_semantic_score": 0.9,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 3 to 4 Units",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_015",
+          "semantic_score": 0.9,
+          "structured_score": 0.9,
+          "embedding_score": null,
+          "combined_semantic_score": 0.9,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_006",
+          "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.9,
+      "best_structured_score": 0.9,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.9,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_scope_review",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_094",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0001_001",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_lots__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots____281__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "min",
+        "value_bucket": "100_plus",
+        "value_numeric": 281.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area"
+        ],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "create",
+          "more",
+          "plan",
+          "registration",
+          "rowhouse",
+          "subdivision",
+          "time",
+          "two"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_014",
+          "semantic_score": 0.9,
+          "structured_score": 0.9,
+          "embedding_score": null,
+          "combined_semantic_score": 0.9,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 3 to 4 Units",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_015",
+          "semantic_score": 0.9,
+          "structured_score": 0.9,
+          "embedding_score": null,
+          "combined_semantic_score": 0.9,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_006",
+          "semantic_score": 0.16,
+          "structured_score": 0.16,
+          "embedding_score": null,
+          "combined_semantic_score": 0.16,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.9,
+      "best_structured_score": 0.9,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.9,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_scope_review",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_009",
+      "candidate_id": "burnaby_r1_native_m4_pack_0057_001",
+      "canonical_rule_key": "dwelling_units__dwelling_units__lot____6__units",
+      "signature": {
+        "rule_object": "dwelling_units",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 6.0,
+        "unit": "units",
+        "scope_concepts": [
+          "dwelling"
+        ],
+        "applies_to_concepts": [],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_013",
+          "semantic_score": 0.74,
+          "structured_score": 0.74,
+          "embedding_score": null,
+          "combined_semantic_score": 0.74,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "lot",
+          "verified_operator": "<=",
+          "verified_value": 6,
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_010",
+          "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "lot",
+          "verified_operator": "<=",
+          "verified_value": 3,
+          "verified_unit": "units"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_012",
+          "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "dwelling_units",
+          "verified_scope": "lot",
+          "verified_applies_to": "lot",
+          "verified_operator": "<=",
+          "verified_value": 4,
+          "verified_unit": "units"
+        }
+      ],
+      "best_semantic_score": 0.74,
+      "best_structured_score": 0.74,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.74,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [],
+      "semantic_next_action": "close_meaning_general_review",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_003",
+      "candidate_id": "burnaby_r1_native_m4_pack_0006_001",
+      "canonical_rule_key": "lot_coverage__lot_coverage__lot__heritage_lots____60__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 60.0,
+        "unit": "%",
+        "scope_concepts": [
+          "coverage"
+        ],
+        "applies_to_concepts": [],
+        "condition_concepts": [
+          "heritage"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_017",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Rowhouse 1 to 3 Units",
+          "verified_operator": "<=",
+          "verified_value": "55",
+          "verified_unit": "%"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Small-Scale Multi-Unit 1 to 2 Units",
+          "verified_operator": "<=",
+          "verified_value": "40",
+          "verified_unit": "%"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_019",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Small-Scale Multi-Unit 1 to 2 Units",
+          "verified_operator": "<=",
+          "verified_value": "30",
+          "verified_unit": "%"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.76,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_005",
+      "candidate_id": "burnaby_r1_native_m4_pack_0006_003",
+      "canonical_rule_key": "setback__setback__street_yards__heritage_lots____2_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "setback_area",
+          "street"
+        ],
+        "condition_concepts": [
+          "heritage"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_074",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_075",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_076",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.76,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_096",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0002_001",
+      "canonical_rule_key": "lot_coverage__lot_coverage__lot__heritage_lots____60__",
+      "signature": {
+        "rule_object": "lot_coverage",
+        "direction": "max",
+        "value_bucket": "10_to_100",
+        "value_numeric": 60.0,
+        "unit": "%",
+        "scope_concepts": [
+          "coverage"
+        ],
+        "applies_to_concepts": [],
+        "condition_concepts": [
+          "heritage"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_017",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Rowhouse 1 to 3 Units",
+          "verified_operator": "<=",
+          "verified_value": "55",
+          "verified_unit": "%"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Small-Scale Multi-Unit 1 to 2 Units",
+          "verified_operator": "<=",
+          "verified_value": "40",
+          "verified_unit": "%"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_019",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Small-Scale Multi-Unit 1 to 2 Units",
+          "verified_operator": "<=",
+          "verified_value": "30",
+          "verified_unit": "%"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.76,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_098",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0002_003",
+      "canonical_rule_key": "setback__setback__street_yards__heritage_lots____2_0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.0,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "setback_area",
+          "street"
+        ],
+        "condition_concepts": [
+          "heritage"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_074",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_075",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_076",
+          "semantic_score": 0.71,
+          "structured_score": 0.76,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.76,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_007",
+      "candidate_id": "burnaby_r1_native_m4_pack_0034_002",
+      "canonical_rule_key": "fire_access_corridor__height__all_dwelling_units__clear_of_any_projections_or_obstructions____2_5__m",
+      "signature": {
+        "rule_object": "fire_access_corridor",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.5,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "dwelling"
+        ],
+        "condition_concepts": [
+          "any",
+          "clear",
+          "obstruction",
+          "projection"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_006",
+          "semantic_score": 0.67,
+          "structured_score": 0.67,
+          "embedding_score": null,
+          "combined_semantic_score": 0.67,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_099",
+          "semantic_score": 0.67,
+          "structured_score": 0.67,
+          "embedding_score": null,
+          "combined_semantic_score": 0.67,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_065",
+          "semantic_score": 0.34,
+          "structured_score": 0.34,
+          "embedding_score": null,
+          "combined_semantic_score": 0.34,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.67,
+      "best_structured_score": 0.67,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.67,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_100",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0006_002",
+      "canonical_rule_key": "fire_access_corridor__height__all_dwelling_units__clear_of_any_projections_or_obstructions____2_5__m",
+      "signature": {
+        "rule_object": "fire_access_corridor",
+        "direction": "min",
+        "value_bucket": "1_to_3",
+        "value_numeric": 2.5,
+        "unit": "m",
+        "scope_concepts": [
+          "height"
+        ],
+        "applies_to_concepts": [
+          "dwelling"
+        ],
+        "condition_concepts": [
+          "any",
+          "clear",
+          "obstruction",
+          "projection"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_006",
+          "semantic_score": 0.67,
+          "structured_score": 0.67,
+          "embedding_score": null,
+          "combined_semantic_score": 0.67,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_099",
+          "semantic_score": 0.67,
+          "structured_score": 0.67,
+          "embedding_score": null,
+          "combined_semantic_score": 0.67,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "fire_access_corridor",
+          "verified_scope": "corridor_width",
+          "verified_applies_to": "All dwelling units",
+          "verified_operator": ">=",
+          "verified_value": "1.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_065",
+          "semantic_score": 0.34,
+          "structured_score": 0.34,
+          "embedding_score": null,
+          "combined_semantic_score": 0.34,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value_bucket"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.67,
+      "best_structured_score": 0.67,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.67,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_002",
+      "candidate_id": "burnaby_r1_native_m4_pack_0002_002",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_lots__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots____280__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "max",
+        "value_bucket": "100_plus",
+        "value_numeric": 280.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area"
+        ],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "create",
+          "more",
+          "plan",
+          "registration",
+          "rowhouse",
+          "subdivision",
+          "time",
+          "two"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_014",
+          "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 3 to 4 Units",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_015",
+          "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_017",
+          "semantic_score": 0.23,
+          "structured_score": 0.23,
+          "embedding_score": null,
+          "combined_semantic_score": 0.23,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Rowhouse 1 to 3 Units",
+          "verified_operator": "<=",
+          "verified_value": "55",
+          "verified_unit": "%"
+        }
+      ],
+      "best_semantic_score": 0.6,
+      "best_structured_score": 0.6,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.6,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_016",
+      "candidate_id": "burnaby_r1_v2matrix_007",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_1_to_3_units____280__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "max",
+        "value_bucket": "100_plus",
+        "value_numeric": 280.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area"
+        ],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_014",
+          "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 3 to 4 Units",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_015",
+          "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_017",
+          "semantic_score": 0.23,
+          "structured_score": 0.23,
+          "embedding_score": null,
+          "combined_semantic_score": 0.23,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Rowhouse 1 to 3 Units",
+          "verified_operator": "<=",
+          "verified_value": "55",
+          "verified_unit": "%"
+        }
+      ],
+      "best_semantic_score": 0.6,
+      "best_structured_score": 0.6,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.6,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_095",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0001_002",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_lots__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots____280__m2",
+      "signature": {
+        "rule_object": "lot_area",
+        "direction": "max",
+        "value_bucket": "100_plus",
+        "value_numeric": 280.0,
+        "unit": "m2",
+        "scope_concepts": [
+          "area"
+        ],
+        "applies_to_concepts": [
+          "rowhouse"
+        ],
+        "condition_concepts": [
+          "create",
+          "more",
+          "plan",
+          "registration",
+          "rowhouse",
+          "subdivision",
+          "time",
+          "two"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_014",
+          "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 3 to 4 Units",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_015",
+          "semantic_score": 0.6,
+          "structured_score": 0.6,
+          "embedding_score": null,
+          "combined_semantic_score": 0.6,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value_bucket",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_017",
+          "semantic_score": 0.23,
+          "structured_score": 0.23,
+          "embedding_score": null,
+          "combined_semantic_score": 0.23,
+          "semantic_guardrails": [
+            "same_direction"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Rowhouse 1 to 3 Units",
+          "verified_operator": "<=",
+          "verified_value": "55",
+          "verified_unit": "%"
+        }
+      ],
+      "best_semantic_score": 0.6,
+      "best_structured_score": 0.6,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.6,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_073",
+      "candidate_id": "burnaby_r1_v2matrix_064",
+      "canonical_rule_key": "setback__interior_side_yard__all_buildings__end_unit_lots____0__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "min",
+        "value_bucket": "under_1",
+        "value_numeric": 0.0,
+        "unit": "m",
+        "scope_concepts": [
+          "interior",
+          "setback_area",
+          "side"
+        ],
+        "applies_to_concepts": [],
+        "condition_concepts": [
+          "end"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_058",
+          "semantic_score": 0.593,
+          "structured_score": 0.593,
+          "embedding_score": null,
+          "combined_semantic_score": 0.593,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_069",
+          "semantic_score": 0.593,
+          "structured_score": 0.593,
+          "embedding_score": null,
+          "combined_semantic_score": 0.593,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_070",
+          "semantic_score": 0.593,
+          "structured_score": 0.593,
+          "embedding_score": null,
+          "combined_semantic_score": 0.593,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "setback",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "3.0",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.593,
+      "best_structured_score": 0.593,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.593,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "unresolved_exception_cue"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_008",
+      "candidate_id": "burnaby_r1_native_m4_pack_0044_001",
+      "canonical_rule_key": "setback__lane_yard__projections_into_required_lane_yards__in_the_r1_district____0_8__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "under_1",
+        "value_numeric": 0.8,
+        "unit": "m",
+        "scope_concepts": [
+          "lane",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "into",
+          "lane",
+          "projection",
+          "required",
+          "setback_area"
+        ],
+        "condition_concepts": [
+          "district"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_065",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_066",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_067",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_101",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0007_001",
+      "canonical_rule_key": "setback__lane_yard__projections_into_required_lane_yards__in_the_r1_district____0_8__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "under_1",
+        "value_numeric": 0.8,
+        "unit": "m",
+        "scope_concepts": [
+          "lane",
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "into",
+          "lane",
+          "projection",
+          "required",
+          "setback_area"
+        ],
+        "condition_concepts": [
+          "district"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_065",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_066",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_067",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "lane_yard",
+          "verified_applies_to": "All Buildings",
+          "verified_operator": ">=",
+          "verified_value": "1.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_092",
+      "candidate_id": "burnaby_r1_v3clause_m4_pack_0045_002",
+      "canonical_rule_key": "permitted_use__district__small_scale_multi_unit_housing__allowed",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "district"
+        ],
+        "applies_to_concepts": [
+          "housing",
+          "multi",
+          "scale",
+          "small"
+        ],
+        "condition_concepts": []
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_014",
+          "semantic_score": 0.053,
+          "structured_score": 0.053,
+          "embedding_score": null,
+          "combined_semantic_score": 0.053,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "lot_area",
+          "verified_scope": "lot_area",
+          "verified_applies_to": "Small-Scale Multi-Unit 3 to 4 Units",
+          "verified_operator": ">=",
+          "verified_value": "281",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_018",
+          "semantic_score": 0.053,
+          "structured_score": 0.053,
+          "embedding_score": null,
+          "combined_semantic_score": 0.053,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Small-Scale Multi-Unit 1 to 2 Units",
+          "verified_operator": "<=",
+          "verified_value": "40",
+          "verified_unit": "%"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_019",
+          "semantic_score": 0.053,
+          "structured_score": 0.053,
+          "embedding_score": null,
+          "combined_semantic_score": 0.053,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "lot_coverage",
+          "verified_scope": "lot_coverage",
+          "verified_applies_to": "Small-Scale Multi-Unit 1 to 2 Units",
+          "verified_operator": "<=",
+          "verified_value": "30",
+          "verified_unit": "%"
+        }
+      ],
+      "best_semantic_score": 0.053,
+      "best_structured_score": 0.053,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.053,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_093",
+      "candidate_id": "burnaby_r1_v3clause_m4_pack_0045_003",
+      "canonical_rule_key": "permitted_use__use__principal_use__group_home__allowed",
+      "signature": {
+        "rule_object": "permitted_use",
+        "direction": "allowed",
+        "value_bucket": "none",
+        "value_numeric": null,
+        "unit": null,
+        "scope_concepts": [
+          "use"
+        ],
+        "applies_to_concepts": [
+          "principal",
+          "use"
+        ],
+        "condition_concepts": [
+          "group",
+          "home"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "burnaby_r1_080",
+          "semantic_score": 0.023,
+          "structured_score": 0.023,
+          "embedding_score": null,
+          "combined_semantic_score": 0.023,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_081",
+          "semantic_score": 0.023,
+          "structured_score": 0.023,
+          "embedding_score": null,
+          "combined_semantic_score": 0.023,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "burnaby_r1_082",
+          "semantic_score": 0.023,
+          "structured_score": 0.023,
+          "embedding_score": null,
+          "combined_semantic_score": 0.023,
+          "semantic_guardrails": [],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_rule_object",
+            "different_unit"
+          ],
+          "match_reasons": [
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "building_separation",
+          "verified_scope": "building_separation",
+          "verified_applies_to": "Rear Principal Buildings",
+          "verified_operator": ">=",
+          "verified_value": "2.4",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.023,
+      "best_structured_score": 0.023,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.023,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_rule_object",
+        "different_unit"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ]
+    }
+  ],
+  "summary": {
+    "semantic_action_counts": [
+      {
+        "name": "no_close_verified_analogue",
+        "count": 10
+      },
+      {
+        "name": "close_meaning_guardrail_blocked",
+        "count": 4
+      },
+      {
+        "name": "close_meaning_scope_review",
+        "count": 2
+      },
+      {
+        "name": "close_meaning_general_review",
+        "count": 1
+      }
+    ]
+  },
+  "notes": [
+    "Semantic score uses normalized structured fields plus optional MiniLM embeddings.",
+    "Embedding similarity is advisory and cannot clear support gaps.",
+    "Guardrails cap high similarity when core legal fields disagree."
+  ]
+}

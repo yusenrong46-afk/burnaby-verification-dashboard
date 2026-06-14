@@ -1,0 +1,1550 @@
+{
+  "mode": "shadow_evidence_bundle_rerun",
+  "notes": [
+    "Bundle reruns do not mutate verified_rules.json.",
+    "Bundle score and safe_retry are advisory only.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no support gaps or risk flags."
+  ],
+  "attempt_count": 28,
+  "verified_after_rerun_count": 0,
+  "promotion_ready_count": 0,
+  "review_after_rerun_count": 12,
+  "rejected_after_rerun_count": 9,
+  "skipped_count": 15,
+  "attempts": [
+    {
+      "original_rule_id": "calgary_rcg_012",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0006_002",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0006_002__rerun__bundle_calgary_rcg_012",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "backyard suite",
+      "condition": "measured from grade at a rear property line shared with a parcel designated with a low density residential district",
+      "operator": "<=",
+      "value": "3.0",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0006_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_012",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "m4_pack_0006_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_013",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0006_003",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0006_003__rerun__bundle_calgary_rcg_013",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "backyard suite",
+      "condition": "increases at a 45 degree angle to a maximum of 7.5 metres at a proportional distance from the shared property line",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0006_ev_003",
+      "bundle_evidence_id": "bundle::calgary_rcg_013",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "m4_pack_0006_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_018",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0010_002",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0010_002__rerun__bundle_calgary_rcg_018",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "private garage",
+      "condition": "rear property line",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0010_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_018",
+      "bundle_evidence_ids": [
+        "m4_pack_0010_ev_002"
+      ],
+      "bundle_provenance_key": "section:352(1)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 1.0,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "m4_pack_0010_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0057_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0010_ev_002] 0.6 metres for any portion of the building used as a private garage",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_132",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0296_002",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0296_002__rerun__bundle_calgary_rcg_132",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "building",
+      "condition": "increases at a 45 degree angle",
+      "operator": "<=",
+      "value": "12.0",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0296_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_132",
+      "bundle_evidence_ids": [
+        "m4_pack_0296_ev_001",
+        "m4_pack_0296_ev_002",
+        "v3_repair_pack_0026_ev_001",
+        "v3_repair_pack_0026_ev_002"
+      ],
+      "bundle_provenance_key": "section:8(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "m4_pack_0296_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0296_ev_001 supports condition, operator, rule_object, scope, unit, value; v3_repair_pack_0026_ev_001 supports condition, operator, rule_object, scope, unit, value; v3_repair_pack_0026_ev_002 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0296_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 8.0 metres from grade; measured at the shared property line\n[m4_pack_0296_ev_002] and (b) increases at a 45 degree angle to a maximum of 12.0 metres\n[v3_repair_pack_0026_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 8.0 metres from grade; measured at the shared property line\n[v3_repair_pack_0026_ev_002] and (b) increases at a 45 degree angle to a maximum of 12.0 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_203",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0997_001",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0997_001__rerun__bundle_calgary_rcg_203",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "building",
+      "condition": "measured from grade at the property line that shares with the lane",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0997_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_203",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "m4_pack_0997_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "value_not_found_in_evidence",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_204",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0997_002",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0997_002__rerun__bundle_calgary_rcg_204",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "building",
+      "condition": "increases at a 45 degree angle to a depth",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0997_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_204",
+      "bundle_evidence_ids": [
+        "m4_pack_0384_ev_001",
+        "m4_pack_0384_ev_002",
+        "m4_pack_0997_ev_001",
+        "m4_pack_0997_ev_002"
+      ],
+      "bundle_provenance_key": "section:8(4)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "m4_pack_0997_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0384_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0384_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0997_ev_001 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0384_ev_001] the maximum building height: 56P2022 (a) is 7.5 metres measured from grade at the property line that the parcel designated as a low density residential district, H-GO, M-CG or M-G District shares with the lane\n[m4_pack_0384_ev_002] (b) increases at a 45 degree angle to a depth of 11.0 metres from the property line shared with the lane\n[m4_pack_0997_ev_001] (4) Where the parcel shares a property line with a lane that separates 56P2022 the parcel from a parcel designated as a low density residential district, H-GO, M-CG or M-G District the maximum building height: (a) is 7.5 metres measured from grade at the property line that 56P2022 the parcel designated as a low density residential district, H-GO, M-CG or M-G District shares with the lane; (b) increases at a 45 degree angle to a depth of 11.0 metres\n[m4_pack_0997_ev_002] (b) increases at a 45 degree angle to a depth of 11.0 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_218",
+      "original_candidate_id": "calgary_rcg_v3clause_m4_pack_0001_001",
+      "retry_candidate_id": "calgary_rcg_v3clause_m4_pack_0001_001__rerun__bundle_calgary_rcg_218",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "Backyard Suite",
+      "condition": "",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0001_v3_clause_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_218",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_003",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_v3_clause_ev_001"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "m4_pack_0001_v3_clause_ev_001 supports applies_to, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports applies_to, operator, rule_object, scope, unit, value; m4_pack_0001_ev_003 supports applies_to, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports applies_to, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_003] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_v3_clause_ev_001] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_249",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0026_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0026_002__rerun__bundle_calgary_rcg_249",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "building",
+      "condition": "increases at a 45 degree angle",
+      "operator": "<=",
+      "value": "12.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0026_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_249",
+      "bundle_evidence_ids": [
+        "m4_pack_0296_ev_001",
+        "m4_pack_0296_ev_002",
+        "v3_repair_pack_0026_ev_001",
+        "v3_repair_pack_0026_ev_002"
+      ],
+      "bundle_provenance_key": "section:8(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "v3_repair_pack_0026_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0296_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0296_ev_002 supports condition, operator, rule_object, scope, unit, value; v3_repair_pack_0026_ev_001 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0296_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 8.0 metres from grade; measured at the shared property line\n[m4_pack_0296_ev_002] and (b) increases at a 45 degree angle to a maximum of 12.0 metres\n[v3_repair_pack_0026_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 8.0 metres from grade; measured at the shared property line\n[v3_repair_pack_0026_ev_002] and (b) increases at a 45 degree angle to a maximum of 12.0 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_252",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0028_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0028_001__rerun__bundle_calgary_rcg_252",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "building",
+      "condition": "parcel shares a rear property line with a parcel 56P2022 designated as a low density residential district, H-GO, M-CG or M-G District",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0028_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_252",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.921,
+      "bundle_missing_fields": [],
+      "bundle_sentence": "v3_repair_pack_0028_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "value_not_found_in_evidence",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_002",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0001_002",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0001_002__rerun__bundle_calgary_rcg_002",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "minimum separation area required in subsection (3)",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0001_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_002",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_003",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_003 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_003] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_003",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0001_003",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0001_003__rerun__bundle_calgary_rcg_003",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "amenity space required in subsection (3.1)",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0001_ev_003",
+      "bundle_evidence_id": "bundle::calgary_rcg_003",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_003",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_0001_ev_003 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_003] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_004",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0001_004",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0001_004__rerun__bundle_calgary_rcg_004",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "principal building",
+      "condition": "of the length of the façade on each storey for the total combined length of all projections",
+      "operator": "<=",
+      "value": "40.0",
+      "unit": "%",
+      "original_evidence_id": "m4_pack_0001_ev_004",
+      "bundle_evidence_id": "bundle::calgary_rcg_004",
+      "bundle_evidence_ids": [
+        "m4_pack_0113_ev_001"
+      ],
+      "bundle_provenance_key": "section:375",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_0001_ev_004 supports condition, operator, unit, value; m4_pack_0113_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0754_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0754_ev_002 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "coefficient_operand_not_value"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0113_ev_001] The maximum parcel coverage is 40.0 per cent of the area of a parcel, which must be reduced by 21.0 square metres for each required motor vehicle parking stall that is not provided in a private garage.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_010",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0005_001",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0005_001__rerun__bundle_calgary_rcg_010",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "closest façade of the main residential building to the closest façade of a Backyard Suite",
+      "operator": ">=",
+      "value": "5.0",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0005_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_010",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_0005_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_125",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0253_001",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0253_001__rerun__bundle_calgary_rcg_125",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "measured at the shared property line",
+      "operator": "<=",
+      "value": "7.0",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0253_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_125",
+      "bundle_evidence_ids": [
+        "m4_pack_0253_ev_001",
+        "m4_pack_0253_ev_002",
+        "v3_repair_pack_0021_ev_001"
+      ],
+      "bundle_provenance_key": "section:541(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_0253_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0865_ev_001 supports condition, operator, rule_object, scope, unit, value; v3_repair_pack_0021_ev_001 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0253_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line\n[m4_pack_0253_ev_002] and (b) increases at a 45 degree angle to a maximum of 11.0 metres\n[v3_repair_pack_0021_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_126",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0253_002",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0253_002__rerun__bundle_calgary_rcg_126",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "increases at a 45 degree angle",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0253_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_126",
+      "bundle_evidence_ids": [
+        "m4_pack_0253_ev_001",
+        "m4_pack_0253_ev_002"
+      ],
+      "bundle_provenance_key": "section:541(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_0253_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0384_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0384_ev_002 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0253_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line\n[m4_pack_0253_ev_002] and (b) increases at a 45 degree angle to a maximum of 11.0 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_138",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0384_001",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0384_001__rerun__bundle_calgary_rcg_138",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "parcel shares a property line with a lane that separates the parcel from a parcel designated as a low density residential district, H-GO or M-CG District",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0384_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_138",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_0384_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_139",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0384_002",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0384_002__rerun__bundle_calgary_rcg_139",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "parcel shares a property line with a lane that separates the parcel from a parcel designated as a low density residential district, H-GO or M-CG District",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0384_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_139",
+      "bundle_evidence_ids": [
+        "m4_pack_0253_ev_001",
+        "m4_pack_0253_ev_002"
+      ],
+      "bundle_provenance_key": "section:541(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_0384_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0384_ev_001 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0253_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line\n[m4_pack_0253_ev_002] and (b) increases at a 45 degree angle to a maximum of 11.0 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_205",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_0999_001",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_0999_001__rerun__bundle_calgary_rcg_205",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "parcel shares a rear property line with a parcel 56P2022 designated as a low density residential district, H-GO, M-CG or M-G District",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0999_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_205",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_0999_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_217",
+      "original_candidate_id": "calgary_rcg_native_m4_pack_1391_001",
+      "retry_candidate_id": "calgary_rcg_native_m4_pack_1391_001__rerun__bundle_calgary_rcg_217",
+      "rule_object": "floor_area_ratio",
+      "constraint_scope": "floor_area_ratio",
+      "applies_to": "principal building",
+      "condition": "incentive",
+      "operator": "<=",
+      "value": "2.0",
+      "unit": "",
+      "original_evidence_id": "m4_pack_1391_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_217",
+      "bundle_evidence_ids": [
+        "m4_pack_1388_ev_001"
+      ],
+      "bundle_provenance_key": "section:8.7.6(a)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "m4_pack_1391_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_1388_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0381_ev_001 supports condition, operator, rule_object, scope, unit; m4_pack_0381_ev_002 supports condition, operator, rule_object, scope, unit.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_1388_ev_001] The maximum incentive floor area ratio for this item is 2.0.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_225",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_002__rerun__bundle_calgary_rcg_225",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "minimum separation area required in subsection (3)",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0001_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_225",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_003",
+        "m4_pack_0001_ev_004",
+        "v3_repair_pack_0001_ev_002"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "v3_repair_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_003 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_003] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[v3_repair_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_226",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_003",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_003__rerun__bundle_calgary_rcg_226",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "principal building",
+      "condition": "amenity space required in subsection (3.1)",
+      "operator": ">=",
+      "value": "0.6",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0001_ev_003",
+      "bundle_evidence_id": "bundle::calgary_rcg_226",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_003",
+        "m4_pack_0001_ev_004",
+        "v3_repair_pack_0001_ev_003"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "v3_repair_pack_0001_ev_003 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_003 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_003] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[v3_repair_pack_0001_ev_003] (3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street or a lane to a minimum building setback of 0.6 metres from the shared property line; and (ii) 0.6 metres into the minimum separation area required in subsection (3) or the amenity space required in subsection (3.1); (b) Projections described in subsection (a) must: (i) not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections; (ii) each contain a window; and (iii) each have a maximum length of 3.1 metres 10P2019",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_227",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_004",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0001_004__rerun__bundle_calgary_rcg_227",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "principal building",
+      "condition": "of the length of the façade on each storey for the total combined length of all projections",
+      "operator": "<=",
+      "value": "40.0",
+      "unit": "%",
+      "original_evidence_id": "v3_repair_pack_0001_ev_004",
+      "bundle_evidence_id": "bundle::calgary_rcg_227",
+      "bundle_evidence_ids": [
+        "m4_pack_0113_ev_001"
+      ],
+      "bundle_provenance_key": "section:375",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "v3_repair_pack_0001_ev_004 supports condition, operator, unit, value; m4_pack_0113_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0754_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0754_ev_002 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "coefficient_operand_not_value"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0113_ev_001] The maximum parcel coverage is 40.0 per cent of the area of a parcel, which must be reduced by 21.0 square metres for each required motor vehicle parking stall that is not provided in a private garage.",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_244",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0021_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0021_001__rerun__bundle_calgary_rcg_244",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "measured at the shared property line",
+      "operator": "<=",
+      "value": "7.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0021_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_244",
+      "bundle_evidence_ids": [
+        "m4_pack_0253_ev_001",
+        "m4_pack_0253_ev_002",
+        "v3_repair_pack_0021_ev_001"
+      ],
+      "bundle_provenance_key": "section:541(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "v3_repair_pack_0021_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0865_ev_001 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0253_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line\n[m4_pack_0253_ev_002] and (b) increases at a 45 degree angle to a maximum of 11.0 metres\n[v3_repair_pack_0021_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_245",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0021_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0021_002__rerun__bundle_calgary_rcg_245",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "increases at a 45 degree angle",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0021_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_245",
+      "bundle_evidence_ids": [
+        "m4_pack_0253_ev_001",
+        "m4_pack_0253_ev_002",
+        "v3_repair_pack_0021_ev_002"
+      ],
+      "bundle_provenance_key": "section:541(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "v3_repair_pack_0021_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0384_ev_001 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0253_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line\n[m4_pack_0253_ev_002] and (b) increases at a 45 degree angle to a maximum of 11.0 metres\n[v3_repair_pack_0021_ev_002] and (b) increases at a 45 degree angle to a maximum of 11.0 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_246",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0024_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0024_001__rerun__bundle_calgary_rcg_246",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "parcel shares a property line with a lane that separates the parcel from a parcel designated as a low density residential district, H-GO or M-CG District",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0024_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_246",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "v3_repair_pack_0024_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_247",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0024_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0024_002__rerun__bundle_calgary_rcg_247",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "parcel shares a property line with a lane that separates the parcel from a parcel designated as a low density residential district, H-GO or M-CG District",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0024_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_247",
+      "bundle_evidence_ids": [
+        "m4_pack_0253_ev_001",
+        "m4_pack_0253_ev_002"
+      ],
+      "bundle_provenance_key": "section:541(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "v3_repair_pack_0024_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0384_ev_001 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0253_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line\n[m4_pack_0253_ev_002] and (b) increases at a 45 degree angle to a maximum of 11.0 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_250",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0027_001",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0027_001__rerun__bundle_calgary_rcg_250",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "parcel shares a property line with a lane that separates the parcel from a parcel designated as a low density residential district, H-GO, M-CG or M-G District",
+      "operator": "<=",
+      "value": "7.5",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0027_ev_001",
+      "bundle_evidence_id": "bundle::calgary_rcg_250",
+      "bundle_evidence_ids": [
+        "m4_pack_0001_ev_002",
+        "m4_pack_0001_ev_004",
+        "m4_pack_0001_ev_005"
+      ],
+      "bundle_provenance_key": "section:352(3.2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "v3_repair_pack_0027_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_004 supports condition, operator, rule_object, scope, unit, value; m4_pack_0001_ev_005 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": false,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0001_ev_002] 0.6 metres into the minimum separation area required in subsection (3)\n[m4_pack_0001_ev_004] not exceed 40.0 per cent of the length of the façade on each storey for the total combined length of all projections\n[m4_pack_0001_ev_005] each have a maximum length of 3.1 metres",
+      "verified_rule": null
+    },
+    {
+      "original_rule_id": "calgary_rcg_251",
+      "original_candidate_id": "calgary_rcg_native_v3_repair_pack_0027_002",
+      "retry_candidate_id": "calgary_rcg_native_v3_repair_pack_0027_002__rerun__bundle_calgary_rcg_251",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "principal building",
+      "condition": "parcel shares a property line with a lane that separates the parcel from a parcel designated as a low density residential district, H-GO, M-CG or M-G District",
+      "operator": "<=",
+      "value": "11.0",
+      "unit": "m",
+      "original_evidence_id": "v3_repair_pack_0027_ev_002",
+      "bundle_evidence_id": "bundle::calgary_rcg_251",
+      "bundle_evidence_ids": [
+        "m4_pack_0253_ev_001",
+        "m4_pack_0253_ev_002"
+      ],
+      "bundle_provenance_key": "section:541(2)",
+      "bundle_evidence_type": "clause",
+      "bundle_score": 0.841,
+      "bundle_missing_fields": [
+        "applies_to"
+      ],
+      "bundle_sentence": "v3_repair_pack_0027_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_001 supports condition, operator, rule_object, scope, unit, value; m4_pack_0253_ev_002 supports condition, operator, rule_object, scope, unit, value; m4_pack_0384_ev_001 supports condition, operator, rule_object, scope, unit, value.",
+      "retry_decision": "not_used",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported",
+        "applies_to_not_supported",
+        "outside_target_section"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect bundle gaps and legal-risk flags before changing verifier behavior.",
+      "bundle_evidence_quote": "[m4_pack_0253_ev_001] the maximum building height: (a) is the greater of: (i) the highest geodetic elevation of a main residential building on the adjoining parcel; or (ii) 7.0 metres from grade; measured at the shared property line\n[m4_pack_0253_ev_002] and (b) increases at a 45 degree angle to a maximum of 11.0 metres",
+      "verified_rule": null
+    }
+  ],
+  "verified_after_rerun": [],
+  "promotion_ready": [],
+  "skipped": [
+    {
+      "rule_id": "calgary_rcg_001",
+      "candidate_id": "calgary_rcg_native_m4_pack_0001_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_006",
+      "candidate_id": "calgary_rcg_native_m4_pack_0002_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_007",
+      "candidate_id": "calgary_rcg_native_m4_pack_0002_002",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_011",
+      "candidate_id": "calgary_rcg_native_m4_pack_0006_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_207",
+      "candidate_id": "calgary_rcg_native_m4_pack_1005_002",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_224",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0001_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_230",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0009_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_231",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0009_002",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_258",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0032_002",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.85,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_020",
+      "candidate_id": "calgary_rcg_native_m4_pack_0012_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_241",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0018_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.771,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_015",
+      "candidate_id": "calgary_rcg_native_m4_pack_0009_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_021",
+      "candidate_id": "calgary_rcg_native_m4_pack_0013_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_236",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0014_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    },
+    {
+      "rule_id": "calgary_rcg_238",
+      "candidate_id": "calgary_rcg_native_v3_repair_pack_0015_001",
+      "reason": "evidence_intelligence_not_safe_retry",
+      "bundle_score": 0.541,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:rule_object"
+      ]
+    }
+  ]
+}

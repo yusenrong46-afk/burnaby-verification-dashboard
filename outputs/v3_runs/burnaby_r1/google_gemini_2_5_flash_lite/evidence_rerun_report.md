@@ -1,0 +1,28 @@
+# Evidence Rerun Report
+
+Shadow reruns test stronger evidence through the normal verifier. They do not automatically promote rules.
+
+- Attempts: 15
+- Verified after rerun: 1
+- Promotion ready: 1
+- Still review: 5
+- Rejected: 9
+- Skipped: 2
+
+## Top 25 Attempts
+
+- `burnaby_r1_001` -> `rejected` ready=False evidence=`v3_pack_0002_ev_002` gaps=pipeline5_text_candidate_requires_review, value_not_found_in_evidence
+- `burnaby_r1_002` -> `rejected` ready=False evidence=`v3_pack_0002_ev_001` gaps=pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, value_not_found_in_evidence
+- `burnaby_r1_005` -> `rejected` ready=False evidence=`v3_pack_0006_ev_001` gaps=pipeline5_text_candidate_requires_review, value_not_found_in_evidence, unit_not_found_in_evidence, rule_object_not_supported
+- `burnaby_r1_007` -> `rejected` ready=False evidence=`v3_pack_0034_ev_001` gaps=pipeline5_text_candidate_requires_review, value_not_found_in_evidence
+- `burnaby_r1_008` -> `review_needed` ready=False evidence=`v3_repair_pack_0008_ev_001` gaps=pipeline5_text_candidate_requires_review, rule_family_direction_mismatch
+- `burnaby_r1_009` -> `rejected` ready=False evidence=`v3_pack_0045_v3_clause_ev_002` gaps=pipeline5_text_candidate_requires_review, value_not_found_in_evidence
+- `burnaby_r1_092` -> `review_needed` ready=False evidence=`v3_pack_0045_v3_clause_ev_003` gaps=pipeline5_text_candidate_requires_review
+- `burnaby_r1_093` -> `review_needed` ready=False evidence=`v3_pack_0045_v3_clause_ev_002` gaps=pipeline5_text_candidate_requires_review
+- `burnaby_r1_094` -> `review_needed` ready=False evidence=`v3_pack_0002_ev_001` gaps=pipeline5_text_candidate_requires_review, applies_to_not_supported
+- `burnaby_r1_095` -> `rejected` ready=False evidence=`v3_pack_0002_ev_001` gaps=pipeline5_text_candidate_requires_review, rule_family_direction_mismatch, value_not_found_in_evidence
+- `burnaby_r1_097` -> `verified` ready=True evidence=`v3_pack_0002_ev_001` gaps=none
+- `burnaby_r1_100` -> `rejected` ready=False evidence=`v3_pack_0006_ev_001` gaps=pipeline5_text_candidate_requires_review, value_not_found_in_evidence, unit_not_found_in_evidence, rule_object_not_supported
+- `burnaby_r1_102` -> `rejected` ready=False evidence=`v3_pack_0034_ev_001` gaps=pipeline5_text_candidate_requires_review, value_not_found_in_evidence
+- `burnaby_r1_103` -> `review_needed` ready=False evidence=`v3_pack_0044_ev_001` gaps=pipeline5_text_candidate_requires_review, rule_family_direction_mismatch
+- `burnaby_r1_096` -> `rejected` ready=False evidence=`burnaby_r1_matrix_p2_t0_b0_001` gaps=value_not_found_in_evidence

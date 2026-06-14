@@ -1,0 +1,58 @@
+[
+  {
+    "scope_key": "dwelling_units::dwelling_units",
+    "rule_object": "dwelling_units",
+    "constraint_scope": "dwelling_units",
+    "applies_to": "lot",
+    "value": "6",
+    "unit": "units",
+    "operator": "<=",
+    "agreeing_sources": [
+      "native_rag_llm",
+      "native_v2_matrix"
+    ],
+    "source_count": 2
+  },
+  {
+    "scope_key": "impervious_surface::impervious_surface",
+    "rule_object": "impervious_surface",
+    "constraint_scope": "impervious_surface",
+    "applies_to": "lot",
+    "value": "70",
+    "unit": "%",
+    "operator": "<=",
+    "agreeing_sources": [
+      "native_rag_llm",
+      "native_v2_matrix"
+    ],
+    "source_count": 2
+  },
+  {
+    "scope_key": "lot_area::lot_area",
+    "rule_object": "lot_area",
+    "constraint_scope": "lot_area",
+    "applies_to": "rowhouse lots",
+    "value": "281",
+    "unit": "m2",
+    "operator": ">=",
+    "agreeing_sources": [
+      "native_rag_llm",
+      "native_v2_matrix"
+    ],
+    "source_count": 2
+  },
+  {
+    "scope_key": "lot_area::lot_area",
+    "rule_object": "lot_area",
+    "constraint_scope": "lot_area",
+    "applies_to": "rowhouse lots",
+    "value": "280",
+    "unit": "m2",
+    "operator": "<=",
+    "agreeing_sources": [
+      "native_rag_llm",
+      "native_v2_matrix"
+    ],
+    "source_count": 2
+  }
+]

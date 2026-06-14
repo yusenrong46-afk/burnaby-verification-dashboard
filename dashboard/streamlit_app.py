@@ -18,12 +18,28 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUTS_ROOT = ROOT / "outputs"
 OUTPUT_DIR_SUFFIX = "_slim_pipeline5_registry"
+NATIVE_RUN_ROOTS = ("m4_runs", "v3_runs", "v2_runs")
+NATIVE_RUN_LABELS = {"m4_runs": "M4", "v3_runs": "V3", "v2_runs": "V2"}
+PRODUCT_RUN_ROOTS = ("m4_runs", "v3_runs")
 # Pipeline 9 (graph-RAG extraction) verifier outputs sit next to the P5
 # registries as <city>_p9/. Same verifier, second upstream — the dashboard
 # treats them as another selectable "city" so reviewers see the P9 lane.
 P9_DIR_SUFFIX = "_p9"
-DEFAULT_OUTPUT_DIR = OUTPUTS_ROOT / "burnaby_r1_slim_pipeline5_registry"
+DEFAULT_OUTPUT_DIR = OUTPUTS_ROOT / "m4_runs" / "burnaby_r1" / "google_gemini_2_5_flash_lite"
+MVP_REPORT_PATH = OUTPUTS_ROOT / "mvp_verification" / "mvp_report.json"
+M4_SOURCE_AUDIT_PATH = OUTPUTS_ROOT / "topdown_validation" / "m4_source_pdf_audit.json"
+REFERENCE_DIR_SUFFIXES = (
+    OUTPUT_DIR_SUFFIX,
+    f"{OUTPUT_DIR_SUFFIX}_v21",
+    P9_DIR_SUFFIX,
+    f"{P9_DIR_SUFFIX}_v21",
+)
 SOURCE_DOCUMENT_URL = "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf"
+SOURCE_DOCUMENT_URLS = {
+    "burnaby_r1": SOURCE_DOCUMENT_URL,
+    "calgary_rcg": "https://www.calgary.ca/content/dam/www/pda/pd/documents/calgary-land-use-bylaw-1p2007/land-use-bylaw-1p2007.pdf",
+    "vancouver_rs": "https://former.vancouver.ca/commsvcs/BYLAWS/zoning/sec11.pdf",
+}
 
 # Color semantics used across the whole dashboard. Presentation only.
 STATUS_COLORS = {
@@ -32,27 +48,6 @@ STATUS_COLORS = {
     "rejected": "#cf222e",
     "not_used": "#57606a",
 }
-
-# Map centroids keyed by city prefix (first token of the output dir name).
-# Used only to center the DEMO map view; they are not parcel data.
-CITY_CENTROIDS = {
-    "burnaby": (49.2488, -122.9805),
-    "vancouver": (49.2827, -123.1207),
-    "calgary": (51.0447, -114.0719),
-}
-
-# gis_felt_export geometry targets that behave like lot-line setbacks.
-LOT_LINE_TARGETS = {
-    "front_lot_line": "front",
-    "rear_lot_line": "rear",
-    "side_lot_line": "side",
-    "lane": "lane",
-}
-
-# Demo lot used by the map, the 3D envelope, and the SVG fallback.
-# It is a representative rectangle, NOT a real parcel.
-DEMO_LOT_WIDTH_M = 30.0
-DEMO_LOT_DEPTH_M = 40.0
 
 # Active source-document URL for the selected city (module-level so the
 # many detail panels stay simple). Falls back to the Burnaby PDF.
@@ -64,7 +59,7 @@ PLAIN_LABELS = {
     "review": "Needs review",
     "review_needed": "Needs review",
     "rejected": "Rejected",
-    "not_used": "Out of scope",
+    "not_used": "Not used",
     "human_legal_review": "Needs legal review",
     "operator_review": "Check direction words",
     "rerun_with_evidence_bundle": "Try stronger evidence",
@@ -107,6 +102,16 @@ PLAIN_LABELS = {
     "unsafe / needs fix": "Unsafe / needs fix",
     "needs review": "Needs review",
     "missing": "Missing",
+    "mvp_safety_ready": "Safety ready",
+    "native_m4": "Native M4",
+    "native_v3": "Native V3",
+    "native_v2": "Native V2",
+    "legacy_p5": "Pipeline 5 reference",
+    "legacy_p9": "Pipeline 9 reference",
+    "legacy_internal_registry": "Internal registry reference",
+    "burnaby_r1": "Burnaby R1",
+    "vancouver_rs": "Vancouver RS",
+    "calgary_rcg": "Calgary RCG",
 }
 
 
@@ -120,11 +125,16 @@ HELP_TEXT = {
     "semantic_guardrail_review": "The meaning resembles a verified rule, but similarity is advisory only and cannot approve it.",
     "semantic_duplicate_review": "This may already be covered by a verified rule. Check before adding another rule.",
     "fix_candidate_or_rule_family_mapping": "The extractor likely assigned the wrong rule family, such as treating a definition as a numeric zoning rule.",
-    "defer_low_priority": "This item is probably outside the verifier's numeric GIS contract or has weak support.",
+    "defer_low_priority": "This item is probably outside the current numeric verification contract or has weak support.",
     "fail-closed": "The verifier avoided unsafe approvals, but too many true rules may still be stuck in review.",
     "scope mismatch": "The extractor produced many candidates outside the verifier's current numeric zoning contract.",
-    "unsafe / needs fix": "At least one false verified rule or false approval was found. Do not use this output for GIS.",
+    "unsafe / needs fix": "At least one false verified rule or false approval was found. Treat this output as unsafe until fixed.",
     "pass": "The benchmark gates passed for the current contract.",
+    "native_m4": "Current native exhaustive extraction path. RAG finds evidence; deterministic verification still decides.",
+    "native_v3": "Previous native extraction reference. Kept for comparison.",
+    "native_v2": "Older native extraction reference. Kept for comparison.",
+    "legacy_p5": "Legacy structured-registry reference. Kept for comparison, not the current product path.",
+    "legacy_p9": "Legacy graph-RAG reference. Kept for comparison, not the current product path.",
 }
 
 
@@ -174,6 +184,36 @@ RAG_QUERY_SYNONYMS = {
 }
 
 
+def native_run_root(output_dir: Path) -> str | None:
+    """Return m4_runs/v3_runs/v2_runs for a native model output dir."""
+    try:
+        root = output_dir.parent.parent.name
+    except IndexError:
+        return None
+    return root if root in NATIVE_RUN_ROOTS else None
+
+
+def native_lane_for_dir(output_dir: Path) -> str | None:
+    root = native_run_root(output_dir)
+    if root is None:
+        return None
+    return f"native_{NATIVE_RUN_LABELS[root].lower()}"
+
+
+def native_label_for_dir(output_dir: Path) -> str:
+    root = native_run_root(output_dir)
+    return NATIVE_RUN_LABELS.get(str(root), "Native")
+
+
+def preferred_reference_dir(stem: str, suffix: str, outputs_root: Path | None = None) -> Path:
+    """Prefer refreshed v21 reference artifacts, then fall back to old names."""
+    outputs_root = outputs_root or OUTPUTS_ROOT
+    versioned = outputs_root / f"{stem}{suffix}_v21"
+    if versioned.exists():
+        return versioned
+    return outputs_root / f"{stem}{suffix}"
+
+
 def discover_city_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
     """Return city output dirs that contain verified_rules.json, sorted by name.
 
@@ -182,17 +222,55 @@ def discover_city_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
     """
     if not outputs_root.is_dir():
         return []
-    return sorted(
+    standard = [
         path
         for path in outputs_root.iterdir()
         if path.is_dir()
-        and (path.name.endswith(OUTPUT_DIR_SUFFIX) or path.name.endswith(P9_DIR_SUFFIX))
+        and path.name.endswith(REFERENCE_DIR_SUFFIXES)
         and (path / "verified_rules.json").exists()
-    )
+    ]
+    native_runs = []
+    for root_name in NATIVE_RUN_ROOTS:
+        native_root = outputs_root / root_name
+        if not native_root.is_dir():
+            continue
+        for city_dir in native_root.iterdir():
+            if not city_dir.is_dir():
+                continue
+            for model_dir in city_dir.iterdir():
+                if model_dir.is_dir() and (model_dir / "verified_rules.json").exists():
+                    native_runs.append(model_dir)
+    return sorted([*standard, *native_runs], key=lambda path: str(path))
+
+
+def discover_product_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
+    """Return only the demo product path and its direct predecessor.
+
+    The workspace keeps V2/P5/P9 artifacts for audit and regression work, but
+    the final dashboard selector should stay focused: current M4 plus the V3
+    run M4 was built from.
+    """
+    if not outputs_root.is_dir():
+        return []
+    product_runs = []
+    for root_name in PRODUCT_RUN_ROOTS:
+        native_root = outputs_root / root_name
+        if not native_root.is_dir():
+            continue
+        for city_dir in native_root.iterdir():
+            if not city_dir.is_dir():
+                continue
+            model_dir = city_dir / "google_gemini_2_5_flash_lite"
+            if model_dir.is_dir() and (model_dir / "verified_rules.json").exists():
+                product_runs.append(model_dir)
+    order = {root: index for index, root in enumerate(PRODUCT_RUN_ROOTS)}
+    return sorted(product_runs, key=lambda path: (order.get(path.parent.parent.name, 99), city_stem_from_dir(path)))
 
 
 def city_key_from_dir(output_dir: Path) -> str:
     """Return the city prefix for an output dir, e.g. burnaby_r1_... -> burnaby."""
+    if native_run_root(output_dir):
+        return output_dir.parent.name.split("_")[0].lower()
     return output_dir.name.split("_")[0].lower()
 
 
@@ -205,7 +283,9 @@ def city_stem_from_dir(output_dir: Path) -> str:
     ('burnaby_r1'), which is why path lookups must come through here.
     """
     name = output_dir.name
-    for suffix in (OUTPUT_DIR_SUFFIX, P9_DIR_SUFFIX):
+    if native_run_root(output_dir):
+        return output_dir.parent.name
+    for suffix in (f"{OUTPUT_DIR_SUFFIX}_v21", OUTPUT_DIR_SUFFIX, f"{P9_DIR_SUFFIX}_v21", P9_DIR_SUFFIX):
         if name.endswith(suffix):
             return name[: -len(suffix)]
     return name
@@ -230,13 +310,29 @@ def bylaw_index_path(output_dir: Path) -> Path | None:
 
 def city_label_from_dir(output_dir: Path) -> str:
     """Human-readable label for the sidebar selector, e.g. 'Burnaby R1'."""
-    is_p9 = output_dir.name.endswith(P9_DIR_SUFFIX)
+    native_root = native_run_root(output_dir)
+    if native_root:
+        stem = city_stem_from_dir(output_dir)
+        parts = [part for part in stem.split("_") if part]
+        base = parts[0].capitalize() + (" " + " ".join(part.upper() for part in parts[1:]) if parts[1:] else "")
+        if native_root == "m4_runs":
+            return f"Current M4 \u2014 {base}"
+        if native_root == "v3_runs":
+            return f"Previous V3 \u2014 {base}"
+        return f"{NATIVE_RUN_LABELS[native_root]} reference \u2014 {base}"
+    is_p9 = output_dir.name.endswith(P9_DIR_SUFFIX) or output_dir.name.endswith(f"{P9_DIR_SUFFIX}_v21")
     stem = city_stem_from_dir(output_dir)
     parts = [part for part in stem.split("_") if part]
     if not parts:
         return output_dir.name
     label = parts[0].capitalize() + (" " + " ".join(part.upper() for part in parts[1:]) if parts[1:] else "")
     return f"{label} — Pipeline 9" if is_p9 else label
+
+
+def source_document_url_for_output(output_dir: Path, data: dict[str, Any]) -> str:
+    """Return the best source-PDF URL for the selected city output."""
+    _ = data
+    return SOURCE_DOCUMENT_URLS.get(city_stem_from_dir(output_dir), SOURCE_DOCUMENT_URL)
 
 
 def load_output_data(output_dir: Path) -> dict[str, Any]:
@@ -259,15 +355,524 @@ def load_output_data(output_dir: Path) -> dict[str, Any]:
         "bundle_promotion": _read_json(output_dir / "bundle_promotion_report.json", {"promoted_rules": []}),
         "source_repair": _read_json(output_dir / "source_repair_report.json", {"items": [], "status_counts": {}}),
         "review_assistant_packets": _read_json(output_dir / "review_assistant_packets.json", {"items": []}),
+        "coverage_report": _read_json(output_dir / "coverage_report.json", {}),
         "evidence_units": _read_json(output_dir / "evidence_units.json", []),
         "verified": _read_json(output_dir / "verified_rules.json", []),
         "review": _read_json(output_dir / "review_needed.json", []),
-        "felt_export": _read_json(output_dir / "felt_export_manifest.json", {}),
+        "rejected": _read_json(output_dir / "rejected_rules.json", []),
+        "not_used": _read_json(output_dir / "not_used.json", []),
+        "rule_candidates": _read_json(output_dir / "rule_candidates.json", []),
         "preflight": _read_json(output_dir / "pipeline5_extraction_preflight.json", {}),
-        # v2 additions (additive; every existing key above is unchanged).
-        "gis_export": _read_json(output_dir / "gis_felt_export.json", {}),
-        "buildable_envelope": _read_json(output_dir / "buildable_envelope.json", {}),
+        "model_cost": _read_json(output_dir / "model_cost_report.json", {}),
+        "source_summary": _read_json(output_dir / "source_summary.json", {}),
+        "examiner": _read_json(output_dir / "llm_examiner_report.json", {}),
+        "examiner_suggestions": _read_json(output_dir / "llm_examiner_suggestions.json", {"items": []}),
+        "examiner_rerun": _read_json(output_dir / "llm_examiner_rerun_plan.json", {"actions": []}),
     }
+
+
+# Funnel stage semantics. FIELD_GAPS are per-field proof failures (the words,
+# number, unit, or direction could not be grounded in the cited evidence);
+# POLICY_GAPS hold a fully-proven rule for a human by policy. A review rule
+# with any FIELD_GAP dies at the "fields proven" stage; one held only by
+# POLICY_GAPS is a parking lot, not a loss — the funnel renders it as "held".
+FIELD_GAPS = frozenset(
+    {
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "operator_not_supported",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported",
+        "rule_object_not_canonical",
+        "rule_object_unit_not_compatible",
+        "non_numeric_value_for_numeric_rule",
+        "text_condition_not_supported",
+        "table_applies_to_not_supported",
+        "table_condition_not_supported",
+        "table_rule_object_not_supported",
+        "table_operator_refuted",
+        "rule_family_direction_mismatch",
+        "cross_family_value_collision",
+        "source_evidence_id_not_found",
+    }
+)
+POLICY_GAPS = frozenset(
+    {
+        "pipeline5_text_candidate_requires_review",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review",
+        "table_fallback_candidate_requires_review",
+        "table_column_not_target_scope",
+        "unresolved_exception_cue",
+        "allowance_trigger_threshold",
+        "upstream_extraction_requested_review",
+    }
+)
+
+
+def _gap_codes(rule: dict[str, Any]) -> list[str]:
+    gaps = rule.get("support_gaps")
+    if not gaps:
+        gaps = rule.get("review_reasons") or []
+    return [str(gap) for gap in gaps]
+
+
+def _top_reasons(
+    rules: list[dict[str, Any]],
+    limit: int = 3,
+    only: frozenset[str] | None = None,
+) -> list[tuple[str, int]]:
+    # ``only`` scopes the story to the gate being explained: a review rule
+    # carries BOTH field and policy gaps, and each stage should show its own.
+    counts = Counter(
+        code
+        for rule in rules
+        for code in _gap_codes(rule)
+        if only is None or code in only
+    )
+    return [(_plain_label(code), count) for code, count in counts.most_common(limit)]
+
+
+def funnel_stages(data: dict[str, Any]) -> list[dict[str, Any]]:
+    """Candidate -> verified funnel rows. Pure data; rendering happens later.
+
+    Stages: extracted -> inside verification scope (- not_used) -> evidence-backed
+    (- rejected) -> fields proven (- review rules with FIELD_GAPS) ->
+    verified (- review rules held by policy only). Counts reconcile with the
+    bucket files by construction; if the candidate file is missing the first
+    stage falls back to the bucket sum so the funnel never lies.
+    """
+    verified = data.get("verified") or []
+    review = data.get("review") or []
+    rejected = data.get("rejected") or []
+    not_used = data.get("not_used") or []
+    bucket_total = len(verified) + len(review) + len(rejected) + len(not_used)
+    candidates = data.get("rule_candidates") or []
+    total = len(candidates) or bucket_total
+
+    field_held = [rule for rule in review if set(_gap_codes(rule)) & FIELD_GAPS]
+    policy_held = [rule for rule in review if not (set(_gap_codes(rule)) & FIELD_GAPS)]
+
+    stages = [
+        {
+            "stage": "extracted",
+            "label": "Candidates extracted",
+            "count": total,
+            "dropped": 0,
+            "outflow_status": "",
+            "top_reasons": [],
+        },
+        {
+            "stage": "in_contract",
+            "label": "Inside verification scope",
+            "count": total - len(not_used),
+            "dropped": len(not_used),
+            "outflow_status": "not_used",
+            "top_reasons": _top_reasons(not_used),
+        },
+        {
+            "stage": "evidence_backed",
+            "label": "Evidence-backed (not contradicted)",
+            "count": total - len(not_used) - len(rejected),
+            "dropped": len(rejected),
+            "outflow_status": "rejected",
+            "top_reasons": _top_reasons(rejected, only=FIELD_GAPS),
+        },
+        {
+            "stage": "fields_proven",
+            "label": "Every field proven",
+            "count": len(verified) + len(policy_held),
+            "dropped": len(field_held),
+            "outflow_status": "review",
+            "top_reasons": _top_reasons(field_held, only=FIELD_GAPS),
+        },
+        {
+            "stage": "verified",
+            "label": "Verified",
+            "count": len(verified),
+            "dropped": len(policy_held),
+            "outflow_status": "held",
+            "top_reasons": _top_reasons(policy_held, only=POLICY_GAPS),
+        },
+    ]
+    if total != bucket_total and candidates:
+        stages[0]["note"] = (
+            f"{total} extracted candidates vs {bucket_total} decided rules — "
+            "some candidates merge before decision."
+        )
+    return stages
+
+
+MATRIX_COLUMNS: list[tuple[str, str]] = [
+    ("rowhouse", "Rowhouse (1\u20133 units)"),
+    ("ssmu_1_2", "SSMU 1\u20132 units"),
+    ("ssmu_3_4", "SSMU 3\u20134 units"),
+    ("ssmu_5_6_ftn", "SSMU 5\u20136 units (FTN only)"),
+]
+
+_FOOTNOTE_SUFFIX_RE = re.compile(r"\s*\.\d+\s*$")
+
+
+def gold_path_for(output_dir: Path, root: Path = ROOT) -> Path | None:
+    """Gold rules file for an output dir's city stem, or None."""
+    path = root / "benchmark" / "gold" / f"{city_stem_from_dir(output_dir)}_gold_rules.json"
+    return path if path.exists() else None
+
+
+def applicability_buckets(rule: dict[str, Any]) -> set[str]:
+    """Map a rule onto the Burnaby 101.4 matrix columns.
+
+    Prefers the verifier's structured ``applicability`` block (selectors with
+    dwelling_type + unit_range); degrades to text-parsing applies_to/condition
+    for rules that predate it. A rule with no dwelling-type signal spans ALL
+    columns — that is how 101.4 actually reads (building-scoped rows like the
+    setbacks apply to every dwelling-type column).
+    """
+    buckets: set[str] = set()
+    block = rule.get("applicability") or {}
+    for selector in block.get("selectors") or []:
+        dwelling = selector.get("dwelling_type")
+        unit_range = selector.get("unit_range") or {}
+        low, high = unit_range.get("min"), unit_range.get("max")
+        exact = unit_range.get("exact")
+        if dwelling == "rowhouse":
+            buckets.add("rowhouse")
+        elif dwelling == "small_scale_multi_unit" or low is not None or exact is not None:
+            if (low, high) == (1, 2):
+                buckets.add("ssmu_1_2")
+            elif (low, high) == (3, 4) or exact in (3, 4):
+                buckets.add("ssmu_3_4")
+            elif (low, high) == (5, 6) or exact in (5, 6):
+                buckets.add("ssmu_5_6_ftn")
+            elif exact in (1, 2):
+                buckets.add("ssmu_1_2")
+            elif dwelling:
+                buckets.update({"ssmu_1_2", "ssmu_3_4", "ssmu_5_6_ftn"})
+    if buckets:
+        return buckets
+
+    text = _FOOTNOTE_SUFFIX_RE.sub("", f"{rule.get('applies_to') or ''}; {rule.get('condition') or ''}").lower()
+    if "rowhouse" in text:
+        buckets.add("rowhouse")
+    if "1 to 2" in text:
+        buckets.add("ssmu_1_2")
+    if "3 to 4" in text:
+        buckets.add("ssmu_3_4")
+    if "5 to 6" in text or "frequent transit" in text or "ftn" in text:
+        buckets.add("ssmu_5_6_ftn")
+    if buckets:
+        return buckets
+    return {key for key, _ in MATRIX_COLUMNS}
+
+
+def _matrix_row_key(rule: dict[str, Any]) -> tuple[str, str]:
+    family = str(rule.get("rule_object") or "")
+    scope = str(rule.get("constraint_scope") or "")
+    text = f"{rule.get('applies_to') or ''} {rule.get('condition') or ''}".lower()
+    qualifier = ""
+    if family in {"height", "storeys"}:
+        for role in ("front", "rear", "accessory"):
+            if role in text or role in scope:
+                qualifier = role
+                break
+        if family == "height":
+            if "sloping" in text:
+                qualifier += " sloping"
+            elif "flat" in text:
+                qualifier += " flat"
+    elif family == "setback":
+        qualifier = scope.replace("_", " ")
+    elif family == "building_separation":
+        qualifier = scope.replace("_", " ")
+    return (family, qualifier.strip())
+
+
+_MATRIX_ROW_ORDER = [
+    "dwelling_units", "lot_area", "lot_coverage", "impervious_surface",
+    "height", "storeys", "setback", "building_separation",
+]
+
+
+def matrix_cells(
+    verified: list[dict[str, Any]],
+    review: list[dict[str, Any]],
+    gold_rules: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Build the 101.4 matrix grid: rows = regulations, cols = dwelling buckets.
+
+    Cell precedence: verified > review > gold-only "missing" > "n/a". A cell
+    is only ever called MISSING when a gold row claims it should exist —
+    absence of gold means no claim, rendered honestly as n/a.
+    """
+    cells: dict[tuple[str, str], dict[str, dict[str, Any]]] = {}
+
+    def add(rule: dict[str, Any], status: str) -> None:
+        family = str(rule.get("rule_object") or "")
+        if family not in _MATRIX_ROW_ORDER:
+            return
+        row_key = _matrix_row_key(rule)
+        for bucket in applicability_buckets(rule):
+            slot = cells.setdefault(row_key, {}).get(bucket)
+            rank = {"verified": 0, "review": 1, "missing": 2}
+            if slot is None or rank[status] < rank[slot["status"]]:
+                value = f"{rule.get('value') or ''} {rule.get('unit') or ''}".strip()
+                reason = ""
+                if status == "review":
+                    reason = _plain_join((rule.get("support_gaps") or [])[:2])
+                if status == "missing":
+                    reason = "in gold, not yet proven"
+                cells.setdefault(row_key, {})[bucket] = {
+                    "status": status,
+                    "text": value or status,
+                    "rule_id": str(rule.get("rule_id") or rule.get("gold_id") or ""),
+                    "reason": reason,
+                }
+
+    for rule in verified:
+        add(rule, "verified")
+    for rule in review:
+        add(rule, "review")
+    for gold in gold_rules:
+        add(gold, "missing")
+
+    rows = []
+    for row_key in sorted(cells, key=lambda key: (_MATRIX_ROW_ORDER.index(key[0]), key[1])):
+        family, qualifier = row_key
+        label = _plain_label(family) + (f" \u2014 {qualifier}" if qualifier else "")
+        rows.append(
+            {
+                "label": label,
+                "cells": [
+                    cells[row_key].get(bucket, {"status": "na", "text": "n/a", "rule_id": "", "reason": ""})
+                    for bucket, _ in MATRIX_COLUMNS
+                ],
+            }
+        )
+    return {"columns": [label for _, label in MATRIX_COLUMNS], "rows": rows}
+
+
+def matrix_table_html(grid: dict[str, Any]) -> str:
+    """Render the matrix grid as themed HTML (pure string, testable)."""
+    head = "".join(f"<th>{html.escape(column)}</th>" for column in grid["columns"])
+    body_rows = []
+    for row in grid["rows"]:
+        cells = []
+        for cell in row["cells"]:
+            title = html.escape(f"{cell.get('rule_id') or ''} {cell.get('reason') or ''}".strip())
+            cells.append(
+                f"<td><span class='matrix-cell status-{cell['status']}' title='{title}'>"
+                f"{html.escape(str(cell['text']))}</span></td>"
+            )
+        body_rows.append(f"<tr><td class='row-label'>{html.escape(row['label'])}</td>{''.join(cells)}</tr>")
+    return (
+        "<table class='matrix-table'><thead><tr><th>Regulation</th>"
+        + head
+        + "</tr></thead><tbody>"
+        + "".join(body_rows)
+        + "</tbody></table>"
+    )
+
+
+def coverage_rows(
+    data: dict[str, Any],
+    gold_rules: list[dict[str, Any]],
+    benchmark: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Per-family coverage: candidates -> buckets -> gold coverage."""
+    metrics = (benchmark or {}).get("rule_metrics", {})
+    matched_verified = {m.get("gold_id") for m in metrics.get("matched_verified", []) if isinstance(m, dict)}
+    matched_review = {m.get("gold_id") for m in metrics.get("matched_review", []) if isinstance(m, dict)}
+
+    families: dict[str, dict[str, Any]] = {}
+
+    def slot(family: str) -> dict[str, Any]:
+        return families.setdefault(
+            family,
+            {"family": family, "candidates": 0, "verified": 0, "review": 0,
+             "rejected": 0, "not_used": 0, "gold": 0, "gold_verified": 0,
+             "gold_review": 0, "hold_reasons": Counter()},
+        )
+
+    for candidate in data.get("rule_candidates") or []:
+        slot(str(candidate.get("rule_object") or "?"))["candidates"] += 1
+    for bucket in ("verified", "review", "rejected", "not_used"):
+        for rule in data.get(bucket) or []:
+            entry = slot(str(rule.get("rule_object") or "?"))
+            entry[bucket] += 1
+            if bucket == "review":
+                for gap in _gap_codes(rule)[:1]:
+                    entry["hold_reasons"][gap] += 1
+    for gold in gold_rules:
+        entry = slot(str(gold.get("rule_object") or "?"))
+        entry["gold"] += 1
+        if gold.get("gold_id") in matched_verified:
+            entry["gold_verified"] += 1
+        elif gold.get("gold_id") in matched_review:
+            entry["gold_review"] += 1
+
+    rows = []
+    for family, entry in sorted(families.items(), key=lambda item: -item[1]["candidates"]):
+        top = entry["hold_reasons"].most_common(1)
+        rows.append(
+            {
+                "family": _plain_label(family),
+                "candidates": entry["candidates"],
+                "verified": entry["verified"],
+                "review": entry["review"],
+                "rejected": entry["rejected"],
+                "not_used": entry["not_used"],
+                "top_hold_reason": _plain_label(top[0][0]) if top else "",
+                "gold": entry["gold"],
+                "gold_verified": entry["gold_verified"],
+                "gold_review": entry["gold_review"],
+                "coverage": (entry["gold_verified"] / entry["gold"]) if entry["gold"] else None,
+            }
+        )
+    return rows
+
+
+def gold_gap_rows(benchmark: dict[str, Any], gold_rules: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Each gold rule the verifier has NOT proven, with where it sits."""
+    metrics = (benchmark or {}).get("rule_metrics", {})
+    matched_verified = {m.get("gold_id"): m for m in metrics.get("matched_verified", []) if isinstance(m, dict)}
+    matched_review = {m.get("gold_id"): m for m in metrics.get("matched_review", []) if isinstance(m, dict)}
+    missing_entirely = set(metrics.get("missed_verified_or_review_gold_rule_ids") or [])
+    rows = []
+    for gold in gold_rules:
+        gold_id = str(gold.get("gold_id") or "")
+        if gold_id in matched_verified:
+            continue
+        if gold_id in missing_entirely:
+            status, detail = "absent", "no candidate covers this rule \u2014 upstream extraction gap"
+        elif gold_id in matched_review:
+            status, detail = "review", f"covered in review as {matched_review[gold_id].get('rule_id')}"
+        else:
+            status, detail = "unproven", "not matched by any verified rule"
+        rows.append(
+            {
+                "gold_id": gold_id,
+                "family": _plain_label(str(gold.get("rule_object") or "")),
+                "claim": f"{_operator_short(gold.get('operator'))} {gold.get('value') or ''} {gold.get('unit') or ''}".strip(),
+                "applies_to": str(gold.get("applies_to") or ""),
+                "status": status,
+                "detail": detail,
+            }
+        )
+    return rows
+
+
+def city_comparison_rows(outputs_root: Path = OUTPUTS_ROOT) -> list[dict[str, Any]]:
+    """One row per city x lane for the portfolio grid."""
+    rows = []
+    for output_dir in discover_city_output_dirs(outputs_root):
+        native_lane = native_label_for_dir(output_dir) if native_run_root(output_dir) else None
+        is_p9 = output_dir.name.endswith(P9_DIR_SUFFIX) or output_dir.name.endswith(f"{P9_DIR_SUFFIX}_v21")
+        lane = native_lane or ("P9" if is_p9 else "P5")
+        benchmark = _read_json(output_dir / "benchmark_report.json", {})
+        summary = _read_json(output_dir / "slim_summary.json", {})
+        metrics = benchmark.get("rule_metrics", {})
+        rows.append(
+            {
+                "city": city_label_from_dir(output_dir).replace(" \u2014 Pipeline 9", ""),
+                "lane": lane,
+                "output_dir": str(output_dir),
+                "candidates": summary.get("candidate_rule_count"),
+                "verified": metrics.get("verified_rule_count"),
+                "review": metrics.get("review_rule_count"),
+                "precision": metrics.get("verified_precision"),
+                "gold_recall": metrics.get("verified_gold_recall"),
+                "false_verified": metrics.get("false_verified_count"),
+                "gate_status": pipeline_gate_status(summary, benchmark),
+            }
+        )
+    rows.sort(key=lambda row: (row["city"], row["lane"]))
+    return rows
+
+
+# Plotly defaults shared by every chart; a plain dict so tests can pin it
+# without importing plotly. Charts degrade to the HTML bar rows when plotly
+# is not installed — the dashboard keeps its runs-with-base-deps guarantee.
+PLOTLY_LAYOUT = {
+    "font": {"family": "Inter, -apple-system, sans-serif", "size": 13, "color": "#1f2328"},
+    "paper_bgcolor": "rgba(0,0,0,0)",
+    "plot_bgcolor": "rgba(0,0,0,0)",
+    "colorway": ["#0969da", "#1a7f37", "#9a6700", "#cf222e", "#57606a", "#8250df"],
+    "margin": {"l": 8, "r": 8, "t": 28, "b": 36},
+    "xaxis": {"gridcolor": "#eef1f4", "zerolinecolor": "#d0d7de"},
+    "yaxis": {"gridcolor": "#eef1f4", "zerolinecolor": "#d0d7de"},
+    "hoverlabel": {"bgcolor": "#1f2328"},
+    "legend": {"orientation": "h", "yanchor": "bottom", "y": 1.02},
+}
+
+
+def _themed_plotly(st: Any, figure_builder: Any) -> bool:
+    """Render a plotly figure with the shared layout; False -> caller falls back."""
+    try:
+        import plotly.graph_objects as go  # noqa: F401
+    except Exception:
+        return False
+    try:
+        figure = figure_builder()
+        figure.update_layout(**PLOTLY_LAYOUT)
+        st.plotly_chart(figure, width="stretch", config={"displayModeBar": False})
+        return True
+    except Exception as error:  # pragma: no cover - plotting failure is cosmetic
+        st.caption(f"Chart unavailable: {error}")
+        return False
+
+
+def _funnel_view(st: Any, data: dict[str, Any]) -> None:
+    """Where do candidates die? One funnel + the reasons at each gate."""
+    stages = funnel_stages(data)
+    st.markdown("#### Where candidates die")
+    st.caption(
+        "Each stage is a verification gate. Rules held for review are a parking "
+        "lot, not a loss — they wait for evidence or a human, never auto-promote."
+    )
+
+    def _build():
+        import plotly.graph_objects as go
+
+        return go.Figure(
+            go.Funnel(
+                y=[row["label"] for row in stages],
+                x=[row["count"] for row in stages],
+                textinfo="value+percent initial",
+                marker={"color": ["#0969da", "#218bff", "#54aeff", "#2da44e", "#1a7f37"]},
+                connector={"line": {"color": "#d0d7de", "width": 1}},
+            )
+        )
+
+    if not _themed_plotly(st, _build):
+        for row in stages:
+            share = row["count"] / max(stages[0]["count"], 1)
+            st.markdown(
+                f"<div class='bar-row'><span>{html.escape(row['label'])}</span>"
+                f"<div class='bar-track'><div class='bar-fill' style='width:{share * 100:.1f}%'></div></div>"
+                f"<b>{row['count']}</b></div>",
+                unsafe_allow_html=True,
+            )
+    outflows = [row for row in stages if row["dropped"]]
+    if outflows:
+        columns = st.columns(len(outflows))
+        for column, row in zip(columns, outflows):
+            with column:
+                status = "review" if row["outflow_status"] == "held" else row["outflow_status"]
+                color = STATUS_COLORS.get(status, "#57606a")
+                verb = "held for review" if row["outflow_status"] == "held" else row["outflow_status"].replace("_", " ")
+                st.markdown(
+                    f"<div class='guide-card'><b style='color:{color}'>{row['dropped']} {verb}</b>"
+                    + "".join(
+                        f"<span style='display:block'>{html.escape(reason)} ({count})</span>"
+                        for reason, count in row["top_reasons"]
+                    )
+                    + "</div>",
+                    unsafe_allow_html=True,
+                )
+    note = stages[0].get("note")
+    if note:
+        st.caption(note)
 
 
 def filter_triage_items(
@@ -330,30 +935,39 @@ def main() -> None:
 
     # City selector: scan outputs/ for any *_slim_pipeline5_registry dir with
     # verified_rules.json. New cities appear automatically; nothing is hardcoded.
-    city_dirs = discover_city_output_dirs()
-    if cli_output_dir.is_dir() and cli_output_dir not in city_dirs:
+    city_dirs = discover_product_output_dirs()
+    if (
+        cli_output_dir.is_dir()
+        and cli_output_dir not in city_dirs
+        and native_run_root(cli_output_dir) in PRODUCT_RUN_ROOTS
+    ):
         city_dirs = [*city_dirs, cli_output_dir]
     if not city_dirs:
         st.error(f"No verifier output directories found under `{OUTPUTS_ROOT}`.")
         return
-    default_index = next(
-        (index for index, path in enumerate(city_dirs) if path == cli_output_dir),
-        next((index for index, path in enumerate(city_dirs) if path.name.startswith("burnaby_r1")), 0),
-    )
     st.sidebar.header("Dataset")
-    output_dir = st.sidebar.selectbox(
-        "City and extractor",
-        city_dirs,
-        index=default_index,
-        format_func=city_label_from_dir,
-        help="Pick a city output. Pipeline 5 and Pipeline 9 are shown separately because they are different upstream extractors.",
+    PORTFOLIO = "__portfolio__"
+    selection = st.sidebar.selectbox(
+        "View",
+        [PORTFOLIO, *city_dirs],
+        index=0,
+        format_func=lambda item: "Start here \u2014 current M4 overview" if item == PORTFOLIO else city_label_from_dir(item),
+        help=(
+            "Start with the current M4 overview. Pick a city for drilldown. "
+            "Only current M4 and its V3 predecessor are shown here."
+        ),
     )
+    if selection == PORTFOLIO:
+        _render_header(st, "Current M4 Verification Status", portfolio=True)
+        _portfolio_page(st)
+        return
+    output_dir = selection
     city_key = city_key_from_dir(output_dir)
     city_label = city_label_from_dir(output_dir)
 
     data = load_output_data(output_dir)
-    source_url = str(data.get("gis_export", {}).get("source_url") or "").strip()
-    _ACTIVE_SOURCE["url"] = source_url or SOURCE_DOCUMENT_URL
+    source_url = source_document_url_for_output(output_dir, data)
+    _ACTIVE_SOURCE["url"] = source_url
     _ACTIVE_SOURCE["label"] = f"{city_label} bylaw PDF"
 
     st.sidebar.header("Review filters")
@@ -398,15 +1012,19 @@ def main() -> None:
     _render_kpis(st, data, filtered_items)
     _render_guidance(st)
 
-    # Reviewer-first layout: keep the first screen small, and move engineering
-    # diagnostics behind one advanced selector.
-    sections = st.tabs(["Status", "Review Workbench", "Source Evidence", "GIS Handoff", "Advanced"])
+    # Final-demo layout: summary first, then city drilldown, then human review.
+    # Engineering details and older smoke/debug artifacts stay behind Diagnostics.
+    sections = st.tabs(["Overview", "City Details", "Review Workbench", "Ask The Bylaw", "Diagnostics"])
 
     with sections[0]:
         _overview_tab(st, data)
-        _pipeline_comparison_tab(st, output_dir)
+        _funnel_view(st, data)
 
     with sections[1]:
+        _coverage_tab(st, data, output_dir)
+        _pipeline_comparison_tab(st, output_dir)
+
+    with sections[2]:
         review_tabs = st.tabs(["Review One Rule", "Compare With Verified", "Queue Summary"])
         with review_tabs[0]:
             _review_assistant_tab(
@@ -428,26 +1046,17 @@ def main() -> None:
         with review_tabs[2]:
             _review_router_tab(st, data["router"])
 
-    with sections[2]:
-        evidence_tabs = st.tabs(["Ask The Bylaw", "Evidence Repair", "Shadow Reruns"])
-        with evidence_tabs[0]:
-            _bylaw_tab(st, data)
-        with evidence_tabs[1]:
-            _repair_tab(st, data["repair"])
-        with evidence_tabs[2]:
-            _rerun_tab(st, data["rerun"], data["evidence_units"])
-
     with sections[3]:
-        gis_tabs = st.tabs(["Demo Map", "3D Envelope", "Felt Export"])
-        with gis_tabs[0]:
-            _map_tab(st, data, city_key)
-        with gis_tabs[1]:
-            _envelope_3d_tab(st, data, output_dir)
-        with gis_tabs[2]:
-            _felt_export_tab(st, data["felt_export"], output_dir)
+        _bylaw_tab(st, data)
 
     with sections[4]:
-        _advanced_tab(st, data, output_dir)
+        diagnostic_tabs = st.tabs(["Evidence Repair", "Shadow Reruns", "Advanced"])
+        with diagnostic_tabs[0]:
+            _repair_tab(st, data["repair"])
+        with diagnostic_tabs[1]:
+            _rerun_tab(st, data["rerun"], data["evidence_units"])
+        with diagnostic_tabs[2]:
+            _advanced_tab(st, data, output_dir)
 
 
 def _overview_tab(st: Any, data: dict[str, Any]) -> None:
@@ -493,6 +1102,36 @@ def _overview_tab(st: Any, data: dict[str, Any]) -> None:
         if flags:
             st.markdown("#### Potential extraction mistakes")
             _bar_table(st, dict(flags.most_common(12)))
+    _not_used_explanation(st, data)
+
+
+def _not_used_explanation(st: Any, data: dict[str, Any]) -> None:
+    not_used = data.get("not_used") or []
+    if not not_used:
+        return
+    reason_counts = Counter(
+        str(gap)
+        for rule in not_used
+        for gap in (rule.get("support_gaps") or [])
+    )
+    family_counts = Counter(str(rule.get("rule_object") or "unknown") for rule in not_used)
+    if reason_counts.get("outside_target_section"):
+        explanation = (
+            "These candidates came from the full bylaw but outside the configured target sections. "
+            "They are kept for audit and review, not trusted as verified rules."
+        )
+    else:
+        explanation = "These candidates are retained for traceability but are outside the current verified-rule output contract."
+    st.markdown("#### Out-of-scope candidates")
+    st.caption(explanation)
+    rows = [
+        {"type": "Reason", "name": _plain_label(name), "count": count}
+        for name, count in reason_counts.most_common(6)
+    ] + [
+        {"type": "Rule family", "name": _plain_label(name), "count": count}
+        for name, count in family_counts.most_common(6)
+    ]
+    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
 
 
 def _advanced_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
@@ -507,6 +1146,8 @@ def _advanced_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
             "Evidence Intelligence",
             "Evidence Bundle Rerun",
             "Safe Verifier Tuning",
+            "Run Cost & Source",
+            "Shadow Examiner",
             "Verification Structure",
             "Extraction Preflight",
         ],
@@ -524,6 +1165,10 @@ def _advanced_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
         _bundle_rerun_tab(st, data["bundle_rerun"])
     elif diagnostic == "Safe Verifier Tuning":
         _safe_tuning_tab(st, data["safe_tuning"], data["evidence_units"])
+    elif diagnostic == "Run Cost & Source":
+        _run_cost_source_tab(st, data)
+    elif diagnostic == "Shadow Examiner":
+        _shadow_examiner_tab(st, data)
     elif diagnostic == "Verification Structure":
         _structure_tab(st)
     elif diagnostic == "Extraction Preflight":
@@ -531,17 +1176,20 @@ def _advanced_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
 
 
 def pipeline_comparison_rows(output_dir: Path) -> list[dict[str, Any]]:
-    """Return P5/P9 comparison rows for the selected city stem."""
+    """Return native and legacy comparison rows for the selected city stem."""
     stem = city_stem_from_dir(output_dir)
     candidates = [
-        ("Pipeline 5", OUTPUTS_ROOT / f"{stem}{OUTPUT_DIR_SUFFIX}"),
-        ("Pipeline 9", OUTPUTS_ROOT / f"{stem}{P9_DIR_SUFFIX}"),
+        ("Native M4", OUTPUTS_ROOT / "m4_runs" / stem / "google_gemini_2_5_flash_lite"),
+        ("Native V3", OUTPUTS_ROOT / "v3_runs" / stem / "google_gemini_2_5_flash_lite"),
     ]
     rows: list[dict[str, Any]] = []
     for label, path in candidates:
+        if not path.exists():
+            continue
         summary = _read_json(path / "slim_summary.json", {})
         benchmark = _read_json(path / "benchmark_report.json", {})
         metrics = benchmark.get("rule_metrics", {})
+        cost = _read_json(path / "model_cost_report.json", {})
         gates = benchmark.get("quality_gates", {})
         status = pipeline_gate_status(summary, benchmark)
         rows.append(
@@ -557,8 +1205,9 @@ def pipeline_comparison_rows(output_dir: Path) -> list[dict[str, Any]]:
                 "precision": metrics.get("verified_precision"),
                 "false_verified": metrics.get("false_verified_count"),
                 "verified_or_review_recall": metrics.get("verified_or_review_recall"),
+                "estimated_cost": cost.get("estimated_cost_usd"),
                 "gate_status": status,
-                "status_meaning": HELP_TEXT.get(status, ""),
+                "status_meaning": HELP_TEXT.get("native_m4" if label == "Native M4" else status, HELP_TEXT.get(status, "")),
             }
         )
     return rows
@@ -572,8 +1221,9 @@ def pipeline_gate_status(summary: dict[str, Any], benchmark: dict[str, Any]) -> 
     if quality.get("passed") is True:
         return "pass"
     metrics = benchmark.get("rule_metrics", {})
+    proposal = benchmark.get("proposal_metrics", {})
     false_verified = int(metrics.get("false_verified_count") or 0)
-    false_approval = int(metrics.get("false_approval_count") or 0)
+    false_approval = int(proposal.get("false_approval_count") or metrics.get("false_approval_count") or 0)
     candidates = int(summary.get("candidate_rule_count") or 0)
     verified = int(summary.get("verified_rule_count") or 0)
     review = int(summary.get("review_rule_count") or 0)
@@ -590,9 +1240,103 @@ def pipeline_gate_status(summary: dict[str, Any], benchmark: dict[str, Any]) -> 
 
 def _pipeline_comparison_tab(st: Any, output_dir: Path) -> None:
     st.subheader("Pipeline Comparison")
-    st.caption("Same verifier, different upstream extractors. Failed gates are shown honestly; only verified rules are GIS-safe.")
+    st.caption(
+        "M4 is current. V3 is the direct predecessor M4 was built from. "
+        "Recall is benchmark recall, not full-bylaw completeness."
+    )
     rows = pipeline_comparison_rows(output_dir)
     st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+
+
+def _run_cost_source_tab(st: Any, data: dict[str, Any]) -> None:
+    st.subheader("Run Cost & Source")
+    st.caption("Source, retrieval, and cost artifacts are advisory/debug records. The verifier JSON files remain authoritative.")
+    source = data.get("source_summary") or {}
+    cost = data.get("model_cost") or {}
+    if not source and not cost:
+        st.info("No source or model-cost artifact found for this output.")
+        return
+    left, right = st.columns(2)
+    with left:
+        st.markdown("#### Full-bylaw source cache")
+        m4_source = source.get("m4_source_corpus") or {}
+        m4_manifest = _read_json(Path(m4_source.get("path") or "") / "manifest.json", {})
+        rows = [
+            {"metric": "Full PDF pages", "value": m4_manifest.get("page_count")},
+            {"metric": "Source chunks", "value": source.get("source_chunk_count")},
+            {"metric": "Evidence packs", "value": source.get("evidence_pack_count")},
+            {"metric": "Pages with chunks", "value": source.get("page_count")},
+            {"metric": "Last page", "value": source.get("last_page")},
+            {"metric": "Rule-like numeric clauses", "value": m4_source.get("rule_like_numeric_clause_count")},
+            {"metric": "Selected rule-like coverage", "value": m4_source.get("selected_rule_like_numeric_coverage")},
+            {"metric": "Discovery version", "value": source.get("discovery_version")},
+        ]
+        st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+        if source.get("lane_counts"):
+            st.markdown("#### Pack lanes")
+            _bar_rows(st, source.get("lane_counts", []), "name", "count")
+    with right:
+        st.markdown("#### Model run cost")
+        rows = [
+            {"metric": "Model", "value": cost.get("model")},
+            {"metric": "Estimated cost", "value": cost.get("estimated_cost_usd")},
+            {"metric": "Latency ms", "value": cost.get("latency_ms")},
+            {"metric": "Input tokens", "value": cost.get("estimated_input_tokens")},
+            {"metric": "Output tokens", "value": cost.get("estimated_output_tokens")},
+            {"metric": "Cache hits", "value": cost.get("cache_hit_count")},
+            {"metric": "Extraction errors", "value": cost.get("extraction_error_count")},
+        ]
+        st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+        st.caption(cost.get("pricing_note") or "Cost estimates are advisory.")
+
+
+def _shadow_examiner_tab(st: Any, data: dict[str, Any]) -> None:
+    st.subheader("Shadow Examiner")
+    st.caption("Private developer diagnostics. These findings cannot verify, reject, or approve rules.")
+    examiner = data.get("examiner") or {}
+    if not examiner:
+        st.info("No shadow examiner report found for this output.")
+        return
+    summary = examiner.get("summary", {})
+    st.table(
+        _display_rows(
+            [
+                {"metric": "Mode", "value": examiner.get("mode")},
+                {"metric": "Model", "value": examiner.get("model")},
+                {"metric": "Findings", "value": summary.get("finding_count")},
+                {"metric": "False verified", "value": summary.get("false_verified_count")},
+                {"metric": "Verified or review recall", "value": summary.get("verified_or_review_recall")},
+            ]
+        )
+    )
+    findings = examiner.get("findings", [])
+    if findings:
+        st.markdown("#### Findings")
+        st.dataframe(
+            _display_rows(
+                [
+                    {
+                        "severity": item.get("severity"),
+                        "category": item.get("category"),
+                        "claim": item.get("claim"),
+                        "suggested_test": item.get("suggested_test"),
+                    }
+                    for item in findings
+                ]
+            ),
+            width="stretch",
+            hide_index=True,
+        )
+        selected = st.selectbox("Finding detail", [item.get("finding_id") for item in findings])
+        item = next((row for row in findings if row.get("finding_id") == selected), findings[0])
+        st.markdown("#### Evidence")
+        st.code(str(item.get("evidence") or ""), language="text")
+        st.markdown("#### Suggestion")
+        st.write(item.get("suggestion") or "")
+    rerun = data.get("examiner_rerun") or {}
+    if rerun.get("actions"):
+        st.markdown("#### Suggested reruns")
+        st.dataframe(_display_rows(rerun.get("actions", [])), width="stretch", hide_index=True)
 
 
 def _packet_by_rule_id(packet_report: dict[str, Any]) -> dict[str, dict[str, Any]]:
@@ -690,6 +1434,46 @@ def _fallback_packet(rule: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def proof_trace_lines(rule: dict[str, Any], limit_per_field: int = 140) -> list[str]:
+    """Per-field proof labels as short lines for the assistant prompt.
+
+    The assistant previously saw only the rule JSON + gap codes; the proof
+    trace is the verifier's actual reasoning ("operator: not_enough_info —
+    'the proposed operator is not supported…'") and is what a reviewer needs
+    to answer "why is this in review?".
+    """
+    trace = rule.get("proof_trace") or rule.get("merged_proof_trace") or {}
+    lines: list[str] = []
+    for claim, item in trace.items():
+        if not isinstance(item, dict):
+            continue
+        label = str(item.get("label") or "")
+        reason = str(item.get("reason") or "")[:limit_per_field]
+        if label and label != "supported":
+            lines.append(f"{claim}: {label} \u2014 {reason}")
+    return lines[:8]
+
+
+def suggested_review_questions(packet: dict[str, Any]) -> list[str]:
+    """Gap-aware question chips for the review assistant."""
+    questions = ["Why is this rule in review?"]
+    by_gap = {
+        "operator_not_supported": "What wording would prove the direction (minimum/maximum)?",
+        "applies_to_not_supported": "What nearby text would prove what this applies to?",
+        "table_condition_not_supported": "Which condition is the table column carrying?",
+        "conditional_cell_condition_missing": "What lot-size branch does this value belong to?",
+        "column_qualifier_not_claimed": "What column qualifier is this claim missing?",
+        "unresolved_exception_cue": "What exception wording is unresolved here?",
+        "pipeline5_text_candidate_requires_review": "What second source would corroborate this rule?",
+        "rule_family_direction_mismatch": "Is this bound in the wrong direction for its family?",
+    }
+    for gap in packet.get("support_gaps") or []:
+        question = by_gap.get(str(gap))
+        if question and question not in questions:
+            questions.append(question)
+    return questions[:4]
+
+
 def _assistant_prompt(packet: dict[str, Any], question: str) -> str:
     context = packet.get("llm_context") or {
         "instruction": "Advisory only. Do not approve or verify.",
@@ -699,10 +1483,13 @@ def _assistant_prompt(packet: dict[str, Any], question: str) -> str:
         "repaired_context": (packet.get("source") or {}).get("repaired_context"),
         "suggested_next_action": packet.get("suggested_next_action"),
     }
+    trace_lines = proof_trace_lines(packet.get("candidate_rule") or packet)
+    proof_block = ("Proof trace (unproven fields):\n" + "\n".join(trace_lines) + "\n") if trace_lines else ""
     return (
         f"{context.get('instruction')}\n\n"
         f"Rule: {json.dumps(context.get('rule', {}), ensure_ascii=False)}\n"
         f"Support gaps: {', '.join(str(gap) for gap in context.get('support_gaps', [])) or 'none'}\n"
+        f"{proof_block}"
         f"Original evidence: {context.get('original_evidence') or ''}\n"
         f"Repaired context: {context.get('repaired_context') or ''}\n"
         f"Suggested next action: {context.get('suggested_next_action') or ''}\n\n"
@@ -1414,47 +2201,6 @@ def _safe_tuning_tab(st: Any, report: dict[str, Any], evidence_units: list[dict[
         st.json(item)
 
 
-def _felt_export_tab(st: Any, manifest: dict[str, Any], output_dir: Path) -> None:
-    st.subheader("Felt Export")
-    st.caption("These files are generated from verifier outputs for the Felt map. Only the verified-rule CSV is authoritative.")
-    if not manifest:
-        st.info("No Felt export manifest found. Rerun the slim verifier to generate Felt CSV outputs.")
-        return
-
-    rows = [
-        {
-            "file": manifest.get("verified_rules_csv"),
-            "use": "Authoritative verified rule table for Felt popups / GIS handoff",
-            "rows": manifest.get("verified_rule_count"),
-            "safe_for_geometry": "yes",
-        },
-        {
-            "file": manifest.get("review_rules_csv"),
-            "use": "Review queue visualization only",
-            "rows": manifest.get("review_rule_count"),
-            "safe_for_geometry": "no",
-        },
-        {
-            "file": manifest.get("evidence_rerun_csv"),
-            "use": "Shadow rerun inspection only",
-            "rows": manifest.get("rerun_attempt_count"),
-            "safe_for_geometry": "no",
-        },
-    ]
-    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
-    st.markdown("### Upload Guidance")
-    st.markdown(
-        """
-1. Upload `felt_verified_rules.csv` as the `Burnaby R1 Rules` table layer.
-2. Use `rule_id`, `rule_sentence`, `source_page`, and `evidence_quote` in popups.
-3. Keep `felt_review_rules.csv` and `felt_evidence_rerun.csv` visually separate from geometry-driving layers.
-4. Build setbacks/buildable areas from `gis_rule_contract.json`, not from review or rerun rows.
-"""
-    )
-    with st.expander("Manifest JSON"):
-        st.json({**manifest, "output_dir": str(output_dir)})
-
-
 def _structure_tab(st: Any) -> None:
     st.subheader("Verification Layer Structure")
     st.code(
@@ -1533,330 +2279,6 @@ def _preflight_tab(st: Any, preflight: dict[str, Any]) -> None:
         key: preflight.get(key)
         for key in ("pipeline5_dir", "notebook", "final_registry", "can_execute")
     })
-
-
-# ---------------------------------------------------------------------------
-# v2: demo-lot geometry helpers (shared by the Map tab, the SVG fallback, and
-# scripts/build_envelope_3d.py). All values come straight from verified-only
-# exports; the lot itself is a representative demo rectangle, NOT a parcel.
-# ---------------------------------------------------------------------------
-
-
-def lot_line_constraints(gis_export: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
-    """Group gis_felt_export constraints by demo-lot side (front/rear/side/lane)."""
-    grouped: dict[str, list[dict[str, Any]]] = {}
-    for constraint in gis_export.get("constraints", []):
-        side = LOT_LINE_TARGETS.get(str(constraint.get("geometry_target")))
-        if side is not None and constraint.get("value_numeric") is not None:
-            grouped.setdefault(side, []).append(constraint)
-    return grouped
-
-
-def governing_lot_line_setbacks(gis_export: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    """Most restrictive setback per side (max value, since setbacks are `>=`)."""
-    return {
-        side: max(entries, key=lambda entry: float(entry["value_numeric"]))
-        for side, entries in lot_line_constraints(gis_export).items()
-    }
-
-
-def export_max_height(gis_export: dict[str, Any]) -> dict[str, Any] | None:
-    """Tallest verified height constraint (m) from gis_felt_export constraints."""
-    candidates = [
-        constraint
-        for constraint in gis_export.get("constraints", [])
-        if "height" in str(constraint.get("parameter_key", ""))
-        and str(constraint.get("unit", "")).strip() == "m"
-        and constraint.get("value_numeric") is not None
-    ]
-    if not candidates:
-        return None
-    return max(candidates, key=lambda entry: float(entry["value_numeric"]))
-
-
-def envelope_governing_setbacks(envelope: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    """Most restrictive setback per lot line from buildable_envelope.json."""
-    governing: dict[str, dict[str, Any]] = {}
-    for lot_line, entries in (envelope.get("lot_line_setbacks_m") or {}).items():
-        valid = [entry for entry in entries if entry.get("value_numeric") is not None]
-        if valid:
-            governing[lot_line] = max(valid, key=lambda entry: float(entry["value_numeric"]))
-    return governing
-
-
-def envelope_max_height(envelope: dict[str, Any]) -> dict[str, Any] | None:
-    """Tallest verified height limit across roles, with its role attached."""
-    best: dict[str, Any] | None = None
-    for role, entries in (envelope.get("max_height_m_by_role") or {}).items():
-        for entry in entries:
-            if entry.get("value_numeric") is None:
-                continue
-            if best is None or float(entry["value_numeric"]) > float(best["value_numeric"]):
-                best = {**entry, "role": role}
-    return best
-
-
-def envelope_max_storeys(envelope: dict[str, Any]) -> dict[str, Any] | None:
-    """Highest verified storey limit across roles, with its role attached."""
-    best: dict[str, Any] | None = None
-    for role, entries in (envelope.get("max_storeys_by_role") or {}).items():
-        for entry in entries:
-            if entry.get("value_numeric") is None:
-                continue
-            if best is None or float(entry["value_numeric"]) > float(best["value_numeric"]):
-                best = {**entry, "role": role}
-    return best
-
-
-def demo_footprint_insets(setbacks: dict[str, dict[str, Any]]) -> dict[str, float]:
-    """Map governing buildable_envelope setbacks onto the 4-sided demo lot.
-
-    The demo lot has no lane, so lane setbacks are reported in tables but do
-    not inset the footprint.
-    """
-    return {
-        "front": float(setbacks.get("front_lot_line", {}).get("value_numeric") or 0.0),
-        "rear": float(setbacks.get("rear_lot_line", {}).get("value_numeric") or 0.0),
-        "side": float(setbacks.get("side_lot_line", {}).get("value_numeric") or 0.0),
-    }
-
-
-def build_envelope_svg(envelope: dict[str, Any]) -> str:
-    """Plan-view SVG fallback for the 3D envelope viewer.
-
-    Always renders without any optional dependency: demo lot rectangle, the
-    setback-inset buildable footprint, and annotated setback arrows carrying
-    values and governing rule ids. Returns well-formed standalone SVG.
-    """
-    setbacks = envelope_governing_setbacks(envelope or {})
-    insets = demo_footprint_insets(setbacks)
-    height = envelope_max_height(envelope or {})
-    storeys = envelope_max_storeys(envelope or {})
-
-    scale = 8.0  # px per metre
-    margin_x, margin_y = 200.0, 60.0
-    lot_w, lot_d = DEMO_LOT_WIDTH_M * scale, DEMO_LOT_DEPTH_M * scale
-    width, height_px = lot_w + 2 * margin_x, lot_d + 2 * margin_y + 40
-    lot_x, lot_y = margin_x, margin_y  # rear (top) at lot_y, front (bottom) at lot_y + lot_d
-
-    fp_x = lot_x + insets["side"] * scale
-    fp_y = lot_y + insets["rear"] * scale
-    fp_w = max(lot_w - 2 * insets["side"] * scale, 0.0)
-    fp_h = max(lot_d - (insets["front"] + insets["rear"]) * scale, 0.0)
-
-    def _label(entry: dict[str, Any], name: str) -> str:
-        value = entry.get("value_numeric")
-        return f"{name} {value} {entry.get('unit') or 'm'} ({entry.get('rule_id')})" if value is not None else name
-
-    parts: list[str] = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:g} {height_px:g}" '
-        f'width="{width:g}" height="{height_px:g}" role="img" aria-label="Buildable envelope plan view">',
-        "<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'>"
-        "<path d='M 0 0 L 10 5 L 0 10 z' fill='#cf222e'/></marker></defs>",
-        f"<rect x='0' y='0' width='{width:g}' height='{height_px:g}' fill='#ffffff'/>",
-        f"<text x='{lot_x:g}' y='{margin_y - 32:g}' font-size='16' font-weight='700' fill='#172033'>"
-        f"{html.escape(str(envelope.get('city') or ''))} {html.escape(str(envelope.get('zone') or ''))} buildable envelope — plan view</text>",
-        f"<text x='{lot_x:g}' y='{margin_y - 14:g}' font-size='12' fill='#57606a'>"
-        f"Demo lot {DEMO_LOT_WIDTH_M:g} m x {DEMO_LOT_DEPTH_M:g} m (representative, not a real parcel). Front lot line at bottom.</text>",
-        # Lot rectangle.
-        f"<rect x='{lot_x:g}' y='{lot_y:g}' width='{lot_w:g}' height='{lot_d:g}' fill='#f1f4f7' stroke='#57606a' stroke-width='2'/>",
-        # Buildable footprint after governing setbacks.
-        f"<rect x='{fp_x:g}' y='{fp_y:g}' width='{fp_w:g}' height='{fp_h:g}' fill='#1a7f37' fill-opacity='0.22' stroke='#1a7f37' stroke-width='2'/>",
-    ]
-
-    mid_x, mid_y = lot_x + lot_w / 2, lot_y + lot_d / 2
-    arrows: list[tuple[str, str, float, float, float, float, float, float, str]] = []
-    front = setbacks.get("front_lot_line")
-    if front:
-        arrows.append(("front", _label(front, "front"), mid_x, lot_y + lot_d, mid_x, fp_y + fp_h, mid_x + 8, lot_y + lot_d - insets["front"] * scale / 2, "start"))
-    rear = setbacks.get("rear_lot_line")
-    if rear:
-        arrows.append(("rear", _label(rear, "rear"), mid_x, lot_y, mid_x, fp_y, mid_x + 8, lot_y + insets["rear"] * scale / 2 + 4, "start"))
-    side = setbacks.get("side_lot_line")
-    if side:
-        arrows.append(("side-left", _label(side, "side"), lot_x, mid_y, fp_x, mid_y, lot_x - 8, mid_y - 8, "end"))
-        arrows.append(("side-right", _label(side, "side"), lot_x + lot_w, mid_y, fp_x + fp_w, mid_y, lot_x + lot_w + 8, mid_y - 8, "start"))
-    for _key, label, x1, y1, x2, y2, tx, ty, anchor in arrows:
-        parts.append(
-            f"<line x1='{x1:g}' y1='{y1:g}' x2='{x2:g}' y2='{y2:g}' stroke='#cf222e' stroke-width='2' marker-end='url(#arrow)'/>"
-        )
-        parts.append(
-            f"<text x='{tx:g}' y='{ty:g}' font-size='12' fill='#172033' text-anchor='{anchor}'>{html.escape(label)}</text>"
-        )
-
-    notes_y = lot_y + lot_d + 24
-    note_lines: list[str] = []
-    if height:
-        note_lines.append(_label(height, "max height") + f" — {height.get('role')}" + (f", {height.get('condition')}" if height.get("condition") else ""))
-    if storeys:
-        note_lines.append(_label(storeys, "max storeys") + f" — {storeys.get('role')}")
-    lane = setbacks.get("lane_lot_line")
-    if lane:
-        note_lines.append(_label(lane, "lane setback") + " — demo lot has no lane; shown for reference only")
-    for index, line in enumerate(note_lines):
-        parts.append(
-            f"<text x='{lot_x:g}' y='{notes_y + index * 16:g}' font-size='12' fill='#57606a'>{html.escape(line)}</text>"
-        )
-    parts.append("</svg>")
-    return "".join(parts)
-
-
-def _map_tab(st: Any, data: dict[str, Any], city_key: str) -> None:
-    """City-centered pydeck map with a DEMO parcel showing verified constraints."""
-    st.subheader("Constraint Map (Demo Parcel)")
-    st.caption(
-        f"Representative {DEMO_LOT_WIDTH_M:g} m x {DEMO_LOT_DEPTH_M:g} m demo lot placed at the {city_key} city "
-        "centroid. It is NOT a real parcel; it only visualizes verified setback and height constraints."
-    )
-    gis_export = data.get("gis_export", {})
-    if not gis_export:
-        st.info("No gis_felt_export.json found for this city. Rerun the slim verifier.")
-        return
-    try:
-        import pydeck as pdk
-    except ModuleNotFoundError:
-        st.info("pydeck not installed — pip install -e .[map]")
-        return
-    centroid = CITY_CENTROIDS.get(city_key)
-    if centroid is None:
-        st.info(f"No map centroid configured for city prefix `{city_key}`. Add one to CITY_CENTROIDS.")
-        return
-
-    import math
-
-    lat0, lon0 = centroid
-    m_per_deg_lat = 111_320.0
-    m_per_deg_lon = m_per_deg_lat * math.cos(math.radians(lat0))
-
-    def _corner(dx_m: float, dy_m: float) -> list[float]:
-        return [lon0 + dx_m / m_per_deg_lon, lat0 + dy_m / m_per_deg_lat]
-
-    half_w, half_d = DEMO_LOT_WIDTH_M / 2, DEMO_LOT_DEPTH_M / 2
-
-    def _rect(x_min: float, x_max: float, y_min: float, y_max: float) -> list[list[float]]:
-        return [_corner(x_min, y_min), _corner(x_max, y_min), _corner(x_max, y_max), _corner(x_min, y_max)]
-
-    def _tooltip(constraint: dict[str, Any], note: str) -> str:
-        quote = _short_display_quote(constraint.get("source_quote", ""), 180)
-        return (
-            f"<b>{html.escape(str(constraint.get('parameter_key')))}</b><br/>"
-            f"{html.escape(str(constraint.get('operator')))} {html.escape(str(constraint.get('value')))} "
-            f"{html.escape(str(constraint.get('unit') or ''))}<br/>"
-            f"rule: {html.escape(str(constraint.get('source_rule_id')))}<br/>"
-            f"{html.escape(note)}<br/><i>{html.escape(quote)}</i>"
-        )
-
-    setbacks = governing_lot_line_setbacks(gis_export)
-    flat_polygons: list[dict[str, Any]] = [
-        {
-            "polygon": _rect(-half_w, half_w, -half_d, half_d),
-            "fill": [87, 96, 106, 40],
-            "tooltip": f"<b>Demo lot</b><br/>{DEMO_LOT_WIDTH_M:g} m x {DEMO_LOT_DEPTH_M:g} m representative lot (front at south edge). Not a real parcel.",
-        }
-    ]
-    # Setback strips (no-build bands between the lot line and the inset footprint).
-    front = float(setbacks.get("front", {}).get("value_numeric") or 0.0)
-    rear = float(setbacks.get("rear", {}).get("value_numeric") or 0.0)
-    side = float(setbacks.get("side", {}).get("value_numeric") or 0.0)
-    strip_specs = [
-        ("front", _rect(-half_w, half_w, -half_d, -half_d + front), front),
-        ("rear", _rect(-half_w, half_w, half_d - rear, half_d), rear),
-        ("side", _rect(-half_w, -half_w + side, -half_d, half_d), side),
-        ("side", _rect(half_w - side, half_w, -half_d, half_d), side),
-    ]
-    for side_key, polygon, inset in strip_specs:
-        constraint = setbacks.get(side_key)
-        if constraint is None or inset <= 0:
-            continue
-        flat_polygons.append(
-            {
-                "polygon": polygon,
-                "fill": [207, 34, 46, 70],
-                "tooltip": _tooltip(constraint, f"{side_key} setback band (no-build)"),
-            }
-        )
-
-    layers = [
-        pdk.Layer(
-            "PolygonLayer",
-            data=flat_polygons,
-            get_polygon="polygon",
-            get_fill_color="fill",
-            get_line_color=[87, 96, 106, 220],
-            line_width_min_pixels=1,
-            stroked=True,
-            pickable=True,
-        )
-    ]
-
-    height = export_max_height(gis_export)
-    if height is not None:
-        prism = [
-            {
-                "polygon": _rect(-half_w + side, half_w - side, -half_d + front, half_d - rear),
-                "height": float(height["value_numeric"]),
-                "tooltip": _tooltip(height, "buildable footprint extruded to the max verified height"),
-            }
-        ]
-        layers.append(
-            pdk.Layer(
-                "PolygonLayer",
-                data=prism,
-                get_polygon="polygon",
-                get_fill_color=[26, 127, 55, 130],
-                get_line_color=[26, 127, 55, 255],
-                get_elevation="height",
-                extruded=True,
-                stroked=True,
-                pickable=True,
-            )
-        )
-    else:
-        st.caption("No verified height constraint found, so the footprint is drawn flat.")
-
-    st.pydeck_chart(
-        pdk.Deck(
-            layers=layers,
-            initial_view_state=pdk.ViewState(latitude=lat0, longitude=lon0, zoom=17.4, pitch=45, bearing=0),
-            tooltip={"html": "{tooltip}"},
-            map_style="light",
-        )
-    )
-
-    st.markdown("#### Constraints behind this demo lot")
-    rows = []
-    for side_key, entries in sorted(lot_line_constraints(gis_export).items()):
-        for constraint in entries:
-            rows.append(
-                {
-                    "side": side_key,
-                    "parameter_key": constraint.get("parameter_key"),
-                    "operator": constraint.get("operator"),
-                    "value": constraint.get("value_numeric"),
-                    "unit": constraint.get("unit"),
-                    "condition": constraint.get("condition"),
-                    "rule_id": constraint.get("source_rule_id"),
-                    "evidence": _short_display_quote(constraint.get("source_quote", ""), 140),
-                }
-            )
-    if height is not None:
-        rows.append(
-            {
-                "side": "height",
-                "parameter_key": height.get("parameter_key"),
-                "operator": height.get("operator"),
-                "value": height.get("value_numeric"),
-                "unit": height.get("unit"),
-                "condition": height.get("condition"),
-                "rule_id": height.get("source_rule_id"),
-                "evidence": _short_display_quote(height.get("source_quote", ""), 140),
-            }
-        )
-    if rows:
-        st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
-    else:
-        st.info("No lot-line or height constraints in gis_felt_export.json for this city.")
-    st.caption("Bands use the most restrictive verified variant per lot line; conditional variants are listed in the table.")
 
 
 def load_bylaw_sections(bylaw_dir: Path) -> list[dict[str, str]]:
@@ -2094,7 +2516,7 @@ def _grounded_bylaw_prompt(question: str, hits: list[dict[str, Any]]) -> str:
         )
     return (
         "You are an advisory zoning bylaw chatbot for human reviewers. "
-        "Do not approve, verify, or reject rules. GIS uses only verified_rules.json. "
+        "Do not approve, verify, or reject rules. The verifier's JSON outputs are the authority. "
         "Give a concise answer, cite only the retrieved sections, and say when the evidence is insufficient.\n\n"
         f"{base}"
     )
@@ -2271,7 +2693,12 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
     answers are retrieved clauses with section ids — never a verification."""
     index_path = bylaw_index_path(output_dir)
     city_stem = city_stem_from_dir(output_dir)
-    st.markdown("#### Bylaw Chat")
+    st.markdown("#### Reviewer Chat")
+    st.markdown(
+        "<div class='trust-note'><b>Advisory only.</b> The assistant answers from retrieved bylaw sections. "
+        "It cannot verify, reject, approve, edit JSON, or change GIS outputs.</div>",
+        unsafe_allow_html=True,
+    )
     llm_status = _bylaw_llm_status(st)
     if llm_status.get("available"):
         st.success(f"Mode: LLM + RAG ({llm_status['provider']} / {llm_status['model']})")
@@ -2301,7 +2728,7 @@ GEMINI_API_KEY = "..."  # keep this in secrets only""",
     if controls[0].button("Clear chat", key=f"clear_{chat_key}"):
         st.session_state[chat_key] = []
     controls[1].caption(
-        "Ask bylaw questions in plain English. Answers are advisory and cite retrieved source sections."
+        "Ask bylaw questions in plain English. Answers cite retrieved source sections and stay outside the verifier decision path."
     )
 
     if not st.session_state[chat_key]:
@@ -2334,7 +2761,7 @@ GEMINI_API_KEY = "..."  # keep this in secrets only""",
     assistant_message = {"role": "assistant", "content": answer, "sources": bounded_hits}
     st.session_state[chat_key].append(assistant_message)
     _render_bylaw_chat_message(st, assistant_message)
-    st.caption("RAG chat is advisory. It cannot verify rules, approve proposals, or write GIS outputs.")
+    st.caption("Retrieval chat is advisory. It cannot verify rules, approve proposals, or write verifier outputs.")
 
 
 def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
@@ -2414,76 +2841,6 @@ def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
     )
 
 
-def _envelope_3d_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
-    """Three.js buildable-envelope viewer with an always-available SVG fallback."""
-    st.subheader("3D Buildable Envelope")
-    envelope = data.get("buildable_envelope", {})
-    if not envelope:
-        st.info(
-            "No buildable_envelope.json for this city yet. The 3D viewer and plan view appear once the "
-            "verified-only envelope export exists in the output directory."
-        )
-        return
-    st.caption(
-        f"Demo {DEMO_LOT_WIDTH_M:g} m x {DEMO_LOT_DEPTH_M:g} m lot (representative, not a real parcel), "
-        "derived only from verified rules in buildable_envelope.json."
-    )
-
-    html_path = output_dir / "envelope_3d.html"
-    if html_path.exists():
-        try:
-            # Prefer the modern embed API; components.v1.html is deprecated in
-            # streamlit >= 1.58 but kept as a fallback for older installs.
-            if hasattr(st, "iframe"):
-                st.iframe(html_path, height=640)
-            else:
-                from streamlit.components.v1 import html as components_html
-
-                components_html(html_path.read_text(encoding="utf-8"), height=640)
-            st.caption("Three.js viewer (CDN). Drag to orbit; hover faces for the governing rule.")
-        except Exception:  # embed support varies by streamlit version
-            st.info("Inline embedding unavailable in this Streamlit version — showing the SVG plan view only.")
-    else:
-        st.info(
-            "Three.js viewer not built yet. Run: "
-            f"`.venv/bin/python scripts/build_envelope_3d.py --output-dir {output_dir}`"
-        )
-
-    st.markdown("#### Plan view (always available, printable)")
-    st.markdown(build_envelope_svg(envelope), unsafe_allow_html=True)
-
-    governing = envelope_governing_setbacks(envelope)
-    rows = [
-        {
-            "constraint": lot_line,
-            "value": entry.get("value_numeric"),
-            "unit": entry.get("unit"),
-            "operator": entry.get("operator"),
-            "condition": entry.get("condition"),
-            "applies_to": entry.get("applies_to"),
-            "rule_id": entry.get("rule_id"),
-        }
-        for lot_line, entry in sorted(governing.items())
-    ]
-    for picker, name in ((envelope_max_height, "max_height"), (envelope_max_storeys, "max_storeys")):
-        entry = picker(envelope)
-        if entry:
-            rows.append(
-                {
-                    "constraint": f"{name} ({entry.get('role')})",
-                    "value": entry.get("value_numeric"),
-                    "unit": entry.get("unit"),
-                    "operator": entry.get("operator"),
-                    "condition": entry.get("condition"),
-                    "applies_to": entry.get("applies_to"),
-                    "rule_id": entry.get("rule_id"),
-                }
-            )
-    if rows:
-        st.markdown("#### Governing constraints (most restrictive verified variant per family)")
-        st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
-
-
 def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> None:
     validation = data["validation"]
     benchmark = data["benchmark"]
@@ -2508,21 +2865,30 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
     st.markdown(f"<div class='metric-grid'>{cards_html}</div>", unsafe_allow_html=True)
 
 
-def _render_header(st: Any, city_label: str = "Burnaby R1") -> None:
+def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool = False) -> None:
     """Render a compact product-style header for the review console."""
+    eyebrow = "M4 Verification Dashboard" if portfolio else "Verification Review Console"
+    title = city_label if portfolio else f"{city_label} Rule Review"
+    body = (
+        "Review M4 first. V3 is retained only as the predecessor comparison. The deterministic verifier is the authority."
+        if portfolio
+        else "Use verified rules as trusted outputs, send uncertain rules to review, and inspect the source text before changing the verifier."
+    )
+    main_pill = "Current path: M4" if portfolio else "Verified-only output"
     st.markdown(
         f"""
 <div class="app-header">
   <div>
-    <div class="eyebrow">Verification Review Console</div>
-    <h1>{html.escape(city_label)} Rule Review</h1>
-    <p>Use verified rules for GIS, send uncertain rules to review, and inspect the source text before changing the verifier.</p>
+    <div class="eyebrow">{html.escape(eyebrow)}</div>
+    <h1>{html.escape(title)}</h1>
+    <p>{html.escape(body)}</p>
   </div>
   <div class="status-legend">
+    <span class="status-pill status-verified">{html.escape(main_pill)}</span>
     <span class="status-pill status-verified">Verified</span>
     <span class="status-pill status-review">Needs review</span>
     <span class="status-pill status-rejected">Rejected</span>
-    <span class="status-pill status-not_used">Out of scope</span>
+    <span class="status-pill status-not_used">Not used</span>
   </div>
 </div>
 """,
@@ -2535,9 +2901,9 @@ def _render_guidance(st: Any) -> None:
     st.markdown(
         """
 <div class="guidance-grid">
-  <div class="guide-card"><b>Start with review workbench</b><span>Pick one rule, read why it was held, then inspect the original and repaired source text.</span></div>
-  <div class="guide-card"><b>Use source evidence</b><span>Ask the bylaw or search the cited page before deciding whether the candidate is real.</span></div>
-  <div class="guide-card"><b>Keep GIS strict</b><span>Only verified rules drive GIS exports. Review, rerun, and LLM output are advisory.</span></div>
+  <div class="guide-card"><b>Start with current M4</b><span>This is the product path for the final demo. V3 is retained only as the predecessor comparison.</span></div>
+  <div class="guide-card"><b>Use Review Workbench</b><span>Pick a held rule, read the support gaps, then inspect original and repaired source text.</span></div>
+  <div class="guide-card"><b>Ask the bylaw carefully</b><span>RAG and LLM chat explain retrieved sections. They cannot verify, reject, approve, or edit outputs.</span></div>
 </div>
 """,
         unsafe_allow_html=True,
@@ -2550,9 +2916,10 @@ def _sidebar_guidance(st: Any) -> None:
         st.markdown(
             """
 - **Verified**: exact source support exists for the rule fields.
-- **Needs review**: the candidate may be true, but proof is incomplete.
+- **Review**: plausible, needs a human check.
 - **Rejected**: the candidate conflicts with the verifier contract or source support.
-- **Out of scope**: useful context, but not a numeric GIS rule.
+- **Not used**: outside the current product scope.
+- **Recall**: benchmark recall, not full-bylaw completeness.
 """
         )
 
@@ -2583,7 +2950,7 @@ def _action_summary(st: Any, data: dict[str, Any]) -> None:
         (
             "Need legal scope review",
             legal_path,
-            "These involve exceptions, scope, or interpretation. Keep them out of GIS unless proven.",
+            "These involve exceptions, scope, or interpretation. Keep them untrusted unless proven.",
         ),
     ]
     html_cards = []
@@ -2958,70 +3325,134 @@ def _bar_rows(st: Any, rows: list[dict[str, Any]], label_key: str, value_key: st
 
 
 def _style(st: Any) -> None:
-    # Design system: typography scale, spacing, KPI cards, and STRICT status
-    # color semantics (verified green, review amber, rejected red, not_used grey)
-    # reused by every status-coded element below. Presentation only.
+    # Design system — "Civic Primer". Three blocks: tokens, chrome, components.
+    # STRICT status color semantics (verified green, review amber, rejected
+    # red, not_used grey) are reused by every status-coded element below and
+    # pinned by tests. De-boxing rule: at most ONE border level visible at a
+    # time — cards inside expanders render flat, hairlines instead of frames.
+    # Presentation only.
     st.markdown(
         """
 <style>
+/* ---- tokens ---- */
 :root {
   --status-verified: #1a7f37;
   --status-review: #9a6700;
   --status-rejected: #cf222e;
   --status-not-used: #57606a;
-  --ink: #172033;
-  --ink-soft: #5d6875;
-  --line: #d9e0e8;
+  --ink: #1f2328;
+  --ink-soft: #57606a;
+  --accent: #0969da;
+  --accent-strong: #0550ae;
+  --lane-p9: #8250df;
+  --canvas: #ffffff;
+  --subtle: #f6f8fa;
+  --line: #d0d7de;
+  --hairline: #eaeef2;
 }
+/* ---- chrome ---- */
+#MainMenu, footer, div[data-testid="stDecoration"] {display:none;}
+header[data-testid="stHeader"] {background:transparent;}
 html, body, [class*="css"] {font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;}
-.block-container {padding-top: 1.5rem; max-width: 1500px;}
-h1 {font-size:30px;} h2 {font-size:24px;} h3 {font-size:19px;} h4 {font-size:16px;}
-.app-header {display:flex; justify-content:space-between; align-items:flex-start; gap:16px; border:1px solid var(--line); border-radius:8px; padding:18px 20px; background:linear-gradient(180deg,#ffffff,#f7fafc); margin-bottom:14px;}
-.app-header h1 {font-size:30px; line-height:1.15; margin:2px 0 6px; color:var(--ink); letter-spacing:0;}
-.app-header p {margin:0; color:#526070; font-size:15px;}
-.eyebrow {font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#2563eb; font-weight:700;}
+.block-container {padding-top: 1.1rem; max-width: 1360px;}
+h1 {font-size:28px;} h2 {font-size:22px;} h3 {font-size:18px;}
+h4 {font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); font-weight:700;}
+/* ---- components ---- */
+.app-header {display:flex; justify-content:space-between; align-items:flex-start; gap:16px; border:0; border-bottom:1px solid var(--hairline); border-radius:0; padding:6px 0 14px; background:transparent; margin-bottom:18px;}
+.app-header h1 {font-size:28px; line-height:1.15; margin:2px 0 6px; color:var(--ink); letter-spacing:-.01em;}
+.app-header p {margin:0; color:var(--ink-soft); font-size:14px;}
+.eyebrow {font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); font-weight:700;}
 .status-legend {display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end;}
 .status-pill {font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; color:#fff; letter-spacing:.02em;}
 .status-pill.status-verified, .status-verified-bg {background:var(--status-verified);}
 .status-pill.status-review, .status-review-bg {background:var(--status-review);}
 .status-pill.status-rejected, .status-rejected-bg {background:var(--status-rejected);}
 .status-pill.status-not_used, .status-not_used-bg {background:var(--status-not-used);}
-.metric-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr)); gap:10px; margin:12px 0 18px;}
-.metric {border:1px solid #d7dde5; border-radius:8px; padding:13px 14px; background:#fff; box-shadow:0 1px 2px rgba(15,23,42,.04); min-height:86px;}
+.lane-pill {font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; color:#fff;}
+.lane-pill-p5 {background:var(--accent);}
+.lane-pill-p9 {background:var(--lane-p9);}
+.gate-pill {font-size:11px; font-weight:700; padding:2px 9px; border-radius:999px; color:#fff;}
+.gate-pill-pass {background:var(--status-verified);}
+.gate-pill-fail-closed {background:#475569;}
+.gate-pill-scope {background:var(--status-review);}
+.gate-pill-unsafe {background:var(--status-rejected);}
+.gate-pill-review {background:var(--status-not-used);}
+.metric-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr)); gap:10px; margin:12px 0 20px;}
+.metric {border:1px solid var(--line); border-radius:8px; padding:13px 14px; background:var(--canvas); min-height:86px;}
 .metric-verified {border-top:4px solid var(--status-verified);}
 .metric-review {border-top:4px solid var(--status-review);}
 .metric-rejected {border-top:4px solid var(--status-rejected);}
 .metric-not_used {border-top:4px solid var(--status-not-used);}
 .metric-label {font-size:10px; line-height:1.25; color:var(--ink-soft); text-transform:uppercase; font-weight:700; overflow-wrap:normal;}
-.metric-value {font-size:25px; font-weight:750; color:#111827;}
+.metric-value {font-size:28px; font-weight:700; color:var(--ink); font-variant-numeric: tabular-nums;}
+.hero-grid {display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; margin:8px 0 12px;}
+.hero-card {border:1px solid var(--line); border-radius:8px; padding:13px 14px; background:var(--canvas); min-height:108px;}
+.hero-card-verified {border-top:4px solid var(--status-verified);}
+.hero-card-review {border-top:4px solid var(--status-review);}
+.hero-card-rejected {border-top:4px solid var(--status-rejected);}
+.hero-card-not_used {border-top:4px solid var(--status-not-used);}
+.hero-label {font-size:10px; line-height:1.25; color:var(--ink-soft); text-transform:uppercase; font-weight:700;}
+.hero-value {font-size:25px; line-height:1.15; margin-top:8px; color:var(--ink); font-weight:750; font-variant-numeric:tabular-nums;}
+.hero-note {font-size:12px; line-height:1.35; margin-top:7px; color:var(--ink-soft);}
+.instruction-banner {border-left:4px solid var(--accent); background:var(--subtle); border-radius:0 8px 8px 0; color:var(--ink); padding:11px 14px; margin:10px 0 14px; font-size:14px;}
+.timeline {display:grid; grid-template-columns:1fr 28px 1fr 28px 1fr 28px 1fr; align-items:stretch; gap:6px; margin:12px 0 16px;}
+.timeline-compact {grid-template-columns:1fr 28px 1fr; max-width:760px;}
+.timeline-step {border:1px solid var(--hairline); border-radius:8px; background:var(--canvas); padding:11px 12px; min-height:72px;}
+.timeline-step b {display:block; color:var(--ink); font-size:13px;}
+.timeline-step span {display:block; color:var(--ink-soft); margin-top:4px; font-size:12px;}
+.timeline-active {border-color:var(--status-verified); border-top:4px solid var(--status-verified);}
+.timeline-arrow {display:flex; align-items:center; justify-content:center; color:var(--ink-soft); font-weight:700;}
+.legend-grid {display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin:12px 0 18px;}
+.legend-grid div {border:1px solid var(--hairline); border-radius:8px; padding:10px 11px; background:var(--canvas);}
+.legend-grid b {display:block; font-size:13px; color:var(--ink);}
+.legend-grid span {display:block; margin-top:3px; color:var(--ink-soft); font-size:12px; line-height:1.35;}
+.roadmap-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:10px 0 12px;}
+.roadmap-card {border:1px solid var(--hairline); border-radius:8px; background:var(--canvas); padding:13px 14px; min-height:104px;}
+.roadmap-card b {display:block; color:var(--ink); margin-bottom:5px;}
+.roadmap-card span {display:block; color:var(--ink-soft); font-size:14px; line-height:1.4;}
+.trust-note {border:1px solid var(--hairline); border-radius:8px; background:var(--subtle); padding:11px 13px; color:var(--ink-soft); font-size:14px; margin:8px 0 12px;}
 .guidance-grid, .action-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:12px 0 20px;}
-.guide-card, .action-card {border:1px solid var(--line); border-radius:8px; background:#fff; padding:14px 15px;}
+.guide-card, .action-card {border:0; border-radius:8px; background:var(--subtle); padding:14px 15px;}
 .guide-card b {display:block; color:var(--ink); margin-bottom:5px;}
 .guide-card span, .action-card p {color:var(--ink-soft); font-size:14px; margin:0;}
-.action-value {font-size:28px; font-weight:760; color:var(--status-verified);}
-.action-title {font-weight:720; color:var(--ink); margin:1px 0 4px;}
-.sentence-card {border:1px solid var(--line); border-radius:8px; padding:15px 16px; min-height:142px; background:#fff; box-shadow:0 1px 2px rgba(15,23,42,.04);}
-.sentence-card p {font-size:17px; line-height:1.45; color:#111827; margin:8px 0 10px;}
-.sentence-card span {font-size:12px; color:#667085;}
-.sentence-title {font-size:12px; text-transform:uppercase; letter-spacing:.06em; font-weight:760;}
+.action-value {font-size:28px; font-weight:700; color:var(--status-verified); font-variant-numeric: tabular-nums;}
+.action-title {font-weight:700; color:var(--ink); margin:1px 0 4px;}
+.sentence-card {border:1px solid var(--hairline); border-radius:8px; padding:15px 16px; min-height:142px; background:var(--canvas);}
+.sentence-card p {font-size:17px; line-height:1.45; color:var(--ink); margin:8px 0 10px;}
+.sentence-card span {font-size:12px; color:var(--ink-soft);}
+.sentence-title {font-size:12px; text-transform:uppercase; letter-spacing:.06em; font-weight:700;}
 .sentence-review {border-top:4px solid var(--status-review);}
 .sentence-verified {border-top:4px solid var(--status-verified);}
 .sentence-neutral {border-top:4px solid var(--status-not-used);}
-.bylaw-section {border:1px solid var(--line); border-radius:8px; background:#fff; padding:14px 16px; margin:8px 0; line-height:1.6; color:var(--ink); white-space:pre-wrap;}
-.bylaw-section h4 {margin:0 0 8px; color:var(--ink);}
+.bylaw-section {border:0; border-left:3px solid var(--line); border-radius:0 8px 8px 0; background:var(--subtle); padding:12px 14px; margin:8px 0; line-height:1.6; color:var(--ink); white-space:pre-wrap; font-family: ui-monospace, "SF Mono", "Roboto Mono", monospace; font-size:13px;}
+.bylaw-section h4 {margin:0 0 8px; color:var(--ink); letter-spacing:0; text-transform:none; font-size:14px;}
 mark.evidence-hit {background:#fff3bf; border-bottom:2px solid var(--status-review); padding:1px 2px; border-radius:2px;}
-.detail-sentence {display:grid; grid-template-columns:28px 1fr; gap:8px; border:1px solid #d9e0e8; border-radius:8px; background:#fff; padding:11px 13px; margin:7px 0;}
-.detail-sentence b {color:#2563eb;}
-.detail-sentence span {color:#172033; line-height:1.45;}
+.detail-sentence {display:grid; grid-template-columns:28px 1fr; gap:8px; border:0; border-radius:8px; background:var(--subtle); padding:11px 13px; margin:7px 0;}
+.detail-sentence b {color:var(--accent);}
+.detail-sentence span {color:var(--ink); line-height:1.45;}
 .bar-row {display:grid; grid-template-columns:minmax(160px,240px) 1fr 52px; gap:12px; align-items:center; margin:7px 0;}
-.bar-row span {color:#344054; font-size:14px;}
-.bar-row b {color:#172033; text-align:right;}
-.bar-track {height:13px; background:#edf2f7; border-radius:999px; overflow:hidden; border:1px solid #e2e8f0;}
-.bar-fill {height:100%; background:linear-gradient(90deg,#2563eb,#0f766e);}
-div[data-testid="stDataFrame"] {border:1px solid #d9e0e8; border-radius:8px; overflow:hidden;}
-div[data-testid="stExpander"] {border:1px solid #d9e0e8; border-radius:8px;}
+.bar-row span {color:var(--ink); font-size:14px;}
+.bar-row b {color:var(--ink); text-align:right; font-variant-numeric: tabular-nums;}
+.bar-track {height:12px; background:var(--subtle); border-radius:999px; overflow:hidden; border:1px solid var(--hairline);}
+.bar-fill {height:100%; background:linear-gradient(90deg,var(--accent),var(--accent-strong));}
+.matrix-table {width:100%; border-collapse:separate; border-spacing:0; font-size:13px;}
+.matrix-table th {text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); padding:8px 10px; border-bottom:2px solid var(--line); background:var(--subtle); position:sticky; top:0;}
+.matrix-table td {padding:8px 10px; border-bottom:1px solid var(--hairline); vertical-align:top; line-height:1.4;}
+.matrix-table td.row-label {font-weight:600; color:var(--ink); white-space:nowrap;}
+.matrix-cell {border-radius:6px; padding:6px 8px; display:block;}
+.matrix-cell.status-verified {background:color-mix(in srgb, var(--status-verified) 12%, white); border-left:3px solid var(--status-verified);}
+.matrix-cell.status-review {background:color-mix(in srgb, var(--status-review) 12%, white); border-left:3px solid var(--status-review);}
+.matrix-cell.status-missing {background:color-mix(in srgb, var(--status-rejected) 8%, white); border-left:3px dashed var(--status-rejected); color:var(--ink-soft);}
+.matrix-cell.status-na {color:#b6bec7;}
+div[data-testid="stDataFrame"] {border:1px solid var(--hairline); border-radius:8px; overflow:hidden;}
+div[data-testid="stExpander"] {border:1px solid var(--hairline); border-radius:8px;}
+div[data-testid="stExpander"] .guide-card, div[data-testid="stExpander"] .action-card {background:transparent; padding:8px 0;}
 @media (max-width: 900px) {
   .metric-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .hero-grid, .legend-grid {grid-template-columns:1fr 1fr;}
+  .timeline {grid-template-columns:1fr;}
+  .timeline-arrow {display:none;}
+  .roadmap-grid {grid-template-columns:1fr;}
   .guidance-grid, .action-grid {grid-template-columns:1fr;}
   .bar-row {grid-template-columns:1fr;}
 }
@@ -3029,6 +3460,295 @@ div[data-testid="stExpander"] {border:1px solid #d9e0e8; border-radius:8px;}
 """,
         unsafe_allow_html=True,
     )
+
+
+def _coverage_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
+    """What's missing vs gold, per rule family + the 101.4 matrix."""
+    gold_path = gold_path_for(output_dir)
+    gold = _read_json(gold_path, []) if gold_path else []
+    benchmark = data.get("benchmark") or {}
+    report = data.get("coverage_report") or {}
+
+    st.markdown("#### Coverage by rule family")
+    st.caption("Gold coverage = hand-checked bylaw rules the verifier has proven. Held rules wait in review; they never auto-promote.")
+    rows = coverage_rows(data, gold, benchmark) if gold else report.get("family_rows", [])
+    if rows:
+        try:
+            import pandas as pd
+
+            frame = pd.DataFrame(rows)
+            st.dataframe(
+                frame,
+                hide_index=True,
+                width="stretch",
+                column_config={
+                    "coverage": st.column_config.ProgressColumn(
+                        "Gold coverage", min_value=0.0, max_value=1.0, format="percent"
+                    )
+                },
+            )
+        except Exception:
+            st.table(rows)
+
+    gaps = gold_gap_rows(benchmark, gold)
+    if gaps:
+        with st.expander(f"Gold rules not yet proven ({len(gaps)})"):
+            for gap in gaps:
+                color = STATUS_COLORS.get("review" if gap["status"] == "review" else "rejected", "#57606a")
+                st.markdown(
+                    f"<div class='detail-sentence'><b style='color:{color}'>\u25cf</b>"
+                    f"<span><b>{html.escape(gap['gold_id'])}</b> \u2014 {html.escape(gap['family'])} "
+                    f"{html.escape(gap['claim'])} ({html.escape(gap['applies_to'])})<br>"
+                    f"<small>{html.escape(gap['detail'])}</small></span></div>",
+                    unsafe_allow_html=True,
+                )
+    elif gold:
+        st.success("Every gold rule is verified.")
+
+    if city_stem_from_dir(output_dir).startswith("burnaby"):
+        st.markdown("#### Bylaw matrix \u2014 101.4 Development Regulations")
+        st.caption(
+            "Rows are regulations, columns are the bylaw's dwelling-type \u00d7 unit-count "
+            "buckets. Green = verified (geometry-bound to its column), amber = held for "
+            "review, red dashes = a gold rule not yet proven, grey = no claim."
+        )
+        grid = matrix_cells(data.get("verified") or [], data.get("review") or [], gold) if gold else report.get("matrix", {})
+        if not grid:
+            st.info("No matrix coverage report found. Rerun the slim verifier to generate coverage_report.json.")
+            return
+        st.markdown(matrix_table_html(grid), unsafe_allow_html=True)
+
+
+def load_mvp_report() -> dict[str, Any]:
+    """Load the final-demo product report used by the portfolio landing page."""
+    return _read_json(MVP_REPORT_PATH, {})
+
+
+def load_m4_source_audit() -> dict[str, Any]:
+    """Load the source-PDF audit proving M4 used the expected city PDFs."""
+    return _read_json(M4_SOURCE_AUDIT_PATH, {})
+
+
+def _portfolio_metric_card(label: str, value: Any, note: str = "", tone: str = "") -> str:
+    tone_class = f" hero-card-{tone}" if tone else ""
+    return (
+        f"<div class='hero-card{tone_class}'>"
+        f"<div class='hero-label'>{html.escape(label)}</div>"
+        f"<div class='hero-value'>{html.escape(str(value))}</div>"
+        f"<div class='hero-note'>{html.escape(note)}</div>"
+        "</div>"
+    )
+
+
+def _city_name(city: Any) -> str:
+    return _plain_label(str(city or ""))
+
+
+def _current_product_rows(report: dict[str, Any]) -> list[dict[str, Any]]:
+    rows = []
+    for item in report.get("current_runs") or []:
+        rows.append(
+            {
+                "city": _city_name(item.get("city")),
+                "candidates": item.get("candidate_rule_count"),
+                "verified": item.get("verified_rule_count"),
+                "review": item.get("review_rule_count"),
+                "rejected": item.get("rejected_rule_count"),
+                "not_used": item.get("not_used_rule_count"),
+                "precision": item.get("verified_precision"),
+                "false_verified": item.get("false_verified_count"),
+                "recall": item.get("verified_or_review_recall"),
+                "status": item.get("status_label"),
+            }
+        )
+    return rows
+
+
+def _history_rows(report: dict[str, Any]) -> list[dict[str, Any]]:
+    groups = [
+        ("M4 current", report.get("current_runs") or []),
+        ("V3 predecessor", report.get("v3_experimental_runs") or []),
+    ]
+    rows = []
+    for group, items in groups:
+        for item in items:
+            rows.append(
+                {
+                    "version": group,
+                    "city": _city_name(item.get("city")),
+                    "lane": _plain_label(item.get("lane")),
+                    "candidates": item.get("candidate_rule_count"),
+                    "verified": item.get("verified_rule_count"),
+                    "review": item.get("review_rule_count"),
+                    "rejected": item.get("rejected_rule_count"),
+                    "not_used": item.get("not_used_rule_count"),
+                    "precision": item.get("verified_precision"),
+                    "false_verified": item.get("false_verified_count"),
+                    "recall": item.get("verified_or_review_recall"),
+                    "status": item.get("status_label"),
+                }
+            )
+    return rows
+
+
+def _pdf_page_count(report: dict[str, Any], city: str) -> Any:
+    for row in report.get("pdf_inventory") or []:
+        if row.get("city") == city:
+            return row.get("page_count")
+    return ""
+
+
+def _progress_timeline(st: Any) -> None:
+    steps = [
+        ("V3 predecessor", "foundation run"),
+        ("M4 current", "final-demo path"),
+    ]
+    html_steps = []
+    for index, (title, note) in enumerate(steps):
+        active = " timeline-active" if index == len(steps) - 1 else ""
+        html_steps.append(
+            f"<div class='timeline-step{active}'><b>{html.escape(title)}</b><span>{html.escape(note)}</span></div>"
+        )
+        if index < len(steps) - 1:
+            html_steps.append("<div class='timeline-arrow'>\u2192</div>")
+    st.markdown(f"<div class='timeline timeline-compact'>{''.join(html_steps)}</div>", unsafe_allow_html=True)
+
+
+def _plain_bucket_legend(st: Any) -> None:
+    st.markdown(
+        """
+<div class="legend-grid">
+  <div><b>Verified</b><span>safe to use</span></div>
+  <div><b>Review</b><span>plausible, needs human check</span></div>
+  <div><b>Rejected</b><span>unsafe or unsupported</span></div>
+  <div><b>Not used</b><span>outside current product scope</span></div>
+  <div><b>Recall</b><span>benchmark recall, not full-bylaw completeness</span></div>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+
+
+def _source_audit_panel(st: Any, report: dict[str, Any]) -> None:
+    audit = load_m4_source_audit()
+    summary = audit.get("summary") or {}
+    if not summary and not report.get("pdf_inventory"):
+        st.info("No M4 source-PDF audit artifact found yet.")
+        return
+    st.markdown("#### Source audit")
+    st.caption("This confirms M4 is reading the real bylaw PDFs. Calgary is treated as the full 1,053-page bylaw.")
+    rows = []
+    if summary:
+        for city, row in summary.items():
+            rows.append(
+                {
+                    "city": _city_name(city),
+                    "pdf_pages": row.get("pdf_pages"),
+                    "verified_rules": row.get("verified_rules"),
+                    "cited_pages": ", ".join(str(page) for page in row.get("unique_cited_pages", [])),
+                }
+            )
+    else:
+        for row in report.get("pdf_inventory") or []:
+            rows.append(
+                {
+                    "city": _city_name(row.get("city")),
+                    "pdf_pages": row.get("page_count"),
+                    "verified_rules": "",
+                    "cited_pages": "",
+                }
+            )
+    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    failure_count = int(audit.get("failure_count") or 0)
+    if failure_count:
+        st.error(f"Source audit has {failure_count} failure(s). Treat M4 as unsafe until resolved.")
+    else:
+        st.success("Source audit passed: no source-PDF failures found.")
+
+
+def _cloud_roadmap_panel(st: Any) -> None:
+    st.markdown("#### Cloud roadmap")
+    st.caption("Final-demo cloud work should stay secrets-managed and keep the verifier read-only from the dashboard.")
+    st.markdown(
+        """
+<div class="roadmap-grid">
+  <div class="roadmap-card"><b>Phase 1</b><span>Streamlit Cloud demo with curated M4 outputs and optional Gemini Flash Lite secrets for reviewer chat.</span></div>
+  <div class="roadmap-card"><b>Phase 2</b><span>Containerized app with persistent artifact storage and environment-managed secrets.</span></div>
+  <div class="roadmap-card"><b>Phase 3</b><span>Scheduled extraction and verification jobs, artifact versioning, and reviewer login if needed.</span></div>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+    with st.expander("Streamlit Cloud secrets for Ask the Bylaw"):
+        st.markdown("Use one hosted provider key. The dashboard still works in retrieval-only mode when no key is configured.")
+        st.code(
+            """BYLAW_RAG_PROVIDER = "gemini"
+BYLAW_RAG_MODEL = "gemini-2.0-flash-lite"
+GEMINI_API_KEY = "..."  # Streamlit Cloud secret only""",
+            language="toml",
+        )
+
+
+def _portfolio_page(st: Any) -> None:
+    """M4-first final-demo landing page."""
+    report = load_mvp_report()
+    if not report:
+        st.info(f"No MVP report found at `{MVP_REPORT_PATH}`. Run `scripts/run_consolidated_prototype.py status`.")
+        return
+
+    current_rows = _current_product_rows(report)
+    city_count = len([row for row in current_rows if row])
+    verified_total = sum(int(row.get("verified") or 0) for row in current_rows)
+    review_total = sum(int(row.get("review") or 0) for row in current_rows)
+    calgary_pages = _pdf_page_count(report, "calgary_rcg") or "unknown"
+    calgary_page_label = f"{int(calgary_pages):,} pages" if isinstance(calgary_pages, int) else f"{calgary_pages} pages"
+    promoted = "yes" if (report.get("m4_promotion") or {}).get("promoted") else "no"
+    cards = [
+        _portfolio_metric_card("Current product path", "M4", "Native extraction + deterministic verifier", "verified"),
+        _portfolio_metric_card("Safety status", _plain_label(report.get("overall_status")), f"M4 promoted: {promoted}", "verified"),
+        _portfolio_metric_card("False verified", report.get("current_false_verified_total", 0), "must stay zero", "rejected"),
+        _portfolio_metric_card("Cities tested", city_count, f"{verified_total} verified, {review_total} in review", "review"),
+        _portfolio_metric_card("Calgary source", calgary_page_label, "full bylaw, not a seven-page slice", "not_used"),
+    ]
+    st.markdown("<div class='hero-grid'>" + "".join(cards) + "</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='instruction-banner'><b>Review M4 first.</b> V3 is retained only as the predecessor comparison. "
+        "Downstream work must consume verified-only artifacts.</div>",
+        unsafe_allow_html=True,
+    )
+    _progress_timeline(st)
+    _plain_bucket_legend(st)
+
+    st.markdown("#### Current M4 result")
+    st.caption("These are the current product rows. Recall means benchmark recall, not full-bylaw completeness.")
+    st.dataframe(_display_rows(current_rows), width="stretch", hide_index=True)
+
+    def _build():
+        import plotly.graph_objects as go
+
+        cities = [row["city"] for row in current_rows]
+        figure = go.Figure()
+        figure.add_bar(name="Verified", x=cities, y=[row.get("verified") or 0 for row in current_rows], marker_color="#1a7f37")
+        figure.add_bar(name="Review", x=cities, y=[row.get("review") or 0 for row in current_rows], marker_color="#9a6700")
+        figure.update_layout(barmode="group", title="Current M4 verified and review counts")
+        return figure
+
+    if current_rows:
+        _themed_plotly(st, _build)
+
+    _source_audit_panel(st, report)
+    _cloud_roadmap_panel(st)
+
+    with st.expander("Predecessor comparison: M4 and V3", expanded=False):
+        st.caption("Use this section to explain what changed from V3 to M4. It is not the default product path.")
+        history = _history_rows(report)
+        if history:
+            st.dataframe(_display_rows(history), width="stretch", hide_index=True)
+        else:
+            st.info("No comparison rows found in the MVP report.")
+        st.caption("Recall is benchmark recall from curated evaluation cases, not a promise that every bylaw clause was extracted.")
+
+    st.caption("Pick a city in the sidebar to drill into its funnel, coverage gaps, review workbench, and Ask the Bylaw chat.")
 
 
 def _unique(items: list[dict[str, Any]], key: str) -> list[str]:

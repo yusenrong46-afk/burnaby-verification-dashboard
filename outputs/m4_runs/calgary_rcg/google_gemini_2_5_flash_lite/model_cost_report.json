@@ -1,0 +1,45 @@
+{
+  "city": "calgary_rcg",
+  "model": "google/gemini-2.5-flash-lite",
+  "dry_run": false,
+  "pack_count": 1480,
+  "cache_hit_count": 12,
+  "input_chars": 3520460,
+  "output_chars": 112014,
+  "estimated_input_tokens": 880115,
+  "estimated_output_tokens": 28004,
+  "estimated_cost_usd": 0.09968,
+  "latency_ms": 1052737,
+  "extraction_error_count": 4,
+  "extraction_errors": [
+    {
+      "pack_id": "m4_pack_0095",
+      "chunk_id": "calgary_rcg_table_053_r001",
+      "section": "",
+      "page": 967,
+      "error": "model did not return valid JSON"
+    },
+    {
+      "pack_id": "m4_pack_0197",
+      "chunk_id": "calgary_rcg_995.3_2309",
+      "section": "995(3)",
+      "page": 788,
+      "error": "model did not return valid JSON"
+    },
+    {
+      "pack_id": "m4_pack_0409",
+      "chunk_id": "calgary_rcg_table_062_r002",
+      "section": "",
+      "page": 972,
+      "error": "OpenRouter request timed out after 90s"
+    },
+    {
+      "pack_id": "m4_pack_0448",
+      "chunk_id": "calgary_rcg_table_069_r004",
+      "section": "",
+      "page": 977,
+      "error": "OpenRouter request timed out after 90s"
+    }
+  ],
+  "pricing_note": "Estimated from character count and planning price table; OpenRouter billing is authoritative."
+}

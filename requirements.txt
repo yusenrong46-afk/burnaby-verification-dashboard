@@ -3,7 +3,8 @@ jsonschema>=4.0
 python-docx>=1.2.0
 
 # Dashboard — Streamlit review/GIS viewer
-streamlit>=1.35
+streamlit>=1.46  # theme keys (borderColor/baseRadius) need 1.46+
+plotly>=5.24     # funnel/coverage charts; dashboard degrades to HTML bars without it
 
 # Optional: pydeck map tab in the dashboard (the tab degrades gracefully without it).
 # Install with the extra instead of uncommenting: `pip install -e .[map]`

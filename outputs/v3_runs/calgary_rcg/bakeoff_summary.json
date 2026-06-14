@@ -1,0 +1,61 @@
+{
+  "pipeline": "v3_full_bylaw_bakeoff",
+  "city": "calgary_rcg",
+  "pdf_hash": "25d15e8d3a3ed10b90d9c029eff8a337ba899f5f330d64f509e8995874740d48",
+  "config_hash": "35fa319cce360ba5a0d3c464e4e9738baf7ea77c4d2bb9ee77bdf59c62949491",
+  "prompt_template_hash": "9b32be46a52cbe5e89a3fb5c7f0b87247d55dc90ec66f9c3351ed36b579625d9",
+  "discovery_version": "v3_discovery_1",
+  "source": {
+    "source_layer": "v3_full_bylaw_discovery",
+    "discovery_version": "v3_discovery_1",
+    "source_chunk_count": 3558,
+    "evidence_pack_count": 500,
+    "page_count": 709,
+    "first_page": 7,
+    "last_page": 1052,
+    "packed_page_count": 189,
+    "lane_counts": [
+      {
+        "name": "family_query",
+        "count": 79
+      },
+      {
+        "name": "section_neighbor",
+        "count": 184
+      },
+      {
+        "name": "seed_discovery",
+        "count": 212
+      },
+      {
+        "name": "target_section_expansion",
+        "count": 25
+      }
+    ],
+    "advisory_only": true,
+    "city": "calgary_rcg",
+    "source_pdf": "/Users/thomas/Documents/Capstone_prototype/Burnaby_prototype/data/bylaws/calgary_rcg/source.pdf",
+    "pdf_hash": "25d15e8d3a3ed10b90d9c029eff8a337ba899f5f330d64f509e8995874740d48",
+    "config_hash": "35fa319cce360ba5a0d3c464e4e9738baf7ea77c4d2bb9ee77bdf59c62949491",
+    "discovery_hash": "7c71aa7012bafa0b66b8bd76cab30b160a9a9343310bce721284c9633430eeaa",
+    "cache_db": "/Users/thomas/Documents/Capstone_prototype/Burnaby_prototype/outputs/v2_runs/verification_runs.sqlite"
+  },
+  "runs": [
+    {
+      "model": "google/gemini-2.5-flash-lite",
+      "output_dir": "/Users/thomas/Documents/Capstone_prototype/Burnaby_prototype/outputs/v3_runs/calgary_rcg/google_gemini_2_5_flash_lite",
+      "candidate_rule_count": 225,
+      "evidence_unit_count": 225,
+      "repair_pack_count": 80,
+      "estimated_cost_usd": 0.043808,
+      "latency_ms": 380201,
+      "verified_rule_count": 10,
+      "review_rule_count": 28,
+      "rejected_rule_count": 28,
+      "false_verified_count": 0,
+      "verified_precision": 1.0,
+      "verified_or_review_recall": 1.0
+    }
+  ],
+  "safety_contract": "LLM/RAG propose or explain; deterministic verifier decides."
+}

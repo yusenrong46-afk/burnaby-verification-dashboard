@@ -1,0 +1,17 @@
+{
+  "pipeline": "native_rag_llm_extraction_v3",
+  "city": "vancouver_rs",
+  "model": "google/gemini-2.5-flash-lite",
+  "dry_run": false,
+  "retrieval_pack_count": 134,
+  "seed_pack_count": 120,
+  "repair_pack_count": 14,
+  "evidence_unit_count": 31,
+  "candidate_rule_count": 31,
+  "pass1_candidate_rule_count": 19,
+  "repair_candidate_rule_count": 12,
+  "matrix_candidate_count": 0,
+  "cache_hit_count": 134,
+  "extraction_error_count": 0,
+  "safety_contract": "V3 extraction proposes candidates only. Deterministic verification decides."
+}
