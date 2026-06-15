@@ -1,9 +1,10 @@
 # Verification Dashboard
 
-The dashboard is a reviewer and partner-facing reader for extraction,
-verification, review, GIS, and source-evidence outputs. It can optionally call
-an advisory RAG chatbot, but it never changes decisions, promotes rules, or
-writes verifier artifacts.
+The dashboard is a reviewer and partner-facing reader for multi-city extraction,
+verification, review, GIS, and source-evidence outputs. It includes Burnaby R1,
+Calgary RCG, and Vancouver RS in the committed M4 artifact set. It can
+optionally call an advisory RAG chatbot, but it never changes decisions,
+promotes rules, or writes verifier artifacts.
 
 Run from the project root:
 
@@ -11,7 +12,7 @@ Run from the project root:
 .venv/bin/python -m streamlit run dashboard/streamlit_app.py --server.port 8502
 ```
 
-Default output folder:
+Default city drilldown when a direct `--output-dir` is supplied:
 
 ```text
 outputs/m4_runs/burnaby_r1/google_gemini_2_5_flash_lite/
@@ -21,8 +22,10 @@ outputs/m4_runs/burnaby_r1/google_gemini_2_5_flash_lite/
 
 - **City selector** — the sidebar lists every `outputs/*_slim_pipeline5_registry/`
   dir and native `outputs/m4_runs/*/*/` dir that contains `verified_rules.json`
-  (default `burnaby_r1`). New cities appear automatically once their outputs
-  exist; nothing is hardcoded. All loads are city-aware.
+  for Burnaby, Calgary, Vancouver, and any future committed city. The landing
+  page starts with a multi-city M4 overview; city drilldowns are selected from
+  the sidebar. New cities appear automatically once their outputs exist; nothing
+  is hardcoded. All loads are city-aware.
 - **Sections** — the former flat tab strip is grouped into six top-level
   sections (every original tab is preserved inside one of them):
   `Overview` / `Rules` (Candidate vs Verified, Rule Graph) / `Review` (Review,

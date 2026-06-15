@@ -1,4 +1,4 @@
-"""Streamlit dashboard for Burnaby verifier outputs."""
+"""Streamlit dashboard for multi-city zoning verifier outputs."""
 
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ NATIVE_RUN_LABELS = {"m4_runs": "M4", "v3_runs": "V3", "v2_runs": "V2"}
 PRODUCT_RUN_ROOTS = ("m4_runs", "v3_runs")
 # Pipeline 9 (graph-RAG extraction) verifier outputs sit next to the P5
 # registries as <city>_p9/. Same verifier, second upstream — the dashboard
-# treats them as another selectable "city" so reviewers see the P9 lane.
+# treats them as another selectable lane so reviewers see the P9 reference.
 P9_DIR_SUFFIX = "_p9"
 DEFAULT_OUTPUT_DIR = OUTPUTS_ROOT / "m4_runs" / "burnaby_r1" / "google_gemini_2_5_flash_lite"
 MVP_REPORT_PATH = OUTPUTS_ROOT / "mvp_verification" / "mvp_report.json"
@@ -307,11 +307,11 @@ def discover_city_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
 
 
 def discover_product_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
-    """Return only the demo product path and its direct predecessor.
+    """Return current multi-city demo product paths and direct predecessors.
 
     The workspace keeps V2/P5/P9 artifacts for audit and regression work, but
     the final dashboard selector should stay focused: current M4 plus the V3
-    run M4 was built from.
+    run M4 was built from, for every city with committed verifier outputs.
     """
     if not outputs_root.is_dir():
         return []
@@ -999,8 +999,8 @@ def main() -> None:
     )
     _style(st)
 
-    # City selector: scan outputs/ for any *_slim_pipeline5_registry dir with
-    # verified_rules.json. New cities appear automatically; nothing is hardcoded.
+    # City selector: scan current M4 and predecessor V3 outputs for every city
+    # with verified_rules.json. New cities appear automatically once committed.
     city_dirs = discover_product_output_dirs()
     if (
         cli_output_dir.is_dir()
@@ -1011,20 +1011,24 @@ def main() -> None:
     if not city_dirs:
         st.error(f"No verifier output directories found under `{OUTPUTS_ROOT}`.")
         return
-    st.sidebar.header("Dataset")
+    current_m4_dirs = [path for path in city_dirs if native_run_root(path) == "m4_runs"]
+    city_names = [city_label_from_dir(path).replace("Current M4 \u2014 ", "") for path in current_m4_dirs]
+    st.sidebar.header("Multi-city dataset")
+    if city_names:
+        st.sidebar.caption("Cities: " + ", ".join(city_names))
     PORTFOLIO = "__portfolio__"
     selection = st.sidebar.selectbox(
-        "View",
+        "City / version",
         [PORTFOLIO, *city_dirs],
         index=0,
-        format_func=lambda item: "Start here \u2014 current M4 overview" if item == PORTFOLIO else city_label_from_dir(item),
+        format_func=lambda item: "Start here \u2014 multi-city M4 overview" if item == PORTFOLIO else city_label_from_dir(item),
         help=(
-            "Start with the current M4 overview. Pick a city for drilldown. "
-            "Only current M4 and its V3 predecessor are shown here."
+            "Start with the multi-city M4 overview. Pick Burnaby, Calgary, or Vancouver for drilldown. "
+            "Current M4 and its V3 predecessor are shown for each committed city."
         ),
     )
     if selection == PORTFOLIO:
-        _render_header(st, "Current M4 Verification Status", portfolio=True)
+        _render_header(st, "Current Multi-City M4 Verification Status", portfolio=True)
         _portfolio_page(st)
         return
     output_dir = selection
@@ -3019,10 +3023,10 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
 
 def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool = False) -> None:
     """Render a compact product-style header for the review console."""
-    eyebrow = "M4 Verification Dashboard" if portfolio else "Verification Review Console"
+    eyebrow = "Multi-City M4 Verification Dashboard" if portfolio else "Verification Review Console"
     title = city_label if portfolio else f"{city_label} Rule Review"
     body = (
-        "Communication dashboard for reviewers and partners. M4 shows extraction candidates moving through deterministic verification."
+        "Communication dashboard for reviewers and partners across Burnaby, Calgary, and Vancouver. M4 shows extraction candidates moving through deterministic verification."
         if portfolio
         else "Read candidate, verified, review, and source evidence artifacts. Extraction proposes; deterministic verification decides trusted outputs."
     )
@@ -3875,7 +3879,10 @@ def _portfolio_page(st: Any) -> None:
     _plain_bucket_legend(st)
 
     st.markdown("#### Current M4 result")
-    st.caption("These are the current product rows. Recall means benchmark recall, not full-bylaw completeness.")
+    st.caption(
+        "These are the current multi-city product rows. Use the sidebar City / version selector "
+        "to drill into Burnaby, Calgary, or Vancouver. Recall means benchmark recall, not full-bylaw completeness."
+    )
     st.dataframe(_display_rows(current_rows), width="stretch", hide_index=True)
 
     def _build():

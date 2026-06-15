@@ -1,10 +1,10 @@
 # BC Zoning Verification Dashboard
 
-Streamlit deployment package for the verification dashboard. The app is a
-read-only communication layer for reviewers and project partners: it explains
-committed extraction, verification, review, GIS, and RAG artifacts from
-`outputs/`, but it never reruns extraction, verification, benchmark evaluation,
-GIS export, or RAG indexing.
+Streamlit deployment package for the multi-city verification dashboard. The app
+is a read-only communication layer for reviewers and project partners: it
+explains committed extraction, verification, review, GIS, and RAG artifacts from
+`outputs/` for Burnaby, Calgary, and Vancouver, but it never reruns extraction,
+verification, benchmark evaluation, GIS export, or RAG indexing.
 
 The `Source Evidence > Ask The Bylaw` page is an advisory RAG chatbot. It
 retrieves committed bylaw index sections first, sends bounded context to
@@ -36,6 +36,10 @@ outputs/m4_runs/calgary_rcg/google_gemini_2_5_flash_lite/
 outputs/m4_runs/vancouver_rs/google_gemini_2_5_flash_lite/
 outputs/mvp_verification/mvp_report.json
 ```
+
+The default landing page is the multi-city M4 overview. Use the sidebar
+`City / version` selector to drill into Burnaby R1, Calgary RCG, or Vancouver
+RS, and to compare each current M4 run with its previous V3 predecessor.
 
 ## Current Safety Snapshot
 
