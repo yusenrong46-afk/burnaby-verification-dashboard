@@ -904,7 +904,9 @@ def _funnel_view(st: Any, data: dict[str, Any]) -> None:
             go.Funnel(
                 y=[row["label"] for row in stages],
                 x=[row["count"] for row in stages],
-                textinfo="value+percent initial",
+                textinfo="value",
+                textposition="inside",
+                hovertemplate="%{label}: %{value}<extra></extra>",
                 marker={"color": ["#0969da", "#218bff", "#54aeff", "#2da44e", "#1a7f37"]},
                 connector={"line": {"color": "#d0d7de", "width": 1}},
             )
@@ -1040,35 +1042,37 @@ def main() -> None:
     _ACTIVE_SOURCE["url"] = source_url
     _ACTIVE_SOURCE["label"] = f"{city_label} bylaw PDF"
 
-    st.sidebar.header("Review filters")
-    st.sidebar.caption(f"Loaded: {output_dir.name}")
     # Review annotations now live on review_needed.json; the old standalone
     # triage view duplicated the same queue.
     triage_items = data["review"]
-    categories = st.sidebar.multiselect(
-        "Why it needs review",
-        _unique(triage_items, "review_category"),
-        format_func=_plain_label,
-        help="The main reason the verifier would not prove the rule.",
-    )
-    priorities = st.sidebar.multiselect(
-        "Urgency",
-        _unique(triage_items, "triage_priority"),
-        format_func=_plain_label,
-        help="A reviewer triage hint. It does not change verification.",
-    )
-    likelihoods = st.sidebar.multiselect(
-        "Likely outcome",
-        _unique(triage_items, "likely_status"),
-        format_func=_plain_label,
-        help="Advisory estimate only; it never promotes a rule.",
-    )
-    rule_objects = st.sidebar.multiselect(
-        "Rule family",
-        _unique(triage_items, "rule_object"),
-        format_func=_plain_label,
-        help="Setback, height, lot coverage, permitted use, and similar rule families.",
-    )
+    st.sidebar.markdown("#### Selected run")
+    st.sidebar.caption(city_label)
+    with st.sidebar.expander("Review filters (optional)", expanded=False):
+        st.caption("These filters only change the Review Workbench queue.")
+        categories = st.multiselect(
+            "Why it needs review",
+            _unique(triage_items, "review_category"),
+            format_func=_plain_label,
+            help="The main reason the verifier would not prove the rule.",
+        )
+        priorities = st.multiselect(
+            "Urgency",
+            _unique(triage_items, "triage_priority"),
+            format_func=_plain_label,
+            help="A reviewer triage hint. It does not change verification.",
+        )
+        likelihoods = st.multiselect(
+            "Likely outcome",
+            _unique(triage_items, "likely_status"),
+            format_func=_plain_label,
+            help="Advisory estimate only; it never promotes a rule.",
+        )
+        rule_objects = st.multiselect(
+            "Rule family",
+            _unique(triage_items, "rule_object"),
+            format_func=_plain_label,
+            help="Setback, height, lot coverage, permitted use, and similar rule families.",
+        )
     _sidebar_guidance(st)
     filtered_items = filter_triage_items(
         triage_items,
@@ -1080,6 +1084,7 @@ def main() -> None:
 
     _render_header(st, city_label)
     _render_kpis(st, data, filtered_items)
+    st.markdown(_city_takeaway_html(city_label, data, filtered_items), unsafe_allow_html=True)
     _render_guidance(st)
 
     # Final-demo layout: summary first, then city drilldown, then human review.
@@ -1095,6 +1100,7 @@ def main() -> None:
         _pipeline_comparison_tab(st, output_dir)
 
     with sections[2]:
+        _review_workbench_intro(st, data, filtered_items)
         review_tabs = st.tabs(["Review One Rule", "Compare With Verified", "Queue Summary"])
         with review_tabs[0]:
             _review_assistant_tab(
@@ -1457,14 +1463,27 @@ def _review_assistant_tab(
             f"Page {source.get('page') or 'unknown'} · evidence `{source.get('evidence_id') or ''}` · "
             f"context status: {_plain_label(source.get('repair_status') or 'unknown')}"
         )
-        st.markdown("*Extractor evidence*")
-        st.code(source.get("original_evidence") or _source_text(rule), language="text")
-        st.markdown("*Source context added before verification*")
+        original_evidence = source.get("original_evidence") or _source_text(rule)
+        _source_packet_panel(
+            st,
+            "Extractor evidence",
+            original_evidence,
+            "Open raw extractor evidence",
+            page=source.get("page"),
+            evidence_id=source.get("evidence_id"),
+            status="Candidate quote before verification.",
+        )
         repaired = source.get("repaired_context")
-        if repaired:
-            st.code(repaired, language="text")
-        else:
-            st.caption("No repaired context available.")
+        _source_packet_panel(
+            st,
+            "Verification context",
+            repaired,
+            "Open repaired source context",
+            page=source.get("page"),
+            evidence_id=source.get("evidence_id"),
+            status="Extra nearby bylaw text used to decide whether proof is sufficient.",
+            show_cue=False,
+        )
 
     _legal_context_expander(st, output_dir, rule, evidence_by_id)
 
@@ -2078,7 +2097,14 @@ def _candidate_compare_tab(
         st.markdown("### Candidate in review")
         st.table([compact_rule_row(review_rule)])
         st.markdown("#### Evidence")
-        st.code(_source_text(review_rule), language="text")
+        review_source = _source_text(review_rule)
+        _source_packet_panel(
+            st,
+            "Candidate source",
+            review_source,
+            "Open candidate evidence",
+            status="Raw text behind the held candidate.",
+        )
         st.markdown("#### Suggested next step")
         st.write(triage_item.get("suggested_fix"))
     with right:
@@ -2087,7 +2113,14 @@ def _candidate_compare_tab(
             st.table([compact_rule_row(verified_rule)])
             st.markdown(f"Semantic score: `{triage_item.get('semantic_score') or review_rule.get('semantic_score') or 'n/a'}`")
             st.markdown(f"Lexical score: `{triage_item.get('similar_verified_score')}`")
-            st.code(_source_text(verified_rule), language="text")
+            verified_source = _source_text(verified_rule)
+            _source_packet_panel(
+                st,
+                "Verified source",
+                verified_source,
+                "Open verified evidence",
+                status="Raw text behind the closest verified comparison.",
+            )
         else:
             st.info("No verified comparison rule found.")
 
@@ -2932,7 +2965,7 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
         st.markdown("##### Answer")
         llm_status = _bylaw_llm_status(st)
         if llm_status.get("available"):
-            st.success(f"Mode: LLM + RAG ({llm_status['provider']} / {llm_status['model']})")
+            st.success("Mode: RAG chat enabled with GPT-OSS-120B.")
         else:
             st.warning(
                 "Mode: retrieval-only. Add `OPENROUTER_API_KEY` in Streamlit secrets to enable "
@@ -2982,8 +3015,8 @@ def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
 
     if not sections:
         st.info(
-            f"No extracted bylaw text found under `{bylaw_dir}` yet — falling back to the "
-            "evidence-units view. Once extraction lands there, this tab shows section-anchored bylaw text."
+            "No extracted bylaw section library is bundled yet, so this view shows cited evidence units instead. "
+            "Once section extraction is bundled, this tab will show section-anchored bylaw text."
         )
         if rule_options:
             selected = st.selectbox("Rule", list(rule_options), key="bylaw_rule_fallback")
@@ -3064,6 +3097,40 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
         for label, value, tone in cards
     )
     st.markdown(f"<div class='metric-grid'>{cards_html}</div>", unsafe_allow_html=True)
+
+
+def _city_takeaway_html(city_label: str, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> str:
+    """One conclusion panel that tells reviewers what this run means."""
+    validation = data.get("validation") or {}
+    benchmark = data.get("benchmark") or {}
+    counts = validation.get("bucket_counts") or {}
+    metrics = benchmark.get("rule_metrics") or {}
+    proposal = benchmark.get("proposal_metrics") or {}
+    verified = int(counts.get("verified") or 0)
+    review = int(counts.get("review_needed") or 0)
+    false_verified = int(metrics.get("false_verified_count") or 0)
+    false_approval = int(proposal.get("false_approval_count") or 0)
+    precision = metrics.get("verified_precision")
+    safe = false_verified == 0 and false_approval == 0
+    headline = "Safe verified output" if safe else "Unsafe until fixed"
+    body = (
+        f"{city_label} has {verified} verified rules and {review} rules held for human review. "
+        f"Verified precision is {_display_value(precision)} with {false_verified} false verified and {false_approval} false approvals."
+    )
+    next_step = (
+        f"Use verified rules for GIS/demo output. Review the {len(filtered_items)} visible held rules before claiming full automation."
+        if review
+        else "No held rules are visible for this run. Use verified artifacts and keep the source audit with the handoff."
+    )
+    tone = "verified" if safe else "rejected"
+    return (
+        f"<div class='takeaway-panel takeaway-{tone}'>"
+        f"<div class='takeaway-label'>Reviewer takeaway</div>"
+        f"<b>{html.escape(headline)}</b>"
+        f"<span>{html.escape(body)}</span>"
+        f"<p>{html.escape(next_step)}</p>"
+        "</div>"
+    )
 
 
 def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool = False) -> None:
@@ -3164,6 +3231,30 @@ def _action_summary(st: Any, data: dict[str, Any]) -> None:
             "</div>"
         )
     st.markdown("<div class='action-grid'>" + "".join(html_cards) + "</div>", unsafe_allow_html=True)
+
+
+def _review_workbench_intro(st: Any, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> None:
+    """Orient a reviewer before they land in the dense rule-level tools."""
+    total_review = len(data.get("review") or [])
+    visible_review = len(filtered_items)
+    review_counts = _named_counts(data.get("router", {}).get("summary", {}).get("action_counts", []))
+    evidence_path = (
+        review_counts.get("rerun_with_evidence_bundle", 0)
+        + review_counts.get("retry_with_better_evidence", 0)
+        + review_counts.get("condition_evidence_needed", 0)
+    )
+    operator_path = review_counts.get("operator_review", 0)
+    legal_path = review_counts.get("human_legal_review", 0) + review_counts.get("scope_review", 0)
+    st.markdown(
+        "<div class='takeaway-panel takeaway-review'>"
+        "<div class='takeaway-label'>Review workbench</div>"
+        f"<b>{visible_review} held rules visible out of {total_review}</b>"
+        "<span>Start with the rule-level view only when you know which bucket you are working on.</span>"
+        f"<p>Evidence fixes: {evidence_path}. Direction-word checks: {operator_path}. Legal or scope review: {legal_path}. "
+        "No item here is GIS-safe until the verifier promotes it.</p>"
+        "</div>",
+        unsafe_allow_html=True,
+    )
 
 
 def _sentence_card(st: Any, title: str, sentence: str, tone: str, caption: str = "") -> None:
@@ -3477,6 +3568,55 @@ def _search_phrase(rule_like: dict[str, Any], quote: str) -> str:
     return " ".join(str(part) for part in parts if part not in (None, ""))
 
 
+def _source_packet_panel(
+    st: Any,
+    title: str,
+    text: Any,
+    expander_label: str,
+    *,
+    page: Any = None,
+    evidence_id: Any = None,
+    status: str = "",
+    show_cue: bool = True,
+) -> None:
+    """Keep raw bylaw text available without dominating the review screen."""
+    raw_text = str(text or "").strip()
+    meta_parts = []
+    if page not in (None, ""):
+        meta_parts.append(f"page {page}")
+    if evidence_id not in (None, ""):
+        meta_parts.append(f"evidence {evidence_id}")
+    meta = " · ".join(meta_parts) or "source packet"
+    cue = _source_cue(raw_text) if show_cue else ""
+    body = status or "Raw source text is attached for audit."
+    if cue:
+        body = f"{body} Search cue: {cue}"
+    elif not raw_text:
+        body = "No source text was attached for this packet."
+
+    st.markdown(
+        "<div class='source-summary'>"
+        f"<b>{html.escape(title)}</b>"
+        f"<span>{html.escape(meta)}</span>"
+        f"<p>{html.escape(body)}</p>"
+        "</div>",
+        unsafe_allow_html=True,
+    )
+    if raw_text:
+        with st.expander(expander_label, expanded=False):
+            st.code(raw_text, language="text")
+
+
+def _source_cue(value: str, limit: int = 150) -> str:
+    """Return a one-line lookup cue rather than a full legal paragraph."""
+    text = " ".join(str(value or "").split())
+    if not text:
+        return ""
+    words = text.split()
+    cue = " ".join(words[:18])
+    return _short_display_quote(cue, limit)
+
+
 def _short_display_quote(value: str, limit: int = 420) -> str:
     """Keep bylaw evidence quotes readable inside Streamlit."""
     text = " ".join(str(value or "").split())
@@ -3612,6 +3752,18 @@ h4 {font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--
 .roadmap-card b {display:block; color:var(--ink); margin-bottom:5px;}
 .roadmap-card span {display:block; color:var(--ink-soft); font-size:14px; line-height:1.4;}
 .trust-note {border:1px solid var(--hairline); border-radius:8px; background:var(--subtle); padding:11px 13px; color:var(--ink-soft); font-size:14px; margin:8px 0 12px;}
+.takeaway-panel {border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:8px; background:var(--canvas); padding:14px 16px; margin:10px 0 16px;}
+.takeaway-panel b {display:block; color:var(--ink); font-size:16px; margin:2px 0 5px;}
+.takeaway-panel span {display:block; color:var(--ink-soft); font-size:14px; line-height:1.45;}
+.takeaway-panel p {margin:8px 0 0; color:var(--ink); font-size:14px; line-height:1.4;}
+.takeaway-label {font-size:11px; line-height:1; letter-spacing:.06em; text-transform:uppercase; font-weight:800; color:var(--ink-soft); margin-bottom:5px;}
+.takeaway-verified {border-left-color:var(--status-verified);}
+.takeaway-review {border-left-color:var(--status-review);}
+.takeaway-rejected {border-left-color:var(--status-rejected);}
+.source-summary {border:1px solid var(--hairline); border-radius:8px; background:var(--subtle); padding:11px 12px; margin:8px 0 10px;}
+.source-summary b {display:block; color:var(--ink); font-size:14px; margin-bottom:3px;}
+.source-summary span {display:block; color:var(--ink-soft); font-size:12px; margin-bottom:6px;}
+.source-summary p {margin:0; color:var(--ink-soft); font-size:13px; line-height:1.45;}
 .bylaw-flow {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:8px 0 16px;}
 .bylaw-step {border:1px solid var(--hairline); border-radius:8px; background:var(--canvas); padding:12px 13px; min-height:82px;}
 .bylaw-step b {display:block; color:var(--ink); font-size:13px; margin-bottom:5px;}
@@ -3924,6 +4076,16 @@ def _portfolio_page(st: Any) -> None:
         _portfolio_metric_card("Calgary source", calgary_page_label, "full bylaw, not a seven-page slice", "not_used"),
     ]
     st.markdown("<div class='hero-grid'>" + "".join(cards) + "</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='takeaway-panel takeaway-verified'>"
+        "<div class='takeaway-label'>Reviewer takeaway</div>"
+        "<b>M4 is ready to explain, not a full automation claim.</b>"
+        f"<span>Across {city_count} cities, the current run has {verified_total} verified rules, "
+        f"{review_total} rules held for review, and {int(report.get('current_false_verified_total') or 0)} false verified rules.</span>"
+        "<p>Use the city selector to inspect the held rules. GIS and map handoff should use verified-only artifacts.</p>"
+        "</div>",
+        unsafe_allow_html=True,
+    )
     st.markdown(
         "<div class='instruction-banner'><b>Communication layer only.</b> Reviewers and partners use this dashboard "
         "to understand extraction, verification, review, and GIS handoff. Downstream work must consume verified-only artifacts.</div>",
