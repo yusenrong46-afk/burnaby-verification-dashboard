@@ -1,7 +1,9 @@
 # Verification Dashboard
 
-The dashboard is a reader for verifier outputs. It does not call an LLM, change
-decisions, or promote rules.
+The dashboard is a reviewer and partner-facing reader for extraction,
+verification, review, GIS, and source-evidence outputs. It can optionally call
+an advisory RAG chatbot, but it never changes decisions, promotes rules, or
+writes verifier artifacts.
 
 Run from the project root:
 
@@ -12,15 +14,15 @@ Run from the project root:
 Default output folder:
 
 ```text
-outputs/burnaby_r1_slim_pipeline5_registry/
+outputs/m4_runs/burnaby_r1/google_gemini_2_5_flash_lite/
 ```
 
 ## v2
 
 - **City selector** — the sidebar lists every `outputs/*_slim_pipeline5_registry/`
-  dir that contains `verified_rules.json` (default `burnaby_r1`). New cities
-  (e.g. Calgary) appear automatically once their outputs exist; nothing is
-  hardcoded. All loads are city-aware.
+  dir and native `outputs/m4_runs/*/*/` dir that contains `verified_rules.json`
+  (default `burnaby_r1`). New cities appear automatically once their outputs
+  exist; nothing is hardcoded. All loads are city-aware.
 - **Sections** — the former flat tab strip is grouped into six top-level
   sections (every original tab is preserved inside one of them):
   `Overview` / `Rules` (Candidate vs Verified, Rule Graph) / `Review` (Review,
@@ -34,10 +36,10 @@ outputs/burnaby_r1_slim_pipeline5_registry/
   and tooltips carrying parameter, value, operator, rule id, and evidence
   quote. Requires the optional extra: `pip install -e .[map]`; without pydeck
   the tab shows an install hint instead.
-- **Bylaw tab** — renders extracted bylaw sections from
-  `data/bylaws/<city>/` when present, with a rule picker that `<mark>`s the
-  picked rule's cited evidence inside the section. Falls back to the
-  evidence-units view when no extraction exists yet.
+- **Ask The Bylaw** — renders extracted bylaw sections and includes advisory
+  RAG chat. The default hosted model is OpenRouter `openai/gpt-oss-120b` when
+  `OPENROUTER_API_KEY` is configured. Retrieval-only mode still works without a
+  key.
 - **3D envelope** — `scripts/build_envelope_3d.py` writes
   `outputs/<city>.../envelope_3d.html` (self-contained Three.js + OrbitControls
   from CDN) from `buildable_envelope.json`; the dashboard embeds it when the
@@ -49,6 +51,20 @@ outputs/burnaby_r1_slim_pipeline5_registry/
 
 The dashboard still runs with only the base dependency (`streamlit`); pydeck
 and the Three.js artifact degrade gracefully with informative messages.
+
+## Chatbot Secrets
+
+```toml
+BYLAW_RAG_PROVIDER = "openrouter"
+BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
+OPENROUTER_API_KEY = "..."
+OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"
+# Optional:
+# OPENROUTER_SITE_URL = "https://your-streamlit-app-url.streamlit.app"
+```
+
+The chatbot is not part of the verifier. It can explain retrieved bylaw text for
+reviewers, but it cannot verify, reject, approve, or write JSON outputs.
 
 ## How To Read It
 
@@ -122,3 +138,6 @@ File and layer map explaining how the verifier is organized.
 ## Guardrail
 
 The dashboard explains decisions. It does not make decisions.
+
+Extraction proposes candidate rules. Deterministic verification decides which
+rules are trusted and GIS-safe.

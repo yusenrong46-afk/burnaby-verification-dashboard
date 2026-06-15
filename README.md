@@ -1,13 +1,16 @@
 # BC Zoning Verification Dashboard
 
-Streamlit deployment package for the verification dashboard. The app is read-only:
-it loads committed verifier artifacts from `outputs/` and never reruns extraction,
-verification, benchmark evaluation, GIS export, or RAG indexing.
+Streamlit deployment package for the verification dashboard. The app is a
+read-only communication layer for reviewers and project partners: it explains
+committed extraction, verification, review, GIS, and RAG artifacts from
+`outputs/`, but it never reruns extraction, verification, benchmark evaluation,
+GIS export, or RAG indexing.
 
 The `Source Evidence > Ask The Bylaw` page is an advisory RAG chatbot. It
-retrieves committed bylaw index sections first, sends bounded context to a small
-LLM only when a secret key is configured, and falls back to retrieval-only mode
-otherwise. Chat answers never approve rules or write GIS outputs.
+retrieves committed bylaw index sections first, sends bounded context to
+OpenRouter GPT-OSS-120B only when a secret key is configured, and falls back to
+retrieval-only mode otherwise. Chat answers never verify rules, approve
+proposals, or write GIS outputs.
 
 ## Run Locally
 
@@ -28,19 +31,24 @@ outputs/calgary_rcg_slim_pipeline5_registry/
 outputs/calgary_rcg_p9/
 outputs/vancouver_rs_slim_pipeline5_registry/
 outputs/vancouver_rs_p9/
+outputs/m4_runs/burnaby_r1/google_gemini_2_5_flash_lite/
+outputs/m4_runs/calgary_rcg/google_gemini_2_5_flash_lite/
+outputs/m4_runs/vancouver_rs/google_gemini_2_5_flash_lite/
+outputs/mvp_verification/mvp_report.json
 ```
 
 ## Current Safety Snapshot
 
 ```text
-Burnaby P5:   verified_precision=1.00, false_verified=0, verified=30
-Calgary P5:   verified_precision=1.00, false_verified=0, verified=6
-Vancouver P5: verified_precision=1.00, false_verified=0, candidate_recall=0.86
+Burnaby M4:   candidates=101, verified=84, review=17, verified_precision=1.00, false_verified=0
+Vancouver M4: candidates=32,  verified=12, review=11, verified_precision=1.00, false_verified=0
+Calgary M4:   candidates=306, verified=11, review=43, verified_precision=1.00, false_verified=0
 ```
 
-Pipeline 9 results are shown for comparison only. Failed gates are labeled in
-the dashboard as `fail-closed`, `scope mismatch`, or `unsafe / needs fix`; they
-are not presented as passing outputs.
+M4 is the current product path. V3/Pipeline 5/Pipeline 9 artifacts are retained
+only as predecessor or comparison context. Failed gates are labeled in the
+dashboard as `fail-closed`, `scope mismatch`, or `unsafe / needs fix`; they are
+not presented as passing outputs.
 
 ## Reviewer Workflow
 
@@ -48,6 +56,8 @@ are not presented as passing outputs.
   sources.
 - `review_needed.json`, `source_repair_report.json`, and
   `review_assistant_packets.json` are advisory/debug artifacts for human review.
+- Extraction proposes candidate rules; deterministic verification decides which
+  rules become trusted outputs.
 - The Review Assistant panel is advisory only. It may summarize bounded evidence
   context, but it cannot approve rules or write GIS outputs.
 
@@ -56,11 +66,14 @@ are not presented as passing outputs.
 Set Streamlit Cloud secrets:
 
 ```toml
-BYLAW_RAG_PROVIDER = "gemini"
-BYLAW_RAG_MODEL = "gemini-2.0-flash-lite"
-GEMINI_API_KEY = "..."
+BYLAW_RAG_PROVIDER = "openrouter"
+BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
+OPENROUTER_API_KEY = "..."
+OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"
+# Optional:
+# OPENROUTER_SITE_URL = "https://your-streamlit-app-url.streamlit.app"
 ```
 
-The dashboard also supports `OPENAI_API_KEY` with `BYLAW_RAG_PROVIDER =
-"openai"` and `ANTHROPIC_API_KEY` with `BYLAW_RAG_PROVIDER = "anthropic"`.
+The dashboard also supports fallback providers through `BYLAW_RAG_PROVIDER =
+"openai"`, `"gemini"`, or `"anthropic"` if the matching provider key is present.
 Secrets must stay in Streamlit Cloud settings; do not commit them.

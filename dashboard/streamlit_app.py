@@ -163,9 +163,64 @@ RAW_VALUE_COLUMNS = {
     "rows",
 }
 
-RAG_CHAT_TOP_K = 4
-RAG_CONTEXT_CHAR_LIMIT = 7000
-RAG_CONTEXT_PER_HIT_LIMIT = 1800
+DEFAULT_BYLAW_RAG_PROVIDER = "openrouter"
+DEFAULT_BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
+DEFAULT_OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+DEFAULT_OPENAI_RAG_MODEL = "gpt-4.1-mini"
+DEFAULT_GEMINI_RAG_MODEL = "gemini-2.5-flash-lite"
+DEFAULT_ANTHROPIC_RAG_MODEL = "claude-3-5-haiku-latest"
+
+RAG_CHAT_TOP_K = 5
+RAG_CONTEXT_CHAR_LIMIT = 9000
+RAG_CONTEXT_PER_HIT_LIMIT = 2200
+
+BYLAW_PROMPT_LIBRARY = [
+    {
+        "group": "Rule lookup",
+        "label": "Maximum height",
+        "question": "What maximum building height is supported by the retrieved bylaw sections? Cite the section for each claim.",
+    },
+    {
+        "group": "Rule lookup",
+        "label": "Setbacks",
+        "question": "What front, rear, and side setback rules are supported by the retrieved bylaw sections? Cite the section for each value.",
+    },
+    {
+        "group": "Rule lookup",
+        "label": "Lot coverage",
+        "question": "What lot coverage or impervious surface limits are supported by the retrieved bylaw sections? Cite the section for each limit.",
+    },
+    {
+        "group": "Applicability",
+        "label": "Who does this apply to?",
+        "question": "Which dwelling types, unit counts, or site conditions does the retrieved bylaw text apply to? Separate proven scope from unclear scope.",
+    },
+    {
+        "group": "Applicability",
+        "label": "Conditions or exceptions",
+        "question": "Do the retrieved sections include exceptions, conditions, footnotes, or special branches? List only what the sections explicitly support.",
+    },
+    {
+        "group": "Evidence",
+        "label": "Show source support",
+        "question": "Show the exact retrieved source support for the rule and explain which value, unit, operator, scope, and condition are proven.",
+    },
+    {
+        "group": "Review",
+        "label": "Why review?",
+        "question": "Explain why a rule should stay in human review if the retrieved evidence does not prove value, unit, operator, scope, condition, or exception.",
+    },
+    {
+        "group": "GIS handoff",
+        "label": "What is GIS-safe?",
+        "question": "Explain which outputs are safe for GIS and why raw chat answers or review-needed rules must not be used as verified GIS rules.",
+    },
+    {
+        "group": "Proposal caution",
+        "label": "Can this be approved?",
+        "question": "If this is a proposal or permit-style question, explain why the chatbot cannot approve it and what verified-only checker output would be needed.",
+    },
+]
 
 RAG_QUERY_SYNONYMS = {
     "tall": ("height",),
@@ -181,6 +236,14 @@ RAG_QUERY_SYNONYMS = {
     "floors": ("storeys",),
     "levels": ("storeys",),
     "garage": ("parking",),
+    "backyard": ("rear", "yard", "setback"),
+    "frontyard": ("front", "yard", "setback"),
+    "sideyard": ("side", "yard", "setback"),
+    "coverage": ("lot", "impervious", "surface"),
+    "transit": ("frequent", "transit", "network"),
+    "ftn": ("frequent", "transit", "network"),
+    "suite": ("secondary", "suite", "accessory"),
+    "laneway": ("accessory", "dwelling", "coach"),
 }
 
 
@@ -305,6 +368,9 @@ def bylaw_index_path(output_dir: Path) -> Path | None:
     sibling = OUTPUTS_ROOT / f"{city_stem_from_dir(output_dir)}{OUTPUT_DIR_SUFFIX}" / "bylaw_rag_index.json"
     if sibling.exists():
         return sibling
+    source_corpus = ROOT / "benchmark" / "source_corpus" / city_stem_from_dir(output_dir) / "rag_index.json"
+    if source_corpus.exists():
+        return source_corpus
     return None
 
 
@@ -338,7 +404,7 @@ def source_document_url_for_output(output_dir: Path, data: dict[str, Any]) -> st
 def load_output_data(output_dir: Path) -> dict[str, Any]:
     """Load all dashboard source files from one verifier output directory."""
     # The dashboard is intentionally read-only. It consumes generated JSON
-    # reports and never calls Gemini, reruns verification, or mutates outputs.
+    # reports and never reruns verification or mutates trusted outputs.
     return {
         "output_dir": output_dir,
         "validation": _read_json(output_dir / "validation_report.json", {}),
@@ -2497,6 +2563,46 @@ def _bounded_rag_hits(hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return bounded
 
 
+def _bylaw_question_mode(question: str) -> str:
+    text = str(question or "").lower()
+    if any(token in text for token in ("approve", "approved", "permit", "can i build", "can we build", "allowed", "compliant")):
+        return "proposal_or_compliance"
+    if any(token in text for token in ("exception", "unless", "notwithstanding", "subject to", "condition", "footnote")):
+        return "condition_or_exception"
+    if any(token in text for token in ("gis", "map", "felt", "contract", "verified output")):
+        return "gis_handoff"
+    if any(token in text for token in ("review", "why held", "why is", "missing proof", "support gap")):
+        return "review_explanation"
+    return "bylaw_lookup"
+
+
+def _mode_instruction(question: str) -> str:
+    mode = _bylaw_question_mode(question)
+    if mode == "proposal_or_compliance":
+        return (
+            "This looks like a proposal or compliance question. Do not answer with approved, rejected, "
+            "permitted, or compliant. Explain what the retrieved bylaw text says, then state that a "
+            "verified-only compliance checker or gis_rule_contract.json decision is required for approval."
+        )
+    if mode == "condition_or_exception":
+        return (
+            "This question involves conditions or exceptions. Separate explicit source-supported wording "
+            "from unclear branches. If a condition, footnote, exception, or applicability branch is not "
+            "fully retrieved, say it needs human review."
+        )
+    if mode == "gis_handoff":
+        return (
+            "This question is about downstream use. Explain that GIS may consume only verified, "
+            "source-supported rules from gis_rule_contract.json. RAG answers and review_needed items are advisory."
+        )
+    if mode == "review_explanation":
+        return (
+            "This question is about review. Explain likely review reasons only from retrieved text and the "
+            "verification contract: value, unit, operator, scope, applies_to, condition, and exception must be proven."
+        )
+    return "This is a bylaw lookup question. Answer from retrieved sections only and cite every claim."
+
+
 def _grounded_bylaw_prompt(question: str, hits: list[dict[str, Any]]) -> str:
     bounded_hits = _bounded_rag_hits(hits)
     try:
@@ -2515,9 +2621,12 @@ def _grounded_bylaw_prompt(question: str, hits: list[dict[str, Any]]) -> str:
             f"SECTIONS:\n{sections}\n\nQUESTION: {question}"
         )
     return (
-        "You are an advisory zoning bylaw chatbot for human reviewers. "
-        "Do not approve, verify, or reject rules. The verifier's JSON outputs are the authority. "
-        "Give a concise answer, cite only the retrieved sections, and say when the evidence is insufficient.\n\n"
+        "You are an advisory zoning bylaw chatbot for human reviewers and project partners. "
+        "RAG explains retrieved source text; it does not verify rules. The deterministic verifier's JSON outputs "
+        "are the authority. Do not approve, verify, reject, or promote any rule. "
+        "Cite only retrieved sections for every bylaw claim. If the retrieved sections are incomplete, say the "
+        "evidence is insufficient instead of guessing.\n\n"
+        f"Question handling instruction: {_mode_instruction(question)}\n\n"
         f"{base}"
     )
 
@@ -2569,7 +2678,8 @@ def _secret_value(st: Any | None, name: str) -> str:
 
 
 def _bylaw_llm_status(st: Any | None = None) -> dict[str, Any]:
-    preferred = (_secret_value(st, "BYLAW_RAG_PROVIDER") or "").strip().lower()
+    preferred = (_secret_value(st, "BYLAW_RAG_PROVIDER") or DEFAULT_BYLAW_RAG_PROVIDER).strip().lower()
+    openrouter_key = _secret_value(st, "OPENROUTER_API_KEY")
     gemini_key = (
         _secret_value(st, "GEMINI_API_KEY")
         or _secret_value(st, "GOOGLE_API_KEY")
@@ -2586,19 +2696,24 @@ def _bylaw_llm_status(st: Any | None = None) -> dict[str, Any]:
             "configured": bool(key),
         }
 
+    if preferred in {"openrouter", "openrouter.ai"}:
+        model = _secret_value(st, "OPENROUTER_MODEL") or DEFAULT_BYLAW_RAG_MODEL
+        return _status("openrouter", openrouter_key, model)
     if preferred in {"gemini", "google"}:
-        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or "gemini-2.0-flash-lite")
+        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or DEFAULT_GEMINI_RAG_MODEL)
     if preferred in {"openai", "openai-compatible"}:
-        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or "gpt-4o-mini")
+        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or DEFAULT_OPENAI_RAG_MODEL)
     if preferred in {"anthropic", "claude"}:
-        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or "claude-3-5-haiku-latest")
+        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or DEFAULT_ANTHROPIC_RAG_MODEL)
+    if openrouter_key:
+        return _status("openrouter", openrouter_key, _secret_value(st, "OPENROUTER_MODEL") or DEFAULT_BYLAW_RAG_MODEL)
     if gemini_key:
-        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or "gemini-2.0-flash-lite")
+        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or DEFAULT_GEMINI_RAG_MODEL)
     if openai_key:
-        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or "gpt-4o-mini")
+        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or DEFAULT_OPENAI_RAG_MODEL)
     if anthropic_key:
-        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or "claude-3-5-haiku-latest")
-    return {"provider": "none", "model": "", "available": False, "configured": False}
+        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or DEFAULT_ANTHROPIC_RAG_MODEL)
+    return {"provider": DEFAULT_BYLAW_RAG_PROVIDER, "model": DEFAULT_BYLAW_RAG_MODEL, "available": False, "configured": False}
 
 
 def _optional_bylaw_llm_answer(prompt: str, st: Any | None = None) -> str | None:
@@ -2606,6 +2721,8 @@ def _optional_bylaw_llm_answer(prompt: str, st: Any | None = None) -> str | None
     if not status.get("available"):
         return None
     provider = status["provider"]
+    if provider == "openrouter":
+        return _openrouter_answer(prompt, _secret_value(st, "OPENROUTER_API_KEY"), status["model"], st)
     if provider == "gemini":
         key = _secret_value(st, "GEMINI_API_KEY") or _secret_value(st, "GOOGLE_API_KEY") or _secret_value(st, "GOOGLE_GENAI_API_KEY")
         return _gemini_answer(prompt, key, status["model"])
@@ -2635,7 +2752,7 @@ def _post_json(url: str, payload: dict[str, Any], headers: dict[str, str], timeo
 
 
 def _gemini_answer(prompt: str, api_key: str, model: str) -> str:
-    model_name = str(model or "gemini-2.0-flash-lite").removeprefix("models/")
+    model_name = str(model or DEFAULT_GEMINI_RAG_MODEL).removeprefix("models/")
     url = (
         "https://generativelanguage.googleapis.com/v1beta/models/"
         f"{urllib.parse.quote(model_name, safe='-._~')}:generateContent?key={urllib.parse.quote(api_key)}"
@@ -2654,8 +2771,24 @@ def _gemini_answer(prompt: str, api_key: str, model: str) -> str:
 
 def _openai_answer(prompt: str, api_key: str, model: str, st: Any | None = None) -> str:
     base_url = (_secret_value(st, "OPENAI_BASE_URL") or "https://api.openai.com/v1").rstrip("/")
+    return _openai_compatible_answer(prompt, api_key, model or DEFAULT_OPENAI_RAG_MODEL, base_url, {})
+
+
+def _openrouter_answer(prompt: str, api_key: str, model: str, st: Any | None = None) -> str:
+    base_url = (_secret_value(st, "OPENROUTER_BASE_URL") or DEFAULT_OPENROUTER_BASE_URL).rstrip("/")
+    headers = {}
+    site_url = _secret_value(st, "OPENROUTER_SITE_URL")
+    app_title = _secret_value(st, "OPENROUTER_APP_TITLE") or "BC Zoning Verification Dashboard"
+    if site_url:
+        headers["HTTP-Referer"] = site_url
+    if app_title:
+        headers["X-Title"] = app_title
+    return _openai_compatible_answer(prompt, api_key, model or DEFAULT_BYLAW_RAG_MODEL, base_url, headers)
+
+
+def _openai_compatible_answer(prompt: str, api_key: str, model: str, base_url: str, headers: dict[str, str]) -> str:
     payload = {
-        "model": model or "gpt-4o-mini",
+        "model": model,
         "temperature": 0.0,
         "max_tokens": 700,
         "messages": [
@@ -2663,7 +2796,7 @@ def _openai_answer(prompt: str, api_key: str, model: str, st: Any | None = None)
             {"role": "user", "content": prompt},
         ],
     }
-    data = _post_json(f"{base_url}/chat/completions", payload, {"Authorization": f"Bearer {api_key}"})
+    data = _post_json(f"{base_url}/chat/completions", payload, {"Authorization": f"Bearer {api_key}", **headers})
     if data.get("_error"):
         return f"LLM unavailable: {data['_error']}"
     return str((((data.get("choices") or [{}])[0].get("message") or {}).get("content") or "")).strip() or "The LLM returned no text."
@@ -2693,26 +2826,34 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
     answers are retrieved clauses with section ids — never a verification."""
     index_path = bylaw_index_path(output_dir)
     city_stem = city_stem_from_dir(output_dir)
-    st.markdown("#### Reviewer Chat")
+    st.markdown("#### Reviewer Bylaw Chat")
     st.markdown(
-        "<div class='trust-note'><b>Advisory only.</b> The assistant answers from retrieved bylaw sections. "
-        "It cannot verify, reject, approve, edit JSON, or change GIS outputs.</div>",
+        "<div class='trust-note'><b>Advisory only.</b> This chat helps reviewers and partners read retrieved "
+        "bylaw sections. Extraction proposes candidate rules; deterministic verification decides what is trusted. "
+        "The assistant cannot verify, reject, approve, edit JSON, or change GIS outputs.</div>",
         unsafe_allow_html=True,
     )
     llm_status = _bylaw_llm_status(st)
     if llm_status.get("available"):
         st.success(f"Mode: LLM + RAG ({llm_status['provider']} / {llm_status['model']})")
     else:
-        st.warning("Mode: retrieval-only. Add a small LLM key in Streamlit secrets to generate grounded chat answers.")
+        st.warning(
+            "Mode: retrieval-only. Add `OPENROUTER_API_KEY` in Streamlit secrets to enable "
+            "GPT-OSS-120B + RAG grounded chat answers."
+        )
         with st.expander("How to enable deployed LLM + RAG"):
             st.markdown(
-                "Add one provider key in Streamlit Cloud secrets. Gemini is the lightest default path for this dashboard."
+                "Add the OpenRouter key in Streamlit Cloud secrets. Keep the dashboard read-only: the LLM may explain "
+                "retrieved sections, but it must not write verifier or GIS outputs."
             )
             st.code(
-                """# Streamlit Cloud secrets example
-BYLAW_RAG_PROVIDER = "gemini"
-BYLAW_RAG_MODEL = "gemini-2.0-flash-lite"
-GEMINI_API_KEY = "..."  # keep this in secrets only""",
+                '''# Streamlit Cloud secrets example
+BYLAW_RAG_PROVIDER = "openrouter"
+BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
+OPENROUTER_API_KEY = "..."  # keep this in secrets only
+OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"
+# Optional:
+# OPENROUTER_SITE_URL = "https://your-streamlit-app-url.streamlit.app"''',
                 language="toml",
             )
     if index_path is None:
@@ -2724,6 +2865,16 @@ GEMINI_API_KEY = "..."  # keep this in secrets only""",
 
     chat_key = _rag_chat_key(city_stem)
     st.session_state.setdefault(chat_key, [])
+    with st.expander("Prompt library for reviewers and partners", expanded=not st.session_state[chat_key]):
+        selected_prompt = st.selectbox(
+            "Start with a bylaw-specific question",
+            BYLAW_PROMPT_LIBRARY,
+            format_func=lambda item: f"{item['group']} - {item['label']}",
+            key=f"rag_prompt_library_{city_stem}",
+        )
+        st.caption(selected_prompt["question"])
+        ask_prompt = st.button("Ask selected prompt", key=f"ask_prompt_{city_stem}")
+
     controls = st.columns([1, 5])
     if controls[0].button("Clear chat", key=f"clear_{chat_key}"):
         st.session_state[chat_key] = []
@@ -2732,11 +2883,12 @@ GEMINI_API_KEY = "..."  # keep this in secrets only""",
     )
 
     if not st.session_state[chat_key]:
-        st.info("Try: `What is the maximum height?` or `What setback applies to a backyard suite?`")
+        st.info("Try a prompt above, or ask: `What is the maximum height?` / `Why is this rule still in review?`")
     for message in st.session_state[chat_key]:
         _render_bylaw_chat_message(st, message)
 
-    question = st.chat_input("Ask the bylaw...", key=f"rag_chat_input_{city_stem}")
+    typed_question = st.chat_input("Ask the bylaw...", key=f"rag_chat_input_{city_stem}")
+    question = selected_prompt["question"] if ask_prompt else typed_question
     if not question:
         return
 
@@ -2870,11 +3022,11 @@ def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool =
     eyebrow = "M4 Verification Dashboard" if portfolio else "Verification Review Console"
     title = city_label if portfolio else f"{city_label} Rule Review"
     body = (
-        "Review M4 first. V3 is retained only as the predecessor comparison. The deterministic verifier is the authority."
+        "Communication dashboard for reviewers and partners. M4 shows extraction candidates moving through deterministic verification."
         if portfolio
-        else "Use verified rules as trusted outputs, send uncertain rules to review, and inspect the source text before changing the verifier."
+        else "Read candidate, verified, review, and source evidence artifacts. Extraction proposes; deterministic verification decides trusted outputs."
     )
-    main_pill = "Current path: M4" if portfolio else "Verified-only output"
+    main_pill = "Extraction -> Verification" if portfolio else "Verified-only output"
     st.markdown(
         f"""
 <div class="app-header">
@@ -2901,9 +3053,9 @@ def _render_guidance(st: Any) -> None:
     st.markdown(
         """
 <div class="guidance-grid">
-  <div class="guide-card"><b>Start with current M4</b><span>This is the product path for the final demo. V3 is retained only as the predecessor comparison.</span></div>
-  <div class="guide-card"><b>Use Review Workbench</b><span>Pick a held rule, read the support gaps, then inspect original and repaired source text.</span></div>
-  <div class="guide-card"><b>Ask the bylaw carefully</b><span>RAG and LLM chat explain retrieved sections. They cannot verify, reject, approve, or edit outputs.</span></div>
+  <div class="guide-card"><b>Understand the pipeline</b><span>Native extraction generates rule candidates. The verifier checks source support before any rule becomes trusted.</span></div>
+  <div class="guide-card"><b>Use Review Workbench</b><span>Held rules expose missing value, unit, operator, scope, condition, or exception support for human review.</span></div>
+  <div class="guide-card"><b>Ask the bylaw with RAG</b><span>GPT-OSS-120B can explain retrieved sections, but it cannot verify, reject, approve, or edit outputs.</span></div>
 </div>
 """,
         unsafe_allow_html=True,
@@ -3667,24 +3819,27 @@ def _source_audit_panel(st: Any, report: dict[str, Any]) -> None:
 
 
 def _cloud_roadmap_panel(st: Any) -> None:
-    st.markdown("#### Cloud roadmap")
-    st.caption("Final-demo cloud work should stay secrets-managed and keep the verifier read-only from the dashboard.")
+    st.markdown("#### Cloud deployment checklist")
+    st.caption("The deployed dashboard stays read-only. Secrets only enable explanatory RAG chat for reviewers and partners.")
     st.markdown(
         """
 <div class="roadmap-grid">
-  <div class="roadmap-card"><b>Phase 1</b><span>Streamlit Cloud demo with curated M4 outputs and optional Gemini Flash Lite secrets for reviewer chat.</span></div>
-  <div class="roadmap-card"><b>Phase 2</b><span>Containerized app with persistent artifact storage and environment-managed secrets.</span></div>
-  <div class="roadmap-card"><b>Phase 3</b><span>Scheduled extraction and verification jobs, artifact versioning, and reviewer login if needed.</span></div>
+  <div class="roadmap-card"><b>Now</b><span>Streamlit Cloud demo with curated M4 artifacts and OpenRouter GPT-OSS-120B for advisory RAG chat.</span></div>
+  <div class="roadmap-card"><b>Next</b><span>Versioned artifact storage so reviewers can compare extraction, verification, review, and GIS outputs over time.</span></div>
+  <div class="roadmap-card"><b>Later</b><span>Scheduled extraction and verification jobs, artifact approvals, and reviewer login if partners need controlled access.</span></div>
 </div>
 """,
         unsafe_allow_html=True,
     )
     with st.expander("Streamlit Cloud secrets for Ask the Bylaw"):
-        st.markdown("Use one hosted provider key. The dashboard still works in retrieval-only mode when no key is configured.")
+        st.markdown("Use the hosted OpenRouter key. The dashboard still works in retrieval-only mode when no key is configured.")
         st.code(
-            """BYLAW_RAG_PROVIDER = "gemini"
-BYLAW_RAG_MODEL = "gemini-2.0-flash-lite"
-GEMINI_API_KEY = "..."  # Streamlit Cloud secret only""",
+            '''BYLAW_RAG_PROVIDER = "openrouter"
+BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
+OPENROUTER_API_KEY = "..."  # Streamlit Cloud secret only
+OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"
+# Optional:
+# OPENROUTER_SITE_URL = "https://your-streamlit-app-url.streamlit.app"''',
             language="toml",
         )
 
@@ -3712,8 +3867,8 @@ def _portfolio_page(st: Any) -> None:
     ]
     st.markdown("<div class='hero-grid'>" + "".join(cards) + "</div>", unsafe_allow_html=True)
     st.markdown(
-        "<div class='instruction-banner'><b>Review M4 first.</b> V3 is retained only as the predecessor comparison. "
-        "Downstream work must consume verified-only artifacts.</div>",
+        "<div class='instruction-banner'><b>Communication layer only.</b> Reviewers and partners use this dashboard "
+        "to understand extraction, verification, review, and GIS handoff. Downstream work must consume verified-only artifacts.</div>",
         unsafe_allow_html=True,
     )
     _progress_timeline(st)
