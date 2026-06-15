@@ -2480,6 +2480,10 @@ def _rag_chat_key(city_stem: str) -> str:
     return f"bylaw_rag_chat::{city_stem}"
 
 
+def _prompt_key(label: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", str(label).lower()).strip("_")
+
+
 def _rag_tokenize(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+(?:\.[0-9]+)*", str(text or "").lower())
 
@@ -2664,8 +2668,35 @@ def _render_bylaw_chat_message(st: Any, message: dict[str, Any]) -> None:
         st.markdown(message.get("content") or "")
         sources = message.get("sources") or []
         if sources:
-            with st.expander("Retrieved source sections"):
+            with st.expander("Source sections used for this answer", expanded=False):
                 st.dataframe(_display_rows(_rag_source_rows(sources)), width="stretch", hide_index=True)
+
+
+def _answer_bylaw_question(st: Any, output_dir: Path, chat_key: str, question: str) -> None:
+    """Run one advisory RAG question and append a user/assistant exchange."""
+    index_path = bylaw_index_path(output_dir)
+    if index_path is None:
+        return
+    clean_question = str(question or "").strip()
+    if not clean_question:
+        return
+
+    user_message = {"role": "user", "content": clean_question}
+    st.session_state[chat_key].append(user_message)
+
+    hits = _dashboard_rag_hits(index_path, clean_question, top_k=RAG_CHAT_TOP_K)
+    if not hits:
+        answer = (
+            "I could not find a related bylaw section for that question. Try the bylaw's own terms, "
+            "such as setback, height, storey, parcel, coverage, or suite."
+        )
+        st.session_state[chat_key].append({"role": "assistant", "content": answer, "sources": []})
+        return
+
+    bounded_hits = _bounded_rag_hits(hits)
+    prompt = _grounded_bylaw_prompt(clean_question, bounded_hits)
+    answer = _optional_bylaw_llm_answer(prompt, st) or _retrieval_only_bylaw_answer(clean_question, bounded_hits)
+    st.session_state[chat_key].append({"role": "assistant", "content": answer, "sources": bounded_hits})
 
 
 def _secret_value(st: Any | None, name: str) -> str:
@@ -2830,36 +2861,16 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
     answers are retrieved clauses with section ids — never a verification."""
     index_path = bylaw_index_path(output_dir)
     city_stem = city_stem_from_dir(output_dir)
-    st.markdown("#### Reviewer Bylaw Chat")
+    city_label = city_label_from_dir(output_dir)
+    st.markdown("#### Ask The Bylaw")
     st.markdown(
-        "<div class='trust-note'><b>Advisory only.</b> This chat helps reviewers and partners read retrieved "
-        "bylaw sections. Extraction proposes candidate rules; deterministic verification decides what is trusted. "
-        "The assistant cannot verify, reject, approve, edit JSON, or change GIS outputs.</div>",
+        "<div class='bylaw-flow'>"
+        "<div class='bylaw-step'><b>1. Ask</b><span>Pick a reviewer task or write one question.</span></div>"
+        "<div class='bylaw-step'><b>2. Read</b><span>The answer must stay inside retrieved bylaw text.</span></div>"
+        "<div class='bylaw-step'><b>3. Check</b><span>Open the source sections before using any claim.</span></div>"
+        "</div>",
         unsafe_allow_html=True,
     )
-    llm_status = _bylaw_llm_status(st)
-    if llm_status.get("available"):
-        st.success(f"Mode: LLM + RAG ({llm_status['provider']} / {llm_status['model']})")
-    else:
-        st.warning(
-            "Mode: retrieval-only. Add `OPENROUTER_API_KEY` in Streamlit secrets to enable "
-            "GPT-OSS-120B + RAG grounded chat answers."
-        )
-        with st.expander("How to enable deployed LLM + RAG"):
-            st.markdown(
-                "Add the OpenRouter key in Streamlit Cloud secrets. Keep the dashboard read-only: the LLM may explain "
-                "retrieved sections, but it must not write verifier or GIS outputs."
-            )
-            st.code(
-                '''# Streamlit Cloud secrets example
-BYLAW_RAG_PROVIDER = "openrouter"
-BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
-OPENROUTER_API_KEY = "..."  # keep this in secrets only
-OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"
-# Optional:
-# OPENROUTER_SITE_URL = "https://your-streamlit-app-url.streamlit.app"''',
-                language="toml",
-            )
     if index_path is None:
         st.info(
             "No retrieval index yet — build it with "
@@ -2869,55 +2880,89 @@ OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"
 
     chat_key = _rag_chat_key(city_stem)
     st.session_state.setdefault(chat_key, [])
-    with st.expander("Prompt library for reviewers and partners", expanded=not st.session_state[chat_key]):
-        selected_prompt = st.selectbox(
-            "Start with a bylaw-specific question",
-            BYLAW_PROMPT_LIBRARY,
-            format_func=lambda item: f"{item['group']} - {item['label']}",
-            key=f"rag_prompt_library_{city_stem}",
+    left, right = st.columns([0.42, 0.58], gap="large")
+    question_to_run = ""
+
+    with left:
+        st.markdown("##### Question")
+        st.caption(f"Current bylaw corpus: {city_label}. The chat history is separate for each city.")
+        st.markdown("<div class='section-kicker'>Starter questions</div>", unsafe_allow_html=True)
+        grouped_prompts: dict[str, list[dict[str, str]]] = {}
+        for item in BYLAW_PROMPT_LIBRARY:
+            grouped_prompts.setdefault(str(item["group"]), []).append(item)
+        for group, prompts in grouped_prompts.items():
+            st.markdown(f"**{group}**")
+            prompt_cols = st.columns(2)
+            for index, item in enumerate(prompts):
+                key = f"starter_{city_stem}_{_prompt_key(item['group'])}_{_prompt_key(item['label'])}"
+                if prompt_cols[index % 2].button(str(item["label"]), key=key, help=str(item["question"])):
+                    question_to_run = str(item["question"])
+
+        st.markdown("<div class='section-kicker'>Custom question</div>", unsafe_allow_html=True)
+        custom_question = st.text_area(
+            "Write one bylaw question",
+            key=f"custom_bylaw_question_{city_stem}",
+            placeholder="Example: What rear setback is supported by the retrieved bylaw sections?",
+            height=92,
+            label_visibility="collapsed",
         )
-        st.caption(selected_prompt["question"])
-        ask_prompt = st.button("Ask selected prompt", key=f"ask_prompt_{city_stem}")
+        ask_cols = st.columns([1, 1])
+        if ask_cols[0].button(
+            "Ask custom question",
+            key=f"ask_custom_{city_stem}",
+            type="primary",
+            disabled=not str(custom_question or "").strip(),
+        ):
+            question_to_run = str(custom_question or "").strip()
+        if ask_cols[1].button("Clear answers", key=f"clear_{chat_key}"):
+            st.session_state[chat_key] = []
+            st.rerun()
 
-    controls = st.columns([1, 5])
-    if controls[0].button("Clear chat", key=f"clear_{chat_key}"):
-        st.session_state[chat_key] = []
-    controls[1].caption(
-        "Ask bylaw questions in plain English. Answers cite retrieved source sections and stay outside the verifier decision path."
-    )
+        with st.expander("What this tool can and cannot do", expanded=False):
+            st.markdown(
+                "- It can explain retrieved source sections for reviewers.\n"
+                "- It cannot verify, reject, approve, or edit JSON outputs.\n"
+                "- GIS should use only `gis_rule_contract.json` and verified rules."
+            )
 
-    if not st.session_state[chat_key]:
-        st.info("Try a prompt above, or ask: `What is the maximum height?` / `Why is this rule still in review?`")
-    for message in st.session_state[chat_key]:
-        _render_bylaw_chat_message(st, message)
+    if question_to_run:
+        _answer_bylaw_question(st, output_dir, chat_key, question_to_run)
 
-    typed_question = st.chat_input("Ask the bylaw...", key=f"rag_chat_input_{city_stem}")
-    question = selected_prompt["question"] if ask_prompt else typed_question
-    if not question:
-        return
+    with right:
+        st.markdown("##### Answer")
+        llm_status = _bylaw_llm_status(st)
+        if llm_status.get("available"):
+            st.success(f"Mode: LLM + RAG ({llm_status['provider']} / {llm_status['model']})")
+        else:
+            st.warning(
+                "Mode: retrieval-only. Add `OPENROUTER_API_KEY` in Streamlit secrets to enable "
+                "GPT-OSS-120B + RAG grounded chat answers."
+            )
+            with st.expander("Streamlit Cloud secret format", expanded=False):
+                st.code(
+                    '''BYLAW_RAG_PROVIDER = "openrouter"
+BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
+OPENROUTER_API_KEY = "..."  # keep this in secrets only
+OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"''',
+                    language="toml",
+                )
 
-    user_message = {"role": "user", "content": question}
-    st.session_state[chat_key].append(user_message)
-    _render_bylaw_chat_message(st, user_message)
-
-    hits = _dashboard_rag_hits(index_path, question, top_k=RAG_CHAT_TOP_K)
-    if not hits:
-        answer = (
-            "I could not find a related bylaw section for that question. Try the bylaw's own terms, "
-            "such as setback, height, storey, parcel, coverage, or suite."
+        st.markdown(
+            "<div class='trust-note'><b>Advisory boundary.</b> RAG explains retrieved text only. "
+            "The deterministic verifier decides which rules are trusted and GIS-safe.</div>",
+            unsafe_allow_html=True,
         )
-        assistant_message = {"role": "assistant", "content": answer, "sources": []}
-        st.session_state[chat_key].append(assistant_message)
-        _render_bylaw_chat_message(st, assistant_message)
-        return
-
-    bounded_hits = _bounded_rag_hits(hits)
-    prompt = _grounded_bylaw_prompt(question, bounded_hits)
-    answer = _optional_bylaw_llm_answer(prompt, st) or _retrieval_only_bylaw_answer(question, bounded_hits)
-    assistant_message = {"role": "assistant", "content": answer, "sources": bounded_hits}
-    st.session_state[chat_key].append(assistant_message)
-    _render_bylaw_chat_message(st, assistant_message)
-    st.caption("Retrieval chat is advisory. It cannot verify rules, approve proposals, or write verifier outputs.")
+        if not st.session_state[chat_key]:
+            st.markdown(
+                "<div class='bylaw-empty'><b>No question asked yet.</b>"
+                "<span>Use a starter question or the custom question box on the left. "
+                "Answers and source sections will appear here.</span></div>",
+                unsafe_allow_html=True,
+            )
+        else:
+            for message in st.session_state[chat_key]:
+                _render_bylaw_chat_message(st, message)
+            st.caption("Every answer is advisory. Source sections must be checked before any rule is used.")
 
 
 def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
@@ -3567,6 +3612,14 @@ h4 {font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--
 .roadmap-card b {display:block; color:var(--ink); margin-bottom:5px;}
 .roadmap-card span {display:block; color:var(--ink-soft); font-size:14px; line-height:1.4;}
 .trust-note {border:1px solid var(--hairline); border-radius:8px; background:var(--subtle); padding:11px 13px; color:var(--ink-soft); font-size:14px; margin:8px 0 12px;}
+.bylaw-flow {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:8px 0 16px;}
+.bylaw-step {border:1px solid var(--hairline); border-radius:8px; background:var(--canvas); padding:12px 13px; min-height:82px;}
+.bylaw-step b {display:block; color:var(--ink); font-size:13px; margin-bottom:5px;}
+.bylaw-step span {display:block; color:var(--ink-soft); font-size:12px; line-height:1.35;}
+.section-kicker {font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); font-weight:800; margin:16px 0 8px;}
+.bylaw-empty {border:1px dashed var(--line); border-radius:8px; background:var(--subtle); padding:18px 16px; margin-top:10px;}
+.bylaw-empty b {display:block; color:var(--ink); margin-bottom:5px;}
+.bylaw-empty span {display:block; color:var(--ink-soft); font-size:14px; line-height:1.45;}
 .guidance-grid, .action-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:12px 0 20px;}
 .guide-card, .action-card {border:0; border-radius:8px; background:var(--subtle); padding:14px 15px;}
 .guide-card b {display:block; color:var(--ink); margin-bottom:5px;}
@@ -3609,6 +3662,7 @@ div[data-testid="stExpander"] .guide-card, div[data-testid="stExpander"] .action
   .timeline {grid-template-columns:1fr;}
   .timeline-arrow {display:none;}
   .roadmap-grid {grid-template-columns:1fr;}
+  .bylaw-flow {grid-template-columns:1fr;}
   .guidance-grid, .action-grid {grid-template-columns:1fr;}
   .bar-row {grid-template-columns:1fr;}
 }
