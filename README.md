@@ -12,6 +12,9 @@ OpenRouter GPT-OSS-120B only when a secret key is configured, and falls back to
 retrieval-only mode otherwise. Chat answers never verify rules, approve
 proposals, or write GIS outputs.
 
+Cloud app:
+https://yusenrong46-afk-burnaby-verificat-dashboardstreamlit-app-rcvryj.streamlit.app/
+
 ## Run Locally
 
 ```bash
