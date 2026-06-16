@@ -1,0 +1,305 @@
+{
+  "city": "Calgary",
+  "zone": "RCG",
+  "source_document": null,
+  "source_url": null,
+  "input_mode": "native_v3_rag_llm",
+  "schema_version": "1.1",
+  "rules": [
+    {
+      "rule_id": "calgary_rcg_008",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "setback",
+      "applies_to": "balcony attached to a Backyard Suite",
+      "operator": ">=",
+      "value": "0.6",
+      "value_numeric": 0.6,
+      "unit": "m",
+      "condition": "project into a required 10P2019 setback area from a property line shared with a street or a lane",
+      "exception": "",
+      "applicability": null,
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 397,
+        "evidence_id": "m4_pack_0003_ev_001",
+        "quote": "A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres from the property line."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_017",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "setback",
+      "applies_to": "backyard suite",
+      "operator": ">=",
+      "value": "1.5",
+      "value_numeric": 1.5,
+      "unit": "m",
+      "condition": "rear property line",
+      "exception": "",
+      "applicability": null,
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 395,
+        "evidence_id": "m4_pack_0010_ev_001",
+        "quote": "minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_019",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "height",
+      "applies_to": "Backyard Suite",
+      "operator": "<=",
+      "value": "7.5",
+      "value_numeric": 7.5,
+      "unit": "m",
+      "condition": "Unless otherwise referenced in subsection (4.1)",
+      "exception": "",
+      "applicability": null,
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 396,
+        "evidence_id": "m4_pack_0011_ev_001",
+        "quote": "the maximum building height for a Backyard Suite is 7.5 metres"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_219",
+      "rule_object": "building_separation",
+      "constraint_type": "minimum",
+      "constraint_scope": "building_separation",
+      "applies_to": "Backyard Suite",
+      "operator": ">=",
+      "value": "5.0",
+      "value_numeric": 5.0,
+      "unit": "m",
+      "condition": "between the closest façade of the main residential building to the closest façade of a Backyard Suite. 10P2019",
+      "exception": "",
+      "applicability": null,
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 396,
+        "evidence_id": "m4_pack_0005_v3_clause_ev_002",
+        "quote": "(3) Unless otherwise referenced in subsections (3.1) and (3.2), a minimum separation of 5.0 metres is required between the closest façade of the main residential building to the closest façade of a Backyard Suite. 10P2019"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_220",
+      "rule_object": "height",
+      "constraint_type": "maximum",
+      "constraint_scope": "height",
+      "applies_to": "Backyard Suite",
+      "operator": "<=",
+      "value": "5.0",
+      "value_numeric": 5.0,
+      "unit": "m",
+      "condition": "measured from grade at a side property line shared with a parcel designated with a low density residential district",
+      "exception": "",
+      "applicability": null,
+      "geometry": {
+        "operation": "extrude_z",
+        "axis": "vertical",
+        "direction": "up",
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 396,
+        "evidence_id": "m4_pack_0006_v3_clause_ev_003",
+        "quote": "(4.1) The maximum building height for a Backyard Suite is: 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential district"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_221",
+      "rule_object": "floor_area",
+      "constraint_type": "maximum",
+      "constraint_scope": "floor_area",
+      "applies_to": "Secondary Suite",
+      "operator": "<=",
+      "value": "100.0",
+      "value_numeric": 100.0,
+      "unit": "m2",
+      "condition": "(a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-1, R-1s and 24P2018 R-1N Districts; or (b) when located on a parcel with a parcel width less than 13.0 metres",
+      "exception": "excluding any area covered by stairways and landings",
+      "applicability": null,
+      "geometry": {
+        "operation": "floor_area_cap",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 395,
+        "evidence_id": "m4_pack_0008_v3_clause_ev_004",
+        "quote": "(2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 square metres: (a) in the R-C1L, R-C1Ls, R-C1, R-C1s, R-C1N, R-1, R-1s and 24P2018 R-1N Districts; or (b) when located on a parcel with a parcel width less than 13.0 metres"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_222",
+      "rule_object": "floor_area",
+      "constraint_type": "maximum",
+      "constraint_scope": "floor_area",
+      "applies_to": "Backyard Suite",
+      "operator": "<=",
+      "value": "75.0",
+      "value_numeric": 75.0,
+      "unit": "m2",
+      "condition": "",
+      "exception": "excluding any area covered by stairways and internal landings not exceeding 2.5 square metres",
+      "applicability": null,
+      "geometry": {
+        "operation": "floor_area_cap",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 396,
+        "evidence_id": "m4_pack_0012_v3_clause_ev_005",
+        "quote": "(5) The maximum floor area of a Backyard Suite, excluding any area covered by stairways and internal landings not exceeding 2.5 square metres, is 75.0 square metres"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_223",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "front setback",
+      "applies_to": "Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling",
+      "operator": ">=",
+      "value": "6.0",
+      "value_numeric": 6.0,
+      "unit": "m",
+      "condition": "Developed Area and R-C1L or R-C1Ls districts",
+      "exception": "",
+      "applicability": null,
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 398,
+        "evidence_id": "m4_pack_0015_v3_clause_ev_006",
+        "quote": "The building setback from the front property line for a Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling in the Developed Area is deemed to conform with the requirements of this Bylaw if the building setback from the front property line is a minimum of 6.0 metres for the R-C1L or R-C1Ls districts"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_229",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "setback",
+      "applies_to": "balcony attached to a Backyard Suite",
+      "operator": ">=",
+      "value": "0.6",
+      "value_numeric": 0.6,
+      "unit": "m",
+      "condition": "project into a required 10P2019 setback area from a property line shared with a street or a lane",
+      "exception": "",
+      "applicability": null,
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 397,
+        "evidence_id": "v3_repair_pack_0003_ev_001",
+        "quote": "A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres from the property line."
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_235",
+      "rule_object": "building_separation",
+      "constraint_type": "minimum",
+      "constraint_scope": "building_separation",
+      "applies_to": "main residential building to Backyard Suite",
+      "operator": ">=",
+      "value": "5.0",
+      "value_numeric": 5.0,
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "applicability": null,
+      "geometry": {
+        "operation": "min_separation",
+        "axis": null,
+        "direction": null,
+        "source_fields": [
+          "rule_object"
+        ]
+      },
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 396,
+        "evidence_id": "v3_repair_pack_0012_ev_001",
+        "quote": "a minimum separation of 5.0 metres is required between the closest façade of the main residential building to the closest façade of a Backyard Suite"
+      }
+    },
+    {
+      "rule_id": "calgary_rcg_240",
+      "rule_object": "setback",
+      "constraint_type": "minimum",
+      "constraint_scope": "setback",
+      "applies_to": "backyard suite",
+      "operator": ">=",
+      "value": "1.5",
+      "value_numeric": 1.5,
+      "unit": "m",
+      "condition": "",
+      "exception": "",
+      "applicability": null,
+      "geometry": null,
+      "verification_status": "verified",
+      "citation": {
+        "document": null,
+        "url": null,
+        "page": 395,
+        "evidence_id": "v3_repair_pack_0016_ev_001",
+        "quote": "minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite"
+      }
+    }
+  ]
+}

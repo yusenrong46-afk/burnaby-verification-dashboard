@@ -1,6 +1,6 @@
 # BC Zoning Verification Dashboard
 
-Streamlit deployment package for the multi-city verification dashboard. The app
+Streamlit deployment package for the M6 multi-city verification dashboard. The app
 is a read-only communication layer for reviewers and project partners: it
 explains committed extraction, verification, review, GIS, and RAG artifacts from
 `outputs/` for Burnaby, Calgary, and Vancouver, but it never reruns extraction,
@@ -28,6 +28,8 @@ The dashboard discovers output directories automatically when they contain
 `verified_rules.json`.
 
 ```text
+outputs/m5_runs/m6_final_*/<city>/
+outputs/m5_runs/m56_hardened_20260616/<city>/
 outputs/burnaby_r1_slim_pipeline5_registry/
 outputs/burnaby_r1_p9/
 outputs/calgary_rcg_slim_pipeline5_registry/
@@ -41,8 +43,8 @@ outputs/mvp_verification/mvp_report.json
 ```
 
 The default landing page is the multi-city M4 overview. Use the sidebar
-`City / version` selector to drill into Burnaby R1, Calgary RCG, or Vancouver
-RS, and to compare each current M4 run with its previous V3 predecessor.
+`City / version` selector to drill into M6 measured runs for final count audit,
+or into Burnaby R1, Calgary RCG, or Vancouver RS M4/V3 runs for comparison.
 
 ## Current Safety Snapshot
 
@@ -57,6 +59,11 @@ only as predecessor or comparison context. Failed gates are labeled in the
 dashboard as `fail-closed`, `scope mismatch`, or `unsafe / needs fix`; they are
 not presented as passing outputs.
 
+M6 is the final release wrapper: it uses M5.6 scored slot measurement to answer
+whether the project is verifying too much or too little. The scored legal
+denominator is the reviewer-facing count authority; raw numeric slots are shown
+only as an advisory over-count guardrail.
+
 ## Reviewer Workflow
 
 - `verified_rules.json` and `gis_rule_contract.json` are the only GIS-safe rule
@@ -65,6 +72,8 @@ not presented as passing outputs.
   `review_assistant_packets.json` are advisory/debug artifacts for human review.
 - Extraction proposes candidate rules; deterministic verification decides which
   rules become trusted outputs.
+- The M6 Too Much / Too Little panel explains count trust: unsupported verified
+  rules mean too much; scored review/missed slots mean conservative coverage.
 - The Review Assistant panel is advisory only. It may summarize bounded evidence
   context, but it cannot approve rules or write GIS outputs.
 

@@ -1,0 +1,4015 @@
+{
+  "created_at": "2026-06-16T08:48:37.411230+00:00",
+  "city": "burnaby_r1",
+  "purpose": "M5.6 slot confusion matrix for too-much/too-little verification.",
+  "slot_metrics": {
+    "total_rule_slots": 422,
+    "verified_rule_count": 84,
+    "verified_mapped_rule_count": 84,
+    "verified_slot_mapping_rate": 1.0,
+    "effective_verified_slot_count": 82,
+    "review_slot_count": 9,
+    "candidate_slot_count": 41,
+    "candidate_only_slot_count": 29,
+    "missed_slot_count": 302,
+    "unsupported_verified_rule_count": 0,
+    "raw_duplicate_verified_slot_count": 2,
+    "duplicate_merged_count": 2,
+    "duplicate_verified_slot_count": 0,
+    "raw_total_rule_slots": 422,
+    "source_denominator_slot_count": 304,
+    "observed_supplement_slot_count": 118,
+    "scored_total_slots": 205,
+    "distinct_scored_legal_slot_count": 66,
+    "scored_verified_slot_count": 21,
+    "scored_review_slot_count": 3,
+    "scored_missed_slot_count": 42,
+    "scored_verified_coverage": 0.318,
+    "scored_active_coverage": 0.364,
+    "scored_verified_slot_id_count": 2,
+    "scored_review_slot_id_count": 3,
+    "scored_candidate_only_slot_id_count": 0
+  },
+  "scored_slot_metrics": {
+    "raw_total_rule_slots": 422,
+    "source_denominator_slot_count": 304,
+    "observed_supplement_slot_count": 118,
+    "scored_total_slots": 205,
+    "distinct_scored_legal_slot_count": 66,
+    "scored_verified_slot_count": 21,
+    "scored_review_slot_count": 3,
+    "scored_missed_slot_count": 42,
+    "scored_verified_coverage": 0.318,
+    "scored_active_coverage": 0.364,
+    "scored_verified_slot_id_count": 2,
+    "scored_review_slot_id_count": 3,
+    "scored_candidate_only_slot_id_count": 0
+  },
+  "slot_confusion_matrix": {
+    "verified_slots": 82,
+    "review_slots": 9,
+    "candidate_only_slots": 29,
+    "missed_slots": 302,
+    "duplicate_verified_slots": 0,
+    "unsupported_verified_rules": 0
+  },
+  "scored_slot_confusion_matrix": {
+    "distinct_legal_slots": 66,
+    "verified_slots": 21,
+    "review_only_slots": 3,
+    "missed_slots": 42,
+    "verified_coverage": 0.318,
+    "active_coverage": 0.364
+  },
+  "slot_status": {
+    "verified_slot_ids": [
+      "burnaby_r1:clause:burnaby_r1_101.1_027:m001",
+      "burnaby_r1:clause:burnaby_r1_101.2_028:m001",
+      "burnaby_r1:observed:01194770fb20e35d",
+      "burnaby_r1:observed:0514b95bca6bf8ca",
+      "burnaby_r1:observed:05a2c48d51974f1c",
+      "burnaby_r1:observed:08d01017f0207b51",
+      "burnaby_r1:observed:0941574dff1b99fc",
+      "burnaby_r1:observed:0cd290d6586932c4",
+      "burnaby_r1:observed:12f6cd8c23bb2a1a",
+      "burnaby_r1:observed:16ef87d3f53fb109",
+      "burnaby_r1:observed:2343a2af491cc116",
+      "burnaby_r1:observed:23d57d7824c5e90f",
+      "burnaby_r1:observed:27f7d6c5e6594c7a",
+      "burnaby_r1:observed:306dcc388aac394d",
+      "burnaby_r1:observed:3413dd6fda144fb2",
+      "burnaby_r1:observed:3d90c032f94c5582",
+      "burnaby_r1:observed:3ff35aac43661841",
+      "burnaby_r1:observed:4484baf909d889ee",
+      "burnaby_r1:observed:47e17f1f143e5c6f",
+      "burnaby_r1:observed:49a4d6ca900149b3",
+      "burnaby_r1:observed:4c0c8ce7dbe1b209",
+      "burnaby_r1:observed:4c0fa596f4bb28d3",
+      "burnaby_r1:observed:4ebb950d34313dbc",
+      "burnaby_r1:observed:4edeb62b6bb5c4a6",
+      "burnaby_r1:observed:4fe7de0f5e2d0608",
+      "burnaby_r1:observed:523d26935a39e4c1",
+      "burnaby_r1:observed:53584e7fee132725",
+      "burnaby_r1:observed:53753685bc0ddb96",
+      "burnaby_r1:observed:559ce24da637879f",
+      "burnaby_r1:observed:5681487aee2d49e6",
+      "burnaby_r1:observed:58fc57915d73ed29",
+      "burnaby_r1:observed:5a75511c2d552856",
+      "burnaby_r1:observed:5c7f337db41bce61",
+      "burnaby_r1:observed:60f5b13e072b75e1",
+      "burnaby_r1:observed:63a57a6020c4526d",
+      "burnaby_r1:observed:642d2dc44d54c87f",
+      "burnaby_r1:observed:648ad2d04a96b1f2",
+      "burnaby_r1:observed:693e0c1ad7db8300",
+      "burnaby_r1:observed:730151bbdac02f82",
+      "burnaby_r1:observed:754ccc4925afe6f8",
+      "burnaby_r1:observed:77bea34845923299",
+      "burnaby_r1:observed:78cb3c99131e3d64",
+      "burnaby_r1:observed:79d33b39f5f457ab",
+      "burnaby_r1:observed:7c82bae2b3ee54fe",
+      "burnaby_r1:observed:81ccb2a7bb39c34a",
+      "burnaby_r1:observed:8be493a75b7e176a",
+      "burnaby_r1:observed:8c73d2fc3c96108a",
+      "burnaby_r1:observed:954e30cc7481352b",
+      "burnaby_r1:observed:9a92d22b45bf0371",
+      "burnaby_r1:observed:9d544a17d99101ab",
+      "burnaby_r1:observed:9f129f2a1478fea9",
+      "burnaby_r1:observed:a2bdf7295cf088ba",
+      "burnaby_r1:observed:a628529b3e856f4d",
+      "burnaby_r1:observed:a6858f819a43fa95",
+      "burnaby_r1:observed:ab211c7a743c0b1d",
+      "burnaby_r1:observed:ad6ce0f7d831d73c",
+      "burnaby_r1:observed:b1f79600042a451e",
+      "burnaby_r1:observed:b310e9e585fec2e3",
+      "burnaby_r1:observed:b32f1039e3431e87",
+      "burnaby_r1:observed:ba596823fc3efc4e",
+      "burnaby_r1:observed:bb4c856432a9f369",
+      "burnaby_r1:observed:c03f433675afedbd",
+      "burnaby_r1:observed:c12cabe23b92d55d",
+      "burnaby_r1:observed:c93b9be63bdabd3c",
+      "burnaby_r1:observed:cb6e576f18c5217d",
+      "burnaby_r1:observed:d1d96828286affa6",
+      "burnaby_r1:observed:d280b1e9a0b2cacc",
+      "burnaby_r1:observed:d5b084419394a5f1",
+      "burnaby_r1:observed:d7297ddc235f1f2a",
+      "burnaby_r1:observed:d734fbf06c75dfd5",
+      "burnaby_r1:observed:da26ab1748637991",
+      "burnaby_r1:observed:db4fdb99cfd91dc4",
+      "burnaby_r1:observed:db9af254a2626025",
+      "burnaby_r1:observed:e096e9060894d1cb",
+      "burnaby_r1:observed:e148fd598f53d2c6",
+      "burnaby_r1:observed:e14b9bcebdd70a9d",
+      "burnaby_r1:observed:e9d89d353ad003ed",
+      "burnaby_r1:observed:eca30c07f0019572",
+      "burnaby_r1:observed:f002e39f414d9f9c",
+      "burnaby_r1:observed:f20939db52adda75",
+      "burnaby_r1:observed:f979b7292c19fcd3",
+      "burnaby_r1:observed:fd3c70ad8790743e"
+    ],
+    "review_slot_ids": [
+      "burnaby_r1:clause:burnaby_r1_101.2_023:m001",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m009",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m010",
+      "burnaby_r1:observed:1f0ab07f221773ee",
+      "burnaby_r1:observed:6df3b040e8a9357e",
+      "burnaby_r1:observed:8080be231b77874b",
+      "burnaby_r1:observed:94a01edb358b0145",
+      "burnaby_r1:observed:a581a82e373240a7",
+      "burnaby_r1:observed:d15388d4d917859c"
+    ],
+    "candidate_only_slot_ids": [
+      "burnaby_r1:observed:05b0bb01ce915501",
+      "burnaby_r1:observed:08ee1aee909279bf",
+      "burnaby_r1:observed:0d59abc00aaf5c57",
+      "burnaby_r1:observed:184015c414c29e18",
+      "burnaby_r1:observed:35ba8779355c63d8",
+      "burnaby_r1:observed:3a7652ee227f168c",
+      "burnaby_r1:observed:4830d3b11c1243d4",
+      "burnaby_r1:observed:517d0cbf12663bd4",
+      "burnaby_r1:observed:53a31912d7733b78",
+      "burnaby_r1:observed:587a273bf15bdfae",
+      "burnaby_r1:observed:5d0d426753e239dd",
+      "burnaby_r1:observed:671398e79959bf30",
+      "burnaby_r1:observed:6af88870564d81c6",
+      "burnaby_r1:observed:718a5d9f439dabc6",
+      "burnaby_r1:observed:8250e649508ff969",
+      "burnaby_r1:observed:84dad90684a48f82",
+      "burnaby_r1:observed:8987218993e9a4e2",
+      "burnaby_r1:observed:937596ff0b1fe932",
+      "burnaby_r1:observed:a8d12eb1f9a47e53",
+      "burnaby_r1:observed:c32d11a774ce205a",
+      "burnaby_r1:observed:c6c509acb5399525",
+      "burnaby_r1:observed:cb27baa0761ee4c6",
+      "burnaby_r1:observed:d56225a39d9d7c5f",
+      "burnaby_r1:observed:df509af55f16aada",
+      "burnaby_r1:observed:e398477090a4efcb",
+      "burnaby_r1:observed:e487386ca3ecbedd",
+      "burnaby_r1:observed:e78f1a7380e8d5b1",
+      "burnaby_r1:observed:e8defba8ef6ba2e2",
+      "burnaby_r1:observed:ef07f928431ea092"
+    ],
+    "missed_slot_ids": [
+      "burnaby_r1:clause:burnaby_r1_101.1_007:m001",
+      "burnaby_r1:clause:burnaby_r1_101.1_007:m002",
+      "burnaby_r1:clause:burnaby_r1_101.1_007:m003",
+      "burnaby_r1:clause:burnaby_r1_101.1_007:m004",
+      "burnaby_r1:clause:burnaby_r1_101.1_007:m005",
+      "burnaby_r1:clause:burnaby_r1_101.1_007:m006",
+      "burnaby_r1:clause:burnaby_r1_101.1_010:m001",
+      "burnaby_r1:clause:burnaby_r1_101.1_012:m001",
+      "burnaby_r1:clause:burnaby_r1_101.1_012:m002",
+      "burnaby_r1:clause:burnaby_r1_101.1_014:m001",
+      "burnaby_r1:clause:burnaby_r1_101.1_025:m001",
+      "burnaby_r1:clause:burnaby_r1_101.1_025:m002",
+      "burnaby_r1:clause:burnaby_r1_101.1_025:m003",
+      "burnaby_r1:clause:burnaby_r1_101.1_025:m004",
+      "burnaby_r1:clause:burnaby_r1_101.1_025:m005",
+      "burnaby_r1:clause:burnaby_r1_101.2_017:m001",
+      "burnaby_r1:clause:burnaby_r1_101.2_023:m002",
+      "burnaby_r1:clause:burnaby_r1_101.2_023:m003",
+      "burnaby_r1:clause:burnaby_r1_101.2_023:m004",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m001",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m002",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m003",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m004",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m005",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m006",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m007",
+      "burnaby_r1:clause:burnaby_r1_101.3_003:m008",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m001",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m002",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m003",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m004",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m005",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m006",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m007",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m008",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m009",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m010",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m011",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m012",
+      "burnaby_r1:clause:burnaby_r1_101.4_004:m013",
+      "burnaby_r1:clause:burnaby_r1_table_002_r003:m001",
+      "burnaby_r1:clause:burnaby_r1_table_002_r003:m002",
+      "burnaby_r1:clause:burnaby_r1_table_002_r003:m003",
+      "burnaby_r1:clause:burnaby_r1_table_002_r003:m004",
+      "burnaby_r1:clause:burnaby_r1_table_002_r003:m005",
+      "burnaby_r1:clause:burnaby_r1_table_002_r003:m006",
+      "burnaby_r1:clause:burnaby_r1_table_002_r004:m001",
+      "burnaby_r1:clause:burnaby_r1_table_002_r004:m002",
+      "burnaby_r1:clause:burnaby_r1_table_002_r004:m003",
+      "burnaby_r1:clause:burnaby_r1_table_002_r004:m004",
+      "burnaby_r1:clause:burnaby_r1_table_002_r004:m005",
+      "burnaby_r1:clause:burnaby_r1_table_002_r005:m001",
+      "burnaby_r1:clause:burnaby_r1_table_002_r005:m002",
+      "burnaby_r1:clause:burnaby_r1_table_002_r005:m003",
+      "burnaby_r1:clause:burnaby_r1_table_002_r005:m004",
+      "burnaby_r1:clause:burnaby_r1_table_002_r005:m005",
+      "burnaby_r1:clause:burnaby_r1_table_002_r007:m001",
+      "burnaby_r1:clause:burnaby_r1_table_002_r007:m002",
+      "burnaby_r1:clause:burnaby_r1_table_002_r007:m003",
+      "burnaby_r1:clause:burnaby_r1_table_002_r007:m004",
+      "burnaby_r1:clause:burnaby_r1_table_002_r008:m001",
+      "burnaby_r1:clause:burnaby_r1_table_002_r008:m002",
+      "burnaby_r1:clause:burnaby_r1_table_002_r008:m003",
+      "burnaby_r1:clause:burnaby_r1_table_002_r008:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m006",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m007",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m008",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m009",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m010",
+      "burnaby_r1:clause:burnaby_r1_table_003_r002:m011",
+      "burnaby_r1:clause:burnaby_r1_table_003_r005:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r005:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r005:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r005:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r005:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r006:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r006:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r006:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r006:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r007:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r007:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r007:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r007:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r009:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r009:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r009:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r009:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r009:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r009:m006",
+      "burnaby_r1:clause:burnaby_r1_table_003_r009:m007",
+      "burnaby_r1:clause:burnaby_r1_table_003_r009:m008",
+      "burnaby_r1:clause:burnaby_r1_table_003_r010:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r010:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r010:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r010:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r010:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r014:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r014:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r014:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r014:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r014:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r015:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r015:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r015:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r015:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r015:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r015:m006",
+      "burnaby_r1:clause:burnaby_r1_table_003_r017:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r017:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r017:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r017:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r017:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r018:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r018:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r018:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r018:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r019:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r019:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r019:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r019:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r019:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r021:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r021:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r021:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r021:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r021:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r021:m006",
+      "burnaby_r1:clause:burnaby_r1_table_003_r022:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r022:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r022:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r022:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r023:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r023:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r023:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r023:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r023:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r024:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r024:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r024:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r024:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r024:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r024:m006",
+      "burnaby_r1:clause:burnaby_r1_table_003_r024:m007",
+      "burnaby_r1:clause:burnaby_r1_table_003_r024:m008",
+      "burnaby_r1:clause:burnaby_r1_table_003_r026:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r026:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r026:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r026:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r026:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r026:m006",
+      "burnaby_r1:clause:burnaby_r1_table_003_r027:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r027:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r027:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r027:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r027:m005",
+      "burnaby_r1:clause:burnaby_r1_table_003_r027:m006",
+      "burnaby_r1:clause:burnaby_r1_table_003_r028:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r028:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r028:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r028:m004",
+      "burnaby_r1:clause:burnaby_r1_table_003_r029:m001",
+      "burnaby_r1:clause:burnaby_r1_table_003_r029:m002",
+      "burnaby_r1:clause:burnaby_r1_table_003_r029:m003",
+      "burnaby_r1:clause:burnaby_r1_table_003_r029:m004",
+      "burnaby_r1:clause:burnaby_r1_table_008_r001:m001",
+      "burnaby_r1:clause:burnaby_r1_table_008_r001:m002",
+      "burnaby_r1:clause:burnaby_r1_table_008_r001:m003",
+      "burnaby_r1:clause:burnaby_r1_table_008_r001:m004",
+      "burnaby_r1:clause:burnaby_r1_table_008_r001:m005",
+      "burnaby_r1:clause:burnaby_r1_table_008_r001:m006",
+      "burnaby_r1:clause:burnaby_r1_table_008_r001:m007",
+      "burnaby_r1:clause:burnaby_r1_table_008_r002:m001",
+      "burnaby_r1:clause:burnaby_r1_table_008_r002:m002",
+      "burnaby_r1:clause:burnaby_r1_table_008_r002:m003",
+      "burnaby_r1:clause:burnaby_r1_table_008_r002:m004",
+      "burnaby_r1:clause:burnaby_r1_table_008_r002:m005",
+      "burnaby_r1:clause:burnaby_r1_table_008_r002:m006",
+      "burnaby_r1:observed:51b27f8297e028d4",
+      "burnaby_r1:observed:aba4ab97e16f1dd9",
+      "burnaby_r1:observed:ddf7b7185152cec4",
+      "burnaby_r1:table:burnaby_r1_table_001_r002:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_001_r003:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_001_r005:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_001_r006:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_001_r007:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_001_r009:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_001_r009:c01:m002",
+      "burnaby_r1:table:burnaby_r1_table_001_r010:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_001_r011:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r001:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r001:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r002:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r003:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r003:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r003:c02:m002",
+      "burnaby_r1:table:burnaby_r1_table_002_r003:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r003:c04:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r004:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r004:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r004:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r005:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r005:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r005:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r006:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r007:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r007:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r008:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_002_r008:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r001:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r001:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r002:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r002:c01:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r002:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r002:c02:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r002:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r002:c03:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r002:c04:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r002:c04:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r003:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r004:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r005:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r005:c04:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r005:c05:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r006:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r007:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r007:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r008:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r009:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r009:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r009:c02:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r009:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r009:c04:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r010:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r010:c01:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r011:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r011:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r011:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r011:c04:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r011:c05:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r012:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r013:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r014:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r014:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r014:c02:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r015:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r015:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r015:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r015:c04:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r016:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r017:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r017:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r017:c02:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r018:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r018:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r019:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r019:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r019:c02:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r020:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r021:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r021:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r021:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r021:c03:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r022:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r022:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r023:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r023:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r023:c02:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r024:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r024:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r024:c02:m002",
+      "burnaby_r1:table:burnaby_r1_table_003_r024:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r024:c04:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r024:c05:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r025:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r026:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r026:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r026:c04:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r026:c05:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r027:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r027:c03:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r027:c04:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r027:c05:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r028:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r028:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r029:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_003_r029:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_004_r001:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_005_r001:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_006_r001:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_007_r001:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_008_r001:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_008_r001:c01:m002",
+      "burnaby_r1:table:burnaby_r1_table_008_r001:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_008_r001:c02:m002",
+      "burnaby_r1:table:burnaby_r1_table_008_r002:c01:m001",
+      "burnaby_r1:table:burnaby_r1_table_008_r002:c02:m001",
+      "burnaby_r1:table:burnaby_r1_table_008_r002:c03:m001"
+    ]
+  },
+  "mappings": {
+    "candidate_rule_mappings": [
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_m4_pack_0002_001",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.3_003:m009",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "281",
+        "unit": "m2",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_m4_pack_0002_002",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.3_003:m010",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "280",
+        "unit": "m2",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_m4_pack_0006_001",
+        "slot_id": "burnaby_r1:observed:1f0ab07f221773ee",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "60",
+        "unit": "%",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_m4_pack_0006_002",
+        "slot_id": "burnaby_r1:observed:53584e7fee132725",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "70",
+        "unit": "%",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_m4_pack_0006_003",
+        "slot_id": "burnaby_r1:observed:6df3b040e8a9357e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_m4_pack_0034_001",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_028:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "fire_access_corridor",
+        "value": "1.0",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_m4_pack_0034_002",
+        "slot_id": "burnaby_r1:observed:df509af55f16aada",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.5",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_m4_pack_0044_001",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_023:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.8",
+        "unit": "m",
+        "source": {
+          "page": 5,
+          "chunk_id": "burnaby_r1_101.2_023",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_m4_pack_0057_001",
+        "slot_id": "burnaby_r1:observed:94a01edb358b0145",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "6",
+        "unit": "units",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_001",
+        "slot_id": "burnaby_r1:observed:a8d12eb1f9a47e53",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "3",
+        "unit": "units",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_002",
+        "slot_id": "burnaby_r1:observed:4484baf909d889ee",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "2",
+        "unit": "units",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_003",
+        "slot_id": "burnaby_r1:observed:523d26935a39e4c1",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "4",
+        "unit": "units",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_004",
+        "slot_id": "burnaby_r1:observed:35ba8779355c63d8",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "6",
+        "unit": "units",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_005",
+        "slot_id": "burnaby_r1:observed:16ef87d3f53fb109",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "281",
+        "unit": "m2",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_006",
+        "slot_id": "burnaby_r1:observed:16ef87d3f53fb109",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "281",
+        "unit": "m2",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_007",
+        "slot_id": "burnaby_r1:observed:937596ff0b1fe932",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "280",
+        "unit": "m2",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_008",
+        "slot_id": "burnaby_r1:observed:671398e79959bf30",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "55",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_009",
+        "slot_id": "burnaby_r1:observed:6af88870564d81c6",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "40",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_010",
+        "slot_id": "burnaby_r1:observed:c6c509acb5399525",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "30",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_011",
+        "slot_id": "burnaby_r1:observed:6af88870564d81c6",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "40",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_012",
+        "slot_id": "burnaby_r1:observed:c32d11a774ce205a",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "45",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_013",
+        "slot_id": "burnaby_r1:observed:718a5d9f439dabc6",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "70",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_014",
+        "slot_id": "burnaby_r1:observed:84dad90684a48f82",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "60",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_015",
+        "slot_id": "burnaby_r1:observed:84dad90684a48f82",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "60",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_016",
+        "slot_id": "burnaby_r1:observed:718a5d9f439dabc6",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "70",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_017",
+        "slot_id": "burnaby_r1:observed:e487386ca3ecbedd",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "10",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_018",
+        "slot_id": "burnaby_r1:observed:cb27baa0761ee4c6",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "9.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_019",
+        "slot_id": "burnaby_r1:observed:e487386ca3ecbedd",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "10",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_020",
+        "slot_id": "burnaby_r1:observed:cb27baa0761ee4c6",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "9.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_021",
+        "slot_id": "burnaby_r1:observed:e487386ca3ecbedd",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "10",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_022",
+        "slot_id": "burnaby_r1:observed:cb27baa0761ee4c6",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "9.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_023",
+        "slot_id": "burnaby_r1:observed:e487386ca3ecbedd",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "10",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_024",
+        "slot_id": "burnaby_r1:observed:cb27baa0761ee4c6",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "9.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_025",
+        "slot_id": "burnaby_r1:observed:517d0cbf12663bd4",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "3",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_026",
+        "slot_id": "burnaby_r1:observed:e398477090a4efcb",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2.5",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_027",
+        "slot_id": "burnaby_r1:observed:517d0cbf12663bd4",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "3",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_028",
+        "slot_id": "burnaby_r1:observed:517d0cbf12663bd4",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "3",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_029",
+        "slot_id": "burnaby_r1:observed:e78f1a7380e8d5b1",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_030",
+        "slot_id": "burnaby_r1:observed:8987218993e9a4e2",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_031",
+        "slot_id": "burnaby_r1:observed:e78f1a7380e8d5b1",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_032",
+        "slot_id": "burnaby_r1:observed:8987218993e9a4e2",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_033",
+        "slot_id": "burnaby_r1:observed:e78f1a7380e8d5b1",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_034",
+        "slot_id": "burnaby_r1:observed:8987218993e9a4e2",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_035",
+        "slot_id": "burnaby_r1:observed:e78f1a7380e8d5b1",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_036",
+        "slot_id": "burnaby_r1:observed:8987218993e9a4e2",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_037",
+        "slot_id": "burnaby_r1:observed:587a273bf15bdfae",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_038",
+        "slot_id": "burnaby_r1:observed:587a273bf15bdfae",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_039",
+        "slot_id": "burnaby_r1:observed:587a273bf15bdfae",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_040",
+        "slot_id": "burnaby_r1:observed:587a273bf15bdfae",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_041",
+        "slot_id": "burnaby_r1:observed:0d59abc00aaf5c57",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_042",
+        "slot_id": "burnaby_r1:observed:5d0d426753e239dd",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "1",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_043",
+        "slot_id": "burnaby_r1:observed:0d59abc00aaf5c57",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_044",
+        "slot_id": "burnaby_r1:observed:5d0d426753e239dd",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "1",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_045",
+        "slot_id": "burnaby_r1:observed:0d59abc00aaf5c57",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_046",
+        "slot_id": "burnaby_r1:observed:5d0d426753e239dd",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "1",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_047",
+        "slot_id": "burnaby_r1:observed:0d59abc00aaf5c57",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "height",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_048",
+        "slot_id": "burnaby_r1:observed:5d0d426753e239dd",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "1",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_049",
+        "slot_id": "burnaby_r1:observed:08ee1aee909279bf",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_050",
+        "slot_id": "burnaby_r1:observed:8250e649508ff969",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_051",
+        "slot_id": "burnaby_r1:observed:08ee1aee909279bf",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_052",
+        "slot_id": "burnaby_r1:observed:8250e649508ff969",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_053",
+        "slot_id": "burnaby_r1:observed:08ee1aee909279bf",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_054",
+        "slot_id": "burnaby_r1:observed:8250e649508ff969",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_055",
+        "slot_id": "burnaby_r1:observed:08ee1aee909279bf",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_056",
+        "slot_id": "burnaby_r1:observed:d56225a39d9d7c5f",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_057",
+        "slot_id": "burnaby_r1:observed:d56225a39d9d7c5f",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_058",
+        "slot_id": "burnaby_r1:observed:d56225a39d9d7c5f",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_059",
+        "slot_id": "burnaby_r1:observed:d56225a39d9d7c5f",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_060",
+        "slot_id": "burnaby_r1:observed:53a31912d7733b78",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_061",
+        "slot_id": "burnaby_r1:observed:53a31912d7733b78",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_062",
+        "slot_id": "burnaby_r1:observed:53a31912d7733b78",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_063",
+        "slot_id": "burnaby_r1:observed:53a31912d7733b78",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_064",
+        "slot_id": "burnaby_r1:observed:05b0bb01ce915501",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_065",
+        "slot_id": "burnaby_r1:observed:3a7652ee227f168c",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_066",
+        "slot_id": "burnaby_r1:observed:3a7652ee227f168c",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_067",
+        "slot_id": "burnaby_r1:observed:3a7652ee227f168c",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_068",
+        "slot_id": "burnaby_r1:observed:4830d3b11c1243d4",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_069",
+        "slot_id": "burnaby_r1:observed:4830d3b11c1243d4",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_070",
+        "slot_id": "burnaby_r1:observed:4830d3b11c1243d4",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_071",
+        "slot_id": "burnaby_r1:observed:e8defba8ef6ba2e2",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_072",
+        "slot_id": "burnaby_r1:observed:e8defba8ef6ba2e2",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_073",
+        "slot_id": "burnaby_r1:observed:e8defba8ef6ba2e2",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_074",
+        "slot_id": "burnaby_r1:observed:ef07f928431ea092",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_075",
+        "slot_id": "burnaby_r1:observed:ef07f928431ea092",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_076",
+        "slot_id": "burnaby_r1:observed:ef07f928431ea092",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_077",
+        "slot_id": "burnaby_r1:observed:ef07f928431ea092",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_078",
+        "slot_id": "burnaby_r1:observed:184015c414c29e18",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_079",
+        "slot_id": "burnaby_r1:observed:184015c414c29e18",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_080",
+        "slot_id": "burnaby_r1:observed:184015c414c29e18",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v2matrix_081",
+        "slot_id": "burnaby_r1:observed:184015c414c29e18",
+        "mapping_confidence": "exact",
+        "mapping_score": 23,
+        "mapping_reason": "page+source_type+row+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v3clause_m4_pack_0035_001",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.1_027:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "automatic_sprinkler",
+        "value": "45",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_027",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v3clause_m4_pack_0045_002",
+        "slot_id": null,
+        "mapping_confidence": "none",
+        "mapping_score": 0,
+        "mapping_reason": "rule_has_no_value",
+        "rule_object": "permitted_use",
+        "value": null,
+        "unit": null,
+        "source": {
+          "page": 1,
+          "section": "101.2",
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "evidence_type": "clause",
+          "evidence_text": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04)",
+          "source_context": "101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10 m Corner Lot - Lane 6.2 m 10 m Lot Area .3 Minimum Lot Area - 281 m2 Maximum Lot Area 280 m2 - .1 At the time of registration of the subdivision plan to create two or more rowhouse lots, the registration of a Section 219 Covenant will be required to ensure that all ad",
+          "table_title": null,
+          "row_header": null,
+          "column_header": null,
+          "cell_value": null,
+          "chunk_id": "burnaby_r1_101.2_002"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_v3clause_m4_pack_0045_003",
+        "slot_id": null,
+        "mapping_confidence": "none",
+        "mapping_score": 0,
+        "mapping_reason": "rule_has_no_value",
+        "rule_object": "permitted_use",
+        "value": null,
+        "unit": null,
+        "source": {
+          "page": 1,
+          "section": "101.2",
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "evidence_type": "clause",
+          "evidence_text": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04)",
+          "source_context": "101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10 m Corner Lot - Lane 6.2 m 10 m Lot Area .3 Minimum Lot Area - 281 m2 Maximum Lot Area 280 m2 - .1 At the time of registration of the subdivision plan to create two or more rowhouse lots, the registration of a Section 219 Covenant will be required to ensure that all ad",
+          "table_title": null,
+          "row_header": null,
+          "column_header": null,
+          "cell_value": null,
+          "chunk_id": "burnaby_r1_101.2_002"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_v3_repair_pack_0001_001",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.3_003:m009",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "281",
+        "unit": "m2",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_v3_repair_pack_0001_002",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.3_003:m010",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "280",
+        "unit": "m2",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_v3_repair_pack_0002_001",
+        "slot_id": "burnaby_r1:observed:1f0ab07f221773ee",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "60",
+        "unit": "%",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_v3_repair_pack_0002_002",
+        "slot_id": "burnaby_r1:observed:53584e7fee132725",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "70",
+        "unit": "%",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_v3_repair_pack_0002_003",
+        "slot_id": "burnaby_r1:observed:6df3b040e8a9357e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_v3_repair_pack_0006_001",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_028:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "fire_access_corridor",
+        "value": "1.0",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_v3_repair_pack_0006_002",
+        "slot_id": "burnaby_r1:observed:df509af55f16aada",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.5",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "burnaby_r1_native_v3_repair_pack_0007_001",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_023:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.8",
+        "unit": "m",
+        "source": {
+          "page": 5,
+          "chunk_id": "burnaby_r1_101.2_023",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      }
+    ],
+    "verified_rule_mappings": [
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_004",
+        "slot_id": "burnaby_r1:observed:53584e7fee132725",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "70",
+        "unit": "%",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_006",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_028:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "fire_access_corridor",
+        "value": "1.0",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_010",
+        "slot_id": "burnaby_r1:observed:d5b084419394a5f1",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": 3,
+        "unit": "units",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_011",
+        "slot_id": "burnaby_r1:observed:4484baf909d889ee",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": 2,
+        "unit": "units",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_012",
+        "slot_id": "burnaby_r1:observed:523d26935a39e4c1",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": 4,
+        "unit": "units",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_013",
+        "slot_id": "burnaby_r1:observed:642d2dc44d54c87f",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": 6,
+        "unit": "units",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_014",
+        "slot_id": "burnaby_r1:observed:16ef87d3f53fb109",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "281",
+        "unit": "m2",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_015",
+        "slot_id": "burnaby_r1:observed:9d544a17d99101ab",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "281",
+        "unit": "m2",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_017",
+        "slot_id": "burnaby_r1:observed:3413dd6fda144fb2",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "55",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_018",
+        "slot_id": "burnaby_r1:observed:d280b1e9a0b2cacc",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "40",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_019",
+        "slot_id": "burnaby_r1:observed:c12cabe23b92d55d",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "30",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_020",
+        "slot_id": "burnaby_r1:observed:0514b95bca6bf8ca",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "40",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_021",
+        "slot_id": "burnaby_r1:observed:b310e9e585fec2e3",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "45",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_022",
+        "slot_id": "burnaby_r1:observed:f979b7292c19fcd3",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "70",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_023",
+        "slot_id": "burnaby_r1:observed:da26ab1748637991",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "60",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_024",
+        "slot_id": "burnaby_r1:observed:559ce24da637879f",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "60",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_025",
+        "slot_id": "burnaby_r1:observed:0cd290d6586932c4",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "70",
+        "unit": "%",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_026",
+        "slot_id": "burnaby_r1:observed:c93b9be63bdabd3c",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "10",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_027",
+        "slot_id": "burnaby_r1:observed:4c0fa596f4bb28d3",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "9.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_028",
+        "slot_id": "burnaby_r1:observed:79d33b39f5f457ab",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "10",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_029",
+        "slot_id": "burnaby_r1:observed:730151bbdac02f82",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "9.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_030",
+        "slot_id": "burnaby_r1:observed:81ccb2a7bb39c34a",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "10",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_031",
+        "slot_id": "burnaby_r1:observed:8c73d2fc3c96108a",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "9.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_032",
+        "slot_id": "burnaby_r1:observed:08d01017f0207b51",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "10",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_033",
+        "slot_id": "burnaby_r1:observed:f002e39f414d9f9c",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "9.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_034",
+        "slot_id": "burnaby_r1:observed:c03f433675afedbd",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "3",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_035",
+        "slot_id": "burnaby_r1:observed:e096e9060894d1cb",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2.5",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_036",
+        "slot_id": "burnaby_r1:observed:d1d96828286affa6",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "3",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_037",
+        "slot_id": "burnaby_r1:observed:b1f79600042a451e",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "3",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_038",
+        "slot_id": "burnaby_r1:observed:f20939db52adda75",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_039",
+        "slot_id": "burnaby_r1:observed:27f7d6c5e6594c7a",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_040",
+        "slot_id": "burnaby_r1:observed:eca30c07f0019572",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_041",
+        "slot_id": "burnaby_r1:observed:ab211c7a743c0b1d",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_042",
+        "slot_id": "burnaby_r1:observed:cb6e576f18c5217d",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_043",
+        "slot_id": "burnaby_r1:observed:58fc57915d73ed29",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_044",
+        "slot_id": "burnaby_r1:observed:4fe7de0f5e2d0608",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_045",
+        "slot_id": "burnaby_r1:observed:306dcc388aac394d",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_046",
+        "slot_id": "burnaby_r1:observed:23d57d7824c5e90f",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_047",
+        "slot_id": "burnaby_r1:observed:05a2c48d51974f1c",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_048",
+        "slot_id": "burnaby_r1:observed:47e17f1f143e5c6f",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_049",
+        "slot_id": "burnaby_r1:observed:ad6ce0f7d831d73c",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "2",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_050",
+        "slot_id": "burnaby_r1:observed:01194770fb20e35d",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_051",
+        "slot_id": "burnaby_r1:observed:db9af254a2626025",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "1",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_052",
+        "slot_id": "burnaby_r1:observed:e14b9bcebdd70a9d",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_053",
+        "slot_id": "burnaby_r1:observed:8be493a75b7e176a",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "1",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_054",
+        "slot_id": "burnaby_r1:observed:a6858f819a43fa95",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_055",
+        "slot_id": "burnaby_r1:observed:e148fd598f53d2c6",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "1",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_056",
+        "slot_id": "burnaby_r1:observed:754ccc4925afe6f8",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "height",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_057",
+        "slot_id": "burnaby_r1:observed:9a92d22b45bf0371",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "storeys",
+        "value": "1",
+        "unit": "storeys",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_058",
+        "slot_id": "burnaby_r1:observed:4ebb950d34313dbc",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_059",
+        "slot_id": "burnaby_r1:observed:bb4c856432a9f369",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_060",
+        "slot_id": "burnaby_r1:observed:77bea34845923299",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_061",
+        "slot_id": "burnaby_r1:observed:648ad2d04a96b1f2",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_062",
+        "slot_id": "burnaby_r1:observed:3ff35aac43661841",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_063",
+        "slot_id": "burnaby_r1:observed:a628529b3e856f4d",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_064",
+        "slot_id": "burnaby_r1:observed:53753685bc0ddb96",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_065",
+        "slot_id": "burnaby_r1:observed:5a75511c2d552856",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_066",
+        "slot_id": "burnaby_r1:observed:954e30cc7481352b",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_067",
+        "slot_id": "burnaby_r1:observed:d7297ddc235f1f2a",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_068",
+        "slot_id": "burnaby_r1:observed:a2bdf7295cf088ba",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_069",
+        "slot_id": "burnaby_r1:observed:9f129f2a1478fea9",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_070",
+        "slot_id": "burnaby_r1:observed:ba596823fc3efc4e",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_071",
+        "slot_id": "burnaby_r1:observed:4c0c8ce7dbe1b209",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_072",
+        "slot_id": "burnaby_r1:observed:49a4d6ca900149b3",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_074",
+        "slot_id": "burnaby_r1:observed:db4fdb99cfd91dc4",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_075",
+        "slot_id": "burnaby_r1:observed:63a57a6020c4526d",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_076",
+        "slot_id": "burnaby_r1:observed:78cb3c99131e3d64",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_077",
+        "slot_id": "burnaby_r1:observed:2343a2af491cc116",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_078",
+        "slot_id": "burnaby_r1:observed:5681487aee2d49e6",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_079",
+        "slot_id": "burnaby_r1:observed:3d90c032f94c5582",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_080",
+        "slot_id": "burnaby_r1:observed:0941574dff1b99fc",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_081",
+        "slot_id": "burnaby_r1:observed:693e0c1ad7db8300",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_082",
+        "slot_id": "burnaby_r1:observed:12f6cd8c23bb2a1a",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_083",
+        "slot_id": "burnaby_r1:observed:4edeb62b6bb5c4a6",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_084",
+        "slot_id": "burnaby_r1:observed:7c82bae2b3ee54fe",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_085",
+        "slot_id": "burnaby_r1:observed:e9d89d353ad003ed",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_086",
+        "slot_id": "burnaby_r1:observed:b32f1039e3431e87",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_087",
+        "slot_id": "burnaby_r1:observed:5c7f337db41bce61",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_088",
+        "slot_id": "burnaby_r1:observed:d734fbf06c75dfd5",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_089",
+        "slot_id": "burnaby_r1:observed:fd3c70ad8790743e",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_090",
+        "slot_id": "burnaby_r1:observed:60f5b13e072b75e1",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_091",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.1_027:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "automatic_sprinkler",
+        "value": 45,
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_027",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_097",
+        "slot_id": "burnaby_r1:observed:53584e7fee132725",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "impervious_surface",
+        "value": "70",
+        "unit": "%",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "burnaby_r1_099",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_028:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "fire_access_corridor",
+        "value": "1.0",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      }
+    ],
+    "review_rule_mappings": [
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_001",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.3_003:m009",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "281",
+        "unit": "m2",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_002",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.3_003:m010",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "280",
+        "unit": "m2",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_003",
+        "slot_id": "burnaby_r1:observed:1f0ab07f221773ee",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "60",
+        "unit": "%",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_005",
+        "slot_id": "burnaby_r1:observed:6df3b040e8a9357e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_007",
+        "slot_id": "burnaby_r1:observed:a581a82e373240a7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "fire_access_corridor",
+        "value": "2.5",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_008",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_023:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.8",
+        "unit": "m",
+        "source": {
+          "page": 5,
+          "chunk_id": "burnaby_r1_101.2_023",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_009",
+        "slot_id": "burnaby_r1:observed:94a01edb358b0145",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "6",
+        "unit": "units",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_016",
+        "slot_id": "burnaby_r1:observed:d15388d4d917859c",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "280",
+        "unit": "m2",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_073",
+        "slot_id": "burnaby_r1:observed:8080be231b77874b",
+        "mapping_confidence": "exact",
+        "mapping_score": 32,
+        "mapping_reason": "page+source_type+row+column+cell+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 2,
+          "chunk_id": null,
+          "evidence_type": "table_cell",
+          "slot_source_type": "table_cell"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_092",
+        "slot_id": null,
+        "mapping_confidence": "none",
+        "mapping_score": 0,
+        "mapping_reason": "rule_has_no_value",
+        "rule_object": "permitted_use",
+        "value": null,
+        "unit": null,
+        "source": {
+          "page": 1,
+          "section": "101.2",
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "evidence_type": "clause",
+          "evidence_text": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04)",
+          "source_context": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04)",
+          "table_title": null,
+          "row_header": null,
+          "column_header": null,
+          "cell_value": null,
+          "chunk_id": "burnaby_r1_101.2_002"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_093",
+        "slot_id": null,
+        "mapping_confidence": "none",
+        "mapping_score": 0,
+        "mapping_reason": "rule_has_no_value",
+        "rule_object": "permitted_use",
+        "value": null,
+        "unit": null,
+        "source": {
+          "page": 1,
+          "section": "101.2",
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "evidence_type": "clause",
+          "evidence_text": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04)",
+          "source_context": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04)",
+          "table_title": null,
+          "row_header": null,
+          "column_header": null,
+          "cell_value": null,
+          "chunk_id": "burnaby_r1_101.2_002"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_094",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.3_003:m009",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "281",
+        "unit": "m2",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_095",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.3_003:m010",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_area",
+        "value": "280",
+        "unit": "m2",
+        "source": {
+          "page": 1,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_096",
+        "slot_id": "burnaby_r1:observed:1f0ab07f221773ee",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "60",
+        "unit": "%",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_098",
+        "slot_id": "burnaby_r1:observed:6df3b040e8a9357e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_100",
+        "slot_id": "burnaby_r1:observed:a581a82e373240a7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "fire_access_corridor",
+        "value": "2.5",
+        "unit": "m",
+        "source": {
+          "page": 6,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "burnaby_r1_101",
+        "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_023:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.8",
+        "unit": "m",
+        "source": {
+          "page": 5,
+          "chunk_id": "burnaby_r1_101.2_023",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      }
+    ],
+    "rejected_rule_mappings": [],
+    "not_used_rule_mappings": []
+  },
+  "unsupported_verified_rules": [],
+  "duplicate_verified_slots": [
+    {
+      "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_028:m001",
+      "keeper_rule_id": "burnaby_r1_006",
+      "duplicate_rule_ids": [
+        "burnaby_r1_099"
+      ],
+      "count": 2,
+      "resolution": "duplicate_merged"
+    },
+    {
+      "slot_id": "burnaby_r1:observed:53584e7fee132725",
+      "keeper_rule_id": "burnaby_r1_004",
+      "duplicate_rule_ids": [
+        "burnaby_r1_097"
+      ],
+      "count": 2,
+      "resolution": "duplicate_merged"
+    }
+  ],
+  "duplicate_merged_rules": [
+    {
+      "rule_id": "burnaby_r1_099",
+      "slot_id": "burnaby_r1:clause:burnaby_r1_101.2_028:m001",
+      "status": "duplicate_merged",
+      "kept_rule_id": "burnaby_r1_006"
+    },
+    {
+      "rule_id": "burnaby_r1_097",
+      "slot_id": "burnaby_r1:observed:53584e7fee132725",
+      "status": "duplicate_merged",
+      "kept_rule_id": "burnaby_r1_004"
+    }
+  ],
+  "frontier_shadow_lanes": [
+    {
+      "lane": "visual_layout_retrieval",
+      "status": "shadow_only",
+      "purpose": "Evaluate table/footnote page-image retrieval without promoting rules."
+    },
+    {
+      "lane": "benchmark_driven_optimizer",
+      "status": "shadow_only",
+      "purpose": "Try extraction prompt/decomposition variants under M5.5 gates."
+    }
+  ]
+}

@@ -256,6 +256,16 @@ def native_run_root(output_dir: Path) -> str | None:
     return root if root in NATIVE_RUN_ROOTS else None
 
 
+def m55_run_id(output_dir: Path) -> str:
+    """Return the M5/M6 measurement run id for outputs/m5_runs/<run>/<city>."""
+    try:
+        if output_dir.parent.parent.name == "m5_runs":
+            return output_dir.parent.name
+    except IndexError:
+        return ""
+    return ""
+
+
 def native_lane_for_dir(output_dir: Path) -> str | None:
     root = native_run_root(output_dir)
     if root is None:
@@ -303,7 +313,16 @@ def discover_city_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
             for model_dir in city_dir.iterdir():
                 if model_dir.is_dir() and (model_dir / "verified_rules.json").exists():
                     native_runs.append(model_dir)
-    return sorted([*standard, *native_runs], key=lambda path: str(path))
+    measured_runs = []
+    measured_root = outputs_root / "m5_runs"
+    if measured_root.is_dir():
+        for run_dir in measured_root.iterdir():
+            if not run_dir.is_dir():
+                continue
+            for city_dir in run_dir.iterdir():
+                if city_dir.is_dir() and (city_dir / "verified_rules.json").exists():
+                    measured_runs.append(city_dir)
+    return sorted([*standard, *native_runs, *measured_runs], key=lambda path: str(path))
 
 
 def discover_product_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
@@ -316,6 +335,14 @@ def discover_product_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path
     if not outputs_root.is_dir():
         return []
     product_runs = []
+    measured_root = outputs_root / "m5_runs"
+    if measured_root.is_dir():
+        for run_dir in measured_root.iterdir():
+            if not run_dir.is_dir():
+                continue
+            for city_dir in run_dir.iterdir():
+                if city_dir.is_dir() and (city_dir / "verified_rules.json").exists():
+                    product_runs.append(city_dir)
     for root_name in PRODUCT_RUN_ROOTS:
         native_root = outputs_root / root_name
         if not native_root.is_dir():
@@ -326,12 +353,14 @@ def discover_product_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path
             model_dir = city_dir / "google_gemini_2_5_flash_lite"
             if model_dir.is_dir() and (model_dir / "verified_rules.json").exists():
                 product_runs.append(model_dir)
-    order = {root: index for index, root in enumerate(PRODUCT_RUN_ROOTS)}
+    order = {"m5_runs": 0, **{root: index + 1 for index, root in enumerate(PRODUCT_RUN_ROOTS)}}
     return sorted(product_runs, key=lambda path: (order.get(path.parent.parent.name, 99), city_stem_from_dir(path)))
 
 
 def city_key_from_dir(output_dir: Path) -> str:
     """Return the city prefix for an output dir, e.g. burnaby_r1_... -> burnaby."""
+    if m55_run_id(output_dir):
+        return output_dir.name.split("_")[0].lower()
     if native_run_root(output_dir):
         return output_dir.parent.name.split("_")[0].lower()
     return output_dir.name.split("_")[0].lower()
@@ -346,6 +375,8 @@ def city_stem_from_dir(output_dir: Path) -> str:
     ('burnaby_r1'), which is why path lookups must come through here.
     """
     name = output_dir.name
+    if m55_run_id(output_dir):
+        return name
     if native_run_root(output_dir):
         return output_dir.parent.name
     for suffix in (f"{OUTPUT_DIR_SUFFIX}_v21", OUTPUT_DIR_SUFFIX, f"{P9_DIR_SUFFIX}_v21", P9_DIR_SUFFIX):
@@ -376,6 +407,13 @@ def bylaw_index_path(output_dir: Path) -> Path | None:
 
 def city_label_from_dir(output_dir: Path) -> str:
     """Human-readable label for the sidebar selector, e.g. 'Burnaby R1'."""
+    run_id = m55_run_id(output_dir)
+    if run_id:
+        stem = city_stem_from_dir(output_dir)
+        parts = [part for part in stem.split("_") if part]
+        base = parts[0].capitalize() + (" " + " ".join(part.upper() for part in parts[1:]) if parts[1:] else "")
+        label = "M6" if run_id.startswith(("m56", "m6")) else "M5.5"
+        return f"{label} {run_id} — {base}"
     native_root = native_run_root(output_dir)
     if native_root:
         stem = city_stem_from_dir(output_dir)
@@ -422,6 +460,9 @@ def load_output_data(output_dir: Path) -> dict[str, Any]:
         "source_repair": _read_json(output_dir / "source_repair_report.json", {"items": [], "status_counts": {}}),
         "review_assistant_packets": _read_json(output_dir / "review_assistant_packets.json", {"items": []}),
         "coverage_report": _read_json(output_dir / "coverage_report.json", {}),
+        "rule_slot_ledger": _read_json(output_dir / "rule_slot_ledger.json", {}),
+        "slot_audit": _read_json(output_dir / "slot_audit.json", {}),
+        "m55_reconciliation": _read_json(output_dir / "m4_m55_reconciliation.json", {}),
         "evidence_units": _read_json(output_dir / "evidence_units.json", []),
         "verified": _read_json(output_dir / "verified_rules.json", []),
         "review": _read_json(output_dir / "review_needed.json", []),
@@ -434,6 +475,24 @@ def load_output_data(output_dir: Path) -> dict[str, Any]:
         "examiner": _read_json(output_dir / "llm_examiner_report.json", {}),
         "examiner_suggestions": _read_json(output_dir / "llm_examiner_suggestions.json", {"items": []}),
         "examiner_rerun": _read_json(output_dir / "llm_examiner_rerun_plan.json", {"actions": []}),
+    }
+
+
+def output_bucket_counts(data: dict[str, Any]) -> dict[str, int]:
+    """Use validation counts when present; otherwise count loaded output files."""
+    validation_counts = ((data.get("validation") or {}).get("bucket_counts") or {})
+    if any(int(value or 0) for value in validation_counts.values()):
+        return {
+            "verified": int(validation_counts.get("verified") or 0),
+            "review_needed": int(validation_counts.get("review_needed") or 0),
+            "rejected": int(validation_counts.get("rejected") or 0),
+            "not_used": int(validation_counts.get("not_used") or 0),
+        }
+    return {
+        "verified": len(data.get("verified") or []),
+        "review_needed": len(data.get("review") or []),
+        "rejected": len(data.get("rejected") or []),
+        "not_used": len(data.get("not_used") or []),
     }
 
 
@@ -1001,8 +1060,8 @@ def main() -> None:
     )
     _style(st)
 
-    # City selector: scan current M4 and predecessor V3 outputs for every city
-    # with verified_rules.json. New cities appear automatically once committed.
+    # City selector: scan M6 measured runs, current M4, and predecessor V3
+    # outputs for every city with verified_rules.json.
     city_dirs = discover_product_output_dirs()
     if (
         cli_output_dir.is_dir()
@@ -1025,8 +1084,8 @@ def main() -> None:
         index=0,
         format_func=lambda item: "Start here \u2014 multi-city M4 overview" if item == PORTFOLIO else city_label_from_dir(item),
         help=(
-            "Start with the multi-city M4 overview. Pick Burnaby, Calgary, or Vancouver for drilldown. "
-            "Current M4 and its V3 predecessor are shown for each committed city."
+            "Start with the multi-city M4 overview. Pick an M6 measured run for final count audit, "
+            "or a current M4/V3 run for drilldown and comparison."
         ),
     )
     if selection == PORTFOLIO:
@@ -1136,15 +1195,15 @@ def main() -> None:
 
 
 def _overview_tab(st: Any, data: dict[str, Any]) -> None:
-    validation = data["validation"]
     benchmark = data["benchmark"]
-    counts = validation.get("bucket_counts", {})
+    counts = output_bucket_counts(data)
     metrics = benchmark.get("rule_metrics", {})
     proposal = benchmark.get("proposal_metrics", {})
     gates = benchmark.get("quality_gates", {}).get("gates", {})
 
     st.subheader("Current Status")
     _action_summary(st, data)
+    _count_audit_panel(st, data)
     left, right = st.columns([1.2, 1])
     with left:
         st.markdown("#### Decision mix")
@@ -1179,6 +1238,80 @@ def _overview_tab(st: Any, data: dict[str, Any]) -> None:
             st.markdown("#### Potential extraction mistakes")
             _bar_table(st, dict(flags.most_common(12)))
     _not_used_explanation(st, data)
+
+
+def count_audit_status(slot_audit: dict[str, Any]) -> str:
+    metrics = (slot_audit or {}).get("slot_metrics") or {}
+    if not metrics:
+        return "not available"
+    unsupported = int(metrics.get("unsupported_verified_rule_count") or 0)
+    unresolved_duplicates = int(metrics.get("duplicate_verified_slot_count") or 0)
+    mapping_rate = float(metrics.get("verified_slot_mapping_rate") or 0)
+    if unsupported or unresolved_duplicates or mapping_rate < 1.0:
+        return "too much risk"
+    review = int(metrics.get("scored_review_slot_count", metrics.get("review_slot_count")) or 0)
+    missed = int(metrics.get("scored_missed_slot_count", metrics.get("missed_slot_count")) or 0)
+    if review or missed:
+        return "safe but conservative"
+    return "balanced"
+
+
+def _format_coverage(value: Any) -> Any:
+    if isinstance(value, (int, float)):
+        return f"{round(float(value) * 100)}%"
+    return value
+
+
+def count_audit_summary_rows(slot_audit: dict[str, Any], reconciliation: dict[str, Any] | None = None) -> list[dict[str, Any]]:
+    metrics = (slot_audit or {}).get("slot_metrics") or {}
+    reconciliation = reconciliation or {}
+    if not metrics:
+        return []
+    safety_and_delta = [
+        {"metric": "Duplicate merged", "value": metrics.get("duplicate_merged_count"), "meaning": "not counted twice"},
+        {"metric": "Unsupported verified", "value": metrics.get("unsupported_verified_rule_count"), "meaning": "must be zero"},
+        {
+            "metric": "Verified slot delta from M4",
+            "value": reconciliation.get("effective_verified_slot_count_delta"),
+            "meaning": "unique verified-slot change",
+        },
+    ]
+    if metrics.get("distinct_scored_legal_slot_count") is not None:
+        return [
+            {"metric": "Scored legal slots", "value": metrics.get("distinct_scored_legal_slot_count"), "meaning": "in-contract distinct legal rules"},
+            {"metric": "Verified coverage", "value": _format_coverage(metrics.get("scored_verified_coverage")), "meaning": "scored slots that are verified"},
+            {"metric": "Scored verified", "value": metrics.get("scored_verified_slot_count"), "meaning": "distinct legal rules proven"},
+            {"metric": "Scored review-only", "value": metrics.get("scored_review_slot_count"), "meaning": "safe, awaiting proof"},
+            {"metric": "Scored missed", "value": metrics.get("scored_missed_slot_count"), "meaning": "actionable backlog"},
+            {"metric": "Raw rule slots (advisory)", "value": metrics.get("total_rule_slots"), "meaning": "loose over-count ceiling"},
+            {"metric": "Unique verified slots", "value": metrics.get("effective_verified_slot_count"), "meaning": "deduplicated verifier output"},
+            *safety_and_delta,
+        ]
+    return [
+        {"metric": "Rule slots", "value": metrics.get("total_rule_slots"), "meaning": "source-derived denominator"},
+        {"metric": "Raw verified rules", "value": metrics.get("verified_rule_count"), "meaning": "verifier output rows"},
+        {"metric": "Unique verified slots", "value": metrics.get("effective_verified_slot_count"), "meaning": "deduplicated count"},
+        {"metric": "Review slots", "value": metrics.get("review_slot_count"), "meaning": "safe but not fully proven"},
+        {"metric": "Candidate-only slots", "value": metrics.get("candidate_only_slot_count"), "meaning": "extracted but not proven"},
+        {"metric": "Missed slots", "value": metrics.get("missed_slot_count"), "meaning": "no mapped candidate yet"},
+        *safety_and_delta,
+    ]
+
+
+def _count_audit_panel(st: Any, data: dict[str, Any]) -> None:
+    slot_audit = data.get("slot_audit") or {}
+    rows = count_audit_summary_rows(slot_audit, data.get("m55_reconciliation") or {})
+    if not rows:
+        st.info("M6 slot audit not found for this output. Pick an M6 measured run to answer too much vs too little precisely.")
+        return
+    status = count_audit_status(slot_audit)
+    st.markdown("#### Too Much / Too Little")
+    st.caption(
+        "This panel leads with the M6 scored legal denominator and keeps raw slots as an advisory over-count. "
+        "Unsupported verified rules mean too much; scored review or missed slots mean conservative coverage."
+    )
+    st.markdown(f"<div class='trust-note'><b>Count status:</b> {html.escape(_plain_label(status))}</div>", unsafe_allow_html=True)
+    st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
 
 
 def _not_used_explanation(st: Any, data: dict[str, Any]) -> None:
@@ -3076,11 +3209,10 @@ def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
 
 
 def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> None:
-    validation = data["validation"]
     benchmark = data["benchmark"]
     metrics = benchmark.get("rule_metrics", {})
     proposal = benchmark.get("proposal_metrics", {})
-    counts = validation.get("bucket_counts", {})
+    counts = output_bucket_counts(data)
     # Keep the KPI row small: safety status first, then review volume.
     cards = [
         ("Verified", counts.get("verified", 0), "verified"),
@@ -3101,9 +3233,8 @@ def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, A
 
 def _city_takeaway_html(city_label: str, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> str:
     """One conclusion panel that tells reviewers what this run means."""
-    validation = data.get("validation") or {}
     benchmark = data.get("benchmark") or {}
-    counts = validation.get("bucket_counts") or {}
+    counts = output_bucket_counts(data)
     metrics = benchmark.get("rule_metrics") or {}
     proposal = benchmark.get("proposal_metrics") or {}
     verified = int(counts.get("verified") or 0)

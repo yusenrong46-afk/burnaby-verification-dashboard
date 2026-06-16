@@ -1,0 +1,72 @@
+{
+  "run_id": "m6_final_20260616",
+  "created_at": "2026-06-16T08:48:46.593242+00:00",
+  "purpose": "M5 benchmark-driven measurement run; verifier behavior unchanged.",
+  "changed_component": "m6_release",
+  "model": "existing_outputs",
+  "refresh_verifier": false,
+  "cities": [
+    "burnaby_r1",
+    "vancouver_rs",
+    "calgary_rcg"
+  ],
+  "run_root": "/Users/thomas/Desktop/Capstone_prototype/Burnaby_prototype/outputs/m5_runs/m6_final_20260616",
+  "hard_gates_passed": true,
+  "city_reports": [
+    {
+      "city": "burnaby_r1",
+      "accepted": true,
+      "top_bottleneck": {
+        "stage": "verification",
+        "metric": "table_proof_completion_rate",
+        "value": 0.457,
+        "target": 0.5,
+        "severity": 68,
+        "recommendation": "Focus table proof logic on row/column/cell binding and condition preservation."
+      },
+      "report_path": "/Users/thomas/Desktop/Capstone_prototype/Burnaby_prototype/outputs/m5_runs/m6_final_20260616/burnaby_r1/m5_diagnosis.json"
+    },
+    {
+      "city": "vancouver_rs",
+      "accepted": true,
+      "top_bottleneck": {
+        "stage": "measurement_contract",
+        "metric": "scored_verified_coverage",
+        "value": 0.091,
+        "target": ">= 0.50",
+        "severity": 35,
+        "recommendation": "Grow verified coverage of in-contract, recognized-family source slots (the M5.6 scored denominator), not the raw numeric-token ceiling.",
+        "scored_total_slots": 50,
+        "scored_verified_slot_count": 4,
+        "scored_missed_slot_count": 38
+      },
+      "report_path": "/Users/thomas/Desktop/Capstone_prototype/Burnaby_prototype/outputs/m5_runs/m6_final_20260616/vancouver_rs/m5_diagnosis.json"
+    },
+    {
+      "city": "calgary_rcg",
+      "accepted": true,
+      "top_bottleneck": {
+        "stage": "measurement_contract",
+        "metric": "scored_verified_coverage",
+        "value": 0.01,
+        "target": ">= 0.50",
+        "severity": 35,
+        "recommendation": "Grow verified coverage of in-contract, recognized-family source slots (the M5.6 scored denominator), not the raw numeric-token ceiling.",
+        "scored_total_slots": 2826,
+        "scored_verified_slot_count": 7,
+        "scored_missed_slot_count": 628
+      },
+      "report_path": "/Users/thomas/Desktop/Capstone_prototype/Burnaby_prototype/outputs/m5_runs/m6_final_20260616/calgary_rcg/m5_diagnosis.json"
+    }
+  ],
+  "external_inspiration": {
+    "LegalBench-RAG": "precise legal retrieval evaluation",
+    "RAGAS": "separate retrieval quality from answer quality",
+    "PIBC Intelligent Inventory": "planner-facing bylaw search and comparison",
+    "National Zoning Atlas": "consistent zoning-rule categories",
+    "BC zoning guidance": "source authority and provenance",
+    "ColPali": "shadow-only visual/layout retrieval for table-heavy PDFs",
+    "DSPy": "benchmark-driven prompt/program optimization, never a safety bypass",
+    "DocETL": "bounded document-pipeline optimization and source traceability"
+  }
+}
