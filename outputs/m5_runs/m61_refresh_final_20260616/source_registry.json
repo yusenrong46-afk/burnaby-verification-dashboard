@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-06-16T17:21:16.860930+00:00",
+  "purpose": "Central M5 source registry built from existing source-corpus manifests.",
+  "sources": [
+    {
+      "city": "burnaby_r1",
+      "zone": "R1",
+      "configured_source_document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "configured_source_url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "provenance_url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "fetched_at": "2026-06-10T20:17:03+00:00",
+      "pdf_sha256": "4eb9ad463edaba70dba6cadaa47939726c6a539933053912ce881cc2d4ee4bac",
+      "page_count": 7,
+      "source_chunk_count": 93,
+      "rag_chunk_count": 93,
+      "table_entry_count": 54,
+      "numeric_clause_count": 40,
+      "rule_like_numeric_clause_count": 23,
+      "manifest_path": "/Users/thomas/Desktop/Capstone_prototype/Burnaby_prototype/benchmark/source_corpus/burnaby_r1/manifest.json",
+      "source_status": "strong",
+      "weak_provenance_flags": []
+    },
+    {
+      "city": "vancouver_rs",
+      "zone": "RS",
+      "configured_source_document": "Vancouver Zoning and Development By-law — Section 11.3 (Laneway Houses)",
+      "configured_source_url": "https://bylaws.vancouver.ca/zoning/zoning-by-law-section-11.pdf",
+      "provenance_url": "https://bylaws.vancouver.ca/zoning/zoning-by-law-section-11.pdf",
+      "fetched_at": "2026-06-11T20:11:55+00:00",
+      "pdf_sha256": "80f30e5782fe5a62b1a6a7f768713f93fdea120245739831394d6b14b0555111",
+      "page_count": 22,
+      "source_chunk_count": 251,
+      "rag_chunk_count": 251,
+      "table_entry_count": 45,
+      "numeric_clause_count": 40,
+      "rule_like_numeric_clause_count": 38,
+      "manifest_path": "/Users/thomas/Desktop/Capstone_prototype/Burnaby_prototype/benchmark/source_corpus/vancouver_rs/manifest.json",
+      "source_status": "strong",
+      "weak_provenance_flags": []
+    },
+    {
+      "city": "calgary_rcg",
+      "zone": "RCG",
+      "configured_source_document": "Land Use Bylaw 1P2007 — Part 5 Division 1 General Rules (Secondary Suite 351, Backyard Suite 352, Deemed Conforming Buildings 358)",
+      "configured_source_url": "https://www.calgary.ca/content/dam/www/pda/pd/documents/calgary-land-use-bylaw-1p2007/land-use-bylaw-1p2007.pdf",
+      "provenance_url": "https://www.calgary.ca/content/dam/www/pda/pd/documents/calgary-land-use-bylaw-1p2007/land-use-bylaw-1p2007.pdf",
+      "fetched_at": "2026-06-11T00:18:49+00:00",
+      "pdf_sha256": "25d15e8d3a3ed10b90d9c029eff8a337ba899f5f330d64f509e8995874740d48",
+      "page_count": 1053,
+      "source_chunk_count": 3558,
+      "rag_chunk_count": 3558,
+      "table_entry_count": 455,
+      "numeric_clause_count": 1106,
+      "rule_like_numeric_clause_count": 1044,
+      "manifest_path": "/Users/thomas/Desktop/Capstone_prototype/Burnaby_prototype/benchmark/source_corpus/calgary_rcg/manifest.json",
+      "source_status": "strong",
+      "weak_provenance_flags": []
+    }
+  ],
+  "source_count": 3,
+  "weak_source_count": 0
+}

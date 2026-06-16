@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-06-16T17:24:05.214047+00:00",
+  "purpose": "M4-to-M5.5 verified-slot reconciliation.",
+  "baseline_effective_verified_slot_count": 8,
+  "current_effective_verified_slot_count": 8,
+  "effective_verified_slot_count_delta": 0,
+  "status_counts": [
+    {
+      "reason": "kept",
+      "count": 8
+    },
+    {
+      "reason": "duplicate_merged",
+      "count": 3
+    }
+  ],
+  "rows": [
+    {
+      "baseline_rule_id": "calgary_rcg_008",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.9_921:m002",
+      "status": "kept",
+      "mapping_confidence": "exact",
+      "reason": "The M4 verified source slot is still verified in M5.5."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_017",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_910:m002",
+      "status": "kept",
+      "mapping_confidence": "exact",
+      "reason": "The M4 verified source slot is still verified in M5.5."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_019",
+      "slot_id": "calgary_rcg:observed:c44de300e074a2a4",
+      "status": "kept",
+      "mapping_confidence": "exact",
+      "reason": "The M4 verified source slot is still verified in M5.5."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_219",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_912:m001",
+      "status": "kept",
+      "mapping_confidence": "exact",
+      "reason": "The M4 verified source slot is still verified in M5.5."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_220",
+      "slot_id": "calgary_rcg:observed:1a84aa5c41596912",
+      "status": "kept",
+      "mapping_confidence": "exact",
+      "reason": "The M4 verified source slot is still verified in M5.5."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_221",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_351.2_905:m002",
+      "status": "kept",
+      "mapping_confidence": "exact",
+      "reason": "The M4 verified source slot is still verified in M5.5."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_222",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_917:m002",
+      "status": "kept",
+      "mapping_confidence": "exact",
+      "reason": "The M4 verified source slot is still verified in M5.5."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_223",
+      "slot_id": "calgary_rcg:observed:60d10df64ff867a7",
+      "status": "kept",
+      "mapping_confidence": "exact",
+      "reason": "The M4 verified source slot is still verified in M5.5."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_229",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.9_921:m002",
+      "status": "duplicate_merged",
+      "mapping_confidence": "exact",
+      "reason": "Another verified rule already covers this same source slot."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_235",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_912:m001",
+      "status": "duplicate_merged",
+      "mapping_confidence": "exact",
+      "reason": "Another verified rule already covers this same source slot."
+    },
+    {
+      "baseline_rule_id": "calgary_rcg_240",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_910:m002",
+      "status": "duplicate_merged",
+      "mapping_confidence": "exact",
+      "reason": "Another verified rule already covers this same source slot."
+    }
+  ],
+  "new_current_slot_ids": []
+}

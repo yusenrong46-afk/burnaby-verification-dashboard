@@ -28,6 +28,7 @@ The dashboard discovers output directories automatically when they contain
 `verified_rules.json`.
 
 ```text
+outputs/m5_runs/m61_refresh_final_*/<city>/
 outputs/m5_runs/m6_final_*/<city>/
 outputs/m5_runs/m56_hardened_20260616/<city>/
 outputs/burnaby_r1_slim_pipeline5_registry/
@@ -64,10 +65,16 @@ whether the project is verifying too much or too little. The scored legal
 denominator is the reviewer-facing count authority; raw numeric slots are shown
 only as an advisory over-count guardrail.
 
+M6.1 is the preferred review run when present. It refreshes deterministic
+verifier outputs from the existing native extraction artifacts without a new LLM
+call, improves Burnaby table-proof completeness, and deduplicates exact
+source-aware duplicate rows in `gis_rule_contract.json` / `gis_felt_export.json`
+while preserving raw `verified_rules.json` as the audit trail.
+
 ## Reviewer Workflow
 
-- `verified_rules.json` and `gis_rule_contract.json` are the only GIS-safe rule
-  sources.
+- `verified_rules.json` is the raw verifier audit trail. `gis_rule_contract.json`
+  is the deduplicated GIS-safe contract and includes a `deduplication` block.
 - `review_needed.json`, `source_repair_report.json`, and
   `review_assistant_packets.json` are advisory/debug artifacts for human review.
 - Extraction proposes candidate rules; deterministic verification decides which

@@ -1,0 +1,1486 @@
+{
+  "purpose": "Advisory semantic-signature comparison for review rules. It never verifies rules.",
+  "review_rule_count": 11,
+  "verified_rule_count": 12,
+  "high_similarity_count": 0,
+  "embedding": {
+    "available": false,
+    "model": null,
+    "mode": "structured_only",
+    "reason": "disabled",
+    "notes": [
+      "Embedding semantic review disabled; using structured signatures only."
+    ]
+  },
+  "items": [
+    {
+      "rule_id": "vancouver_rs_012",
+      "candidate_id": "vancouver_rs_native_m4_pack_0007_002",
+      "canonical_rule_key": "setback__setback__laneway_house__from_the_ultimate_rear_property_line____0_9__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "under_1",
+        "value_numeric": 0.9,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "house",
+          "laneway"
+        ],
+        "condition_concepts": [
+          "from",
+          "line",
+          "property",
+          "rear",
+          "ultimate"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_017",
+          "semantic_score": 0.71,
+          "structured_score": 0.73,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "rear setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "0.9",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_018",
+          "semantic_score": 0.53,
+          "structured_score": 0.53,
+          "embedding_score": null,
+          "combined_semantic_score": 0.53,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "side setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_006",
+          "semantic_score": 0.35,
+          "structured_score": 0.35,
+          "embedding_score": null,
+          "combined_semantic_score": 0.35,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "8.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.73,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_013",
+      "candidate_id": "vancouver_rs_native_m4_pack_0007_003",
+      "canonical_rule_key": "setback__setback__laneway_house__from_each_side_property_line____1_2__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "house",
+          "laneway"
+        ],
+        "condition_concepts": [
+          "each",
+          "from",
+          "line",
+          "property",
+          "side"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_018",
+          "semantic_score": 0.71,
+          "structured_score": 0.73,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "side setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_017",
+          "semantic_score": 0.53,
+          "structured_score": 0.53,
+          "embedding_score": null,
+          "combined_semantic_score": 0.53,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "rear setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "0.9",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_006",
+          "semantic_score": 0.35,
+          "structured_score": 0.35,
+          "embedding_score": null,
+          "combined_semantic_score": 0.35,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "8.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.73,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_022",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0004_001",
+      "canonical_rule_key": "floor_area__floor_area__laneway_house__lesser_of_a_0_25_multiplied_by_the_site_area_and_b_186_m2____0_25__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "max",
+        "value_bucket": "under_1",
+        "value_numeric": 0.25,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor"
+        ],
+        "applies_to_concepts": [
+          "house",
+          "laneway"
+        ],
+        "condition_concepts": [
+          "186",
+          "area",
+          "lesser",
+          "multiplied",
+          "site"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_009",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_015",
+          "semantic_score": 0.71,
+          "structured_score": 0.77,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_023",
+          "semantic_score": 0.71,
+          "structured_score": 0.8,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_direction",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap",
+            "condition_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.77,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_direction",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "coefficient_operand_not_value"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_025",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_002",
+      "canonical_rule_key": "setback__setback__laneway_house__from_the_ultimate_rear_property_line____0_9__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "under_1",
+        "value_numeric": 0.9,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "house",
+          "laneway"
+        ],
+        "condition_concepts": [
+          "from",
+          "line",
+          "property",
+          "rear",
+          "ultimate"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_017",
+          "semantic_score": 0.71,
+          "structured_score": 0.73,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "rear setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "0.9",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_018",
+          "semantic_score": 0.53,
+          "structured_score": 0.53,
+          "embedding_score": null,
+          "combined_semantic_score": 0.53,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "side setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_006",
+          "semantic_score": 0.35,
+          "structured_score": 0.35,
+          "embedding_score": null,
+          "combined_semantic_score": 0.35,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "8.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.73,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_026",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_003",
+      "canonical_rule_key": "setback__setback__laneway_house__from_each_side_property_line____1_2__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "1_to_3",
+        "value_numeric": 1.2,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "house",
+          "laneway"
+        ],
+        "condition_concepts": [
+          "each",
+          "from",
+          "line",
+          "property",
+          "side"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_018",
+          "semantic_score": 0.71,
+          "structured_score": 0.73,
+          "embedding_score": null,
+          "combined_semantic_score": 0.71,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit",
+            "same_value"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "same_value",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "side setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_017",
+          "semantic_score": 0.53,
+          "structured_score": 0.53,
+          "embedding_score": null,
+          "combined_semantic_score": 0.53,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "rear setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "0.9",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_006",
+          "semantic_score": 0.35,
+          "structured_score": 0.35,
+          "embedding_score": null,
+          "combined_semantic_score": 0.35,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "8.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.71,
+      "best_structured_score": 0.73,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.71,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit",
+        "same_value"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "close_meaning_guardrail_blocked",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_004",
+      "candidate_id": "vancouver_rs_native_m4_pack_0002_001",
+      "canonical_rule_key": "floor_area__floor_area__main_habitable_room__no_separate_bedrooms____16_7__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "min",
+        "value_bucket": "10_to_100",
+        "value_numeric": 16.7,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor"
+        ],
+        "applies_to_concepts": [
+          "habitable",
+          "main",
+          "room"
+        ],
+        "condition_concepts": [
+          "bedroom",
+          "separate"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_009",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_015",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_023",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_005",
+      "candidate_id": "vancouver_rs_native_m4_pack_0002_002",
+      "canonical_rule_key": "floor_area__floor_area__bedroom__no_separate_bedrooms____8_4__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 8.4,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor"
+        ],
+        "applies_to_concepts": [
+          "bedroom"
+        ],
+        "condition_concepts": [
+          "bedroom",
+          "separate"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_009",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_015",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_023",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_020",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0001_001",
+      "canonical_rule_key": "floor_area__floor_area__main_habitable_room_that_is_not_a_bedroom__except_for_a_laneway_house_with_no_separate_bedrooms____16_7__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "min",
+        "value_bucket": "10_to_100",
+        "value_numeric": 16.7,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor"
+        ],
+        "applies_to_concepts": [
+          "bedroom",
+          "habitable",
+          "main",
+          "not",
+          "room",
+          "that"
+        ],
+        "condition_concepts": [
+          "bedroom",
+          "except",
+          "house",
+          "laneway",
+          "separate"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_009",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_015",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_023",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_021",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0001_002",
+      "canonical_rule_key": "floor_area__floor_area__bedroom__except_for_a_laneway_house_with_no_separate_bedrooms____8_4__m2",
+      "signature": {
+        "rule_object": "floor_area",
+        "direction": "min",
+        "value_bucket": "3_to_10",
+        "value_numeric": 8.4,
+        "unit": "m2",
+        "scope_concepts": [
+          "area",
+          "floor"
+        ],
+        "applies_to_concepts": [
+          "bedroom"
+        ],
+        "condition_concepts": [
+          "bedroom",
+          "except",
+          "house",
+          "laneway",
+          "separate"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_009",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_015",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_023",
+          "semantic_score": 0.54,
+          "structured_score": 0.54,
+          "embedding_score": null,
+          "combined_semantic_score": 0.54,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "exception_or_override_unresolved"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap"
+          ],
+          "verified_rule_object": "floor_area",
+          "verified_scope": "floor_area",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "186",
+          "verified_unit": "m2"
+        }
+      ],
+      "best_semantic_score": 0.54,
+      "best_structured_score": 0.54,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.54,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "exception_or_override_unresolved"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_011",
+      "candidate_id": "vancouver_rs_native_m4_pack_0007_001",
+      "canonical_rule_key": "setback__setback__laneway_house__measured_across_the_width_of_the_site_from_the_single_detached_house_or_single_detached_house_with_secondary_suite_on_the_site____4_9__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 4.9,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "house",
+          "laneway"
+        ],
+        "condition_concepts": [
+          "across",
+          "detached",
+          "from",
+          "house",
+          "measured",
+          "secondary",
+          "single",
+          "site",
+          "suite",
+          "width"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_017",
+          "semantic_score": 0.53,
+          "structured_score": 0.53,
+          "embedding_score": null,
+          "combined_semantic_score": 0.53,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "rear setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "0.9",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_018",
+          "semantic_score": 0.53,
+          "structured_score": 0.53,
+          "embedding_score": null,
+          "combined_semantic_score": 0.53,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "side setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_006",
+          "semantic_score": 0.41,
+          "structured_score": 0.41,
+          "embedding_score": null,
+          "combined_semantic_score": 0.41,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "8.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.53,
+      "best_structured_score": 0.53,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.53,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    },
+    {
+      "rule_id": "vancouver_rs_024",
+      "candidate_id": "vancouver_rs_native_v3_repair_pack_0006_001",
+      "canonical_rule_key": "setback__setback__laneway_house__measured_across_the_width_of_the_site_from_the_single_detached_house_or_single_detached_house_with_secondary_suite_on_the_site____4_9__m",
+      "signature": {
+        "rule_object": "setback",
+        "direction": "max",
+        "value_bucket": "3_to_10",
+        "value_numeric": 4.9,
+        "unit": "m",
+        "scope_concepts": [
+          "setback_area"
+        ],
+        "applies_to_concepts": [
+          "house",
+          "laneway"
+        ],
+        "condition_concepts": [
+          "across",
+          "detached",
+          "from",
+          "house",
+          "measured",
+          "secondary",
+          "single",
+          "site",
+          "suite",
+          "width"
+        ]
+      },
+      "best_verified_matches": [
+        {
+          "verified_rule_id": "vancouver_rs_017",
+          "semantic_score": 0.53,
+          "structured_score": 0.53,
+          "embedding_score": null,
+          "combined_semantic_score": 0.53,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "rear setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "0.9",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_018",
+          "semantic_score": 0.53,
+          "structured_score": 0.53,
+          "embedding_score": null,
+          "combined_semantic_score": 0.53,
+          "semantic_guardrails": [
+            "same_rule_object",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_direction",
+            "different_numeric_value",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_rule_object",
+            "same_unit",
+            "scope_concept_overlap",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "setback",
+          "verified_scope": "side setback",
+          "verified_applies_to": "laneway house",
+          "verified_operator": ">=",
+          "verified_value": "1.2",
+          "verified_unit": "m"
+        },
+        {
+          "verified_rule_id": "vancouver_rs_006",
+          "semantic_score": 0.41,
+          "structured_score": 0.41,
+          "embedding_score": null,
+          "combined_semantic_score": 0.41,
+          "semantic_guardrails": [
+            "same_direction",
+            "same_unit"
+          ],
+          "semantic_guardrail_blockers": [
+            "different_numeric_value",
+            "different_rule_object",
+            "missing_core_evidence"
+          ],
+          "match_reasons": [
+            "same_direction",
+            "same_unit",
+            "same_value_bucket",
+            "applies_to_concept_overlap"
+          ],
+          "verified_rule_object": "height",
+          "verified_scope": "height",
+          "verified_applies_to": "laneway house",
+          "verified_operator": "<=",
+          "verified_value": "8.5",
+          "verified_unit": "m"
+        }
+      ],
+      "best_semantic_score": 0.53,
+      "best_structured_score": 0.53,
+      "best_embedding_score": null,
+      "best_combined_semantic_score": 0.53,
+      "semantic_match_type": "structured_only",
+      "semantic_guardrails": [
+        "same_rule_object",
+        "same_unit"
+      ],
+      "semantic_guardrail_blockers": [
+        "different_direction",
+        "different_numeric_value",
+        "missing_core_evidence"
+      ],
+      "semantic_next_action": "no_close_verified_analogue",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ]
+    }
+  ],
+  "summary": {
+    "semantic_action_counts": [
+      {
+        "name": "no_close_verified_analogue",
+        "count": 6
+      },
+      {
+        "name": "close_meaning_guardrail_blocked",
+        "count": 5
+      }
+    ]
+  },
+  "notes": [
+    "Semantic score uses normalized structured fields plus optional MiniLM embeddings.",
+    "Embedding similarity is advisory and cannot clear support gaps.",
+    "Guardrails cap high similarity when core legal fields disagree."
+  ]
+}

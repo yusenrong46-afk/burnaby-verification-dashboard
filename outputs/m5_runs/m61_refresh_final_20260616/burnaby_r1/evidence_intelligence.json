@@ -1,0 +1,5130 @@
+{
+  "purpose": "Unified evidence ranking and bundle suggestions for review rules. Advisory only; verifier decisions are unchanged.",
+  "review_rule_count": 17,
+  "evidence_index_count": 101,
+  "safe_retry_count": 1,
+  "blocked_count": 16,
+  "items": [
+    {
+      "rule_id": "burnaby_r1_009",
+      "candidate_id": "burnaby_r1_native_m4_pack_0057_001",
+      "canonical_rule_key": "dwelling_units__dwelling_units__lot____6__units",
+      "same_key_candidate_count": 1,
+      "same_key_verified_count": 0,
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "lot",
+      "condition": "",
+      "operator": "<=",
+      "value": "6",
+      "unit": "units",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "current_evidence_id": "m4_pack_0057_ev_001",
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "up to a maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Permitted Uses Principal Use Use-Sp..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.74,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.74,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary su..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.74,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including second..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_013",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.74,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Rowhouse 1 to 3 Units 70% Maximum Lot Coverage | Impervious Surfaces | Rowhouse 1 to 3 Units | 70% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (incl..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "up to a maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Permitted Uses Principal Use Use-Sp..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.74,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.74,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary su..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.74,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including second..."
+        }
+      ],
+      "bundle_score": 0.921,
+      "bundle_supported_fields": [
+        "applies_to",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": true,
+      "blocked_by": [],
+      "next_action": "rerun_with_evidence_bundle",
+      "candidate_sentence": "lot has dwelling units <= 6 units.",
+      "original_evidence_sentence": "up to a maximum of 6 dwelling units on a lot",
+      "bundle_sentence": "m4_pack_0057_ev_001 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_001",
+      "candidate_id": "burnaby_r1_native_m4_pack_0002_001",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_lots__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots____281__m2",
+      "same_key_candidate_count": 2,
+      "same_key_verified_count": 0,
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lots",
+      "condition": "at the time of registration of the subdivision plan to create two or more rowhouse lots",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "current_evidence_id": "m4_pack_0002_ev_001",
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0001_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        }
+      ],
+      "bundle_score": 0.85,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "rowhouse lots has lot area >= 281 m2 when at the time of registration of the subdivision plan to create two or more rowhouse lots.",
+      "original_evidence_sentence": "Minimum Lot Area - 281 m2",
+      "bundle_sentence": "m4_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0002_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0045_v3_clause_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0045_v3_clause_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_005",
+      "candidate_id": "burnaby_r1_native_m4_pack_0006_003",
+      "canonical_rule_key": "setback__setback__street_yards__heritage_lots____2_0__m",
+      "same_key_candidate_count": 2,
+      "same_key_verified_count": 0,
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "street yards",
+      "condition": "heritage lots",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "current_evidence_id": "m4_pack_0006_ev_003",
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0006_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.2,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.2,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        },
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 11.0,
+          "bundle_confidence": 0.846,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "applies_to_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "m4_pack_0006_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.2,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.2,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        }
+      ],
+      "bundle_score": 0.85,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "street yards has setback >= 2.0 m when heritage lots.",
+      "original_evidence_sentence": "lot line setbacks for street yards may meet a minimum of 2.0 m",
+      "bundle_sentence": "m4_pack_0006_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0002_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_007",
+      "candidate_id": "burnaby_r1_native_m4_pack_0034_002",
+      "canonical_rule_key": "fire_access_corridor__height__all_dwelling_units__clear_of_any_projections_or_obstructions____2_5__m",
+      "same_key_candidate_count": 0,
+      "same_key_verified_count": 0,
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "height",
+      "applies_to": "All dwelling units",
+      "condition": "clear of any projections or obstructions",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "current_evidence_id": "m4_pack_0034_ev_002",
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0034_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "notwithstanding"
+          ],
+          "evidence_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gravel fir..."
+        },
+        {
+          "evidence_id": "m4_pack_0034_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "notwithstanding"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gra..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "notwithstanding"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gra..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0006_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "notwithstanding"
+          ],
+          "evidence_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gravel fir..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.44,
+          "bundle_confidence": 0.649,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "wrong_rule_family:dwelling_units"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "m4_pack_0034_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "notwithstanding"
+          ],
+          "evidence_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gravel fir..."
+        },
+        {
+          "evidence_id": "m4_pack_0034_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "notwithstanding"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gra..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "notwithstanding"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gra..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0006_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "notwithstanding"
+          ],
+          "evidence_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gravel fir..."
+        }
+      ],
+      "bundle_score": 0.85,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "All dwelling units has fire access corridor >= 2.5 m when clear of any projections or obstructions.",
+      "original_evidence_sentence": "is clear of any projections or obstructions to a minimum of 2.5 m in height",
+      "bundle_sentence": "m4_pack_0034_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0034_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0006_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_093",
+      "candidate_id": "burnaby_r1_v3clause_m4_pack_0045_003",
+      "canonical_rule_key": "permitted_use__use__principal_use__group_home__allowed",
+      "same_key_candidate_count": 1,
+      "same_key_verified_count": 0,
+      "rule_object": "permitted_use",
+      "constraint_scope": "use",
+      "applies_to": "Principal Use",
+      "condition": "Group Home",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "current_evidence_id": "m4_pack_0045_v3_clause_ev_003",
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.6,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "up to a maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Permitted Uses Principal Use Use-Sp..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 7.7,
+          "bundle_confidence": 0.592,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning",
+            "wrong_rule_family:dwelling_units"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 7.7,
+          "bundle_confidence": 0.592,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning",
+            "wrong_rule_family:dwelling_units"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.6,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "up to a maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Permitted Uses Principal Use Use-Sp..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 7.7,
+          "bundle_confidence": 0.592,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning",
+            "wrong_rule_family:dwelling_units"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        }
+      ],
+      "bundle_score": 0.85,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "Principal Use has a permitted use rule when Group Home.",
+      "original_evidence_sentence": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us...",
+      "bundle_sentence": "m4_pack_0045_v3_clause_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0057_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0045_v3_clause_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0002_ev_001 supports applies_to, condition, operator, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_094",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0001_001",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_lots__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots____281__m2",
+      "same_key_candidate_count": 2,
+      "same_key_verified_count": 0,
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lots",
+      "condition": "at the time of registration of the subdivision plan to create two or more rowhouse lots",
+      "operator": ">=",
+      "value": "281",
+      "unit": "m2",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "current_evidence_id": "v3_repair_pack_0001_ev_001",
+      "top_evidence": [
+        {
+          "evidence_id": "v3_repair_pack_0001_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "v3_repair_pack_0001_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        }
+      ],
+      "bundle_score": 0.85,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "rowhouse lots has lot area >= 281 m2 when at the time of registration of the subdivision plan to create two or more rowhouse lots.",
+      "original_evidence_sentence": "Minimum Lot Area - 281 m2",
+      "bundle_sentence": "v3_repair_pack_0001_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0002_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0045_v3_clause_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_098",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0002_003",
+      "canonical_rule_key": "setback__setback__street_yards__heritage_lots____2_0__m",
+      "same_key_candidate_count": 2,
+      "same_key_verified_count": 0,
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "street yards",
+      "condition": "heritage lots",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "current_evidence_id": "v3_repair_pack_0002_ev_003",
+      "top_evidence": [
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.2,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.2,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        },
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 11.0,
+          "bundle_confidence": 0.846,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "applies_to_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.2,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.2,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        }
+      ],
+      "bundle_score": 0.85,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "street yards has setback >= 2.0 m when heritage lots.",
+      "original_evidence_sentence": "lot line setbacks for street yards may meet a minimum of 2.0 m",
+      "bundle_sentence": "v3_repair_pack_0002_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0006_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_100",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0006_002",
+      "canonical_rule_key": "fire_access_corridor__height__all_dwelling_units__clear_of_any_projections_or_obstructions____2_5__m",
+      "same_key_candidate_count": 0,
+      "same_key_verified_count": 0,
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "height",
+      "applies_to": "All dwelling units",
+      "condition": "clear of any projections or obstructions",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "current_evidence_id": "v3_repair_pack_0006_ev_002",
+      "top_evidence": [
+        {
+          "evidence_id": "v3_repair_pack_0006_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "notwithstanding"
+          ],
+          "evidence_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gravel fir..."
+        },
+        {
+          "evidence_id": "m4_pack_0034_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "notwithstanding"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gra..."
+        },
+        {
+          "evidence_id": "m4_pack_0034_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "notwithstanding"
+          ],
+          "evidence_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gravel fir..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "notwithstanding"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gra..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.44,
+          "bundle_confidence": 0.649,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "wrong_rule_family:dwelling_units"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "v3_repair_pack_0006_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "notwithstanding"
+          ],
+          "evidence_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gravel fir..."
+        },
+        {
+          "evidence_id": "m4_pack_0034_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "notwithstanding"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gra..."
+        },
+        {
+          "evidence_id": "m4_pack_0034_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "notwithstanding"
+          ],
+          "evidence_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gravel fir..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 15.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "notwithstanding"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall have a minimum 1.0 m paved or gra..."
+        }
+      ],
+      "bundle_score": 0.85,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "All dwelling units has fire access corridor >= 2.5 m when clear of any projections or obstructions.",
+      "original_evidence_sentence": "is clear of any projections or obstructions to a minimum of 2.5 m in height",
+      "bundle_sentence": "v3_repair_pack_0006_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0034_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0034_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_016",
+      "candidate_id": "burnaby_r1_v2matrix_007",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_1_to_3_units____280__m2",
+      "same_key_candidate_count": 1,
+      "same_key_verified_count": 0,
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "Rowhouse 1 to 3 Units",
+      "condition": "",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "support_gaps": [
+        "rule_family_direction_mismatch"
+      ],
+      "current_evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+      "top_evidence": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary su..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including second..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_013",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Rowhouse 1 to 3 Units 70% Maximum Lot Coverage | Impervious Surfaces | Rowhouse 1 to 3 Units | 70% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (incl..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b1_002",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Small-Scale Multi-Unit 1 to 2 Units 1 to 2 Units Permitted Dwelling Units (including secondary suites) | Small-Scale Multi-Unit 1 to 2 Units | 1 to 2 Units 101.4 Development Regulations Dwe..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary su..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including second..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_013",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Rowhouse 1 to 3 Units 70% Maximum Lot Coverage | Impervious Surfaces | Rowhouse 1 to 3 Units | 70% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (incl..."
+        }
+      ],
+      "bundle_score": 0.771,
+      "bundle_supported_fields": [
+        "applies_to",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch"
+      ],
+      "next_action": "blocked_review",
+      "candidate_sentence": "Rowhouse 1 to 3 Units has lot area <= 280 m2.",
+      "original_evidence_sentence": "Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2",
+      "bundle_sentence": "burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_013 supports applies_to, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_092",
+      "candidate_id": "burnaby_r1_v3clause_m4_pack_0045_002",
+      "canonical_rule_key": "permitted_use__district__small_scale_multi_unit_housing__allowed",
+      "same_key_candidate_count": 1,
+      "same_key_verified_count": 0,
+      "rule_object": "permitted_use",
+      "constraint_scope": "district",
+      "applies_to": "Small-Scale Multi-Unit Housing",
+      "condition": "",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "current_evidence_id": "m4_pack_0045_v3_clause_ev_002",
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 12.8,
+          "bundle_confidence": 0.985,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "up to a maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Permitted Uses Principal Use Use-Sp..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 12.8,
+          "bundle_confidence": 0.985,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.14,
+          "bundle_confidence": 0.626,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "applies_to_overlap",
+            "wrong_rule_family:dwelling_units"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.14,
+          "bundle_confidence": 0.626,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "applies_to_overlap",
+            "wrong_rule_family:dwelling_units"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary su..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 12.8,
+          "bundle_confidence": 0.985,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.3,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "up to a maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Permitted Uses Principal Use Use-Sp..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 12.8,
+          "bundle_confidence": 0.985,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 8.14,
+          "bundle_confidence": 0.626,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "applies_to_overlap",
+            "wrong_rule_family:dwelling_units"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        }
+      ],
+      "bundle_score": 0.771,
+      "bundle_supported_fields": [
+        "applies_to",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "Small-Scale Multi-Unit Housing has a permitted use rule.",
+      "original_evidence_sentence": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us...",
+      "bundle_sentence": "m4_pack_0045_v3_clause_ev_002 supports applies_to, operator, rule_object, scope, unit, value; m4_pack_0057_ev_001 supports applies_to, operator, rule_object, scope, unit, value; m4_pack_0045_v3_clause_ev_003 supports applies_to, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, operator, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_002",
+      "candidate_id": "burnaby_r1_native_m4_pack_0002_002",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_lots__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots____280__m2",
+      "same_key_candidate_count": 2,
+      "same_key_verified_count": 0,
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lots",
+      "condition": "at the time of registration of the subdivision plan to create two or more rowhouse lots",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ],
+      "current_evidence_id": "m4_pack_0002_ev_002",
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0001_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        }
+      ],
+      "bundle_score": 0.7,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "rowhouse lots has lot area <= 280 m2 when at the time of registration of the subdivision plan to create two or more rowhouse lots.",
+      "original_evidence_sentence": "Maximum Lot Area 280 m2",
+      "bundle_sentence": "m4_pack_0002_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0045_v3_clause_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0045_v3_clause_ev_003 supports applies_to, condition, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_008",
+      "candidate_id": "burnaby_r1_native_m4_pack_0044_001",
+      "canonical_rule_key": "setback__lane_yard__projections_into_required_lane_yards__in_the_r1_district____0_8__m",
+      "same_key_candidate_count": 0,
+      "same_key_verified_count": 0,
+      "rule_object": "setback",
+      "constraint_scope": "lane_yard",
+      "applies_to": "projections into required lane yards",
+      "condition": "in the R1 District",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "current_evidence_id": "m4_pack_0044_ev_001",
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.5,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0007_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.5,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 10.5,
+          "bundle_confidence": 0.808,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 10.5,
+          "bundle_confidence": 0.808,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.6,
+          "bundle_confidence": 0.738,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.5,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0007_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.5,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 10.5,
+          "bundle_confidence": 0.808,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 10.5,
+          "bundle_confidence": 0.808,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        }
+      ],
+      "bundle_score": 0.7,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "projections into required lane yards has setback <= 0.8 m when in the R1 District.",
+      "original_evidence_sentence": "projections into required lane yards are limited to a maximum of 0.8 m",
+      "bundle_sentence": "m4_pack_0044_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; v3_repair_pack_0007_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit; v3_repair_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit."
+    },
+    {
+      "rule_id": "burnaby_r1_095",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0001_002",
+      "canonical_rule_key": "lot_area__lot_area__rowhouse_lots__at_the_time_of_registration_of_the_subdivision_plan_to_create_two_or_more_rowhouse_lots____280__m2",
+      "same_key_candidate_count": 2,
+      "same_key_verified_count": 0,
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "rowhouse lots",
+      "condition": "at the time of registration of the subdivision plan to create two or more rowhouse lots",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported"
+      ],
+      "current_evidence_id": "v3_repair_pack_0001_ev_002",
+      "top_evidence": [
+        {
+          "evidence_id": "v3_repair_pack_0001_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "v3_repair_pack_0001_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type R..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 16.1,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Us..."
+        }
+      ],
+      "bundle_score": 0.7,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "rowhouse lots has lot area <= 280 m2 when at the time of registration of the subdivision plan to create two or more rowhouse lots.",
+      "original_evidence_sentence": "Maximum Lot Area 280 m2",
+      "bundle_sentence": "v3_repair_pack_0001_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0002_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0045_v3_clause_ev_002 supports applies_to, condition, operator, rule_object, scope, unit, value."
+    },
+    {
+      "rule_id": "burnaby_r1_101",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0007_001",
+      "canonical_rule_key": "setback__lane_yard__projections_into_required_lane_yards__in_the_r1_district____0_8__m",
+      "same_key_candidate_count": 0,
+      "same_key_verified_count": 0,
+      "rule_object": "setback",
+      "constraint_scope": "lane_yard",
+      "applies_to": "projections into required lane yards",
+      "condition": "in the R1 District",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "current_evidence_id": "v3_repair_pack_0007_ev_001",
+      "top_evidence": [
+        {
+          "evidence_id": "v3_repair_pack_0007_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.5,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        },
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.5,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 10.5,
+          "bundle_confidence": 0.808,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 10.5,
+          "bundle_confidence": 0.808,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 9.6,
+          "bundle_confidence": 0.738,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may be increased up to 60% and impervious s..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "v3_repair_pack_0007_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.5,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        },
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.5,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per Section 6.9; (g) outdoor appliances; and..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 10.5,
+          "bundle_confidence": 0.808,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 10.5,
+          "bundle_confidence": 0.808,
+          "match_reasons": [
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        }
+      ],
+      "bundle_score": 0.7,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [],
+      "safe_retry": false,
+      "blocked_by": [
+        "support_gap:rule_family_direction_mismatch",
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "projections into required lane yards has setback <= 0.8 m when in the R1 District.",
+      "original_evidence_sentence": "projections into required lane yards are limited to a maximum of 0.8 m",
+      "bundle_sentence": "v3_repair_pack_0007_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0044_ev_001 supports applies_to, condition, operator, rule_object, scope, unit, value; m4_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, unit; v3_repair_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, unit."
+    },
+    {
+      "rule_id": "burnaby_r1_003",
+      "candidate_id": "burnaby_r1_native_m4_pack_0006_001",
+      "canonical_rule_key": "lot_coverage__lot_coverage__lot__heritage_lots____60__",
+      "same_key_candidate_count": 2,
+      "same_key_verified_count": 0,
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "lot",
+      "condition": "heritage lots",
+      "operator": "<=",
+      "value": "60",
+      "unit": "%",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "current_evidence_id": "m4_pack_0006_ev_001",
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 12.4,
+          "bundle_confidence": 0.954,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary su..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including second..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_013",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Rowhouse 1 to 3 Units 70% Maximum Lot Coverage | Impervious Surfaces | Rowhouse 1 to 3 Units | 70% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (incl..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 12.4,
+          "bundle_confidence": 0.954,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary su..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including second..."
+        }
+      ],
+      "bundle_score": 0.541,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "value"
+      ],
+      "bundle_missing_fields": [
+        "unit"
+      ],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:unit"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "lot has lot coverage <= 60 % when heritage lots.",
+      "original_evidence_sentence": "maximum lot coverage as set out in Section 101.4 may be increased up to 60%",
+      "bundle_sentence": "m4_pack_0006_ev_001 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, condition, operator, rule_object, scope, value."
+    },
+    {
+      "rule_id": "burnaby_r1_096",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0002_001",
+      "canonical_rule_key": "lot_coverage__lot_coverage__lot__heritage_lots____60__",
+      "same_key_candidate_count": 2,
+      "same_key_verified_count": 0,
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "lot",
+      "condition": "heritage lots",
+      "operator": "<=",
+      "value": "60",
+      "unit": "%",
+      "support_gaps": [
+        "pipeline5_text_candidate_requires_review"
+      ],
+      "current_evidence_id": "v3_repair_pack_0002_ev_001",
+      "top_evidence": [
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 12.4,
+          "bundle_confidence": 0.954,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary su..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including second..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_013",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage Impervious Surfaces Rowhouse 1 to 3 Units 70% Maximum Lot Coverage | Impervious Surfaces | Rowhouse 1 to 3 Units | 70% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (incl..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "v3_repair_pack_0002_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 12.4,
+          "bundle_confidence": 0.954,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [
+            "excluded"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject to the followin..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Regulations Dwelling Type Rowhouse Small-Sc..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary su..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.64,
+          "bundle_confidence": 0.972,
+          "match_reasons": [
+            "value_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "supported_fields": [
+            "applies_to",
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "value"
+          ],
+          "exception_cues": [],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including second..."
+        }
+      ],
+      "bundle_score": 0.541,
+      "bundle_supported_fields": [
+        "applies_to",
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "value"
+      ],
+      "bundle_missing_fields": [
+        "unit"
+      ],
+      "safe_retry": false,
+      "blocked_by": [
+        "bundle_contains_exception_or_covenant_language",
+        "missing_critical_fields:unit"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "lot has lot coverage <= 60 % when heritage lots.",
+      "original_evidence_sentence": "maximum lot coverage as set out in Section 101.4 may be increased up to 60%",
+      "bundle_sentence": "v3_repair_pack_0002_ev_001 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, condition, operator, rule_object, scope, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, condition, operator, rule_object, scope, value."
+    },
+    {
+      "rule_id": "burnaby_r1_073",
+      "candidate_id": "burnaby_r1_v2matrix_064",
+      "canonical_rule_key": "setback__interior_side_yard__all_buildings__end_unit_lots____0__m",
+      "same_key_candidate_count": 0,
+      "same_key_verified_count": 0,
+      "rule_object": "setback",
+      "constraint_scope": "interior_side_yard",
+      "applies_to": "All Buildings",
+      "condition": "end unit lots",
+      "operator": ">=",
+      "value": "0",
+      "unit": "m",
+      "support_gaps": [
+        "unresolved_exception_cue"
+      ],
+      "current_evidence_id": "burnaby_r1_matrix_p2_t0_b0_064",
+      "top_evidence": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_064",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.84,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Interior Side Yard Rowhouse 1 to 3 Units 0 m, except 1.2 m for end unit lots Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | Rowhouse 1 to 3 Units | 0 m, except 1.2 m for end unit lots 2 Maximum Lot Area .1 280 m2 - - - Ma..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_049",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.84,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Street Yard Rowhouse 1 to 3 Units 3.0 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | Rowhouse 1 to 3 Units | 3.0 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2: 40% All Buildings 55% 40% 45% Lots > 567..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_056",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.84,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Lane Yard Rowhouse 1 to 3 Units 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | Rowhouse 1 to 3 Units | 1.5 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2: 40% All Buildings 55% 40% 45% Lots > 567 m2:..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_060",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.84,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Interior Rear Yard Rowhouse 1 to 3 Units 3.0 m, except 1.5 m for accessory buildings Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Rear Yard | Rowhouse 1 to 3 Units | 3.0 m, except 1.5 m for accessory buildings 2 Maximum Lot Area .1..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_074",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.84,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "covenant",
+            "except"
+          ],
+          "evidence_quote": "Minimum Separation of Buildings on the Same Lot .4 .5 Between Front & Rear Principals Rowhouse 1 to 3 Units 6.0 m Minimum Separation of Buildings on the Same Lot .4 .5 | Between Front & Rear Principals | Rowhouse 1 to 3 Units | 6.0 m basement inclusive) 3 storeys 2.5 storeys 3 storeys Rear Princi..."
+        }
+      ],
+      "best_evidence_bundle": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_064",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.84,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Interior Side Yard Rowhouse 1 to 3 Units 0 m, except 1.2 m for end unit lots Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | Rowhouse 1 to 3 Units | 0 m, except 1.2 m for end unit lots 2 Maximum Lot Area .1 280 m2 - - - Ma..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_049",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.84,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Street Yard Rowhouse 1 to 3 Units 3.0 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | Rowhouse 1 to 3 Units | 3.0 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2: 40% All Buildings 55% 40% 45% Lots > 567..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_056",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.84,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Lane Yard Rowhouse 1 to 3 Units 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | Rowhouse 1 to 3 Units | 1.5 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2: 40% All Buildings 55% 40% 45% Lots > 567 m2:..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_060",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.84,
+          "bundle_confidence": 1.0,
+          "match_reasons": [
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "rule_object_cue",
+            "scope_overlap",
+            "condition_overlap",
+            "exception_warning"
+          ],
+          "supported_fields": [
+            "condition",
+            "operator",
+            "rule_object",
+            "scope",
+            "unit",
+            "value"
+          ],
+          "exception_cues": [
+            "except"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Interior Rear Yard Rowhouse 1 to 3 Units 3.0 m, except 1.5 m for accessory buildings Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Rear Yard | Rowhouse 1 to 3 Units | 3.0 m, except 1.5 m for accessory buildings 2 Maximum Lot Area .1..."
+        }
+      ],
+      "bundle_score": 0.391,
+      "bundle_supported_fields": [
+        "condition",
+        "operator",
+        "rule_object",
+        "scope",
+        "unit",
+        "value"
+      ],
+      "bundle_missing_fields": [
+        "exception"
+      ],
+      "safe_retry": false,
+      "blocked_by": [
+        "support_gap:unresolved_exception_cue",
+        "unresolved_exception_or_override",
+        "bundle_contains_exception_or_covenant_language"
+      ],
+      "next_action": "human_legal_review",
+      "candidate_sentence": "All Buildings has setback >= 0 m when end unit lots.",
+      "original_evidence_sentence": "Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Side Yard | Rowhouse 1 to 3 Units | 0 m, except 1.2 m for end unit lots",
+      "bundle_sentence": "burnaby_r1_matrix_p2_t0_b0_064 supports condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_049 supports condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_056 supports condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_060 supports condition, operator, rule_object, scope, unit, value."
+    }
+  ],
+  "summary": {
+    "next_action_counts": [
+      {
+        "name": "human_legal_review",
+        "count": 15
+      },
+      {
+        "name": "rerun_with_evidence_bundle",
+        "count": 1
+      },
+      {
+        "name": "blocked_review",
+        "count": 1
+      }
+    ],
+    "primary_category_counts": [
+      {
+        "name": "blocked",
+        "count": 16
+      },
+      {
+        "name": "bundle_safe_retry",
+        "count": 1
+      }
+    ],
+    "missing_field_counts": [
+      {
+        "name": "unit",
+        "count": 2
+      },
+      {
+        "name": "exception",
+        "count": 1
+      }
+    ]
+  },
+  "notes": [
+    "Evidence intelligence ranks and bundles existing evidence only.",
+    "Bundle scores cannot verify a rule.",
+    "A rule is promotion-ready only after deterministic bundle rerun verifies it with no risk flags."
+  ]
+}

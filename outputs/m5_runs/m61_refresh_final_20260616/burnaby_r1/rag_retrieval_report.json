@@ -1,0 +1,2818 @@
+{
+  "city": "burnaby_r1",
+  "top_k": 6,
+  "gold_rule_count": 40,
+  "chunk_count": 93,
+  "recall_at_k": 1.0,
+  "context_precision_at_k": 0.937,
+  "source_block_hit_rate": 0.0,
+  "exact_support_hit_rate": 0.95,
+  "failure_reasons": [
+    {
+      "reason": "operator_missing",
+      "count": 2
+    }
+  ],
+  "results": [
+    {
+      "gold_id": "br1_use_001",
+      "query": "permitted_use allowed district Small-Scale Multi-Unit Housing allowed permitted uses small scale multi unit small scale multi unit housing",
+      "source_block_id": "burnaby_r1_p01_b03_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_001_r011",
+          "section": "",
+          "page": 1,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Accessory Buildings, Structures, and Uses | Use-Specif"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_001_r001",
+          "section": "",
+          "page": 1,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Small-Scale Multi-Unit Housing | Use-Specific Regulati"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_002_r001",
+          "section": "",
+          "page": 1,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Rowh"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_001_r007",
+          "section": "",
+          "page": 1,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Accessory Use | Use-Specific Regulations 101. SMALL-SC"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_001_r004",
+          "section": "",
+          "page": 1,
+          "score": 0.015385,
+          "relevant": true,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Group Home | Use-Specific Regulations 101. SMALL-SCALE"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_001_r002",
+          "section": "",
+          "page": 1,
+          "score": 0.015152,
+          "relevant": true,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Rowhouse Dwellings | Use-Specific Regulations 101. SMA"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_units_001",
+      "query": "dwelling_units maximum lot R1 lot <= 6 units maximum 6 dwelling units lot dwelling units lot",
+      "source_block_id": "burnaby_r1_p01_b02_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.1_007",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 t"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.1_001",
+          "section": "101.1",
+          "page": 1,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_008_r001",
+          "section": "",
+          "page": 4,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Total Dwelling Units on a Lot: 1 to 3 Units; 4 to 6 Units"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r002",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Permitted Dwelling Units\n(including secondary suites) 101.4 Development Regulations | Permitte"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_008_r002",
+          "section": "",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Minimum 3+ Bedroom Units:; Total Dwelling Units on a Lot: 1 U"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_lot_area_001",
+      "query": "lot_area minimum lot Small-Scale Multi-Unit Housing >= 281 m2 4 units only minimum lot area 281 lot area 281",
+      "source_block_id": "burnaby_r1_p01_b04_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r005",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Minimum Lot Area 101.4 Development Regulations | Minimum Lot Area | -; -; 4 Units Only; :; 281"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_002_r007",
+          "section": "",
+          "page": 1,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Mini"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "section": "101.3",
+          "page": 1,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_002_r008",
+          "section": "",
+          "page": 1,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Maxi"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.1_014",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.4 Supportive Housing (1) Category A Supportive Housing facilities are permitted on a lot as the only principal use, subject to the following conditions: (a) e"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_height_001",
+      "query": "height maximum building Rear Principal Buildings <= 7.5 m sloping roof maximum height rear principal 7.5 rear principal height sloping",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r017",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Height; sloping roof: 7.5 m | flat roof: 7.0 m"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r014",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Height; sloping roof: 10 m | flat roof: 9.5 m"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_033",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.1 Height (1) The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by th"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r016",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Rear Principal Buildings"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r012",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Height"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_height_002",
+      "query": "height maximum building Rear Principal Buildings <= 7.0 m flat roof maximum height rear principal 7.0 rear principal height flat",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r017",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Height; sloping roof: 7.5 m | flat roof: 7.0 m"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.1_033",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.1 Height (1) The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by th"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r014",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Height; sloping roof: 10 m | flat roof: 9.5 m"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r016",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Rear Principal Buildings"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r012",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Height"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_height_003",
+      "query": "storeys maximum building Rear Principal Buildings <= 2 storeys basement inclusive rear principal storeys 2 rear principal storeys",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r018",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Storeys (basement inclusive); 2 storeys"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r015",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Storeys (basement inclusive); 3 storeys; 2.5 storeys; 3 storeys"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r016",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Rear Principal Buildings"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.1_033",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.1 Height (1) The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by th"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_1.2_008",
+          "section": "1(2)",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with "
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_height_004",
+      "query": "height maximum building Accessory Buildings <= 4.0 m accessory buildings 4.0 accessory buildings height",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r019",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Accessory Buildings; 4.0 m | 1 storey"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.5.5_015",
+          "section": "101.5.5",
+          "page": 4,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "101.5.5 Accessory Buildings, Structures, and Uses"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.2_017",
+          "section": "101(2)",
+          "page": 5,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.1_037",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.2 Building Separation (1) Required separation distances between buildings are measured from the nearest point of each building face."
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r023",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Interior Rear Yard; 3.0 m, except 1.5 m for accessory buildings"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_setback_001",
+      "query": "setback minimum street_yard_front All Buildings >= 4.0 m front street yard street yard front 4.0 street yard front",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r021",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Street Yard; 3.0 m; front: 4.0 m | flanking: 3.0 m"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r024",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Interior Side Yard 101.4 Development Regulations | Interior Side Yard | Interior Side Yard; 0 "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r013",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Front Principal Buildings"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r023",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Interior Rear Yard; 3.0 m, except 1.5 m for accessory buildings"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r022",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Lane Yard; 1.5 m"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_setback_002",
+      "query": "setback minimum street_yard_flanking All Buildings >= 3.0 m flanking street yard street yard flanking 3.0 street yard flanking",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r021",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Street Yard; 3.0 m; front: 4.0 m | flanking: 3.0 m"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r023",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Interior Rear Yard; 3.0 m, except 1.5 m for accessory buildings"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r024",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Interior Side Yard 101.4 Development Regulations | Interior Side Yard | Interior Side Yard; 0 "
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r022",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Lane Yard; 1.5 m"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_1.2_008",
+          "section": "1(2)",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with "
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_setback_003",
+      "query": "setback minimum lane_yard All Buildings >= 1.5 m lane yard 1.5 lane yard",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.917,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r022",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Lane Yard; 1.5 m"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r023",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Interior Rear Yard; 3.0 m, except 1.5 m for accessory buildings"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r024",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Interior Side Yard 101.4 Development Regulations | Interior Side Yard | Interior Side Yard; 0 "
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r021",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Street Yard; 3.0 m; front: 4.0 m | flanking: 3.0 m"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.1_010",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": true,
+          "text_preview": "Parent context: 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a str"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_setback_004",
+      "query": "setback minimum interior_rear_yard Rear Principal Buildings >= 3.0 m interior rear yard 3.0 interior rear yard rear principal",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r023",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Interior Rear Yard; 3.0 m, except 1.5 m for accessory buildings"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r024",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Interior Side Yard 101.4 Development Regulations | Interior Side Yard | Interior Side Yard; 0 "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r016",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Rear Principal Buildings"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r021",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Street Yard; 3.0 m; front: 4.0 m | flanking: 3.0 m"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r028",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front & Rear Principals; 6.0 m"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_setback_005",
+      "query": "setback minimum interior_rear_yard Accessory Buildings >= 1.5 m accessory buildings exception interior rear yard 1.5 accessory interior rear yard accessory",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r023",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Interior Rear Yard; 3.0 m, except 1.5 m for accessory buildings"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r024",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Interior Side Yard 101.4 Development Regulations | Interior Side Yard | Interior Side Yard; 0 "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r022",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Lane Yard; 1.5 m"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.2_017",
+          "section": "101(2)",
+          "page": 5,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height."
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.5.5_015",
+          "section": "101.5.5",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "101.5.5 Accessory Buildings, Structures, and Uses"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_setback_006",
+      "query": "setback minimum interior_side_yard End unit lots >= 1.2 m end unit lots interior side yard 1.2 end unit interior side yard end unit",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r024",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Interior Side Yard 101.4 Development Regulations | Interior Side Yard | Interior Side Yard; 0 "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_002_r003",
+          "section": "",
+          "page": 1,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Inte"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r023",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Interior Rear Yard; 3.0 m, except 1.5 m for accessory buildings"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "section": "101.3",
+          "page": 1,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r022",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Lane Yard; 1.5 m"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_setback_007",
+      "query": "setback minimum interior_side_yard All Buildings >= 0 m interior side yard 0 interior side yard",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r024",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Interior Side Yard 101.4 Development Regulations | Interior Side Yard | Interior Side Yard; 0 "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r023",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Interior Rear Yard; 3.0 m, except 1.5 m for accessory buildings"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r022",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Lane Yard; 1.5 m"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r021",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Street Yard; 3.0 m; front: 4.0 m | flanking: 3.0 m"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.2_017",
+          "section": "101(2)",
+          "page": 5,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height."
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_sep_001",
+      "query": "building_separation minimum building_separation Rear Principal Buildings >= 2.4 m between rear principals between rear principals 2.4 between rear principals",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.833,
+      "exact_support_hit": false,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": false,
+      "scope_hit": true,
+      "failure_reason": "operator_missing",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r027",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Rear Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r028",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front & Rear Principals; 6.0 m"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r026",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_037",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.2 Building Separation (1) Required separation distances between buildings are measured from the nearest point of each building face."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r029",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between All Other Buildings; 2.4 m"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.7.2_036",
+          "section": "101.7.2",
+          "page": 7,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "101.7.2 Building Separation"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_sep_002",
+      "query": "building_separation minimum building_separation Front and Rear Principal Buildings >= 6.0 m between front and rear principals between front rear principals 6.0 between front rear principals",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.667,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r028",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front & Rear Principals; 6.0 m"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r026",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r027",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Rear Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_037",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.2 Building Separation (1) Required separation distances between buildings are measured from the nearest point of each building face."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.1_033",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.1 Height (1) The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by th"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_sep_003",
+      "query": "building_separation minimum building_separation All Other Buildings >= 2.4 m between all other buildings between all other buildings 2.4 between all other buildings",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r029",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between All Other Buildings; 2.4 m"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.1_037",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.2 Building Separation (1) Required separation distances between buildings are measured from the nearest point of each building face."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r026",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r027",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Rear Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r009",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | All Buildings 101.4 Development Regulations | All Buildings | 55%; Lots < 567 m2: 40%; 40%; 45"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.1_022",
+          "section": "101(1)",
+          "page": 5,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.6.1 Projections (1) The following features may project into the required minimum separation between buildings on the same lot: (a) steps and stairs; (b) ornamen"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_fire_001",
+      "query": "automatic_sprinkler required dwelling_unit Dwelling units more than 45 m from a street lot line > 45 m distance from lot line abutting a street 45 street automatic sprinkler sprinkler 45 street",
+      "source_block_id": "burnaby_r1_p06_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.75,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.1_027",
+          "section": "101(1)",
+          "page": 6,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Parent context: 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "section": "101(2)",
+          "page": 6,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Parent context: 101.6.3 Access and Fire Safety (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access fr"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_1.2_008",
+          "section": "1(2)",
+          "page": 4,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.1_016",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.5 Accessory Buildings, Structures, and Uses (1) Parking: (a) Parking shall be provided in an attached or detached garage, carport or outdoor parking pad at th"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.1_010",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a str"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_fire_002",
+      "query": "fire_access_corridor minimum corridor_width All dwelling units >= 1.0 m paved or gravel fire access corridor minimum 1.0 fire access corridor fire access corridor width",
+      "source_block_id": "burnaby_r1_p06_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.667,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "section": "101(2)",
+          "page": 6,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Parent context: 101.6.3 Access and Fire Safety (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access fr"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.6.3_026",
+          "section": "101.6.3",
+          "page": 6,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "101.6.3 Access and Fire Safety"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.1_027",
+          "section": "101(1)",
+          "page": 6,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Parent context: 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_022",
+          "section": "101(1)",
+          "page": 5,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.6.1 Projections (1) The following features may project into the required minimum separation between buildings on the same lot: (a) steps and stairs; (b) ornamen"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_1.2_008",
+          "section": "1(2)",
+          "page": 4,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with "
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "section": "101(1)",
+          "page": 6,
+          "score": 0.015152,
+          "relevant": true,
+          "text_preview": "Parent context: 101.6.4 Heritage (1) Notwithstanding the R1 District regulations otherwise stated in this Bylaw, subject to approval of the Director of Planning and Development and"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_fire_003",
+      "query": "fire_access_corridor minimum vertical_clearance All dwelling units >= 2.5 m clear of projections or obstructions clear projections obstructions 2.5 fire access corridor clearance",
+      "source_block_id": "burnaby_r1_p06_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "section": "101(2)",
+          "page": 6,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Parent context: 101.6.3 Access and Fire Safety (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access fr"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.2_023",
+          "section": "101(2)",
+          "page": 5,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Parent context: 101.6.1 Projections (2) Permitted projections into required yards are subject to Section 6.12, except that in the R1 District projections into required lane yards a"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.6.3_026",
+          "section": "101.6.3",
+          "page": 6,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "101.6.3 Access and Fire Safety"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_027",
+          "section": "101(1)",
+          "page": 6,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "section": "101(1)",
+          "page": 6,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Parent context: 101.6.4 Heritage (1) Notwithstanding the R1 District regulations otherwise stated in this Bylaw, subject to approval of the Director of Planning and Development and"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.1_022",
+          "section": "101(1)",
+          "page": 5,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.6.1 Projections (1) The following features may project into the required minimum separation between buildings on the same lot: (a) steps and stairs; (b) ornamen"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_heritage_001",
+      "query": "lot_coverage maximum lot Community Heritage Register lots <= 60 % heritage exception heritage lot coverage 60 heritage lot coverage",
+      "source_block_id": "burnaby_r1_p06_b02_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.5,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.6.4_029",
+          "section": "101.6.4",
+          "page": 6,
+          "score": 0.016393,
+          "relevant": false,
+          "text_preview": "101.6.4 Heritage"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "section": "101(1)",
+          "page": 6,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Parent context: 101.6.4 Heritage (1) Notwithstanding the R1 District regulations otherwise stated in this Bylaw, subject to approval of the Director of Planning and Development and"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r008",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Lot Coverage"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r011",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Impervious Surfaces; 70%; 60%; 60%; 70%"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "section": "101.3",
+          "page": 1,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_heritage_002",
+      "query": "impervious_surface maximum lot Community Heritage Register lots <= 70 % heritage exception heritage impervious surface 70 heritage impervious surface",
+      "source_block_id": "burnaby_r1_p06_b02_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.639,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.6.4_029",
+          "section": "101.6.4",
+          "page": 6,
+          "score": 0.016393,
+          "relevant": false,
+          "text_preview": "101.6.4 Heritage"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r011",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Impervious Surfaces; 70%; 60%; 60%; 70%"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "section": "101(1)",
+          "page": 6,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "Parent context: 101.6.4 Heritage (1) Notwithstanding the R1 District regulations otherwise stated in this Bylaw, subject to approval of the Director of Planning and Development and"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r008",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Lot Coverage"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "section": "101.3",
+          "page": 1,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_heritage_003",
+      "query": "setback minimum street_yard Community Heritage Register lots >= 2.0 m heritage exception street yards minimum 2.0 heritage street yard",
+      "source_block_id": "burnaby_r1_p06_b02_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.75,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.1_030",
+          "section": "101(1)",
+          "page": 6,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Parent context: 101.6.4 Heritage (1) Notwithstanding the R1 District regulations otherwise stated in this Bylaw, subject to approval of the Director of Planning and Development and"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.6.4_029",
+          "section": "101.6.4",
+          "page": 6,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "101.6.4 Heritage"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r021",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Street Yard; 3.0 m; front: 4.0 m | flanking: 3.0 m"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r024",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Interior Side Yard 101.4 Development Regulations | Interior Side Yard | Interior Side Yard; 0 "
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.2_028",
+          "section": "101(2)",
+          "page": 6,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.6.3 Access and Fire Safety (2) All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor that: (a) provides direct pedestrian access fr"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_use_002",
+      "query": "permitted_use allowed use Principal Use allowed group home group home permitted group home",
+      "source_block_id": "burnaby_r1_p01_b02_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.917,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_001_r004",
+          "section": "",
+          "page": 1,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Group Home | Use-Specific Regulations 101. SMALL-SCALE"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.2_002",
+          "section": "101.2",
+          "page": 1,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Sup"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_001_r009",
+          "section": "",
+          "page": 1,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Home Occupations | Use-Specific Regulations 101. SMALL"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_014",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "Parent context: 101.5.4 Supportive Housing (1) Category A Supportive Housing facilities are permitted on a lot as the only principal use, subject to the following conditions: (a) e"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_001_r007",
+          "section": "",
+          "page": 1,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Accessory Use | Use-Specific Regulations 101. SMALL-SC"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_008_r001",
+          "section": "",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Total Dwelling Units on a Lot: 1 to 3 Units; 4 to 6 Units"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_height_006",
+      "query": "height maximum building Front Principal Buildings <= 10 m sloping roof front principal sloping 10 front principal",
+      "source_block_id": "burnaby_r1_p01_b03_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r014",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Height; sloping roof: 10 m | flat roof: 9.5 m"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r013",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Front Principal Buildings"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_033",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.1 Height (1) The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by th"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r017",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Height; sloping roof: 7.5 m | flat roof: 7.0 m"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r026",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_height_005",
+      "query": "height maximum building Front Principal Buildings <= 9.5 m flat roof front principal flat 9.5 front principal",
+      "source_block_id": "burnaby_r1_p01_b03_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r014",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Height; sloping roof: 10 m | flat roof: 9.5 m"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r013",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Front Principal Buildings"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_033",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.1 Height (1) The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by th"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r017",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Height; sloping roof: 7.5 m | flat roof: 7.0 m"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r026",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_storeys_002",
+      "query": "storeys maximum building Front Principal Buildings <= 3 storeys front principal storeys 3 front principal",
+      "source_block_id": "burnaby_r1_p01_b03_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r015",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Storeys (basement inclusive); 3 storeys; 2.5 storeys; 3 storeys"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r013",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Front Principal Buildings"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r018",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Storeys (basement inclusive); 2 storeys"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.1_033",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.1 Height (1) The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by th"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.1_037",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.2 Building Separation (1) Required separation distances between buildings are measured from the nearest point of each building face."
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_storeys_003",
+      "query": "storeys maximum building Front Principal Buildings <= 2.5 storeys front principal storeys 2.5 front principal",
+      "source_block_id": "burnaby_r1_p01_b03_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r015",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Storeys (basement inclusive); 3 storeys; 2.5 storeys; 3 storeys"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r013",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Front Principal Buildings"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_003_r018",
+          "section": "",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Storeys (basement inclusive); 2 storeys"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.1_033",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.1 Height (1) The height of a principal or accessory building shall be measured from the lower of the average front or average rear elevation, as defined by th"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.1_037",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.2 Building Separation (1) Required separation distances between buildings are measured from the nearest point of each building face."
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_sep_004",
+      "query": "building_separation minimum building_separation Front Principal Buildings >= 2.4 m between front principals between front principals 2.4 front principal",
+      "source_block_id": "burnaby_r1_p02_b01_01",
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.833,
+      "exact_support_hit": false,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": false,
+      "scope_hit": true,
+      "failure_reason": "operator_missing",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r026",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r028",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Front & Rear Principals; 6.0 m"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r027",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Between Rear Principals; -; 2.4 m; 2.4 m; 2.4 m"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_037",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.2 Building Separation (1) Required separation distances between buildings are measured from the nearest point of each building face."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r013",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Front Principal Buildings"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.7.2_036",
+          "section": "101.7.2",
+          "page": 7,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "101.7.2 Building Separation"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_cov_001",
+      "query": "lot_coverage maximum lot Rowhouse (1 to 3 Units) <= 55 % maximum lot coverage lot coverage rowhouse",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r008",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Lot Coverage"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "section": "101.3",
+          "page": 1,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_007",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 t"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r007",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Lot Area .1; Dwelling Type: 280 m2; -; -; -"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_008_r001",
+          "section": "",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Total Dwelling Units on a Lot: 1 to 3 Units; 4 to 6 Units"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_cov_002",
+      "query": "lot_coverage maximum lot Small-Scale Multi-Unit (1 to 2 Units) <= 40 % Lots <= 567 m2 maximum lot coverage 567 lot coverage 567",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r008",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Lot Coverage"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r009",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | All Buildings 101.4 Development Regulations | All Buildings | 55%; Lots < 567 m2: 40%; 40%; 45"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "section": "101.3",
+          "page": 1,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r010",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Lots > 567 m2: 30%"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_002_r008",
+          "section": "",
+          "page": 1,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Maxi"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_cov_003",
+      "query": "lot_coverage maximum lot Small-Scale Multi-Unit (1 to 2 Units) <= 30 % Lots > 567 m2 maximum lot coverage 567 lot coverage 567",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r010",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Lots > 567 m2: 30%"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r008",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Lot Coverage"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "section": "101.3",
+          "page": 1,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_002_r008",
+          "section": "",
+          "page": 1,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Maxi"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r007",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Lot Area .1; Dwelling Type: 280 m2; -; -; -"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_cov_004",
+      "query": "lot_coverage maximum lot Small-Scale Multi-Unit (3 to 4 Units) <= 40 % maximum lot coverage lot coverage 3 4",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r008",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Lot Coverage"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.1_007",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 t"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_008_r001",
+          "section": "",
+          "page": 4,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Total Dwelling Units on a Lot: 1 to 3 Units; 4 to 6 Units"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r002",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Permitted Dwelling Units\n(including secondary suites) 101.4 Development Regulations | Permitte"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_002_r006",
+          "section": "",
+          "page": 1,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Lot "
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_cov_005",
+      "query": "lot_coverage maximum lot Small-Scale Multi-Unit (5 to 6 Units) <= 45 % Frequent Transit Network Area Only maximum lot coverage lot coverage transit",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r008",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Maximum Lot Coverage"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_002_r008",
+          "section": "",
+          "page": 1,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Maxi"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_001",
+          "section": "101.1",
+          "page": 1,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_003_r003",
+          "section": "",
+          "page": 2,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Frequent Transit"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_002_r003",
+          "section": "",
+          "page": 1,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Inte"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_storeys_004",
+      "query": "storeys maximum building Accessory Buildings <= 1 storeys accessory storey accessory storey",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r019",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Accessory Buildings; 4.0 m | 1 storey"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r015",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Storeys (basement inclusive); 3 storeys; 2.5 storeys; 3 storeys"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_037",
+          "section": "101(1)",
+          "page": 7,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.7.2 Building Separation (1) Required separation distances between buildings are measured from the nearest point of each building face."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_101.5.5_015",
+          "section": "101.5.5",
+          "page": 4,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "101.5.5 Accessory Buildings, Structures, and Uses"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r018",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Storeys (basement inclusive); 2 storeys"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_units_002",
+      "query": "dwelling_units maximum lot Rowhouse <= 3 units permitted dwelling units dwelling rowhouse",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r002",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Permitted Dwelling Units\n(including secondary suites) 101.4 Development Regulations | Permitte"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.1_007",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 t"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_008_r002",
+          "section": "",
+          "page": 4,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Minimum 3+ Bedroom Units:; Total Dwelling Units on a Lot: 1 U"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_008_r001",
+          "section": "",
+          "page": 4,
+          "score": 0.015385,
+          "relevant": true,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Total Dwelling Units on a Lot: 1 to 3 Units; 4 to 6 Units"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.5.1_006",
+          "section": "101.5.1",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "101.5.1 All Dwelling Units"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_units_003",
+      "query": "dwelling_units maximum lot Small-Scale Multi-Unit (1 to 2 Units) <= 2 units permitted dwelling units dwelling 1 2",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r002",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Permitted Dwelling Units\n(including secondary suites) 101.4 Development Regulations | Permitte"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_008_r002",
+          "section": "",
+          "page": 4,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Minimum 3+ Bedroom Units:; Total Dwelling Units on a Lot: 1 U"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_007",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 t"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_008_r001",
+          "section": "",
+          "page": 4,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Total Dwelling Units on a Lot: 1 to 3 Units; 4 to 6 Units"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_1.2_008",
+          "section": "1(2)",
+          "page": 4,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (2) At least one dwelling unit on a lot must have the main entrance oriented to an abutting street or, in the case of a through lot with "
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_units_004",
+      "query": "dwelling_units maximum lot Small-Scale Multi-Unit (3 to 4 Units) <= 4 units permitted dwelling units dwelling 3 4",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_table_003_r002",
+          "section": "",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Permitted Dwelling Units\n(including secondary suites) 101.4 Development Regulations | Permitte"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_101.1_007",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 t"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_008_r001",
+          "section": "",
+          "page": 4,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Total Dwelling Units on a Lot: 1 to 3 Units; 4 to 6 Units"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_008_r002",
+          "section": "",
+          "page": 4,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Minimum 3+ Bedroom Units:; Total Dwelling Units on a Lot: 1 U"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_003_r005",
+          "section": "",
+          "page": 2,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Minimum Lot Area 101.4 Development Regulations | Minimum Lot Area | -; -; 4 Units Only; :; 281"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_imp_001",
+      "query": "impervious_surface maximum lot Rowhouse (1 to 3 Units); Small-Scale Multi-Unit (5 to 6 Units) <= 70 % impervious surfaces impervious rowhouse",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r011",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Impervious Surfaces; 70%; 60%; 60%; 70%"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r002",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Permitted Dwelling Units\n(including secondary suites) 101.4 Development Regulations | Permitte"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_101.1_007",
+          "section": "101(1)",
+          "page": 4,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Parent context: 101.5.1 All Dwelling Units (1) The minimum number of dwelling units with at least 3 bedrooms must be provided on a lot as follows: Total Dwelling Units on a Lot 1 t"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_008_r001",
+          "section": "",
+          "page": 4,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101.5 Use-Specific Regulations Table context: 101.5 Use-Specific Regulations 101.5 Use-Specific Regulations | Total Dwelling Units on a Lot: 1 to 3 Units; 4 to 6 Units"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_101.3_003",
+          "section": "101.3",
+          "page": 1,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "101.3 Subdivision Regulations Dwelling Type Rowhouse .1 Small-Scale Multi-Unit Minimum Lot Width .2 Interior Lot 5 m, except 6.2 m for end unit lots 10 m Corner Lot - Street 8 m 10"
+        }
+      ]
+    },
+    {
+      "gold_id": "br1_imp_002",
+      "query": "impervious_surface maximum lot Small-Scale Multi-Unit (1 to 2 Units); Small-Scale Multi-Unit (3 to 4 Units) <= 60 % impervious surfaces impervious multi unit",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "burnaby_r1_101.4_004",
+          "section": "101.4",
+          "page": 2,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4 Frequent Transit (including secondary suites)"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "burnaby_r1_table_003_r011",
+          "section": "",
+          "page": 2,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations 101.4 Development Regulations | Impervious Surfaces; 70%; 60%; 60%; 70%"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "burnaby_r1_table_003_r002",
+          "section": "",
+          "page": 2,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "Heading: 101.4 Development Regulations Table context: 101.4 Development Regulations | Permitted Dwelling Units\n(including secondary suites) 101.4 Development Regulations | Permitte"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "burnaby_r1_table_002_r006",
+          "section": "",
+          "page": 1,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Lot "
+        },
+        {
+          "rank": 5,
+          "chunk_id": "burnaby_r1_table_002_r008",
+          "section": "",
+          "page": 1,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Maxi"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "burnaby_r1_table_001_r008",
+          "section": "",
+          "page": 1,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "Heading: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) Table context: 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) | Boarding Use (up to 2 boarders) | Use-Specific Regulat"
+        }
+      ]
+    }
+  ]
+}
