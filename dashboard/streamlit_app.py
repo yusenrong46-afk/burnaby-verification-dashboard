@@ -1766,23 +1766,11 @@ def _review_assistant_tab(
 
     _legal_context_expander(st, output_dir, rule, evidence_by_id)
 
-    st.markdown("#### Ask for an explanation")
-    question = st.text_input(
-        "Reviewer question",
-        key=f"assistant_q_{output_dir.name}_{selected_id}",
-        placeholder="e.g. why is the operator missing, or what evidence would repair this?",
+    st.caption(
+        "Want a free-form explanation? Use the **Ask the Bylaw** tab — the source-grounded chatbot "
+        "answers questions about this section and cites where it came from. (It is advisory and can "
+        "never approve, verify, or change a rule.)"
     )
-    prompt = _assistant_prompt(packet, question)
-    with st.expander("Prompt sent to optional LLM"):
-        st.code(prompt, language="text")
-    if question:
-        answer = _optional_llm_review_answer(prompt)
-        if answer:
-            st.markdown("#### LLM Draft")
-            st.write(answer)
-            st.caption("Draft only. Any proposed repair must be rerun through the deterministic verifier.")
-        else:
-            st.info("No LLM key/client available. Use the bounded context above with a reviewer or keep using retrieval-only review.")
 
 
 def _fallback_packet(rule: dict[str, Any]) -> dict[str, Any]:
@@ -3318,48 +3306,36 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path, data: dict[str, Any] | None 
             unsafe_allow_html=True,
         )
 
-    input_key = f"rag_chat_input_{city_stem}"
-    prefill_key = f"rag_prefill_{city_stem}"
-    # A hint click stores its text in prefill_key and reruns; we apply it to the
-    # input HERE, before the widget is created (Streamlit only allows setting a
-    # widget's value before it instantiates). So a hint fills the box — it does
-    # NOT auto-send — and the reviewer can edit before asking.
-    if prefill_key in st.session_state:
-        st.session_state[input_key] = st.session_state.pop(prefill_key)
-
+    # Suggested questions as always-visible chips so they reliably load.
+    # st.chat_input cannot be pre-filled, so clicking a chip ASKS the question
+    # directly — this is also what keeps multi-turn rock-solid (the previous
+    # text_input-in-a-form + session_state prefill broke after one question).
+    pending = None
     suggestions = _bylaw_suggestions(data)
-    try:
-        ideas = st.popover("Need ideas?")
-    except Exception:  # pragma: no cover - popover always present in Streamlit 1.58
-        ideas = st.expander("Need ideas?")
-    with ideas:
-        st.caption("Click a question to drop it into the box, then edit and Send.")
-        for index, suggestion in enumerate(suggestions):
-            if st.button(suggestion, key=f"sugg_{city_stem}_{index}", width="stretch"):
-                st.session_state[prefill_key] = suggestion
-                st.rerun()
+    if suggestions:
+        st.caption("Try one of these — or type your own below:")
+        chip_cols = st.columns(min(3, len(suggestions)))
+        for index, suggestion in enumerate(suggestions[:6]):
+            if chip_cols[index % len(chip_cols)].button(suggestion, key=f"sugg_{city_stem}_{index}", width="stretch"):
+                pending = suggestion
 
-    # The conversation renders above the input box; the box stays at the bottom.
+    # The conversation renders above; the chat box stays pinned at the bottom and
+    # supports as many turns as you like in one conversation.
     for message in history:
         _render_bylaw_chat_message(st, message)
-
     st.caption("I find the relevant bylaw sections, then read and explain them — every answer cites its section. Advisory only; I can't approve or change a rule.")
-    with st.form(key=f"rag_form_{city_stem}", clear_on_submit=True):
-        typed = st.text_input(
-            "Ask about the bylaw",
-            key=input_key,
-            label_visibility="collapsed",
-            placeholder="Ask about the bylaw…",
-        )
-        sent = st.form_submit_button("Send", type="primary")
-    if sent and str(typed or "").strip():
-        # Answer, then rerun so the new turn appears in the transcript ABOVE the
-        # box (not flashed below it), and clear the input on the next run.
+
+    typed = st.chat_input("Ask about the bylaw…", key=f"rag_chat_input_{city_stem}")
+    question = typed or pending
+    if question:
+        q = str(question).strip()
+        # Show the question right away, then an animated spinner while the LLM
+        # reads the sections, then the answer — so it's clear it's working.
+        _render_bylaw_chat_message(st, {"role": "user", "content": q})
         with st.spinner("Reading the bylaw…"):
-            _bylaw_chat_respond(st, str(typed).strip(), index_path, chat_key)
-        st.session_state[prefill_key] = ""
-        st.markdown("</div>", unsafe_allow_html=True)
-        st.rerun()
+            _bylaw_chat_respond(st, q, index_path, chat_key)
+        if history:
+            _render_bylaw_chat_message(st, history[-1])
     st.markdown("</div>", unsafe_allow_html=True)
 
 
