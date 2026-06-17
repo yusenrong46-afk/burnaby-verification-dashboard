@@ -1544,7 +1544,7 @@ def pipeline_comparison_rows(output_dir: Path) -> list[dict[str, Any]]:
     """Return native and legacy comparison rows for the selected city stem."""
     stem = city_stem_from_dir(output_dir)
     candidates = [
-        ("Native M7", OUTPUTS_ROOT / "m7_runs" / stem / "google_gemini_2_5_flash_lite"),
+        ("Native M7", OUTPUTS_ROOT / "m7_runs" / stem / "google_gemini_3_1_flash_lite"),
         ("Native V3", OUTPUTS_ROOT / "v3_runs" / stem / "google_gemini_2_5_flash_lite"),
     ]
     rows: list[dict[str, Any]] = []
@@ -4418,11 +4418,11 @@ def _portfolio_page(st: Any) -> None:
     calgary_page_label = f"{int(calgary_pages):,} pages" if isinstance(calgary_pages, int) else f"{calgary_pages} pages"
     promoted = "yes" if (report.get("m4_promotion") or {}).get("promoted") else "no"
     cards = [
-        _portfolio_metric_card("Current product path", "M4", "Native extraction + deterministic verifier", "verified"),
-        _portfolio_metric_card("Safety status", _plain_label(report.get("overall_status")), f"M4 promoted: {promoted}", "verified"),
+        _portfolio_metric_card("Current product path", "M7", "Matrix-aware extraction (gemini-3.1) + deterministic verifier", "verified"),
+        _portfolio_metric_card("Safety status", _plain_label(report.get("overall_status")), f"M7 promoted: {promoted}", "verified"),
         _portfolio_metric_card("False verified", report.get("current_false_verified_total", 0), "must stay zero", "rejected"),
         _portfolio_metric_card("Cities tested", city_count, f"{verified_total} verified, {review_total} in review", "review"),
-        _portfolio_metric_card("Calgary source", calgary_page_label, "full bylaw, not a seven-page slice", "not_used"),
+        _portfolio_metric_card("Calgary source", calgary_page_label, "full bylaw, district pages scoped", "not_used"),
     ]
     st.markdown("<div class='hero-grid'>" + "".join(cards) + "</div>", unsafe_allow_html=True)
     st.markdown(
