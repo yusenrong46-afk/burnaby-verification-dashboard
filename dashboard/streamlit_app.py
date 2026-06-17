@@ -2906,19 +2906,44 @@ def _bounded_rag_hits(hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
 # leak into the bylaw index text and the model sometimes echoes them as 【…】
 # citations. Strip them from BOTH the evidence we feed the model and the answer
 # we render, so the user only ever sees clean (§section, p.page) citations.
-_INTERNAL_TOKEN_RE = re.compile(
-    r"[【\[][^】\]]*?(?:merged_rule|pipeline\d|_pack_|_ev_|native_m\d|_rule_\d)[^】\]]*?[】\]]",
-    re.IGNORECASE,
-)
+_INTERNAL_ID_PAT = r"(?:merged_rule|pipeline\d|_pack_|_ev_|native_m\d|_rule_\d)"
+_INTERNAL_TOKEN_RE = re.compile(rf"[【\[][^】\]]*?{_INTERNAL_ID_PAT}[^】\]]*?[】\]]", re.IGNORECASE)
+_INTERNAL_PAREN_RE = re.compile(rf"\(\s*§?[^)]*?{_INTERNAL_ID_PAT}[^)]*?\)", re.IGNORECASE)
+_INTERNAL_BARE_RE = re.compile(rf"§?\s*[A-Za-z0-9_]*{_INTERNAL_ID_PAT}[A-Za-z0-9_]*", re.IGNORECASE)
 _CJK_CITE_RE = re.compile(r"【[^】]*】")
 
 
+def _looks_internal_id(value: Any) -> bool:
+    """True when a 'section'/chunk id is really an internal extraction label
+    (pipeline5_merged_rule_0034, m4_pack_..._ev_002) rather than a bylaw section."""
+    return bool(re.search(_INTERNAL_ID_PAT, str(value or ""), re.IGNORECASE))
+
+
+def _clean_section_label(section: Any, page: Any) -> str:
+    """A human citation label: '§541(1), p.6', or 'p.6' when the only id is an
+    internal chunk id, or '' when nothing clean is available. This stops the LLM
+    from ever being handed an internal id to cite."""
+    sec = "" if _looks_internal_id(section) else str(section or "").strip()
+    parts = []
+    if sec:
+        parts.append(f"§{sec}")
+    if page not in (None, ""):
+        parts.append(f"p.{page}")
+    return ", ".join(parts)
+
+
 def _strip_internal_tokens(text: str) -> str:
+    """Safety net: remove any internal-id citation the model still emits, in
+    bracket [【…】], parenthesis (§…), or bare form."""
     if not text:
         return text
     text = _INTERNAL_TOKEN_RE.sub("", text)
+    text = _INTERNAL_PAREN_RE.sub("", text)
     text = _CJK_CITE_RE.sub("", text)
-    text = re.sub(r"\(\s*\)", "", text)
+    text = _INTERNAL_BARE_RE.sub("", text)
+    text = re.sub(r"§\s*(?=p\.)", "", text)  # "(§p.2)" -> "(p.2)" when only a page is known
+    text = re.sub(r"\(\s*[,;]?\s*\)", "", text)
+    text = re.sub(r"\s+([.,;])", r"\1", text)
     text = re.sub(r"[ \t]{2,}", " ", text)
     return text.strip()
 
@@ -2927,21 +2952,24 @@ def _grounded_bylaw_prompt(question: str, hits: list[dict[str, Any]]) -> str:
     bounded_hits = _bounded_rag_hits(hits)
     sections = []
     for hit in bounded_hits:
-        section = hit.get("section") or hit.get("chunk_id") or "?"
-        page = hit.get("page")
-        label = f"§{section}" + (f", p.{page}" if page not in (None, "") else "")
+        label = _clean_section_label(hit.get("section") or hit.get("chunk_id"), hit.get("page")) or "unlabeled"
         body = _strip_internal_tokens(str(hit.get("section_text") or hit.get("text") or ""))
         sections.append(f"[{label}] {body}")
     sections_text = "\n\n".join(sections)
     return (
-        "You are an advisory zoning-bylaw assistant for human reviewers. Answer ONLY from the bylaw "
-        "sections below. You never approve, verify, reject, or promote a rule.\n"
-        "STYLE RULES (follow exactly):\n"
-        "- Lead with the direct answer (the number) in the first sentence.\n"
-        "- Keep the whole answer to at most 3 short sentences. No bullet lists.\n"
-        "- After each claim, cite as (§<section>, p.<page>) using ONLY the labels shown.\n"
+        "You are an advisory zoning-bylaw assistant for human reviewers. Use ONLY the bylaw sections "
+        "below — read them, reason across them, and explain the answer in your own clear words. You "
+        "never approve, verify, reject, or promote a rule.\n"
+        "HOW TO ANSWER:\n"
+        "- Lead with the direct answer (the number or limit) in the first sentence.\n"
+        "- Then add 1-2 sentences that explain it: combine the relevant sections and note any condition, "
+        "exception, or building location/type that changes the answer.\n"
+        "- Keep it tight — about 2 to 5 sentences of plain English, no bullet lists.\n"
+        "- Ground every statement; cite each claim in parentheses using the bracket label shown above "
+        "its section — e.g. (§541(1), p.6), or just (p.2) when only a page is shown. Never put § before "
+        "a page number.\n"
         "- NEVER output rule ids, evidence ids, internal codes, or 【…】 brackets.\n"
-        "- If the sections do not answer the question, say so in one sentence.\n\n"
+        "- If the sections genuinely do not answer the question, say so plainly in one sentence.\n\n"
         f"SECTIONS:\n{sections_text}\n\nQUESTION: {question}"
     )
 
@@ -2962,10 +2990,8 @@ def _render_bylaw_chat_message(st: Any, message: dict[str, Any]) -> None:
         if sources:
             with st.expander(f"Sources ({len(sources)})"):
                 for index, hit in enumerate(sources, start=1):
-                    section = hit.get("section") or hit.get("chunk_id") or "?"
-                    page = hit.get("page")
-                    loc = f"§{section}" + (f" · p{page}" if page not in (None, "") else "")
-                    excerpt = _short_display_quote(hit.get("section_text") or hit.get("text") or "", 360)
+                    loc = _clean_section_label(hit.get("section") or hit.get("chunk_id"), hit.get("page")) or "bylaw excerpt"
+                    excerpt = _short_display_quote(_strip_internal_tokens(hit.get("section_text") or hit.get("text") or ""), 360)
                     st.markdown(
                         f"<div class='citation'><span class='loc'>[{index}] {html.escape(str(loc))}</span><br>"
                         f"{html.escape(excerpt)}</div>",
@@ -3024,10 +3050,11 @@ def _bylaw_suggestions(data: dict[str, Any], limit: int = 6) -> list[str]:
 
 
 def _bylaw_chat_respond(st: Any, question: str, index_path: Path, chat_key: str) -> None:
-    """Run one retrieval -> grounded-prompt -> answer turn, rendering inline."""
+    """Run one retrieval -> grounded-prompt -> answer turn and APPEND it to the
+    transcript. It does not render inline; the caller reruns so the new turn
+    appears in the transcript above the input box (a normal chat layout)."""
     user_message = {"role": "user", "content": question}
     st.session_state[chat_key].append(user_message)
-    _render_bylaw_chat_message(st, user_message)
     hits = _dashboard_rag_hits(index_path, question, top_k=RAG_CHAT_TOP_K, st=st)
     if not hits:
         answer = (
@@ -3046,7 +3073,6 @@ def _bylaw_chat_respond(st: Any, question: str, index_path: Path, chat_key: str)
         answer = _strip_internal_tokens(answer)
         assistant_message = {"role": "assistant", "content": answer, "sources": bounded_hits, "question": question}
     st.session_state[chat_key].append(assistant_message)
-    _render_bylaw_chat_message(st, assistant_message)
 
 
 def _secret_value(st: Any | None, name: str) -> str:
@@ -3126,10 +3152,11 @@ def _optional_bylaw_llm_answer(
 
 
 _BYLAW_CHAT_SYSTEM = (
-    "You answer only from the provided zoning-bylaw excerpts, as an advisory assistant for human "
-    "reviewers — you never approve, verify, reject, or promote a rule. Lead with the number, keep the "
-    "answer to at most 3 short sentences, cite as (§section, p.page), and never output internal ids, "
-    "rule ids, or 【…】 tokens."
+    "You are an advisory zoning-bylaw assistant for human reviewers — you never approve, verify, "
+    "reject, or promote a rule. Answer only from the provided bylaw excerpts, but read and reason "
+    "across them and explain in plain English: lead with the number, then a brief why (about 2-5 "
+    "sentences). Cite each claim as (§section, p.page) and never output internal ids, rule ids, or "
+    "【…】 tokens."
 )
 
 
@@ -3312,9 +3339,11 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path, data: dict[str, Any] | None 
                 st.session_state[prefill_key] = suggestion
                 st.rerun()
 
+    # The conversation renders above the input box; the box stays at the bottom.
     for message in history:
         _render_bylaw_chat_message(st, message)
 
+    st.caption("I find the relevant bylaw sections, then read and explain them — every answer cites its section. Advisory only; I can't approve or change a rule.")
     with st.form(key=f"rag_form_{city_stem}", clear_on_submit=True):
         typed = st.text_input(
             "Ask about the bylaw",
@@ -3324,7 +3353,13 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path, data: dict[str, Any] | None 
         )
         sent = st.form_submit_button("Send", type="primary")
     if sent and str(typed or "").strip():
-        _bylaw_chat_respond(st, str(typed).strip(), index_path, chat_key)
+        # Answer, then rerun so the new turn appears in the transcript ABOVE the
+        # box (not flashed below it), and clear the input on the next run.
+        with st.spinner("Reading the bylaw…"):
+            _bylaw_chat_respond(st, str(typed).strip(), index_path, chat_key)
+        st.session_state[prefill_key] = ""
+        st.markdown("</div>", unsafe_allow_html=True)
+        st.rerun()
     st.markdown("</div>", unsafe_allow_html=True)
 
 
