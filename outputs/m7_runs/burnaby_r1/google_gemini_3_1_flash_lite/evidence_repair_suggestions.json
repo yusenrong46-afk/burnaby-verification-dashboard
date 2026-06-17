@@ -1,0 +1,4148 @@
+{
+  "suggestion_count": 55,
+  "alternative_evidence_count": 55,
+  "retry_candidate_count": 51,
+  "suggestions": [
+    {
+      "rule_id": "burnaby_r1_002",
+      "candidate_id": "burnaby_r1_native_m4_pack_0002_002",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "lot",
+      "condition": "Maximum Lot Area",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "current_evidence_id": "m4_pack_0002_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_003",
+      "candidate_id": "burnaby_r1_native_m4_pack_0004_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit lots",
+      "condition": "",
+      "operator": "<=",
+      "value": "1",
+      "unit": "units",
+      "current_evidence_id": "m4_pack_0004_ev_001",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_004",
+      "candidate_id": "burnaby_r1_native_m4_pack_0004_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit lots",
+      "condition": "",
+      "operator": "<=",
+      "value": "3",
+      "unit": "units",
+      "current_evidence_id": "m4_pack_0004_ev_002",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_005",
+      "candidate_id": "burnaby_r1_native_m4_pack_0006_001",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "lots in the R1 District on the Community Heritage Register",
+      "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+      "operator": "<=",
+      "value": "60",
+      "unit": "%",
+      "current_evidence_id": "m4_pack_0006_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "v3_repair_pack_0005_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.9,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 12.1,
+          "repair_confidence": 0.931,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0005_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 12.1,
+          "repair_confidence": 0.931,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_006",
+      "candidate_id": "burnaby_r1_native_m4_pack_0006_002",
+      "rule_object": "impervious_surface",
+      "constraint_scope": "impervious_surface",
+      "applies_to": "lots in the R1 District on the Community Heritage Register",
+      "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+      "operator": "<=",
+      "value": "70",
+      "unit": "%",
+      "current_evidence_id": "m4_pack_0006_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.9,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0005_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.9,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0005_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "impervious surface area up to 70% ce and its heritage character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_007",
+      "candidate_id": "burnaby_r1_native_m4_pack_0006_003",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "street yards",
+      "condition": "lots in the R1 District on the Community Heritage Register",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0006_ev_003",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.5,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0005_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.5,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0005_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_008",
+      "candidate_id": "burnaby_r1_native_m4_pack_0008_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit",
+      "condition": "on a lot",
+      "operator": "<=",
+      "value": "1",
+      "unit": "units",
+      "current_evidence_id": "m4_pack_0008_ev_001",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_009",
+      "candidate_id": "burnaby_r1_native_m4_pack_0008_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit",
+      "condition": "on a lot",
+      "operator": "<=",
+      "value": "3",
+      "unit": "units",
+      "current_evidence_id": "m4_pack_0008_ev_002",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0007_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_010",
+      "candidate_id": "burnaby_r1_native_m4_pack_0017_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+      "operator": "<=",
+      "value": "1",
+      "unit": "units",
+      "current_evidence_id": "m4_pack_0017_ev_001",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_012",
+      "candidate_id": "burnaby_r1_native_m4_pack_0017_003",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+      "operator": "<=",
+      "value": "4",
+      "unit": "units",
+      "current_evidence_id": "m4_pack_0017_ev_003",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Reg..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_013",
+      "candidate_id": "burnaby_r1_native_m4_pack_0017_004",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+      "operator": "<=",
+      "value": "6",
+      "unit": "units",
+      "current_evidence_id": "m4_pack_0017_ev_004",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Per..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_016",
+      "candidate_id": "burnaby_r1_native_m4_pack_0018_003",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "pedestrian walkway",
+      "condition": "Contiguous rowhouse lots",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0018_ev_003",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0018_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0010_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0010_ev_003",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "clear to a height of at least 2.5 m nd site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced eve..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_018",
+      "candidate_id": "burnaby_r1_native_m4_pack_0021_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "accessory structure",
+      "condition": "not being a building, excluding a fence or a retaining wall, located outside of a required yard",
+      "operator": "<=",
+      "value": "4.6",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0021_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0007_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_019",
+      "candidate_id": "burnaby_r1_native_m4_pack_0025_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "terraces, decks, or other similar surfaces",
+      "condition": "above grade",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0025_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0025_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 Gen..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0012_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "terraces, decks, or other similar surfaces that are 1.0 m or less above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 General Regulations 101.6.1 Projections (1) The following features may project into the r..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0012_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 Gen..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_020",
+      "candidate_id": "burnaby_r1_native_m4_pack_0025_002",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features",
+      "condition": "above grade",
+      "operator": ">",
+      "value": "1.0",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0025_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0025_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "terraces, decks, or other similar surfaces that are 1.0 m or less above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 General Regulations 101.6.1 Projections (1) The following features may project into the r..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0012_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "terraces, decks, or other similar surfaces that are 1.0 m or less above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 General Regulations 101.6.1 Projections (1) The following features may project into the r..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0012_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 Gen..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_021",
+      "candidate_id": "burnaby_r1_native_m4_pack_0025_003",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features",
+      "condition": "",
+      "operator": "<=",
+      "value": "0.9",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0025_ev_003",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0014_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S..."
+        },
+        {
+          "evidence_id": "m4_pack_0025_ev_004",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 11.3,
+          "repair_confidence": 0.869,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "eaves up to the lesser of 1.2 m d decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation; (e) belt courses, cornices, gutte..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_022",
+      "candidate_id": "burnaby_r1_native_m4_pack_0025_004",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "eaves",
+      "condition": "",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0025_ev_004",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0014_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_049",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.24,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Street Yard Rowhouse 1 to 3 Units 3.0 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | Rowhouse 1 to 3 Units | 3.0 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2:..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_024",
+      "candidate_id": "burnaby_r1_native_m4_pack_0034_002",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "height",
+      "applies_to": "All dwelling units",
+      "condition": "paved or gravel fire access corridor",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0034_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0034_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units..."
+        },
+        {
+          "evidence_id": "m4_pack_0035_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprink..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0011_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_026",
+      "candidate_id": "burnaby_r1_native_m4_pack_0044_001",
+      "rule_object": "setback",
+      "constraint_scope": "lane_yard",
+      "applies_to": "projections into required lane yards",
+      "condition": "R1 District",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0044_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0025_ev_003",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m ot: (a) steps and stairs; (b) ornamental features, such as arbors, trellises, fish ponds, flag poles, or similar landscape features; (c) terra..."
+        },
+        {
+          "evidence_id": "m4_pack_0025_ev_004",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "eaves up to the lesser of 1.2 m d decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation; (e) belt courses, cornices, gutte..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0012_ev_003",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m ot: (a) steps and stairs; (b) ornamental features, such as arbors, trellises, fish ponds, flag poles, or similar landscape features; (c) terra..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_027",
+      "candidate_id": "burnaby_r1_native_m4_pack_0057_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "residential dwellings",
+      "condition": "",
+      "operator": "<=",
+      "value": "6",
+      "unit": "units",
+      "current_evidence_id": "m4_pack_0057_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0015_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "up to a maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 1..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_111",
+      "candidate_id": "burnaby_r1_v3clause_m4_pack_0045_002",
+      "rule_object": "permitted_use",
+      "constraint_scope": "district",
+      "applies_to": "Small-Scale Multi-Unit Housing",
+      "condition": "",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "current_evidence_id": "m4_pack_0045_v3_clause_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Per..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0015_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "up to a maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 1..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_112",
+      "candidate_id": "burnaby_r1_v3clause_m4_pack_0045_003",
+      "rule_object": "permitted_use",
+      "constraint_scope": "use",
+      "applies_to": "Principal Use",
+      "condition": "Group Home",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "current_evidence_id": "m4_pack_0045_v3_clause_ev_003",
+      "support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Per..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0015_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "up to a maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 1..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_114",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0001_002",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "Maximum Lot Area",
+      "condition": "",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "current_evidence_id": "v3_repair_pack_0001_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwe..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_115",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0003_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "lot",
+      "condition": "",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "current_evidence_id": "v3_repair_pack_0003_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0002_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3..."
+        },
+        {
+          "evidence_id": "m4_pack_0002_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area 280 m2 essory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3 Subdivision Regulations Dwe..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_116",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0004_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit lots",
+      "condition": "",
+      "operator": "<=",
+      "value": "1",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0004_ev_001",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_117",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0004_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit lots",
+      "condition": "",
+      "operator": "<=",
+      "value": "3",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0004_ev_002",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_118",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0005_001",
+      "rule_object": "lot_coverage",
+      "constraint_scope": "lot_coverage",
+      "applies_to": "lots in the R1 District on the Community Heritage Register",
+      "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+      "operator": "<=",
+      "value": "60",
+      "unit": "%",
+      "current_evidence_id": "v3_repair_pack_0005_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.9,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 12.1,
+          "repair_confidence": 0.931,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0005_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 12.1,
+          "repair_confidence": 0.931,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_119",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0005_002",
+      "rule_object": "impervious_surface",
+      "constraint_scope": "impervious_surface",
+      "applies_to": "lots in the R1 District on the Community Heritage Register",
+      "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+      "operator": "<=",
+      "value": "70",
+      "unit": "%",
+      "current_evidence_id": "v3_repair_pack_0005_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.9,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0005_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 14.9,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "impervious surface area up to 70% ce and its heritage character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots may be permitted subject..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_120",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0005_003",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "street yards",
+      "condition": "lots in the R1 District on the Community Heritage Register",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0005_ev_003",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0006_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.5,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0005_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.5,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots..."
+        },
+        {
+          "evidence_id": "m4_pack_0006_ev_003",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m to a height of 2.5 m; and (ii) lots without lane access shall have a minimum panhandle width of 4.5 m that is clear to a height of 2.5 m; (b) maximum lot coverage as set out in Section 101.4 may..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_122",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0007_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit",
+      "condition": "R1 District",
+      "operator": "<=",
+      "value": "1",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0007_ev_001",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_123",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0007_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit",
+      "condition": "R1 District",
+      "operator": "<=",
+      "value": "3",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0007_ev_002",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_124",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0008_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+      "operator": "<=",
+      "value": "1",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0008_ev_001",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_126",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0008_003",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+      "operator": "<=",
+      "value": "4",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0008_ev_003",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Reg..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.24,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_127",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0008_004",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+      "operator": "<=",
+      "value": "6",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0008_ev_004",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 14.6,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Per..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_128",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0009_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit housing",
+      "condition": "Total Dwelling Units on a Lot",
+      "operator": "<=",
+      "value": "1",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0009_ev_001",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_129",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0009_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit housing",
+      "condition": "Total Dwelling Units on a Lot",
+      "operator": "<=",
+      "value": "3",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0009_ev_002",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_130",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0009_003",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit housing",
+      "condition": "Total Dwelling Units on a Lot",
+      "operator": "<=",
+      "value": "4",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0009_ev_003",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.74,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Reg..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_007",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.74,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Area .1 Maximum Lot Area .1 Rowhouse 1 to 3 Units 280 m2 Maximum Lot Area .1 | Rowhouse 1 to 3 Units | 280 m2 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3 to 4..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_008",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 14.74,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "Maximum Lot Coverage All Buildings Rowhouse 1 to 3 Units 55% Maximum Lot Coverage | All Buildings | Rowhouse 1 to 3 Units | 55% 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-Unit 5 to 6 Units Permitted Dwelling Units 1 to 3 1 to 2 3..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_131",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0009_004",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit housing",
+      "condition": "Total Dwelling Units on a Lot",
+      "operator": "<=",
+      "value": "6",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0009_ev_004",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Per..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_134",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0010_003",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "pedestrian walkway",
+      "condition": "Contiguous rowhouse lots",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0010_ev_003",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0018_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        },
+        {
+          "evidence_id": "m4_pack_0018_ev_003",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "clear to a height of at least 2.5 m nd site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced eve..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0010_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_136",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0011_002",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "height",
+      "applies_to": "All dwelling units",
+      "condition": "paved or gravel fire access corridor",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0011_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0034_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units..."
+        },
+        {
+          "evidence_id": "m4_pack_0034_ev_002",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height. 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units shall..."
+        },
+        {
+          "evidence_id": "m4_pack_0035_ev_001",
+          "page": 6,
+          "evidence_type": "clause",
+          "raw_score": 16.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap",
+            "condition_overlap"
+          ],
+          "evidence_quote": "Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprink..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_137",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0012_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "terraces, decks, or other similar surfaces",
+      "condition": "above grade",
+      "operator": "<=",
+      "value": "1.0",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0012_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "operator_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0025_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "terraces, decks, or other similar surfaces that are 1.0 m or less above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 General Regulations 101.6.1 Projections (1) The following features may project into the r..."
+        },
+        {
+          "evidence_id": "m4_pack_0025_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 Gen..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0012_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 Gen..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_138",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0012_002",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features",
+      "condition": "above grade",
+      "operator": ">",
+      "value": "1.0",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0012_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0025_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "terraces, decks, or other similar surfaces that are 1.0 m or less above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 General Regulations 101.6.1 Projections (1) The following features may project into the r..."
+        },
+        {
+          "evidence_id": "m4_pack_0025_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 Gen..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0012_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "terraces, decks, or other similar surfaces that are 1.0 m or less above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 General Regulations 101.6.1 Projections (1) The following features may project into the r..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_139",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0012_003",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features",
+      "condition": "",
+      "operator": "<=",
+      "value": "0.9",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0012_ev_003",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0014_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 14.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S..."
+        },
+        {
+          "evidence_id": "m4_pack_0025_ev_003",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 11.3,
+          "repair_confidence": 0.869,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m ot: (a) steps and stairs; (b) ornamental features, such as arbors, trellises, fish ponds, flag poles, or similar landscape features; (c) terra..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_140",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0012_004",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "eaves",
+      "condition": "",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0012_ev_004",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0014_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.3,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_049",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 13.24,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Street Yard Rowhouse 1 to 3 Units 3.0 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | Rowhouse 1 to 3 Units | 3.0 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2:..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_141",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0013_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "accessory structure",
+      "condition": "not being a building, excluding a fence or a retaining wall, located outside of a required yard",
+      "operator": "<=",
+      "value": "4.6",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0013_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0008_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0008_ev_002",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car..."
+        },
+        {
+          "evidence_id": "m4_pack_0021_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 13.8,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_142",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0014_001",
+      "rule_object": "setback",
+      "constraint_scope": "lane_yard",
+      "applies_to": "projections into required lane yards",
+      "condition": "in the R1 District",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0014_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0025_ev_003",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m ot: (a) steps and stairs; (b) ornamental features, such as arbors, trellises, fish ponds, flag poles, or similar landscape features; (c) terra..."
+        },
+        {
+          "evidence_id": "m4_pack_0025_ev_004",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "eaves up to the lesser of 1.2 m d decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade up to a maximum of 25% of the width of a required separation; (e) belt courses, cornices, gutte..."
+        },
+        {
+          "evidence_id": "m4_pack_0044_ev_001",
+          "page": 5,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_143",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0015_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "ground-oriented residential dwellings",
+      "condition": "",
+      "operator": "<=",
+      "value": "6",
+      "unit": "units",
+      "current_evidence_id": "v3_repair_pack_0015_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "best_repair_confidence": 1.0,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_002",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0045_v3_clause_ev_003",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory..."
+        },
+        {
+          "evidence_id": "m4_pack_0057_ev_001",
+          "page": 1,
+          "evidence_type": "clause",
+          "raw_score": 15.1,
+          "repair_confidence": 1.0,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "maximum of 6 dwelling units on a lot 101. SMALL-SCALE MULTI-UNIT HOUSING DISTRICT (R1) 101.1 Intent This District provides for the use and development of primarily ground-oriented residential dwellings up to a maximum of 6 dwelling units on a lot. 101.2 Per..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_015",
+      "candidate_id": "burnaby_r1_native_m4_pack_0018_002",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "pedestrian walkway",
+      "condition": "Contiguous rowhouse lots",
+      "operator": ">=",
+      "value": "1.5",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0018_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.957,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_017",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Height Height Rowhouse 1 to 3 Units sloping roof: 10 m | flat roof: 9.5 m Maximum Height | Front Principal Buildings | Height | Rowhouse 1 to 3 Units | sloping roof: 10 m | flat roof: 9.5 m 101.4 Development Regulations Dwelling Type Rowhouse Small-..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_018",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Height Height Rowhouse 1 to 3 Units sloping roof: 10 m | flat roof: 9.5 m Maximum Height | Front Principal Buildings | Height | Rowhouse 1 to 3 Units | sloping roof: 10 m | flat roof: 9.5 m 101.4 Development Regulations Dwelling Type Rowhouse Small-..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_025",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Height Storeys (basement inclusive) Rowhouse 1 to 3 Units 3 storeys Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | Rowhouse 1 to 3 Units | 3 storeys 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_017",
+      "candidate_id": "burnaby_r1_native_m4_pack_0019_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "garage or carport",
+      "condition": "below grade",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0019_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.957,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_049",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Street Yard Rowhouse 1 to 3 Units 3.0 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | Rowhouse 1 to 3 Units | 3.0 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2:..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_056",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Lane Yard Rowhouse 1 to 3 Units 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | Rowhouse 1 to 3 Units | 1.5 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2: 40%..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_060",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Interior Rear Yard Rowhouse 1 to 3 Units 3.0 m, except 1.5 m for accessory buildings Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Rear Yard | Rowhouse 1 to 3 Units | 3.0 m, except 1.5 m for a..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_121",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0006_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "garage or carport",
+      "condition": "below grade",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0006_ev_001",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.957,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_049",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Street Yard Rowhouse 1 to 3 Units 3.0 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | Rowhouse 1 to 3 Units | 3.0 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2:..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_056",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Lane Yard Rowhouse 1 to 3 Units 1.5 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Lane Yard | Rowhouse 1 to 3 Units | 1.5 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2: 40%..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_060",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Interior Rear Yard Rowhouse 1 to 3 Units 3.0 m, except 1.5 m for accessory buildings Minimum Lot Line Setbacks for All Buildings .2 .3 | Interior Rear Yard | Rowhouse 1 to 3 Units | 3.0 m, except 1.5 m for a..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_133",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0010_002",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "pedestrian walkway",
+      "condition": "Contiguous rowhouse lots",
+      "operator": ">=",
+      "value": "1.5",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0010_ev_002",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.957,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_017",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Height Height Rowhouse 1 to 3 Units sloping roof: 10 m | flat roof: 9.5 m Maximum Height | Front Principal Buildings | Height | Rowhouse 1 to 3 Units | sloping roof: 10 m | flat roof: 9.5 m 101.4 Development Regulations Dwelling Type Rowhouse Small-..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_018",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Height Height Rowhouse 1 to 3 Units sloping roof: 10 m | flat roof: 9.5 m Maximum Height | Front Principal Buildings | Height | Rowhouse 1 to 3 Units | sloping roof: 10 m | flat roof: 9.5 m 101.4 Development Regulations Dwelling Type Rowhouse Small-..."
+        },
+        {
+          "evidence_id": "burnaby_r1_matrix_p2_t0_b0_025",
+          "page": 2,
+          "evidence_type": "table_cell",
+          "raw_score": 12.44,
+          "repair_confidence": 0.957,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "rule_object_cue",
+            "operator_cue",
+            "scope_overlap"
+          ],
+          "evidence_quote": "Maximum Height Storeys (basement inclusive) Rowhouse 1 to 3 Units 3 storeys Maximum Height | Front Principal Buildings | Storeys (basement inclusive) | Rowhouse 1 to 3 Units | 3 storeys 101.4 Development Regulations Dwelling Type Rowhouse Small-Scale Multi-..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_028",
+      "candidate_id": "burnaby_r1_native_m4_pack_0058_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "lot",
+      "condition": "boarding, lodging or rooming houses",
+      "operator": ">=",
+      "value": "560",
+      "unit": "m2",
+      "current_evidence_id": "m4_pack_0058_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 0.854,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0018_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 11.1,
+          "repair_confidence": 0.854,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        },
+        {
+          "evidence_id": "m4_pack_0018_ev_003",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 11.1,
+          "repair_confidence": 0.854,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "clear to a height of at least 2.5 m nd site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced eve..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0010_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 11.1,
+          "repair_confidence": 0.854,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_144",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0016_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "lot",
+      "condition": "boarding, lodging or rooming houses",
+      "operator": ">=",
+      "value": "560",
+      "unit": "m2",
+      "current_evidence_id": "v3_repair_pack_0016_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "best_repair_confidence": 0.854,
+      "can_retry_verification": false,
+      "repairable_fields": [],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0018_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 11.1,
+          "repair_confidence": 0.854,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        },
+        {
+          "evidence_id": "m4_pack_0018_ev_003",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 11.1,
+          "repair_confidence": 0.854,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "clear to a height of at least 2.5 m nd site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced eve..."
+        },
+        {
+          "evidence_id": "m4_pack_0058_ev_001",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 11.1,
+          "repair_confidence": 0.854,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "operator_cue",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "lot with an area of not less than 560 m2 rontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced every 100 m or less from a street, lane, or walkway that intersects the f..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_014",
+      "candidate_id": "burnaby_r1_native_m4_pack_0018_001",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "fire_access_corridor",
+      "applies_to": "pedestrian walkway",
+      "condition": "Contiguous rowhouse lots",
+      "operator": "<=",
+      "value": "100",
+      "unit": "m",
+      "current_evidence_id": "m4_pack_0018_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.677,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0018_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 8.8,
+          "repair_confidence": 0.677,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        },
+        {
+          "evidence_id": "m4_pack_0018_ev_003",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 8.8,
+          "repair_confidence": 0.677,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "clear to a height of at least 2.5 m nd site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced eve..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0010_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 8.8,
+          "repair_confidence": 0.677,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        }
+      ]
+    },
+    {
+      "rule_id": "burnaby_r1_132",
+      "candidate_id": "burnaby_r1_native_v3_repair_pack_0010_001",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "fire_access_corridor",
+      "applies_to": "pedestrian walkway",
+      "condition": "Contiguous rowhouse lots",
+      "operator": "<=",
+      "value": "100",
+      "unit": "m",
+      "current_evidence_id": "v3_repair_pack_0010_ev_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "best_repair_confidence": 0.677,
+      "can_retry_verification": true,
+      "repairable_fields": [
+        "scope"
+      ],
+      "top_evidence": [
+        {
+          "evidence_id": "m4_pack_0018_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 8.8,
+          "repair_confidence": 0.677,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        },
+        {
+          "evidence_id": "m4_pack_0018_ev_003",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 8.8,
+          "repair_confidence": 0.677,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "clear to a height of at least 2.5 m nd site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walkway spaced eve..."
+        },
+        {
+          "evidence_id": "v3_repair_pack_0010_ev_002",
+          "page": 4,
+          "evidence_type": "clause",
+          "raw_score": 8.8,
+          "repair_confidence": 0.677,
+          "match_reasons": [
+            "alternative_evidence",
+            "value_match",
+            "unit_match",
+            "scope_overlap",
+            "applies_to_overlap"
+          ],
+          "evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk..."
+        }
+      ]
+    }
+  ]
+}

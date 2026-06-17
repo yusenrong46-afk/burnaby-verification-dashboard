@@ -1,0 +1,329 @@
+[
+  {
+    "rule_id": "burnaby_r1_011",
+    "rule_object": "dwelling_units",
+    "constraint_type": "maximum",
+    "constraint_scope": "dwelling_units",
+    "applies_to": "dwelling units",
+    "value": "3",
+    "unit": "units",
+    "operator": "<=",
+    "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+    "exception": "",
+    "gis_relevance": "context",
+    "verification_status": "verified",
+    "verification_decision": "verified",
+    "verification_label": "supported",
+    "extractor_requested_review": true,
+    "canonical_rule_key": "dwelling_units__dwelling_units__dwelling_units__total_dwelling_units_on_a_lot_1_to_3_units____3__units",
+    "proof_type": "table_natural_logic_partial",
+    "table_proof_status": "partial",
+    "text_span_proof_status": "none",
+    "proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "not_enough_info",
+        "evidence_field": "column_header/table_text",
+        "evidence_quote": "Rowhouse 1 to 3 Units | Permitted Dwelling Units (including secondary suites) | Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits | [burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits",
+        "reason": "table context does not prove this claim"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "supported",
+        "evidence_field": "evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "condition words appear in evidence"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "text_span_proof_trace": {},
+    "table_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "table_title/row_header",
+        "evidence_quote": "Permitted Dwelling Units (including secondary suites)",
+        "reason": "table context contains dwelling_units cue"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "row_header/column_header",
+        "evidence_quote": "Permitted Dwelling Units (including secondary suites) | Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | [burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits | ",
+        "reason": "scope words are present in table row/column context"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "row_header/column_header",
+        "evidence_quote": "Permitted Dwelling Units (including secondary suites) | Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits | [burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits | ",
+        "reason": "applies_to words are present in table context"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "table_text",
+        "evidence_quote": "Permitted Dwelling Units (including secondary suites)",
+        "reason": "dwelling-unit range proves the upper-bound operator"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "cell_value",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits",
+        "reason": "numeric value appears in table cell"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "cell_value",
+        "evidence_quote": "1 to 3\nUnits",
+        "reason": "unit appears in table cell"
+      },
+      "condition": {
+        "label": "not_enough_info",
+        "evidence_field": "column_header/table_text",
+        "evidence_quote": "Rowhouse 1 to 3 Units | Permitted Dwelling Units (including secondary suites) | Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits | [burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits",
+        "reason": "table context does not prove this claim"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "no exception claim and no unresolved exception cue"
+      }
+    },
+    "merged_proof_trace": {
+      "rule_object": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "cited evidence supports the canonical rule object"
+      },
+      "constraint_scope": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "scope words are grounded in local evidence"
+      },
+      "applies_to": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "applies_to words are grounded in local evidence"
+      },
+      "operator": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "operator wording is supported by evidence"
+      },
+      "value": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "value appears in cited evidence"
+      },
+      "unit": {
+        "label": "supported",
+        "evidence_field": "table/evidence_text",
+        "evidence_quote": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Row...",
+        "reason": "unit appears in cited evidence and is compatible"
+      },
+      "condition": {
+        "label": "not_enough_info",
+        "evidence_field": "column_header/table_text",
+        "evidence_quote": "Rowhouse 1 to 3 Units | Permitted Dwelling Units (including secondary suites) | Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits | [burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits",
+        "reason": "table context does not prove this claim"
+      },
+      "exception": {
+        "label": "supported",
+        "evidence_field": "",
+        "evidence_quote": "",
+        "reason": "candidate has no explicit exception claim"
+      }
+    },
+    "proof_decision_mismatch": false,
+    "proof_decision_mismatches": [],
+    "evidence_strength": 0.845,
+    "review_priority": "verified",
+    "support_gaps": [],
+    "support_checks": {
+      "source_evidence_present": true,
+      "value_supported": true,
+      "unit_supported": true,
+      "operator_supported": true,
+      "applies_to_supported": true,
+      "scope_supported": true,
+      "rule_object_supported": true,
+      "table_context_supported": true,
+      "table_review_gate_passed": true
+    },
+    "applicability": null,
+    "matrix_bands": null,
+    "normalization_trace": [
+      {
+        "field": "constraint_type",
+        "before": "dimensional",
+        "after": "maximum",
+        "reason": "canonical field normalization"
+      },
+      {
+        "field": "operator",
+        "before": "",
+        "after": "<=",
+        "reason": "canonical field normalization"
+      }
+    ],
+    "review_reason": "verified after guarded evidence bundle rerun",
+    "source": {
+      "document": "R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-07/R1Small-Scale-Multi-Unit-Housing-District.pdf",
+      "page": 2,
+      "section": null,
+      "evidence_id": "bundle::burnaby_r1_011",
+      "evidence_type": "table_cell",
+      "evidence_text": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits",
+      "source_context": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits",
+      "inherited_parent_context": null,
+      "local_context": "[burnaby_r1_matrix_p2_t0_b0_001] Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3\nUnits",
+      "source_section": "",
+      "source_heading": null,
+      "table_title": "Permitted Dwelling Units (including secondary suites)",
+      "row_header": "Permitted Dwelling Units (including secondary suites)",
+      "column_header": "Rowhouse 1 to 3 Units",
+      "cell_value": "1 to 3\nUnits",
+      "bbox": null,
+      "table_parser": null
+    },
+    "candidate": {
+      "candidate_id": "burnaby_r1_native_m4_pack_0017_002__rerun__bundle_burnaby_r1_011",
+      "evidence_id": "bundle::burnaby_r1_011",
+      "rule_object": "dwelling_units",
+      "constraint_type": "dimensional",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "operator": "",
+      "value": "3",
+      "unit": "units",
+      "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+      "exception": "",
+      "source_stream": "native_rag_llm",
+      "extraction_method": "native_rag_llm_v1",
+      "extraction_final_action": "REVIEW",
+      "extraction_review_reasons": [
+        "operator_missing_from_extraction"
+      ],
+      "native_provenance": {
+        "pack_id": "m4_pack_0017",
+        "chunk_id": "burnaby_r1_101.1_007",
+        "source_quote_supported": true,
+        "v2_run_id": "burnaby_r1_google_gemini_3_1_flash_lite_3098b6f0a276",
+        "model": "google/gemini-3.1-flash-lite"
+      },
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0017_002",
+      "original_rule_id": "burnaby_r1_011",
+      "original_evidence_id": "m4_pack_0017_ev_002",
+      "evidence_bundle_rerun": true
+    },
+    "promotion_source": "evidence_bundle_rerun",
+    "bundle_promotion": {
+      "original_rule_id": "burnaby_r1_011",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0017_002__rerun__bundle_burnaby_r1_011",
+      "bundle_evidence_id": "bundle::burnaby_r1_011",
+      "bundle_evidence_ids": [
+        "burnaby_r1_matrix_p2_t0_b0_001"
+      ],
+      "bundle_score": 1.0,
+      "bundle_sentence": "m4_pack_0017_ev_002 supports applies_to, condition, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_001 supports applies_to, condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_007 supports applies_to, condition, operator, rule_object, scope, unit, value; burnaby_r1_matrix_p2_t0_b0_008 supports applies_to, condition, operator, rule_object, scope, unit, value.",
+      "original_support_gaps": []
+    },
+    "proof_dag_ref": "burnaby_r1_011::proof_dag",
+    "proof_dag_summary": {
+      "support_gap_count": 0,
+      "status_counts": {
+        "supported": 7,
+        "refuted": 0,
+        "not_enough_info": 1,
+        "not_applicable": 1
+      }
+    }
+  }
+]

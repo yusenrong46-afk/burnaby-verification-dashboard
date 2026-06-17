@@ -1,0 +1,1348 @@
+{
+  "city": "calgary_rcg",
+  "top_k": 6,
+  "gold_rule_count": 19,
+  "chunk_count": 151,
+  "recall_at_k": 1.0,
+  "context_precision_at_k": 0.93,
+  "source_block_hit_rate": 0.0,
+  "exact_support_hit_rate": 0.789,
+  "failure_reasons": [
+    {
+      "reason": "scope_missing",
+      "count": 4
+    }
+  ],
+  "results": [
+    {
+      "gold_id": "cal_setback_rear_001",
+      "query": "setback min rear_yard backyard suite >= 1.5 m rear property line 1.5 backyard",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "section": "352(1)",
+          "page": 395,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (b) 0.6 metres"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_352.7_031",
+          "section": "352(7)",
+          "page": 397,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(7) Except in the R-CG District, a Backyard Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres w"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_540 .1_088",
+          "section": "540 (1)",
+          "page": 472,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "540 (1) Unless otherwise referenced in subsection (2) the minimum building setback from a rear property line is 7.5 metres."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_352.9_033",
+          "section": "352(9)",
+          "page": 397,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(9) A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres f"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_540.2_089",
+          "section": "540(2)",
+          "page": 472,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(2) On a laned or corner parcel, the minimum building setback from a rear property line is 1.2 metres. 62P2018 540.1 Fences"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "section": "352(4.1)",
+          "page": 396,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_separation_001",
+      "query": "building_separation min building_separation backyard suite >= 5.0 m between the closest facade of the main residential building and the closest facade of the Backyard Suite; reducible to 1.5 m with qualifying at-grade amenity space (352(3.1)) separation 5.0 backyard",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.667,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "section": "352(3)",
+          "page": 396,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(3) Unless otherwise referenced in subsections (3.1) and (3.2), a minimum separation of 5.0 metres is required between the closest façade of the main residential building to the cl"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "section": "352(1)",
+          "page": 395,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (b) 0.6 metres"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "section": "352(3.2)",
+          "page": 396,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street o"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_352.7_031",
+          "section": "352(7)",
+          "page": 397,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(7) Except in the R-CG District, a Backyard Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres w"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "section": "352(5)",
+          "page": 396,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(5) The maximum floor area of a Backyard Suite, excluding any area covered by stairways and internal landings not exceeding 2.5 square metres, is 75.0 square metres."
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "section": "352(4.1)",
+          "page": 396,
+          "score": 0.015152,
+          "relevant": true,
+          "text_preview": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_height_001",
+      "query": "height max building backyard suite <= 7.5 m height 7.5 backyard",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.887,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_352.4_027",
+          "section": "352(4)",
+          "page": 396,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(4) Unless otherwise referenced in subsection (4.1), the maximum building height for a Backyard Suite is 7.5 metres. 10P2019"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_352.7_031",
+          "section": "352(7)",
+          "page": 397,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "(7) Except in the R-CG District, a Backyard Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres w"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "section": "352(5)",
+          "page": 396,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(5) The maximum floor area of a Backyard Suite, excluding any area covered by stairways and internal landings not exceeding 2.5 square metres, is 75.0 square metres."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "section": "352(4.1)",
+          "page": 396,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_351.4_020",
+          "section": "351(4)",
+          "page": 395,
+          "score": 0.015385,
+          "relevant": true,
+          "text_preview": "(4) Except in the R-CG District, a Secondary Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres "
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "section": "352(3)",
+          "page": 396,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(3) Unless otherwise referenced in subsections (3.1) and (3.2), a minimum separation of 5.0 metres is required between the closest façade of the main residential building to the cl"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_height_side_edge_001",
+      "query": "height max building backyard suite <= 5.0 m measured from grade at a side property line shared with a parcel designated with a low density residential district side property line 5.0 backyard",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "section": "352(4.1)",
+          "page": 396,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "section": "541(2)",
+          "page": 472,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(2) Where a building setback is required from a property line shared with another parcel designated with a low density residential district, the M-CG or H-GO District the maximum b"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "section": "352(8)",
+          "page": 397,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privac"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_539.6_084",
+          "section": "539(6)",
+          "page": 471,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(6) For a corner parcel, the minimum building setback from a side property line shared with a street is 0.6 metres."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_352.9_033",
+          "section": "352(9)",
+          "page": 397,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(9) A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres f"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "section": "352(3)",
+          "page": 396,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(3) Unless otherwise referenced in subsections (3.1) and (3.2), a minimum separation of 5.0 metres is required between the closest façade of the main residential building to the cl"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_floor_area_001",
+      "query": "floor_area max backyard suite <= 75.0 m2 excluding any area covered by stairways and internal landings not exceeding 2.5 square metres floor area 75.0 backyard",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "section": "352(5)",
+          "page": 396,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(5) The maximum floor area of a Backyard Suite, excluding any area covered by stairways and internal landings not exceeding 2.5 square metres, is 75.0 square metres."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_351.2_017",
+          "section": "351(2)",
+          "page": 395,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 squ"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_351.2.1_018",
+          "section": "351(2.1)",
+          "page": 395,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(2.1) There is no maximum floor area for a Secondary Suite wholly located 23P2016, 4P2017 in a basement. Internal landings and stairways providing access to the basement may be loc"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_352.6_030",
+          "section": "352(6)",
+          "page": 397,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(6) The maximum floor area of a Backyard Suite may be relaxed by the Development Authority to a maximum of 10.0 per cent."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_352.7_031",
+          "section": "352(7)",
+          "page": 397,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(7) Except in the R-CG District, a Backyard Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres w"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_351.3_019",
+          "section": "351(3)",
+          "page": 395,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(3) The maximum floor area of a Secondary Suite may be relaxed by the Development Authority to a maximum of 10.0 per cent."
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_floor_area_secondary_001",
+      "query": "floor_area max secondary suite <= 100.0 m2 in the R-C1L/R-C1Ls/R-C1/R-C1s/R-C1N/R-1/R-1s/R-1N districts, or on a parcel with width less than 13.0 m; no maximum when wholly in a basement (351(2.1)) floor area 100.0 secondary",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_351.2_017",
+          "section": "351(2)",
+          "page": 395,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 squ"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_351.4_020",
+          "section": "351(4)",
+          "page": 395,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(4) Except in the R-CG District, a Secondary Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_352.7_031",
+          "section": "352(7)",
+          "page": 397,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(7) Except in the R-CG District, a Backyard Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres w"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_527.1 .1_063",
+          "section": "527.1 (1)",
+          "page": 467,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "527.1 (1) Parcels designated R-CGex have the same permitted uses 62P2018 referenced in Section 526 with the exclusion of: (a) Secondary Suite."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_351.2.1_018",
+          "section": "351(2.1)",
+          "page": 395,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(2.1) There is no maximum floor area for a Secondary Suite wholly located 23P2016, 4P2017 in a basement. Internal landings and stairways providing access to the basement may be loc"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_525.2_054",
+          "section": "525(2)",
+          "page": 465,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(2) The Residential – Grade-Oriented Infill (R-CGex) District has the 62P2018 same purpose as the Residential – Grade-Oriented Infill (R-CG) District except that it does not accomm"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_setback_balcony_001",
+      "query": "setback min backyard suite >= 0.6 m balcony projecting into a required setback area from a property line shared with a street or a lane setback 0.6 backyard",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.95,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_352.9_033",
+          "section": "352(9)",
+          "page": 397,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(9) A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres f"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "section": "352(3.2)",
+          "page": 396,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "(3.2) (a) Where portions of a Backyard Suite meet the requirements of subsection (b) these portions may project: (i) into a setback area from a property line shared with a street o"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_539.6_084",
+          "section": "539(6)",
+          "page": 471,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "(6) For a corner parcel, the minimum building setback from a side property line shared with a street is 0.6 metres."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "section": "352(8)",
+          "page": 397,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(8) A Backyard Suite may include a balcony where the balcony: 10P2019 (a) projects from a façade that faces a property line shared with a lane or a street; or (b) includes a privac"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "section": "352(1)",
+          "page": 395,
+          "score": 0.015385,
+          "relevant": true,
+          "text_preview": "352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (b) 0.6 metres"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "section": "541(2)",
+          "page": 472,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(2) Where a building setback is required from a property line shared with another parcel designated with a low density residential district, the M-CG or H-GO District the maximum b"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_setback_front_deemed_001",
+      "query": "setback min front_yard Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling >= 6.0 m deemed-conforming front setback for the R-C1L or R-C1Ls districts in the Developed Area front property line 6.0 dwelling",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_358.3_040",
+          "section": "358(3)",
+          "page": 398,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(3) The building setback from the front property line for a Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling in the Developed Area is deemed to conform with the "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_358.2_039",
+          "section": "358(2)",
+          "page": 398,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(2) When a Contextual Semi-detached Dwelling, Contextual Single Detached Dwelling, Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling has been constructed in accor"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_358.4_041",
+          "section": "358(4)",
+          "page": 398,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(4) The building height for a Duplex Dwelling, Semi-detached Dwelling or Single Detached Dwelling in the Developed Area is deemed to conform with the requirements of this Bylaw pro"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_358.6_043",
+          "section": "358(6)",
+          "page": 399,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(6) The building depth and building height for a Contextual Semi-detached 78P2024 Dwelling, Contextual Single Detached Dwelling, Duplex Dwelling, Semi- detached Dwelling or Single "
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_360.1_045",
+          "section": "360(1)",
+          "page": 399,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "360 (1) Unless otherwise referenced in (5), the building height of a 3P2010 Contextual Semi-detached Dwelling, Contextual Single Detached Dwelling, Duplex Dwelling, Semi-detached D"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_361 .1_049",
+          "section": "361 (1)",
+          "page": 400,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "361 (1) In addition to the rules of sections 360 (2) and (3), for a Contextual Semi-detached Dwelling, Contextual Single Detached Dwelling, Duplex Dwelling, Semi-detached Dwelling "
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_setback_side_001",
+      "query": "setback min side_yard R-CG District >= 1.2 m side property line 1.2 side",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.967,
+      "exact_support_hit": false,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": false,
+      "failure_reason": "scope_missing",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_539.1_079",
+          "section": "539(1)",
+          "page": 471,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "539 (1) Subject to subsections (3) through (9), the minimum building setback from any side property line is 1.2 metres."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_539.4_082",
+          "section": "539(4)",
+          "page": 471,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "(4) The minimum building setback from a side property line may be reduced to a zero setback where: (a) the owner of the parcel proposed for development and the owner of the adjacen"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_538.1_077",
+          "section": "538(1)",
+          "page": 471,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "538 (1) A minimum building setback of 1.2 metres is required from a side property line at least every 60.0 metres along the entire length of a block face. ."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "section": "539(2)",
+          "page": 471,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "(2) Subject to subsections (3) through (7), for a laneless parcel, the minimum building setback from any side property line is: (a) 1.2 metres; or (b) 3.0 metres on one side of the"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_539.6_084",
+          "section": "539(6)",
+          "page": 471,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(6) For a corner parcel, the minimum building setback from a side property line shared with a street is 0.6 metres."
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_540.2_089",
+          "section": "540(2)",
+          "page": 472,
+          "score": 0.015152,
+          "relevant": true,
+          "text_preview": "(2) On a laned or corner parcel, the minimum building setback from a rear property line is 1.2 metres. 62P2018 540.1 Fences"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_setback_rear_001",
+      "query": "setback min rear_yard R-CG District >= 7.5 m rear property line 7.5 rear",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.75,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_540 .1_088",
+          "section": "540 (1)",
+          "page": 472,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "540 (1) Unless otherwise referenced in subsection (2) the minimum building setback from a rear property line is 7.5 metres."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_351.4_020",
+          "section": "351(4)",
+          "page": 395,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(4) Except in the R-CG District, a Secondary Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_352.7_031",
+          "section": "352(7)",
+          "page": 397,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(7) Except in the R-CG District, a Backyard Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres w"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "section": "352(4.1)",
+          "page": 396,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_540.2_089",
+          "section": "540(2)",
+          "page": 472,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(2) On a laned or corner parcel, the minimum building setback from a rear property line is 1.2 metres. 62P2018 540.1 Fences"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "section": "541(2)",
+          "page": 472,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(2) Where a building setback is required from a property line shared with another parcel designated with a low density residential district, the M-CG or H-GO District the maximum b"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_setback_rear_laned_001",
+      "query": "setback min rear_yard R-CG District >= 1.2 m on a laned or corner parcel rear property line 1.2 laned rear laned",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_540.2_089",
+          "section": "540(2)",
+          "page": 472,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(2) On a laned or corner parcel, the minimum building setback from a rear property line is 1.2 metres. 62P2018 540.1 Fences"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_539.8_086",
+          "section": "539(8)",
+          "page": 472,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(8) Unless otherwise referenced in subsection (9), on a laned parcel the minimum building setback from a side property line for a private garage attached to a main residential buil"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_539.9_087",
+          "section": "539(9)",
+          "page": 472,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(9) On a laned parcel, the minimum building setback for a private garage attached to a main residential building that does not share a side or rear property line with a street may "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_539.4_082",
+          "section": "539(4)",
+          "page": 471,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(4) The minimum building setback from a side property line may be reduced to a zero setback where: (a) the owner of the parcel proposed for development and the owner of the adjacen"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_534.2_074",
+          "section": "534(2)",
+          "page": 470,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(2) On a laned parcel, there is no maximum building depth for a main residential building wholly contained to the rear of 40.0 percent parcel depth where: (a) there is more than on"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_540 .1_088",
+          "section": "540 (1)",
+          "page": 472,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "540 (1) Unless otherwise referenced in subsection (2) the minimum building setback from a rear property line is 7.5 metres."
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_setback_corner_street_001",
+      "query": "setback min side_yard R-CG District >= 0.6 m corner parcel; side property line shared with a street side property line 0.6 corner",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_539.6_084",
+          "section": "539(6)",
+          "page": 471,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(6) For a corner parcel, the minimum building setback from a side property line shared with a street is 0.6 metres."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_352.9_033",
+          "section": "352(9)",
+          "page": 397,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "(9) A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres f"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_539.8_086",
+          "section": "539(8)",
+          "page": 472,
+          "score": 0.015873,
+          "relevant": true,
+          "text_preview": "(8) Unless otherwise referenced in subsection (9), on a laned parcel the minimum building setback from a side property line for a private garage attached to a main residential buil"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "section": "352(4.1)",
+          "page": 396,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "section": "534(3)",
+          "page": 470,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(3) For a main residential building that is located on a corner parcel there is no maximum building depth where the minimum building setback from the side property line shared with"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "section": "541(2)",
+          "page": 472,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(2) Where a building setback is required from a property line shared with another parcel designated with a low density residential district, the M-CG or H-GO District the maximum b"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_setback_side_laneless_001",
+      "query": "setback min side_yard R-CG District >= 3.0 m laneless parcel; one side where no provision is made for a private garage (s.539(2)(b)) side property line 3.0 side laneless",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.833,
+      "exact_support_hit": false,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": false,
+      "failure_reason": "scope_missing",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "section": "539(2)",
+          "page": 471,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(2) Subject to subsections (3) through (7), for a laneless parcel, the minimum building setback from any side property line is: (a) 1.2 metres; or (b) 3.0 metres on one side of the"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_539.7_085",
+          "section": "539(7)",
+          "page": 471,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "(7) The building setback from a side property line of 3.0 metres required in subsection 2(b) may be reduced to zero metres where the owner of the parcel proposed for development an"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_539.4_082",
+          "section": "539(4)",
+          "page": 471,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(4) The minimum building setback from a side property line may be reduced to a zero setback where: (a) the owner of the parcel proposed for development and the owner of the adjacen"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_539.8_086",
+          "section": "539(8)",
+          "page": 472,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(8) Unless otherwise referenced in subsection (9), on a laned parcel the minimum building setback from a side property line for a private garage attached to a main residential buil"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "section": "534(3)",
+          "page": 470,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(3) The maximum parcel coverage referenced in subsections (1) and (2), must be reduced by: (a) 21.0 square metres where one motor vehicle parking stall is required on a parcel that"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "section": "534(3)",
+          "page": 470,
+          "score": 0.015152,
+          "relevant": true,
+          "text_preview": "(3) For a main residential building that is located on a corner parcel there is no maximum building depth where the minimum building setback from the side property line shared with"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_height_001",
+      "query": "height max building R-CG District <= 11.0 m height 11.0 height",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_541 .1_091",
+          "section": "541 (1)",
+          "page": 472,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "541 (1) Unless otherwise referenced in subsections (2), (3) and (4), the maximum building height is 11.0 metres measured from grade."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "section": "541(2)",
+          "page": 472,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "(2) Where a building setback is required from a property line shared with another parcel designated with a low density residential district, the M-CG or H-GO District the maximum b"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_351.4_020",
+          "section": "351(4)",
+          "page": 395,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(4) Except in the R-CG District, a Secondary Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_352.7_031",
+          "section": "352(7)",
+          "page": 397,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(7) Except in the R-CG District, a Backyard Suite must have a private 56P2022 amenity space that: (a) is located outdoors; and 16P2018 (b) has a minimum area of 7.5 square metres w"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_360.1_045",
+          "section": "360(1)",
+          "page": 399,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "360 (1) Unless otherwise referenced in (5), the building height of a 3P2010 Contextual Semi-detached Dwelling, Contextual Single Detached Dwelling, Duplex Dwelling, Semi-detached D"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_529_066",
+          "section": "529",
+          "page": 469,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "The maximum density for parcels designated R-CG District is 75 units per hectare."
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_lot_coverage_001",
+      "query": "lot_coverage max parcel_coverage R-CG District <= 45.0 % for all other uses (s.534(4) general R-CG parcel-coverage cap, distinct from the s.534(1)/(2) contextual-dwelling coverage) parcel coverage 45.0 coverage",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_534.4_073",
+          "section": "534(4)",
+          "page": 470,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(4) For all other uses, the maximum parcel coverage is 45.0 percent."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_534.2_071",
+          "section": "534(2)",
+          "page": 469,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "(2) Unless otherwise referenced in subsection (3), the maximum 21P2024 cumulative building coverage over all the parcels subject to a single development permit containing a Context"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_529_066",
+          "section": "529",
+          "page": 469,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "The maximum density for parcels designated R-CG District is 75 units per hectare."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "section": "534(3)",
+          "page": 470,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(3) The maximum parcel coverage referenced in subsections (1) and (2), must be reduced by: (a) 21.0 square metres where one motor vehicle parking stall is required on a parcel that"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_525.2_054",
+          "section": "525(2)",
+          "page": 465,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(2) The Residential – Grade-Oriented Infill (R-CGex) District has the 62P2018 same purpose as the Residential – Grade-Oriented Infill (R-CG) District except that it does not accomm"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_351.2_017",
+          "section": "351(2)",
+          "page": 395,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "(2) Except as otherwise stated in subsections (2.1) and (3), the maximum 23P2016 floor area of a Secondary Suite, excluding any area covered by stairways and landings, is 100.0 squ"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_setback_garage_001",
+      "query": "setback min side_yard R-CG District >= 0.6 m on a laned parcel; private garage attached to a main residential building (s.539(8)) side property line 0.6 garage",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.692,
+      "exact_support_hit": false,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": false,
+      "failure_reason": "scope_missing",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_539.8_086",
+          "section": "539(8)",
+          "page": 472,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(8) Unless otherwise referenced in subsection (9), on a laned parcel the minimum building setback from a side property line for a private garage attached to a main residential buil"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_539.9_087",
+          "section": "539(9)",
+          "page": 472,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(9) On a laned parcel, the minimum building setback for a private garage attached to a main residential building that does not share a side or rear property line with a street may "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "section": "539(2)",
+          "page": 471,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(2) Subject to subsections (3) through (7), for a laneless parcel, the minimum building setback from any side property line is: (a) 1.2 metres; or (b) 3.0 metres on one side of the"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_539.6_084",
+          "section": "539(6)",
+          "page": 471,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "(6) For a corner parcel, the minimum building setback from a side property line shared with a street is 0.6 metres."
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "section": "352(1)",
+          "page": 395,
+          "score": 0.015385,
+          "relevant": true,
+          "text_preview": "352 (1) For a Backyard Suite, the minimum building setback from a rear property line is: (a) 1.5 metres for any portion of the building used as a Backyard Suite; and (b) 0.6 metres"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_352.9_033",
+          "section": "352(9)",
+          "page": 397,
+          "score": 0.015152,
+          "relevant": true,
+          "text_preview": "(9) A balcony attached to a Backyard Suite may project into a required 10P2019 setback area from a property line shared with a street or a lane to a minimum setback of 0.6 metres f"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_separation_frontrear_001",
+      "query": "building_separation min building_separation R-CG District >= 6.5 m between the main residential buildings on the front portion and the rear portion of the parcel (s.534(2)) separation 6.5 separation",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": false,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": false,
+      "failure_reason": "scope_missing",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_534.2_074",
+          "section": "534(2)",
+          "page": 470,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(2) On a laned parcel, there is no maximum building depth for a main residential building wholly contained to the rear of 40.0 percent parcel depth where: (a) there is more than on"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "section": "352(3)",
+          "page": 396,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(3) Unless otherwise referenced in subsections (3.1) and (3.2), a minimum separation of 5.0 metres is required between the closest façade of the main residential building to the cl"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "section": "534(3)",
+          "page": 470,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(3) For a main residential building that is located on a corner parcel there is no maximum building depth where the minimum building setback from the side property line shared with"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "section": "541(4)",
+          "page": 473,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(4) Where not located on a corner parcel, the maximum building height 56P2022 is 8.6 metres for any portion of a main residential building located between the rear property line an"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_352.3.1_025",
+          "section": "352(3.1)",
+          "page": 396,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(3.1) The minimum façade separation in subsection (3) may be reduced to"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_540.1_090",
+          "section": "540.1",
+          "page": 472,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "540.1 The height of a fence above grade at any point along a fence line must not exceed 1.2 metres for any portion of a fence extending between the foremost front façade of the imm"
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_height_rear_portion_001",
+      "query": "height max building R-CG District <= 8.6 m where not located on a corner parcel; portion of a main residential building between the rear property line and 60% parcel depth (s.541(4)) building height 8.6 building",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 1.0,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "section": "541(4)",
+          "page": 473,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(4) Where not located on a corner parcel, the maximum building height 56P2022 is 8.6 metres for any portion of a main residential building located between the rear property line an"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "section": "534(3)",
+          "page": 470,
+          "score": 0.016129,
+          "relevant": false,
+          "text_preview": "(3) For a main residential building that is located on a corner parcel there is no maximum building depth where the minimum building setback from the side property line shared with"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_534.2_074",
+          "section": "534(2)",
+          "page": 470,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(2) On a laned parcel, there is no maximum building depth for a main residential building wholly contained to the rear of 40.0 percent parcel depth where: (a) there is more than on"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "section": "541(2)",
+          "page": 472,
+          "score": 0.015625,
+          "relevant": false,
+          "text_preview": "(2) Where a building setback is required from a property line shared with another parcel designated with a low density residential district, the M-CG or H-GO District the maximum b"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_540.1_090",
+          "section": "540.1",
+          "page": 472,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "540.1 The height of a fence above grade at any point along a fence line must not exceed 1.2 metres for any portion of a fence extending between the foremost front façade of the imm"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_361 .1_049",
+          "section": "361 (1)",
+          "page": 400,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "361 (1) In addition to the rules of sections 360 (2) and (3), for a Contextual Semi-detached Dwelling, Contextual Single Detached Dwelling, Duplex Dwelling, Semi-detached Dwelling "
+        }
+      ]
+    },
+    {
+      "gold_id": "cal_rcg_setback_side_depth_001",
+      "query": "setback min side_yard R-CG District >= 3.0 m side property line shared with another parcel; building portion between the rear property line and 50% parcel depth (s.534(3)) side property line 3.0 side",
+      "source_block_id": null,
+      "source_block_hit": false,
+      "recall_hit": true,
+      "context_precision": 0.917,
+      "exact_support_hit": true,
+      "value_hit": true,
+      "unit_hit": true,
+      "operator_hit": true,
+      "scope_hit": true,
+      "failure_reason": null,
+      "top_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "section": "534(3)",
+          "page": 470,
+          "score": 0.016393,
+          "relevant": true,
+          "text_preview": "(3) For a main residential building that is located on a corner parcel there is no maximum building depth where the minimum building setback from the side property line shared with"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "section": "352(4.1)",
+          "page": 396,
+          "score": 0.016129,
+          "relevant": true,
+          "text_preview": "(4.1) The maximum building height for a Backyard Suite is: (a) 5.0 metres measured from grade at a side property line shared with a parcel designated with a low density residential"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "calgary_rcg_539.6_084",
+          "section": "539(6)",
+          "page": 471,
+          "score": 0.015873,
+          "relevant": false,
+          "text_preview": "(6) For a corner parcel, the minimum building setback from a side property line shared with a street is 0.6 metres."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "section": "539(2)",
+          "page": 471,
+          "score": 0.015625,
+          "relevant": true,
+          "text_preview": "(2) Subject to subsections (3) through (7), for a laneless parcel, the minimum building setback from any side property line is: (a) 1.2 metres; or (b) 3.0 metres on one side of the"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "section": "541(2)",
+          "page": 472,
+          "score": 0.015385,
+          "relevant": false,
+          "text_preview": "(2) Where a building setback is required from a property line shared with another parcel designated with a low density residential district, the M-CG or H-GO District the maximum b"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "calgary_rcg_539.1_079",
+          "section": "539(1)",
+          "page": 471,
+          "score": 0.015152,
+          "relevant": false,
+          "text_preview": "539 (1) Subject to subsections (3) through (9), the minimum building setback from any side property line is 1.2 metres."
+        }
+      ]
+    }
+  ]
+}

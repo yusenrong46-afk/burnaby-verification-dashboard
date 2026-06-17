@@ -1,0 +1,5579 @@
+{
+  "created_at": "2026-06-17T05:55:01.909679+00:00",
+  "city": "calgary_rcg",
+  "purpose": "M5.6 slot confusion matrix for too-much/too-little verification.",
+  "slot_metrics": {
+    "total_rule_slots": 247,
+    "verified_rule_count": 29,
+    "verified_mapped_rule_count": 29,
+    "verified_slot_mapping_rate": 1.0,
+    "effective_verified_slot_count": 20,
+    "review_slot_count": 24,
+    "candidate_slot_count": 79,
+    "candidate_only_slot_count": 38,
+    "missed_slot_count": 167,
+    "unsupported_verified_rule_count": 0,
+    "raw_duplicate_verified_slot_count": 8,
+    "duplicate_merged_count": 9,
+    "duplicate_verified_slot_count": 0,
+    "raw_total_rule_slots": 247,
+    "source_denominator_slot_count": 186,
+    "observed_supplement_slot_count": 61,
+    "scored_total_slots": 110,
+    "distinct_scored_legal_slot_count": 62,
+    "scored_verified_slot_count": 10,
+    "scored_review_slot_count": 5,
+    "scored_missed_slot_count": 42,
+    "scored_verified_coverage": 0.161,
+    "scored_active_coverage": 0.323,
+    "scored_verified_slot_id_count": 13,
+    "scored_review_slot_id_count": 9,
+    "scored_candidate_only_slot_id_count": 8
+  },
+  "scored_slot_metrics": {
+    "raw_total_rule_slots": 247,
+    "source_denominator_slot_count": 186,
+    "observed_supplement_slot_count": 61,
+    "scored_total_slots": 110,
+    "distinct_scored_legal_slot_count": 62,
+    "scored_verified_slot_count": 10,
+    "scored_review_slot_count": 5,
+    "scored_missed_slot_count": 42,
+    "scored_verified_coverage": 0.161,
+    "scored_active_coverage": 0.323,
+    "scored_verified_slot_id_count": 13,
+    "scored_review_slot_id_count": 9,
+    "scored_candidate_only_slot_id_count": 8
+  },
+  "slot_confusion_matrix": {
+    "verified_slots": 20,
+    "review_slots": 24,
+    "candidate_only_slots": 38,
+    "missed_slots": 167,
+    "duplicate_verified_slots": 0,
+    "unsupported_verified_rules": 0
+  },
+  "scored_slot_confusion_matrix": {
+    "distinct_legal_slots": 62,
+    "verified_slots": 10,
+    "review_only_slots": 5,
+    "missed_slots": 42,
+    "verified_coverage": 0.161,
+    "active_coverage": 0.323
+  },
+  "slot_status": {
+    "verified_slot_ids": [
+      "calgary_rcg:clause:calgary_rcg_351.2_017:m002",
+      "calgary_rcg:clause:calgary_rcg_352.1_022:m002",
+      "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+      "calgary_rcg:clause:calgary_rcg_352.5_029:m002",
+      "calgary_rcg:clause:calgary_rcg_534.3_075:m001",
+      "calgary_rcg:clause:calgary_rcg_534.4_073:m001",
+      "calgary_rcg:clause:calgary_rcg_538.1_077:m002",
+      "calgary_rcg:clause:calgary_rcg_539.1_079:m002",
+      "calgary_rcg:clause:calgary_rcg_539.6_084:m001",
+      "calgary_rcg:clause:calgary_rcg_539.8_086:m001",
+      "calgary_rcg:clause:calgary_rcg_540 .1_088:m002",
+      "calgary_rcg:clause:calgary_rcg_540.2_089:m001",
+      "calgary_rcg:clause:calgary_rcg_541 .1_091:m002",
+      "calgary_rcg:observed:2fe15004dc0d0e20",
+      "calgary_rcg:observed:6c20003f1cbe4040",
+      "calgary_rcg:observed:8647a4322a841f00",
+      "calgary_rcg:observed:8da58dd28cec0222",
+      "calgary_rcg:observed:90f49f72967e9fe3",
+      "calgary_rcg:observed:ca26f8b0128565b6",
+      "calgary_rcg:observed:fc9f28286d9ae05e"
+    ],
+    "review_slot_ids": [
+      "calgary_rcg:clause:calgary_rcg_352.1_022:m003",
+      "calgary_rcg:clause:calgary_rcg_352.3.2_026:m001",
+      "calgary_rcg:clause:calgary_rcg_352.5_029:m001",
+      "calgary_rcg:clause:calgary_rcg_352.5_029:m002",
+      "calgary_rcg:clause:calgary_rcg_358.1_038:m002",
+      "calgary_rcg:clause:calgary_rcg_529_066:m001",
+      "calgary_rcg:clause:calgary_rcg_539.2_080:m001",
+      "calgary_rcg:clause:calgary_rcg_539.2_080:m002",
+      "calgary_rcg:clause:calgary_rcg_539.4_082:m001",
+      "calgary_rcg:observed:1580c0bd9ea6c83c",
+      "calgary_rcg:observed:31b6e013f0566ce8",
+      "calgary_rcg:observed:353c95e7a6619141",
+      "calgary_rcg:observed:4878c3d5f4f64e76",
+      "calgary_rcg:observed:4c1003b32625f6e8",
+      "calgary_rcg:observed:4f44ec2ec2caea67",
+      "calgary_rcg:observed:8647a4322a841f00",
+      "calgary_rcg:observed:9da1b67dc7f15f6e",
+      "calgary_rcg:observed:a0f8302566dd4cab",
+      "calgary_rcg:observed:a7327d64fca3c407",
+      "calgary_rcg:observed:b525b5bf015c0aef",
+      "calgary_rcg:observed:d73b6564e0a9622d",
+      "calgary_rcg:observed:dba0411fad3dd39a",
+      "calgary_rcg:observed:dd34d76b0b5bc0fe",
+      "calgary_rcg:observed:e583639eced2fbd6"
+    ],
+    "candidate_only_slot_ids": [
+      "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+      "calgary_rcg:clause:calgary_rcg_351.3_019:m001",
+      "calgary_rcg:clause:calgary_rcg_352.6_030:m001",
+      "calgary_rcg:clause:calgary_rcg_534.3_072:m001",
+      "calgary_rcg:clause:calgary_rcg_534.3_072:m002",
+      "calgary_rcg:clause:calgary_rcg_539.7_085:m001",
+      "calgary_rcg:clause:calgary_rcg_541.4_093:m003",
+      "calgary_rcg:clause:calgary_rcg_544.2_117:m001",
+      "calgary_rcg:observed:0230a88bfea479e6",
+      "calgary_rcg:observed:0980ba3220a55bb7",
+      "calgary_rcg:observed:1dcc43def7a9b632",
+      "calgary_rcg:observed:2671e153282b2290",
+      "calgary_rcg:observed:2dc0a5582b2e9e9e",
+      "calgary_rcg:observed:3255b9d1c67e8c8d",
+      "calgary_rcg:observed:37ced621d489cb41",
+      "calgary_rcg:observed:3de28995839f550a",
+      "calgary_rcg:observed:4342c0cdd65929f7",
+      "calgary_rcg:observed:4ba5072adc96063e",
+      "calgary_rcg:observed:57dddaac2d816465",
+      "calgary_rcg:observed:627e23637b36846b",
+      "calgary_rcg:observed:765db9021d890fcb",
+      "calgary_rcg:observed:7d834a75bad923af",
+      "calgary_rcg:observed:8711fa68687d08d2",
+      "calgary_rcg:observed:c181b877d067037b",
+      "calgary_rcg:observed:d01e0cf99aaf56b3",
+      "calgary_rcg:observed:d50961d766a2fbc8",
+      "calgary_rcg:observed:d54d7e1c8765a396",
+      "calgary_rcg:observed:d6affb3ac8fe0bdd",
+      "calgary_rcg:observed:d8cf506b9406c6b8",
+      "calgary_rcg:observed:dcd46fa3c5d69c63",
+      "calgary_rcg:observed:e2b3961103d394a2",
+      "calgary_rcg:observed:e7ea54d4c0da7905",
+      "calgary_rcg:observed:e9e6cc54e2996ea4",
+      "calgary_rcg:observed:eb38d5b9e16a690a",
+      "calgary_rcg:observed:eb7dcd50f3a2b67e",
+      "calgary_rcg:observed:f67acae32f84d86f",
+      "calgary_rcg:observed:f7ac3065557affcb",
+      "calgary_rcg:observed:f9077fc9f5674809"
+    ],
+    "missed_slot_ids": [
+      "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m001",
+      "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m002",
+      "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m004",
+      "calgary_rcg:clause:calgary_rcg_347.1_001:m001",
+      "calgary_rcg:clause:calgary_rcg_347.1_001:m002",
+      "calgary_rcg:clause:calgary_rcg_347.1_001:m003",
+      "calgary_rcg:clause:calgary_rcg_347.1_001:m004",
+      "calgary_rcg:clause:calgary_rcg_347.1_001:m005",
+      "calgary_rcg:clause:calgary_rcg_347.1_001:m006",
+      "calgary_rcg:clause:calgary_rcg_347.2_002:m001",
+      "calgary_rcg:clause:calgary_rcg_347.3_003:m001",
+      "calgary_rcg:clause:calgary_rcg_347.3_003:m002",
+      "calgary_rcg:clause:calgary_rcg_347.3_008:m001",
+      "calgary_rcg:clause:calgary_rcg_347.4_004:m001",
+      "calgary_rcg:clause:calgary_rcg_348_012:m001",
+      "calgary_rcg:clause:calgary_rcg_349.2_014:m001",
+      "calgary_rcg:clause:calgary_rcg_351.2_017:m001",
+      "calgary_rcg:clause:calgary_rcg_351.2_017:m003",
+      "calgary_rcg:clause:calgary_rcg_351.2_017:m004",
+      "calgary_rcg:clause:calgary_rcg_351.2_017:m005",
+      "calgary_rcg:clause:calgary_rcg_351.2_017:m006",
+      "calgary_rcg:clause:calgary_rcg_351.4_020:m001",
+      "calgary_rcg:clause:calgary_rcg_351.4_020:m002",
+      "calgary_rcg:clause:calgary_rcg_351.4_020:m003",
+      "calgary_rcg:clause:calgary_rcg_351.4_020:m004",
+      "calgary_rcg:clause:calgary_rcg_351.4_020:m005",
+      "calgary_rcg:clause:calgary_rcg_351.4_020:m006",
+      "calgary_rcg:clause:calgary_rcg_352.1_022:m001",
+      "calgary_rcg:clause:calgary_rcg_352.3.2_026:m002",
+      "calgary_rcg:clause:calgary_rcg_352.3_024:m002",
+      "calgary_rcg:clause:calgary_rcg_352.4.1_028:m001",
+      "calgary_rcg:clause:calgary_rcg_352.4.1_028:m002",
+      "calgary_rcg:clause:calgary_rcg_352.4_027:m001",
+      "calgary_rcg:clause:calgary_rcg_352.4_027:m002",
+      "calgary_rcg:clause:calgary_rcg_352.7_031:m001",
+      "calgary_rcg:clause:calgary_rcg_352.7_031:m002",
+      "calgary_rcg:clause:calgary_rcg_352.7_031:m003",
+      "calgary_rcg:clause:calgary_rcg_352.7_031:m004",
+      "calgary_rcg:clause:calgary_rcg_352.7_031:m005",
+      "calgary_rcg:clause:calgary_rcg_352.7_031:m006",
+      "calgary_rcg:clause:calgary_rcg_352.8_032:m001",
+      "calgary_rcg:clause:calgary_rcg_352.9_033:m001",
+      "calgary_rcg:clause:calgary_rcg_352.9_033:m002",
+      "calgary_rcg:clause:calgary_rcg_358.1_038:m001",
+      "calgary_rcg:clause:calgary_rcg_360.2_046:m001",
+      "calgary_rcg:clause:calgary_rcg_360.3_047:m001",
+      "calgary_rcg:clause:calgary_rcg_360.4_048:m001",
+      "calgary_rcg:clause:calgary_rcg_360.4_048:m002",
+      "calgary_rcg:clause:calgary_rcg_365_052:m001",
+      "calgary_rcg:clause:calgary_rcg_532_067:m001",
+      "calgary_rcg:clause:calgary_rcg_534.2_071:m001",
+      "calgary_rcg:clause:calgary_rcg_534.2_074:m001",
+      "calgary_rcg:clause:calgary_rcg_534.2_074:m002",
+      "calgary_rcg:clause:calgary_rcg_534.3_075:m002",
+      "calgary_rcg:clause:calgary_rcg_538.1_077:m001",
+      "calgary_rcg:clause:calgary_rcg_538.1_077:m003",
+      "calgary_rcg:clause:calgary_rcg_538.2_078:m001",
+      "calgary_rcg:clause:calgary_rcg_539.1_079:m001",
+      "calgary_rcg:clause:calgary_rcg_540 .1_088:m001",
+      "calgary_rcg:clause:calgary_rcg_540.1_090:m001",
+      "calgary_rcg:clause:calgary_rcg_540.1_090:m002",
+      "calgary_rcg:clause:calgary_rcg_540.1_090:m003",
+      "calgary_rcg:clause:calgary_rcg_540.2_089:m002",
+      "calgary_rcg:clause:calgary_rcg_540.2_089:m003",
+      "calgary_rcg:clause:calgary_rcg_541 .1_091:m001",
+      "calgary_rcg:clause:calgary_rcg_541.2_092:m001",
+      "calgary_rcg:clause:calgary_rcg_541.4_093:m001",
+      "calgary_rcg:clause:calgary_rcg_541.4_093:m002",
+      "calgary_rcg:clause:calgary_rcg_542.2_107:m001",
+      "calgary_rcg:clause:calgary_rcg_542.2_107:m002",
+      "calgary_rcg:clause:calgary_rcg_542.2_107:m003",
+      "calgary_rcg:clause:calgary_rcg_542.3_108:m001",
+      "calgary_rcg:clause:calgary_rcg_542.4_109:m001",
+      "calgary_rcg:clause:calgary_rcg_542.4_109:m002",
+      "calgary_rcg:clause:calgary_rcg_542.4_109:m003",
+      "calgary_rcg:clause:calgary_rcg_542.5_110:m001",
+      "calgary_rcg:clause:calgary_rcg_542.5_110:m002",
+      "calgary_rcg:clause:calgary_rcg_542.5_110:m003",
+      "calgary_rcg:clause:calgary_rcg_542.7_101:m001",
+      "calgary_rcg:observed:0a478c60b277c68e",
+      "calgary_rcg:observed:1d264937ce668664",
+      "calgary_rcg:observed:26b5d534faa65a8e",
+      "calgary_rcg:observed:4259ee89c520a0f5",
+      "calgary_rcg:observed:4b093e0f3432306f",
+      "calgary_rcg:observed:85b2286514b550fd",
+      "calgary_rcg:observed:9832337bc596307e",
+      "calgary_rcg:observed:a8a0d15355a2e4fe",
+      "calgary_rcg:observed:ad552c8deeaccf4d",
+      "calgary_rcg:observed:d11fe0ff494d236e",
+      "calgary_rcg:table:calgary_rcg_table_001_r001:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r001:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r001:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r002:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r002:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r002:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r003:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r003:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r003:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r004:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r004:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r004:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r005:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r005:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r005:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r006:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r006:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r006:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r007:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r007:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r007:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r008:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r008:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r008:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r009:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r009:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r009:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r010:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r010:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r010:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r011:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r011:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r011:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r012:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r012:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r012:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r013:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r013:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r013:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r014:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r014:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r014:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r015:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r015:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r015:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r016:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r016:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_001_r016:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r001:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r001:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r001:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r002:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r002:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r002:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r003:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r003:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r003:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r004:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r004:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r004:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r005:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r005:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r005:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r006:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r006:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r006:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r007:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r007:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r007:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r008:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r008:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r008:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r009:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r009:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r009:c03:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r010:c01:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r010:c02:m001",
+      "calgary_rcg:table:calgary_rcg_table_002_r010:c03:m001"
+    ]
+  },
+  "mappings": {
+    "candidate_rule_mappings": [
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0001_001",
+        "slot_id": "calgary_rcg:observed:8647a4322a841f00",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0001_002",
+        "slot_id": "calgary_rcg:observed:a0f8302566dd4cab",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0001_003",
+        "slot_id": "calgary_rcg:observed:31b6e013f0566ce8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0002_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_075:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0002_002",
+        "slot_id": "calgary_rcg:observed:d73b6564e0a9622d",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50.0",
+        "unit": "%",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0003_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0003_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0006_001",
+        "slot_id": "calgary_rcg:observed:fc9f28286d9ae05e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0006_002",
+        "slot_id": "calgary_rcg:observed:2dc0a5582b2e9e9e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "40.0",
+        "unit": "%",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0006_003",
+        "slot_id": "calgary_rcg:observed:d54d7e1c8765a396",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "3.1",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0007_001",
+        "slot_id": "calgary_rcg:observed:9da1b67dc7f15f6e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 398,
+          "chunk_id": "calgary_rcg_358.3_040",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0009_001",
+        "slot_id": "calgary_rcg:observed:2fe15004dc0d0e20",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4_027",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0013_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_538.1_077:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_538.1_077",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0014_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_072:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "21.0",
+        "unit": "m2",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0014_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_072:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "19.0",
+        "unit": "m2",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0015_001",
+        "slot_id": "calgary_rcg:observed:4878c3d5f4f64e76",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0015_002",
+        "slot_id": "calgary_rcg:observed:4f44ec2ec2caea67",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0015_003",
+        "slot_id": "calgary_rcg:observed:e583639eced2fbd6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0017_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_351.3_019:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "10.0",
+        "unit": "%",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_351.3_019",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0018_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0019_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.6_030:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "10.0",
+        "unit": "%",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.6_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0021_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "75.0",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0021_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "2.5",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0022_001",
+        "slot_id": "calgary_rcg:observed:353c95e7a6619141",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "45.0",
+        "unit": "%",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_534.2_071",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0022_002",
+        "slot_id": "calgary_rcg:observed:dba0411fad3dd39a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50.0",
+        "unit": "%",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_534.2_071",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0023_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.4_073:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "45.0",
+        "unit": "%",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.4_073",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0025_001",
+        "slot_id": "calgary_rcg:observed:7d834a75bad923af",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "75",
+        "unit": "units per hectare",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_529_066",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0027_001",
+        "slot_id": "calgary_rcg:observed:8da58dd28cec0222",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.5",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.2_074",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0031_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_358.1_038:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 398,
+          "chunk_id": "calgary_rcg_358.1_038",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0032_001",
+        "slot_id": "calgary_rcg:observed:dd34d76b0b5bc0fe",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.2",
+        "unit": "m",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_532_067",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0033_001",
+        "slot_id": "calgary_rcg:observed:1580c0bd9ea6c83c",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_538.2_078",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_003",
+        "slot_id": "calgary_rcg:observed:f9077fc9f5674809",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50",
+        "unit": "%",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_004",
+        "slot_id": "calgary_rcg:observed:4342c0cdd65929f7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_005",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_006",
+        "slot_id": "calgary_rcg:observed:d6affb3ac8fe0bdd",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_007",
+        "slot_id": "calgary_rcg:observed:4342c0cdd65929f7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_008",
+        "slot_id": "calgary_rcg:observed:f67acae32f84d86f",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_009",
+        "slot_id": "calgary_rcg:observed:eb38d5b9e16a690a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0040_010",
+        "slot_id": "calgary_rcg:observed:eb38d5b9e16a690a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0041_001",
+        "slot_id": "calgary_rcg:observed:1dcc43def7a9b632",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0041_002",
+        "slot_id": "calgary_rcg:observed:3255b9d1c67e8c8d",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0041_003",
+        "slot_id": "calgary_rcg:observed:e2b3961103d394a2",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0042_001",
+        "slot_id": "calgary_rcg:observed:4c1003b32625f6e8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0042_002",
+        "slot_id": "calgary_rcg:observed:b525b5bf015c0aef",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "11.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0043_001",
+        "slot_id": "calgary_rcg:observed:dcd46fa3c5d69c63",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0043_002",
+        "slot_id": "calgary_rcg:observed:e9e6cc54e2996ea4",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0043_003",
+        "slot_id": "calgary_rcg:observed:f7ac3065557affcb",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0043_004",
+        "slot_id": "calgary_rcg:observed:dcd46fa3c5d69c63",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0043_005",
+        "slot_id": "calgary_rcg:observed:0230a88bfea479e6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0043_006",
+        "slot_id": "calgary_rcg:observed:e7ea54d4c0da7905",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0044_001",
+        "slot_id": "calgary_rcg:observed:d8cf506b9406c6b8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "1.0",
+        "unit": "m",
+        "source": {
+          "page": 399,
+          "chunk_id": "calgary_rcg_360.2_046",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0045_001",
+        "slot_id": "calgary_rcg:observed:d50961d766a2fbc8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "1.0",
+        "unit": "m",
+        "source": {
+          "page": 399,
+          "chunk_id": "calgary_rcg_360.3_047",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0046_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_541 .1_091:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "11.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541 .1_091",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0047_001",
+        "slot_id": "calgary_rcg:observed:ca26f8b0128565b6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "8.6",
+        "unit": "m",
+        "source": {
+          "page": 473,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0047_002",
+        "slot_id": "calgary_rcg:observed:a7327d64fca3c407",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "60.0",
+        "unit": "%",
+        "source": {
+          "page": 473,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0048_001",
+        "slot_id": "calgary_rcg:observed:eb7dcd50f3a2b67e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 400,
+          "chunk_id": "calgary_rcg_360.4_048",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0048_002",
+        "slot_id": "calgary_rcg:observed:8711fa68687d08d2",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 400,
+          "chunk_id": "calgary_rcg_360.4_048",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0050_001",
+        "slot_id": "calgary_rcg:observed:c181b877d067037b",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "65.0",
+        "unit": "%",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0051_001",
+        "slot_id": "calgary_rcg:observed:765db9021d890fcb",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "60.0",
+        "unit": "%",
+        "source": {
+          "page": 392,
+          "chunk_id": "calgary_rcg_347.3_008",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0053_001",
+        "slot_id": "calgary_rcg:observed:3de28995839f550a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.3",
+        "unit": "m",
+        "source": {
+          "page": 394,
+          "chunk_id": "calgary_rcg_349.2_014",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0054_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.1_079:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.1_079",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0055_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.8_086:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_539.8_086",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0056_001",
+        "slot_id": "calgary_rcg:observed:4ba5072adc96063e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "40.0",
+        "unit": "m2",
+        "source": {
+          "page": 401,
+          "chunk_id": "calgary_rcg_365_052",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0058_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_544.2_117:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.5",
+        "unit": "m",
+        "source": {
+          "page": 475,
+          "chunk_id": "calgary_rcg_544.2_117",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0064_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.7_085:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.7_085",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0064_002",
+        "slot_id": "calgary_rcg:observed:57dddaac2d816465",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.7_085",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0067_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_540.2_089:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_540.2_089",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0068_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.4_082:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.4_082",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0069_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.2_080:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0069_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.2_080:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0070_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.6_084:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.6_084",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0071_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_540 .1_088:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_540 .1_088",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0082_001",
+        "slot_id": "calgary_rcg:observed:627e23637b36846b",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "1",
+        "unit": "units",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_353.1.1_034",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0093_001",
+        "slot_id": "calgary_rcg:observed:2671e153282b2290",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.5_083",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0094_001",
+        "slot_id": "calgary_rcg:observed:0980ba3220a55bb7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_539.9_087",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_m4_pack_0096_001",
+        "slot_id": "calgary_rcg:observed:37ced621d489cb41",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.3_081",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_v3clause_m4_pack_0001_001",
+        "slot_id": "calgary_rcg:observed:8647a4322a841f00",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_v3clause_m4_pack_0006_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.3.2_026:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_v3clause_m4_pack_0007_003",
+        "slot_id": "calgary_rcg:observed:6c20003f1cbe4040",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 398,
+          "chunk_id": "calgary_rcg_358.3_040",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_v3clause_m4_pack_0018_004",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_v3clause_m4_pack_0020_005",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_351.2_017:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "100.0",
+        "unit": "m2",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_351.2_017",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_v3clause_m4_pack_0021_006",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "75.0",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0001_001",
+        "slot_id": "calgary_rcg:observed:8647a4322a841f00",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0001_002",
+        "slot_id": "calgary_rcg:observed:a0f8302566dd4cab",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0001_003",
+        "slot_id": "calgary_rcg:observed:31b6e013f0566ce8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0002_001",
+        "slot_id": "calgary_rcg:observed:fc9f28286d9ae05e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0002_002",
+        "slot_id": "calgary_rcg:observed:2dc0a5582b2e9e9e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "40.0",
+        "unit": "%",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0002_003",
+        "slot_id": "calgary_rcg:observed:d54d7e1c8765a396",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "3.1",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0003_001",
+        "slot_id": "calgary_rcg:observed:4878c3d5f4f64e76",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0003_002",
+        "slot_id": "calgary_rcg:observed:4f44ec2ec2caea67",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0003_003",
+        "slot_id": "calgary_rcg:observed:e583639eced2fbd6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0004_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_075:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0004_002",
+        "slot_id": "calgary_rcg:observed:d73b6564e0a9622d",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50.0",
+        "unit": "%",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0005_001",
+        "slot_id": "calgary_rcg:observed:8da58dd28cec0222",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.5",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.2_074",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0006_001",
+        "slot_id": "calgary_rcg:observed:dcd46fa3c5d69c63",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0006_002",
+        "slot_id": "calgary_rcg:observed:e9e6cc54e2996ea4",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0006_003",
+        "slot_id": "calgary_rcg:observed:f7ac3065557affcb",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0006_004",
+        "slot_id": "calgary_rcg:observed:dcd46fa3c5d69c63",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0006_005",
+        "slot_id": "calgary_rcg:observed:0230a88bfea479e6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0006_006",
+        "slot_id": "calgary_rcg:observed:e7ea54d4c0da7905",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0007_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0007_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0008_001",
+        "slot_id": "calgary_rcg:observed:9da1b67dc7f15f6e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 398,
+          "chunk_id": "calgary_rcg_358.3_040",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0009_001",
+        "slot_id": "calgary_rcg:observed:1dcc43def7a9b632",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0009_002",
+        "slot_id": "calgary_rcg:observed:3255b9d1c67e8c8d",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0009_003",
+        "slot_id": "calgary_rcg:observed:e2b3961103d394a2",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_003",
+        "slot_id": "calgary_rcg:observed:f9077fc9f5674809",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50",
+        "unit": "%",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_004",
+        "slot_id": "calgary_rcg:observed:4342c0cdd65929f7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_005",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_006",
+        "slot_id": "calgary_rcg:observed:d6affb3ac8fe0bdd",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_007",
+        "slot_id": "calgary_rcg:observed:4342c0cdd65929f7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_008",
+        "slot_id": "calgary_rcg:observed:f67acae32f84d86f",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_009",
+        "slot_id": "calgary_rcg:observed:eb38d5b9e16a690a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0010_010",
+        "slot_id": "calgary_rcg:observed:eb38d5b9e16a690a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0011_001",
+        "slot_id": "calgary_rcg:observed:4c1003b32625f6e8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0011_002",
+        "slot_id": "calgary_rcg:observed:b525b5bf015c0aef",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "11.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0012_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "75.0",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0012_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "2.5",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0013_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.6_030:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "10.0",
+        "unit": "%",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.6_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0014_001",
+        "slot_id": "calgary_rcg:observed:353c95e7a6619141",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "45.0",
+        "unit": "%",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_534.2_071",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0014_002",
+        "slot_id": "calgary_rcg:observed:dba0411fad3dd39a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50.0",
+        "unit": "%",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_534.2_071",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0015_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_072:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "21.0",
+        "unit": "m2",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0015_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_072:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "19.0",
+        "unit": "m2",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0017_001",
+        "slot_id": "calgary_rcg:observed:4ba5072adc96063e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "40.0",
+        "unit": "m2",
+        "source": {
+          "page": 401,
+          "chunk_id": "calgary_rcg_365_052",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0018_001",
+        "slot_id": "calgary_rcg:observed:1580c0bd9ea6c83c",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_538.2_078",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0019_001",
+        "slot_id": "calgary_rcg:observed:ca26f8b0128565b6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "8.6",
+        "unit": "m",
+        "source": {
+          "page": 473,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0019_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_541.4_093:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "60.0",
+        "unit": "%",
+        "source": {
+          "page": 473,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0020_001",
+        "slot_id": "calgary_rcg:observed:d01e0cf99aaf56b3",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.4_082",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0021_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.7_085:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.7_085",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0021_002",
+        "slot_id": "calgary_rcg:observed:57dddaac2d816465",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.7_085",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0022_001",
+        "slot_id": "calgary_rcg:observed:0980ba3220a55bb7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_539.9_087",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0023_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.2_080:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0023_002",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.2_080:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0024_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0025_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_351.3_019:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "10.0",
+        "unit": "%",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_351.3_019",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0027_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_529_066:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "75",
+        "unit": "units",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_529_066",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0028_001",
+        "slot_id": "calgary_rcg:observed:765db9021d890fcb",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "60.0",
+        "unit": "%",
+        "source": {
+          "page": 392,
+          "chunk_id": "calgary_rcg_347.3_008",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0029_001",
+        "slot_id": "calgary_rcg:observed:627e23637b36846b",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "1",
+        "unit": "units",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_353.1.1_034",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0030_001",
+        "slot_id": "calgary_rcg:observed:2671e153282b2290",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.5_083",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0031_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.8_086:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_539.8_086",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0032_001",
+        "slot_id": "calgary_rcg:observed:37ced621d489cb41",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.3_081",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0033_001",
+        "slot_id": "calgary_rcg:observed:eb7dcd50f3a2b67e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 400,
+          "chunk_id": "calgary_rcg_360.4_048",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0033_002",
+        "slot_id": "calgary_rcg:observed:8711fa68687d08d2",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 400,
+          "chunk_id": "calgary_rcg_360.4_048",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0034_001",
+        "slot_id": "calgary_rcg:observed:c181b877d067037b",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "65.0",
+        "unit": "%",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0035_001",
+        "slot_id": "calgary_rcg:observed:3de28995839f550a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.3",
+        "unit": "m",
+        "source": {
+          "page": 394,
+          "chunk_id": "calgary_rcg_349.2_014",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "candidate",
+        "rule_id": "calgary_rcg_native_v3_repair_pack_0036_001",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_544.2_117:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.5",
+        "unit": "m",
+        "source": {
+          "page": 475,
+          "chunk_id": "calgary_rcg_544.2_117",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      }
+    ],
+    "verified_rule_mappings": [
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_004",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_075:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_006",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_008",
+        "slot_id": "calgary_rcg:observed:fc9f28286d9ae05e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_012",
+        "slot_id": "calgary_rcg:observed:2fe15004dc0d0e20",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4_027",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_013",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_538.1_077:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_538.1_077",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_020",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_026",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.4_073:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "45.0",
+        "unit": "%",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.4_073",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_055",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_541 .1_091:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "11.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541 .1_091",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_056",
+        "slot_id": "calgary_rcg:observed:ca26f8b0128565b6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "8.6",
+        "unit": "m",
+        "source": {
+          "page": 473,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_069",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_540.2_089:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_540.2_089",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_073",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.6_084:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.6_084",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_074",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_540 .1_088:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_540 .1_088",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_079",
+        "slot_id": "calgary_rcg:observed:8647a4322a841f00",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_081",
+        "slot_id": "calgary_rcg:observed:6c20003f1cbe4040",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 398,
+          "chunk_id": "calgary_rcg_358.3_040",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_082",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_083",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_351.2_017:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "100.0",
+        "unit": "m2",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_351.2_017",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_084",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "75.0",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_088",
+        "slot_id": "calgary_rcg:observed:fc9f28286d9ae05e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_094",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_075:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_103",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_130",
+        "slot_id": "calgary_rcg:observed:ca26f8b0128565b6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "8.6",
+        "unit": "m",
+        "source": {
+          "page": 473,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_138",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3_024",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_028",
+        "slot_id": "calgary_rcg:observed:8da58dd28cec0222",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.5",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.2_074",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_063",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.1_079:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.1_079",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_064",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.8_086:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_539.8_086",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_067",
+        "slot_id": "calgary_rcg:observed:90f49f72967e9fe3",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_539.7_085",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_096",
+        "slot_id": "calgary_rcg:observed:8da58dd28cec0222",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "6.5",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.2_074",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_133",
+        "slot_id": "calgary_rcg:observed:90f49f72967e9fe3",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_539.7_085",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "verified",
+        "rule_id": "calgary_rcg_144",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.8_086:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_539.8_086",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      }
+    ],
+    "review_rule_mappings": [
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_001",
+        "slot_id": "calgary_rcg:observed:8647a4322a841f00",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_002",
+        "slot_id": "calgary_rcg:observed:a0f8302566dd4cab",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_003",
+        "slot_id": "calgary_rcg:observed:31b6e013f0566ce8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_005",
+        "slot_id": "calgary_rcg:observed:d73b6564e0a9622d",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50.0",
+        "unit": "%",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_007",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_011",
+        "slot_id": "calgary_rcg:observed:9da1b67dc7f15f6e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 398,
+          "chunk_id": "calgary_rcg_358.3_040",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_016",
+        "slot_id": "calgary_rcg:observed:4878c3d5f4f64e76",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_017",
+        "slot_id": "calgary_rcg:observed:4f44ec2ec2caea67",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_018",
+        "slot_id": "calgary_rcg:observed:e583639eced2fbd6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_022",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "75.0",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_023",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "2.5",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_024",
+        "slot_id": "calgary_rcg:observed:353c95e7a6619141",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "45.0",
+        "unit": "%",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_534.2_071",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_025",
+        "slot_id": "calgary_rcg:observed:dba0411fad3dd39a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50.0",
+        "unit": "%",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_534.2_071",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_029",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_358.1_038:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 398,
+          "chunk_id": "calgary_rcg_358.1_038",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_030",
+        "slot_id": "calgary_rcg:observed:dd34d76b0b5bc0fe",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.2",
+        "unit": "m",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_532_067",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_031",
+        "slot_id": "calgary_rcg:observed:1580c0bd9ea6c83c",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_538.2_078",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_045",
+        "slot_id": "calgary_rcg:observed:4c1003b32625f6e8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_046",
+        "slot_id": "calgary_rcg:observed:b525b5bf015c0aef",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "11.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_057",
+        "slot_id": "calgary_rcg:observed:a7327d64fca3c407",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "60.0",
+        "unit": "%",
+        "source": {
+          "page": 473,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_070",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.4_082:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.4_082",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_071",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.2_080:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_072",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.2_080:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_080",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.3.2_026:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "building_separation",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_085",
+        "slot_id": "calgary_rcg:observed:8647a4322a841f00",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "5.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_086",
+        "slot_id": "calgary_rcg:observed:a0f8302566dd4cab",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_087",
+        "slot_id": "calgary_rcg:observed:31b6e013f0566ce8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.4.1_028",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_091",
+        "slot_id": "calgary_rcg:observed:4878c3d5f4f64e76",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_092",
+        "slot_id": "calgary_rcg:observed:4f44ec2ec2caea67",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_093",
+        "slot_id": "calgary_rcg:observed:e583639eced2fbd6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.8_032",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_095",
+        "slot_id": "calgary_rcg:observed:d73b6564e0a9622d",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50.0",
+        "unit": "%",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_075",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_104",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_352.1_022",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_105",
+        "slot_id": "calgary_rcg:observed:9da1b67dc7f15f6e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 398,
+          "chunk_id": "calgary_rcg_358.3_040",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_119",
+        "slot_id": "calgary_rcg:observed:4c1003b32625f6e8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_120",
+        "slot_id": "calgary_rcg:observed:b525b5bf015c0aef",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "11.0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_541.2_092",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_121",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "75.0",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_122",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.5_029:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "2.5",
+        "unit": "m2",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.5_029",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_124",
+        "slot_id": "calgary_rcg:observed:353c95e7a6619141",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "45.0",
+        "unit": "%",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_534.2_071",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_125",
+        "slot_id": "calgary_rcg:observed:dba0411fad3dd39a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50.0",
+        "unit": "%",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_534.2_071",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_129",
+        "slot_id": "calgary_rcg:observed:1580c0bd9ea6c83c",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_538.2_078",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_136",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.2_080:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_137",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_539.2_080:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.2_080",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "review",
+        "rule_id": "calgary_rcg_140",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_529_066:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "75",
+        "unit": "units",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_529_066",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      }
+    ],
+    "rejected_rule_mappings": [
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_009",
+        "slot_id": "calgary_rcg:observed:2dc0a5582b2e9e9e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "40.0",
+        "unit": "%",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_010",
+        "slot_id": "calgary_rcg:observed:d54d7e1c8765a396",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "3.1",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_014",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_072:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "21.0",
+        "unit": "m2",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_015",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_072:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "19.0",
+        "unit": "m2",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_019",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_351.3_019:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "10.0",
+        "unit": "%",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_351.3_019",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_021",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.6_030:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "10.0",
+        "unit": "%",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.6_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_027",
+        "slot_id": "calgary_rcg:observed:7d834a75bad923af",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "75",
+        "unit": "units per hectare",
+        "source": {
+          "page": 469,
+          "chunk_id": "calgary_rcg_529_066",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_061",
+        "slot_id": "calgary_rcg:observed:765db9021d890fcb",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "60.0",
+        "unit": "%",
+        "source": {
+          "page": 392,
+          "chunk_id": "calgary_rcg_347.3_008",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_068",
+        "slot_id": "calgary_rcg:observed:57dddaac2d816465",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.7_085",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_075",
+        "slot_id": "calgary_rcg:observed:627e23637b36846b",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "1",
+        "unit": "units",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_353.1.1_034",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_076",
+        "slot_id": "calgary_rcg:observed:2671e153282b2290",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.5_083",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_077",
+        "slot_id": "calgary_rcg:observed:0980ba3220a55bb7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_539.9_087",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_078",
+        "slot_id": "calgary_rcg:observed:37ced621d489cb41",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.3_081",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_089",
+        "slot_id": "calgary_rcg:observed:2dc0a5582b2e9e9e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "40.0",
+        "unit": "%",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_090",
+        "slot_id": "calgary_rcg:observed:d54d7e1c8765a396",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "3.1",
+        "unit": "m",
+        "source": {
+          "page": 396,
+          "chunk_id": "calgary_rcg_352.3.2_026",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_123",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_352.6_030:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "10.0",
+        "unit": "%",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_352.6_030",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_126",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_072:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "21.0",
+        "unit": "m2",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_127",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_072:m002",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "19.0",
+        "unit": "m2",
+        "source": {
+          "page": 470,
+          "chunk_id": "calgary_rcg_534.3_072",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_131",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_541.4_093:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "60.0",
+        "unit": "%",
+        "source": {
+          "page": 473,
+          "chunk_id": "calgary_rcg_541.4_093",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_132",
+        "slot_id": "calgary_rcg:observed:d01e0cf99aaf56b3",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.4_082",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_134",
+        "slot_id": "calgary_rcg:observed:57dddaac2d816465",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.7_085",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_135",
+        "slot_id": "calgary_rcg:observed:0980ba3220a55bb7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 472,
+          "chunk_id": "calgary_rcg_539.9_087",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_139",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_351.3_019:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "10.0",
+        "unit": "%",
+        "source": {
+          "page": 395,
+          "chunk_id": "calgary_rcg_351.3_019",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_141",
+        "slot_id": "calgary_rcg:observed:765db9021d890fcb",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "60.0",
+        "unit": "%",
+        "source": {
+          "page": 392,
+          "chunk_id": "calgary_rcg_347.3_008",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_142",
+        "slot_id": "calgary_rcg:observed:627e23637b36846b",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "dwelling_units",
+        "value": "1",
+        "unit": "units",
+        "source": {
+          "page": 397,
+          "chunk_id": "calgary_rcg_353.1.1_034",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_143",
+        "slot_id": "calgary_rcg:observed:2671e153282b2290",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.5_083",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "rejected",
+        "rule_id": "calgary_rcg_145",
+        "slot_id": "calgary_rcg:observed:37ced621d489cb41",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0",
+        "unit": "m",
+        "source": {
+          "page": 471,
+          "chunk_id": "calgary_rcg_539.3_081",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      }
+    ],
+    "not_used_rule_mappings": [
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_032",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_033",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_034",
+        "slot_id": "calgary_rcg:observed:f9077fc9f5674809",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50",
+        "unit": "%",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_035",
+        "slot_id": "calgary_rcg:observed:4342c0cdd65929f7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_036",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_037",
+        "slot_id": "calgary_rcg:observed:d6affb3ac8fe0bdd",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_038",
+        "slot_id": "calgary_rcg:observed:4342c0cdd65929f7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_039",
+        "slot_id": "calgary_rcg:observed:f67acae32f84d86f",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_040",
+        "slot_id": "calgary_rcg:observed:eb38d5b9e16a690a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_041",
+        "slot_id": "calgary_rcg:observed:eb38d5b9e16a690a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_042",
+        "slot_id": "calgary_rcg:observed:1dcc43def7a9b632",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_043",
+        "slot_id": "calgary_rcg:observed:3255b9d1c67e8c8d",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_044",
+        "slot_id": "calgary_rcg:observed:e2b3961103d394a2",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_047",
+        "slot_id": "calgary_rcg:observed:dcd46fa3c5d69c63",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_048",
+        "slot_id": "calgary_rcg:observed:e9e6cc54e2996ea4",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_049",
+        "slot_id": "calgary_rcg:observed:f7ac3065557affcb",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_050",
+        "slot_id": "calgary_rcg:observed:dcd46fa3c5d69c63",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_051",
+        "slot_id": "calgary_rcg:observed:0230a88bfea479e6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_052",
+        "slot_id": "calgary_rcg:observed:e7ea54d4c0da7905",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_053",
+        "slot_id": "calgary_rcg:observed:d8cf506b9406c6b8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "1.0",
+        "unit": "m",
+        "source": {
+          "page": 399,
+          "chunk_id": "calgary_rcg_360.2_046",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_054",
+        "slot_id": "calgary_rcg:observed:d50961d766a2fbc8",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "1.0",
+        "unit": "m",
+        "source": {
+          "page": 399,
+          "chunk_id": "calgary_rcg_360.3_047",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_058",
+        "slot_id": "calgary_rcg:observed:eb7dcd50f3a2b67e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 400,
+          "chunk_id": "calgary_rcg_360.4_048",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_059",
+        "slot_id": "calgary_rcg:observed:8711fa68687d08d2",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 400,
+          "chunk_id": "calgary_rcg_360.4_048",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_060",
+        "slot_id": "calgary_rcg:observed:c181b877d067037b",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "65.0",
+        "unit": "%",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_062",
+        "slot_id": "calgary_rcg:observed:3de28995839f550a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.3",
+        "unit": "m",
+        "source": {
+          "page": 394,
+          "chunk_id": "calgary_rcg_349.2_014",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_065",
+        "slot_id": "calgary_rcg:observed:4ba5072adc96063e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "40.0",
+        "unit": "m2",
+        "source": {
+          "page": 401,
+          "chunk_id": "calgary_rcg_365_052",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_066",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_544.2_117:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.5",
+        "unit": "m",
+        "source": {
+          "page": 475,
+          "chunk_id": "calgary_rcg_544.2_117",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_097",
+        "slot_id": "calgary_rcg:observed:dcd46fa3c5d69c63",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_098",
+        "slot_id": "calgary_rcg:observed:e9e6cc54e2996ea4",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_099",
+        "slot_id": "calgary_rcg:observed:f7ac3065557affcb",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_100",
+        "slot_id": "calgary_rcg:observed:dcd46fa3c5d69c63",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_101",
+        "slot_id": "calgary_rcg:observed:0230a88bfea479e6",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_102",
+        "slot_id": "calgary_rcg:observed:e7ea54d4c0da7905",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 389,
+          "chunk_id": "calgary_rcg_347.1_001",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_106",
+        "slot_id": "calgary_rcg:observed:1dcc43def7a9b632",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_107",
+        "slot_id": "calgary_rcg:observed:3255b9d1c67e8c8d",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "3.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_108",
+        "slot_id": "calgary_rcg:observed:e2b3961103d394a2",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.2_002",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_109",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_110",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_111",
+        "slot_id": "calgary_rcg:observed:f9077fc9f5674809",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "50",
+        "unit": "%",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_112",
+        "slot_id": "calgary_rcg:observed:4342c0cdd65929f7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_113",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_347.1 .1_007:m003",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.6",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_114",
+        "slot_id": "calgary_rcg:observed:d6affb3ac8fe0bdd",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "2.4",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_115",
+        "slot_id": "calgary_rcg:observed:4342c0cdd65929f7",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "2.0",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_116",
+        "slot_id": "calgary_rcg:observed:f67acae32f84d86f",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.2",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_117",
+        "slot_id": "calgary_rcg:observed:eb38d5b9e16a690a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_118",
+        "slot_id": "calgary_rcg:observed:eb38d5b9e16a690a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "1.5",
+        "unit": "m",
+        "source": {
+          "page": 391,
+          "chunk_id": "calgary_rcg_347.1 .1_007",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_128",
+        "slot_id": "calgary_rcg:observed:4ba5072adc96063e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "floor_area",
+        "value": "40.0",
+        "unit": "m2",
+        "source": {
+          "page": 401,
+          "chunk_id": "calgary_rcg_365_052",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_146",
+        "slot_id": "calgary_rcg:observed:eb7dcd50f3a2b67e",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "7.5",
+        "unit": "m",
+        "source": {
+          "page": 400,
+          "chunk_id": "calgary_rcg_360.4_048",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_147",
+        "slot_id": "calgary_rcg:observed:8711fa68687d08d2",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "height",
+        "value": "6.0",
+        "unit": "m",
+        "source": {
+          "page": 400,
+          "chunk_id": "calgary_rcg_360.4_048",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_148",
+        "slot_id": "calgary_rcg:observed:c181b877d067037b",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "lot_coverage",
+        "value": "65.0",
+        "unit": "%",
+        "source": {
+          "page": 390,
+          "chunk_id": "calgary_rcg_347.3_003",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_149",
+        "slot_id": "calgary_rcg:observed:3de28995839f550a",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "0.3",
+        "unit": "m",
+        "source": {
+          "page": 394,
+          "chunk_id": "calgary_rcg_349.2_014",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      },
+      {
+        "bucket": "not_used",
+        "rule_id": "calgary_rcg_150",
+        "slot_id": "calgary_rcg:clause:calgary_rcg_544.2_117:m001",
+        "mapping_confidence": "exact",
+        "mapping_score": 26,
+        "mapping_reason": "chunk+page+source_type+value+unit+family+text",
+        "rule_object": "setback",
+        "value": "4.5",
+        "unit": "m",
+        "source": {
+          "page": 475,
+          "chunk_id": "calgary_rcg_544.2_117",
+          "evidence_type": "clause",
+          "slot_source_type": "clause"
+        }
+      }
+    ]
+  },
+  "unsupported_verified_rules": [],
+  "duplicate_verified_slots": [
+    {
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m002",
+      "keeper_rule_id": "calgary_rcg_006",
+      "duplicate_rule_ids": [
+        "calgary_rcg_103"
+      ],
+      "count": 2,
+      "resolution": "duplicate_merged"
+    },
+    {
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+      "keeper_rule_id": "calgary_rcg_020",
+      "duplicate_rule_ids": [
+        "calgary_rcg_082",
+        "calgary_rcg_138"
+      ],
+      "count": 3,
+      "resolution": "duplicate_merged"
+    },
+    {
+      "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_075:m001",
+      "keeper_rule_id": "calgary_rcg_004",
+      "duplicate_rule_ids": [
+        "calgary_rcg_094"
+      ],
+      "count": 2,
+      "resolution": "duplicate_merged"
+    },
+    {
+      "slot_id": "calgary_rcg:clause:calgary_rcg_539.8_086:m001",
+      "keeper_rule_id": "calgary_rcg_064",
+      "duplicate_rule_ids": [
+        "calgary_rcg_144"
+      ],
+      "count": 2,
+      "resolution": "duplicate_merged"
+    },
+    {
+      "slot_id": "calgary_rcg:observed:8da58dd28cec0222",
+      "keeper_rule_id": "calgary_rcg_028",
+      "duplicate_rule_ids": [
+        "calgary_rcg_096"
+      ],
+      "count": 2,
+      "resolution": "duplicate_merged"
+    },
+    {
+      "slot_id": "calgary_rcg:observed:90f49f72967e9fe3",
+      "keeper_rule_id": "calgary_rcg_067",
+      "duplicate_rule_ids": [
+        "calgary_rcg_133"
+      ],
+      "count": 2,
+      "resolution": "duplicate_merged"
+    },
+    {
+      "slot_id": "calgary_rcg:observed:ca26f8b0128565b6",
+      "keeper_rule_id": "calgary_rcg_056",
+      "duplicate_rule_ids": [
+        "calgary_rcg_130"
+      ],
+      "count": 2,
+      "resolution": "duplicate_merged"
+    },
+    {
+      "slot_id": "calgary_rcg:observed:fc9f28286d9ae05e",
+      "keeper_rule_id": "calgary_rcg_008",
+      "duplicate_rule_ids": [
+        "calgary_rcg_088"
+      ],
+      "count": 2,
+      "resolution": "duplicate_merged"
+    }
+  ],
+  "duplicate_merged_rules": [
+    {
+      "rule_id": "calgary_rcg_103",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.1_022:m002",
+      "status": "duplicate_merged",
+      "kept_rule_id": "calgary_rcg_006"
+    },
+    {
+      "rule_id": "calgary_rcg_082",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+      "status": "duplicate_merged",
+      "kept_rule_id": "calgary_rcg_020"
+    },
+    {
+      "rule_id": "calgary_rcg_138",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_352.3_024:m001",
+      "status": "duplicate_merged",
+      "kept_rule_id": "calgary_rcg_020"
+    },
+    {
+      "rule_id": "calgary_rcg_094",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_534.3_075:m001",
+      "status": "duplicate_merged",
+      "kept_rule_id": "calgary_rcg_004"
+    },
+    {
+      "rule_id": "calgary_rcg_144",
+      "slot_id": "calgary_rcg:clause:calgary_rcg_539.8_086:m001",
+      "status": "duplicate_merged",
+      "kept_rule_id": "calgary_rcg_064"
+    },
+    {
+      "rule_id": "calgary_rcg_096",
+      "slot_id": "calgary_rcg:observed:8da58dd28cec0222",
+      "status": "duplicate_merged",
+      "kept_rule_id": "calgary_rcg_028"
+    },
+    {
+      "rule_id": "calgary_rcg_133",
+      "slot_id": "calgary_rcg:observed:90f49f72967e9fe3",
+      "status": "duplicate_merged",
+      "kept_rule_id": "calgary_rcg_067"
+    },
+    {
+      "rule_id": "calgary_rcg_130",
+      "slot_id": "calgary_rcg:observed:ca26f8b0128565b6",
+      "status": "duplicate_merged",
+      "kept_rule_id": "calgary_rcg_056"
+    },
+    {
+      "rule_id": "calgary_rcg_088",
+      "slot_id": "calgary_rcg:observed:fc9f28286d9ae05e",
+      "status": "duplicate_merged",
+      "kept_rule_id": "calgary_rcg_008"
+    }
+  ],
+  "frontier_shadow_lanes": [
+    {
+      "lane": "visual_layout_retrieval",
+      "status": "shadow_only",
+      "purpose": "Evaluate table/footnote page-image retrieval without promoting rules."
+    },
+    {
+      "lane": "benchmark_driven_optimizer",
+      "status": "shadow_only",
+      "purpose": "Try extraction prompt/decomposition variants under M5.5 gates."
+    }
+  ]
+}

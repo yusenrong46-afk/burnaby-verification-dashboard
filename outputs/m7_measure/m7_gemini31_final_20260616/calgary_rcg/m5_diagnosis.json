@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-06-17T05:55:02.096453+00:00",
+  "city": "calgary_rcg",
+  "hard_gates": {
+    "passed": true,
+    "gates": {
+      "false_verified_is_0": true,
+      "false_approval_is_0": true,
+      "verified_precision_is_1": true,
+      "verified_source_support_failures_is_0": true,
+      "effective_verified_rule_count_not_below_m4_baseline": true,
+      "verified_rule_count_not_above_loose_source_ceiling": true,
+      "verified_exact_duplicate_count_is_0": true,
+      "verified_slot_mapping_rate_is_1": true,
+      "unsupported_verified_rule_count_is_0": true,
+      "duplicate_verified_slot_count_is_0": true,
+      "effective_verified_slot_count_not_below_m4_baseline": true,
+      "benchmark_quality_gates_passed": true,
+      "runtime_under_300_seconds": true
+    }
+  },
+  "bottlenecks": [
+    {
+      "stage": "overextraction",
+      "metric": "candidate_count_exceeds_loose_source_ceiling",
+      "value": 150,
+      "target": "<= 131",
+      "severity": 74,
+      "recommendation": "Reduce candidate noise or split traceability-only records before verifier tuning."
+    },
+    {
+      "stage": "evidence_quality",
+      "metric": "candidate_value_grounding_rate",
+      "value": 0.927,
+      "target": 0.95,
+      "severity": 70,
+      "recommendation": "Improve evidence text/source-context anchoring so candidate values are visible in cited evidence."
+    },
+    {
+      "stage": "measurement_contract",
+      "metric": "scored_verified_coverage",
+      "value": 0.161,
+      "target": ">= 0.50",
+      "severity": 35,
+      "recommendation": "Grow verified coverage of in-contract, recognized-family source slots (the M5.6 scored denominator), not the raw numeric-token ceiling.",
+      "scored_total_slots": 110,
+      "scored_verified_slot_count": 10,
+      "scored_missed_slot_count": 42
+    }
+  ],
+  "next_recommended_action": "Reduce candidate noise or split traceability-only records before verifier tuning."
+}

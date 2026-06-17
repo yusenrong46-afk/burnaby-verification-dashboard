@@ -1,16 +1,20 @@
 # BC Zoning Verification Dashboard
 
-Streamlit deployment package for the M6 multi-city verification dashboard. The app
+Streamlit deployment package for the **M7** multi-city verification dashboard. The app
 is a read-only communication layer for reviewers and project partners: it
 explains committed extraction, verification, review, GIS, and RAG artifacts from
 `outputs/` for Burnaby, Calgary, and Vancouver, but it never reruns extraction,
 verification, benchmark evaluation, GIS export, or RAG indexing.
 
-The `Source Evidence > Ask The Bylaw` page is an advisory RAG chatbot. It
-retrieves committed bylaw index sections first, sends bounded context to
-OpenRouter GPT-OSS-120B only when a secret key is configured, and falls back to
-retrieval-only mode otherwise. Chat answers never verify rules, approve
-proposals, or write GIS outputs.
+M7 is the generational release: one consolidated matrix-aware pipeline on
+`google/gemini-3.1-flash-lite`, four-tab "Civic Console" UI with count drill-downs,
+and a reranked bylaw chatbot. The deterministic verifier remains the sole authority
+(precision 1.0, zero false-verified on the benchmarked in-contract lanes).
+
+The `Ask The Bylaw` tab is an advisory RAG chatbot. It retrieves committed bylaw
+index sections first, sends bounded context to OpenRouter `google/gemini-3.1-flash-lite`
+only when a secret key is configured, and falls back to retrieval-only mode
+otherwise. Chat answers never verify rules, approve proposals, or write GIS outputs.
 
 Cloud app:
 https://yusenrong46-afk-burnaby-verificat-dashboardstreamlit-app-rcvryj.streamlit.app/
@@ -28,48 +32,37 @@ The dashboard discovers output directories automatically when they contain
 `verified_rules.json`.
 
 ```text
-outputs/m5_runs/m61_refresh_final_*/<city>/
-outputs/m5_runs/m6_final_*/<city>/
-outputs/m5_runs/m56_hardened_20260616/<city>/
-outputs/burnaby_r1_slim_pipeline5_registry/
-outputs/burnaby_r1_p9/
-outputs/calgary_rcg_slim_pipeline5_registry/
-outputs/calgary_rcg_p9/
-outputs/vancouver_rs_slim_pipeline5_registry/
-outputs/vancouver_rs_p9/
-outputs/m4_runs/burnaby_r1/google_gemini_2_5_flash_lite/
-outputs/m4_runs/calgary_rcg/google_gemini_2_5_flash_lite/
-outputs/m4_runs/vancouver_rs/google_gemini_2_5_flash_lite/
+outputs/m7_runs/burnaby_r1/google_gemini_3_1_flash_lite/
+outputs/m7_runs/calgary_rcg/google_gemini_3_1_flash_lite/
+outputs/m7_runs/vancouver_rs/google_gemini_3_1_flash_lite/
+outputs/m7_measure/m7_gemini31_final_20260616/<city>/
 outputs/mvp_verification/mvp_report.json
 ```
 
-The default landing page is the multi-city M4 overview. Use the sidebar
-`City / version` selector to drill into M6 measured runs for final count audit,
-or into Burnaby R1, Calgary RCG, or Vancouver RS M4/V3 runs for comparison.
+The default landing page is the multi-city M7 overview (Summary · Review Queue ·
+GIS Handoff · Ask the Bylaw). Use the sidebar selector to switch cities; every
+count tile drills down to the exact rules behind it.
 
 ## Current Safety Snapshot
 
 ```text
-Burnaby M4:   candidates=101, verified=84, review=17, verified_precision=1.00, false_verified=0
-Vancouver M4: candidates=32,  verified=12, review=11, verified_precision=1.00, false_verified=0
-Calgary M4:   candidates=306, verified=11, review=43, verified_precision=1.00, false_verified=0
+Burnaby M7:   candidates=144, verified=87, review=57, verified_precision=1.00, false_verified=0
+Vancouver M7: candidates=56,  verified=10, review=31, verified_precision=1.00, false_verified=0
+Calgary M7:   candidates=150, verified=29, review=42, verified_precision=1.00, false_verified=0
 ```
 
-M4 is the current product path. V3/Pipeline 5/Pipeline 9 artifacts are retained
-only as predecessor or comparison context. Failed gates are labeled in the
-dashboard as `fail-closed`, `scope mismatch`, or `unsafe / needs fix`; they are
-not presented as passing outputs.
+M7 is the current product path: a consolidated matrix-aware extraction pipeline
+(deterministic table cells + rule-signal sweep + repair) on
+`google/gemini-3.1-flash-lite`, with the district page-scope fix. The deterministic
+verifier was never loosened — recall gains come from better extraction. Across all
+three benchmarked in-contract lanes: precision 1.0, zero false-verified, adversarial
+ALL BLOCKED. Verified accuracy was confirmed against the actual bylaw PDFs (a
+ground-truth audit), and a verification-recall "rescue" that injected false-verifies
+was reverted — the verifier sits at its safe recall ceiling.
 
-M6 is the final release wrapper: it uses M5.6 scored slot measurement to answer
-whether the project is verifying too much or too little. The scored legal
-denominator is the reviewer-facing count authority; raw numeric slots are shown
-only as an advisory over-count guardrail.
-
-M6.1 is the preferred review run when present. It refreshes deterministic
-verifier outputs from the existing native extraction artifacts without a new LLM
-call, improves Burnaby table-proof completeness, and deduplicates exact
-source-aware duplicate rows in `gis_rule_contract.json` / `gis_felt_export.json`
-while preserving raw `verified_rules.json` as the audit trail.
+Recall here is *verified-or-review against a curated in-contract gold set*, not
+full-bylaw completeness. Failed gates are labeled `fail-closed`, `scope mismatch`,
+or `unsafe / needs fix`; they are not presented as passing outputs.
 
 ## Reviewer Workflow
 
@@ -90,7 +83,7 @@ Set Streamlit Cloud secrets:
 
 ```toml
 BYLAW_RAG_PROVIDER = "openrouter"
-BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
+BYLAW_RAG_MODEL = "google/gemini-3.1-flash-lite"
 OPENROUTER_API_KEY = "..."
 OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"
 # Optional:

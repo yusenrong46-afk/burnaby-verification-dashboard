@@ -1,0 +1,1175 @@
+{
+  "mode": "shadow_evidence_rerun",
+  "notes": [
+    "Reruns do not mutate verified_rules.json.",
+    "Promotion-ready means the ordinary deterministic verifier returned verified with no risk flags.",
+    "Synthetic retry candidates keep the original source_stream so they cannot create fake consensus."
+  ],
+  "attempt_count": 23,
+  "verified_after_rerun_count": 0,
+  "promotion_ready_count": 0,
+  "review_after_rerun_count": 8,
+  "rejected_after_rerun_count": 15,
+  "skipped_count": 3,
+  "attempts": [
+    {
+      "original_rule_id": "burnaby_r1_002",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0002_002",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0002_002__rerun__m4_pack_0002_ev_001",
+      "rule_object": "lot_area",
+      "constraint_scope": "lot_area",
+      "applies_to": "lot",
+      "condition": "Maximum Lot Area",
+      "operator": "<=",
+      "value": "280",
+      "unit": "m2",
+      "original_evidence_id": "m4_pack_0002_ev_002",
+      "retry_evidence_id": "m4_pack_0002_ev_001",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "Minimum Lot Area - 281 m2 are Facilities 101.5.6 Accessory Use Use-Specific Regulations Boarding Use (up to 2 boarders) - Home Occupations 6.8, 6.8A Urban Agriculture 6.30 Accessory Buildings, Structures, and Uses 101.5.5, 6.6 (B/L No. 14694-24-11-04) 101.3...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_003",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0004_001",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0004_001__rerun__m4_pack_0008_ev_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit lots",
+      "condition": "",
+      "operator": "",
+      "value": "1",
+      "unit": "units",
+      "original_evidence_id": "m4_pack_0004_ev_001",
+      "retry_evidence_id": "m4_pack_0008_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car...",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_004",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0004_002",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0004_002__rerun__m4_pack_0008_ev_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit lots",
+      "condition": "",
+      "operator": "",
+      "value": "3",
+      "unit": "units",
+      "original_evidence_id": "m4_pack_0004_ev_002",
+      "retry_evidence_id": "m4_pack_0008_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car...",
+      "repairable_fields": [
+        "operator",
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_006",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0006_002",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0006_002__rerun__m4_pack_0006_ev_001",
+      "rule_object": "impervious_surface",
+      "constraint_scope": "impervious_surface",
+      "applies_to": "lots in the R1 District on the Community Heritage Register",
+      "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+      "operator": "<=",
+      "value": "70",
+      "unit": "%",
+      "original_evidence_id": "m4_pack_0006_ev_002",
+      "retry_evidence_id": "m4_pack_0006_ev_001",
+      "retry_evidence_page": 6,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots...",
+      "repairable_fields": [
+        "condition"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "text_condition_not_supported",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_007",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0006_003",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0006_003__rerun__m4_pack_0006_ev_001",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "street yards",
+      "condition": "lots in the R1 District on the Community Heritage Register",
+      "operator": ">=",
+      "value": "2.0",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0006_ev_003",
+      "retry_evidence_id": "m4_pack_0006_ev_001",
+      "retry_evidence_page": 6,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60% ge character, some or all of the following regulations may apply to lots in the R1 District on the Community Heritage Register: (a) panhandle lots and other irregularly shaped lots...",
+      "repairable_fields": [
+        "condition",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "text_condition_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_008",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0008_001",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0008_001__rerun__m4_pack_0008_ev_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit",
+      "condition": "on a lot",
+      "operator": "",
+      "value": "1",
+      "unit": "units",
+      "original_evidence_id": "m4_pack_0008_ev_001",
+      "retry_evidence_id": "m4_pack_0008_ev_002",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_009",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0008_002",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0008_002__rerun__m4_pack_0008_ev_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "small-scale multi-unit",
+      "condition": "on a lot",
+      "operator": "",
+      "value": "3",
+      "unit": "units",
+      "original_evidence_id": "m4_pack_0008_ev_002",
+      "retry_evidence_id": "m4_pack_0008_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_010",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0017_001",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0017_001__rerun__m4_pack_0008_ev_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+      "operator": "",
+      "value": "1",
+      "unit": "units",
+      "original_evidence_id": "m4_pack_0017_ev_001",
+      "retry_evidence_id": "m4_pack_0008_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car...",
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_012",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0017_003",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0017_003__rerun__burnaby_r1_matrix_p2_t0_b0_001",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+      "operator": "",
+      "value": "4",
+      "unit": "units",
+      "original_evidence_id": "m4_pack_0017_ev_003",
+      "retry_evidence_id": "burnaby_r1_matrix_p2_t0_b0_001",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "table_cell",
+      "retry_evidence_quote": "Permitted Dwelling Units (including secondary suites) Permitted Dwelling Units (including secondary suites) Rowhouse 1 to 3 Units 1 to 3 Units Permitted Dwelling Units (including secondary suites) | Rowhouse 1 to 3 Units | 1 to 3 Units 101.4 Development Reg...",
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "operator_not_supported",
+        "range_bound_not_maximum"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "value_not_found_in_evidence",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "table_natural_logic_refuted",
+      "retry_table_proof_status": "refuted",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_013",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0017_004",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0017_004__rerun__m4_pack_0045_v3_clause_ev_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "dwelling units",
+      "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+      "operator": "",
+      "value": "6",
+      "unit": "units",
+      "original_evidence_id": "m4_pack_0017_ev_004",
+      "retry_evidence_id": "m4_pack_0045_v3_clause_ev_002",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory...",
+      "repairable_fields": [
+        "operator",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_016",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0018_003",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0018_003__rerun__m4_pack_0018_ev_002",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "pedestrian walkway",
+      "condition": "Contiguous rowhouse lots",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0018_ev_003",
+      "retry_evidence_id": "m4_pack_0018_ev_002",
+      "retry_evidence_page": 4,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk...",
+      "repairable_fields": [
+        "rule_object",
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_018",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0021_001",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0021_001__rerun__m4_pack_0008_ev_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "accessory structure",
+      "condition": "not being a building, excluding a fence or a retaining wall, located outside of a required yard",
+      "operator": "<=",
+      "value": "4.6",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0021_ev_001",
+      "retry_evidence_id": "m4_pack_0008_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "1 to 3 small-scale multi-unit dwelling units on a lot (2) An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height. 101.5.6 Child Care Facilities (1) A child car...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "value_not_found_in_evidence",
+        "unit_not_found_in_evidence",
+        "applies_to_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": false,
+        "operator_supported": true,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [
+        "original_rule_had_legal_conflict_or_exception"
+      ],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_020",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0025_002",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0025_002__rerun__m4_pack_0025_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features",
+      "condition": "above grade",
+      "operator": ">",
+      "value": "1.0",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0025_ev_002",
+      "retry_evidence_id": "m4_pack_0025_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "terraces, decks, or other similar surfaces that are 1.0 m or less above grade ly with all other applicable regulations under this Bylaw. (B/L No. 14694-24-11-04) 101.6 General Regulations 101.6.1 Projections (1) The following features may project into the r...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "operator_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_021",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0025_003",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0025_003__rerun__m4_pack_0044_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features",
+      "condition": "",
+      "operator": "<=",
+      "value": "0.9",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0025_ev_003",
+      "retry_evidence_id": "m4_pack_0044_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S...",
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_022",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0025_004",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0025_004__rerun__m4_pack_0044_ev_001",
+      "rule_object": "building_separation",
+      "constraint_scope": "building_separation",
+      "applies_to": "eaves",
+      "condition": "",
+      "operator": "<=",
+      "value": "1.2",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0025_ev_004",
+      "retry_evidence_id": "m4_pack_0044_ev_001",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "projections into required lane yards are limited to a maximum of 0.8 m gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m or 25% of the width of a required separation; (f) sunken access areas and window wells as per S...",
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_024",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0034_002",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0034_002__rerun__m4_pack_0034_ev_001",
+      "rule_object": "height",
+      "constraint_scope": "height",
+      "applies_to": "fire_access_corridor",
+      "condition": "",
+      "operator": ">=",
+      "value": "2.5",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0034_ev_002",
+      "retry_evidence_id": "m4_pack_0034_ev_001",
+      "retry_evidence_page": 6,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor 101.6.3 Access and Fire Safety (1) Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system. (2) All dwelling units...",
+      "repairable_fields": [
+        "rule_object",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_026",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0044_001",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0044_001__rerun__m4_pack_0025_ev_003",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "projections into required lane yards",
+      "condition": "R1 District",
+      "operator": "<=",
+      "value": "0.8",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0044_ev_001",
+      "retry_evidence_id": "m4_pack_0025_ev_003",
+      "retry_evidence_page": 5,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m ot: (a) steps and stairs; (b) ornamental features, such as arbors, trellises, fish ponds, flag poles, or similar landscape features; (c) terra...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_027",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0057_001",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0057_001__rerun__m4_pack_0045_v3_clause_ev_002",
+      "rule_object": "dwelling_units",
+      "constraint_scope": "dwelling_units",
+      "applies_to": "residential dwellings",
+      "condition": "",
+      "operator": "<=",
+      "value": "6",
+      "unit": "units",
+      "original_evidence_id": "m4_pack_0057_ev_001",
+      "retry_evidence_id": "m4_pack_0045_v3_clause_ev_002",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory...",
+      "repairable_fields": [
+        "applies_to",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "value_not_found_in_evidence"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_111",
+      "original_candidate_id": "burnaby_r1_v3clause_m4_pack_0045_002",
+      "retry_candidate_id": "burnaby_r1_v3clause_m4_pack_0045_002__rerun__m4_pack_0045_v3_clause_ev_003",
+      "rule_object": "permitted_use",
+      "constraint_scope": "district",
+      "applies_to": "Small-Scale Multi-Unit Housing",
+      "condition": "",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "m4_pack_0045_v3_clause_ev_002",
+      "retry_evidence_id": "m4_pack_0045_v3_clause_ev_003",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_112",
+      "original_candidate_id": "burnaby_r1_v3clause_m4_pack_0045_003",
+      "retry_candidate_id": "burnaby_r1_v3clause_m4_pack_0045_003__rerun__m4_pack_0045_v3_clause_ev_002",
+      "rule_object": "permitted_use",
+      "constraint_scope": "use",
+      "applies_to": "Principal Use",
+      "condition": "Group Home",
+      "operator": "allowed",
+      "value": null,
+      "unit": null,
+      "original_evidence_id": "m4_pack_0045_v3_clause_ev_003",
+      "retry_evidence_id": "m4_pack_0045_v3_clause_ev_002",
+      "retry_evidence_page": 1,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "101.2 Permitted Uses Principal Use Use-Specific Regulations Small-Scale Multi-Unit Housing - Rowhouse Dwellings 101.5.2 Boarding, Lodging, or Rooming House 101.5.3 Group Home - Supportive Housing (Category A) 101.5.4 Child Care Facilities 101.5.6 Accessory...",
+      "repairable_fields": [
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 1.0,
+      "original_support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "retry_decision": "review_needed",
+      "retry_support_gaps": [
+        "text_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": true,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_015",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0018_002",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0018_002__rerun__burnaby_r1_matrix_p2_t0_b0_017",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "pedestrian walkway",
+      "condition": "Contiguous rowhouse lots",
+      "operator": ">=",
+      "value": "1.5",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0018_ev_002",
+      "retry_evidence_id": "burnaby_r1_matrix_p2_t0_b0_017",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "table_cell",
+      "retry_evidence_quote": "Maximum Height Height Rowhouse 1 to 3 Units sloping roof: 10 m | flat roof: 9.5 m Maximum Height | Front Principal Buildings | Height | Rowhouse 1 to 3 Units | sloping roof: 10 m | flat roof: 9.5 m 101.4 Development Regulations Dwelling Type Rowhouse Small-...",
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 0.957,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "value_not_found_in_evidence",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported",
+        "table_operator_refuted",
+        "table_rule_object_not_supported",
+        "table_applies_to_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": false,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": false,
+        "table_review_gate_passed": false
+      },
+      "retry_proof_type": "table_natural_logic_refuted",
+      "retry_table_proof_status": "refuted",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_017",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0019_001",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0019_001__rerun__burnaby_r1_matrix_p2_t0_b0_049",
+      "rule_object": "setback",
+      "constraint_scope": "setback",
+      "applies_to": "garage or carport",
+      "condition": "below grade",
+      "operator": ">=",
+      "value": "1.2",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0019_ev_001",
+      "retry_evidence_id": "burnaby_r1_matrix_p2_t0_b0_049",
+      "retry_evidence_page": 2,
+      "retry_evidence_type": "table_cell",
+      "retry_evidence_quote": "Minimum Lot Line Setbacks for All Buildings .2 .3 Street Yard Rowhouse 1 to 3 Units 3.0 m Minimum Lot Line Setbacks for All Buildings .2 .3 | Street Yard | Rowhouse 1 to 3 Units | 3.0 m 2 Maximum Lot Area .1 280 m2 - - - Maximum Lot Coverage Lots < 567 m2:...",
+      "repairable_fields": [
+        "rule_object",
+        "scope",
+        "text_consensus_candidate"
+      ],
+      "best_repair_confidence": 0.957,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "value_not_found_in_evidence",
+        "table_condition_not_supported",
+        "table_column_not_target_scope",
+        "table_cell_candidate_requires_review",
+        "table_evidence_candidate_requires_review"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": true,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": true,
+        "table_context_supported": false,
+        "table_review_gate_passed": false
+      },
+      "retry_proof_type": "table_natural_logic_refuted",
+      "retry_table_proof_status": "refuted",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    },
+    {
+      "original_rule_id": "burnaby_r1_014",
+      "original_candidate_id": "burnaby_r1_native_m4_pack_0018_001",
+      "retry_candidate_id": "burnaby_r1_native_m4_pack_0018_001__rerun__m4_pack_0018_ev_002",
+      "rule_object": "fire_access_corridor",
+      "constraint_scope": "fire_access_corridor",
+      "applies_to": "pedestrian walkway",
+      "condition": "Contiguous rowhouse lots",
+      "operator": "<=",
+      "value": "100",
+      "unit": "m",
+      "original_evidence_id": "m4_pack_0018_ev_001",
+      "retry_evidence_id": "m4_pack_0018_ev_002",
+      "retry_evidence_page": 4,
+      "retry_evidence_type": "clause",
+      "retry_evidence_quote": "is at least 1.5 m wide tiple principal buildings and site access from both frontages, at least one dwelling unit per street frontage. 101.5.2 Rowhouse Dwellings (1) Contiguous rowhouse lots must provide an illuminated and publicly accessible pedestrian walk...",
+      "repairable_fields": [
+        "scope"
+      ],
+      "best_repair_confidence": 0.677,
+      "original_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "constraint_scope_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_decision": "rejected",
+      "retry_support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "value_not_found_in_evidence",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "retry_support_checks": {
+        "source_evidence_present": true,
+        "value_supported": false,
+        "unit_supported": true,
+        "operator_supported": false,
+        "applies_to_supported": true,
+        "scope_supported": true,
+        "rule_object_supported": false,
+        "table_context_supported": true,
+        "table_review_gate_passed": true
+      },
+      "retry_proof_type": "text_evidence",
+      "retry_table_proof_status": "none",
+      "promotion_ready": false,
+      "promotion_risk_flags": [],
+      "promotion_recommendation": "Keep in review; inspect rerun gaps and cited evidence before changing verifier behavior."
+    }
+  ],
+  "verified_after_rerun": [],
+  "promotion_ready": [],
+  "skipped": [
+    {
+      "rule_id": "burnaby_r1_019",
+      "candidate_id": "burnaby_r1_native_m4_pack_0025_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 1.0
+    },
+    {
+      "rule_id": "burnaby_r1_005",
+      "candidate_id": "burnaby_r1_native_m4_pack_0006_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.931
+    },
+    {
+      "rule_id": "burnaby_r1_028",
+      "candidate_id": "burnaby_r1_native_m4_pack_0058_001",
+      "reason": "repair_suggestion_not_retryable",
+      "best_repair_confidence": 0.854
+    }
+  ]
+}

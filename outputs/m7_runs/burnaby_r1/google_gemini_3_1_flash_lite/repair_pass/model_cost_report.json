@@ -1,0 +1,25 @@
+{
+  "run_id": "burnaby_r1_google_gemini_3_1_flash_lite_3098b6f0a276",
+  "city": "burnaby_r1",
+  "model": "google/gemini-3.1-flash-lite",
+  "dry_run": false,
+  "pack_count": 16,
+  "cache_hit_count": 0,
+  "input_chars": 43147,
+  "output_chars": 8469,
+  "estimated_input_tokens": 10787,
+  "estimated_output_tokens": 2118,
+  "estimated_cost_usd": 0.005884,
+  "latency_ms": 31118,
+  "extraction_error_count": 1,
+  "extraction_errors": [
+    {
+      "pack_id": "v3_repair_pack_0002",
+      "chunk_id": "burnaby_r1_101.4_004",
+      "section": "101.4",
+      "page": 2,
+      "error": "model did not return valid JSON"
+    }
+  ],
+  "pricing_note": "Estimated from character count and planning price table; OpenRouter billing is authoritative."
+}

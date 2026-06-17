@@ -1,0 +1,1584 @@
+{
+  "city": "vancouver_rs",
+  "created_at": "2026-06-17T05:55:01.529432+00:00",
+  "advisory_note": "Loose ceiling = source rule-like numeric clauses + table cells. It is an overcount guardrail, not an exact legal-rule total.",
+  "source_counts": {
+    "rule_like_numeric_clause_count": 38,
+    "table_cell_count": 45,
+    "loose_source_rule_slot_ceiling": 83,
+    "numeric_clause_count": 40,
+    "table_entry_count": 45,
+    "source_chunk_count": 251
+  },
+  "output_counts": {
+    "candidate_rule_count": 56,
+    "verified_rule_count": 10,
+    "review_rule_count": 31,
+    "rejected_rule_count": 15,
+    "not_used_rule_count": 0,
+    "effective_verified_rule_count": 8
+  },
+  "ratios": {
+    "candidate_to_loose_ceiling": 0.675,
+    "verified_to_loose_ceiling": 0.12
+  },
+  "flags": {
+    "candidate_count_exceeds_loose_source_ceiling": false,
+    "verified_count_exceeds_loose_source_ceiling": false,
+    "verified_exact_duplicate_count": 2,
+    "candidate_exact_duplicate_count": 21,
+    "verified_out_of_contract_count": 0,
+    "candidate_out_of_contract_count": 0
+  },
+  "contract_families": [
+    "building_separation",
+    "dwelling_units",
+    "floor_area",
+    "height",
+    "impervious_surface",
+    "lot_area",
+    "lot_coverage",
+    "setback",
+    "storeys"
+  ],
+  "verified_family_counts": [
+    {
+      "family": "height",
+      "count": 2
+    },
+    {
+      "family": "lot_coverage",
+      "count": 2
+    },
+    {
+      "family": "setback",
+      "count": 2
+    },
+    {
+      "family": "storeys",
+      "count": 2
+    },
+    {
+      "family": "building_separation",
+      "count": 1
+    },
+    {
+      "family": "floor_area",
+      "count": 1
+    }
+  ],
+  "candidate_family_counts": [
+    {
+      "family": "floor_area",
+      "count": 24
+    },
+    {
+      "family": "setback",
+      "count": 13
+    },
+    {
+      "family": "lot_area",
+      "count": 6
+    },
+    {
+      "family": "height",
+      "count": 4
+    },
+    {
+      "family": "building_separation",
+      "count": 3
+    },
+    {
+      "family": "dwelling_units",
+      "count": 2
+    },
+    {
+      "family": "lot_coverage",
+      "count": 2
+    },
+    {
+      "family": "storeys",
+      "count": 2
+    }
+  ],
+  "verified_out_of_contract_rule_ids": [],
+  "candidate_out_of_contract_rule_ids": [],
+  "verified_duplicates": {
+    "semantic_duplicate_group_count": 3,
+    "semantic_duplicate_rule_count": 3,
+    "source_aware_duplicate_group_count": 2,
+    "source_aware_duplicate_rule_count": 2,
+    "semantic_duplicate_groups": [
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_006",
+          "vancouver_rs_043"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "8.5",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "height",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_007",
+          "vancouver_rs_044"
+        ],
+        "rule_object": "storeys",
+        "operator": "<=",
+        "value": "2",
+        "unit": "storeys",
+        "applies_to": "laneway house",
+        "constraint_scope": "storeys",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_016",
+          "vancouver_rs_031"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "<=",
+        "value": "50",
+        "unit": "%",
+        "applies_to": "site with a laneway house",
+        "constraint_scope": "lot_coverage",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ],
+    "source_aware_duplicate_groups": [
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_006",
+          "vancouver_rs_043"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "8.5",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "height",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_007",
+          "vancouver_rs_044"
+        ],
+        "rule_object": "storeys",
+        "operator": "<=",
+        "value": "2",
+        "unit": "storeys",
+        "applies_to": "laneway house",
+        "constraint_scope": "storeys",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 8,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ]
+  },
+  "candidate_duplicates": {
+    "semantic_duplicate_group_count": 20,
+    "semantic_duplicate_rule_count": 21,
+    "source_aware_duplicate_group_count": 20,
+    "source_aware_duplicate_rule_count": 21,
+    "semantic_duplicate_groups": [
+      {
+        "count": 3,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0004_002",
+          "vancouver_rs_v3clause_m4_pack_0004_001",
+          "vancouver_rs_native_v3_repair_pack_0003_002"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "186",
+        "unit": "m2",
+        "applies_to": "laneway house",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0003_001",
+          "vancouver_rs_native_v3_repair_pack_0008_001"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "8.5",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "height",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0003_002",
+          "vancouver_rs_native_v3_repair_pack_0008_002"
+        ],
+        "rule_object": "storeys",
+        "operator": "<=",
+        "value": "2",
+        "unit": "storeys",
+        "applies_to": "laneway house",
+        "constraint_scope": "storeys",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0004_001",
+          "vancouver_rs_native_v3_repair_pack_0003_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "0.25",
+        "unit": "",
+        "applies_to": "laneway house",
+        "constraint_scope": "floor_area",
+        "condition": "multiplied by the site area",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0005_001",
+          "vancouver_rs_native_v3_repair_pack_0009_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": ">",
+        "value": "3.7",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "floor_area",
+        "condition": "distance from a floor to the floor above or to the top of the roof joists",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0006_001",
+          "vancouver_rs_native_v3_repair_pack_0019_001"
+        ],
+        "rule_object": "lot_area",
+        "operator": ">=",
+        "value": "9.8",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "lot_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0006_002",
+          "vancouver_rs_native_v3_repair_pack_0019_002"
+        ],
+        "rule_object": "lot_area",
+        "operator": ">=",
+        "value": "7.3",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "lot_area",
+        "condition": "Director of Planning may reduce the minimum site width",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0007_001",
+          "vancouver_rs_native_v3_repair_pack_0004_001"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "4.9",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "building_separation",
+        "condition": "from the single detached house or single detached house with secondary suite",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0007_002",
+          "vancouver_rs_native_v3_repair_pack_0004_002"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.9",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "setback",
+        "condition": "from the ultimate rear property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0007_003",
+          "vancouver_rs_native_v3_repair_pack_0004_003"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.2",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "setback",
+        "condition": "from each side property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0008_001",
+          "vancouver_rs_v3clause_m4_pack_0008_005"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "<=",
+        "value": "50",
+        "unit": "%",
+        "applies_to": "site with a laneway house",
+        "constraint_scope": "lot_coverage",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0009_001",
+          "vancouver_rs_native_v3_repair_pack_0010_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": ">",
+        "value": "4",
+        "unit": "m2",
+        "applies_to": "common space",
+        "constraint_scope": "floor_area",
+        "condition": "per unit",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0009_002",
+          "vancouver_rs_native_v3_repair_pack_0010_002"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "10",
+        "unit": "%",
+        "applies_to": "common space",
+        "constraint_scope": "floor_area",
+        "condition": "of permitted floor area",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0010_001",
+          "vancouver_rs_native_v3_repair_pack_0013_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": ">=",
+        "value": "37",
+        "unit": "m2",
+        "applies_to": "dwelling unit",
+        "constraint_scope": "floor_area",
+        "condition": "except for a lock-off unit",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0014_001",
+          "vancouver_rs_native_v3_repair_pack_0005_001"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "<=",
+        "value": "1",
+        "unit": "units",
+        "applies_to": "laneway house",
+        "constraint_scope": "dwelling_units",
+        "condition": "in combination with a child day care facility",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0015_001",
+          "vancouver_rs_native_v3_repair_pack_0014_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": ">=",
+        "value": "29.7",
+        "unit": "m2",
+        "applies_to": "micro dwelling",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0050_001",
+          "vancouver_rs_native_v3_repair_pack_0015_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "6.0",
+        "unit": "m",
+        "applies_to": "side yards",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0051_001",
+          "vancouver_rs_native_v3_repair_pack_0016_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "4.5",
+        "unit": "m",
+        "applies_to": "interior side yards",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0051_002",
+          "vancouver_rs_native_v3_repair_pack_0016_002"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.3",
+        "unit": "m",
+        "applies_to": "interior side yards",
+        "constraint_scope": "setback",
+        "condition": "for every 0.6 m by which the height of the building exceeds 10.7 m",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0051_003",
+          "vancouver_rs_native_v3_repair_pack_0016_003"
+        ],
+        "rule_object": "height",
+        "operator": ">",
+        "value": "10.7",
+        "unit": "m",
+        "applies_to": "building",
+        "constraint_scope": "height",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ],
+    "source_aware_duplicate_groups": [
+      {
+        "count": 3,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0004_002",
+          "vancouver_rs_v3clause_m4_pack_0004_001",
+          "vancouver_rs_native_v3_repair_pack_0003_002"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "186",
+        "unit": "m2",
+        "applies_to": "laneway house",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0003_001",
+          "vancouver_rs_native_v3_repair_pack_0008_001"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "8.5",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "height",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0003_002",
+          "vancouver_rs_native_v3_repair_pack_0008_002"
+        ],
+        "rule_object": "storeys",
+        "operator": "<=",
+        "value": "2",
+        "unit": "storeys",
+        "applies_to": "laneway house",
+        "constraint_scope": "storeys",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0004_001",
+          "vancouver_rs_native_v3_repair_pack_0003_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "0.25",
+        "unit": "",
+        "applies_to": "laneway house",
+        "constraint_scope": "floor_area",
+        "condition": "multiplied by the site area",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0005_001",
+          "vancouver_rs_native_v3_repair_pack_0009_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": ">",
+        "value": "3.7",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "floor_area",
+        "condition": "distance from a floor to the floor above or to the top of the roof joists",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0006_001",
+          "vancouver_rs_native_v3_repair_pack_0019_001"
+        ],
+        "rule_object": "lot_area",
+        "operator": ">=",
+        "value": "9.8",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "lot_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0006_002",
+          "vancouver_rs_native_v3_repair_pack_0019_002"
+        ],
+        "rule_object": "lot_area",
+        "operator": ">=",
+        "value": "7.3",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "lot_area",
+        "condition": "Director of Planning may reduce the minimum site width",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0007_001",
+          "vancouver_rs_native_v3_repair_pack_0004_001"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "4.9",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "building_separation",
+        "condition": "from the single detached house or single detached house with secondary suite",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0007_002",
+          "vancouver_rs_native_v3_repair_pack_0004_002"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.9",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "setback",
+        "condition": "from the ultimate rear property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0007_003",
+          "vancouver_rs_native_v3_repair_pack_0004_003"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.2",
+        "unit": "m",
+        "applies_to": "laneway house",
+        "constraint_scope": "setback",
+        "condition": "from each side property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0008_001",
+          "vancouver_rs_v3clause_m4_pack_0008_005"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "<=",
+        "value": "50",
+        "unit": "%",
+        "applies_to": "site with a laneway house",
+        "constraint_scope": "lot_coverage",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0009_001",
+          "vancouver_rs_native_v3_repair_pack_0010_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": ">",
+        "value": "4",
+        "unit": "m2",
+        "applies_to": "common space",
+        "constraint_scope": "floor_area",
+        "condition": "per unit",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0009_002",
+          "vancouver_rs_native_v3_repair_pack_0010_002"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "10",
+        "unit": "%",
+        "applies_to": "common space",
+        "constraint_scope": "floor_area",
+        "condition": "of permitted floor area",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0010_001",
+          "vancouver_rs_native_v3_repair_pack_0013_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": ">=",
+        "value": "37",
+        "unit": "m2",
+        "applies_to": "dwelling unit",
+        "constraint_scope": "floor_area",
+        "condition": "except for a lock-off unit",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0014_001",
+          "vancouver_rs_native_v3_repair_pack_0005_001"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "<=",
+        "value": "1",
+        "unit": "units",
+        "applies_to": "laneway house",
+        "constraint_scope": "dwelling_units",
+        "condition": "in combination with a child day care facility",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0015_001",
+          "vancouver_rs_native_v3_repair_pack_0014_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": ">=",
+        "value": "29.7",
+        "unit": "m2",
+        "applies_to": "micro dwelling",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0050_001",
+          "vancouver_rs_native_v3_repair_pack_0015_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "6.0",
+        "unit": "m",
+        "applies_to": "side yards",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0051_001",
+          "vancouver_rs_native_v3_repair_pack_0016_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "4.5",
+        "unit": "m",
+        "applies_to": "interior side yards",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0051_002",
+          "vancouver_rs_native_v3_repair_pack_0016_002"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.3",
+        "unit": "m",
+        "applies_to": "interior side yards",
+        "constraint_scope": "setback",
+        "condition": "for every 0.6 m by which the height of the building exceeds 10.7 m",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "vancouver_rs_native_m4_pack_0051_003",
+          "vancouver_rs_native_v3_repair_pack_0016_003"
+        ],
+        "rule_object": "height",
+        "operator": ">",
+        "value": "10.7",
+        "unit": "m",
+        "applies_to": "building",
+        "constraint_scope": "height",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ]
+  }
+}

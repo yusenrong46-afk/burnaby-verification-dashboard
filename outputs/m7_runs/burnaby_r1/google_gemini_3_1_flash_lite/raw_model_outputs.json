@@ -1,0 +1,1181 @@
+[
+  {
+    "pack_id": "m4_pack_0001",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 4241,
+    "estimated_cost_usd": 0.0001985,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0002",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1723,
+    "estimated_cost_usd": 0.00033575,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "lot_area",
+          "operator": ">=",
+          "value": "281",
+          "unit": "m2",
+          "applies_to": "lot",
+          "condition": "Minimum Lot Area",
+          "exception": "",
+          "source_quote": "Minimum Lot Area - 281 m2"
+        },
+        {
+          "rule_object": "lot_area",
+          "operator": "<=",
+          "value": "280",
+          "unit": "m2",
+          "applies_to": "lot",
+          "condition": "Maximum Lot Area",
+          "exception": "",
+          "source_quote": "Maximum Lot Area 280 m2"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0004",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1693,
+    "estimated_cost_usd": 0.00033975,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "1",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit lots",
+          "condition": "",
+          "exception": "",
+          "source_quote": "small-scale multi-unit lots with 1 to 3 units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "3",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit lots",
+          "condition": "",
+          "exception": "",
+          "source_quote": "small-scale multi-unit lots with 1 to 3 units"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0006",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1787,
+    "estimated_cost_usd": 0.000637,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "lot_coverage",
+          "operator": "<=",
+          "value": "60",
+          "unit": "%",
+          "applies_to": "lots in the R1 District on the Community Heritage Register",
+          "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+          "exception": "",
+          "source_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60%"
+        },
+        {
+          "rule_object": "impervious_surface",
+          "operator": "<=",
+          "value": "70",
+          "unit": "%",
+          "applies_to": "lots in the R1 District on the Community Heritage Register",
+          "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+          "exception": "",
+          "source_quote": "impervious surface area up to 70%"
+        },
+        {
+          "rule_object": "setback",
+          "operator": ">=",
+          "value": "2.0",
+          "unit": "m",
+          "applies_to": "street yards",
+          "condition": "lots in the R1 District on the Community Heritage Register",
+          "exception": "",
+          "source_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0008",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1261,
+    "estimated_cost_usd": 0.0003475,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "1",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit",
+          "condition": "on a lot",
+          "exception": "",
+          "source_quote": "1 to 3 small-scale multi-unit dwelling units on a lot"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "3",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit",
+          "condition": "on a lot",
+          "exception": "",
+          "source_quote": "1 to 3 small-scale multi-unit dwelling units on a lot"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0017",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 2008,
+    "estimated_cost_usd": 0.00053125,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "1",
+          "unit": "units",
+          "applies_to": "dwelling units",
+          "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot 1 to 3 Units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "3",
+          "unit": "units",
+          "applies_to": "dwelling units",
+          "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot 1 to 3 Units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "4",
+          "unit": "units",
+          "applies_to": "dwelling units",
+          "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot 4 to 6 Units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "6",
+          "unit": "units",
+          "applies_to": "dwelling units",
+          "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot 4 to 6 Units"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0018",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1848,
+    "estimated_cost_usd": 0.00042525,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "fire_access_corridor",
+          "operator": "<=",
+          "value": "100",
+          "unit": "m",
+          "applies_to": "pedestrian walkway",
+          "condition": "Contiguous rowhouse lots",
+          "exception": "",
+          "source_quote": "pedestrian walkway spaced every 100 m or less"
+        },
+        {
+          "rule_object": "setback",
+          "operator": ">=",
+          "value": "1.5",
+          "unit": "m",
+          "applies_to": "pedestrian walkway",
+          "condition": "Contiguous rowhouse lots",
+          "exception": "",
+          "source_quote": "is at least 1.5 m wide"
+        },
+        {
+          "rule_object": "height",
+          "operator": ">=",
+          "value": "2.5",
+          "unit": "m",
+          "applies_to": "pedestrian walkway",
+          "condition": "Contiguous rowhouse lots",
+          "exception": "",
+          "source_quote": "clear to a height of at least 2.5 m"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0019",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1658,
+    "estimated_cost_usd": 0.00026575,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "setback",
+          "operator": ">=",
+          "value": "1.2",
+          "unit": "m",
+          "applies_to": "garage or carport",
+          "condition": "below grade",
+          "exception": "",
+          "source_quote": "nor be less than 1.2 m from a lot line"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0021",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1304,
+    "estimated_cost_usd": 0.00030325,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "height",
+          "operator": "<=",
+          "value": "4.6",
+          "unit": "m",
+          "applies_to": "accessory structure",
+          "condition": "not being a building, excluding a fence or a retaining wall, located outside of a required yard",
+          "exception": "",
+          "source_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height."
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0022",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 719,
+    "estimated_cost_usd": 0.000182,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0025",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1843,
+    "estimated_cost_usd": 0.0006745,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "building_separation",
+          "operator": "<=",
+          "value": "1.0",
+          "unit": "m",
+          "applies_to": "terraces, decks, or other similar surfaces",
+          "condition": "above grade",
+          "exception": "",
+          "source_quote": "terraces, decks, or other similar surfaces that are 1.0 m or less above grade"
+        },
+        {
+          "rule_object": "building_separation",
+          "operator": ">",
+          "value": "1.0",
+          "unit": "m",
+          "applies_to": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features",
+          "condition": "above grade",
+          "exception": "",
+          "source_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade"
+        },
+        {
+          "rule_object": "building_separation",
+          "operator": "<=",
+          "value": "0.9",
+          "unit": "m",
+          "applies_to": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features",
+          "condition": "",
+          "exception": "",
+          "source_quote": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m"
+        },
+        {
+          "rule_object": "building_separation",
+          "operator": "<=",
+          "value": "1.2",
+          "unit": "m",
+          "applies_to": "eaves",
+          "condition": "",
+          "exception": "",
+          "source_quote": "eaves up to the lesser of 1.2 m"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0033",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1023,
+    "estimated_cost_usd": 0.0001605,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0034",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1312,
+    "estimated_cost_usd": 0.000352,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "fire_access_corridor",
+          "operator": ">=",
+          "value": "1.0",
+          "unit": "m",
+          "applies_to": "dwelling units",
+          "condition": "",
+          "exception": "",
+          "source_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor"
+        },
+        {
+          "rule_object": "height",
+          "operator": ">=",
+          "value": "2.5",
+          "unit": "m",
+          "applies_to": "fire_access_corridor",
+          "condition": "",
+          "exception": "",
+          "source_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height."
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0035",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1301,
+    "estimated_cost_usd": 0.0002785,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "automatic_sprinkler",
+          "operator": ">",
+          "value": "45",
+          "unit": "m",
+          "applies_to": "dwelling units",
+          "condition": "located more than 45 m from a lot line abutting a street",
+          "exception": "",
+          "source_quote": "Dwelling units located more than 45 m from a lot line abutting a street shall contain an automatic sprinkler system."
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0044",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1283,
+    "estimated_cost_usd": 0.0002555,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "setback",
+          "operator": "<=",
+          "value": "0.8",
+          "unit": "m",
+          "applies_to": "projections into required lane yards",
+          "condition": "R1 District",
+          "exception": "",
+          "source_quote": "projections into required lane yards are limited to a maximum of 0.8 m"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0045",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 706,
+    "estimated_cost_usd": 0.0001685,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0056",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1860,
+    "estimated_cost_usd": 0.00015875,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0057",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1320,
+    "estimated_cost_usd": 0.0002285,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "dwelling_units",
+          "operator": "<=",
+          "value": "6",
+          "unit": "units",
+          "applies_to": "residential dwellings",
+          "condition": "",
+          "exception": "",
+          "source_quote": "maximum of 6 dwelling units on a lot"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0058",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1365,
+    "estimated_cost_usd": 0.00024925,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "lot_area",
+          "operator": ">=",
+          "value": "560",
+          "unit": "m2",
+          "applies_to": "lot",
+          "condition": "boarding, lodging or rooming houses",
+          "exception": "",
+          "source_quote": "lot with an area of not less than 560 m2"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "m4_pack_0059",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 863,
+    "estimated_cost_usd": 0.00014225,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0060",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1004,
+    "estimated_cost_usd": 0.00014375,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0076",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 948,
+    "estimated_cost_usd": 0.00014225,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0077",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 721,
+    "estimated_cost_usd": 0.00015025,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0078",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 661,
+    "estimated_cost_usd": 0.00015825,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0079",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 668,
+    "estimated_cost_usd": 0.00014475,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0080",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 715,
+    "estimated_cost_usd": 0.0001505,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0081",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 715,
+    "estimated_cost_usd": 0.0001415,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0082",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 737,
+    "estimated_cost_usd": 0.00014225,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0083",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 900,
+    "estimated_cost_usd": 0.00014325,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0084",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 817,
+    "estimated_cost_usd": 0.00014225,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0085",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 715,
+    "estimated_cost_usd": 0.0001425,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0086",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 715,
+    "estimated_cost_usd": 0.000142,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0087",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 822,
+    "estimated_cost_usd": 0.00014175,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0088",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 729,
+    "estimated_cost_usd": 0.000142,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0089",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 4516,
+    "estimated_cost_usd": 0.0001425,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0090",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 950,
+    "estimated_cost_usd": 0.0001415,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0091",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 963,
+    "estimated_cost_usd": 0.00014225,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0092",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1077,
+    "estimated_cost_usd": 0.00014225,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "m4_pack_0093",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 725,
+    "estimated_cost_usd": 0.00014275,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0001",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1176,
+    "estimated_cost_usd": 0.00033425,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "lot_area",
+          "operator": ">=",
+          "value": "281",
+          "unit": "m2",
+          "applies_to": "Minimum Lot Area",
+          "condition": "",
+          "exception": "",
+          "source_quote": "Minimum Lot Area - 281 m2"
+        },
+        {
+          "rule_object": "lot_area",
+          "operator": "<=",
+          "value": "280",
+          "unit": "m2",
+          "applies_to": "Maximum Lot Area",
+          "condition": "",
+          "exception": "",
+          "source_quote": "Maximum Lot Area 280 m2"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0002",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 4550,
+    "estimated_cost_usd": 0.0001985,
+    "model_output": {
+      "rules": []
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0003",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 917,
+    "estimated_cost_usd": 0.00021725,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "lot_area",
+          "operator": "<=",
+          "value": "280",
+          "unit": "m2",
+          "applies_to": "lot",
+          "condition": "",
+          "exception": "",
+          "source_quote": "Maximum Lot Area; 280 m2"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0004",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1384,
+    "estimated_cost_usd": 0.00033975,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "1",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit lots",
+          "condition": "",
+          "exception": "",
+          "source_quote": "small-scale multi-unit lots with 1 to 3 units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "3",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit lots",
+          "condition": "",
+          "exception": "",
+          "source_quote": "small-scale multi-unit lots with 1 to 3 units"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0005",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 2151,
+    "estimated_cost_usd": 0.000637,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "lot_coverage",
+          "operator": "<=",
+          "value": "60",
+          "unit": "%",
+          "applies_to": "lots in the R1 District on the Community Heritage Register",
+          "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+          "exception": "",
+          "source_quote": "maximum lot coverage as set out in Section 101.4 may be increased up to 60%"
+        },
+        {
+          "rule_object": "impervious_surface",
+          "operator": "<=",
+          "value": "70",
+          "unit": "%",
+          "applies_to": "lots in the R1 District on the Community Heritage Register",
+          "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+          "exception": "",
+          "source_quote": "impervious surface area up to 70%"
+        },
+        {
+          "rule_object": "setback",
+          "operator": ">=",
+          "value": "2.0",
+          "unit": "m",
+          "applies_to": "street yards",
+          "condition": "lots in the R1 District on the Community Heritage Register",
+          "exception": "",
+          "source_quote": "lot line setbacks for street yards may meet a minimum of 2.0 m"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0006",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 880,
+    "estimated_cost_usd": 0.00026575,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "setback",
+          "operator": "",
+          "value": "1.2",
+          "unit": "m",
+          "applies_to": "garage or carport",
+          "condition": "below grade",
+          "exception": "",
+          "source_quote": "nor be less than 1.2 m from a lot line"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0007",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1641,
+    "estimated_cost_usd": 0.000349,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "1",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit",
+          "condition": "R1 District",
+          "exception": "",
+          "source_quote": "1 to 3 small-scale multi-unit dwelling units on a lot"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "3",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit",
+          "condition": "R1 District",
+          "exception": "",
+          "source_quote": "1 to 3 small-scale multi-unit dwelling units on a lot"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0008",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1877,
+    "estimated_cost_usd": 0.00053125,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "1",
+          "unit": "units",
+          "applies_to": "dwelling units",
+          "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot 1 to 3 Units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "3",
+          "unit": "units",
+          "applies_to": "dwelling units",
+          "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot 1 to 3 Units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "4",
+          "unit": "units",
+          "applies_to": "dwelling units",
+          "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot 4 to 6 Units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "6",
+          "unit": "units",
+          "applies_to": "dwelling units",
+          "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot 4 to 6 Units"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0009",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 5935,
+    "estimated_cost_usd": 0.00051125,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "1",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit housing",
+          "condition": "Total Dwelling Units on a Lot",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot: 1 to 3 Units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "3",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit housing",
+          "condition": "Total Dwelling Units on a Lot",
+          "exception": "",
+          "source_quote": "Total Dwelling Units on a Lot: 1 to 3 Units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "4",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit housing",
+          "condition": "Total Dwelling Units on a Lot",
+          "exception": "",
+          "source_quote": "4 to 6 Units"
+        },
+        {
+          "rule_object": "dwelling_units",
+          "operator": "",
+          "value": "6",
+          "unit": "units",
+          "applies_to": "small-scale multi-unit housing",
+          "condition": "Total Dwelling Units on a Lot",
+          "exception": "",
+          "source_quote": "4 to 6 Units"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0010",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1422,
+    "estimated_cost_usd": 0.00042525,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "fire_access_corridor",
+          "operator": "<=",
+          "value": "100",
+          "unit": "m",
+          "applies_to": "pedestrian walkway",
+          "condition": "Contiguous rowhouse lots",
+          "exception": "",
+          "source_quote": "pedestrian walkway spaced every 100 m or less"
+        },
+        {
+          "rule_object": "setback",
+          "operator": ">=",
+          "value": "1.5",
+          "unit": "m",
+          "applies_to": "pedestrian walkway",
+          "condition": "Contiguous rowhouse lots",
+          "exception": "",
+          "source_quote": "is at least 1.5 m wide"
+        },
+        {
+          "rule_object": "height",
+          "operator": ">=",
+          "value": "2.5",
+          "unit": "m",
+          "applies_to": "pedestrian walkway",
+          "condition": "Contiguous rowhouse lots",
+          "exception": "",
+          "source_quote": "clear to a height of at least 2.5 m"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0011",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1446,
+    "estimated_cost_usd": 0.000352,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "fire_access_corridor",
+          "operator": ">=",
+          "value": "1.0",
+          "unit": "m",
+          "applies_to": "dwelling units",
+          "condition": "",
+          "exception": "",
+          "source_quote": "All dwelling units shall have a minimum 1.0 m paved or gravel fire access corridor"
+        },
+        {
+          "rule_object": "height",
+          "operator": ">=",
+          "value": "2.5",
+          "unit": "m",
+          "applies_to": "fire access corridor",
+          "condition": "",
+          "exception": "",
+          "source_quote": "is clear of any projections or obstructions to a minimum of 2.5 m in height."
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0012",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1842,
+    "estimated_cost_usd": 0.0006745,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "building_separation",
+          "operator": "<=",
+          "value": "1.0",
+          "unit": "m",
+          "applies_to": "terraces, decks, or other similar surfaces",
+          "condition": "above grade",
+          "exception": "",
+          "source_quote": "terraces, decks, or other similar surfaces that are 1.0 m or less above grade"
+        },
+        {
+          "rule_object": "building_separation",
+          "operator": ">",
+          "value": "1.0",
+          "unit": "m",
+          "applies_to": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features",
+          "condition": "above grade",
+          "exception": "",
+          "source_quote": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features, including supporting structures, that are greater than 1.0 m above grade"
+        },
+        {
+          "rule_object": "building_separation",
+          "operator": "<=",
+          "value": "0.9",
+          "unit": "m",
+          "applies_to": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features",
+          "condition": "",
+          "exception": "",
+          "source_quote": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features up to the lesser of 0.9 m"
+        },
+        {
+          "rule_object": "building_separation",
+          "operator": "<=",
+          "value": "1.2",
+          "unit": "m",
+          "applies_to": "eaves",
+          "condition": "",
+          "exception": "",
+          "source_quote": "eaves up to the lesser of 1.2 m"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0013",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 2944,
+    "estimated_cost_usd": 0.00030325,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "height",
+          "operator": "<=",
+          "value": "4.6",
+          "unit": "m",
+          "applies_to": "accessory structure",
+          "condition": "not being a building, excluding a fence or a retaining wall, located outside of a required yard",
+          "exception": "",
+          "source_quote": "An accessory structure not being a building, excluding a fence or a retaining wall, located outside of a required yard, shall not exceed 4.6 m in height."
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0014",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 943,
+    "estimated_cost_usd": 0.0002585,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "setback",
+          "operator": "<=",
+          "value": "0.8",
+          "unit": "m",
+          "applies_to": "projections into required lane yards",
+          "condition": "in the R1 District",
+          "exception": "",
+          "source_quote": "projections into required lane yards are limited to a maximum of 0.8 m"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0015",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 981,
+    "estimated_cost_usd": 0.0002375,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "dwelling_units",
+          "operator": "<=",
+          "value": "6",
+          "unit": "units",
+          "applies_to": "ground-oriented residential dwellings",
+          "condition": "",
+          "exception": "",
+          "source_quote": "up to a maximum of 6 dwelling units on a lot"
+        }
+      ]
+    }
+  },
+  {
+    "pack_id": "v3_repair_pack_0016",
+    "model": "google/gemini-3.1-flash-lite",
+    "source": "openrouter",
+    "latency_ms": 1029,
+    "estimated_cost_usd": 0.00024925,
+    "model_output": {
+      "rules": [
+        {
+          "rule_object": "lot_area",
+          "operator": ">=",
+          "value": "560",
+          "unit": "m2",
+          "applies_to": "lot",
+          "condition": "boarding, lodging or rooming houses",
+          "exception": "",
+          "source_quote": "lot with an area of not less than 560 m2"
+        }
+      ]
+    }
+  }
+]

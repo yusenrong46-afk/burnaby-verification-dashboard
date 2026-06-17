@@ -1,0 +1,2229 @@
+{
+  "city": "calgary_rcg",
+  "created_at": "2026-06-17T05:55:01.721356+00:00",
+  "advisory_note": "Loose ceiling = source rule-like numeric clauses + table cells. It is an overcount guardrail, not an exact legal-rule total.",
+  "source_counts": {
+    "rule_like_numeric_clause_count": 53,
+    "table_cell_count": 78,
+    "loose_source_rule_slot_ceiling": 131,
+    "numeric_clause_count": 54,
+    "table_entry_count": 26,
+    "source_chunk_count": 151
+  },
+  "output_counts": {
+    "candidate_rule_count": 150,
+    "verified_rule_count": 29,
+    "review_rule_count": 42,
+    "rejected_rule_count": 27,
+    "not_used_rule_count": 52,
+    "effective_verified_rule_count": 22
+  },
+  "ratios": {
+    "candidate_to_loose_ceiling": 1.145,
+    "verified_to_loose_ceiling": 0.221
+  },
+  "flags": {
+    "candidate_count_exceeds_loose_source_ceiling": true,
+    "verified_count_exceeds_loose_source_ceiling": false,
+    "verified_exact_duplicate_count": 7,
+    "candidate_exact_duplicate_count": 58,
+    "verified_out_of_contract_count": 0,
+    "candidate_out_of_contract_count": 0
+  },
+  "contract_families": [
+    "building_separation",
+    "dwelling_units",
+    "floor_area",
+    "height",
+    "lot_area",
+    "lot_coverage",
+    "setback",
+    "storeys"
+  ],
+  "verified_family_counts": [
+    {
+      "family": "setback",
+      "count": 16
+    },
+    {
+      "family": "building_separation",
+      "count": 5
+    },
+    {
+      "family": "height",
+      "count": 5
+    },
+    {
+      "family": "floor_area",
+      "count": 2
+    },
+    {
+      "family": "lot_coverage",
+      "count": 1
+    }
+  ],
+  "candidate_family_counts": [
+    {
+      "family": "setback",
+      "count": 70
+    },
+    {
+      "family": "height",
+      "count": 36
+    },
+    {
+      "family": "floor_area",
+      "count": 18
+    },
+    {
+      "family": "lot_coverage",
+      "count": 16
+    },
+    {
+      "family": "building_separation",
+      "count": 6
+    },
+    {
+      "family": "dwelling_units",
+      "count": 4
+    }
+  ],
+  "verified_out_of_contract_rule_ids": [],
+  "candidate_out_of_contract_rule_ids": [],
+  "verified_duplicates": {
+    "semantic_duplicate_group_count": 8,
+    "semantic_duplicate_rule_count": 8,
+    "source_aware_duplicate_group_count": 7,
+    "source_aware_duplicate_rule_count": 7,
+    "semantic_duplicate_groups": [
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_004",
+          "calgary_rcg_094"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "side property line shared with another parcel",
+        "constraint_scope": "setback",
+        "condition": "main residential building on a corner parcel",
+        "source_slots": [
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_006",
+          "calgary_rcg_103"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.5",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "setback",
+        "condition": "rear property line",
+        "source_slots": [
+          {
+            "page": 395,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 395,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_008",
+          "calgary_rcg_088"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.6",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "setback",
+        "condition": "into a setback area from a property line shared with a street or a lane",
+        "source_slots": [
+          {
+            "page": 396,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 396,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_013",
+          "calgary_rcg_063"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.2",
+        "unit": "m",
+        "applies_to": "side property line",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 471,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 471,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_020",
+          "calgary_rcg_138"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "5.0",
+        "unit": "m",
+        "applies_to": "between the closest façade of the main residential building to the closest façade of a Backyard Suite",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 396,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 396,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_028",
+          "calgary_rcg_096"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "6.5",
+        "unit": "m",
+        "applies_to": "main residential buildings",
+        "constraint_scope": "building_separation",
+        "condition": "on a laned parcel",
+        "source_slots": [
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_064",
+          "calgary_rcg_144"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.6",
+        "unit": "m",
+        "applies_to": "private garage attached to a main residential building",
+        "constraint_scope": "setback",
+        "condition": "on a laned parcel",
+        "source_slots": [
+          {
+            "page": 472,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 472,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_067",
+          "calgary_rcg_133"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "side property line",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ],
+    "source_aware_duplicate_groups": [
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_004",
+          "calgary_rcg_094"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "side property line shared with another parcel",
+        "constraint_scope": "setback",
+        "condition": "main residential building on a corner parcel",
+        "source_slots": [
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_006",
+          "calgary_rcg_103"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.5",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "setback",
+        "condition": "rear property line",
+        "source_slots": [
+          {
+            "page": 395,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 395,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_008",
+          "calgary_rcg_088"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.6",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "setback",
+        "condition": "into a setback area from a property line shared with a street or a lane",
+        "source_slots": [
+          {
+            "page": 396,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 396,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_020",
+          "calgary_rcg_138"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "5.0",
+        "unit": "m",
+        "applies_to": "between the closest façade of the main residential building to the closest façade of a Backyard Suite",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 396,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 396,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_028",
+          "calgary_rcg_096"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "6.5",
+        "unit": "m",
+        "applies_to": "main residential buildings",
+        "constraint_scope": "building_separation",
+        "condition": "on a laned parcel",
+        "source_slots": [
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_064",
+          "calgary_rcg_144"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.6",
+        "unit": "m",
+        "applies_to": "private garage attached to a main residential building",
+        "constraint_scope": "setback",
+        "condition": "on a laned parcel",
+        "source_slots": [
+          {
+            "page": 472,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 472,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_067",
+          "calgary_rcg_133"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "side property line",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 470,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ]
+  },
+  "candidate_duplicates": {
+    "semantic_duplicate_group_count": 56,
+    "semantic_duplicate_rule_count": 58,
+    "source_aware_duplicate_group_count": 56,
+    "source_aware_duplicate_rule_count": 58,
+    "semantic_duplicate_groups": [
+      {
+        "count": 3,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0001_001",
+          "calgary_rcg_v3clause_m4_pack_0001_001",
+          "calgary_rcg_native_v3_repair_pack_0001_001"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "5.0",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "height",
+        "condition": "measured from grade at a side property line shared with a parcel designated with a low density residential district",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0021_001",
+          "calgary_rcg_v3clause_m4_pack_0021_006",
+          "calgary_rcg_native_v3_repair_pack_0012_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "75.0",
+        "unit": "m2",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0001_002",
+          "calgary_rcg_native_v3_repair_pack_0001_002"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "height",
+        "condition": "measured from grade at a rear property line shared with a parcel designated with a low density residential district",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0001_003",
+          "calgary_rcg_native_v3_repair_pack_0001_003"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "7.5",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "height",
+        "condition": "at a proportional distance from the shared property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0002_001",
+          "calgary_rcg_native_v3_repair_pack_0004_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "side property line shared with another parcel",
+        "constraint_scope": "setback",
+        "condition": "main residential building on a corner parcel",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0002_002",
+          "calgary_rcg_native_v3_repair_pack_0004_002"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "",
+        "value": "50.0",
+        "unit": "%",
+        "applies_to": "parcel depth",
+        "constraint_scope": "lot_coverage",
+        "condition": "main residential building on a corner parcel",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0003_001",
+          "calgary_rcg_native_v3_repair_pack_0007_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.5",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "setback",
+        "condition": "rear property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0003_002",
+          "calgary_rcg_native_v3_repair_pack_0007_002"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.6",
+        "unit": "m",
+        "applies_to": "private garage",
+        "constraint_scope": "setback",
+        "condition": "rear property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0006_001",
+          "calgary_rcg_native_v3_repair_pack_0002_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.6",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "setback",
+        "condition": "into a setback area from a property line shared with a street or a lane",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0006_002",
+          "calgary_rcg_native_v3_repair_pack_0002_002"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "40.0",
+        "unit": "%",
+        "applies_to": "Backyard Suite projections",
+        "constraint_scope": "floor_area",
+        "condition": "length of the façade on each storey",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0006_003",
+          "calgary_rcg_native_v3_repair_pack_0002_003"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "3.1",
+        "unit": "m",
+        "applies_to": "Backyard Suite projections",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0013_001",
+          "calgary_rcg_native_m4_pack_0054_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.2",
+        "unit": "m",
+        "applies_to": "side property line",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0014_001",
+          "calgary_rcg_native_v3_repair_pack_0015_001"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "",
+        "value": "21.0",
+        "unit": "m2",
+        "applies_to": "parcel coverage",
+        "constraint_scope": "lot_coverage",
+        "condition": "one motor vehicle parking stall is required on a parcel that is not located in a private garage",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0014_002",
+          "calgary_rcg_native_v3_repair_pack_0015_002"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "",
+        "value": "19.0",
+        "unit": "m2",
+        "applies_to": "parcel coverage",
+        "constraint_scope": "lot_coverage",
+        "condition": "each required motor vehicle parking stall that is not located in a private garage where more than one motor vehicle parking stall is required on a parcel",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0015_001",
+          "calgary_rcg_native_v3_repair_pack_0003_001"
+        ],
+        "rule_object": "setback",
+        "operator": "<",
+        "value": "4.0",
+        "unit": "m",
+        "applies_to": "balcony",
+        "constraint_scope": "setback",
+        "condition": "balcony projects from a façade that faces a property line shared with a lane or a street or includes a privacy wall",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0015_002",
+          "calgary_rcg_native_v3_repair_pack_0003_002"
+        ],
+        "rule_object": "height",
+        "operator": ">=",
+        "value": "2.0",
+        "unit": "m",
+        "applies_to": "privacy wall",
+        "constraint_scope": "height",
+        "condition": "balcony includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0015_003",
+          "calgary_rcg_native_v3_repair_pack_0003_003"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "privacy wall",
+        "constraint_scope": "height",
+        "condition": "balcony includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0017_001",
+          "calgary_rcg_native_v3_repair_pack_0025_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "10.0",
+        "unit": "%",
+        "applies_to": "Secondary Suite",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0018_001",
+          "calgary_rcg_native_v3_repair_pack_0024_001"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "5.0",
+        "unit": "m",
+        "applies_to": "between the closest façade of the main residential building to the closest façade of a Backyard Suite",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0019_001",
+          "calgary_rcg_native_v3_repair_pack_0013_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "10.0",
+        "unit": "%",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0021_002",
+          "calgary_rcg_native_v3_repair_pack_0012_002"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "2.5",
+        "unit": "m2",
+        "applies_to": "stairways and internal landings",
+        "constraint_scope": "floor_area",
+        "condition": "within a Backyard Suite",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0022_001",
+          "calgary_rcg_native_v3_repair_pack_0014_001"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "<=",
+        "value": "45.0",
+        "unit": "%",
+        "applies_to": "parcels subject to a single development permit",
+        "constraint_scope": "lot_coverage",
+        "condition": "density of less than 40 units per hectare",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0022_002",
+          "calgary_rcg_native_v3_repair_pack_0014_002"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "<=",
+        "value": "50.0",
+        "unit": "%",
+        "applies_to": "parcels subject to a single development permit",
+        "constraint_scope": "lot_coverage",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0027_001",
+          "calgary_rcg_native_v3_repair_pack_0005_001"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "6.5",
+        "unit": "m",
+        "applies_to": "main residential buildings",
+        "constraint_scope": "building_separation",
+        "condition": "on a laned parcel",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0033_001",
+          "calgary_rcg_native_v3_repair_pack_0018_001"
+        ],
+        "rule_object": "setback",
+        "operator": "",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "side setback area",
+        "constraint_scope": "setback",
+        "condition": "measured from grade",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ],
+    "source_aware_duplicate_groups": [
+      {
+        "count": 3,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0001_001",
+          "calgary_rcg_v3clause_m4_pack_0001_001",
+          "calgary_rcg_native_v3_repair_pack_0001_001"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "5.0",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "height",
+        "condition": "measured from grade at a side property line shared with a parcel designated with a low density residential district",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0021_001",
+          "calgary_rcg_v3clause_m4_pack_0021_006",
+          "calgary_rcg_native_v3_repair_pack_0012_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "75.0",
+        "unit": "m2",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0001_002",
+          "calgary_rcg_native_v3_repair_pack_0001_002"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "height",
+        "condition": "measured from grade at a rear property line shared with a parcel designated with a low density residential district",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0001_003",
+          "calgary_rcg_native_v3_repair_pack_0001_003"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "7.5",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "height",
+        "condition": "at a proportional distance from the shared property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0002_001",
+          "calgary_rcg_native_v3_repair_pack_0004_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "side property line shared with another parcel",
+        "constraint_scope": "setback",
+        "condition": "main residential building on a corner parcel",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0002_002",
+          "calgary_rcg_native_v3_repair_pack_0004_002"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "",
+        "value": "50.0",
+        "unit": "%",
+        "applies_to": "parcel depth",
+        "constraint_scope": "lot_coverage",
+        "condition": "main residential building on a corner parcel",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0003_001",
+          "calgary_rcg_native_v3_repair_pack_0007_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.5",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "setback",
+        "condition": "rear property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0003_002",
+          "calgary_rcg_native_v3_repair_pack_0007_002"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.6",
+        "unit": "m",
+        "applies_to": "private garage",
+        "constraint_scope": "setback",
+        "condition": "rear property line",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0006_001",
+          "calgary_rcg_native_v3_repair_pack_0002_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "0.6",
+        "unit": "m",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "setback",
+        "condition": "into a setback area from a property line shared with a street or a lane",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0006_002",
+          "calgary_rcg_native_v3_repair_pack_0002_002"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "40.0",
+        "unit": "%",
+        "applies_to": "Backyard Suite projections",
+        "constraint_scope": "floor_area",
+        "condition": "length of the façade on each storey",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0006_003",
+          "calgary_rcg_native_v3_repair_pack_0002_003"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "3.1",
+        "unit": "m",
+        "applies_to": "Backyard Suite projections",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0013_001",
+          "calgary_rcg_native_m4_pack_0054_001"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.2",
+        "unit": "m",
+        "applies_to": "side property line",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0014_001",
+          "calgary_rcg_native_v3_repair_pack_0015_001"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "",
+        "value": "21.0",
+        "unit": "m2",
+        "applies_to": "parcel coverage",
+        "constraint_scope": "lot_coverage",
+        "condition": "one motor vehicle parking stall is required on a parcel that is not located in a private garage",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0014_002",
+          "calgary_rcg_native_v3_repair_pack_0015_002"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "",
+        "value": "19.0",
+        "unit": "m2",
+        "applies_to": "parcel coverage",
+        "constraint_scope": "lot_coverage",
+        "condition": "each required motor vehicle parking stall that is not located in a private garage where more than one motor vehicle parking stall is required on a parcel",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0015_001",
+          "calgary_rcg_native_v3_repair_pack_0003_001"
+        ],
+        "rule_object": "setback",
+        "operator": "<",
+        "value": "4.0",
+        "unit": "m",
+        "applies_to": "balcony",
+        "constraint_scope": "setback",
+        "condition": "balcony projects from a façade that faces a property line shared with a lane or a street or includes a privacy wall",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0015_002",
+          "calgary_rcg_native_v3_repair_pack_0003_002"
+        ],
+        "rule_object": "height",
+        "operator": ">=",
+        "value": "2.0",
+        "unit": "m",
+        "applies_to": "privacy wall",
+        "constraint_scope": "height",
+        "condition": "balcony includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0015_003",
+          "calgary_rcg_native_v3_repair_pack_0003_003"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "privacy wall",
+        "constraint_scope": "height",
+        "condition": "balcony includes a privacy wall that screens the balcony from a property line shared with a parcel designated with low density residential district",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0017_001",
+          "calgary_rcg_native_v3_repair_pack_0025_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "10.0",
+        "unit": "%",
+        "applies_to": "Secondary Suite",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0018_001",
+          "calgary_rcg_native_v3_repair_pack_0024_001"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "5.0",
+        "unit": "m",
+        "applies_to": "between the closest façade of the main residential building to the closest façade of a Backyard Suite",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0019_001",
+          "calgary_rcg_native_v3_repair_pack_0013_001"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "10.0",
+        "unit": "%",
+        "applies_to": "Backyard Suite",
+        "constraint_scope": "floor_area",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0021_002",
+          "calgary_rcg_native_v3_repair_pack_0012_002"
+        ],
+        "rule_object": "floor_area",
+        "operator": "<=",
+        "value": "2.5",
+        "unit": "m2",
+        "applies_to": "stairways and internal landings",
+        "constraint_scope": "floor_area",
+        "condition": "within a Backyard Suite",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0022_001",
+          "calgary_rcg_native_v3_repair_pack_0014_001"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "<=",
+        "value": "45.0",
+        "unit": "%",
+        "applies_to": "parcels subject to a single development permit",
+        "constraint_scope": "lot_coverage",
+        "condition": "density of less than 40 units per hectare",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0022_002",
+          "calgary_rcg_native_v3_repair_pack_0014_002"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "<=",
+        "value": "50.0",
+        "unit": "%",
+        "applies_to": "parcels subject to a single development permit",
+        "constraint_scope": "lot_coverage",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0027_001",
+          "calgary_rcg_native_v3_repair_pack_0005_001"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "6.5",
+        "unit": "m",
+        "applies_to": "main residential buildings",
+        "constraint_scope": "building_separation",
+        "condition": "on a laned parcel",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "calgary_rcg_native_m4_pack_0033_001",
+          "calgary_rcg_native_v3_repair_pack_0018_001"
+        ],
+        "rule_object": "setback",
+        "operator": "",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "side setback area",
+        "constraint_scope": "setback",
+        "condition": "measured from grade",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ]
+  }
+}

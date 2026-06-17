@@ -1,4 +1,4 @@
-"""Streamlit dashboard for multi-city zoning verifier outputs."""
+"""Streamlit dashboard for Burnaby verifier outputs."""
 
 from __future__ import annotations
 
@@ -16,16 +16,49 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def _load_dotenv(path: Path) -> None:
+    """Load ``KEY=VALUE`` pairs from a local ``.env`` into ``os.environ``.
+
+    The verifier's extraction layer reads ``OPENROUTER_API_KEY`` from ``.env``;
+    the dashboard's bylaw chatbot reuses the SAME key so the chat works out of
+    the box locally with no extra setup. Never overrides an already-set
+    environment variable or a Streamlit secret, and never raises.
+    """
+    try:
+        if not path.exists():
+            return
+        for line in path.read_text(encoding="utf-8").splitlines():
+            stripped = line.strip()
+            if not stripped or stripped.startswith("#") or "=" not in stripped:
+                continue
+            key, _, value = stripped.partition("=")
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key and key not in os.environ:
+                os.environ[key] = value
+    except Exception:  # pragma: no cover - dotenv loading must never break the app
+        pass
+
+
+_load_dotenv(ROOT / ".env")
+
+# Default chat model for the bylaw assistant when OpenRouter is the provider.
+# google/gemini-3.1-flash-lite is fast, cheap, and confirmed available on
+# OpenRouter; override with the BYLAW_RAG_MODEL secret/env var.
+DEFAULT_BYLAW_CHAT_MODEL = "google/gemini-3.1-flash-lite"
+
 OUTPUTS_ROOT = ROOT / "outputs"
 OUTPUT_DIR_SUFFIX = "_slim_pipeline5_registry"
-NATIVE_RUN_ROOTS = ("m4_runs", "v3_runs", "v2_runs")
-NATIVE_RUN_LABELS = {"m4_runs": "M4", "v3_runs": "V3", "v2_runs": "V2"}
-PRODUCT_RUN_ROOTS = ("m4_runs", "v3_runs")
+NATIVE_RUN_ROOTS = ("m7_runs", "v3_runs", "v2_runs")
+NATIVE_RUN_LABELS = {"m7_runs": "M7", "v3_runs": "V3", "v2_runs": "V2"}
+PRODUCT_RUN_ROOTS = ("m7_runs", "v3_runs")
 # Pipeline 9 (graph-RAG extraction) verifier outputs sit next to the P5
 # registries as <city>_p9/. Same verifier, second upstream — the dashboard
-# treats them as another selectable lane so reviewers see the P9 reference.
+# treats them as another selectable "city" so reviewers see the P9 lane.
 P9_DIR_SUFFIX = "_p9"
-DEFAULT_OUTPUT_DIR = OUTPUTS_ROOT / "m4_runs" / "burnaby_r1" / "google_gemini_2_5_flash_lite"
+DEFAULT_OUTPUT_DIR = OUTPUTS_ROOT / "m7_runs" / "burnaby_r1" / "google_gemini_3_1_flash_lite"
 MVP_REPORT_PATH = OUTPUTS_ROOT / "mvp_verification" / "mvp_report.json"
 M4_SOURCE_AUDIT_PATH = OUTPUTS_ROOT / "topdown_validation" / "m4_source_pdf_audit.json"
 REFERENCE_DIR_SUFFIXES = (
@@ -103,7 +136,7 @@ PLAIN_LABELS = {
     "needs review": "Needs review",
     "missing": "Missing",
     "mvp_safety_ready": "Safety ready",
-    "native_m4": "Native M4",
+    "native_m7": "Native M7",
     "native_v3": "Native V3",
     "native_v2": "Native V2",
     "legacy_p5": "Pipeline 5 reference",
@@ -130,7 +163,7 @@ HELP_TEXT = {
     "scope mismatch": "The extractor produced many candidates outside the verifier's current numeric zoning contract.",
     "unsafe / needs fix": "At least one false verified rule or false approval was found. Treat this output as unsafe until fixed.",
     "pass": "The benchmark gates passed for the current contract.",
-    "native_m4": "Current native exhaustive extraction path. RAG finds evidence; deterministic verification still decides.",
+    "native_m7": "Current native exhaustive extraction path. RAG finds evidence; deterministic verification still decides.",
     "native_v3": "Previous native extraction reference. Kept for comparison.",
     "native_v2": "Older native extraction reference. Kept for comparison.",
     "legacy_p5": "Legacy structured-registry reference. Kept for comparison, not the current product path.",
@@ -163,64 +196,22 @@ RAW_VALUE_COLUMNS = {
     "rows",
 }
 
-DEFAULT_BYLAW_RAG_PROVIDER = "openrouter"
-DEFAULT_BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
-DEFAULT_OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-DEFAULT_OPENAI_RAG_MODEL = "gpt-4.1-mini"
-DEFAULT_GEMINI_RAG_MODEL = "gemini-2.5-flash-lite"
-DEFAULT_ANTHROPIC_RAG_MODEL = "claude-3-5-haiku-latest"
-
-RAG_CHAT_TOP_K = 5
-RAG_CONTEXT_CHAR_LIMIT = 9000
-RAG_CONTEXT_PER_HIT_LIMIT = 2200
-
-BYLAW_PROMPT_LIBRARY = [
-    {
-        "group": "Rule lookup",
-        "label": "Maximum height",
-        "question": "What maximum building height is supported by the retrieved bylaw sections? Cite the section for each claim.",
-    },
-    {
-        "group": "Rule lookup",
-        "label": "Setbacks",
-        "question": "What front, rear, and side setback rules are supported by the retrieved bylaw sections? Cite the section for each value.",
-    },
-    {
-        "group": "Rule lookup",
-        "label": "Lot coverage",
-        "question": "What lot coverage or impervious surface limits are supported by the retrieved bylaw sections? Cite the section for each limit.",
-    },
-    {
-        "group": "Applicability",
-        "label": "Who does this apply to?",
-        "question": "Which dwelling types, unit counts, or site conditions does the retrieved bylaw text apply to? Separate proven scope from unclear scope.",
-    },
-    {
-        "group": "Applicability",
-        "label": "Conditions or exceptions",
-        "question": "Do the retrieved sections include exceptions, conditions, footnotes, or special branches? List only what the sections explicitly support.",
-    },
-    {
-        "group": "Evidence",
-        "label": "Show source support",
-        "question": "Show the exact retrieved source support for the rule and explain which value, unit, operator, scope, and condition are proven.",
-    },
-    {
-        "group": "Review",
-        "label": "Why review?",
-        "question": "Explain why a rule should stay in human review if the retrieved evidence does not prove value, unit, operator, scope, condition, or exception.",
-    },
-    {
-        "group": "GIS handoff",
-        "label": "What is GIS-safe?",
-        "question": "Explain which outputs are safe for GIS and why raw chat answers or review-needed rules must not be used as verified GIS rules.",
-    },
-    {
-        "group": "Proposal caution",
-        "label": "Can this be approved?",
-        "question": "If this is a proposal or permit-style question, explain why the chatbot cannot approve it and what verified-only checker output would be needed.",
-    },
-]
+# Retrieval depth for the bylaw chatbot. The grounded LLM only sees what is
+# retrieved, so too-shallow retrieval makes it answer "the sections do not say"
+# even when the bylaw does. Modern chat models (the OpenRouter default has a 1M
+# context window) easily absorb a generous, section-grounded context, so we
+# retrieve broadly and let the model find the relevant clause.
+RAG_CHAT_TOP_K = 8
+# Two-stage retrieval: BM25/RRF is recall-oriented but its ordering buries the
+# decisive clause among many same-topic sections (e.g. the canonical R-CG height
+# question puts the 11.0 m clause §541(1) at ~rank 24 behind a dozen other
+# "building height" hits). So we retrieve a BROAD candidate set and, when an
+# OpenRouter key is available, rerank the shortlist with a cross-encoder
+# (cohere/rerank-4-fast) down to RAG_CHAT_TOP_K. No key / any rerank error falls
+# back to the BM25/RRF order — never raises, never starves the LLM context.
+RAG_RERANK_CANDIDATES = 30
+RAG_CONTEXT_CHAR_LIMIT = 18000
+RAG_CONTEXT_PER_HIT_LIMIT = 2400
 
 RAG_QUERY_SYNONYMS = {
     "tall": ("height",),
@@ -236,19 +227,11 @@ RAG_QUERY_SYNONYMS = {
     "floors": ("storeys",),
     "levels": ("storeys",),
     "garage": ("parking",),
-    "backyard": ("rear", "yard", "setback"),
-    "frontyard": ("front", "yard", "setback"),
-    "sideyard": ("side", "yard", "setback"),
-    "coverage": ("lot", "impervious", "surface"),
-    "transit": ("frequent", "transit", "network"),
-    "ftn": ("frequent", "transit", "network"),
-    "suite": ("secondary", "suite", "accessory"),
-    "laneway": ("accessory", "dwelling", "coach"),
 }
 
 
 def native_run_root(output_dir: Path) -> str | None:
-    """Return m4_runs/v3_runs/v2_runs for a native model output dir."""
+    """Return m7_runs/v3_runs/v2_runs for a native model output dir."""
     try:
         root = output_dir.parent.parent.name
     except IndexError:
@@ -257,9 +240,8 @@ def native_run_root(output_dir: Path) -> str | None:
 
 
 def m55_run_id(output_dir: Path) -> str:
-    """Return the M5/M6 measurement run id for outputs/m5_runs/<run>/<city>."""
     try:
-        if output_dir.parent.parent.name == "m5_runs":
+        if output_dir.parent.parent.name == "m7_measure":
             return output_dir.parent.name
     except IndexError:
         return ""
@@ -313,36 +295,28 @@ def discover_city_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
             for model_dir in city_dir.iterdir():
                 if model_dir.is_dir() and (model_dir / "verified_rules.json").exists():
                     native_runs.append(model_dir)
-    measured_runs = []
-    measured_root = outputs_root / "m5_runs"
-    if measured_root.is_dir():
-        for run_dir in measured_root.iterdir():
+    m55_runs = []
+    m55_root = outputs_root / "m7_measure"
+    if m55_root.is_dir():
+        for run_dir in m55_root.iterdir():
             if not run_dir.is_dir():
                 continue
             for city_dir in run_dir.iterdir():
                 if city_dir.is_dir() and (city_dir / "verified_rules.json").exists():
-                    measured_runs.append(city_dir)
-    return sorted([*standard, *native_runs, *measured_runs], key=lambda path: str(path))
+                    m55_runs.append(city_dir)
+    return sorted([*standard, *native_runs, *m55_runs], key=lambda path: str(path))
 
 
 def discover_product_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path]:
-    """Return current multi-city demo product paths and direct predecessors.
+    """Return only the demo product path and its direct predecessor.
 
     The workspace keeps V2/P5/P9 artifacts for audit and regression work, but
-    the final dashboard selector should stay focused: current M4 plus the V3
-    run M4 was built from, for every city with committed verifier outputs.
+    the final dashboard selector should stay focused: current M7 plus the V3
+    run it was built from.
     """
     if not outputs_root.is_dir():
         return []
     product_runs = []
-    measured_root = outputs_root / "m5_runs"
-    if measured_root.is_dir():
-        for run_dir in measured_root.iterdir():
-            if not run_dir.is_dir():
-                continue
-            for city_dir in run_dir.iterdir():
-                if city_dir.is_dir() and (city_dir / "verified_rules.json").exists():
-                    product_runs.append(city_dir)
     for root_name in PRODUCT_RUN_ROOTS:
         native_root = outputs_root / root_name
         if not native_root.is_dir():
@@ -350,10 +324,17 @@ def discover_product_output_dirs(outputs_root: Path = OUTPUTS_ROOT) -> list[Path
         for city_dir in native_root.iterdir():
             if not city_dir.is_dir():
                 continue
-            model_dir = city_dir / "google_gemini_2_5_flash_lite"
-            if model_dir.is_dir() and (model_dir / "verified_rules.json").exists():
-                product_runs.append(model_dir)
-    order = {"m5_runs": 0, **{root: index + 1 for index, root in enumerate(PRODUCT_RUN_ROOTS)}}
+            # Model-agnostic: pick the newest model dir present per city (the M7
+            # default is google_gemini_3_1_flash_lite; '3_1' sorts after '2_5').
+            # Hardcoding the 2.5 slug here was a rename miss that hid the M7 product.
+            model_dirs = sorted(
+                (md for md in city_dir.iterdir() if md.is_dir() and (md / "verified_rules.json").exists()),
+                key=lambda md: md.name,
+                reverse=True,
+            )
+            if model_dirs:
+                product_runs.append(model_dirs[0])
+    order = {root: index for index, root in enumerate(PRODUCT_RUN_ROOTS)}
     return sorted(product_runs, key=lambda path: (order.get(path.parent.parent.name, 99), city_stem_from_dir(path)))
 
 
@@ -412,15 +393,20 @@ def city_label_from_dir(output_dir: Path) -> str:
         stem = city_stem_from_dir(output_dir)
         parts = [part for part in stem.split("_") if part]
         base = parts[0].capitalize() + (" " + " ".join(part.upper() for part in parts[1:]) if parts[1:] else "")
-        label = "M6" if run_id.startswith(("m56", "m6")) else "M5.5"
+        if run_id.startswith("m7"):
+            label = "M7"
+        elif run_id.startswith(("m56", "m6")):
+            label = "M6"
+        else:
+            label = "M5.5"
         return f"{label} {run_id} — {base}"
     native_root = native_run_root(output_dir)
     if native_root:
         stem = city_stem_from_dir(output_dir)
         parts = [part for part in stem.split("_") if part]
         base = parts[0].capitalize() + (" " + " ".join(part.upper() for part in parts[1:]) if parts[1:] else "")
-        if native_root == "m4_runs":
-            return f"Current M4 \u2014 {base}"
+        if native_root == "m7_runs":
+            return f"Current M7 \u2014 {base}"
         if native_root == "v3_runs":
             return f"Previous V3 \u2014 {base}"
         return f"{NATIVE_RUN_LABELS[native_root]} reference \u2014 {base}"
@@ -442,7 +428,7 @@ def source_document_url_for_output(output_dir: Path, data: dict[str, Any]) -> st
 def load_output_data(output_dir: Path) -> dict[str, Any]:
     """Load all dashboard source files from one verifier output directory."""
     # The dashboard is intentionally read-only. It consumes generated JSON
-    # reports and never reruns verification or mutates trusted outputs.
+    # reports and never calls Gemini, reruns verification, or mutates outputs.
     return {
         "output_dir": output_dir,
         "validation": _read_json(output_dir / "validation_report.json", {}),
@@ -479,20 +465,25 @@ def load_output_data(output_dir: Path) -> dict[str, Any]:
 
 
 def output_bucket_counts(data: dict[str, Any]) -> dict[str, int]:
-    """Use validation counts when present; otherwise count loaded output files."""
+    """KPI bucket counts that match the lists the dashboard actually renders.
+
+    The triage tables, matrix and funnel are built from the loaded bucket lists
+    (verified_rules.json, review_needed.json, ...), so the KPI must count THOSE
+    lists. A validation_report.json ``bucket_counts`` can drift out of sync with
+    the on-disk artifacts; using it as the headline let the "Needs review" KPI
+    disagree with the review table beneath it. The validation counts are now only
+    a fallback for a bucket whose list was not loaded at all.
+    """
     validation_counts = ((data.get("validation") or {}).get("bucket_counts") or {})
-    if any(int(value or 0) for value in validation_counts.values()):
-        return {
-            "verified": int(validation_counts.get("verified") or 0),
-            "review_needed": int(validation_counts.get("review_needed") or 0),
-            "rejected": int(validation_counts.get("rejected") or 0),
-            "not_used": int(validation_counts.get("not_used") or 0),
-        }
+    live = {
+        "verified": data.get("verified"),
+        "review_needed": data.get("review"),
+        "rejected": data.get("rejected"),
+        "not_used": data.get("not_used"),
+    }
     return {
-        "verified": len(data.get("verified") or []),
-        "review_needed": len(data.get("review") or []),
-        "rejected": len(data.get("rejected") or []),
-        "not_used": len(data.get("not_used") or []),
+        bucket: len(items) if isinstance(items, list) else int(validation_counts.get(bucket) or 0)
+        for bucket, items in live.items()
     }
 
 
@@ -963,9 +954,7 @@ def _funnel_view(st: Any, data: dict[str, Any]) -> None:
             go.Funnel(
                 y=[row["label"] for row in stages],
                 x=[row["count"] for row in stages],
-                textinfo="value",
-                textposition="inside",
-                hovertemplate="%{label}: %{value}<extra></extra>",
+                textinfo="value+percent initial",
                 marker={"color": ["#0969da", "#218bff", "#54aeff", "#2da44e", "#1a7f37"]},
                 connector={"line": {"color": "#d0d7de", "width": 1}},
             )
@@ -1041,6 +1030,264 @@ def compact_rule_row(rule: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _safety_chip_html(false_verified: int, gate_pass: bool) -> str:
+    """Green chip when there are zero false verifies (the safety win); red ONLY
+    when a false verify exists, so red stays meaningful (a failed recall gate is
+    not a safety failure)."""
+    if false_verified > 0:
+        return f"<div class='safety-chip safety-alert'>Attention — {false_verified} false verifies</div>"
+    suffix = " · quality gate passed" if gate_pass else ""
+    return f"<div class='safety-chip safety-ok'>✓ Safe — 0 false verifies{suffix}</div>"
+
+
+def _coverage_hero(st: Any, data: dict[str, Any], counts: dict[str, int]) -> None:
+    slot_metrics = (data.get("slot_audit") or {}).get("slot_metrics") or {}
+    coverage = slot_metrics.get("scored_verified_coverage")
+    if coverage is None:
+        st.markdown(
+            "<div class='coverage-hero'><div><span class='pct'>"
+            f"{counts.get('verified', 0)}</span> <span class='cap'>verified rules</span></div>"
+            "<div class='cap'>Scored coverage is computed in an M5 measurement run; this view shows the "
+            "verified rule count.</div></div>",
+            unsafe_allow_html=True,
+        )
+        return
+    denom = slot_metrics.get("distinct_scored_legal_slot_count") or 0
+    verified = int(slot_metrics.get("scored_verified_slot_count") or 0)
+    review = int(slot_metrics.get("scored_review_slot_count") or 0)
+    missed = int(slot_metrics.get("scored_missed_slot_count") or 0)
+    total = max(verified + review + missed, 1)
+    segments = (
+        f"<div class='seg seg-verified' style='width:{verified / total * 100:.1f}%'></div>"
+        f"<div class='seg seg-review' style='width:{review / total * 100:.1f}%'></div>"
+        f"<div class='seg seg-missed' style='width:{missed / total * 100:.1f}%'></div>"
+    )
+    st.markdown(
+        "<div class='coverage-hero'>"
+        f"<div><span class='pct'>{html.escape(str(_format_coverage(coverage)))}</span> "
+        f"<span class='cap'>of {denom} distinct legal rules proven from source</span></div>"
+        f"<div class='coverage-bar'>{segments}</div>"
+        "<div class='coverage-key'>"
+        f"<span><i style='background:var(--status-verified)'></i>Verified <b>{verified}</b></span>"
+        f"<span><i style='background:var(--status-review)'></i>Review <b>{review}</b></span>"
+        f"<span><i style='background:var(--status-not-used)'></i>Missed <b>{missed}</b></span>"
+        "</div></div>",
+        unsafe_allow_html=True,
+    )
+
+
+def _status_mix_bar(st: Any, counts: dict[str, int]) -> None:
+    order = [("verified", "Verified"), ("review", "Review"), ("rejected", "Rejected"), ("not_used", "Not used")]
+    total = max(sum(int(counts.get(key, 0)) for key, _ in order), 1)
+    segments = ""
+    for key, label in order:
+        n = int(counts.get(key, 0))
+        if n <= 0:
+            continue
+        pct = n / total * 100
+        segments += (
+            f"<div class='seg {key}' style='width:{pct:.2f}%' title='{label}: {n}'>"
+            f"{n if pct > 7 else ''}</div>"
+        )
+    st.markdown(f"<div class='status-bar'>{segments}</div>", unsafe_allow_html=True)
+
+
+def _rules_drilldown(st, data: dict[str, Any]) -> None:
+    """Make every decision count explorable: one expander per bucket that opens
+    the exact rules behind the number (rule id, family, direction, value, unit,
+    section/page). Answers 'click Verified -> show me those rules.'"""
+    buckets = [
+        ("Verified", data.get("verified", [])),
+        ("Needs review", data.get("review", [])),
+        ("Rejected", data.get("rejected", [])),
+        ("Not used", data.get("not_used", [])),
+    ]
+    if not any(rules for _, rules in buckets):
+        return
+    st.markdown("##### Browse the rules behind these numbers")
+    st.caption("Open a bucket to see the exact rules it counts.")
+    for label, rules in buckets:
+        if not rules:
+            continue
+        with st.expander(f"{label} — {len(rules)} rule{'s' if len(rules) != 1 else ''}", expanded=False):
+            st.dataframe(
+                _display_rows([compact_rule_row(rule) for rule in rules]),
+                width="stretch",
+                hide_index=True,
+            )
+
+
+def _summary_tab(st: Any, data: dict[str, Any]) -> None:
+    benchmark = data.get("benchmark", {})
+    metrics = benchmark.get("rule_metrics", {})
+    gates = benchmark.get("quality_gates", {})
+    counts = output_bucket_counts(data)
+    false_verified = int(metrics.get("false_verified_count", 0) or 0)
+    st.markdown(_safety_chip_html(false_verified, bool(gates.get("passed"))), unsafe_allow_html=True)
+    _coverage_hero(st, data, counts)
+
+    slot_metrics = (data.get("slot_audit") or {}).get("slot_metrics") or {}
+    coverage = slot_metrics.get("scored_verified_coverage")
+    coverage_display = _format_coverage(coverage) if coverage is not None else "—"
+    kpis = [
+        ("Verified", counts.get("verified", 0), "verified", "proven against source text"),
+        ("Needs review", counts.get("review", 0), "review", "never auto-approved"),
+        ("Verified coverage", coverage_display, "verified", "of in-scope legal rules"),
+        ("False verifies", false_verified, "verified" if false_verified == 0 else "rejected", "must stay at 0"),
+    ]
+    cards = "".join(
+        f"<div class='metric metric-{tone}'><div class='metric-label'>{html.escape(label)}</div>"
+        f"<div class='metric-value'>{html.escape(str(value))}</div>"
+        f"<div style='font-size:11px;color:var(--ink-soft);margin-top:4px;'>{html.escape(sub)}</div></div>"
+        for label, value, tone, sub in kpis
+    )
+    st.caption("Each tile below is also explorable — open a bucket under the bar to see its exact rules.")
+    st.markdown(f"<div class='metric-grid'>{cards}</div>", unsafe_allow_html=True)
+    _status_mix_bar(st, counts)
+    _rules_drilldown(st, data)
+    _action_summary(st, data)
+    with st.expander("How rules flow through the verifier", expanded=False):
+        _funnel_view(st, data)
+    with st.expander("How we got these numbers", expanded=False):
+        _count_audit_panel(st, data)
+        _not_used_explanation(st, data)
+
+
+def _review_queue_tab(st: Any, data: dict[str, Any], output_dir: Path, triage_items: list[dict[str, Any]]) -> None:
+    st.caption("Rules the verifier could not prove — your worklist. Filtering here never changes a decision.")
+    columns = st.columns(4)
+    with columns[0]:
+        categories = st.multiselect("Why it needs review", _unique(triage_items, "review_category"), format_func=_plain_label)
+    with columns[1]:
+        priorities = st.multiselect("Urgency", _unique(triage_items, "triage_priority"), format_func=_plain_label)
+    with columns[2]:
+        likelihoods = st.multiselect("Likely outcome", _unique(triage_items, "likely_status"), format_func=_plain_label)
+    with columns[3]:
+        rule_objects = st.multiselect("Rule family", _unique(triage_items, "rule_object"), format_func=_plain_label)
+    filtered_items = filter_triage_items(
+        triage_items,
+        categories=categories,
+        priorities=priorities,
+        likelihoods=likelihoods,
+        rule_objects=rule_objects,
+    )
+    evidence_by_id = {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]}
+    queue_tabs = st.tabs(["Queue summary", "Review one rule", "Compare with verified"])
+    with queue_tabs[0]:
+        _review_router_tab(st, data["router"])
+    with queue_tabs[1]:
+        _review_assistant_tab(st, data["review_assistant_packets"], data["review"], output_dir, evidence_by_id)
+    with queue_tabs[2]:
+        _candidate_compare_tab(st, filtered_items, data["review"], data["verified"], output_dir, evidence_by_id)
+
+
+def _gis_handoff_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
+    felt = _read_json(output_dir / "gis_felt_export.json", {})
+    contract_path = output_dir / "gis_rule_contract.json"
+    felt_path = output_dir / "gis_felt_export.json"
+    constraints = felt.get("constraints", []) if isinstance(felt, dict) else []
+    if not constraints and not contract_path.exists():
+        st.info(
+            "No GIS export for this run yet. The verified-only GIS contract and felt export are written "
+            "next to the verified rules when the pipeline runs."
+        )
+        return
+    export_counts = felt.get("export_counts", {}) if isinstance(felt, dict) else {}
+    ready = sum(1 for constraint in constraints if constraint.get("gis_ready"))
+    st.caption(
+        "Verified-only, deduplicated, geometry-tagged rules ready for the map. "
+        "These are the only rules that should drive GIS."
+    )
+    cards = [
+        ("Verified rules", export_counts.get("verified_rule_count", len(constraints)), "verified", "source-supported"),
+        ("GIS constraints", export_counts.get("gis_constraint_count", len(constraints)), "verified", "deduplicated for the map"),
+        ("Map-ready", ready, "verified", "drawable: number + geometry"),
+    ]
+    html_cards = "".join(
+        f"<div class='metric metric-{tone}'><div class='metric-label'>{html.escape(label)}</div>"
+        f"<div class='metric-value'>{html.escape(str(value))}</div>"
+        f"<div style='font-size:11px;color:var(--ink-soft);margin-top:4px;'>{html.escape(sub)}</div></div>"
+        for label, value, tone, sub in cards
+    )
+    st.markdown(f"<div class='metric-grid'>{html_cards}</div>", unsafe_allow_html=True)
+    rows = [
+        {
+            "rule": constraint.get("rule_object"),
+            "constraint": " ".join(
+                str(part) for part in (constraint.get("operator"), constraint.get("value"), constraint.get("unit")) if part
+            ),
+            "geometry": constraint.get("geometry_target") or "—",
+            "map-ready": "yes" if constraint.get("gis_ready") else "no",
+            "page": constraint.get("source_page"),
+            "plain English": _short_display_quote(constraint.get("felt_popup_sentence") or "", 140),
+        }
+        for constraint in constraints
+    ]
+    if rows:
+        st.markdown("#### Verified GIS constraints")
+        st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    download_columns = st.columns(2)
+    if contract_path.exists():
+        download_columns[0].download_button(
+            "Download gis_rule_contract.json",
+            contract_path.read_text(encoding="utf-8"),
+            file_name="gis_rule_contract.json",
+            mime="application/json",
+        )
+    if felt_path.exists():
+        download_columns[1].download_button(
+            "Download gis_felt_export.json",
+            felt_path.read_text(encoding="utf-8"),
+            file_name="gis_felt_export.json",
+            mime="application/json",
+        )
+
+
+def _sidebar_status_legend(st: Any) -> None:
+    st.sidebar.markdown(
+        "<div style='display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 2px;'>"
+        "<span class='status-pill status-verified'>Verified</span>"
+        "<span class='status-pill status-review'>Review</span>"
+        "<span class='status-pill status-rejected'>Rejected</span>"
+        "<span class='status-pill status-not_used'>Not used</span>"
+        "</div>",
+        unsafe_allow_html=True,
+    )
+
+
+_ADVANCED_VIEWS = (
+    "(none)",
+    "Coverage vs gold",
+    "Pipeline comparison",
+    "Evidence repair",
+    "Shadow reruns",
+    "Engineering details",
+)
+
+
+def _sidebar_advanced(st: Any) -> str:
+    with st.sidebar.expander("Advanced & diagnostics", expanded=False):
+        return st.radio(
+            "Engineering view",
+            _ADVANCED_VIEWS,
+            key="adv_view",
+            help="Diagnostic artifacts for engineers; not part of the reviewer workflow. Renders below the tabs.",
+        )
+
+
+def _render_advanced_view(st: Any, view: str, data: dict[str, Any], output_dir: Path) -> None:
+    if view == "Coverage vs gold":
+        _coverage_tab(st, data, output_dir)
+    elif view == "Pipeline comparison":
+        _pipeline_comparison_tab(st, output_dir)
+    elif view == "Evidence repair":
+        _repair_tab(st, data["repair"])
+    elif view == "Shadow reruns":
+        _rerun_tab(st, data["rerun"], data["evidence_units"])
+    elif view == "Engineering details":
+        _advanced_tab(st, data, output_dir)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
@@ -1060,8 +1307,8 @@ def main() -> None:
     )
     _style(st)
 
-    # City selector: scan M6 measured runs, current M4, and predecessor V3
-    # outputs for every city with verified_rules.json.
+    # City selector: scan outputs/ for any *_slim_pipeline5_registry dir with
+    # verified_rules.json. New cities appear automatically; nothing is hardcoded.
     city_dirs = discover_product_output_dirs()
     if (
         cli_output_dir.is_dir()
@@ -1072,24 +1319,20 @@ def main() -> None:
     if not city_dirs:
         st.error(f"No verifier output directories found under `{OUTPUTS_ROOT}`.")
         return
-    current_m4_dirs = [path for path in city_dirs if native_run_root(path) == "m4_runs"]
-    city_names = [city_label_from_dir(path).replace("Current M4 \u2014 ", "") for path in current_m4_dirs]
-    st.sidebar.header("Multi-city dataset")
-    if city_names:
-        st.sidebar.caption("Cities: " + ", ".join(city_names))
+    st.sidebar.header("Dataset")
     PORTFOLIO = "__portfolio__"
     selection = st.sidebar.selectbox(
-        "City / version",
+        "View",
         [PORTFOLIO, *city_dirs],
         index=0,
-        format_func=lambda item: "Start here \u2014 multi-city M4 overview" if item == PORTFOLIO else city_label_from_dir(item),
+        format_func=lambda item: "Start here \u2014 current M7 overview" if item == PORTFOLIO else city_label_from_dir(item),
         help=(
-            "Start with the multi-city M4 overview. Pick an M6 measured run for final count audit, "
-            "or a current M4/V3 run for drilldown and comparison."
+            "Start with the current M7 overview. Pick a city for drilldown. "
+            "Only current M7 and its V3 predecessor are shown here."
         ),
     )
     if selection == PORTFOLIO:
-        _render_header(st, "Current Multi-City M4 Verification Status", portfolio=True)
+        _render_header(st, "Current M7 Verification Status", portfolio=True)
         _portfolio_page(st)
         return
     output_dir = selection
@@ -1101,143 +1344,38 @@ def main() -> None:
     _ACTIVE_SOURCE["url"] = source_url
     _ACTIVE_SOURCE["label"] = f"{city_label} bylaw PDF"
 
-    # Review annotations now live on review_needed.json; the old standalone
-    # triage view duplicated the same queue.
+    # Reviewer queue source (filters now live inline on the Review Queue tab).
     triage_items = data["review"]
-    st.sidebar.markdown("#### Selected run")
-    st.sidebar.caption(city_label)
-    with st.sidebar.expander("Review filters (optional)", expanded=False):
-        st.caption("These filters only change the Review Workbench queue.")
-        categories = st.multiselect(
-            "Why it needs review",
-            _unique(triage_items, "review_category"),
-            format_func=_plain_label,
-            help="The main reason the verifier would not prove the rule.",
-        )
-        priorities = st.multiselect(
-            "Urgency",
-            _unique(triage_items, "triage_priority"),
-            format_func=_plain_label,
-            help="A reviewer triage hint. It does not change verification.",
-        )
-        likelihoods = st.multiselect(
-            "Likely outcome",
-            _unique(triage_items, "likely_status"),
-            format_func=_plain_label,
-            help="Advisory estimate only; it never promotes a rule.",
-        )
-        rule_objects = st.multiselect(
-            "Rule family",
-            _unique(triage_items, "rule_object"),
-            format_func=_plain_label,
-            help="Setback, height, lot coverage, permitted use, and similar rule families.",
-        )
+
+    # Lean sidebar: the dataset selector lives above; everything heavier than a
+    # glance is one collapsed door away.
+    st.sidebar.caption(f"Loaded: {output_dir.name}")
+    _sidebar_status_legend(st)
+    advanced_view = _sidebar_advanced(st)
     _sidebar_guidance(st)
-    filtered_items = filter_triage_items(
-        triage_items,
-        categories=categories,
-        priorities=priorities,
-        likelihoods=likelihoods,
-        rule_objects=rule_objects,
+    st.sidebar.markdown(
+        "<div class='trust-note' style='margin-top:10px;font-size:12px;'>Read-only · advisory. "
+        f"<a href='{html.escape(source_url)}' target='_blank'>Source bylaw PDF</a></div>",
+        unsafe_allow_html=True,
     )
 
     _render_header(st, city_label)
-    _render_kpis(st, data, filtered_items)
-    st.markdown(_city_takeaway_html(city_label, data, filtered_items), unsafe_allow_html=True)
-    _render_guidance(st)
 
-    # Final-demo layout: summary first, then city drilldown, then human review.
-    # Engineering details and older smoke/debug artifacts stay behind Diagnostics.
-    sections = st.tabs(["Overview", "City Details", "Review Workbench", "Ask The Bylaw", "Diagnostics"])
-
+    # Civic Console: the three questions a user asks, plus the conversation.
+    sections = st.tabs(["Summary", "Review Queue", "GIS Handoff", "Ask the Bylaw"])
     with sections[0]:
-        _overview_tab(st, data)
-        _funnel_view(st, data)
-
+        _summary_tab(st, data)
     with sections[1]:
-        _coverage_tab(st, data, output_dir)
-        _pipeline_comparison_tab(st, output_dir)
-
+        _review_queue_tab(st, data, output_dir, triage_items)
     with sections[2]:
-        _review_workbench_intro(st, data, filtered_items)
-        review_tabs = st.tabs(["Review One Rule", "Compare With Verified", "Queue Summary"])
-        with review_tabs[0]:
-            _review_assistant_tab(
-                st,
-                data["review_assistant_packets"],
-                data["review"],
-                output_dir,
-                {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]},
-            )
-        with review_tabs[1]:
-            _candidate_compare_tab(
-                st,
-                filtered_items,
-                data["review"],
-                data["verified"],
-                output_dir,
-                {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]},
-            )
-        with review_tabs[2]:
-            _review_router_tab(st, data["router"])
-
+        _gis_handoff_tab(st, data, output_dir)
     with sections[3]:
         _bylaw_tab(st, data)
 
-    with sections[4]:
-        diagnostic_tabs = st.tabs(["Evidence Repair", "Shadow Reruns", "Advanced"])
-        with diagnostic_tabs[0]:
-            _repair_tab(st, data["repair"])
-        with diagnostic_tabs[1]:
-            _rerun_tab(st, data["rerun"], data["evidence_units"])
-        with diagnostic_tabs[2]:
-            _advanced_tab(st, data, output_dir)
-
-
-def _overview_tab(st: Any, data: dict[str, Any]) -> None:
-    benchmark = data["benchmark"]
-    counts = output_bucket_counts(data)
-    metrics = benchmark.get("rule_metrics", {})
-    proposal = benchmark.get("proposal_metrics", {})
-    gates = benchmark.get("quality_gates", {}).get("gates", {})
-
-    st.subheader("Current Status")
-    _action_summary(st, data)
-    _count_audit_panel(st, data)
-    left, right = st.columns([1.2, 1])
-    with left:
-        st.markdown("#### Decision mix")
-        _bar_table(st, counts)
-    with right:
-        st.markdown("#### Benchmark gates")
-        gate_rows = [{"gate": _plain_label(key), "status": "pass" if value else "needs attention"} for key, value in gates.items()]
-        if gate_rows:
-            st.dataframe(_display_rows(gate_rows), width="stretch", hide_index=True)
-        else:
-            st.info("No benchmark gates found for this output.")
-        st.caption(
-            f"Verified precision: {_display_value(metrics.get('verified_precision', 0))}. "
-            f"False verified: {metrics.get('false_verified_count', 0)}. "
-            f"False approvals: {proposal.get('false_approval_count', 0)}."
-        )
-
-    with st.expander("Extra review breakdown"):
-        review_left, review_right = st.columns(2)
-        with review_left:
-            st.markdown("#### Why items need review")
-            _bar_rows(st, data["router"].get("summary", {}).get("category_counts", []), "name", "count")
-        with review_right:
-            st.markdown("#### Suggested next work")
-            _bar_rows(st, data["router"].get("summary", {}).get("action_counts", []), "name", "count")
-        flags = Counter(
-            flag
-            for rule in data["review"]
-            for flag in rule.get("potential_mistake_flags", [])
-        )
-        if flags:
-            st.markdown("#### Potential extraction mistakes")
-            _bar_table(st, dict(flags.most_common(12)))
-    _not_used_explanation(st, data)
+    if advanced_view and advanced_view != "(none)":
+        st.divider()
+        st.caption("Advanced & diagnostics (selected from the sidebar) — engineering detail, not part of the reviewer workflow.")
+        _render_advanced_view(st, advanced_view, data, output_dir)
 
 
 def count_audit_status(slot_audit: dict[str, Any]) -> str:
@@ -1276,14 +1414,17 @@ def count_audit_summary_rows(slot_audit: dict[str, Any], reconciliation: dict[st
             "meaning": "unique verified-slot change",
         },
     ]
+    # M5.6: lead with the scored denominator (in-contract, recognized-family,
+    # corpus-derived, deduped to distinct legal rules). The raw ledger stays
+    # visible but is labelled an advisory over-count ceiling, not a legal total.
     if metrics.get("distinct_scored_legal_slot_count") is not None:
         return [
-            {"metric": "Scored legal slots", "value": metrics.get("distinct_scored_legal_slot_count"), "meaning": "in-contract distinct legal rules"},
+            {"metric": "Scored legal slots", "value": metrics.get("distinct_scored_legal_slot_count"), "meaning": "in-contract distinct legal rules (honest denominator)"},
             {"metric": "Verified coverage", "value": _format_coverage(metrics.get("scored_verified_coverage")), "meaning": "scored slots that are verified"},
             {"metric": "Scored verified", "value": metrics.get("scored_verified_slot_count"), "meaning": "distinct legal rules proven"},
             {"metric": "Scored review-only", "value": metrics.get("scored_review_slot_count"), "meaning": "safe, awaiting proof"},
             {"metric": "Scored missed", "value": metrics.get("scored_missed_slot_count"), "meaning": "actionable backlog"},
-            {"metric": "Raw rule slots (advisory)", "value": metrics.get("total_rule_slots"), "meaning": "loose over-count ceiling"},
+            {"metric": "Raw rule slots (advisory)", "value": metrics.get("total_rule_slots"), "meaning": "loose over-count ceiling, not a legal total"},
             {"metric": "Unique verified slots", "value": metrics.get("effective_verified_slot_count"), "meaning": "deduplicated verifier output"},
             *safety_and_delta,
         ]
@@ -1302,7 +1443,7 @@ def _count_audit_panel(st: Any, data: dict[str, Any]) -> None:
     slot_audit = data.get("slot_audit") or {}
     rows = count_audit_summary_rows(slot_audit, data.get("m55_reconciliation") or {})
     if not rows:
-        st.info("M6 slot audit not found for this output. Pick an M6 measured run to answer too much vs too little precisely.")
+        st.info("M6 slot audit not found for this output. Run the measurement layer to answer too much vs too little precisely.")
         return
     status = count_audit_status(slot_audit)
     st.markdown("#### Too Much / Too Little")
@@ -1388,7 +1529,7 @@ def pipeline_comparison_rows(output_dir: Path) -> list[dict[str, Any]]:
     """Return native and legacy comparison rows for the selected city stem."""
     stem = city_stem_from_dir(output_dir)
     candidates = [
-        ("Native M4", OUTPUTS_ROOT / "m4_runs" / stem / "google_gemini_2_5_flash_lite"),
+        ("Native M7", OUTPUTS_ROOT / "m7_runs" / stem / "google_gemini_2_5_flash_lite"),
         ("Native V3", OUTPUTS_ROOT / "v3_runs" / stem / "google_gemini_2_5_flash_lite"),
     ]
     rows: list[dict[str, Any]] = []
@@ -1416,7 +1557,7 @@ def pipeline_comparison_rows(output_dir: Path) -> list[dict[str, Any]]:
                 "verified_or_review_recall": metrics.get("verified_or_review_recall"),
                 "estimated_cost": cost.get("estimated_cost_usd"),
                 "gate_status": status,
-                "status_meaning": HELP_TEXT.get("native_m4" if label == "Native M4" else status, HELP_TEXT.get(status, "")),
+                "status_meaning": HELP_TEXT.get("native_m7" if label == "Native M7" else status, HELP_TEXT.get(status, "")),
             }
         )
     return rows
@@ -1596,27 +1737,14 @@ def _review_assistant_tab(
             f"Page {source.get('page') or 'unknown'} · evidence `{source.get('evidence_id') or ''}` · "
             f"context status: {_plain_label(source.get('repair_status') or 'unknown')}"
         )
-        original_evidence = source.get("original_evidence") or _source_text(rule)
-        _source_packet_panel(
-            st,
-            "Extractor evidence",
-            original_evidence,
-            "Open raw extractor evidence",
-            page=source.get("page"),
-            evidence_id=source.get("evidence_id"),
-            status="Candidate quote before verification.",
-        )
+        st.markdown("*Extractor evidence*")
+        st.code(source.get("original_evidence") or _source_text(rule), language="text")
+        st.markdown("*Source context added before verification*")
         repaired = source.get("repaired_context")
-        _source_packet_panel(
-            st,
-            "Verification context",
-            repaired,
-            "Open repaired source context",
-            page=source.get("page"),
-            evidence_id=source.get("evidence_id"),
-            status="Extra nearby bylaw text used to decide whether proof is sufficient.",
-            show_cue=False,
-        )
+        if repaired:
+            st.code(repaired, language="text")
+        else:
+            st.caption("No repaired context available.")
 
     _legal_context_expander(st, output_dir, rule, evidence_by_id)
 
@@ -2230,14 +2358,7 @@ def _candidate_compare_tab(
         st.markdown("### Candidate in review")
         st.table([compact_rule_row(review_rule)])
         st.markdown("#### Evidence")
-        review_source = _source_text(review_rule)
-        _source_packet_panel(
-            st,
-            "Candidate source",
-            review_source,
-            "Open candidate evidence",
-            status="Raw text behind the held candidate.",
-        )
+        st.code(_source_text(review_rule), language="text")
         st.markdown("#### Suggested next step")
         st.write(triage_item.get("suggested_fix"))
     with right:
@@ -2246,14 +2367,7 @@ def _candidate_compare_tab(
             st.table([compact_rule_row(verified_rule)])
             st.markdown(f"Semantic score: `{triage_item.get('semantic_score') or review_rule.get('semantic_score') or 'n/a'}`")
             st.markdown(f"Lexical score: `{triage_item.get('similar_verified_score')}`")
-            verified_source = _source_text(verified_rule)
-            _source_packet_panel(
-                st,
-                "Verified source",
-                verified_source,
-                "Open verified evidence",
-                status="Raw text behind the closest verified comparison.",
-            )
+            st.code(_source_text(verified_rule), language="text")
         else:
             st.info("No verified comparison rule found.")
 
@@ -2517,40 +2631,6 @@ def _preflight_tab(st: Any, preflight: dict[str, Any]) -> None:
     })
 
 
-def load_bylaw_sections(bylaw_dir: Path) -> list[dict[str, str]]:
-    """Load extracted bylaw text from data/bylaws/<city>/, tolerating many shapes.
-
-    A parallel extraction effort owns that folder, so this reader is
-    deliberately defensive: it renders whatever sections it can find and
-    returns [] when nothing usable exists.
-    """
-    if not bylaw_dir.is_dir():
-        return []
-    sections: list[dict[str, str]] = []
-    # Metadata sidecars (e.g. provenance.json) are not bylaw text.
-    skipped_stems = {"provenance", "manifest", "metadata", "config"}
-    json_paths = sorted(path for path in bylaw_dir.glob("*.json") if path.stem.lower() not in skipped_stems)
-    preferred = bylaw_dir / "extracted_text.json"
-    if preferred in json_paths:
-        json_paths = [preferred, *[path for path in json_paths if path != preferred]]
-    for path in json_paths:
-        try:
-            payload = json.loads(path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            continue
-        sections.extend(extract_bylaw_sections(payload))
-        if sections:
-            return sections
-    for path in sorted([*bylaw_dir.glob("*.txt"), *bylaw_dir.glob("*.md")]):
-        try:
-            text = path.read_text(encoding="utf-8").strip()
-        except OSError:
-            continue
-        if text:
-            sections.append({"title": path.stem, "text": text})
-    return sections
-
-
 def extract_bylaw_sections(payload: Any) -> list[dict[str, str]]:
     """Normalize an unknown extraction payload into [{title, text}, ...]."""
     title_keys = ("section", "section_id", "id", "anchor", "number", "title", "heading", "name")
@@ -2629,25 +2709,8 @@ def highlight_evidence(section_text: str, quote: str) -> tuple[str, bool]:
     return html.escape(normalized), False
 
 
-def _rule_evidence_quote(rule: dict[str, Any]) -> str:
-    """Best evidence text for a rule: source text, then any proof-trace quote."""
-    quote = _source_text(rule)
-    if quote:
-        return quote
-    proof_trace = rule.get("proof_trace")
-    if isinstance(proof_trace, dict):
-        for entry in proof_trace.values():
-            if isinstance(entry, dict) and entry.get("evidence_quote"):
-                return str(entry["evidence_quote"])
-    return ""
-
-
 def _rag_chat_key(city_stem: str) -> str:
     return f"bylaw_rag_chat::{city_stem}"
-
-
-def _prompt_key(label: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "_", str(label).lower()).strip("_")
 
 
 def _rag_tokenize(text: str) -> list[str]:
@@ -2666,20 +2729,104 @@ def _rag_query_terms(question: str) -> list[str]:
     return expanded
 
 
-def _dashboard_rag_hits(index_path: Path, question: str, top_k: int = RAG_CHAT_TOP_K) -> list[dict[str, Any]]:
-    """Return bylaw RAG hits with a standalone fallback for Streamlit Cloud.
+def _dashboard_reranker(st: Any | None) -> Any | None:
+    """Return a session-cached ``OpenRouterReranker`` or ``None``.
+
+    Reuses the SAME ``OPENROUTER_API_KEY`` the dashboard's ``_load_dotenv``
+    already loaded (the key the extraction layer uses). Returns ``None`` when
+    there is no key or the reranker client cannot be constructed — callers must
+    treat ``None`` as "skip reranking, keep BM25/RRF order". Never raises.
+    """
+    api_key = _secret_value(st, "OPENROUTER_API_KEY")
+    if not api_key:
+        return None
+    cache_key = "_bylaw_rag_reranker"
+    if st is not None:
+        try:
+            cached = st.session_state.get(cache_key)
+            if cached is not None:
+                return cached
+        except Exception:
+            cached = None
+    try:
+        from burnaby_prototype.native_extraction import OpenRouterReranker
+
+        reranker = OpenRouterReranker(api_key)
+    except Exception:
+        return None
+    if st is not None:
+        try:
+            st.session_state[cache_key] = reranker
+        except Exception:
+            pass
+    return reranker
+
+
+def _rerank_rag_hits(question: str, hits: list[dict[str, Any]], top_k: int, st: Any | None) -> list[dict[str, Any]]:
+    """Cross-encoder rerank a broad candidate shortlist down to ``top_k``.
+
+    The reranker scores ``_pack_rerank_text`` which reads ``source_text``; the
+    RAG hits carry the full-context clause under ``section_text``/``text``, so we
+    expose that as ``source_text`` for scoring only. On no key, empty results, or
+    any error we return the original BM25/RRF top-``top_k`` unchanged.
+    """
+    if len(hits) <= top_k:
+        return hits
+    reranker = _dashboard_reranker(st)
+    if reranker is None:
+        return hits[:top_k]
+    packs = [
+        {**hit, "source_text": str(hit.get("section_text") or hit.get("text") or "")}
+        for hit in hits
+    ]
+    try:
+        ranked = reranker.rerank(question, packs, top_n=top_k)
+    except Exception:
+        return hits[:top_k]
+    if not ranked:
+        return hits[:top_k]
+    # Strip the scoring-only ``source_text`` shim; keep the reranker's score as a
+    # signal so the sources table can show why a clause surfaced.
+    cleaned: list[dict[str, Any]] = []
+    for pack in ranked[:top_k]:
+        pack = dict(pack)
+        pack.pop("source_text", None)
+        score = pack.pop("rerank_score", None)
+        if score is not None:
+            signals = dict(pack.get("signals") or {})
+            signals["rerank_score"] = round(float(score), 6)
+            pack["signals"] = signals
+        cleaned.append(pack)
+    return cleaned
+
+
+def _dashboard_rag_hits(
+    index_path: Path,
+    question: str,
+    top_k: int = RAG_CHAT_TOP_K,
+    st: Any | None = None,
+) -> list[dict[str, Any]]:
+    """Return bylaw RAG hits with two-stage retrieval and a cloud fallback.
+
+    Stage 1 retrieves a BROAD candidate set (``RAG_RERANK_CANDIDATES``) from the
+    existing BM25/RRF index (``bylaw_rag.BylawIndex``) so the decisive clause is
+    in the pool even when it ranks well below the ``top_k`` cutoff. Stage 2, when
+    an OpenRouter key is available, reranks that shortlist with a cross-encoder
+    and keeps the top ``top_k``; otherwise it falls back to the BM25/RRF order.
 
     The deployment repo intentionally contains only the dashboard and JSON
-    outputs, not the full Python package. Locally we use ``bylaw_rag.py`` when
-    it is importable; on cloud we read ``bylaw_rag_index.json`` directly and
-    run a small lexical retriever with section expansion.
+    outputs, not the full Python package. Locally we use ``bylaw_rag.py`` when it
+    is importable; on cloud we read the index JSON directly via the standalone
+    lexical retriever. Either path goes through the same rerank stage.
     """
+    candidate_k = max(top_k, RAG_RERANK_CANDIDATES)
     try:
         from burnaby_prototype.bylaw_rag import load_index
 
-        return load_index(index_path).ask(question, top_k=top_k)
+        candidates = load_index(index_path).ask(question, top_k=candidate_k)
     except Exception:
-        return _standalone_rag_hits(index_path, question, top_k=top_k)
+        candidates = _standalone_rag_hits(index_path, question, top_k=candidate_k)
+    return _rerank_rag_hits(question, candidates, top_k, st)
 
 
 def _standalone_rag_hits(index_path: Path, question: str, top_k: int = RAG_CHAT_TOP_K) -> list[dict[str, Any]]:
@@ -2737,46 +2884,6 @@ def _bounded_rag_hits(hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return bounded
 
 
-def _bylaw_question_mode(question: str) -> str:
-    text = str(question or "").lower()
-    if any(token in text for token in ("approve", "approved", "permit", "can i build", "can we build", "allowed", "compliant")):
-        return "proposal_or_compliance"
-    if any(token in text for token in ("exception", "unless", "notwithstanding", "subject to", "condition", "footnote")):
-        return "condition_or_exception"
-    if any(token in text for token in ("gis", "map", "felt", "contract", "verified output")):
-        return "gis_handoff"
-    if any(token in text for token in ("review", "why held", "why is", "missing proof", "support gap")):
-        return "review_explanation"
-    return "bylaw_lookup"
-
-
-def _mode_instruction(question: str) -> str:
-    mode = _bylaw_question_mode(question)
-    if mode == "proposal_or_compliance":
-        return (
-            "This looks like a proposal or compliance question. Do not answer with approved, rejected, "
-            "permitted, or compliant. Explain what the retrieved bylaw text says, then state that a "
-            "verified-only compliance checker or gis_rule_contract.json decision is required for approval."
-        )
-    if mode == "condition_or_exception":
-        return (
-            "This question involves conditions or exceptions. Separate explicit source-supported wording "
-            "from unclear branches. If a condition, footnote, exception, or applicability branch is not "
-            "fully retrieved, say it needs human review."
-        )
-    if mode == "gis_handoff":
-        return (
-            "This question is about downstream use. Explain that GIS may consume only verified, "
-            "source-supported rules from gis_rule_contract.json. RAG answers and review_needed items are advisory."
-        )
-    if mode == "review_explanation":
-        return (
-            "This question is about review. Explain likely review reasons only from retrieved text and the "
-            "verification contract: value, unit, operator, scope, applies_to, condition, and exception must be proven."
-        )
-    return "This is a bylaw lookup question. Answer from retrieved sections only and cite every claim."
-
-
 def _grounded_bylaw_prompt(question: str, hits: list[dict[str, Any]]) -> str:
     bounded_hits = _bounded_rag_hits(hits)
     try:
@@ -2795,12 +2902,11 @@ def _grounded_bylaw_prompt(question: str, hits: list[dict[str, Any]]) -> str:
             f"SECTIONS:\n{sections}\n\nQUESTION: {question}"
         )
     return (
-        "You are an advisory zoning bylaw chatbot for human reviewers and project partners. "
-        "RAG explains retrieved source text; it does not verify rules. The deterministic verifier's JSON outputs "
-        "are the authority. Do not approve, verify, reject, or promote any rule. "
-        "Cite only retrieved sections for every bylaw claim. If the retrieved sections are incomplete, say the "
-        "evidence is insufficient instead of guessing.\n\n"
-        f"Question handling instruction: {_mode_instruction(question)}\n\n"
+        "You are an advisory zoning bylaw chatbot for human reviewers. "
+        "Do not approve, verify, or reject rules. The verifier's JSON outputs are the authority. "
+        "Rule slots, verified rules, and review packets are read-only context; they never give you authority "
+        "to promote a rule. Give a concise answer, cite only the retrieved sections, and say when the "
+        "evidence is insufficient.\n\n"
         f"{base}"
     )
 
@@ -2814,55 +2920,97 @@ def _retrieval_only_bylaw_answer(question: str, hits: list[dict[str, Any]]) -> s
     )
 
 
-def _rag_source_rows(hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    rows = []
-    for hit in hits:
-        rows.append(
-            {
-                "section": hit.get("section") or hit.get("chunk_id"),
-                "page": hit.get("page"),
-                "score": hit.get("score"),
-                "signals": ", ".join(f"{key}: {value}" for key, value in (hit.get("signals") or {}).items()),
-                "excerpt": _short_display_quote(hit.get("section_text") or hit.get("text") or "", 360),
-            }
-        )
-    return rows
-
-
 def _render_bylaw_chat_message(st: Any, message: dict[str, Any]) -> None:
     with st.chat_message(message.get("role", "assistant")):
         st.markdown(message.get("content") or "")
         sources = message.get("sources") or []
         if sources:
-            with st.expander("Source sections used for this answer", expanded=False):
-                st.dataframe(_display_rows(_rag_source_rows(sources)), width="stretch", hide_index=True)
+            with st.expander(f"Sources ({len(sources)})"):
+                for index, hit in enumerate(sources, start=1):
+                    section = hit.get("section") or hit.get("chunk_id") or "?"
+                    page = hit.get("page")
+                    loc = f"§{section}" + (f" · p{page}" if page not in (None, "") else "")
+                    excerpt = _short_display_quote(hit.get("section_text") or hit.get("text") or "", 360)
+                    st.markdown(
+                        f"<div class='citation'><span class='loc'>[{index}] {html.escape(str(loc))}</span><br>"
+                        f"{html.escape(excerpt)}</div>",
+                        unsafe_allow_html=True,
+                    )
 
 
-def _answer_bylaw_question(st: Any, output_dir: Path, chat_key: str, question: str) -> None:
-    """Run one advisory RAG question and append a user/assistant exchange."""
-    index_path = bylaw_index_path(output_dir)
-    if index_path is None:
-        return
-    clean_question = str(question or "").strip()
-    if not clean_question:
-        return
+_BYLAW_SUGGESTION_TEMPLATES = {
+    ("height", None): "What is the maximum building height?",
+    ("setback", "rear_yard"): "What is the rear setback requirement?",
+    ("setback", "side_yard"): "What is the side setback requirement?",
+    ("setback", "front_yard"): "What is the front setback requirement?",
+    ("setback", None): "What setback applies here?",
+    ("lot_coverage", None): "What is the maximum lot coverage?",
+    ("building_separation", None): "What building separation is required?",
+    ("floor_area", None): "What floor area is allowed?",
+    ("floor_space_ratio", None): "What is the floor space ratio?",
+    ("storeys", None): "How many storeys are permitted?",
+    ("lot_area", None): "What is the minimum lot area?",
+    ("dwelling_units", None): "How many dwelling units are allowed?",
+}
 
-    user_message = {"role": "user", "content": clean_question}
+_BYLAW_SUGGESTION_FALLBACK = [
+    "What is the maximum building height?",
+    "What setbacks apply to the rear and side yards?",
+    "What is the maximum lot coverage?",
+    "What rules apply to a secondary suite?",
+]
+
+
+def _bylaw_suggestions(data: dict[str, Any], limit: int = 6) -> list[str]:
+    """Data-generated chat prompt suggestions (hidden behind the popover).
+
+    Derived from the rule families/scopes actually present in this city's
+    verified + review rules, so the hints are never stale hardcoded strings.
+    """
+    questions: list[str] = []
+    seen: set[str] = set()
+    rules = list(data.get("verified") or []) + list(data.get("review") or [])
+    for rule in rules:
+        family = str(rule.get("rule_object") or "")
+        scope = str(rule.get("constraint_scope") or "")
+        question = _BYLAW_SUGGESTION_TEMPLATES.get((family, scope)) or _BYLAW_SUGGESTION_TEMPLATES.get((family, None))
+        if question and question not in seen:
+            seen.add(question)
+            questions.append(question)
+        if len(questions) >= limit:
+            break
+    for question in _BYLAW_SUGGESTION_FALLBACK:
+        if len(questions) >= limit:
+            break
+        if question not in seen:
+            seen.add(question)
+            questions.append(question)
+    return questions
+
+
+def _bylaw_chat_respond(st: Any, question: str, index_path: Path, chat_key: str) -> None:
+    """Run one retrieval -> grounded-prompt -> answer turn, rendering inline."""
+    user_message = {"role": "user", "content": question}
     st.session_state[chat_key].append(user_message)
-
-    hits = _dashboard_rag_hits(index_path, clean_question, top_k=RAG_CHAT_TOP_K)
+    _render_bylaw_chat_message(st, user_message)
+    hits = _dashboard_rag_hits(index_path, question, top_k=RAG_CHAT_TOP_K, st=st)
     if not hits:
         answer = (
             "I could not find a related bylaw section for that question. Try the bylaw's own terms, "
             "such as setback, height, storey, parcel, coverage, or suite."
         )
-        st.session_state[chat_key].append({"role": "assistant", "content": answer, "sources": []})
-        return
-
-    bounded_hits = _bounded_rag_hits(hits)
-    prompt = _grounded_bylaw_prompt(clean_question, bounded_hits)
-    answer = _optional_bylaw_llm_answer(prompt, st) or _retrieval_only_bylaw_answer(clean_question, bounded_hits)
-    st.session_state[chat_key].append({"role": "assistant", "content": answer, "sources": bounded_hits})
+        assistant_message = {"role": "assistant", "content": answer, "sources": [], "question": question}
+    else:
+        bounded_hits = _bounded_rag_hits(hits)
+        prompt = _grounded_bylaw_prompt(question, bounded_hits)
+        # Prior turns (exclude the just-appended current question) give the LLM
+        # conversational context for follow-ups; the grounded prompt stays the
+        # final, source-anchored user message inside _optional_bylaw_llm_answer.
+        prior_turns = st.session_state[chat_key][-5:-1]
+        answer = _optional_bylaw_llm_answer(prompt, st, history=prior_turns) or _retrieval_only_bylaw_answer(question, bounded_hits)
+        assistant_message = {"role": "assistant", "content": answer, "sources": bounded_hits, "question": question}
+    st.session_state[chat_key].append(assistant_message)
+    _render_bylaw_chat_message(st, assistant_message)
 
 
 def _secret_value(st: Any | None, name: str) -> str:
@@ -2879,7 +3027,7 @@ def _secret_value(st: Any | None, name: str) -> str:
 
 
 def _bylaw_llm_status(st: Any | None = None) -> dict[str, Any]:
-    preferred = (_secret_value(st, "BYLAW_RAG_PROVIDER") or DEFAULT_BYLAW_RAG_PROVIDER).strip().lower()
+    preferred = (_secret_value(st, "BYLAW_RAG_PROVIDER") or "").strip().lower()
     openrouter_key = _secret_value(st, "OPENROUTER_API_KEY")
     gemini_key = (
         _secret_value(st, "GEMINI_API_KEY")
@@ -2897,33 +3045,39 @@ def _bylaw_llm_status(st: Any | None = None) -> dict[str, Any]:
             "configured": bool(key),
         }
 
-    if preferred in {"openrouter", "openrouter.ai"}:
-        model = _secret_value(st, "OPENROUTER_MODEL") or DEFAULT_BYLAW_RAG_MODEL
-        return _status("openrouter", openrouter_key, model)
+    if preferred in {"openrouter", "open-router"}:
+        return _status("openrouter", openrouter_key, DEFAULT_BYLAW_CHAT_MODEL)
     if preferred in {"gemini", "google"}:
-        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or DEFAULT_GEMINI_RAG_MODEL)
+        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or "gemini-2.0-flash-lite")
     if preferred in {"openai", "openai-compatible"}:
-        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or DEFAULT_OPENAI_RAG_MODEL)
+        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or "gpt-4o-mini")
     if preferred in {"anthropic", "claude"}:
-        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or DEFAULT_ANTHROPIC_RAG_MODEL)
+        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or "claude-3-5-haiku-latest")
+    # Auto-detect: OpenRouter first — the project's .env already ships an
+    # OPENROUTER_API_KEY (the same key the extraction layer uses), so the chat
+    # works out of the box with no extra configuration.
     if openrouter_key:
-        return _status("openrouter", openrouter_key, _secret_value(st, "OPENROUTER_MODEL") or DEFAULT_BYLAW_RAG_MODEL)
+        return _status("openrouter", openrouter_key, DEFAULT_BYLAW_CHAT_MODEL)
     if gemini_key:
-        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or DEFAULT_GEMINI_RAG_MODEL)
+        return _status("gemini", gemini_key, _secret_value(st, "GEMINI_MODEL") or "gemini-2.0-flash-lite")
     if openai_key:
-        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or DEFAULT_OPENAI_RAG_MODEL)
+        return _status("openai", openai_key, _secret_value(st, "OPENAI_MODEL") or "gpt-4o-mini")
     if anthropic_key:
-        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or DEFAULT_ANTHROPIC_RAG_MODEL)
-    return {"provider": DEFAULT_BYLAW_RAG_PROVIDER, "model": DEFAULT_BYLAW_RAG_MODEL, "available": False, "configured": False}
+        return _status("anthropic", anthropic_key, _secret_value(st, "CLAUDE_MODEL") or "claude-3-5-haiku-latest")
+    return {"provider": "none", "model": "", "available": False, "configured": False}
 
 
-def _optional_bylaw_llm_answer(prompt: str, st: Any | None = None) -> str | None:
+def _optional_bylaw_llm_answer(
+    prompt: str,
+    st: Any | None = None,
+    history: list[dict[str, Any]] | None = None,
+) -> str | None:
     status = _bylaw_llm_status(st)
     if not status.get("available"):
         return None
     provider = status["provider"]
     if provider == "openrouter":
-        return _openrouter_answer(prompt, _secret_value(st, "OPENROUTER_API_KEY"), status["model"], st)
+        return _openrouter_answer(prompt, _secret_value(st, "OPENROUTER_API_KEY"), status["model"], history)
     if provider == "gemini":
         key = _secret_value(st, "GEMINI_API_KEY") or _secret_value(st, "GOOGLE_API_KEY") or _secret_value(st, "GOOGLE_GENAI_API_KEY")
         return _gemini_answer(prompt, key, status["model"])
@@ -2933,6 +3087,53 @@ def _optional_bylaw_llm_answer(prompt: str, st: Any | None = None) -> str | None
         key = _secret_value(st, "ANTHROPIC_API_KEY") or _secret_value(st, "CLAUDE_API_KEY")
         return _anthropic_answer(prompt, key, status["model"])
     return None
+
+
+_BYLAW_CHAT_SYSTEM = (
+    "You answer only from retrieved zoning bylaw excerpts. You are an advisory "
+    "assistant for human reviewers and never approve, verify, reject, or promote a rule. "
+    "Cite the section number in brackets for every claim, and say plainly when the "
+    "retrieved sections do not answer the question."
+)
+
+
+def _openrouter_answer(
+    prompt: str,
+    api_key: str,
+    model: str,
+    history: list[dict[str, Any]] | None = None,
+) -> str:
+    """Answer via OpenRouter's OpenAI-compatible chat-completions endpoint.
+
+    Prior conversation turns (trimmed) are included so follow-up questions read
+    naturally, while the final user message carries the freshly retrieved,
+    section-grounded prompt — keeping every answer anchored to source text.
+    """
+    messages: list[dict[str, str]] = [{"role": "system", "content": _BYLAW_CHAT_SYSTEM}]
+    for turn in (history or [])[-6:]:
+        role = turn.get("role")
+        content = turn.get("content")
+        if role in {"user", "assistant"} and content:
+            messages.append({"role": role, "content": str(content)[:1500]})
+    messages.append({"role": "user", "content": prompt})
+    payload = {
+        "model": model or DEFAULT_BYLAW_CHAT_MODEL,
+        "temperature": 0.0,
+        "max_tokens": 800,
+        "messages": messages,
+    }
+    data = _post_json(
+        "https://openrouter.ai/api/v1/chat/completions",
+        payload,
+        {
+            "Authorization": f"Bearer {api_key}",
+            "HTTP-Referer": "https://github.com/ubco-mds-2025-labs",
+            "X-Title": "Bylaw Verification Dashboard",
+        },
+    )
+    if data.get("_error"):
+        return f"LLM unavailable: {data['_error']}"
+    return str((((data.get("choices") or [{}])[0].get("message") or {}).get("content") or "")).strip() or "The LLM returned no text."
 
 
 def _post_json(url: str, payload: dict[str, Any], headers: dict[str, str], timeout: int = 35) -> dict[str, Any]:
@@ -2953,7 +3154,7 @@ def _post_json(url: str, payload: dict[str, Any], headers: dict[str, str], timeo
 
 
 def _gemini_answer(prompt: str, api_key: str, model: str) -> str:
-    model_name = str(model or DEFAULT_GEMINI_RAG_MODEL).removeprefix("models/")
+    model_name = str(model or "gemini-2.0-flash-lite").removeprefix("models/")
     url = (
         "https://generativelanguage.googleapis.com/v1beta/models/"
         f"{urllib.parse.quote(model_name, safe='-._~')}:generateContent?key={urllib.parse.quote(api_key)}"
@@ -2972,24 +3173,8 @@ def _gemini_answer(prompt: str, api_key: str, model: str) -> str:
 
 def _openai_answer(prompt: str, api_key: str, model: str, st: Any | None = None) -> str:
     base_url = (_secret_value(st, "OPENAI_BASE_URL") or "https://api.openai.com/v1").rstrip("/")
-    return _openai_compatible_answer(prompt, api_key, model or DEFAULT_OPENAI_RAG_MODEL, base_url, {})
-
-
-def _openrouter_answer(prompt: str, api_key: str, model: str, st: Any | None = None) -> str:
-    base_url = (_secret_value(st, "OPENROUTER_BASE_URL") or DEFAULT_OPENROUTER_BASE_URL).rstrip("/")
-    headers = {}
-    site_url = _secret_value(st, "OPENROUTER_SITE_URL")
-    app_title = _secret_value(st, "OPENROUTER_APP_TITLE") or "BC Zoning Verification Dashboard"
-    if site_url:
-        headers["HTTP-Referer"] = site_url
-    if app_title:
-        headers["X-Title"] = app_title
-    return _openai_compatible_answer(prompt, api_key, model or DEFAULT_BYLAW_RAG_MODEL, base_url, headers)
-
-
-def _openai_compatible_answer(prompt: str, api_key: str, model: str, base_url: str, headers: dict[str, str]) -> str:
     payload = {
-        "model": model,
+        "model": model or "gpt-4o-mini",
         "temperature": 0.0,
         "max_tokens": 700,
         "messages": [
@@ -2997,7 +3182,7 @@ def _openai_compatible_answer(prompt: str, api_key: str, model: str, base_url: s
             {"role": "user", "content": prompt},
         ],
     }
-    data = _post_json(f"{base_url}/chat/completions", payload, {"Authorization": f"Bearer {api_key}", **headers})
+    data = _post_json(f"{base_url}/chat/completions", payload, {"Authorization": f"Bearer {api_key}"})
     if data.get("_error"):
         return f"LLM unavailable: {data['_error']}"
     return str((((data.get("choices") or [{}])[0].get("message") or {}).get("content") or "")).strip() or "The LLM returned no text."
@@ -3022,258 +3207,98 @@ def _anthropic_answer(prompt: str, api_key: str, model: str) -> str:
     return "\n".join(str(block.get("text") or "") for block in blocks if block.get("type") == "text").strip() or "The LLM returned no text."
 
 
-def _ask_the_bylaw_panel(st: Any, output_dir: Path) -> None:
-    """Local hybrid-RAG retrieval over the city's bylaw corpus. ADVISORY only:
-    answers are retrieved clauses with section ids — never a verification."""
+def _ask_the_bylaw_panel(st: Any, output_dir: Path, data: dict[str, Any] | None = None) -> None:
+    """Conversational, source-grounded bylaw assistant — a real LLM chat that
+    answers ONLY from retrieved bylaw sections. ADVISORY: it never verifies,
+    approves, rejects, edits JSON, or changes GIS outputs."""
+    data = data or {}
     index_path = bylaw_index_path(output_dir)
     city_stem = city_stem_from_dir(output_dir)
     city_label = city_label_from_dir(output_dir)
-    st.markdown("#### Ask The Bylaw")
+    llm_status = _bylaw_llm_status(st)
+
+    st.markdown("<div class='chat-shell'>", unsafe_allow_html=True)
+    mode_pill = (
+        f"<span class='mode-pill live'>LLM + RAG · {html.escape(str(llm_status['provider']))}</span>"
+        if llm_status.get("available")
+        else "<span class='mode-pill'>Retrieval only</span>"
+    )
     st.markdown(
-        "<div class='bylaw-flow'>"
-        "<div class='bylaw-step'><b>1. Ask</b><span>Pick a reviewer task or write one question.</span></div>"
-        "<div class='bylaw-step'><b>2. Read</b><span>The answer must stay inside retrieved bylaw text.</span></div>"
-        "<div class='bylaw-step'><b>3. Check</b><span>Open the source sections before using any claim.</span></div>"
-        "</div>",
+        "<div style='display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;'>"
+        "<span class='chat-ribbon'>Advisory · answers come from retrieved bylaw sections · cannot verify, approve, reject, or edit outputs</span>"
+        f"{mode_pill}</div>",
         unsafe_allow_html=True,
     )
+
     if index_path is None:
         st.info(
             "No retrieval index yet — build it with "
             f"`.venv/bin/python scripts/build_rag_index.py --city {city_stem}`."
         )
+        st.markdown("</div>", unsafe_allow_html=True)
         return
 
     chat_key = _rag_chat_key(city_stem)
     st.session_state.setdefault(chat_key, [])
-    left, right = st.columns([0.42, 0.58], gap="large")
-    question_to_run = ""
+    history = st.session_state[chat_key]
 
-    with left:
-        st.markdown("##### Question")
-        st.caption(f"Current bylaw corpus: {city_label}. The chat history is separate for each city.")
-        st.markdown("<div class='section-kicker'>Starter questions</div>", unsafe_allow_html=True)
-        grouped_prompts: dict[str, list[dict[str, str]]] = {}
-        for item in BYLAW_PROMPT_LIBRARY:
-            grouped_prompts.setdefault(str(item["group"]), []).append(item)
-        for group, prompts in grouped_prompts.items():
-            st.markdown(f"**{group}**")
-            prompt_cols = st.columns(2)
-            for index, item in enumerate(prompts):
-                key = f"starter_{city_stem}_{_prompt_key(item['group'])}_{_prompt_key(item['label'])}"
-                if prompt_cols[index % 2].button(str(item["label"]), key=key, help=str(item["question"])):
-                    question_to_run = str(item["question"])
+    head_left, head_right = st.columns([5, 1])
+    if head_right.button("↺ New chat", key=f"clear_{chat_key}"):
+        st.session_state[chat_key] = []
+        history = st.session_state[chat_key]
 
-        st.markdown("<div class='section-kicker'>Custom question</div>", unsafe_allow_html=True)
-        custom_question = st.text_area(
-            "Write one bylaw question",
-            key=f"custom_bylaw_question_{city_stem}",
-            placeholder="Example: What rear setback is supported by the retrieved bylaw sections?",
-            height=92,
-            label_visibility="collapsed",
-        )
-        ask_cols = st.columns([1, 1])
-        if ask_cols[0].button(
-            "Ask custom question",
-            key=f"ask_custom_{city_stem}",
-            type="primary",
-            disabled=not str(custom_question or "").strip(),
-        ):
-            question_to_run = str(custom_question or "").strip()
-        if ask_cols[1].button("Clear answers", key=f"clear_{chat_key}"):
-            st.session_state[chat_key] = []
-            st.rerun()
-
-        with st.expander("What this tool can and cannot do", expanded=False):
-            st.markdown(
-                "- It can explain retrieved source sections for reviewers.\n"
-                "- It cannot verify, reject, approve, or edit JSON outputs.\n"
-                "- GIS should use only `gis_rule_contract.json` and verified rules."
-            )
-
-    if question_to_run:
-        _answer_bylaw_question(st, output_dir, chat_key, question_to_run)
-
-    with right:
-        st.markdown("##### Answer")
-        llm_status = _bylaw_llm_status(st)
-        if llm_status.get("available"):
-            st.success("Mode: RAG chat enabled with GPT-OSS-120B.")
-        else:
-            st.warning(
-                "Mode: retrieval-only. Add `OPENROUTER_API_KEY` in Streamlit secrets to enable "
-                "GPT-OSS-120B + RAG grounded chat answers."
-            )
-            with st.expander("Streamlit Cloud secret format", expanded=False):
-                st.code(
-                    '''BYLAW_RAG_PROVIDER = "openrouter"
-BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
-OPENROUTER_API_KEY = "..."  # keep this in secrets only
-OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"''',
-                    language="toml",
-                )
-
+    if not history:
         st.markdown(
-            "<div class='trust-note'><b>Advisory boundary.</b> RAG explains retrieved text only. "
-            "The deterministic verifier decides which rules are trusted and GIS-safe.</div>",
+            f"<div class='chat-empty'><h2>Ask about the {html.escape(city_label)} bylaw</h2>"
+            "<p>Plain-English questions about setbacks, height, coverage, suites, and parcels. "
+            "Every answer cites the section it came from. I can't approve, reject, or change anything.</p></div>",
             unsafe_allow_html=True,
         )
-        if not st.session_state[chat_key]:
-            st.markdown(
-                "<div class='bylaw-empty'><b>No question asked yet.</b>"
-                "<span>Use a starter question or the custom question box on the left. "
-                "Answers and source sections will appear here.</span></div>",
-                unsafe_allow_html=True,
-            )
-        else:
-            for message in st.session_state[chat_key]:
-                _render_bylaw_chat_message(st, message)
-            st.caption("Every answer is advisory. Source sections must be checked before any rule is used.")
+
+    # Hidden prompt hints: revealed only on demand, never shown up front.
+    pending_question = None
+    suggestions = _bylaw_suggestions(data)
+    try:
+        ideas = st.popover("Need ideas?")
+    except Exception:  # pragma: no cover - popover always present in Streamlit 1.58
+        ideas = st.expander("Need ideas?")
+    with ideas:
+        for index, suggestion in enumerate(suggestions):
+            if st.button(suggestion, key=f"sugg_{city_stem}_{index}", width="stretch"):
+                pending_question = suggestion
+
+    for message in history:
+        _render_bylaw_chat_message(st, message)
+
+    typed = st.chat_input("Ask about the bylaw…", key=f"rag_chat_input_{city_stem}")
+    question = typed or pending_question
+    if question:
+        _bylaw_chat_respond(st, question, index_path, chat_key)
+    st.markdown("</div>", unsafe_allow_html=True)
 
 
 def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
-    """Section-anchored bylaw text with rule-picked evidence highlighting."""
-    st.subheader("Ask The Bylaw")
+    """Conversational bylaw assistant — the whole tab is the chat now.
+
+    The former nested sub-tabs (Ask Source / Explain Verified Rule / Why In
+    Review / Prompt Library) collapsed into one chat: their example questions
+    became the data-generated, hidden ``Need ideas?`` suggestions, and the
+    section text now rides along in each answer's collapsed citation cards.
+    """
     output_dir = Path(data.get("output_dir") or DEFAULT_OUTPUT_DIR)
-    bylaw_dir = ROOT / "data" / "bylaws" / city_stem_from_dir(output_dir)
-    sections = load_bylaw_sections(bylaw_dir)
-    _ask_the_bylaw_panel(st, output_dir)
-
-    rules = [(rule, "verified") for rule in data["verified"]] + [(rule, "review") for rule in data["review"]]
-    rule_options = {
-        f"{rule.get('rule_id')} [{status}] — {_humanize(rule.get('rule_object'))}": rule
-        for rule, status in rules
-        if rule.get("rule_id")
-    }
-
-    if not sections:
-        st.info(
-            "No extracted bylaw section library is bundled yet, so this view shows cited evidence units instead. "
-            "Once section extraction is bundled, this tab will show section-anchored bylaw text."
-        )
-        if rule_options:
-            selected = st.selectbox("Rule", list(rule_options), key="bylaw_rule_fallback")
-            rule = rule_options[selected]
-            quote = _rule_evidence_quote(rule)
-            if quote:
-                st.markdown("#### Cited evidence")
-                st.markdown(
-                    f"<div class='bylaw-section'><mark class='evidence-hit'>{html.escape(_short_display_quote(quote))}</mark></div>",
-                    unsafe_allow_html=True,
-                )
-        evidence_units = data.get("evidence_units", [])
-        if evidence_units:
-            st.markdown("#### Evidence units")
-            rows = [
-                {
-                    "evidence_id": unit.get("evidence_id"),
-                    "page": unit.get("page"),
-                    "type": unit.get("evidence_type"),
-                    "section": unit.get("section"),
-                    "text": _short_display_quote(unit.get("evidence_text", ""), 200),
-                }
-                for unit in evidence_units[:250]
-            ]
-            st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
-        return
-
-    st.caption(f"{len(sections)} extracted source section(s) loaded. Pick a rule to highlight its cited evidence.")
-    selected_rule_label = st.selectbox("Rule evidence to highlight", ["(none)", *rule_options], key="bylaw_rule_picker")
-    quote = ""
-    if selected_rule_label != "(none)":
-        quote = _rule_evidence_quote(rule_options[selected_rule_label])
-        if not quote:
-            st.caption("This rule carries no evidence quote; sections are shown without highlighting.")
-
-    matched_index = 0
-    highlighted: dict[int, str] = {}
-    if quote:
-        for index, section in enumerate(sections):
-            markup, hit = highlight_evidence(section["text"], quote)
-            if hit:
-                highlighted[index] = markup
-                if len(highlighted) == 1:
-                    matched_index = index
-        if highlighted:
-            st.success(f"Evidence found in {len(highlighted)} section(s).")
-        else:
-            st.warning("The cited evidence text was not found verbatim in any extracted section.")
-
-    titles = [section["title"] for section in sections]
-    picked = st.selectbox("Source section", range(len(titles)), index=matched_index, format_func=lambda i: titles[i], key="bylaw_section_picker")
-    body = highlighted.get(picked) or html.escape(" ".join(sections[picked]["text"].split()))
-    st.markdown(
-        f"<div class='bylaw-section'><h4>{html.escape(sections[picked]['title'])}</h4>{body}</div>",
-        unsafe_allow_html=True,
-    )
-
-
-def _render_kpis(st: Any, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> None:
-    benchmark = data["benchmark"]
-    metrics = benchmark.get("rule_metrics", {})
-    proposal = benchmark.get("proposal_metrics", {})
-    counts = output_bucket_counts(data)
-    # Keep the KPI row small: safety status first, then review volume.
-    cards = [
-        ("Verified", counts.get("verified", 0), "verified"),
-        ("Needs review", counts.get("review_needed", 0), "review"),
-        ("Shown after filters", len(filtered_items), "review"),
-        ("Precision", f"{metrics.get('verified_precision', 0):.2f}", "verified"),
-        ("False verified", metrics.get("false_verified_count", 0), "rejected"),
-        ("False Approvals", proposal.get("false_approval_count", 0), "rejected"),
-    ]
-    cards_html = "".join(
-        f"<div class='metric{' metric-' + tone if tone else ''}'>"
-        f"<div class='metric-label'>{html.escape(label)}</div>"
-        f"<div class='metric-value'>{html.escape(str(value))}</div></div>"
-        for label, value, tone in cards
-    )
-    st.markdown(f"<div class='metric-grid'>{cards_html}</div>", unsafe_allow_html=True)
-
-
-def _city_takeaway_html(city_label: str, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> str:
-    """One conclusion panel that tells reviewers what this run means."""
-    benchmark = data.get("benchmark") or {}
-    counts = output_bucket_counts(data)
-    metrics = benchmark.get("rule_metrics") or {}
-    proposal = benchmark.get("proposal_metrics") or {}
-    verified = int(counts.get("verified") or 0)
-    review = int(counts.get("review_needed") or 0)
-    false_verified = int(metrics.get("false_verified_count") or 0)
-    false_approval = int(proposal.get("false_approval_count") or 0)
-    precision = metrics.get("verified_precision")
-    safe = false_verified == 0 and false_approval == 0
-    headline = "Safe verified output" if safe else "Unsafe until fixed"
-    body = (
-        f"{city_label} has {verified} verified rules and {review} rules held for human review. "
-        f"Verified precision is {_display_value(precision)} with {false_verified} false verified and {false_approval} false approvals."
-    )
-    next_step = (
-        f"Use verified rules for GIS/demo output. Review the {len(filtered_items)} visible held rules before claiming full automation."
-        if review
-        else "No held rules are visible for this run. Use verified artifacts and keep the source audit with the handoff."
-    )
-    tone = "verified" if safe else "rejected"
-    return (
-        f"<div class='takeaway-panel takeaway-{tone}'>"
-        f"<div class='takeaway-label'>Reviewer takeaway</div>"
-        f"<b>{html.escape(headline)}</b>"
-        f"<span>{html.escape(body)}</span>"
-        f"<p>{html.escape(next_step)}</p>"
-        "</div>"
-    )
+    _ask_the_bylaw_panel(st, output_dir, data)
 
 
 def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool = False) -> None:
     """Render a compact product-style header for the review console."""
-    eyebrow = "Multi-City M4 Verification Dashboard" if portfolio else "Verification Review Console"
+    eyebrow = "M4 Verification Dashboard" if portfolio else "Verification Review Console"
     title = city_label if portfolio else f"{city_label} Rule Review"
     body = (
-        "Communication dashboard for reviewers and partners across Burnaby, Calgary, and Vancouver. M4 shows extraction candidates moving through deterministic verification."
+        "Review M4 first. V3 is retained only as the predecessor comparison. The deterministic verifier is the authority."
         if portfolio
-        else "Read candidate, verified, review, and source evidence artifacts. Extraction proposes; deterministic verification decides trusted outputs."
+        else "Use verified rules as trusted outputs, send uncertain rules to review, and inspect the source text before changing the verifier."
     )
-    main_pill = "Extraction -> Verification" if portfolio else "Verified-only output"
+    main_pill = "Current path: M4" if portfolio else "Verified-only output"
     st.markdown(
         f"""
 <div class="app-header">
@@ -3295,20 +3320,6 @@ def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool =
     )
 
 
-def _render_guidance(st: Any) -> None:
-    """Show the main reviewer workflow without hiding it in documentation."""
-    st.markdown(
-        """
-<div class="guidance-grid">
-  <div class="guide-card"><b>Understand the pipeline</b><span>Native extraction generates rule candidates. The verifier checks source support before any rule becomes trusted.</span></div>
-  <div class="guide-card"><b>Use Review Workbench</b><span>Held rules expose missing value, unit, operator, scope, condition, or exception support for human review.</span></div>
-  <div class="guide-card"><b>Ask the bylaw with RAG</b><span>GPT-OSS-120B can explain retrieved sections, but it cannot verify, reject, approve, or edit outputs.</span></div>
-</div>
-""",
-        unsafe_allow_html=True,
-    )
-
-
 def _sidebar_guidance(st: Any) -> None:
     """Keep short usage instructions visible near the filters."""
     with st.sidebar.expander("Decision language", expanded=False):
@@ -3323,69 +3334,70 @@ def _sidebar_guidance(st: Any) -> None:
         )
 
 
+def _router_item_row(item: dict[str, Any]) -> dict[str, Any]:
+    """One reviewer-queue row: which rule, what it claims, why held, next step."""
+    return {
+        "Rule ID": item.get("rule_id") or item.get("candidate_id"),
+        "Rule family": _humanize(item.get("rule_object")),
+        "What it says": _short_display_quote(item.get("candidate_sentence") or "", 150),
+        "Why it's held": _plain_label(item.get("review_category") or item.get("blocking_reason") or ""),
+        "Next step": _short_display_quote(item.get("human_instruction") or item.get("next_step") or item.get("next_action") or "", 130),
+    }
+
+
 def _action_summary(st: Any, data: dict[str, Any]) -> None:
-    """Surface the highest-value review-volume reduction paths."""
-    review_counts = _named_counts(data.get("router", {}).get("summary", {}).get("action_counts", []))
-    resolution = data.get("resolution", {}).get("summary", {})
-    evidence_path = (
-        review_counts.get("rerun_with_evidence_bundle", 0)
-        + review_counts.get("retry_with_better_evidence", 0)
-        + review_counts.get("condition_evidence_needed", 0)
-        + resolution.get("can_promote_after_evidence_fix_count", 0)
-    )
-    legal_path = review_counts.get("human_legal_review", 0) + review_counts.get("scope_review", 0)
-    operator_path = review_counts.get("operator_review", 0)
-    cards = [
+    """Surface the highest-value review-volume reduction paths.
+
+    Each card's number is the exact set of queued rules in its action buckets,
+    and an expander under the cards lists those precise rules (rule id, plain
+    claim, why it is held, and the next step) so a reviewer can jump from a
+    count straight to the rules behind it.
+    """
+    items_by_bucket: dict[str, list[dict[str, Any]]] = {}
+    for item in data.get("router", {}).get("items", []):
+        items_by_bucket.setdefault(str(item.get("action_bucket") or ""), []).append(item)
+
+    categories = [
         (
             "Can improve with better source evidence",
-            evidence_path,
+            ("rerun_with_evidence_bundle", "retry_with_better_evidence", "condition_evidence_needed"),
             "Start here. These candidates may be held because the evidence packet is incomplete.",
         ),
         (
             "Need direction-word check",
-            operator_path,
+            ("operator_review",),
             "The number is visible, but the source must prove minimum, maximum, or exact wording.",
         ),
         (
             "Need legal scope review",
-            legal_path,
+            ("human_legal_review", "scope_review"),
             "These involve exceptions, scope, or interpretation. Keep them untrusted unless proven.",
         ),
     ]
+    resolved = [
+        (title, [rule for bucket in buckets for rule in items_by_bucket.get(bucket, [])], body)
+        for title, buckets, body in categories
+    ]
+
     html_cards = []
-    for title, value, body in cards:
+    for title, rules, body in resolved:
         html_cards.append(
             "<div class='action-card'>"
-            f"<div class='action-value'>{html.escape(str(value))}</div>"
+            f"<div class='action-value'>{len(rules)}</div>"
             f"<div class='action-title'>{html.escape(title)}</div>"
             f"<p>{html.escape(body)}</p>"
             "</div>"
         )
     st.markdown("<div class='action-grid'>" + "".join(html_cards) + "</div>", unsafe_allow_html=True)
 
-
-def _review_workbench_intro(st: Any, data: dict[str, Any], filtered_items: list[dict[str, Any]]) -> None:
-    """Orient a reviewer before they land in the dense rule-level tools."""
-    total_review = len(data.get("review") or [])
-    visible_review = len(filtered_items)
-    review_counts = _named_counts(data.get("router", {}).get("summary", {}).get("action_counts", []))
-    evidence_path = (
-        review_counts.get("rerun_with_evidence_bundle", 0)
-        + review_counts.get("retry_with_better_evidence", 0)
-        + review_counts.get("condition_evidence_needed", 0)
-    )
-    operator_path = review_counts.get("operator_review", 0)
-    legal_path = review_counts.get("human_legal_review", 0) + review_counts.get("scope_review", 0)
-    st.markdown(
-        "<div class='takeaway-panel takeaway-review'>"
-        "<div class='takeaway-label'>Review workbench</div>"
-        f"<b>{visible_review} held rules visible out of {total_review}</b>"
-        "<span>Start with the rule-level view only when you know which bucket you are working on.</span>"
-        f"<p>Evidence fixes: {evidence_path}. Direction-word checks: {operator_path}. Legal or scope review: {legal_path}. "
-        "No item here is GIS-safe until the verifier promotes it.</p>"
-        "</div>",
-        unsafe_allow_html=True,
-    )
+    any_rules = any(rules for _, rules, _ in resolved)
+    if any_rules:
+        st.caption("Open a path to see exactly which rules it covers.")
+    for title, rules, _ in resolved:
+        if not rules:
+            continue
+        with st.expander(f"View these {len(rules)} rule{'s' if len(rules) != 1 else ''} · {title}", expanded=False):
+            st.dataframe(_display_rows([_router_item_row(rule) for rule in rules]), width="stretch", hide_index=True)
 
 
 def _sentence_card(st: Any, title: str, sentence: str, tone: str, caption: str = "") -> None:
@@ -3699,55 +3711,6 @@ def _search_phrase(rule_like: dict[str, Any], quote: str) -> str:
     return " ".join(str(part) for part in parts if part not in (None, ""))
 
 
-def _source_packet_panel(
-    st: Any,
-    title: str,
-    text: Any,
-    expander_label: str,
-    *,
-    page: Any = None,
-    evidence_id: Any = None,
-    status: str = "",
-    show_cue: bool = True,
-) -> None:
-    """Keep raw bylaw text available without dominating the review screen."""
-    raw_text = str(text or "").strip()
-    meta_parts = []
-    if page not in (None, ""):
-        meta_parts.append(f"page {page}")
-    if evidence_id not in (None, ""):
-        meta_parts.append(f"evidence {evidence_id}")
-    meta = " · ".join(meta_parts) or "source packet"
-    cue = _source_cue(raw_text) if show_cue else ""
-    body = status or "Raw source text is attached for audit."
-    if cue:
-        body = f"{body} Search cue: {cue}"
-    elif not raw_text:
-        body = "No source text was attached for this packet."
-
-    st.markdown(
-        "<div class='source-summary'>"
-        f"<b>{html.escape(title)}</b>"
-        f"<span>{html.escape(meta)}</span>"
-        f"<p>{html.escape(body)}</p>"
-        "</div>",
-        unsafe_allow_html=True,
-    )
-    if raw_text:
-        with st.expander(expander_label, expanded=False):
-            st.code(raw_text, language="text")
-
-
-def _source_cue(value: str, limit: int = 150) -> str:
-    """Return a one-line lookup cue rather than a full legal paragraph."""
-    text = " ".join(str(value or "").split())
-    if not text:
-        return ""
-    words = text.split()
-    cue = " ".join(words[:18])
-    return _short_display_quote(cue, limit)
-
-
 def _short_display_quote(value: str, limit: int = 420) -> str:
     """Keep bylaw evidence quotes readable inside Streamlit."""
     text = " ".join(str(value or "").split())
@@ -3826,7 +3789,7 @@ def _style(st: Any) -> None:
 #MainMenu, footer, div[data-testid="stDecoration"] {display:none;}
 header[data-testid="stHeader"] {background:transparent;}
 html, body, [class*="css"] {font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;}
-.block-container {padding-top: 1.1rem; max-width: 1360px;}
+.block-container {padding-top: 1.1rem; max-width: 1180px;}
 h1 {font-size:28px;} h2 {font-size:22px;} h3 {font-size:18px;}
 h4 {font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); font-weight:700;}
 /* ---- components ---- */
@@ -3883,26 +3846,6 @@ h4 {font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--
 .roadmap-card b {display:block; color:var(--ink); margin-bottom:5px;}
 .roadmap-card span {display:block; color:var(--ink-soft); font-size:14px; line-height:1.4;}
 .trust-note {border:1px solid var(--hairline); border-radius:8px; background:var(--subtle); padding:11px 13px; color:var(--ink-soft); font-size:14px; margin:8px 0 12px;}
-.takeaway-panel {border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:8px; background:var(--canvas); padding:14px 16px; margin:10px 0 16px;}
-.takeaway-panel b {display:block; color:var(--ink); font-size:16px; margin:2px 0 5px;}
-.takeaway-panel span {display:block; color:var(--ink-soft); font-size:14px; line-height:1.45;}
-.takeaway-panel p {margin:8px 0 0; color:var(--ink); font-size:14px; line-height:1.4;}
-.takeaway-label {font-size:11px; line-height:1; letter-spacing:.06em; text-transform:uppercase; font-weight:800; color:var(--ink-soft); margin-bottom:5px;}
-.takeaway-verified {border-left-color:var(--status-verified);}
-.takeaway-review {border-left-color:var(--status-review);}
-.takeaway-rejected {border-left-color:var(--status-rejected);}
-.source-summary {border:1px solid var(--hairline); border-radius:8px; background:var(--subtle); padding:11px 12px; margin:8px 0 10px;}
-.source-summary b {display:block; color:var(--ink); font-size:14px; margin-bottom:3px;}
-.source-summary span {display:block; color:var(--ink-soft); font-size:12px; margin-bottom:6px;}
-.source-summary p {margin:0; color:var(--ink-soft); font-size:13px; line-height:1.45;}
-.bylaw-flow {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:8px 0 16px;}
-.bylaw-step {border:1px solid var(--hairline); border-radius:8px; background:var(--canvas); padding:12px 13px; min-height:82px;}
-.bylaw-step b {display:block; color:var(--ink); font-size:13px; margin-bottom:5px;}
-.bylaw-step span {display:block; color:var(--ink-soft); font-size:12px; line-height:1.35;}
-.section-kicker {font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); font-weight:800; margin:16px 0 8px;}
-.bylaw-empty {border:1px dashed var(--line); border-radius:8px; background:var(--subtle); padding:18px 16px; margin-top:10px;}
-.bylaw-empty b {display:block; color:var(--ink); margin-bottom:5px;}
-.bylaw-empty span {display:block; color:var(--ink-soft); font-size:14px; line-height:1.45;}
 .guidance-grid, .action-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:12px 0 20px;}
 .guide-card, .action-card {border:0; border-radius:8px; background:var(--subtle); padding:14px 15px;}
 .guide-card b {display:block; color:var(--ink); margin-bottom:5px;}
@@ -3939,13 +3882,46 @@ mark.evidence-hit {background:#fff3bf; border-bottom:2px solid var(--status-revi
 div[data-testid="stDataFrame"] {border:1px solid var(--hairline); border-radius:8px; overflow:hidden;}
 div[data-testid="stExpander"] {border:1px solid var(--hairline); border-radius:8px;}
 div[data-testid="stExpander"] .guide-card, div[data-testid="stExpander"] .action-card {background:transparent; padding:8px 0;}
+/* ---- redesign: civic console (Summary hero, status bar, safety chip, chat) ---- */
+.safety-chip {display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; padding:4px 11px; border-radius:999px; white-space:nowrap;}
+.safety-ok {background:color-mix(in srgb, var(--status-verified) 12%, white); color:var(--status-verified);}
+.safety-alert {background:color-mix(in srgb, var(--status-rejected) 12%, white); color:var(--status-rejected);}
+.coverage-hero {display:grid; gap:12px; padding:22px 24px; border:1px solid var(--hairline); border-radius:12px; background:var(--canvas); box-shadow:0 1px 2px rgba(31,35,40,.05); margin:6px 0 18px;}
+.coverage-hero .pct {font-size:46px; font-weight:750; color:var(--status-verified); line-height:1; font-variant-numeric:tabular-nums;}
+.coverage-hero .cap {font-size:13px; color:var(--ink-soft);}
+.coverage-bar {height:14px; border-radius:999px; overflow:hidden; display:flex; border:1px solid var(--hairline);}
+.coverage-bar .seg {height:100%;}
+.coverage-bar .seg-verified {background:var(--status-verified);}
+.coverage-bar .seg-review {background:var(--status-review);}
+.coverage-bar .seg-missed {background:var(--status-not-used);}
+.coverage-key {display:flex; gap:16px; flex-wrap:wrap; font-size:12px; color:var(--ink-soft);}
+.coverage-key b {color:var(--ink); font-variant-numeric:tabular-nums;}
+.coverage-key i {font-style:normal; display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:5px; vertical-align:middle;}
+.status-bar {display:flex; height:34px; border-radius:8px; overflow:hidden; border:1px solid var(--hairline); margin:6px 0 18px;}
+.status-bar .seg {display:flex; align-items:center; justify-content:center; color:#fff; font-size:12px; font-weight:700; min-width:0; white-space:nowrap; overflow:hidden;}
+.status-bar .seg.verified {background:var(--status-verified);}
+.status-bar .seg.review {background:var(--status-review);}
+.status-bar .seg.rejected {background:var(--status-rejected);}
+.status-bar .seg.not_used {background:var(--status-not-used);}
+/* chat — scoped so it never bleeds into other tabs */
+.chat-shell {max-width:780px; margin:0 auto;}
+.chat-ribbon {font-size:12px; color:var(--ink-soft); background:var(--subtle); border:1px solid var(--hairline); border-radius:999px; padding:7px 14px; display:inline-flex; gap:8px; align-items:center; margin-bottom:6px;}
+.chat-ribbon::before {content:'●'; color:var(--accent); font-size:9px;}
+.mode-pill {font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; background:var(--subtle); color:var(--ink-soft);}
+.mode-pill.live {background:color-mix(in srgb, var(--status-verified) 12%, white); color:var(--status-verified);}
+.chat-empty {text-align:center; color:var(--ink-soft); padding:40px 0 14px;}
+.chat-empty h2 {color:var(--ink); font-size:24px; margin:8px 0 6px; letter-spacing:-.01em;}
+.chat-empty p {max-width:520px; margin:0 auto; font-size:14px; line-height:1.5;}
+.citation {border:0; border-left:3px solid var(--accent); background:var(--subtle); border-radius:0 8px 8px 0; padding:10px 12px; margin:6px 0; font-size:13px; line-height:1.5; color:var(--ink);}
+.citation .loc {font-family:ui-monospace,"SF Mono","Roboto Mono",monospace; font-size:11px; color:var(--ink-soft); white-space:nowrap; font-weight:700;}
+[data-testid="stChatMessage"] {border:0; box-shadow:none; background:transparent; padding:6px 0;}
+[data-testid="stChatInput"] textarea {border-radius:18px;}
 @media (max-width: 900px) {
   .metric-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
   .hero-grid, .legend-grid {grid-template-columns:1fr 1fr;}
   .timeline {grid-template-columns:1fr;}
   .timeline-arrow {display:none;}
   .roadmap-grid {grid-template-columns:1fr;}
-  .bylaw-flow {grid-template-columns:1fr;}
   .guidance-grid, .action-grid {grid-template-columns:1fr;}
   .bar-row {grid-template-columns:1fr;}
 }
@@ -4160,27 +4136,24 @@ def _source_audit_panel(st: Any, report: dict[str, Any]) -> None:
 
 
 def _cloud_roadmap_panel(st: Any) -> None:
-    st.markdown("#### Cloud deployment checklist")
-    st.caption("The deployed dashboard stays read-only. Secrets only enable explanatory RAG chat for reviewers and partners.")
+    st.markdown("#### Cloud roadmap")
+    st.caption("Final-demo cloud work should stay secrets-managed and keep the verifier read-only from the dashboard.")
     st.markdown(
         """
 <div class="roadmap-grid">
-  <div class="roadmap-card"><b>Now</b><span>Streamlit Cloud demo with curated M4 artifacts and OpenRouter GPT-OSS-120B for advisory RAG chat.</span></div>
-  <div class="roadmap-card"><b>Next</b><span>Versioned artifact storage so reviewers can compare extraction, verification, review, and GIS outputs over time.</span></div>
-  <div class="roadmap-card"><b>Later</b><span>Scheduled extraction and verification jobs, artifact approvals, and reviewer login if partners need controlled access.</span></div>
+  <div class="roadmap-card"><b>Phase 1</b><span>Streamlit Cloud demo with curated M4 outputs and optional Gemini Flash Lite secrets for reviewer chat.</span></div>
+  <div class="roadmap-card"><b>Phase 2</b><span>Containerized app with persistent artifact storage and environment-managed secrets.</span></div>
+  <div class="roadmap-card"><b>Phase 3</b><span>Scheduled extraction and verification jobs, artifact versioning, and reviewer login if needed.</span></div>
 </div>
 """,
         unsafe_allow_html=True,
     )
     with st.expander("Streamlit Cloud secrets for Ask the Bylaw"):
-        st.markdown("Use the hosted OpenRouter key. The dashboard still works in retrieval-only mode when no key is configured.")
+        st.markdown("Use one hosted provider key. The dashboard still works in retrieval-only mode when no key is configured.")
         st.code(
-            '''BYLAW_RAG_PROVIDER = "openrouter"
-BYLAW_RAG_MODEL = "openai/gpt-oss-120b"
-OPENROUTER_API_KEY = "..."  # Streamlit Cloud secret only
-OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"
-# Optional:
-# OPENROUTER_SITE_URL = "https://your-streamlit-app-url.streamlit.app"''',
+            """BYLAW_RAG_PROVIDER = "gemini"
+BYLAW_RAG_MODEL = "gemini-2.0-flash-lite"
+GEMINI_API_KEY = "..."  # Streamlit Cloud secret only""",
             language="toml",
         )
 
@@ -4208,28 +4181,15 @@ def _portfolio_page(st: Any) -> None:
     ]
     st.markdown("<div class='hero-grid'>" + "".join(cards) + "</div>", unsafe_allow_html=True)
     st.markdown(
-        "<div class='takeaway-panel takeaway-verified'>"
-        "<div class='takeaway-label'>Reviewer takeaway</div>"
-        "<b>M4 is ready to explain, not a full automation claim.</b>"
-        f"<span>Across {city_count} cities, the current run has {verified_total} verified rules, "
-        f"{review_total} rules held for review, and {int(report.get('current_false_verified_total') or 0)} false verified rules.</span>"
-        "<p>Use the city selector to inspect the held rules. GIS and map handoff should use verified-only artifacts.</p>"
-        "</div>",
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        "<div class='instruction-banner'><b>Communication layer only.</b> Reviewers and partners use this dashboard "
-        "to understand extraction, verification, review, and GIS handoff. Downstream work must consume verified-only artifacts.</div>",
+        "<div class='instruction-banner'><b>Review M4 first.</b> V3 is retained only as the predecessor comparison. "
+        "Downstream work must consume verified-only artifacts.</div>",
         unsafe_allow_html=True,
     )
     _progress_timeline(st)
     _plain_bucket_legend(st)
 
-    st.markdown("#### Current M4 result")
-    st.caption(
-        "These are the current multi-city product rows. Use the sidebar City / version selector "
-        "to drill into Burnaby, Calgary, or Vancouver. Recall means benchmark recall, not full-bylaw completeness."
-    )
+    st.markdown("#### Current M7 result")
+    st.caption("These are the current product rows. Recall means benchmark recall, not full-bylaw completeness.")
     st.dataframe(_display_rows(current_rows), width="stretch", hide_index=True)
 
     def _build():
@@ -4239,7 +4199,7 @@ def _portfolio_page(st: Any) -> None:
         figure = go.Figure()
         figure.add_bar(name="Verified", x=cities, y=[row.get("verified") or 0 for row in current_rows], marker_color="#1a7f37")
         figure.add_bar(name="Review", x=cities, y=[row.get("review") or 0 for row in current_rows], marker_color="#9a6700")
-        figure.update_layout(barmode="group", title="Current M4 verified and review counts")
+        figure.update_layout(barmode="group", title="Current M7 verified and review counts")
         return figure
 
     if current_rows:

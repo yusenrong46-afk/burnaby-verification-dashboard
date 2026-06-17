@@ -1,0 +1,2285 @@
+{
+  "city": "burnaby_r1",
+  "created_at": "2026-06-17T05:55:00.822684+00:00",
+  "advisory_note": "Loose ceiling = source rule-like numeric clauses + table cells. It is an overcount guardrail, not an exact legal-rule total.",
+  "source_counts": {
+    "rule_like_numeric_clause_count": 23,
+    "table_cell_count": 113,
+    "loose_source_rule_slot_ceiling": 136,
+    "numeric_clause_count": 40,
+    "table_entry_count": 54,
+    "source_chunk_count": 93
+  },
+  "output_counts": {
+    "candidate_rule_count": 144,
+    "verified_rule_count": 87,
+    "review_rule_count": 57,
+    "rejected_rule_count": 0,
+    "not_used_rule_count": 0,
+    "effective_verified_rule_count": 85
+  },
+  "ratios": {
+    "candidate_to_loose_ceiling": 1.059,
+    "verified_to_loose_ceiling": 0.64
+  },
+  "flags": {
+    "candidate_count_exceeds_loose_source_ceiling": true,
+    "verified_count_exceeds_loose_source_ceiling": false,
+    "verified_exact_duplicate_count": 2,
+    "candidate_exact_duplicate_count": 26,
+    "verified_out_of_contract_count": 0,
+    "candidate_out_of_contract_count": 2
+  },
+  "contract_families": [
+    "automatic_sprinkler",
+    "building_separation",
+    "dwelling_units",
+    "fire_access_corridor",
+    "height",
+    "impervious_surface",
+    "lot_area",
+    "lot_coverage",
+    "setback",
+    "storeys"
+  ],
+  "verified_family_counts": [
+    {
+      "family": "height",
+      "count": 20
+    },
+    {
+      "family": "setback",
+      "count": 18
+    },
+    {
+      "family": "building_separation",
+      "count": 14
+    },
+    {
+      "family": "storeys",
+      "count": 12
+    },
+    {
+      "family": "dwelling_units",
+      "count": 6
+    },
+    {
+      "family": "lot_coverage",
+      "count": 5
+    },
+    {
+      "family": "impervious_surface",
+      "count": 4
+    },
+    {
+      "family": "lot_area",
+      "count": 4
+    },
+    {
+      "family": "automatic_sprinkler",
+      "count": 2
+    },
+    {
+      "family": "fire_access_corridor",
+      "count": 2
+    }
+  ],
+  "candidate_family_counts": [
+    {
+      "family": "setback",
+      "count": 27
+    },
+    {
+      "family": "dwelling_units",
+      "count": 26
+    },
+    {
+      "family": "height",
+      "count": 26
+    },
+    {
+      "family": "building_separation",
+      "count": 22
+    },
+    {
+      "family": "storeys",
+      "count": 12
+    },
+    {
+      "family": "lot_area",
+      "count": 10
+    },
+    {
+      "family": "lot_coverage",
+      "count": 7
+    },
+    {
+      "family": "impervious_surface",
+      "count": 6
+    },
+    {
+      "family": "fire_access_corridor",
+      "count": 4
+    },
+    {
+      "family": "automatic_sprinkler",
+      "count": 2
+    },
+    {
+      "family": "permitted_use",
+      "count": 2
+    }
+  ],
+  "verified_out_of_contract_rule_ids": [],
+  "candidate_out_of_contract_rule_ids": [
+    "burnaby_r1_v3clause_m4_pack_0045_002",
+    "burnaby_r1_v3clause_m4_pack_0045_003"
+  ],
+  "verified_duplicates": {
+    "semantic_duplicate_group_count": 12,
+    "semantic_duplicate_rule_count": 29,
+    "source_aware_duplicate_group_count": 2,
+    "source_aware_duplicate_rule_count": 2,
+    "semantic_duplicate_groups": [
+      {
+        "count": 5,
+        "rule_ids": [
+          "burnaby_r1_077",
+          "burnaby_r1_088",
+          "burnaby_r1_089",
+          "burnaby_r1_090",
+          "burnaby_r1_091"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "All Buildings",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Street Yard",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "3.0 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Interior Rear Yard",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "3.0 m, except 1.5 m for accessory buildings"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Interior Rear Yard",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "3.0 m, except 1.5 m for accessory buildings"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Interior Rear Yard",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "3.0 m, except 1.5 m for accessory buildings"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Interior Rear Yard",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "3.0 m, except 1.5 m for accessory buildings"
+          }
+        ]
+      },
+      {
+        "count": 4,
+        "rule_ids": [
+          "burnaby_r1_069",
+          "burnaby_r1_071",
+          "burnaby_r1_073",
+          "burnaby_r1_075"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "4.0",
+        "unit": "m",
+        "applies_to": "Accessory Buildings",
+        "constraint_scope": "height",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Maximum Height",
+            "row_header": "Accessory Buildings",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "4.0 m | 1 storey"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Maximum Height",
+            "row_header": "Accessory Buildings",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "4.0 m | 1 storey"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Maximum Height",
+            "row_header": "Accessory Buildings",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "4.0 m | 1 storey"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Maximum Height",
+            "row_header": "Accessory Buildings",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "4.0 m | 1 storey"
+          }
+        ]
+      },
+      {
+        "count": 4,
+        "rule_ids": [
+          "burnaby_r1_070",
+          "burnaby_r1_072",
+          "burnaby_r1_074",
+          "burnaby_r1_076"
+        ],
+        "rule_object": "storeys",
+        "operator": "<=",
+        "value": "1",
+        "unit": "storeys",
+        "applies_to": "Accessory Buildings",
+        "constraint_scope": "storeys",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Maximum Height",
+            "row_header": "Accessory Buildings",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "4.0 m | 1 storey"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Maximum Height",
+            "row_header": "Accessory Buildings",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "4.0 m | 1 storey"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Maximum Height",
+            "row_header": "Accessory Buildings",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "4.0 m | 1 storey"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Maximum Height",
+            "row_header": "Accessory Buildings",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "4.0 m | 1 storey"
+          }
+        ]
+      },
+      {
+        "count": 4,
+        "rule_ids": [
+          "burnaby_r1_084",
+          "burnaby_r1_085",
+          "burnaby_r1_086",
+          "burnaby_r1_087"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.5",
+        "unit": "m",
+        "applies_to": "All Buildings",
+        "constraint_scope": "lane_yard",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Lane Yard",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "1.5 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Lane Yard",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "1.5 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Lane Yard",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "1.5 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Lane Yard",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "1.5 m"
+          }
+        ]
+      },
+      {
+        "count": 4,
+        "rule_ids": [
+          "burnaby_r1_102",
+          "burnaby_r1_103",
+          "burnaby_r1_104",
+          "burnaby_r1_105"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "6.0",
+        "unit": "m",
+        "applies_to": "Front and Rear Principal Buildings",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between Front & Rear Principals",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "6.0 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between Front & Rear Principals",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "6.0 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between Front & Rear Principals",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "6.0 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between Front & Rear Principals",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "6.0 m"
+          }
+        ]
+      },
+      {
+        "count": 4,
+        "rule_ids": [
+          "burnaby_r1_106",
+          "burnaby_r1_107",
+          "burnaby_r1_108",
+          "burnaby_r1_109"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "All Other Buildings",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between All Other Buildings",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "2.4 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between All Other Buildings",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "2.4 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between All Other Buildings",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "2.4 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between All Other Buildings",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "2.4 m"
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_078",
+          "burnaby_r1_080",
+          "burnaby_r1_082"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "4.0",
+        "unit": "m",
+        "applies_to": "All Buildings",
+        "constraint_scope": "street_yard_front",
+        "condition": "front",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Street Yard",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "front: 4.0 m | flanking: 3.0 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Street Yard",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "front: 4.0 m | flanking: 3.0 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Street Yard",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "front: 4.0 m | flanking: 3.0 m"
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_079",
+          "burnaby_r1_081",
+          "burnaby_r1_083"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "All Buildings",
+        "constraint_scope": "street_yard_flanking",
+        "condition": "flanking",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Street Yard",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "front: 4.0 m | flanking: 3.0 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Street Yard",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "front: 4.0 m | flanking: 3.0 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Street Yard",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "front: 4.0 m | flanking: 3.0 m"
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_093",
+          "burnaby_r1_094",
+          "burnaby_r1_095"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.2",
+        "unit": "m",
+        "applies_to": "All Buildings",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Interior Side Yard",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "1.2 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Interior Side Yard",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "1.2 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Lot Line Setbacks for All Buildings .2 .3",
+            "row_header": "Interior Side Yard",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "1.2 m"
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_099",
+          "burnaby_r1_100",
+          "burnaby_r1_101"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "Rear Principal Buildings",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between Rear Principals",
+            "column_header": "Small-Scale Multi-Unit 1 to 2 Units",
+            "cell_value": "2.4 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between Rear Principals",
+            "column_header": "Small-Scale Multi-Unit 3 to 4 Units",
+            "cell_value": "2.4 m"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Minimum Separation of Buildings on the Same Lot .4 .5",
+            "row_header": "Between Rear Principals",
+            "column_header": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+            "cell_value": "2.4 m"
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_011",
+          "burnaby_r1_125"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "<=",
+        "value": "3",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Permitted Dwelling Units (including secondary suites)",
+            "row_header": "Permitted Dwelling Units (including secondary suites)",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "1 to 3\nUnits"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Permitted Dwelling Units (including secondary suites)",
+            "row_header": "Permitted Dwelling Units (including secondary suites)",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "1 to 3\nUnits"
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_023",
+          "burnaby_r1_135"
+        ],
+        "rule_object": "fire_access_corridor",
+        "operator": ">=",
+        "value": "1.0",
+        "unit": "m",
+        "applies_to": "All dwelling units",
+        "constraint_scope": "corridor_width",
+        "condition": "paved or gravel fire access corridor",
+        "source_slots": [
+          {
+            "page": 6,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 6,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ],
+    "source_aware_duplicate_groups": [
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_011",
+          "burnaby_r1_125"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "<=",
+        "value": "3",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+        "source_slots": [
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Permitted Dwelling Units (including secondary suites)",
+            "row_header": "Permitted Dwelling Units (including secondary suites)",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "1 to 3\nUnits"
+          },
+          {
+            "page": 2,
+            "section": null,
+            "table_title": "Permitted Dwelling Units (including secondary suites)",
+            "row_header": "Permitted Dwelling Units (including secondary suites)",
+            "column_header": "Rowhouse 1 to 3 Units",
+            "cell_value": "1 to 3\nUnits"
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_023",
+          "burnaby_r1_135"
+        ],
+        "rule_object": "fire_access_corridor",
+        "operator": ">=",
+        "value": "1.0",
+        "unit": "m",
+        "applies_to": "All dwelling units",
+        "constraint_scope": "corridor_width",
+        "condition": "paved or gravel fire access corridor",
+        "source_slots": [
+          {
+            "page": 6,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": 6,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ]
+  },
+  "candidate_duplicates": {
+    "semantic_duplicate_group_count": 23,
+    "semantic_duplicate_rule_count": 26,
+    "source_aware_duplicate_group_count": 23,
+    "source_aware_duplicate_rule_count": 26,
+    "semantic_duplicate_groups": [
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_v2matrix_068",
+          "burnaby_r1_v2matrix_071",
+          "burnaby_r1_v2matrix_079"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "Small-Scale Multi-Unit 1 to 2 Units",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_v2matrix_069",
+          "burnaby_r1_v2matrix_072",
+          "burnaby_r1_v2matrix_080"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "Small-Scale Multi-Unit 3 to 4 Units",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_v2matrix_070",
+          "burnaby_r1_v2matrix_073",
+          "burnaby_r1_v2matrix_081"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0004_001",
+          "burnaby_r1_native_v3_repair_pack_0004_001"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "1",
+        "unit": "units",
+        "applies_to": "small-scale multi-unit lots",
+        "constraint_scope": "dwelling_units",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0004_002",
+          "burnaby_r1_native_v3_repair_pack_0004_002"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "3",
+        "unit": "units",
+        "applies_to": "small-scale multi-unit lots",
+        "constraint_scope": "dwelling_units",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0006_001",
+          "burnaby_r1_native_v3_repair_pack_0005_001"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "<=",
+        "value": "60",
+        "unit": "%",
+        "applies_to": "lots in the R1 District on the Community Heritage Register",
+        "constraint_scope": "lot_coverage",
+        "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0006_002",
+          "burnaby_r1_native_v3_repair_pack_0005_002"
+        ],
+        "rule_object": "impervious_surface",
+        "operator": "<=",
+        "value": "70",
+        "unit": "%",
+        "applies_to": "lots in the R1 District on the Community Heritage Register",
+        "constraint_scope": "impervious_surface",
+        "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0006_003",
+          "burnaby_r1_native_v3_repair_pack_0005_003"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "2.0",
+        "unit": "m",
+        "applies_to": "street yards",
+        "constraint_scope": "setback",
+        "condition": "lots in the R1 District on the Community Heritage Register",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0017_001",
+          "burnaby_r1_native_v3_repair_pack_0008_001"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "1",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0017_002",
+          "burnaby_r1_native_v3_repair_pack_0008_002"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "3",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0017_003",
+          "burnaby_r1_native_v3_repair_pack_0008_003"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "4",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0017_004",
+          "burnaby_r1_native_v3_repair_pack_0008_004"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "6",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0018_001",
+          "burnaby_r1_native_v3_repair_pack_0010_001"
+        ],
+        "rule_object": "fire_access_corridor",
+        "operator": "<=",
+        "value": "100",
+        "unit": "m",
+        "applies_to": "pedestrian walkway",
+        "constraint_scope": "fire_access_corridor",
+        "condition": "Contiguous rowhouse lots",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0018_002",
+          "burnaby_r1_native_v3_repair_pack_0010_002"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.5",
+        "unit": "m",
+        "applies_to": "pedestrian walkway",
+        "constraint_scope": "setback",
+        "condition": "Contiguous rowhouse lots",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0018_003",
+          "burnaby_r1_native_v3_repair_pack_0010_003"
+        ],
+        "rule_object": "height",
+        "operator": ">=",
+        "value": "2.5",
+        "unit": "m",
+        "applies_to": "pedestrian walkway",
+        "constraint_scope": "height",
+        "condition": "Contiguous rowhouse lots",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0021_001",
+          "burnaby_r1_native_v3_repair_pack_0013_001"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "4.6",
+        "unit": "m",
+        "applies_to": "accessory structure",
+        "constraint_scope": "height",
+        "condition": "not being a building, excluding a fence or a retaining wall, located outside of a required yard",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0025_001",
+          "burnaby_r1_native_v3_repair_pack_0012_001"
+        ],
+        "rule_object": "building_separation",
+        "operator": "<=",
+        "value": "1.0",
+        "unit": "m",
+        "applies_to": "terraces, decks, or other similar surfaces",
+        "constraint_scope": "building_separation",
+        "condition": "above grade",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0025_002",
+          "burnaby_r1_native_v3_repair_pack_0012_002"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">",
+        "value": "1.0",
+        "unit": "m",
+        "applies_to": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features",
+        "constraint_scope": "building_separation",
+        "condition": "above grade",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0025_003",
+          "burnaby_r1_native_v3_repair_pack_0012_003"
+        ],
+        "rule_object": "building_separation",
+        "operator": "<=",
+        "value": "0.9",
+        "unit": "m",
+        "applies_to": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0025_004",
+          "burnaby_r1_native_v3_repair_pack_0012_004"
+        ],
+        "rule_object": "building_separation",
+        "operator": "<=",
+        "value": "1.2",
+        "unit": "m",
+        "applies_to": "eaves",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0034_001",
+          "burnaby_r1_native_v3_repair_pack_0011_001"
+        ],
+        "rule_object": "fire_access_corridor",
+        "operator": ">=",
+        "value": "1.0",
+        "unit": "m",
+        "applies_to": "dwelling units",
+        "constraint_scope": "fire_access_corridor",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0058_001",
+          "burnaby_r1_native_v3_repair_pack_0016_001"
+        ],
+        "rule_object": "lot_area",
+        "operator": ">=",
+        "value": "560",
+        "unit": "m2",
+        "applies_to": "lot",
+        "constraint_scope": "lot_area",
+        "condition": "boarding, lodging or rooming houses",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_v2matrix_049",
+          "burnaby_r1_v2matrix_060"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "Rowhouse 1 to 3 Units",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ],
+    "source_aware_duplicate_groups": [
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_v2matrix_068",
+          "burnaby_r1_v2matrix_071",
+          "burnaby_r1_v2matrix_079"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "Small-Scale Multi-Unit 1 to 2 Units",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_v2matrix_069",
+          "burnaby_r1_v2matrix_072",
+          "burnaby_r1_v2matrix_080"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "Small-Scale Multi-Unit 3 to 4 Units",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "rule_ids": [
+          "burnaby_r1_v2matrix_070",
+          "burnaby_r1_v2matrix_073",
+          "burnaby_r1_v2matrix_081"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">=",
+        "value": "2.4",
+        "unit": "m",
+        "applies_to": "Small-Scale Multi-Unit 5 to 6 Units Frequent Transit Network Area Only",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0004_001",
+          "burnaby_r1_native_v3_repair_pack_0004_001"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "1",
+        "unit": "units",
+        "applies_to": "small-scale multi-unit lots",
+        "constraint_scope": "dwelling_units",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0004_002",
+          "burnaby_r1_native_v3_repair_pack_0004_002"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "3",
+        "unit": "units",
+        "applies_to": "small-scale multi-unit lots",
+        "constraint_scope": "dwelling_units",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0006_001",
+          "burnaby_r1_native_v3_repair_pack_0005_001"
+        ],
+        "rule_object": "lot_coverage",
+        "operator": "<=",
+        "value": "60",
+        "unit": "%",
+        "applies_to": "lots in the R1 District on the Community Heritage Register",
+        "constraint_scope": "lot_coverage",
+        "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0006_002",
+          "burnaby_r1_native_v3_repair_pack_0005_002"
+        ],
+        "rule_object": "impervious_surface",
+        "operator": "<=",
+        "value": "70",
+        "unit": "%",
+        "applies_to": "lots in the R1 District on the Community Heritage Register",
+        "constraint_scope": "impervious_surface",
+        "condition": "subject to approval of the Director of Planning and Development and the registration of a Section 219 Covenant",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0006_003",
+          "burnaby_r1_native_v3_repair_pack_0005_003"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "2.0",
+        "unit": "m",
+        "applies_to": "street yards",
+        "constraint_scope": "setback",
+        "condition": "lots in the R1 District on the Community Heritage Register",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0017_001",
+          "burnaby_r1_native_v3_repair_pack_0008_001"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "1",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0017_002",
+          "burnaby_r1_native_v3_repair_pack_0008_002"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "3",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 1 to 3 Units",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0017_003",
+          "burnaby_r1_native_v3_repair_pack_0008_003"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "4",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0017_004",
+          "burnaby_r1_native_v3_repair_pack_0008_004"
+        ],
+        "rule_object": "dwelling_units",
+        "operator": "",
+        "value": "6",
+        "unit": "units",
+        "applies_to": "dwelling units",
+        "constraint_scope": "dwelling_units",
+        "condition": "Total Dwelling Units on a Lot 4 to 6 Units",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0018_001",
+          "burnaby_r1_native_v3_repair_pack_0010_001"
+        ],
+        "rule_object": "fire_access_corridor",
+        "operator": "<=",
+        "value": "100",
+        "unit": "m",
+        "applies_to": "pedestrian walkway",
+        "constraint_scope": "fire_access_corridor",
+        "condition": "Contiguous rowhouse lots",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0018_002",
+          "burnaby_r1_native_v3_repair_pack_0010_002"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "1.5",
+        "unit": "m",
+        "applies_to": "pedestrian walkway",
+        "constraint_scope": "setback",
+        "condition": "Contiguous rowhouse lots",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0018_003",
+          "burnaby_r1_native_v3_repair_pack_0010_003"
+        ],
+        "rule_object": "height",
+        "operator": ">=",
+        "value": "2.5",
+        "unit": "m",
+        "applies_to": "pedestrian walkway",
+        "constraint_scope": "height",
+        "condition": "Contiguous rowhouse lots",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0021_001",
+          "burnaby_r1_native_v3_repair_pack_0013_001"
+        ],
+        "rule_object": "height",
+        "operator": "<=",
+        "value": "4.6",
+        "unit": "m",
+        "applies_to": "accessory structure",
+        "constraint_scope": "height",
+        "condition": "not being a building, excluding a fence or a retaining wall, located outside of a required yard",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0025_001",
+          "burnaby_r1_native_v3_repair_pack_0012_001"
+        ],
+        "rule_object": "building_separation",
+        "operator": "<=",
+        "value": "1.0",
+        "unit": "m",
+        "applies_to": "terraces, decks, or other similar surfaces",
+        "constraint_scope": "building_separation",
+        "condition": "above grade",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0025_002",
+          "burnaby_r1_native_v3_repair_pack_0012_002"
+        ],
+        "rule_object": "building_separation",
+        "operator": ">",
+        "value": "1.0",
+        "unit": "m",
+        "applies_to": "balconies, covered decks, uncovered decks, canopies, sunshades, or other similar features",
+        "constraint_scope": "building_separation",
+        "condition": "above grade",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0025_003",
+          "burnaby_r1_native_v3_repair_pack_0012_003"
+        ],
+        "rule_object": "building_separation",
+        "operator": "<=",
+        "value": "0.9",
+        "unit": "m",
+        "applies_to": "belt courses, cornices, gutters, sills, chimneys, bay windows, or other similar features",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0025_004",
+          "burnaby_r1_native_v3_repair_pack_0012_004"
+        ],
+        "rule_object": "building_separation",
+        "operator": "<=",
+        "value": "1.2",
+        "unit": "m",
+        "applies_to": "eaves",
+        "constraint_scope": "building_separation",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0034_001",
+          "burnaby_r1_native_v3_repair_pack_0011_001"
+        ],
+        "rule_object": "fire_access_corridor",
+        "operator": ">=",
+        "value": "1.0",
+        "unit": "m",
+        "applies_to": "dwelling units",
+        "constraint_scope": "fire_access_corridor",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_native_m4_pack_0058_001",
+          "burnaby_r1_native_v3_repair_pack_0016_001"
+        ],
+        "rule_object": "lot_area",
+        "operator": ">=",
+        "value": "560",
+        "unit": "m2",
+        "applies_to": "lot",
+        "constraint_scope": "lot_area",
+        "condition": "boarding, lodging or rooming houses",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "rule_ids": [
+          "burnaby_r1_v2matrix_049",
+          "burnaby_r1_v2matrix_060"
+        ],
+        "rule_object": "setback",
+        "operator": ">=",
+        "value": "3.0",
+        "unit": "m",
+        "applies_to": "Rowhouse 1 to 3 Units",
+        "constraint_scope": "setback",
+        "condition": "",
+        "source_slots": [
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          },
+          {
+            "page": null,
+            "section": null,
+            "table_title": null,
+            "row_header": null,
+            "column_header": null,
+            "cell_value": null
+          }
+        ]
+      }
+    ]
+  }
+}

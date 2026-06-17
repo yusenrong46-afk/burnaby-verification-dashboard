@@ -1,0 +1,1115 @@
+{
+  "cache_enabled": true,
+  "cache_mode": "diagnostic_reuse_ready",
+  "verifier_version": "llm-lane-shape-gates-v7",
+  "run_context_hash": "39b223bf9dec9fdccc83eac3579e2c9685a130cad325d59501b3403c985bafdd",
+  "entry_count": 31,
+  "cache_hit_count": 0,
+  "safe_reuse_count": 0,
+  "cache_miss_count": 31,
+  "entries": [
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0001_001",
+      "evidence_id": "m4_pack_0001_ev_001",
+      "cache_key": "3fcbed69a8c94fa675814d934b14efcb9eb78002d1244acdc187ca79be57ff77",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_001",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_object_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0001_001",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "floor_area",
+          "applies_to": "parking space length",
+          "operator": "<=",
+          "value": "7.3",
+          "unit": "m",
+          "condition": "laneway house",
+          "exception": "",
+          "evidence_id": "m4_pack_0001_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0001_ev_001",
+        "evidence_text_hash": "07bba22d777ccfa7133a04db7b7a25308498d8806705457f558eabfce292f6d2",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0001_002",
+      "evidence_id": "m4_pack_0001_ev_002",
+      "cache_key": "1afefe7f56368e02cd652b4efd8d52a61a9a1276380df5d56e5b93c7e13d3093",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_002",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible",
+        "coefficient_operand_not_value"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0001_002",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "floor_area",
+          "applies_to": "balconies and decks",
+          "operator": "<=",
+          "value": "8",
+          "unit": "%",
+          "condition": "laneway house",
+          "exception": "",
+          "evidence_id": "m4_pack_0001_ev_002",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0001_ev_002",
+        "evidence_text_hash": "dbaca33ce2d0317178a0c577380a347d4c68291e24647fb410ea6c069c3a1265",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0001_003",
+      "evidence_id": "m4_pack_0001_ev_003",
+      "cache_key": "f36b5ad7f7efdb85866ccb79d9ab4643e6e0b8fca5ab8e998001c739fc699680",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_003",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "enumerated_branch_condition_missing",
+        "applies_to_not_supported",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible",
+        "coefficient_operand_not_value"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0001_003",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "floor_area",
+          "applies_to": "entries, porches and verandahs",
+          "operator": "<=",
+          "value": "13",
+          "unit": "%",
+          "condition": "laneway house",
+          "exception": "",
+          "evidence_id": "m4_pack_0001_ev_003",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0001_ev_003",
+        "evidence_text_hash": "40d9da53f02a4e543276df20213fc842ea0adb084407794c0f3ba97df8b9a9b0",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0002_001",
+      "evidence_id": "m4_pack_0002_ev_001",
+      "cache_key": "5185f2e72b1f08cb30f4f4be7c1b31cab531d2137e6f062465e94b4b1370956b",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_004",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0002_001",
+          "rule_object": "floor_area",
+          "constraint_type": "minimum",
+          "constraint_scope": "floor_area",
+          "applies_to": "main habitable room in a laneway house",
+          "operator": ">=",
+          "value": "16.7",
+          "unit": "m2",
+          "condition": "laneway house with separate bedrooms",
+          "exception": "",
+          "evidence_id": "m4_pack_0002_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0002_ev_001",
+        "evidence_text_hash": "17a589a78df03df6892c4c422309db82baab2a2c39c7c6407502766dfc40473a",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0002_002",
+      "evidence_id": "m4_pack_0002_ev_002",
+      "cache_key": "3ec72bd145fee7f6fd6b035ce12b2ba62c9aceca529fe71951eaef1e16399f64",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_005",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0002_002",
+          "rule_object": "floor_area",
+          "constraint_type": "minimum",
+          "constraint_scope": "floor_area",
+          "applies_to": "bedroom in a laneway house",
+          "operator": ">=",
+          "value": "8.4",
+          "unit": "m2",
+          "condition": "laneway house with separate bedrooms",
+          "exception": "",
+          "evidence_id": "m4_pack_0002_ev_002",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0002_ev_002",
+        "evidence_text_hash": "4ca1a400c87a83c372ff8416d880d5cd2548adaea643f8a780da9738801ba4f8",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0003_001",
+      "evidence_id": "m4_pack_0003_ev_001",
+      "cache_key": "63164661a53811b98659e8d3499b2f26d74dc920e1e2ce8fab2ae2557244faea",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_006",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0003_001",
+          "rule_object": "height",
+          "constraint_type": "maximum",
+          "constraint_scope": "height",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "8.5",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0003_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0003_ev_001",
+        "evidence_text_hash": "8173ce33e56e7af274df7e483d1eb04826a09b5a230a4cc49d071dba11871fce",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0003_002",
+      "evidence_id": "m4_pack_0003_ev_002",
+      "cache_key": "cc86d07fd90b1d503f736676399707b78ba0797dc34daa88d1949efdcf53b1f6",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_007",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0003_002",
+          "rule_object": "storeys",
+          "constraint_type": "maximum",
+          "constraint_scope": "storeys",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "2",
+          "unit": "storeys",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0003_ev_002",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0003_ev_002",
+        "evidence_text_hash": "27bc57ee0979c5817224db01309dea8da1f89237c6dd9517bf76603aee3dae59",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0004_001",
+      "evidence_id": "m4_pack_0004_ev_001",
+      "cache_key": "f54a3966016eba660c241c4010ee543a3aaa61d478a574b2678a45ac3011d2ee",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_008",
+      "support_gaps": [
+        "coefficient_operand_not_value"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0004_001",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "floor_area",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "0.25",
+          "unit": "",
+          "condition": "multiplied by the site area",
+          "exception": "",
+          "evidence_id": "m4_pack_0004_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0004_ev_001",
+        "evidence_text_hash": "452e29d03d3ba2ff2fd3667de19688c694b4af0cd9a6b8b5014875e4a4f08d43",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0004_002",
+      "evidence_id": "m4_pack_0004_ev_002",
+      "cache_key": "da9e50bca6aae65c0c5f7a22f356e07744ba0065c39dcf63b5f70a94b533e90a",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_009",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0004_002",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "floor_area",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "186",
+          "unit": "m2",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0004_ev_002",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0004_ev_002",
+        "evidence_text_hash": "0ca93b3bfe1365e2bda407d48dd3d3ad9bd846e0493422eb17b860d659af2c83",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0005_001",
+      "evidence_id": "m4_pack_0005_ev_001",
+      "cache_key": "a5259371bd8680df39b3d806afc591d0b6e2199e07f5ab9a77415267061ab791",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_010",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0005_001",
+          "rule_object": "floor_area",
+          "constraint_type": "minimum",
+          "constraint_scope": "floor_area",
+          "applies_to": "laneway house",
+          "operator": ">",
+          "value": "3.7",
+          "unit": "m",
+          "condition": "distance from a floor to the floor above or to the top of the roof joists",
+          "exception": "",
+          "evidence_id": "m4_pack_0005_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0005_ev_001",
+        "evidence_text_hash": "a9c34a28ba10897e35c5f1d30ab5dd7f87c68f792d2ece9be1466f261201b68b",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0006_001",
+      "evidence_id": "m4_pack_0006_ev_001",
+      "cache_key": "9e2fd3e69281ff261fefb9415af51f42dc89f42b0ffeb545741948ee25cb2c63",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_011",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "constraint_scope_not_supported",
+        "rule_object_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0006_001",
+          "rule_object": "lot_area",
+          "constraint_type": "minimum",
+          "constraint_scope": "lot_area",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "9.8",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0006_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0006_ev_001",
+        "evidence_text_hash": "c73bb937d7ea7299414053c356c309bba6ec7225bee598c21ab85fc4834aa08c",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0006_002",
+      "evidence_id": "m4_pack_0006_ev_002",
+      "cache_key": "6608c604f0793de494c9cc67cccdf1003947e8838d43cc7e2936ea9da873e42b",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_012",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "rule_object_not_supported",
+        "rule_object_unit_not_compatible"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0006_002",
+          "rule_object": "lot_area",
+          "constraint_type": "minimum",
+          "constraint_scope": "lot_area",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "7.3",
+          "unit": "m",
+          "condition": "Director of Planning may reduce the minimum site width",
+          "exception": "site is at least 7.3 m in width",
+          "evidence_id": "m4_pack_0006_ev_002",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0006_ev_002",
+        "evidence_text_hash": "c9f421ddcb36c80b8e350ee745c939c6041595e73645a0de8dc99185bed04782",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0007_001",
+      "evidence_id": "m4_pack_0007_ev_001",
+      "cache_key": "b2294a3d71c49227e446edf03efbfe29216651e7f19bc773ac67083d63da40a6",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_013",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0007_001",
+          "rule_object": "building_separation",
+          "constraint_type": "minimum",
+          "constraint_scope": "building_separation",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "4.9",
+          "unit": "m",
+          "condition": "from the single detached house or single detached house with secondary suite",
+          "exception": "",
+          "evidence_id": "m4_pack_0007_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0007_ev_001",
+        "evidence_text_hash": "5c4ce6539221adc7f98984dc3d33523220416898a2d03c38ac670c0a1db92980",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0007_002",
+      "evidence_id": "m4_pack_0007_ev_002",
+      "cache_key": "833b92978c5b4ee0212ca0d8c4834f575c4b4746b7353483b68539dbb27d3d4c",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_014",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0007_002",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "setback",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "0.9",
+          "unit": "m",
+          "condition": "from the ultimate rear property line",
+          "exception": "",
+          "evidence_id": "m4_pack_0007_ev_002",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0007_ev_002",
+        "evidence_text_hash": "5cad04753af2fd3b1d00e5eca7802b681bc010de34adb4ad82f22f9537bb2193",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0007_003",
+      "evidence_id": "m4_pack_0007_ev_003",
+      "cache_key": "b6f7eee251dd73686db604cfcaa11bdb59f8de76c5b79478e1282059e0feb62e",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_015",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0007_003",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "setback",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "1.2",
+          "unit": "m",
+          "condition": "from each side property line",
+          "exception": "Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+          "evidence_id": "m4_pack_0007_ev_003",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0007_ev_003",
+        "evidence_text_hash": "272de75b56b925a8087661c160fe42aa36dd8948ef371825d5d1e7431e1fc2af",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0008_001",
+      "evidence_id": "m4_pack_0008_ev_001",
+      "cache_key": "f7a67c8ff374ef15ed9e4845ee0584b15882d54d74b0146ad75250566c09ef2e",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_016",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0008_001",
+          "rule_object": "lot_coverage",
+          "constraint_type": "maximum",
+          "constraint_scope": "lot_coverage",
+          "applies_to": "site with a laneway house",
+          "operator": "<=",
+          "value": "50",
+          "unit": "%",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0008_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0008_ev_001",
+        "evidence_text_hash": "d200e1a874a93b69c65f7078b2af5d015d16961d40d731ca3986e6ad5c035500",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0009_001",
+      "evidence_id": "m4_pack_0009_ev_001",
+      "cache_key": "2ffe8ccbaa91d754135837bc2c16a0fa9bdd357ad2da039b22924371b95c2d75",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_017",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0009_001",
+          "rule_object": "floor_area",
+          "constraint_type": "minimum",
+          "constraint_scope": "floor_area",
+          "applies_to": "common space",
+          "operator": ">",
+          "value": "4",
+          "unit": "m2",
+          "condition": "per unit",
+          "exception": "",
+          "evidence_id": "m4_pack_0009_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0009_ev_001",
+        "evidence_text_hash": "fab535d2ca0dde5b0f5eab6b6d737093be779e5d7416e8a33c979bf3e756ec3a",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0009_002",
+      "evidence_id": "m4_pack_0009_ev_002",
+      "cache_key": "6e749fc2f4154525ed641ea697bf15a29262556c41dbb5a63b2c7dbc9479549d",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_018",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "unresolved_exception_cue",
+        "rule_object_unit_not_compatible",
+        "coefficient_operand_not_value"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0009_002",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "floor_area",
+          "applies_to": "common space",
+          "operator": "<=",
+          "value": "10",
+          "unit": "%",
+          "condition": "of permitted floor area",
+          "exception": "",
+          "evidence_id": "m4_pack_0009_ev_002",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0009_ev_002",
+        "evidence_text_hash": "91213896eefc54d4b4623e2903fd373963771bf5ae08b76d7671a23978c0a3e0",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0010_001",
+      "evidence_id": "m4_pack_0010_ev_001",
+      "cache_key": "6e616efcfe9f61a9d1d71ff46141c2e61b5e5305d31a35fbedb5a533c8d3a602",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_019",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0010_001",
+          "rule_object": "floor_area",
+          "constraint_type": "minimum",
+          "constraint_scope": "floor_area",
+          "applies_to": "dwelling unit",
+          "operator": ">=",
+          "value": "37",
+          "unit": "m2",
+          "condition": "except for a lock-off unit",
+          "exception": "lock-off unit",
+          "evidence_id": "m4_pack_0010_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0010_ev_001",
+        "evidence_text_hash": "870318bf3a3577c65e9889e24d4761fa979ef64a199a322a5830882db8a4d9b4",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0014_001",
+      "evidence_id": "m4_pack_0014_ev_001",
+      "cache_key": "92b31c1e1a593a9a4b8c07f0c3193d6f50cba25985d6568cd8e51ed608dda7e2",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "rejected",
+      "rule_id": "vancouver_rs_020",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "unit_not_found_in_evidence",
+        "operator_not_supported",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0014_001",
+          "rule_object": "dwelling_units",
+          "constraint_type": "maximum",
+          "constraint_scope": "dwelling_units",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "1",
+          "unit": "units",
+          "condition": "in combination with a child day care facility",
+          "exception": "",
+          "evidence_id": "m4_pack_0014_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0014_ev_001",
+        "evidence_text_hash": "6decb825316e1bf8a11f89bd4d0ef39e949d474d49eb454bfeebe2bcd2b05474",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0015_001",
+      "evidence_id": "m4_pack_0015_ev_001",
+      "cache_key": "76dd8afc9a2ef9fab133b21b089d0c479470b322f4ae60e6d71dbfa9750675a3",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_021",
+      "support_gaps": [
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0015_001",
+          "rule_object": "floor_area",
+          "constraint_type": "minimum",
+          "constraint_scope": "floor_area",
+          "applies_to": "micro dwelling",
+          "operator": ">=",
+          "value": "29.7",
+          "unit": "m2",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0015_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0015_ev_001",
+        "evidence_text_hash": "ddaa62eb73891fa30ae49ff476f25c609ff93c10e653190ef076e9b0a9d17c6c",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0050_001",
+      "evidence_id": "m4_pack_0050_ev_001",
+      "cache_key": "a619f628b2b234cc88fe5a9381a76ac65979bd28939d995c5139780452b1fa73",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_022",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "constraint_scope_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0050_001",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "setback",
+          "applies_to": "side yards",
+          "operator": ">=",
+          "value": "6.0",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0050_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0050_ev_001",
+        "evidence_text_hash": "1a9abe5e632aebbe5e2eac0532c679e178e4efb7c4bdc4cb261484a853da27bb",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0051_001",
+      "evidence_id": "m4_pack_0051_ev_001",
+      "cache_key": "2cdb8347b5f9e43ed003a962a62f934fffbf40f8d695eada881f48290bf000fc",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_023",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "constraint_scope_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0051_001",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "setback",
+          "applies_to": "interior side yards",
+          "operator": ">=",
+          "value": "4.5",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0051_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0051_ev_001",
+        "evidence_text_hash": "bf451952454545a6b221f7788879e34ec0994d3cf537c780ab48f1972d7bba48",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0051_002",
+      "evidence_id": "m4_pack_0051_ev_002",
+      "cache_key": "5a6d2ad1a0ab2ce192eb4be455772693f2918272e0c507e9290f34aade61ca54",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_024",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "applies_to_not_supported",
+        "operator_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0051_002",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "setback",
+          "applies_to": "interior side yards",
+          "operator": ">=",
+          "value": "0.3",
+          "unit": "m",
+          "condition": "for every 0.6 m by which the height of the building exceeds 10.7 m",
+          "exception": "",
+          "evidence_id": "m4_pack_0051_ev_002",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0051_ev_002",
+        "evidence_text_hash": "b5e5649680e35e9746d1e0d949169cd80987506e3cbc19d8bad2ec7037543c13",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0051_003",
+      "evidence_id": "m4_pack_0051_ev_003",
+      "cache_key": "aac23470dd871a8bedd796c9ee4dea6d8e4ab3c511b0593ee3822139e37c3fa9",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_025",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "rule_family_direction_mismatch"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0051_003",
+          "rule_object": "height",
+          "constraint_type": "minimum",
+          "constraint_scope": "height",
+          "applies_to": "building",
+          "operator": ">",
+          "value": "10.7",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0051_ev_003",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0051_ev_003",
+        "evidence_text_hash": "6e55079475e5c2ac7996e4ff41df427e21f875629a9f7efa7c6c05f23548fe21",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_native_m4_pack_0061_001",
+      "evidence_id": "m4_pack_0061_ev_001",
+      "cache_key": "fe2cb538fe3999f59ac30d69892d532d4bef85b604e5c36f703598e855a7fc00",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "review_needed",
+      "rule_id": "vancouver_rs_026",
+      "support_gaps": [
+        "upstream_extraction_requested_review",
+        "extraction_source_fidelity_hold",
+        "text_candidate_requires_review",
+        "rule_object_not_supported"
+      ],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_native_m4_pack_0061_001",
+          "rule_object": "lot_area",
+          "constraint_type": "minimum",
+          "constraint_scope": "lot_area",
+          "applies_to": "site",
+          "operator": ">=",
+          "value": "2000",
+          "unit": "m2",
+          "condition": "",
+          "exception": "Director of Planning may permit a smaller site if all parking required by the Parking By-law is provided on site",
+          "evidence_id": "m4_pack_0061_ev_001",
+          "source_stream": "native_rag_llm",
+          "extraction_method": "native_rag_llm_v1"
+        },
+        "evidence_id": "m4_pack_0061_ev_001",
+        "evidence_text_hash": "e3d2e18de7566c72979aa8ba2f04a63a22f1dac33a3bd2e64742b72bd18b23f3",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_v3clause_m4_pack_0004_001",
+      "evidence_id": "m4_pack_0004_v3_clause_ev_001",
+      "cache_key": "7518e0557983616905d55ee3022343d15528d7c83daeaf12d097b0d06ee50cfe",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_027",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_v3clause_m4_pack_0004_001",
+          "rule_object": "floor_area",
+          "constraint_type": "maximum",
+          "constraint_scope": "floor_area",
+          "applies_to": "laneway house",
+          "operator": "<=",
+          "value": "186",
+          "unit": "m2",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0004_v3_clause_ev_001",
+          "source_stream": "native_v3_clause",
+          "extraction_method": "native_v3_clause"
+        },
+        "evidence_id": "m4_pack_0004_v3_clause_ev_001",
+        "evidence_text_hash": "443560af77596c6e728a80ee2193e00c749590147be62624c16daa9d3a68d271",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_v3clause_m4_pack_0007_002",
+      "evidence_id": "m4_pack_0007_v3_clause_ev_002",
+      "cache_key": "964695da6d27a35b92094dd388b4e66a912176c4e3750d382ee4548adb01e28e",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_028",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_v3clause_m4_pack_0007_002",
+          "rule_object": "building_separation",
+          "constraint_type": "minimum",
+          "constraint_scope": "building_separation",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "4.9",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0007_v3_clause_ev_002",
+          "source_stream": "native_v3_clause",
+          "extraction_method": "native_v3_clause"
+        },
+        "evidence_id": "m4_pack_0007_v3_clause_ev_002",
+        "evidence_text_hash": "d601da40fda4b2a01ffa3f628d6157f35bbf3dd8149c5e27df93eb7e2619a8de",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_v3clause_m4_pack_0007_003",
+      "evidence_id": "m4_pack_0007_v3_clause_ev_003",
+      "cache_key": "e86d57684b80ecff98bf3abeaa1f48fb438def12cf7f45fb5b502ff92b152a2b",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_029",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_v3clause_m4_pack_0007_003",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "rear setback",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "0.9",
+          "unit": "m",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0007_v3_clause_ev_003",
+          "source_stream": "native_v3_clause",
+          "extraction_method": "native_v3_clause"
+        },
+        "evidence_id": "m4_pack_0007_v3_clause_ev_003",
+        "evidence_text_hash": "ca601409aab315342e0102c7667b1e5a2686a3fee8832a2d01685ccdfd8bb162",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_v3clause_m4_pack_0007_004",
+      "evidence_id": "m4_pack_0007_v3_clause_ev_004",
+      "cache_key": "6bf2e0554f67bc2b3a51b8fc559636dda8afba673269e5e4c7cf77afbc642386",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_030",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_v3clause_m4_pack_0007_004",
+          "rule_object": "setback",
+          "constraint_type": "minimum",
+          "constraint_scope": "side setback",
+          "applies_to": "laneway house",
+          "operator": ">=",
+          "value": "1.2",
+          "unit": "m",
+          "condition": "",
+          "exception": "except that the Director of Planning may reduce this requirement for sites less than 10.1 m in width",
+          "evidence_id": "m4_pack_0007_v3_clause_ev_004",
+          "source_stream": "native_v3_clause",
+          "extraction_method": "native_v3_clause"
+        },
+        "evidence_id": "m4_pack_0007_v3_clause_ev_004",
+        "evidence_text_hash": "d61c651cda78b12114c54f72c98267389ac0507b7198ab278d4e8dc1fcae52a7",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    },
+    {
+      "candidate_id": "vancouver_rs_v3clause_m4_pack_0008_005",
+      "evidence_id": "m4_pack_0008_v3_clause_ev_005",
+      "cache_key": "158c04f0b205140add26cb21ac803fec150320b9db370aac6789db3bd74ea37a",
+      "cache_hit": false,
+      "safe_to_reuse": false,
+      "previous_decision": null,
+      "decision": "verified",
+      "rule_id": "vancouver_rs_031",
+      "support_gaps": [],
+      "key_parts": {
+        "candidate_core": {
+          "candidate_id": "vancouver_rs_v3clause_m4_pack_0008_005",
+          "rule_object": "lot_coverage",
+          "constraint_type": "maximum",
+          "constraint_scope": "lot_coverage",
+          "applies_to": "site with a laneway house",
+          "operator": "<=",
+          "value": "50",
+          "unit": "%",
+          "condition": "",
+          "exception": "",
+          "evidence_id": "m4_pack_0008_v3_clause_ev_005",
+          "source_stream": "native_v3_clause",
+          "extraction_method": "native_v3_clause"
+        },
+        "evidence_id": "m4_pack_0008_v3_clause_ev_005",
+        "evidence_text_hash": "36f268b54eba213d599d81824135c47904627517b0f40fee45f55cc663bad5d9",
+        "config_hash": "d71787bfb611ef84f94e237987b6508440e44bccf3ff1c53e9692a25eb0b0a25",
+        "verifier_version": "llm-lane-shape-gates-v7"
+      }
+    }
+  ],
+  "notes": [
+    "Cache keys include candidate core fields, cited evidence text, config hash, and verifier version.",
+    "The run-level candidate context is hashed once at report level (run_context_hash), not inside per-candidate keys, so one changed candidate cannot invalidate every other entry.",
+    "safe_to_reuse requires a cache hit, an unchanged report-level run_context_hash, and a matching decision; it is computed after verification as a would-skipping-have-been-safe diagnostic.",
+    "This report identifies reusable results but does not skip deterministic verification yet.",
+    "Skipping requires additional tests for run-level source agreement and cross-family collision dependencies."
+  ]
+}
