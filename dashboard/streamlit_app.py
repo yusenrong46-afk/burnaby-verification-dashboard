@@ -1110,11 +1110,7 @@ def _rules_drilldown(st, data: dict[str, Any]) -> None:
         if not rules:
             continue
         with st.expander(f"{label} — {len(rules)} rule{'s' if len(rules) != 1 else ''}", expanded=False):
-            st.dataframe(
-                _display_rows([compact_rule_row(rule) for rule in rules]),
-                width="stretch",
-                hide_index=True,
-            )
+            _rule_sentence_list(st, rules, show_gap=(label in ("Needs review", "Rejected")))
 
 
 def _summary_tab(st: Any, data: dict[str, Any]) -> None:
@@ -1172,13 +1168,23 @@ def _review_queue_tab(st: Any, data: dict[str, Any], output_dir: Path, triage_it
         rule_objects=rule_objects,
     )
     evidence_by_id = {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]}
-    queue_tabs = st.tabs(["Queue summary", "Review one rule", "Compare with verified"])
+    # Primary view: the worklist as plain-English sentences with the gap in red.
+    n = len(filtered_items)
+    st.markdown(
+        f"<div class='section-head' style='font-size:16px;'>Worklist — {n} rule{'s' if n != 1 else ''}</div>",
+        unsafe_allow_html=True,
+    )
+    st.caption("Each held rule as a sentence; the field the verifier could not ground is in red.")
+    _rule_sentence_list(st, filtered_items, show_gap=True)
+    st.divider()
+    st.markdown("##### Reviewer tools")
+    queue_tabs = st.tabs(["Inspect one rule", "Compare with verified", "Queue table"])
     with queue_tabs[0]:
-        _review_router_tab(st, data["router"])
-    with queue_tabs[1]:
         _review_assistant_tab(st, data["review_assistant_packets"], data["review"], output_dir, evidence_by_id)
-    with queue_tabs[2]:
+    with queue_tabs[1]:
         _candidate_compare_tab(st, filtered_items, data["review"], data["verified"], output_dir, evidence_by_id)
+    with queue_tabs[2]:
+        _review_router_tab(st, data["router"])
 
 
 def _gis_handoff_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
@@ -1210,22 +1216,15 @@ def _gis_handoff_tab(st: Any, data: dict[str, Any], output_dir: Path) -> None:
         for label, value, tone, sub in cards
     )
     st.markdown(f"<div class='metric-grid'>{html_cards}</div>", unsafe_allow_html=True)
-    rows = [
-        {
-            "rule": constraint.get("rule_object"),
-            "constraint": " ".join(
-                str(part) for part in (constraint.get("operator"), constraint.get("value"), constraint.get("unit")) if part
-            ),
-            "geometry": constraint.get("geometry_target") or "—",
-            "map-ready": "yes" if constraint.get("gis_ready") else "no",
-            "page": constraint.get("source_page"),
-            "plain English": _short_display_quote(constraint.get("felt_popup_sentence") or "", 140),
-        }
-        for constraint in constraints
-    ]
-    if rows:
-        st.markdown("#### Verified GIS constraints")
-        st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+    contract = _read_json(contract_path, {})
+    contract_rules = contract.get("rules", []) if isinstance(contract, dict) else (contract or [])
+    if not contract_rules:
+        # Fallback: map felt constraints (value_numeric, no string value) to rule-shaped dicts.
+        contract_rules = [{**constraint, "value": constraint.get("value_numeric")} for constraint in constraints]
+    if contract_rules:
+        st.markdown("<div class='section-head' style='font-size:16px;'>Verified GIS rules</div>", unsafe_allow_html=True)
+        st.caption("Every verified rule in plain English. Download the machine-readable contract below.")
+        _rule_sentence_list(st, contract_rules)
     download_columns = st.columns(2)
     if contract_path.exists():
         download_columns[0].download_button(
@@ -1286,6 +1285,19 @@ def _render_advanced_view(st: Any, view: str, data: dict[str, Any], output_dir: 
         _rerun_tab(st, data["rerun"], data["evidence_units"])
     elif view == "Engineering details":
         _advanced_tab(st, data, output_dir)
+
+
+def _diagnostics_page(st: Any, data: dict[str, Any], output_dir: Path) -> None:
+    """Engineering & audit views, now a normal nav page (was the below-tabs door)."""
+    st.markdown("<div class='section-head'>Diagnostics</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<p class='section-sub'>Engineering & audit views — not part of the reviewer workflow.</p>",
+        unsafe_allow_html=True,
+    )
+    options = list(_ADVANCED_VIEWS[1:])  # skip "(none)"
+    view = st.radio("View", options, horizontal=True, key="diag_view", label_visibility="collapsed")
+    st.divider()
+    _render_advanced_view(st, view, data, output_dir)
 
 
 def main() -> None:
@@ -1350,8 +1362,16 @@ def main() -> None:
     # Lean sidebar: the dataset selector lives above; everything heavier than a
     # glance is one collapsed door away.
     st.sidebar.caption(f"Loaded: {output_dir.name}")
+    # Primary navigation is a styled left-rail (CSS turns this radio into a nav
+    # rail) — one page at a time, so the user never loses direction in nested tabs.
+    st.sidebar.markdown("<div class='nav-title'>Sections</div>", unsafe_allow_html=True)
+    nav = st.sidebar.radio(
+        "Sections",
+        ["Summary", "Review", "GIS Handoff", "Ask the Bylaw", "Diagnostics"],
+        key="primary_nav",
+        label_visibility="collapsed",
+    )
     _sidebar_status_legend(st)
-    advanced_view = _sidebar_advanced(st)
     _sidebar_guidance(st)
     st.sidebar.markdown(
         "<div class='trust-note' style='margin-top:10px;font-size:12px;'>Read-only · advisory. "
@@ -1359,23 +1379,18 @@ def main() -> None:
         unsafe_allow_html=True,
     )
 
-    _render_header(st, city_label)
+    _render_header(st, city_label, section=nav)
 
-    # Civic Console: the three questions a user asks, plus the conversation.
-    sections = st.tabs(["Summary", "Review Queue", "GIS Handoff", "Ask the Bylaw"])
-    with sections[0]:
+    if nav == "Summary":
         _summary_tab(st, data)
-    with sections[1]:
+    elif nav == "Review":
         _review_queue_tab(st, data, output_dir, triage_items)
-    with sections[2]:
+    elif nav == "GIS Handoff":
         _gis_handoff_tab(st, data, output_dir)
-    with sections[3]:
+    elif nav == "Ask the Bylaw":
         _bylaw_tab(st, data)
-
-    if advanced_view and advanced_view != "(none)":
-        st.divider()
-        st.caption("Advanced & diagnostics (selected from the sidebar) — engineering detail, not part of the reviewer workflow.")
-        _render_advanced_view(st, advanced_view, data, output_dir)
+    else:
+        _diagnostics_page(st, data, output_dir)
 
 
 def count_audit_status(slot_audit: dict[str, Any]) -> str:
@@ -1726,9 +1741,12 @@ def _review_assistant_tab(
     left, right = st.columns([1, 1])
     with left:
         st.markdown("#### Candidate")
-        st.table([compact_rule_row(rule)])
-        st.markdown("#### Why this needs review")
-        st.write(_list_text(rule.get("support_gaps", [])))
+        st.markdown(
+            f"<div class='sentence-card sentence-review'>{_review_sentence_html(rule)}</div>",
+            unsafe_allow_html=True,
+        )
+        st.markdown("**Fields**")
+        st.markdown(_rule_fields_md(rule))
         st.info(packet.get("suggested_next_action") or "Inspect the source evidence before any verifier rerun.")
     with right:
         source = packet.get("source", {})
@@ -2884,30 +2902,47 @@ def _bounded_rag_hits(hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return bounded
 
 
+# Internal extraction labels (e.g. "pipeline5_merged_rule_0034", "m4_pack_0002_ev_002")
+# leak into the bylaw index text and the model sometimes echoes them as 【…】
+# citations. Strip them from BOTH the evidence we feed the model and the answer
+# we render, so the user only ever sees clean (§section, p.page) citations.
+_INTERNAL_TOKEN_RE = re.compile(
+    r"[【\[][^】\]]*?(?:merged_rule|pipeline\d|_pack_|_ev_|native_m\d|_rule_\d)[^】\]]*?[】\]]",
+    re.IGNORECASE,
+)
+_CJK_CITE_RE = re.compile(r"【[^】]*】")
+
+
+def _strip_internal_tokens(text: str) -> str:
+    if not text:
+        return text
+    text = _INTERNAL_TOKEN_RE.sub("", text)
+    text = _CJK_CITE_RE.sub("", text)
+    text = re.sub(r"\(\s*\)", "", text)
+    text = re.sub(r"[ \t]{2,}", " ", text)
+    return text.strip()
+
+
 def _grounded_bylaw_prompt(question: str, hits: list[dict[str, Any]]) -> str:
     bounded_hits = _bounded_rag_hits(hits)
-    try:
-        from burnaby_prototype.bylaw_rag import grounded_answer_prompt
-
-        base = grounded_answer_prompt(question, bounded_hits)
-    except Exception:
-        sections = "\n\n".join(
-            f"[{hit.get('section') or hit.get('chunk_id')}] {hit.get('section_text') or hit.get('text')}"
-            for hit in bounded_hits
-        )
-        base = (
-            "Answer the question using ONLY the bylaw sections below. Cite the section number in "
-            "brackets for every claim. If the sections do not answer the question, say that the "
-            "retrieved sections do not answer it. Do not speculate.\n\n"
-            f"SECTIONS:\n{sections}\n\nQUESTION: {question}"
-        )
+    sections = []
+    for hit in bounded_hits:
+        section = hit.get("section") or hit.get("chunk_id") or "?"
+        page = hit.get("page")
+        label = f"§{section}" + (f", p.{page}" if page not in (None, "") else "")
+        body = _strip_internal_tokens(str(hit.get("section_text") or hit.get("text") or ""))
+        sections.append(f"[{label}] {body}")
+    sections_text = "\n\n".join(sections)
     return (
-        "You are an advisory zoning bylaw chatbot for human reviewers. "
-        "Do not approve, verify, or reject rules. The verifier's JSON outputs are the authority. "
-        "Rule slots, verified rules, and review packets are read-only context; they never give you authority "
-        "to promote a rule. Give a concise answer, cite only the retrieved sections, and say when the "
-        "evidence is insufficient.\n\n"
-        f"{base}"
+        "You are an advisory zoning-bylaw assistant for human reviewers. Answer ONLY from the bylaw "
+        "sections below. You never approve, verify, reject, or promote a rule.\n"
+        "STYLE RULES (follow exactly):\n"
+        "- Lead with the direct answer (the number) in the first sentence.\n"
+        "- Keep the whole answer to at most 3 short sentences. No bullet lists.\n"
+        "- After each claim, cite as (§<section>, p.<page>) using ONLY the labels shown.\n"
+        "- NEVER output rule ids, evidence ids, internal codes, or 【…】 brackets.\n"
+        "- If the sections do not answer the question, say so in one sentence.\n\n"
+        f"SECTIONS:\n{sections_text}\n\nQUESTION: {question}"
     )
 
 
@@ -3008,6 +3043,7 @@ def _bylaw_chat_respond(st: Any, question: str, index_path: Path, chat_key: str)
         # final, source-anchored user message inside _optional_bylaw_llm_answer.
         prior_turns = st.session_state[chat_key][-5:-1]
         answer = _optional_bylaw_llm_answer(prompt, st, history=prior_turns) or _retrieval_only_bylaw_answer(question, bounded_hits)
+        answer = _strip_internal_tokens(answer)
         assistant_message = {"role": "assistant", "content": answer, "sources": bounded_hits, "question": question}
     st.session_state[chat_key].append(assistant_message)
     _render_bylaw_chat_message(st, assistant_message)
@@ -3090,10 +3126,10 @@ def _optional_bylaw_llm_answer(
 
 
 _BYLAW_CHAT_SYSTEM = (
-    "You answer only from retrieved zoning bylaw excerpts. You are an advisory "
-    "assistant for human reviewers and never approve, verify, reject, or promote a rule. "
-    "Cite the section number in brackets for every claim, and say plainly when the "
-    "retrieved sections do not answer the question."
+    "You answer only from the provided zoning-bylaw excerpts, as an advisory assistant for human "
+    "reviewers — you never approve, verify, reject, or promote a rule. Lead with the number, keep the "
+    "answer to at most 3 short sentences, cite as (§section, p.page), and never output internal ids, "
+    "rule ids, or 【…】 tokens."
 )
 
 
@@ -3255,25 +3291,40 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path, data: dict[str, Any] | None 
             unsafe_allow_html=True,
         )
 
-    # Hidden prompt hints: revealed only on demand, never shown up front.
-    pending_question = None
+    input_key = f"rag_chat_input_{city_stem}"
+    prefill_key = f"rag_prefill_{city_stem}"
+    # A hint click stores its text in prefill_key and reruns; we apply it to the
+    # input HERE, before the widget is created (Streamlit only allows setting a
+    # widget's value before it instantiates). So a hint fills the box — it does
+    # NOT auto-send — and the reviewer can edit before asking.
+    if prefill_key in st.session_state:
+        st.session_state[input_key] = st.session_state.pop(prefill_key)
+
     suggestions = _bylaw_suggestions(data)
     try:
         ideas = st.popover("Need ideas?")
     except Exception:  # pragma: no cover - popover always present in Streamlit 1.58
         ideas = st.expander("Need ideas?")
     with ideas:
+        st.caption("Click a question to drop it into the box, then edit and Send.")
         for index, suggestion in enumerate(suggestions):
             if st.button(suggestion, key=f"sugg_{city_stem}_{index}", width="stretch"):
-                pending_question = suggestion
+                st.session_state[prefill_key] = suggestion
+                st.rerun()
 
     for message in history:
         _render_bylaw_chat_message(st, message)
 
-    typed = st.chat_input("Ask about the bylaw…", key=f"rag_chat_input_{city_stem}")
-    question = typed or pending_question
-    if question:
-        _bylaw_chat_respond(st, question, index_path, chat_key)
+    with st.form(key=f"rag_form_{city_stem}", clear_on_submit=True):
+        typed = st.text_input(
+            "Ask about the bylaw",
+            key=input_key,
+            label_visibility="collapsed",
+            placeholder="Ask about the bylaw…",
+        )
+        sent = st.form_submit_button("Send", type="primary")
+    if sent and str(typed or "").strip():
+        _bylaw_chat_respond(st, str(typed).strip(), index_path, chat_key)
     st.markdown("</div>", unsafe_allow_html=True)
 
 
@@ -3289,30 +3340,35 @@ def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
     _ask_the_bylaw_panel(st, output_dir, data)
 
 
-def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool = False) -> None:
-    """Render a compact product-style header for the review console."""
-    eyebrow = "M4 Verification Dashboard" if portfolio else "Verification Review Console"
-    title = city_label if portfolio else f"{city_label} Rule Review"
-    body = (
-        "Review M4 first. V3 is retained only as the predecessor comparison. The deterministic verifier is the authority."
-        if portfolio
-        else "Use verified rules as trusted outputs, send uncertain rules to review, and inspect the source text before changing the verifier."
-    )
-    main_pill = "Current path: M4" if portfolio else "Verified-only output"
+_SECTION_BLURB = {
+    "Summary": "Verified rules as trusted outputs, plus coverage and the review backlog at a glance.",
+    "Review": "Rules the verifier could not prove — your worklist, each shown as a sentence with the gap in red.",
+    "GIS Handoff": "Verified-only, geometry-tagged rules ready for the map.",
+    "Ask the Bylaw": "A source-grounded assistant. It cites sections and can never approve or change a rule.",
+    "Diagnostics": "Engineering & audit views — not part of the reviewer workflow.",
+}
+
+
+def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool = False, section: str = "") -> None:
+    """Compact breadcrumb header: City › Section, so 'where am I' is always visible."""
+    if portfolio:
+        crumb = "M7 · Portfolio"
+        title = city_label
+        body = "The current M7 product path. The deterministic verifier is the authority."
+    else:
+        crumb = f"M7 · {html.escape(city_label)}" + (f" › <b>{html.escape(section)}</b>" if section else "")
+        title = section or f"{city_label} Rule Review"
+        body = _SECTION_BLURB.get(section, "")
     st.markdown(
         f"""
 <div class="app-header">
   <div>
-    <div class="eyebrow">{html.escape(eyebrow)}</div>
+    <div class="crumb">{crumb}</div>
     <h1>{html.escape(title)}</h1>
     <p>{html.escape(body)}</p>
   </div>
   <div class="status-legend">
-    <span class="status-pill status-verified">{html.escape(main_pill)}</span>
-    <span class="status-pill status-verified">Verified</span>
-    <span class="status-pill status-review">Needs review</span>
-    <span class="status-pill status-rejected">Rejected</span>
-    <span class="status-pill status-not_used">Not used</span>
+    <span class="status-pill status-verified">Verified-only output</span>
   </div>
 </div>
 """,
@@ -3418,33 +3474,180 @@ def _sentence_card(st: Any, title: str, sentence: str, tone: str, caption: str =
 
 
 def _rule_sentence(rule: dict[str, Any]) -> str:
-    """Convert a structured rule into a reviewer-readable sentence.
-
-    This is intentionally deterministic. It explains the current normalized
-    fields and does not infer legal meaning beyond operator wording.
+    """Convert a structured rule into a reviewer-readable sentence that LEADS
+    with the constraint, e.g. "Maximum building height is 10 m for a front
+    principal building (sloping roof)." Deterministic; no legal inference.
     """
     if not rule:
         return "No rule is available."
 
-    rule_object = _humanize(rule.get("rule_object")) or "rule"
-    scope = _humanize(rule.get("constraint_scope"))
-    applies_to = str(rule.get("applies_to") or "").strip()
-    subject = applies_to or "The relevant proposal item"
+    obj = _humanize(rule.get("rule_object")) or "rule"
+    scope = (_humanize(rule.get("constraint_scope")) or "").strip()
+    applies = str(rule.get("applies_to") or "").strip()
     condition = str(rule.get("condition") or "").strip()
     exception = str(rule.get("exception") or "").strip()
+    value_text = _format_value_unit(rule.get("value"), str(rule.get("unit") or "").strip())
+    direction = f"{str(rule.get('operator') or '')} {str(rule.get('constraint_type') or '')}".lower()
+    obj_l = obj[:1].lower() + obj[1:]  # keep the object lowercase after "Maximum/Minimum"
 
-    value = rule.get("value")
-    unit = str(rule.get("unit") or "").strip()
-    value_text = _format_value_unit(value, unit)
-    operator_phrase = _operator_phrase(rule.get("operator"), rule.get("constraint_type"), value_text)
+    if any(t in direction for t in ("<=", "maximum", "max", "not_exceed")):
+        lead = f"Maximum {obj_l} is {value_text}" if value_text else f"{obj_l} has a maximum"
+    elif any(t in direction for t in (">=", "minimum", "min", "at_least")):
+        lead = f"Minimum {obj_l} is {value_text}" if value_text else f"{obj_l} has a minimum"
+    elif ">" in direction:
+        lead = f"{obj_l} must be more than {value_text}"
+    elif "<" in direction:
+        lead = f"{obj_l} must be less than {value_text}"
+    elif any(t in direction for t in ("allowed", "permitted")):
+        lead = f"{obj_l} is permitted" + (f" ({value_text})" if value_text else "")
+    elif "required" in direction:
+        lead = f"{obj_l} is required" + (f" ({value_text})" if value_text else "")
+    else:
+        lead = f"{obj_l} is {value_text}" if value_text else f"{obj_l} is claimed"
+    lead = lead[:1].upper() + lead[1:]
 
-    scope_phrase = f" for {scope.strip()}" if scope else ""
-    sentence = f"{subject}: {rule_object}{scope_phrase} {operator_phrase}"
+    # Drop a "condition" that just restates the object/direction (table headings
+    # like "Minimum Lot Area" leak into the condition field).
+    obj_words = set(re.findall(r"[a-z0-9]+", obj.lower()))
+    cond_words = set(re.findall(r"[a-z0-9]+", condition.lower()))
+    if cond_words and cond_words <= (obj_words | {"minimum", "maximum", "min", "max"}):
+        condition = ""
+
+    generic = {"the relevant proposal item", "the relevant parcel or proposal item", "lot", ""}
+    target = ""
+    if scope and scope.lower() not in obj.lower() and obj.lower() not in scope.lower():
+        target = scope
+    elif applies and applies.lower() not in generic:
+        target = applies
+    sentence = lead + (f" for {target}" if target else "")
+    extras = []
+    if target == scope and applies and applies.lower() not in generic and applies.lower() != target.lower():
+        extras.append(applies)
     if condition:
-        sentence += f" when {condition}"
+        extras.append(condition)
+    if extras:
+        sentence += " (" + "; ".join(extras) + ")"
     if exception:
         sentence += f", except {exception}"
     return sentence.rstrip(" .") + "."
+
+
+# Map each support-gap code to the rule FIELD it implicates (reverse of the
+# verifier's CLAIM_TO_SUPPORT_GAP) so the review view can paint that field red.
+# Inlined here (not imported from burnaby_prototype) so the dashboard stays
+# self-contained on Streamlit Cloud, where the package is not installed.
+_GAP_FIELD = {
+    "value_not_found_in_evidence": "value", "value_bound_to_foreign_unit": "value",
+    "column_value_mismatch": "value", "range_bound_not_maximum": "value",
+    "coefficient_operand_not_value": "value",
+    "unit_not_found_in_evidence": "unit", "rule_object_unit_not_compatible": "unit",
+    "operator_not_supported": "operator", "table_operator_refuted": "operator",
+    "rule_family_direction_mismatch": "operator",
+    "applies_to_not_supported": "applies_to", "table_applies_to_not_supported": "applies_to",
+    "applicability_not_grounded": "applies_to",
+    "constraint_scope_not_supported": "scope", "table_column_not_target_scope": "scope",
+    "column_qualifier_not_claimed": "scope",
+    "text_condition_not_supported": "condition", "table_condition_not_supported": "condition",
+    "conditional_cell_condition_missing": "condition", "unresolved_exception_cue": "condition",
+    "enumerated_branch_condition_missing": "condition", "allowance_trigger_threshold": "condition",
+    "rule_object_not_supported": "rule_object", "rule_object_not_canonical": "rule_object",
+    "table_rule_object_not_supported": "rule_object", "anchored_row_family_mismatch": "rule_object",
+}
+_GAP_FIELD_REASON = {
+    "value": "the value is not clearly supported by the cited text",
+    "unit": "the unit is not supported by the cited text",
+    "operator": "the direction (minimum/maximum) is not clearly supported",
+    "applies_to": "what it applies to is not grounded in the cited text",
+    "scope": "the scope or column is not grounded in the cited text",
+    "condition": "a condition or exception still needs review",
+    "rule_object": "the rule family is not clearly supported by the cited text",
+}
+
+
+def _gap_fields(rule: dict[str, Any]) -> list[str]:
+    """Distinct rule fields implicated by this rule's support gaps, in field order."""
+    gaps = rule.get("support_gaps") or []
+    order = ["value", "unit", "operator", "applies_to", "scope", "condition", "rule_object"]
+    hit = {_GAP_FIELD[g] for g in gaps if g in _GAP_FIELD}
+    return [field for field in order if field in hit]
+
+
+def _gap_reason(rule: dict[str, Any]) -> str:
+    """One plain-English 'held because…' line for a review/rejected rule."""
+    fields = _gap_fields(rule)
+    if fields:
+        return "; ".join(_GAP_FIELD_REASON[f] for f in fields)
+    gaps = rule.get("support_gaps") or []
+    if gaps:
+        return _plain_join(gaps[:3])
+    return "this candidate needs a human check"
+
+
+def _field_display_text(rule: dict[str, Any], field: str) -> str:
+    if field == "value":
+        return _format_value_unit(rule.get("value"), str(rule.get("unit") or "").strip())
+    if field == "unit":
+        return str(rule.get("unit") or "").strip()
+    if field == "applies_to":
+        return str(rule.get("applies_to") or "").strip()
+    if field == "scope":
+        return (_humanize(rule.get("constraint_scope")) or "").strip()
+    if field == "rule_object":
+        return (_humanize(rule.get("rule_object")) or "").strip()
+    if field == "operator":
+        direction = f"{str(rule.get('operator') or '')} {str(rule.get('constraint_type') or '')}".lower()
+        if any(t in direction for t in ("<=", "max")):
+            return "Maximum"
+        if any(t in direction for t in (">=", "min")):
+            return "Minimum"
+    return ""
+
+
+def _review_sentence_html(rule: dict[str, Any]) -> str:
+    """The rule as a sentence with the un-grounded field(s) painted red, plus a
+    one-line 'held because…'. Best-effort inline highlight; the reason line is
+    the guaranteed-clear part."""
+    escaped = html.escape(_rule_sentence(rule))
+    for field in _gap_fields(rule):
+        text = _field_display_text(rule, field)
+        if not text:
+            continue
+        esc_text = html.escape(text)
+        if esc_text and esc_text in escaped:
+            escaped = escaped.replace(esc_text, f"<span class='gap-flag'>{esc_text}</span>", 1)
+    reason = _gap_reason(rule)
+    why = f"<div class='gap-why'>⚠ Held because {html.escape(reason)}.</div>" if reason else ""
+    return f"<div class='rule-text'>{escaped}</div>{why}"
+
+
+def _rule_sentence_list(st: Any, rules: list[dict[str, Any]], *, show_gap: bool = False, limit: int = 400) -> None:
+    """Render rules as a numbered list of plain-English sentence cards. When
+    show_gap is set, the un-grounded field is highlighted red with a reason."""
+    if not rules:
+        st.caption("None in this bucket.")
+        return
+    for index, rule in enumerate(rules[:limit], start=1):
+        body = _review_sentence_html(rule) if show_gap else f"<div class='rule-text'>{html.escape(_rule_sentence(rule))}</div>"
+        st.markdown(
+            f"<div class='rule-card'><span class='rule-num'>{index}</span><div class='rule-body'>{body}</div></div>",
+            unsafe_allow_html=True,
+        )
+    if len(rules) > limit:
+        st.caption(f"Showing the first {limit} of {len(rules)} rules.")
+
+
+def _rule_fields_md(rule: dict[str, Any]) -> str:
+    """Vertical key/value list of a rule's fields — readable, never squeezed."""
+    pairs = [
+        ("Rule family", _humanize(rule.get("rule_object"))),
+        ("Scope", _humanize(rule.get("constraint_scope"))),
+        ("Applies to", rule.get("applies_to")),
+        ("Direction", _operator_short(rule.get("operator"), rule.get("constraint_type"))),
+        ("Value", _format_value_unit(rule.get("value"), str(rule.get("unit") or "").strip())),
+        ("Condition", rule.get("condition")),
+        ("Exception", rule.get("exception")),
+    ]
+    return "\n".join(f"- **{label}:** {value}" for label, value in pairs if value not in (None, "", "—"))
 
 
 def _rule_option_label(rule: dict[str, Any]) -> str:
@@ -3916,6 +4119,37 @@ div[data-testid="stExpander"] .guide-card, div[data-testid="stExpander"] .action
 .citation .loc {font-family:ui-monospace,"SF Mono","Roboto Mono",monospace; font-size:11px; color:var(--ink-soft); white-space:nowrap; font-weight:700;}
 [data-testid="stChatMessage"] {border:0; box-shadow:none; background:transparent; padding:6px 0;}
 [data-testid="stChatInput"] textarea {border-radius:18px;}
+/* ---- redesign v2: left-rail nav + numbered rule sentences + red gaps ---- */
+.metric, .sentence-card, .coverage-hero, .rule-card {box-shadow:0 1px 2px rgba(31,35,40,.04);}
+/* sidebar radio -> nav rail */
+section[data-testid="stSidebar"] div[role="radiogroup"] {gap:2px;}
+section[data-testid="stSidebar"] div[role="radiogroup"] > label {
+  display:flex; align-items:center; width:100%; padding:9px 12px; margin:0; border-radius:9px;
+  font-size:14px; font-weight:600; color:var(--ink-soft); cursor:pointer; transition:background .12s;}
+section[data-testid="stSidebar"] div[role="radiogroup"] > label:hover {background:var(--subtle); color:var(--ink);}
+section[data-testid="stSidebar"] div[role="radiogroup"] > label:has(input:checked) {
+  background:color-mix(in srgb, var(--accent) 12%, white); color:var(--accent-strong);
+  box-shadow:inset 3px 0 0 var(--accent);}
+section[data-testid="stSidebar"] div[role="radiogroup"] > label > div:first-child {display:none;} /* hide radio dot */
+.nav-title {font-size:11px; text-transform:uppercase; letter-spacing:.09em; color:#8c959f; font-weight:700; margin:6px 0 4px;}
+/* breadcrumb header */
+.crumb {font-size:12.5px; color:var(--ink-soft); margin-bottom:2px;}
+.crumb b {color:var(--accent); font-weight:700;}
+/* numbered rule sentence cards */
+.rule-card {display:grid; grid-template-columns:32px 1fr; gap:12px; align-items:start;
+  border:1px solid var(--hairline); border-radius:12px; padding:13px 16px; margin:8px 0; background:var(--canvas);}
+.rule-num {display:flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:8px;
+  background:var(--subtle); color:var(--ink-soft); font-weight:700; font-size:13px; font-variant-numeric:tabular-nums;}
+.rule-body {min-width:0;}
+.rule-text {font-size:16px; line-height:1.5; color:var(--ink);}
+.gap-flag {background:color-mix(in srgb, var(--status-rejected) 14%, white); color:var(--status-rejected);
+  font-weight:700; padding:1px 5px; border-radius:5px; border-bottom:2px solid var(--status-rejected);}
+.gap-why {margin-top:7px; font-size:13px; color:var(--status-rejected); line-height:1.4;}
+.section-head {font-size:20px; font-weight:750; color:var(--ink); letter-spacing:-.01em; margin:2px 0 2px;}
+.section-sub {color:var(--ink-soft); font-size:14px; margin:0 0 14px;}
+.cite-chip {display:inline-block; font-size:12px; font-weight:700; color:var(--accent-strong);
+  background:color-mix(in srgb, var(--accent) 10%, white); border-radius:999px; padding:2px 9px; margin:2px 4px 2px 0;
+  font-family:ui-monospace,"SF Mono","Roboto Mono",monospace;}
 @media (max-width: 900px) {
   .metric-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
   .hero-grid, .legend-grid {grid-template-columns:1fr 1fr;}
