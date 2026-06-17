@@ -93,3 +93,5 @@ OPENROUTER_APP_TITLE = "BC Zoning Verification Dashboard"
 The dashboard also supports fallback providers through `BYLAW_RAG_PROVIDER =
 "openai"`, `"gemini"`, or `"anthropic"` if the matching provider key is present.
 Secrets must stay in Streamlit Cloud settings; do not commit them.
+
+<!-- deploy: M7 @ 2026-06-17T06:57Z (commit triggers Streamlit Cloud rebuild from main) -->
