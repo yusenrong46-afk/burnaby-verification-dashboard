@@ -239,6 +239,24 @@ def _keyword_route(question: str, history: list[dict[str, Any]] | None = None) -
         or "what do you mean" in low
         or low.startswith(("what is a ", "what is an ", "what's a ", "what's an "))
     )
+    # A CONCEPT/definition question ("what is a laneway home?", "what does setback
+    # mean?", "what is FSR?") should be explained from general knowledge, NOT forced
+    # through retrieval. We treat a "what is/does ..." question as a concept UNLESS
+    # it asks for a specific number/limit ("what is the MINIMUM lot area") or names a
+    # family with the definite article ("what is THE rear setback" -> wants the value).
+    value_cue = any(t in low for t in (
+        "minimum", "maximum", " max", " min ", "how tall", "how high", "how big",
+        "how much", "how many", "how wide", "how long", "how far", "limit",
+        "requirement", "required", "allowed", "permitted", "what's the", "whats the",
+        "can i build", "value of", "number of",
+    ))
+    definite_family = bool(families) and (
+        low.startswith(("what is the ", "what's the ", "what are the ")) or " the " in f" {low} "
+    )
+    concept = (
+        strong_define
+        or (low.startswith(("what is ", "what's ", "what are ", "what does ")) and not value_cue)
+    ) and not definite_family
 
     if why_strong:
         intent = "why_verification"
@@ -246,7 +264,7 @@ def _keyword_route(question: str, history: list[dict[str, Any]] | None = None) -
         intent = "list_table"
     elif status_word:
         intent = "why_verification"
-    elif strong_define:
+    elif concept:
         intent = "definition"
     elif families:
         intent = "specific_rule"
@@ -475,6 +493,15 @@ _GAP_WHY: dict[str, str] = {
         "the direction looks off — this reads as a maximum where this rule family normally sets a "
         "minimum (or vice versa), so it's held until the direction is confirmed"
     ),
+    "text_candidate_requires_review": (
+        "it was read from a single line of text, and the checker only auto-confirms a rule when the "
+        "wording clearly proves the number, its unit, and whether it's a minimum or a maximum — so a "
+        "person should confirm it"
+    ),
+    "text_condition_not_supported": (
+        "the cited text doesn't clearly prove an extra condition this rule depends on (for example an "
+        "'except…' clause or a lot-size branch)"
+    ),
     "table_fallback_candidate_requires_review": "it came from a table fallback that a person should confirm before it is trusted",
     "table_cell_candidate_requires_review": "it came straight from a table cell that a person should confirm (which column and condition it belongs to)",
     "table_evidence_candidate_requires_review": "the table evidence needs a person to confirm before it is trusted",
@@ -517,6 +544,46 @@ def _source_block(rule: dict[str, Any], router_item: dict[str, Any] | None) -> d
         "url": source.get("url") or "",
         "where_hint": where,
     }
+
+
+def _clean_next_step(text: str) -> str:
+    """Strip reviewer-jargon tails (raw gap codes, evidence ids, semantic-match
+    notes) so the citizen-facing next step stays plain English."""
+    text = re.split(r"\s+Check\s+[a-z0-9_]", text, maxsplit=1)[0]
+    text = re.split(r"\s*Semantic match", text, maxsplit=1)[0]
+    text = re.sub(r"\s*evidence_id\s+\S+", "", text)
+    return text.strip()
+
+
+def verification_narrative_prompt(card: dict[str, Any], rule_sentence: str) -> str:
+    """Prompt asking an LLM to explain a verification card in warm, plain language
+    using ONLY the deterministic facts (so it never invents anything)."""
+    wtl = card.get("where_to_look") or {}
+    loc = []
+    if wtl.get("section"):
+        loc.append(f"section {wtl['section']}")
+    if wtl.get("page") not in (None, ""):
+        loc.append(f"page {wtl['page']}")
+    where = ", ".join(loc) or "the source bylaw"
+    facts = [f"Rule: {rule_sentence}", f"Status: {card.get('status')}"]
+    if card.get("why"):
+        facts.append("Why it is not auto-confirmed: " + "; ".join(card["why"]))
+    if card.get("likely_missing"):
+        facts.append("What would confirm it: " + card["likely_missing"])
+    facts.append(f"Where to check in the bylaw: {where}")
+    if wtl.get("quote"):
+        facts.append('Cited text: "' + wtl["quote"] + '"')
+    if (card.get("similar_verified") or {}).get("rule"):
+        facts.append("A closely related rule IS already verified.")
+    facts_block = "\n".join(f"- {f}" for f in facts)
+    return (
+        "Explain this zoning rule's status to a non-expert homeowner in 2-4 warm, plain sentences. "
+        "Use ONLY the facts below — never invent numbers, reasons, or citations, and never output codes "
+        "or field names. If it is verified, reassure them it is confirmed and say where it comes from. If "
+        "it is in review, explain in everyday words why it is not auto-confirmed yet and what a person "
+        "would check — make clear that being in review is normal and not an error.\n\n"
+        f"FACTS:\n{facts_block}"
+    )
 
 
 def explain_verification(
@@ -567,13 +634,13 @@ def explain_verification(
     }
 
     if router_item:
-        card["next_step"] = _short(
+        raw_next = (
             router_item.get("human_instruction")
             or router_item.get("next_step")
             or router_item.get("suggested_next_action")
-            or "",
-            260,
+            or ""
         )
+        card["next_step"] = _short(_clean_next_step(raw_next), 220)
 
     if repair_suggestion:
         top = (repair_suggestion.get("top_evidence") or [])

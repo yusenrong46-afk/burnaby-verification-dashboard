@@ -4236,10 +4236,19 @@ def _answer_why_verification(
     if rule is None:
         return _answer_grounded(st, question, query, data, brain, index_path, history, "why_verification")
     card = _explain_rule(brain, data, rule)
-    if card.get("status") == "verified":
-        content = "Good news — that rule is **verified**. Here's the rule and the exact evidence behind it:"
+    # Lead with a warm, plain-language narrative the LLM writes from the card's
+    # deterministic facts; the card then carries the evidence + where-to-look.
+    narrative = _optional_bylaw_llm_answer(
+        brain.verification_narrative_prompt(card, _rule_sentence(rule)),
+        st, system=_VERIFY_NARRATIVE_SYSTEM,
+    )
+    if narrative:
+        content = _strip_internal_tokens(narrative)
+        card = {**card, "verdict_sentence": "", "why": [], "likely_missing": ""}
+    elif card.get("status") == "verified":
+        content = f"Good news — that rule is verified. {card.get('verdict_sentence', '')}".strip()
     else:
-        content = "Here's the status of that rule, in plain language:"
+        content = f"That rule is currently held for review. {card.get('verdict_sentence', '')}".strip()
     return {"role": "assistant", "content": content, "rule_cards": [card], "intent": "why_verification"}
 
 
@@ -4276,6 +4285,43 @@ def _answer_list_table(query: str, families: list[str], data: dict[str, Any], br
     return {"role": "assistant", "content": content, "tables": tables, "intent": "list_table"}
 
 
+_CONCEPT_SYSTEM = (
+    "You are a friendly assistant explaining residential zoning and housing concepts in plain language to "
+    "homeowners. Give a clear, general, accurate definition with a concrete everyday example. Do NOT claim "
+    "what any specific bylaw says — this is a general explanation. Never give legal advice. 2-3 sentences."
+)
+_VERIFY_NARRATIVE_SYSTEM = (
+    "You explain a zoning rule's verification status to a non-expert homeowner in warm, plain language. Use "
+    "ONLY the facts provided. Never invent numbers, reasons, or citations, and never output internal codes "
+    "or field names."
+)
+_CONCEPT_NO_LLM = (
+    "I can explain zoning concepts in plain language, but no language model is configured here right now. "
+    "For a specific number, ask about a rule directly — e.g. “what is the minimum lot area?”"
+)
+
+
+def _answer_definition(st: Any, question: str, query: str, data: dict[str, Any], brain: Any) -> dict[str, Any]:
+    """Concept/definition: a general-knowledge explanation (ungrounded, no RAG),
+    clearly labelled, with a pointer to the bylaw's specific number when relevant."""
+    prompt = (
+        f'A user asked: "{question}"\n'
+        "Explain, in 2-3 plain sentences for a non-expert homeowner, what this means in residential "
+        "zoning/housing. If it is a well-known term (setback, laneway house, FSR, lot coverage, storey, "
+        "etc.), define it simply and concretely with an everyday example. Do not cite or claim anything "
+        "about a specific bylaw."
+    )
+    answer = _optional_bylaw_llm_answer(prompt, st, system=_CONCEPT_SYSTEM)
+    if not answer:
+        return {"role": "assistant", "content": _CONCEPT_NO_LLM, "intent": "definition"}
+    content = "Here's a general explanation (not specific legal text from this bylaw):\n\n" + _strip_internal_tokens(answer)
+    families = brain._families_in(query)
+    if families:
+        fam = families[0].replace("_", " ")
+        content += f"\n\n*To see what **this** bylaw sets for {fam}, ask e.g. “what is the {fam}?”*"
+    return {"role": "assistant", "content": content, "intent": "definition"}
+
+
 def _build_brain_answer(
     st: Any, question: str, index_path: Path, data: dict[str, Any],
     history: list[dict[str, Any]], brain: Any,
@@ -4297,6 +4343,8 @@ def _build_brain_answer(
 
     if intent == "out_of_scope":
         return {"role": "assistant", "content": _CHAT_OUT_OF_SCOPE, "intent": intent}
+    if intent == "definition":
+        return _answer_definition(st, question, query, data, brain)
     if intent == "why_verification" and (verified or review):
         return _answer_why_verification(st, question, query, data, brain, index_path, history)
     if intent == "list_table" and (verified or review or data.get("evidence_units")):
@@ -4396,21 +4444,25 @@ def _optional_bylaw_llm_answer(
     prompt: str,
     st: Any | None = None,
     history: list[dict[str, Any]] | None = None,
+    system: str | None = None,
 ) -> str | None:
+    """Answer via the configured provider. ``system`` overrides the default
+    grounded system prompt — used for concept/definition answers (general
+    knowledge, ungrounded) and the plain-language verification narrative."""
     status = _bylaw_llm_status(st)
     if not status.get("available"):
         return None
     provider = status["provider"]
     if provider == "openrouter":
-        return _openrouter_answer(prompt, _secret_value(st, "OPENROUTER_API_KEY"), status["model"], history)
+        return _openrouter_answer(prompt, _secret_value(st, "OPENROUTER_API_KEY"), status["model"], history, system)
     if provider == "gemini":
         key = _secret_value(st, "GEMINI_API_KEY") or _secret_value(st, "GOOGLE_API_KEY") or _secret_value(st, "GOOGLE_GENAI_API_KEY")
-        return _gemini_answer(prompt, key, status["model"])
+        return _gemini_answer(prompt, key, status["model"], system)
     if provider == "openai":
-        return _openai_answer(prompt, _secret_value(st, "OPENAI_API_KEY"), status["model"], st)
+        return _openai_answer(prompt, _secret_value(st, "OPENAI_API_KEY"), status["model"], st, system)
     if provider == "anthropic":
         key = _secret_value(st, "ANTHROPIC_API_KEY") or _secret_value(st, "CLAUDE_API_KEY")
-        return _anthropic_answer(prompt, key, status["model"])
+        return _anthropic_answer(prompt, key, status["model"], system)
     return None
 
 
@@ -4428,6 +4480,7 @@ def _openrouter_answer(
     api_key: str,
     model: str,
     history: list[dict[str, Any]] | None = None,
+    system: str | None = None,
 ) -> str:
     """Answer via OpenRouter's OpenAI-compatible chat-completions endpoint.
 
@@ -4435,7 +4488,7 @@ def _openrouter_answer(
     naturally, while the final user message carries the freshly retrieved,
     section-grounded prompt — keeping every answer anchored to source text.
     """
-    messages: list[dict[str, str]] = [{"role": "system", "content": _BYLAW_CHAT_SYSTEM}]
+    messages: list[dict[str, str]] = [{"role": "system", "content": system or _BYLAW_CHAT_SYSTEM}]
     for turn in (history or [])[-6:]:
         role = turn.get("role")
         content = turn.get("content")
@@ -4479,12 +4532,14 @@ def _post_json(url: str, payload: dict[str, Any], headers: dict[str, str], timeo
         return {"_error": f"{type(error).__name__}: {error}"}
 
 
-def _gemini_answer(prompt: str, api_key: str, model: str) -> str:
+def _gemini_answer(prompt: str, api_key: str, model: str, system: str | None = None) -> str:
     model_name = str(model or "gemini-2.0-flash-lite").removeprefix("models/")
     url = (
         "https://generativelanguage.googleapis.com/v1beta/models/"
         f"{urllib.parse.quote(model_name, safe='-._~')}:generateContent?key={urllib.parse.quote(api_key)}"
     )
+    if system:
+        prompt = f"{system}\n\n{prompt}"
     payload = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.0, "maxOutputTokens": 700},
@@ -4497,14 +4552,14 @@ def _gemini_answer(prompt: str, api_key: str, model: str) -> str:
     return text or "The LLM returned no text."
 
 
-def _openai_answer(prompt: str, api_key: str, model: str, st: Any | None = None) -> str:
+def _openai_answer(prompt: str, api_key: str, model: str, st: Any | None = None, system: str | None = None) -> str:
     base_url = (_secret_value(st, "OPENAI_BASE_URL") or "https://api.openai.com/v1").rstrip("/")
     payload = {
         "model": model or "gpt-4o-mini",
         "temperature": 0.0,
         "max_tokens": 700,
         "messages": [
-            {"role": "system", "content": "You answer only from retrieved zoning bylaw excerpts. Never approve or verify rules."},
+            {"role": "system", "content": system or "You answer only from retrieved zoning bylaw excerpts. Never approve or verify rules."},
             {"role": "user", "content": prompt},
         ],
     }
@@ -4514,12 +4569,12 @@ def _openai_answer(prompt: str, api_key: str, model: str, st: Any | None = None)
     return str((((data.get("choices") or [{}])[0].get("message") or {}).get("content") or "")).strip() or "The LLM returned no text."
 
 
-def _anthropic_answer(prompt: str, api_key: str, model: str) -> str:
+def _anthropic_answer(prompt: str, api_key: str, model: str, system: str | None = None) -> str:
     payload = {
         "model": model or "claude-3-5-haiku-latest",
         "max_tokens": 700,
         "temperature": 0.0,
-        "system": "You answer only from retrieved zoning bylaw excerpts. Never approve or verify rules.",
+        "system": system or "You answer only from retrieved zoning bylaw excerpts. Never approve or verify rules.",
         "messages": [{"role": "user", "content": prompt}],
     }
     data = _post_json(
