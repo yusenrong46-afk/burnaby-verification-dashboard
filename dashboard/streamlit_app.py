@@ -481,10 +481,14 @@ def output_bucket_counts(data: dict[str, Any]) -> dict[str, int]:
         "rejected": data.get("rejected"),
         "not_used": data.get("not_used"),
     }
-    return {
+    counts = {
         bucket: len(items) if isinstance(items, list) else int(validation_counts.get(bucket) or 0)
         for bucket, items in live.items()
     }
+    # UI code historically used both names. Keep the canonical artifact bucket
+    # (`review_needed`) and the shorter display alias (`review`) in sync.
+    counts["review"] = counts.get("review_needed", 0)
+    return counts
 
 
 # Funnel stage semantics. FIELD_GAPS are per-field proof failures (the words,
@@ -1092,6 +1096,550 @@ def _status_mix_bar(st: Any, counts: dict[str, int]) -> None:
     st.markdown(f"<div class='status-bar'>{segments}</div>", unsafe_allow_html=True)
 
 
+def _city_display_parts(output_dir: Path) -> dict[str, str]:
+    stem = city_stem_from_dir(output_dir)
+    if stem == "burnaby_r1":
+        return {
+            "city": "Burnaby, BC",
+            "bylaw": "Burnaby Zoning Bylaw 1965",
+            "district": "Division E — R1 District",
+            "source_type": "Official PDF + scoped district pages",
+        }
+    if stem == "vancouver_rs":
+        return {
+            "city": "Vancouver, BC",
+            "bylaw": "Vancouver Zoning and Development By-law",
+            "district": "RS Districts",
+            "source_type": "Official bylaw section PDF",
+        }
+    if stem == "calgary_rcg":
+        return {
+            "city": "Calgary, AB",
+            "bylaw": "Calgary Land Use Bylaw 1P2007",
+            "district": "R-CG District",
+            "source_type": "Full bylaw PDF + district scope",
+        }
+    label = city_label_from_dir(output_dir)
+    return {"city": label, "bylaw": "Zoning bylaw", "district": "Selected district", "source_type": "Committed sources"}
+
+
+def _source_ref(rule: dict[str, Any]) -> str:
+    source = rule.get("source") if isinstance(rule.get("source"), dict) else {}
+    page = (
+        rule.get("page")
+        or source.get("page")
+        or source.get("pdf_page")
+        or source.get("source_page")
+    )
+    section = (
+        rule.get("section")
+        or rule.get("source_section")
+        or source.get("section")
+        or source.get("section_id")
+    )
+    parts = []
+    if page not in (None, ""):
+        parts.append(f"Page {page}")
+    if section not in (None, "") and not _looks_internal_id(section):
+        parts.append(f"§ {section}")
+    if not parts and rule.get("evidence_id"):
+        parts.append(str(rule.get("evidence_id")))
+    return "<br>".join(html.escape(part) for part in parts) or "Source packet"
+
+
+def _issue_label(rule: dict[str, Any]) -> str:
+    if rule.get("review_category"):
+        return _plain_label(rule.get("review_category"))
+    gaps = rule.get("support_gaps") or rule.get("review_reasons") or []
+    if gaps:
+        return _plain_label(gaps[0])
+    if rule.get("verification_status"):
+        return _plain_label(rule.get("verification_status"))
+    return "Needs review"
+
+
+def _issue_tone(label: str) -> str:
+    lowered = str(label).lower()
+    if "value" in lowered or "mismatch" in lowered:
+        return "issue-red"
+    if "table" in lowered or "reference" in lowered:
+        return "issue-amber"
+    if "scope" in lowered:
+        return "issue-blue"
+    if "condition" in lowered or "exception" in lowered:
+        return "issue-purple"
+    return "issue-green"
+
+
+def _overview_kpi_card(label: str, value: Any, delta: str, note: str, icon: str, tone: str, delta_tone: str) -> str:
+    return (
+        "<div class='kpi-card'>"
+        "<div class='kpi-top'>"
+        f"<div class='kpi-icon kpi-{tone}'>{html.escape(icon)}</div>"
+        "<div>"
+        f"<div class='kpi-label'>{html.escape(label)}</div>"
+        f"<div class='kpi-value'>{html.escape(str(value))}</div>"
+        f"<div class='kpi-delta {html.escape(delta_tone)}'>{html.escape(delta)}</div>"
+        "</div></div>"
+        f"<div class='kpi-note'>{html.escape(note)}</div>"
+        "</div>"
+    )
+
+
+def _overview_decision_flow(candidates: int, verified: int, review: int, rejected: int) -> str:
+    checked = candidates or verified + review + rejected
+    checked = max(checked, 0)
+    denominator = max(checked, 1)
+
+    def pct(value: int) -> str:
+        return f"{(value / denominator) * 100:.1f}%"
+
+    verified_pct = pct(verified)
+    review_pct = pct(review)
+    rejected_pct = pct(rejected)
+    unbucketed = max(0, checked - verified - review - rejected)
+    unbucketed_note = (
+        f"<span>{unbucketed:,} checked item{'s' if unbucketed != 1 else ''} did not enter a final bucket.</span>"
+        if unbucketed
+        else "<span>All checked items are accounted for in the three verifier buckets.</span>"
+    )
+    return f"""
+<div class="decision-flow">
+  <div class="decision-flow-head">
+    <div>
+      <h3>Candidate Check Flow</h3>
+    </div>
+  </div>
+  <div class="decision-flow-main">
+    <div class="decision-total">
+      <span>Items checked</span>
+      <b>{checked:,}</b>
+    </div>
+    <div>
+      <div class="decision-strip" aria-label="Verification outcome split">
+        <span class="seg verified" style="width:{verified_pct};"></span>
+        <span class="seg review" style="width:{review_pct};"></span>
+        <span class="seg rejected" style="width:{rejected_pct};"></span>
+      </div>
+      <div class="decision-branches">
+        <div class="decision-branch verified">
+          <span>Verified</span>
+          <b>{verified:,}</b>
+          <small>{verified_pct}. Moves downstream.</small>
+        </div>
+        <div class="decision-branch review">
+          <span>In review</span>
+          <b>{review:,}</b>
+          <small>{review_pct}. Needs review.</small>
+        </div>
+        <div class="decision-branch rejected">
+          <span>Rejected</span>
+          <b>{rejected:,}</b>
+          <small>{rejected_pct}. Blocked.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="decision-note">{unbucketed_note}<b>Verified-only rules feed GIS and compliance.</b></div>
+</div>
+"""
+
+
+def _overview_filters(st: Any, meta: dict[str, str], source_url: str) -> None:
+    columns = st.columns([1.1, 1.55, 1.35, 1.1, .7])
+    columns[0].selectbox("City", [meta["city"]], index=0, key="overview_city_filter")
+    columns[1].selectbox("Bylaw", [meta["bylaw"]], index=0, key="overview_bylaw_filter")
+    columns[2].selectbox("Division / District", [meta["district"]], index=0, key="overview_district_filter")
+    columns[3].selectbox("Source Type", [meta["source_type"]], index=0, key="overview_source_filter")
+    with columns[4]:
+        st.write("")
+        st.link_button("Open source", source_url, width="stretch")
+
+
+def _overview_verification_status_panel(st: Any, data: dict[str, Any], counts: dict[str, int]) -> None:
+    benchmark = data.get("benchmark") or {}
+    metrics = benchmark.get("rule_metrics") or {}
+    precision = metrics.get("verified_precision")
+    precision_text = f"{float(precision):.0%}" if isinstance(precision, (int, float)) else "not measured"
+    false_verified = int(metrics.get("false_verified_count") or 0)
+    source_failures = int(metrics.get("verified_source_support_failed_count") or 0)
+    source_tone = "ok" if source_failures == 0 else "bad"
+    false_tone = "ok" if false_verified == 0 else "bad"
+    st.markdown(
+        f"""
+<div class="console-card">
+  <div class="trust-status-head">
+    <div>
+      <div class="trust-title">Safety Gates</div>
+      <span>The numbers above are only useful if these gates stay clean.</span>
+    </div>
+    <b>Precision {html.escape(precision_text)}</b>
+  </div>
+  <div class="trust-mini-grid">
+    <div class="trust-mini {false_tone}"><span>False verified</span><b>{false_verified}</b><small>must stay zero</small></div>
+    <div class="trust-mini {source_tone}"><span>Source failures</span><b>{source_failures}</b><small>must stay zero</small></div>
+    <div class="trust-mini ok"><span>GIS boundary</span><b>verified</b><small>review items stay out</small></div>
+    <div class="trust-mini ok"><span>Decision rule</span><b>source</b><small>evidence decides</small></div>
+  </div>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+
+
+def _overview_review_queue(st: Any, data: dict[str, Any]) -> None:
+    review = list(data.get("review") or [])
+    visible = review[:6]
+    rows = []
+    for rule in visible:
+        issue = _issue_label(rule)
+        priority = _plain_label(rule.get("triage_priority") or rule.get("review_priority") or "medium")
+        priority_tone = "issue-red" if priority.lower() == "high" else "issue-amber" if priority.lower() == "medium" else "issue-green"
+        rows.append(
+            "<tr>"
+            f"<td><b>{html.escape(_plain_label(rule.get('rule_object')))}</b><br>{html.escape(_format_value_unit(rule.get('value'), str(rule.get('unit') or '')))}</td>"
+            f"<td><span class='issue-pill {_issue_tone(issue)}'>{html.escape(issue)}</span></td>"
+            f"<td>{_source_ref(rule)}</td>"
+            f"<td><span class='issue-pill {priority_tone}'>{html.escape(priority or 'Medium')}</span></td>"
+            "</tr>"
+        )
+    if not rows:
+        rows.append("<tr><td colspan='4'>No review-needed rules for this selection.</td></tr>")
+    st.markdown(
+        f"""
+<div class="console-card">
+  <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:10px;">
+    <h3 style="margin:0;">Review Queue <span class="issue-pill issue-amber">{len(review)}</span></h3>
+    <span style="font-size:12px;color:#16884a;font-weight:760;">View all in Review Queue</span>
+  </div>
+  <table class="table-lite">
+    <thead><tr><th>Rule Candidate</th><th>Issue</th><th>Source</th><th>Priority</th></tr></thead>
+    <tbody>{''.join(rows)}</tbody>
+  </table>
+  <div class="pager"><span>Showing 1–{min(len(review), 6)} of {len(review)}</span><span>‹</span><b>1</b><span>2</span><span>3</span><span>›</span></div>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+
+
+def _overview_source_coverage(st: Any, data: dict[str, Any]) -> None:
+    source = data.get("source_summary") or {}
+    corpus = source.get("m4_source_corpus") or {}
+    coverage = corpus.get("selected_rule_like_numeric_coverage")
+    pct = float(coverage) * 100 if coverage is not None else 0.0
+    if pct <= 0:
+        chunks = int(source.get("source_chunk_count") or 0)
+        packs = int(source.get("evidence_pack_count") or 0)
+        pct = min(100.0, (packs / max(chunks, 1)) * 100) if chunks else 0.0
+    st.markdown("<div class='console-card'><h3>Source Coverage</h3>", unsafe_allow_html=True)
+    try:
+        import plotly.graph_objects as go
+
+        fig = go.Figure(
+            go.Pie(
+                values=[pct, max(0.0, 100.0 - pct)],
+                hole=.68,
+                marker={"colors": ["#1f9d55", "#e8eef0"]},
+                textinfo="none",
+                sort=False,
+            )
+        )
+        fig.update_layout(
+            **{**PLOTLY_LAYOUT, "height": 210, "showlegend": False, "margin": {"l": 0, "r": 0, "t": 4, "b": 4}},
+            annotations=[{"text": f"<b>{pct:.0f}%</b><br>covered", "showarrow": False, "font": {"size": 18, "color": "#111827"}}],
+        )
+        st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
+    except Exception:
+        st.metric("Source coverage", f"{pct:.0f}%")
+    st.markdown(
+        f"""
+<div class="source-row"><span>Source chunks</span><div class="source-bar"><span style="width:100%;"></span></div></div>
+<div class="source-row"><span>Evidence packs</span><div class="source-bar"><span style="width:{min(100, pct):.0f}%;"></span></div></div>
+<div style="font-size:12px;color:#6b7280;margin-top:8px;">{int(source.get('source_chunk_count') or 0)} chunks · {int(source.get('evidence_pack_count') or 0)} evidence packs · {int(source.get('page_count') or 0)} scoped pages</div>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+
+
+def _overview_quality_chart(st: Any, data: dict[str, Any]) -> None:
+    benchmark = data.get("benchmark") or {}
+    metrics = benchmark.get("rule_metrics") or {}
+    precision = float(metrics.get("verified_precision") or 0.0)
+    recall = float(metrics.get("verified_or_review_recall") or metrics.get("release_candidate_recall") or 0.0)
+    source_support = 1.0 if int(metrics.get("verified_source_support_failed_count") or 0) == 0 else 0.0
+    st.markdown("<div class='console-card'><h3>Verification Quality</h3>", unsafe_allow_html=True)
+    try:
+        import plotly.graph_objects as go
+
+        labels = ["Precision", "Recall", "Source support"]
+        values = [precision, recall, source_support]
+        fig = go.Figure(
+            go.Scatter(
+                x=labels,
+                y=values,
+                mode="lines+markers",
+                line={"color": "#1f9d55", "width": 3},
+                marker={"size": 9, "color": ["#1f9d55", "#2f73b7", "#1f9d55"]},
+            )
+        )
+        fig.update_yaxes(range=[0, 1.05], tickformat=".0%")
+        fig.update_layout(**{**PLOTLY_LAYOUT, "height": 210, "margin": {"l": 4, "r": 4, "t": 8, "b": 28}, "showlegend": False})
+        st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
+    except Exception:
+        st.metric("Verified precision", f"{precision:.0%}")
+        st.metric("Verified-or-review recall", f"{recall:.0%}")
+    st.markdown(
+        f"<div style='font-size:12px;color:#6b7280;'>Precision {precision:.0%} · verified-or-review recall {recall:.0%} · false verified {int(metrics.get('false_verified_count') or 0)}</div></div>",
+        unsafe_allow_html=True,
+    )
+
+
+def _overview_gis_status(st: Any, data: dict[str, Any], output_dir: Path) -> None:
+    contract = _read_json(output_dir / "gis_rule_contract.json", {})
+    rules = contract.get("rules", []) if isinstance(contract, dict) else []
+    dedup = contract.get("deduplication", {}) if isinstance(contract, dict) else {}
+    verified = len(data.get("verified") or [])
+    ready = len(rules) or verified
+    pending = len(data.get("review") or [])
+    merged = int(dedup.get("duplicate_merged_count") or max(0, verified - ready))
+    st.markdown(
+        f"""
+<div class="console-card">
+  <h3>GIS Handoff</h3>
+  <div class="gis-flow">
+    <div class="gis-node ok"><span>Verified rows from verifier</span><b>{verified}</b></div>
+    <div class="gis-node"><span>Deduplicated GIS constraints</span><b>{ready}</b></div>
+    <div class="gis-node warn"><span>Pending review</span><b>{pending}</b></div>
+  </div>
+  <div style="font-size:12px;color:#6b7280;margin-top:10px;">{merged} verified row{'s' if merged != 1 else ''} merged as duplicates for GIS export.</div>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+
+
+def _overview_safety_strip(data: dict[str, Any], output_dir: Path) -> str:
+    benchmark = data.get("benchmark") or {}
+    metrics = benchmark.get("rule_metrics") or {}
+    precision = metrics.get("verified_precision")
+    precision_text = f"{float(precision):.0%}" if isinstance(precision, (int, float)) else "not measured"
+    false_verified = int(metrics.get("false_verified_count") or 0)
+    source_failures = int(metrics.get("verified_source_support_failed_count") or 0)
+    contract = _read_json(output_dir / "gis_rule_contract.json", {})
+    dedup = contract.get("deduplication", {}) if isinstance(contract, dict) else {}
+    merged = int(dedup.get("duplicate_merged_count") or 0)
+    return f"""
+<div class="overview-safety-strip">
+  <div><span>Verified precision</span><b>{html.escape(precision_text)}</b></div>
+  <div><span>False verified</span><b>{false_verified}</b></div>
+  <div><span>Source failures</span><b>{source_failures}</b></div>
+  <div><span>GIS duplicates merged</span><b>{merged}</b></div>
+</div>
+"""
+
+
+def _overview_next_steps_html() -> str:
+    steps = [
+        ("Review differences", "Open Human Review when a candidate looks close to a verified rule."),
+        ("Check repair impact", "Open Repair Evidence to see which evidence gaps improved and which still block promotion."),
+        ("Handoff verified-only", "Open GIS Handoff when you need the deduplicated map-ready rules."),
+    ]
+    cards = []
+    for title, body in steps:
+        cards.append(
+            "<div class='next-step-card'>"
+            f"<b>{html.escape(title)}</b>"
+            f"<span>{html.escape(body)}</span>"
+            "</div>"
+        )
+    return "<div class='next-step-grid'>" + "".join(cards) + "</div>"
+
+
+def _overview_chat_panel(st: Any, data: dict[str, Any], output_dir: Path, *, centered: bool = False) -> None:
+    index_path = bylaw_index_path(output_dir)
+    city_stem = city_stem_from_dir(output_dir)
+    chat_key = f"overview::{_rag_chat_key(city_stem)}"
+    st.session_state.setdefault(chat_key, [])
+    history = st.session_state[chat_key]
+    shell_class = "console-card ask-card ask-card-centered" if centered else "console-card ask-card"
+    st.markdown(
+        f"""
+<div class="{shell_class}">
+  <div style="display:flex;justify-content:space-between;align-items:center;">
+    <h3 style="margin:0;">Ask the Bylaw</h3>
+    <span class="mode-pill live">source grounded</span>
+  </div>
+  <div class="ask-intro">Ask a bylaw question after checking the verification result. The answer uses source chunks and cannot approve or edit rules.</div>
+""",
+        unsafe_allow_html=True,
+    )
+    if index_path is None:
+        st.info("No bylaw retrieval index found for this city.")
+        st.markdown("</div>", unsafe_allow_html=True)
+        return
+
+    with st.form(f"overview_ask_form_{city_stem}", clear_on_submit=True):
+        ask_col, send_col = st.columns([0.82, 0.18], gap="small")
+        with ask_col:
+            question = st.text_input(
+                "Ask a bylaw question...",
+                placeholder="Ask a bylaw question...",
+                label_visibility="collapsed",
+            )
+        with send_col:
+            submitted = st.form_submit_button("Ask", width="stretch")
+    if submitted and question.strip():
+        with st.spinner("Reading the bylaw…"):
+            _bylaw_chat_respond(st, question.strip(), index_path, chat_key)
+        st.rerun()
+
+    suggestions = _bylaw_suggestions(data, limit=3)
+    if suggestions:
+        st.markdown("<div class='prompt-row-label'>Prompt library</div>", unsafe_allow_html=True)
+        prompt_columns = st.columns(len(suggestions), gap="small")
+        for index, suggestion in enumerate(suggestions):
+            with prompt_columns[index]:
+                if st.button(suggestion, key=f"overview_prompt_{city_stem}_{index}", width="stretch"):
+                    with st.spinner("Reading the bylaw…"):
+                        _bylaw_chat_respond(st, suggestion, index_path, chat_key)
+                    st.rerun()
+    if history:
+        st.markdown("<div class='prompt-row-label'>Recent answer</div>", unsafe_allow_html=True)
+        for message in history[-2:]:
+            role = "chat-user" if message.get("role") == "user" else "chat-assistant"
+            st.markdown(f"<div class='chat-bubble {role}'>{html.escape(str(message.get('content') or ''))}</div>", unsafe_allow_html=True)
+        sources = (history[-1].get("sources") if history and history[-1].get("role") == "assistant" else []) or []
+        if sources:
+            hit = sources[0]
+            loc = _clean_section_label(hit.get("section") or hit.get("chunk_id"), hit.get("page")) or "source section"
+            st.markdown(f"<div class='source-cite'><b>Source cited</b><br>{html.escape(str(loc))}</div>", unsafe_allow_html=True)
+    st.caption("Advisory only. Verification decisions stay with the deterministic verifier.")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+def _overview_console_page(st: Any, data: dict[str, Any], output_dir: Path, source_url: str) -> None:
+    meta = _city_display_parts(output_dir)
+    counts = output_bucket_counts(data)
+    benchmark = data.get("benchmark") or {}
+    metrics = benchmark.get("rule_metrics") or {}
+    candidates = len(data.get("rule_candidates") or []) or int(metrics.get("candidate_rule_count") or 0)
+    verified = int(counts.get("verified") or 0)
+    review = int(counts.get("review") or 0)
+    rejected = int(counts.get("rejected") or 0)
+
+    st.markdown(
+        """
+<div class="overview-titlebar">
+  <div>
+    <h1>Zoning Bylaw Verification Overview</h1>
+    <p>Start with the verification result, then ask the bylaw. Details stay in the focused pages on the left.</p>
+  </div>
+  <div class="overview-actions">
+    <span>Local preview</span><span class="live-dot"></span>
+  </div>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        f"""
+<div class="selection-summary">
+  <div><b>{html.escape(meta["city"])}</b><span>{html.escape(meta["bylaw"])} · {html.escape(meta["district"])}</span></div>
+  <a href="{html.escape(source_url)}" target="_blank">Open official source</a>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+    st.markdown(_overview_decision_flow(candidates, verified, review, rejected), unsafe_allow_html=True)
+
+    _overview_chat_panel(st, data, output_dir, centered=True)
+
+    st.markdown(
+        "<div class='overview-band-title'>Run guardrails</div>"
+        "<p class='overview-band-copy'>A compact safety check. The detailed audit lives in Quality Audit.</p>",
+        unsafe_allow_html=True,
+    )
+    st.markdown(_overview_safety_strip(data, output_dir), unsafe_allow_html=True)
+    st.markdown(
+        "<div class='overview-band-title'>Next best actions</div>",
+        unsafe_allow_html=True,
+    )
+    st.markdown(_overview_next_steps_html(), unsafe_allow_html=True)
+
+
+def _verified_rules_page(st: Any, data: dict[str, Any]) -> None:
+    st.caption("Open a group instead of scrolling through the full verified-rule set.")
+    rules = data.get("verified") or []
+    group_choice = st.radio(
+        "Group verified rules by",
+        ["Rule family", "Source page"],
+        horizontal=True,
+        label_visibility="collapsed",
+        key="verified_group_mode",
+    )
+    mode = "source_page" if group_choice == "Source page" else "rule_family"
+    _grouped_rule_sentence_list(
+        st,
+        rules,
+        group_mode=mode,
+        show_gap=False,
+        key_prefix="verified_rules",
+        per_group_limit=8,
+    )
+
+
+def _source_library_page(st: Any, data: dict[str, Any], source_url: str) -> None:
+    st.markdown("<div class='section-head'>Source Library</div>", unsafe_allow_html=True)
+    st.markdown("<p class='section-sub'>Committed source material and evidence packets used by the dashboard.</p>", unsafe_allow_html=True)
+    source = data.get("source_summary") or {}
+    cards = [
+        ("Source chunks", source.get("source_chunk_count", 0), "sections available to retrieval"),
+        ("Evidence packs", source.get("evidence_pack_count", 0), "bounded support packets"),
+        ("Scoped pages", source.get("page_count", 0), "source pages represented"),
+    ]
+    html_cards = "".join(_overview_kpi_card(label, value, note, note, "□", "blue", "info") for label, value, note in cards)
+    st.markdown(f"<div class='kpi-grid'>{html_cards}</div>", unsafe_allow_html=True)
+    st.link_button("Open official source PDF", source_url)
+    evidence = data.get("evidence_units") or []
+    if evidence:
+        rows = [
+            {
+                "Evidence ID": item.get("evidence_id"),
+                "Page": item.get("page"),
+                "Section": item.get("section"),
+                "Type": item.get("evidence_type"),
+                "Quote": _short_display_quote(_quote_from_evidence(item), 180),
+            }
+            for item in evidence[:80]
+        ]
+        st.dataframe(_display_rows(rows), width="stretch", hide_index=True)
+
+
+def _analytics_page(st: Any, data: dict[str, Any]) -> None:
+    st.markdown("<div class='section-head'>Analytics</div>", unsafe_allow_html=True)
+    st.markdown("<p class='section-sub'>Quality, status mix, and verification-flow diagnostics.</p>", unsafe_allow_html=True)
+    counts = output_bucket_counts(data)
+    _status_mix_bar(st, counts)
+    _overview_quality_chart(st, data)
+    _funnel_view(st, data)
+
+
+def _settings_page(st: Any, source_url: str) -> None:
+    st.markdown("<div class='section-head'>Settings</div>", unsafe_allow_html=True)
+    st.markdown("<p class='section-sub'>Read-only dashboard configuration. No verifier outputs are changed here.</p>", unsafe_allow_html=True)
+    status = _bylaw_llm_status(st)
+    st.table(
+        [
+            {"setting": "Dashboard mode", "value": "Read-only local preview"},
+            {"setting": "Chat provider", "value": status.get("provider")},
+            {"setting": "Chat model", "value": status.get("model") or "retrieval only"},
+            {"setting": "Official source", "value": source_url},
+        ]
+    )
+
+
 def _rules_drilldown(st, data: dict[str, Any]) -> None:
     """Make every decision count explorable: one expander per bucket that opens
     the exact rules behind the number (rule id, family, direction, value, unit,
@@ -1150,16 +1698,17 @@ def _summary_tab(st: Any, data: dict[str, Any]) -> None:
 
 
 def _review_queue_tab(st: Any, data: dict[str, Any], output_dir: Path, triage_items: list[dict[str, Any]]) -> None:
-    st.caption("Rules the verifier could not prove — your worklist. Filtering here never changes a decision.")
-    columns = st.columns(4)
-    with columns[0]:
-        categories = st.multiselect("Why it needs review", _unique(triage_items, "review_category"), format_func=_plain_label)
-    with columns[1]:
-        priorities = st.multiselect("Urgency", _unique(triage_items, "triage_priority"), format_func=_plain_label)
-    with columns[2]:
-        likelihoods = st.multiselect("Likely outcome", _unique(triage_items, "likely_status"), format_func=_plain_label)
-    with columns[3]:
-        rule_objects = st.multiselect("Rule family", _unique(triage_items, "rule_object"), format_func=_plain_label)
+    st.caption("Rules the verifier could not prove. Pick one item, see why it is held, then open details only when needed.")
+    with st.expander("Narrow the review queue", expanded=False):
+        columns = st.columns(4)
+        with columns[0]:
+            categories = st.multiselect("Why it needs review", _unique(triage_items, "review_category"), format_func=_plain_label)
+        with columns[1]:
+            priorities = st.multiselect("Urgency", _unique(triage_items, "triage_priority"), format_func=_plain_label)
+        with columns[2]:
+            likelihoods = st.multiselect("Likely outcome", _unique(triage_items, "likely_status"), format_func=_plain_label)
+        with columns[3]:
+            rule_objects = st.multiselect("Rule family", _unique(triage_items, "rule_object"), format_func=_plain_label)
     filtered_items = filter_triage_items(
         triage_items,
         categories=categories,
@@ -1168,22 +1717,47 @@ def _review_queue_tab(st: Any, data: dict[str, Any], output_dir: Path, triage_it
         rule_objects=rule_objects,
     )
     evidence_by_id = {str(unit.get("evidence_id")): unit for unit in data["evidence_units"]}
-    # Primary view: the worklist as plain-English sentences with the gap in red.
-    n = len(filtered_items)
-    st.markdown(
-        f"<div class='section-head' style='font-size:16px;'>Worklist — {n} rule{'s' if n != 1 else ''}</div>",
-        unsafe_allow_html=True,
-    )
-    st.caption("Each held rule as a sentence; the field the verifier could not ground is in red.")
-    _rule_sentence_list(st, filtered_items, show_gap=True)
-    st.divider()
-    st.markdown("##### Reviewer tools")
-    queue_tabs = st.tabs(["Inspect one rule", "Compare with verified", "Queue table"])
-    with queue_tabs[0]:
+    _candidate_compare_tab(st, filtered_items, data["review"], data["verified"], output_dir, evidence_by_id)
+
+    st.markdown("<div class='section-spacer'></div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-head' style='font-size:16px;'>Optional drill-downs</div>", unsafe_allow_html=True)
+    st.caption("Open these only when you need the full queue, source packet, or routing table.")
+    drill_left, drill_mid, drill_right = st.columns(3)
+    show_grouped = drill_left.toggle("Show grouped worklist", value=False, key="review_show_grouped_worklist")
+    show_source = drill_mid.toggle("Show source packet", value=False, key="review_show_source_packet")
+    show_table = drill_right.toggle("Show routing table", value=False, key="review_show_routing_table")
+
+    if show_grouped:
+        n = len(filtered_items)
+        st.markdown(
+            f"<div class='section-head' style='font-size:15px;'>Grouped worklist - {n} rule{'s' if n != 1 else ''}</div>",
+            unsafe_allow_html=True,
+        )
+        group_choice = st.radio(
+            "Group review worklist by",
+            ["Issue type", "Rule family", "Priority"],
+            horizontal=True,
+            label_visibility="collapsed",
+            key="review_group_mode",
+        )
+        mode = {
+            "Issue type": "issue",
+            "Rule family": "rule_family",
+            "Priority": "priority",
+        }[group_choice]
+        _grouped_rule_sentence_list(
+            st,
+            filtered_items,
+            group_mode=mode,
+            show_gap=True,
+            key_prefix="review_worklist",
+            per_group_limit=8,
+        )
+
+    if show_source:
         _review_assistant_tab(st, data["review_assistant_packets"], data["review"], output_dir, evidence_by_id)
-    with queue_tabs[1]:
-        _candidate_compare_tab(st, filtered_items, data["review"], data["verified"], output_dir, evidence_by_id)
-    with queue_tabs[2]:
+
+    if show_table:
         _review_router_tab(st, data["router"])
 
 
@@ -1331,22 +1905,29 @@ def main() -> None:
     if not city_dirs:
         st.error(f"No verifier output directories found under `{OUTPUTS_ROOT}`.")
         return
-    st.sidebar.header("Dataset")
-    PORTFOLIO = "__portfolio__"
-    selection = st.sidebar.selectbox(
-        "View",
-        [PORTFOLIO, *city_dirs],
-        index=0,
-        format_func=lambda item: "Start here \u2014 current M7 overview" if item == PORTFOLIO else city_label_from_dir(item),
-        help=(
-            "Start with the current M7 overview. Pick a city for drilldown. "
-            "Only current M7 and its V3 predecessor are shown here."
-        ),
+    st.sidebar.markdown(
+        """
+<div class="sidebar-brand">
+  <div class="brand-mark">BV</div>
+  <div class="brand-title">Bylaw Verification<br>Dashboard</div>
+</div>
+""",
+        unsafe_allow_html=True,
     )
-    if selection == PORTFOLIO:
-        _render_header(st, "Current M7 Verification Status", portfolio=True)
-        _portfolio_page(st)
-        return
+    st.sidebar.markdown("<div class='nav-title'>Current run</div>", unsafe_allow_html=True)
+    default_index = 0
+    for index, path in enumerate(city_dirs):
+        if city_stem_from_dir(path) == "burnaby_r1":
+            default_index = index
+            break
+    selection = st.sidebar.selectbox(
+        "City output",
+        city_dirs,
+        index=default_index,
+        format_func=city_label_from_dir,
+        label_visibility="collapsed",
+        help="Pick a current M7 city output. The dashboard remains read-only.",
+    )
     output_dir = selection
     city_key = city_key_from_dir(output_dir)
     city_label = city_label_from_dir(output_dir)
@@ -1359,38 +1940,61 @@ def main() -> None:
     # Reviewer queue source (filters now live inline on the Review Queue tab).
     triage_items = data["review"]
 
-    # Lean sidebar: the dataset selector lives above; everything heavier than a
-    # glance is one collapsed door away.
-    st.sidebar.caption(f"Loaded: {output_dir.name}")
-    # Primary navigation is a styled left-rail (CSS turns this radio into a nav
-    # rail) — one page at a time, so the user never loses direction in nested tabs.
-    st.sidebar.markdown("<div class='nav-title'>Sections</div>", unsafe_allow_html=True)
-    nav = st.sidebar.radio(
-        "Sections",
-        ["Summary", "Review", "GIS Handoff", "Ask the Bylaw", "Diagnostics"],
-        key="primary_nav",
-        label_visibility="collapsed",
-    )
-    _sidebar_status_legend(st)
-    _sidebar_guidance(st)
     st.sidebar.markdown(
-        "<div class='trust-note' style='margin-top:10px;font-size:12px;'>Read-only · advisory. "
-        f"<a href='{html.escape(source_url)}' target='_blank'>Source bylaw PDF</a></div>",
+        f"""
+<div class="sidebar-run">
+  <span>Source document</span>
+  <a href="{html.escape(source_url)}" target="_blank">Open official PDF</a>
+</div>
+""",
         unsafe_allow_html=True,
     )
 
-    _render_header(st, city_label, section=nav)
+    pipeline_nav = [
+        ("0 Results + Chat", "Overview"),
+        ("1 Source Documents", "Source Documents"),
+        ("2 Verified Rules", "Verified Rules"),
+        ("3 Human Review", "Human Review"),
+        ("4 Repair Evidence", "Repair Evidence"),
+        ("5 GIS Handoff", "GIS Handoff"),
+        ("6 Quality Audit", "Quality Checks"),
+    ]
+    nav_lookup = dict(pipeline_nav)
+    st.sidebar.markdown("<div class='nav-title'>Pipeline order</div>", unsafe_allow_html=True)
+    nav_label = st.sidebar.radio(
+        "Pipeline",
+        [label for label, _ in pipeline_nav],
+        key="primary_nav",
+        label_visibility="collapsed",
+    )
+    nav = nav_lookup[nav_label]
+    st.sidebar.markdown(
+        """
+<div class="pipeline-note">
+  <b>One rule</b>
+  <span>Verified items move forward. Uncertain items stay in review.</span>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
 
-    if nav == "Summary":
-        _summary_tab(st, data)
-    elif nav == "Review":
+    if nav == "Overview":
+        _overview_console_page(st, data, output_dir, source_url)
+    else:
+        _render_header(st, city_label, section=nav)
+
+    if nav == "Verified Rules":
+        _verified_rules_page(st, data)
+    elif nav == "Human Review":
         _review_queue_tab(st, data, output_dir, triage_items)
+    elif nav == "Repair Evidence":
+        _repair_page(st, data)
+    elif nav == "Source Documents":
+        _source_library_page(st, data, source_url)
     elif nav == "GIS Handoff":
         _gis_handoff_tab(st, data, output_dir)
-    elif nav == "Ask the Bylaw":
-        _bylaw_tab(st, data)
-    else:
-        _diagnostics_page(st, data, output_dir)
+    elif nav == "Quality Checks":
+        _analytics_page(st, data)
 
 
 def count_audit_status(slot_audit: dict[str, Any]) -> str:
@@ -2300,6 +2904,57 @@ def _legal_context_expander(
         st.caption("Retrieved context only. It cannot change the rule's decision.")
 
 
+def _review_focus_html(
+    triage_item: dict[str, Any],
+    review_rule: dict[str, Any],
+    verified_rule: dict[str, Any],
+    comparison_rows: list[dict[str, Any]],
+) -> str:
+    changed = [row for row in comparison_rows if str(row.get("matches") or "").lower() != "yes"]
+    issue = _plain_label(
+        triage_item.get("review_category")
+        or triage_item.get("action_bucket")
+        or review_rule.get("review_category")
+        or "Needs review"
+    )
+    priority = _plain_label(triage_item.get("triage_priority") or triage_item.get("priority") or "not ranked")
+    gaps = _gap_labels(review_rule.get("support_gaps") or triage_item.get("support_gaps"))
+    gap_text = ", ".join(gaps[:3]) if gaps else "No coded gap recorded"
+    if len(gaps) > 3:
+        gap_text += f", +{len(gaps) - 3} more"
+    closest = verified_rule.get("rule_id") if verified_rule else None
+    closest_text = str(closest) if closest else "No verified match"
+    next_step = (
+        triage_item.get("suggested_fix")
+        or triage_item.get("next_step")
+        or triage_item.get("suggested_next_action")
+        or "Inspect source evidence before any rerun."
+    )
+    diff_text = f"{len(changed)} field{'s' if len(changed) != 1 else ''} differ" if comparison_rows else "No comparison available"
+    if comparison_rows and not changed:
+        diff_text = "No field differences"
+    cards = [
+        ("Why held", issue, "Verifier could not prove this candidate.", "warn"),
+        ("Main gap", gap_text, f"Priority: {priority}", "bad" if gaps else "warn"),
+        ("Closest verified", closest_text, diff_text, "ok" if verified_rule else "neutral"),
+        ("Next action", str(next_step), "Advisory only; no output changes here.", "action"),
+    ]
+    html_cards = "".join(
+        "<div class='review-focus-card {tone}'>"
+        "<span>{label}</span>"
+        "<b>{value}</b>"
+        "<small>{note}</small>"
+        "</div>".format(
+            tone=html.escape(tone),
+            label=html.escape(label),
+            value=html.escape(value),
+            note=html.escape(note),
+        )
+        for label, value, note, tone in cards
+    )
+    return f"<div class='review-focus-grid'>{html_cards}</div>"
+
+
 def _candidate_compare_tab(
     st: Any,
     triage_items: list[dict[str, Any]],
@@ -2308,26 +2963,49 @@ def _candidate_compare_tab(
     output_dir: Path = DEFAULT_OUTPUT_DIR,
     evidence_by_id: dict[str, dict[str, Any]] | None = None,
 ) -> None:
-    st.subheader("Compare With Verified Rules")
-    st.caption("Use this when a review item looks like a rule that was already proven. Similarity is only a review aid.")
+    st.markdown("<div class='section-head' style='font-size:18px;'>Review one candidate</div>", unsafe_allow_html=True)
+    st.caption("Compare one held candidate against its closest verified rule. Only differences are shown first.")
     if not triage_items:
         st.info("No review items match the current filters.")
         return
     options = [item["rule_id"] for item in triage_items]
     triage_lookup = {str(item.get("rule_id")): item for item in triage_items}
     selected_id = st.selectbox(
-        "Rule to compare",
+        "Choose a review item",
         options,
+        key="review_focus_rule",
         format_func=lambda rule_id: _rule_option_label(triage_lookup.get(str(rule_id), {})),
     )
     review_rule = _by_rule_id(review_rules, selected_id)
-    _legal_context_expander(st, output_dir, review_rule, evidence_by_id)
     triage_item = next((item for item in triage_items if item["rule_id"] == selected_id), {})
     semantic_match_id = triage_item.get("semantic_verified_rule_id") or review_rule.get("semantic_verified_rule_id")
     lexical_match_id = triage_item.get("similar_verified_rule_id") or review_rule.get("similar_verified_rule_id")
     verified_rule = _by_rule_id(verified_rules, semantic_match_id or lexical_match_id)
 
-    st.markdown("### Claim comparison")
+    comparison_rows: list[dict[str, Any]] = []
+    if verified_rule:
+        comparison_rows = _field_comparison_rows(review_rule, verified_rule)
+    st.markdown(_review_focus_html(triage_item, review_rule, verified_rule, comparison_rows), unsafe_allow_html=True)
+
+    if verified_rule:
+        different_rows = [row for row in comparison_rows if str(row.get("matches") or "").lower() != "yes"]
+        matching_rows = [row for row in comparison_rows if str(row.get("matches") or "").lower() == "yes"]
+        rows_to_show = different_rows or comparison_rows
+        st.markdown("##### Candidate vs verified")
+        st.markdown(
+            f"<div class='diff-summary'><b>Highlighted differences</b><br>{html.escape(_field_difference_summary(comparison_rows))}</div>",
+            unsafe_allow_html=True,
+        )
+        st.markdown(_field_difference_html(rows_to_show), unsafe_allow_html=True)
+        if matching_rows and different_rows:
+            with st.expander(f"Open {len(matching_rows)} matching fields", expanded=False):
+                st.markdown(_field_difference_html(matching_rows), unsafe_allow_html=True)
+        with st.expander("Open full field comparison table", expanded=False):
+            st.dataframe(_display_rows(comparison_rows), width="stretch", hide_index=True)
+    else:
+        st.info("No closest verified rule was found, so this item needs evidence repair or manual review.")
+
+    st.markdown("##### Claim side by side")
     sentence_left, sentence_right = st.columns(2)
     with sentence_left:
         _sentence_card(
@@ -2355,27 +3033,262 @@ def _candidate_compare_tab(
                 "Use evidence repair or manual review instead.",
             )
 
-    if verified_rule:
-        st.markdown("#### Field differences")
-        st.dataframe(_display_rows(_field_comparison_rows(review_rule, verified_rule)), width="stretch", hide_index=True)
+    with st.expander("Open raw fields and evidence", expanded=False):
+        left, right = st.columns(2)
+        with left:
+            st.markdown("##### Candidate in review")
+            st.table([compact_rule_row(review_rule)])
+            st.markdown("**Evidence**")
+            st.code(_source_text(review_rule), language="text")
+        with right:
+            st.markdown("##### Closest verified rule")
+            if verified_rule:
+                st.table([compact_rule_row(verified_rule)])
+                st.markdown(f"Semantic score: `{triage_item.get('semantic_score') or review_rule.get('semantic_score') or 'n/a'}`")
+                st.markdown(f"Lexical score: `{triage_item.get('similar_verified_score')}`")
+                st.code(_source_text(verified_rule), language="text")
+            else:
+                st.info("No verified comparison rule found.")
 
-    left, right = st.columns(2)
-    with left:
-        st.markdown("### Candidate in review")
-        st.table([compact_rule_row(review_rule)])
-        st.markdown("#### Evidence")
-        st.code(_source_text(review_rule), language="text")
-        st.markdown("#### Suggested next step")
-        st.write(triage_item.get("suggested_fix"))
-    with right:
-        st.markdown("### Closest verified rule")
-        if verified_rule:
-            st.table([compact_rule_row(verified_rule)])
-            st.markdown(f"Semantic score: `{triage_item.get('semantic_score') or review_rule.get('semantic_score') or 'n/a'}`")
-            st.markdown(f"Lexical score: `{triage_item.get('similar_verified_score')}`")
-            st.code(_source_text(verified_rule), language="text")
-        else:
-            st.info("No verified comparison rule found.")
+    _legal_context_expander(st, output_dir, review_rule, evidence_by_id)
+
+
+def _gap_labels(values: Any) -> list[str]:
+    if not values:
+        return []
+    if isinstance(values, str):
+        values = [values]
+    return [_plain_label(value) for value in values if value not in (None, "")]
+
+
+def _compact_label_text(values: Any, *, limit: int = 3, empty: str = "None recorded") -> str:
+    labels = _gap_labels(values)
+    if not labels:
+        return empty
+    shown = labels[:limit]
+    suffix = f", +{len(labels) - limit} more" if len(labels) > limit else ""
+    return ", ".join(shown) + suffix
+
+
+def _fixed_gaps(original: Any, retry: Any) -> list[str]:
+    retry_raw = {str(value) for value in (retry or [])}
+    return [_plain_label(value) for value in (original or []) if str(value) not in retry_raw]
+
+
+def _repair_impact_rows(rerun: dict[str, Any], repair: dict[str, Any]) -> list[dict[str, Any]]:
+    attempts = rerun.get("attempts") or []
+    rows = []
+    for item in attempts:
+        original_gaps = item.get("original_support_gaps") or []
+        retry_gaps = item.get("retry_support_gaps") or []
+        fixed = _fixed_gaps(original_gaps, retry_gaps)
+        rows.append(
+            {
+                "rule_id": item.get("original_rule_id"),
+                "claim": _rule_sentence(item),
+                "status": _plain_label(item.get("retry_decision")),
+                "promotion_ready": bool(item.get("promotion_ready")),
+                "fixed": fixed,
+                "still_missing": _gap_labels(retry_gaps),
+                "original_evidence": item.get("original_evidence_id"),
+                "retry_evidence": item.get("retry_evidence_id"),
+                "confidence": item.get("repair_confidence") or item.get("best_repair_confidence"),
+            }
+        )
+    if rows:
+        return rows
+    for item in (repair.get("suggestions") or []):
+        rows.append(
+            {
+                "rule_id": item.get("rule_id"),
+                "claim": _rule_sentence(item),
+                "status": "Suggested repair",
+                "promotion_ready": False,
+                "fixed": _gap_labels(item.get("repairable_fields")),
+                "still_missing": _gap_labels(item.get("support_gaps")),
+                "original_evidence": item.get("current_evidence_id"),
+                "retry_evidence": ((item.get("top_evidence") or [{}])[0] or {}).get("evidence_id"),
+                "confidence": item.get("best_repair_confidence"),
+            }
+        )
+    return rows
+
+
+def _repair_impact_html(rows: list[dict[str, Any]], *, limit: int = 8) -> str:
+    if not rows:
+        return "<div class='empty-note'>No repair impact rows found for this run.</div>"
+    cards = []
+    for row in rows[:limit]:
+        fixed = row.get("fixed") or []
+        missing = row.get("still_missing") or []
+        tone = "ready" if row.get("promotion_ready") else "fixed" if fixed else "blocked"
+        fixed_text = _compact_label_text(fixed, limit=3, empty="No support gap improved yet")
+        missing_text = _compact_label_text(missing, limit=3, empty="None recorded")
+        cards.append(
+            "<div class='repair-card {tone}'>"
+            "<div class='repair-card-head'><b>{rule_id}</b><span>{status}</span></div>"
+            "<p>{claim}</p>"
+            "<div class='repair-columns'>"
+            "<div><small>Gaps improved</small><strong>{fixed}</strong></div>"
+            "<div><small>Still blocking</small><strong>{missing}</strong></div>"
+            "</div>"
+            "<div class='repair-foot'>Evidence {original} -> {retry} · confidence {confidence}</div>"
+            "</div>".format(
+                tone=html.escape(tone),
+                rule_id=html.escape(str(row.get("rule_id") or "")),
+                status=html.escape(str(row.get("status") or "")),
+                claim=html.escape(str(row.get("claim") or "")),
+                fixed=html.escape(fixed_text),
+                missing=html.escape(missing_text),
+                original=html.escape(str(row.get("original_evidence") or "n/a")),
+                retry=html.escape(str(row.get("retry_evidence") or "n/a")),
+                confidence=html.escape(_display_value(row.get("confidence"))),
+            )
+        )
+    if len(rows) > limit:
+        cards.append(
+            "<div class='repair-card muted'><div class='repair-card-head'><b>More repair rows</b>"
+            f"<span>{len(rows) - limit} more</span></div><p>Use the tables below for the full repair list.</p></div>"
+        )
+    return "<div class='repair-impact-grid'>" + "".join(cards) + "</div>"
+
+
+def _repair_flow_html(
+    *,
+    suggestion_count: int,
+    attempt_count: int,
+    improved_count: int,
+    ready_count: int,
+    still_review: int,
+    rejected: int,
+    verified_after: int,
+) -> str:
+    steps = [
+        ("Suggestions", f"{suggestion_count:,}", "Possible stronger source passages."),
+        ("Shadow reruns", f"{attempt_count:,}", "Retested without changing outputs."),
+        ("Gaps improved", f"{improved_count:,}", "At least one missing support signal improved."),
+        ("Promotion ready", f"{ready_count:,}", "Must still pass deterministic gates."),
+    ]
+    step_html = "".join(
+        "<div class='repair-flow-step'>"
+        "<span>{label}</span><b>{value}</b><small>{note}</small>"
+        "</div>".format(
+            label=html.escape(label),
+            value=html.escape(value),
+            note=html.escape(note),
+        )
+        for label, value, note in steps
+    )
+    status = (
+        f"Shadow outcome: {still_review:,} still in review, {rejected:,} rejected, "
+        f"{verified_after:,} verified after rerun. Output promotion remains blocked unless the verifier proves source support."
+    )
+    return f"<div class='repair-flow'>{step_html}</div><div class='repair-status-note'>{html.escape(status)}</div>"
+
+
+def _repair_focus_html(row: dict[str, Any]) -> str:
+    fixed = row.get("fixed") or []
+    missing = row.get("still_missing") or []
+    fixed_text = _compact_label_text(fixed, limit=3, empty="No support gap improved yet")
+    missing_text = _compact_label_text(missing, limit=3, empty="None recorded")
+    tone = "ready" if row.get("promotion_ready") else "fixed" if fixed else "blocked"
+    if row.get("promotion_ready"):
+        decision = "Ready for deterministic promotion check"
+    elif fixed:
+        decision = "Evidence improved, but still not verified"
+    else:
+        decision = "Still blocked"
+    return (
+        "<div class='repair-focus-card {tone}'>"
+        "<div class='repair-focus-head'>"
+        "<div><span>Selected repair result</span><b>{rule_id}</b></div>"
+        "<strong>{decision}</strong>"
+        "</div>"
+        "<p>{claim}</p>"
+        "<div class='repair-columns'>"
+        "<div><small>Gaps improved</small><strong>{fixed}</strong></div>"
+        "<div><small>Still blocking</small><strong>{missing}</strong></div>"
+        "</div>"
+        "<div class='repair-foot'>Evidence {original} -> {retry} · confidence {confidence}</div>"
+        "</div>".format(
+            tone=html.escape(tone),
+            rule_id=html.escape(str(row.get("rule_id") or "")),
+            decision=html.escape(decision),
+            claim=html.escape(str(row.get("claim") or "")),
+            fixed=html.escape(fixed_text),
+            missing=html.escape(missing_text),
+            original=html.escape(str(row.get("original_evidence") or "n/a")),
+            retry=html.escape(str(row.get("retry_evidence") or "n/a")),
+            confidence=html.escape(_display_value(row.get("confidence"))),
+        )
+    )
+
+
+def _repair_page(st: Any, data: dict[str, Any]) -> None:
+    repair = data.get("repair") or {"suggestions": []}
+    rerun = data.get("rerun") or {"attempts": []}
+    suggestions = repair.get("suggestions") or []
+    attempts = rerun.get("attempts") or []
+    impact_rows = sorted(
+        _repair_impact_rows(rerun, repair),
+        key=lambda row: (
+            not bool(row.get("promotion_ready")),
+            -len(row.get("fixed") or []),
+            len(row.get("still_missing") or []),
+            str(row.get("rule_id") or ""),
+        ),
+    )
+    fixed_count = sum(1 for row in impact_rows if row.get("fixed"))
+    ready_count = int(rerun.get("promotion_ready_count") or sum(1 for item in attempts if item.get("promotion_ready")))
+    verified_after = int(rerun.get("verified_after_rerun_count") or 0)
+    still_review = int(rerun.get("review_after_rerun_count") or 0)
+    rejected = int(rerun.get("rejected_after_rerun_count") or 0)
+
+    st.markdown(
+        _repair_flow_html(
+            suggestion_count=len(suggestions),
+            attempt_count=len(attempts),
+            improved_count=fixed_count,
+            ready_count=ready_count,
+            still_review=still_review,
+            rejected=rejected,
+            verified_after=verified_after,
+        ),
+        unsafe_allow_html=True,
+    )
+
+    if impact_rows:
+        selected_index = st.selectbox(
+            "Choose a repair result",
+            list(range(len(impact_rows))),
+            key="repair_focus_row",
+            format_func=lambda index: _rule_option_label(
+                {
+                    "rule_id": impact_rows[index].get("rule_id"),
+                    "review_category": impact_rows[index].get("status"),
+                    "value": "",
+                    "unit": "",
+                }
+            ),
+        )
+        st.markdown(_repair_focus_html(impact_rows[selected_index]), unsafe_allow_html=True)
+    else:
+        st.info("No repair impact rows found for this run.")
+
+    st.markdown("<div class='section-spacer'></div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-head' style='font-size:16px;'>Optional repair drill-downs</div>", unsafe_allow_html=True)
+    st.caption("Use these when you need the full evidence table or shadow rerun audit.")
+    drill_left, drill_mid, drill_right = st.columns(3)
+    show_impacts = drill_left.toggle("Show all repair rows", value=False, key="repair_show_all_impacts")
+    show_suggestions = drill_mid.toggle("Show evidence table", value=False, key="repair_show_suggestion_table")
+    show_reruns = drill_right.toggle("Show rerun table", value=False, key="repair_show_rerun_table")
+
+    if show_impacts:
+        st.markdown(_repair_impact_html(impact_rows, limit=24), unsafe_allow_html=True)
+    if show_suggestions:
+        _repair_tab(st, repair)
+    if show_reruns:
+        _rerun_tab(st, rerun, data.get("evidence_units") or [])
 
 
 def _repair_tab(st: Any, repair: dict[str, Any]) -> None:
@@ -3352,11 +4265,37 @@ def _bylaw_tab(st: Any, data: dict[str, Any]) -> None:
 
 
 _SECTION_BLURB = {
-    "Summary": "Verified rules as trusted outputs, plus coverage and the review backlog at a glance.",
-    "Review": "Rules the verifier could not prove — your worklist, each shown as a sentence with the gap in red.",
-    "GIS Handoff": "Verified-only, geometry-tagged rules ready for the map.",
+    "Overview": "The shortest path: verification result first, source-grounded chat second.",
+    "Source Documents": "Official bylaw PDFs, scoped source pages, and evidence packets used by the verifier.",
+    "Verified Rules": "Source-supported rules that can be used downstream.",
+    "Human Review": "One held candidate at a time: why it is blocked, what differs, and what to inspect next.",
+    "Repair Evidence": "Shadow evidence checks: what improved, what still blocks verification, and why outputs do not change automatically.",
+    "GIS Handoff": "Verified-only, deduplicated rules prepared for GIS use.",
     "Ask the Bylaw": "A source-grounded assistant. It cites sections and can never approve or change a rule.",
+    "Quality Checks": "Audit support for source coverage, status mix, and verification-flow diagnostics.",
+    "Source Library": "Committed bylaw sources, evidence packets, and source coverage.",
+    "Review Queue": "Rules the verifier could not prove — your worklist, each shown as a sentence with the gap in red.",
+    "GIS Contract": "Verified-only, geometry-tagged rules ready for GIS handoff.",
+    "Analytics": "Quality, status mix, and verification-flow diagnostics.",
+    "Settings": "Read-only local dashboard settings.",
     "Diagnostics": "Engineering & audit views — not part of the reviewer workflow.",
+}
+
+
+_SECTION_BADGES = {
+    "Source Documents": ("Source evidence", "status-not_used"),
+    "Verified Rules": ("Verified-only output", "status-verified"),
+    "Human Review": ("Human review", "status-review"),
+    "Repair Evidence": ("Shadow only", "status-review"),
+    "GIS Handoff": ("GIS handoff", "status-verified"),
+    "Quality Checks": ("Quality audit", "status-not_used"),
+    "Review Queue": ("Review worklist", "status-review"),
+    "Source Library": ("Source evidence", "status-not_used"),
+    "GIS Contract": ("GIS handoff", "status-verified"),
+    "Analytics": ("Quality diagnostics", "status-not_used"),
+    "Ask the Bylaw": ("Advisory chat", "status-review"),
+    "Settings": ("Read-only settings", "status-not_used"),
+    "Diagnostics": ("Engineering view", "status-not_used"),
 }
 
 
@@ -3366,10 +4305,12 @@ def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool =
         crumb = "M7 · Portfolio"
         title = city_label
         body = "The current M7 product path. The deterministic verifier is the authority."
+        badge_text, badge_class = "Final demo path", "status-verified"
     else:
         crumb = f"M7 · {html.escape(city_label)}" + (f" › <b>{html.escape(section)}</b>" if section else "")
         title = section or f"{city_label} Rule Review"
         body = _SECTION_BLURB.get(section, "")
+        badge_text, badge_class = _SECTION_BADGES.get(section, ("Read-only", "status-not_used"))
     st.markdown(
         f"""
 <div class="app-header">
@@ -3379,7 +4320,7 @@ def _render_header(st: Any, city_label: str = "Burnaby R1", *, portfolio: bool =
     <p>{html.escape(body)}</p>
   </div>
   <div class="status-legend">
-    <span class="status-pill status-verified">Verified-only output</span>
+    <span class="status-pill {html.escape(badge_class)}">{html.escape(badge_text)}</span>
   </div>
 </div>
 """,
@@ -3647,6 +4588,115 @@ def _rule_sentence_list(st: Any, rules: list[dict[str, Any]], *, show_gap: bool 
         st.caption(f"Showing the first {limit} of {len(rules)} rules.")
 
 
+def _rule_source_page_label(rule: dict[str, Any]) -> str:
+    source = rule.get("source") if isinstance(rule.get("source"), dict) else {}
+    page = rule.get("page") or source.get("page") or source.get("pdf_page") or source.get("source_page")
+    if page not in (None, ""):
+        return f"Page {page}"
+    evidence_id = str(rule.get("evidence_id") or "")
+    match = re.search(r"(?:page|p)[_-]?(\d+)", evidence_id, re.IGNORECASE)
+    if match:
+        return f"Page {match.group(1)}"
+    return "Source page unknown"
+
+
+def _rule_priority_label(rule: dict[str, Any]) -> str:
+    return _plain_label(rule.get("triage_priority") or rule.get("review_priority") or "medium") or "Medium"
+
+
+def _rule_group_label(rule: dict[str, Any], group_mode: str) -> str:
+    if group_mode == "issue":
+        return _issue_label(rule)
+    if group_mode == "priority":
+        return _rule_priority_label(rule)
+    if group_mode == "source_page":
+        return _rule_source_page_label(rule)
+    return _plain_label(rule.get("rule_object") or rule.get("constraint_scope") or "Other rules") or "Other rules"
+
+
+def _group_sort_key(group_mode: str, label: str, rules: list[dict[str, Any]]) -> tuple[Any, ...]:
+    if group_mode == "priority":
+        priority_order = {"High": 0, "Medium": 1, "Low": 2}
+        return (priority_order.get(label, 9), -len(rules), label)
+    if group_mode == "source_page":
+        match = re.search(r"\d+", label)
+        page = int(match.group(0)) if match else 99999
+        return (page, label)
+    return (-len(rules), label)
+
+
+def _rule_groups(rules: list[dict[str, Any]], group_mode: str) -> list[tuple[str, list[dict[str, Any]]]]:
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for rule in rules:
+        grouped.setdefault(_rule_group_label(rule, group_mode), []).append(rule)
+    return sorted(grouped.items(), key=lambda item: _group_sort_key(group_mode, item[0], item[1]))
+
+
+def _group_summary_html(groups: list[tuple[str, list[dict[str, Any]]]], group_mode: str) -> str:
+    if not groups:
+        return ""
+    title = {
+        "issue": "Issue groups",
+        "priority": "Priority groups",
+        "source_page": "Source page groups",
+        "rule_family": "Rule family groups",
+    }.get(group_mode, "Rule groups")
+    cards = []
+    for label, items in groups[:8]:
+        cards.append(
+            "<div class='group-chip-card'>"
+            f"<b>{html.escape(label)}</b>"
+            f"<span>{len(items)} rule{'s' if len(items) != 1 else ''}</span>"
+            "</div>"
+        )
+    if len(groups) > 8:
+        cards.append(
+            "<div class='group-chip-card muted'>"
+            f"<b>More groups</b><span>{len(groups) - 8} hidden below</span>"
+            "</div>"
+        )
+    return (
+        "<div class='group-summary'>"
+        f"<div class='group-summary-title'>{html.escape(title)}</div>"
+        "<div class='group-summary-grid'>"
+        + "".join(cards)
+        + "</div></div>"
+    )
+
+
+def _safe_key_fragment(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", value.lower()).strip("_")[:48] or "group"
+
+
+def _grouped_rule_sentence_list(
+    st: Any,
+    rules: list[dict[str, Any]],
+    *,
+    group_mode: str = "rule_family",
+    show_gap: bool = False,
+    key_prefix: str = "rule_groups",
+    per_group_limit: int = 8,
+) -> None:
+    """Render many rules as grouped expanders so the page stays short."""
+    if not rules:
+        st.caption("None in this bucket.")
+        return
+    groups = _rule_groups(rules, group_mode)
+    st.markdown(_group_summary_html(groups, group_mode), unsafe_allow_html=True)
+    for index, (label, items) in enumerate(groups):
+        group_title = f"{label} - {len(items)} rule{'s' if len(items) != 1 else ''}"
+        with st.expander(group_title, expanded=False):
+            st.caption("Open only the group you need. Large groups show a small preview first.")
+            display_limit = min(per_group_limit, len(items))
+            if len(items) > per_group_limit:
+                show_all = st.checkbox(
+                    f"Show all {len(items)} rules in this group",
+                    key=f"{key_prefix}_show_all_{index}_{_safe_key_fragment(label)}",
+                )
+                display_limit = len(items) if show_all else per_group_limit
+            _rule_sentence_list(st, items, show_gap=show_gap, limit=display_limit)
+
+
 def _rule_fields_md(rule: dict[str, Any]) -> str:
     """Vertical key/value list of a rule's fields — readable, never squeezed."""
     pairs = [
@@ -3716,6 +4766,42 @@ def _field_comparison_rows(candidate: dict[str, Any], verified: dict[str, Any]) 
             }
         )
     return rows
+
+
+def _field_difference_html(rows: list[dict[str, Any]]) -> str:
+    """Render field-by-field candidate vs verified differences as scannable cards."""
+    cards = []
+    for row in rows:
+        matches = str(row.get("matches") or "").lower() == "yes"
+        tone = "match" if matches else "diff"
+        status = "Same" if matches else "Different"
+        candidate_value = str(row.get("review_candidate") or "blank")
+        verified_value = str(row.get("verified_rule") or "blank")
+        cards.append(
+            "<div class='diff-card {tone}'>"
+            "<div class='diff-head'>"
+            "<b>{field}</b><span>{status}</span>"
+            "</div>"
+            "<div class='diff-columns'>"
+            "<div><small>Candidate</small><strong>{candidate}</strong></div>"
+            "<div><small>Verified</small><strong>{verified}</strong></div>"
+            "</div>"
+            "</div>".format(
+                tone=html.escape(tone),
+                field=html.escape(str(row.get("field") or "")),
+                status=html.escape(status),
+                candidate=html.escape(candidate_value),
+                verified=html.escape(verified_value),
+            )
+        )
+    return "<div class='diff-grid'>" + "".join(cards) + "</div>"
+
+
+def _field_difference_summary(rows: list[dict[str, Any]]) -> str:
+    changed = [str(row.get("field")) for row in rows if str(row.get("matches") or "").lower() != "yes"]
+    if not changed:
+        return "All compared fields match the closest verified rule. If it is still in review, the blocker is likely evidence quality or policy."
+    return "Differences found in: " + ", ".join(changed)
 
 
 def _detail_sentence_panel(
@@ -4003,7 +5089,7 @@ def _style(st: Any) -> None:
 #MainMenu, footer, div[data-testid="stDecoration"] {display:none;}
 header[data-testid="stHeader"] {background:transparent;}
 html, body, [class*="css"] {font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;}
-.block-container {padding-top: 1.1rem; max-width: 1180px;}
+.block-container {padding: 1.25rem 2rem 3rem; max-width: 1280px;}
 h1 {font-size:28px;} h2 {font-size:22px;} h3 {font-size:18px;}
 h4 {font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); font-weight:700;}
 /* ---- components ---- */
@@ -4161,6 +5247,226 @@ section[data-testid="stSidebar"] div[role="radiogroup"] > label > div:first-chil
 .cite-chip {display:inline-block; font-size:12px; font-weight:700; color:var(--accent-strong);
   background:color-mix(in srgb, var(--accent) 10%, white); border-radius:999px; padding:2px 9px; margin:2px 4px 2px 0;
   font-family:ui-monospace,"SF Mono","Roboto Mono",monospace;}
+.group-summary {margin:12px 0 16px;}
+.group-summary-title {font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#66727f; font-weight:800; margin-bottom:8px;}
+.group-summary-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;}
+.group-chip-card {background:#fff; border:1px solid #e3e7ea; border-radius:12px; padding:12px 13px; box-shadow:0 8px 18px rgba(15,23,42,.035);}
+.group-chip-card b {display:block; color:#101822; font-size:13px; line-height:1.25; margin-bottom:5px;}
+.group-chip-card span {display:block; color:#66727f; font-size:12px;}
+.group-chip-card.muted {background:#f6f8f7;}
+/* ---- presentation overview refresh ---- */
+.stApp {background:#f7f8f6;}
+section[data-testid="stSidebar"] {background:linear-gradient(180deg,#071016 0%,#0d1a22 62%,#12252c 100%);}
+section[data-testid="stSidebar"] * {color:#eaf2ee;}
+section[data-testid="stSidebar"] .stSelectbox label,
+section[data-testid="stSidebar"] .stRadio label,
+section[data-testid="stSidebar"] .stCaptionContainer,
+section[data-testid="stSidebar"] p {color:#c6d1cf !important;}
+section[data-testid="stSidebar"] div[data-baseweb="select"] > div {background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.15);}
+section[data-testid="stSidebar"] .nav-title {color:#9fb0ad;}
+section[data-testid="stSidebar"] div[role="radiogroup"] > label {color:#dbe7e3; border-radius:10px; padding:10px 12px;}
+section[data-testid="stSidebar"] div[role="radiogroup"] > label:hover {background:rgba(255,255,255,.08); color:#fff;}
+section[data-testid="stSidebar"] div[role="radiogroup"] > label:has(input:checked) {
+  background:linear-gradient(90deg,#176c43,#0f5134); color:#fff; box-shadow:none;
+}
+section[data-testid="stSidebar"] div[data-testid="stExpander"] {border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.04);}
+section[data-testid="stSidebar"] .trust-note {background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.12); color:#d7e7df;}
+section[data-testid="stSidebar"] .trust-note a {color:#b6f3c6 !important;}
+.sidebar-brand {display:grid; grid-template-columns:42px 1fr; gap:12px; align-items:center; margin:4px 0 24px;}
+.brand-mark {width:38px; height:38px; border-radius:12px; background:#123325; border:1px solid #52b788; display:flex; align-items:center; justify-content:center; color:#9cf2b7; font-weight:900;}
+.brand-title {font-size:16px; font-weight:780; line-height:1.18; color:#fff;}
+.sidebar-run {border:1px solid rgba(255,255,255,.12); border-radius:12px; padding:12px 13px; background:rgba(255,255,255,.055); margin:10px 0 18px;}
+.sidebar-run b {display:block; font-size:13px; color:#fff; margin-bottom:4px; line-height:1.25;}
+.sidebar-run span {display:block; font-size:12px; color:#cfe0dc; margin-bottom:7px;}
+.sidebar-run a {font-size:12px; color:#b6f3c6 !important; text-decoration:none; font-weight:700;}
+.pipeline-note {border:1px solid rgba(82,183,136,.28); border-radius:12px; padding:12px 13px; background:rgba(28,87,61,.26); margin-top:16px;}
+.pipeline-note b {display:block; font-size:12px; color:#b6f3c6; margin-bottom:5px;}
+.pipeline-note span {display:block; font-size:12px; line-height:1.45; color:#d7e7df;}
+.sidebar-status {border:1px solid rgba(255,255,255,.12); border-radius:12px; padding:14px; background:rgba(28,87,61,.28); margin-top:20px;}
+.sidebar-status b {display:block; font-size:13px; color:#b6f3c6; margin-bottom:5px;}
+.sidebar-status span {font-size:12px; color:#d7e7df;}
+.overview-titlebar {display:flex; align-items:flex-start; justify-content:space-between; gap:22px; margin:0 0 10px;}
+.overview-titlebar h1 {font-size:29px; line-height:1.14; letter-spacing:0; margin:0 0 5px; color:#101822;}
+.overview-titlebar p {font-size:15px; line-height:1.45; color:#5f6b76; margin:0; max-width:760px;}
+.overview-actions {display:flex; gap:10px; align-items:center; color:#5f6b76; font-size:12px; white-space:nowrap;}
+.live-dot {display:inline-block; width:8px; height:8px; border-radius:999px; background:#16884a; margin-left:6px;}
+.selection-summary {display:flex; align-items:center; justify-content:space-between; gap:18px; background:#ffffff; border:1px solid #e3e7ea; border-radius:14px; padding:12px 16px; margin:0 0 8px; box-shadow:0 8px 20px rgba(15,23,42,.035);}
+.selection-summary b {display:block; color:#101822; font-size:14px; margin-bottom:3px;}
+.selection-summary span {display:block; color:#64727d; font-size:13px; line-height:1.35;}
+.selection-summary a {color:#176c43; font-weight:760; text-decoration:none; font-size:13px; white-space:nowrap;}
+.overview-band-title {font-size:16px; font-weight:820; color:#101822; margin:20px 0 3px; letter-spacing:0;}
+.overview-band-copy {font-size:14px; line-height:1.42; color:#66727f; margin:0 0 9px; max-width:820px;}
+.filter-card, .console-card {background:#fff; border:1px solid #e3e7ea; border-radius:14px; box-shadow:0 10px 26px rgba(15,23,42,.045);}
+.filter-card {padding:14px 16px 4px; margin-bottom:12px;}
+.console-card {padding:22px; margin-bottom:18px;}
+.console-card h3 {font-size:17px; color:#111827; margin:0 0 14px; letter-spacing:0;}
+.kpi-grid {display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin:16px 0 24px;}
+.kpi-card {background:#fff; border:1px solid #e6eaee; border-radius:14px; padding:18px 19px; min-height:132px; box-shadow:0 10px 22px rgba(15,23,42,.05);}
+.kpi-top {display:flex; gap:13px; align-items:flex-start;}
+.kpi-icon {width:46px; height:46px; border-radius:14px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:900; font-size:22px;}
+.kpi-green {background:#1f9d55;} .kpi-amber {background:#e4a50b;} .kpi-red {background:#df3036;} .kpi-blue {background:#2f659b;}
+.kpi-label {font-size:13px; color:#374151; font-weight:720;}
+.kpi-value {font-size:31px; line-height:1.05; font-weight:820; color:#0f172a; margin-top:5px; font-variant-numeric:tabular-nums;}
+.kpi-delta {font-size:12px; margin-top:6px; font-weight:720;}
+.kpi-delta.good {color:#16884a;} .kpi-delta.warn {color:#b77900;} .kpi-delta.bad {color:#cf222e;} .kpi-delta.info {color:#2f659b;}
+.kpi-note {font-size:12px; line-height:1.4; color:#6b7280; margin-top:14px;}
+.decision-flow {background:#fff; border:1px solid #e3e7ea; border-radius:16px; padding:15px 16px; margin:8px 0 14px; box-shadow:0 12px 28px rgba(15,23,42,.045);}
+.decision-flow-head {display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:8px;}
+.decision-flow-head h3 {font-size:17px; margin:0; color:#101822; letter-spacing:0;}
+.decision-flow-head p {font-size:14px; margin:0; color:#66727f; line-height:1.45;}
+.decision-flow-main {display:grid; grid-template-columns:180px minmax(0,1fr); gap:14px; align-items:stretch;}
+.decision-total {min-width:0; border:1px solid #d7e2ea; border-radius:14px; padding:12px 14px; background:#f6f9fb; text-align:left; display:flex; flex-direction:column; justify-content:center;}
+.decision-total span {display:block; font-size:12px; color:#44515f; font-weight:760; text-transform:uppercase; letter-spacing:.05em;}
+.decision-total b {display:block; font-size:34px; line-height:1; color:#0f172a; margin-top:6px; font-variant-numeric:tabular-nums;}
+.decision-strip {display:flex; height:12px; overflow:hidden; border-radius:999px; border:1px solid #dfe6e3; background:#eef2f0; margin-bottom:8px;}
+.decision-strip .seg {display:block; height:100%;}
+.decision-strip .verified {background:#1f9d55;}
+.decision-strip .review {background:#e4a50b;}
+.decision-strip .rejected {background:#df3036;}
+.decision-branches {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px;}
+.decision-branch {border:1px solid #e5e9e6; border-radius:13px; padding:10px 12px; background:#fbfcfb; min-height:78px;}
+.decision-branch span {display:block; font-size:12px; color:#24313b; font-weight:790; text-transform:uppercase; letter-spacing:.05em;}
+.decision-branch b {display:block; font-size:27px; line-height:1; margin:5px 0 5px; font-variant-numeric:tabular-nums; color:#111827;}
+.decision-branch small {display:block; color:#66727f; font-size:12px; line-height:1.4;}
+.decision-branch.verified {border-color:#b7dfc4; background:#f1fbf4;}
+.decision-branch.verified b {color:#166534;}
+.decision-branch.review {border-color:#f3dcad; background:#fff9ed;}
+.decision-branch.review b {color:#a16207;}
+.decision-branch.rejected {border-color:#f4b5b9; background:#fff5f5;}
+.decision-branch.rejected b {color:#c4212a;}
+.decision-note {display:flex; justify-content:space-between; gap:18px; align-items:center; margin-top:8px; font-size:12px; color:#66727f; line-height:1.4;}
+.decision-note b {color:#176c43; white-space:nowrap;}
+.overview-safety-strip {display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:6px 0 16px;}
+.overview-safety-strip div {border:1px solid #dfe8e2; background:#f5fbf6; border-radius:12px; padding:11px 12px;}
+.overview-safety-strip span {display:block; color:#66727f; font-size:11px; font-weight:790; text-transform:uppercase; letter-spacing:.05em;}
+.overview-safety-strip b {display:block; color:#14532d; font-size:20px; line-height:1; margin-top:6px; font-variant-numeric:tabular-nums;}
+.next-step-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:6px 0 12px;}
+.next-step-card {border:1px solid #e3e7ea; border-radius:13px; background:#fff; padding:14px 15px; box-shadow:0 8px 20px rgba(15,23,42,.035);}
+.next-step-card b {display:block; color:#101822; font-size:14px; margin-bottom:7px;}
+.next-step-card span {display:block; color:#66727f; font-size:13px; line-height:1.45;}
+.overview-grid {display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:18px; align-items:start;}
+.overview-left-grid {display:grid; grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); gap:14px;}
+.table-lite {width:100%; border-collapse:collapse; font-size:13px;}
+.table-lite th {text-align:left; color:#5d6672; font-size:11px; text-transform:uppercase; letter-spacing:.04em; padding:10px 10px; border-bottom:1px solid #e7eaee;}
+.table-lite td {padding:14px 10px; border-bottom:1px solid #eef1f3; color:#17202a; vertical-align:top;}
+.issue-pill {display:inline-block; border-radius:999px; padding:4px 9px; font-size:11px; font-weight:760;}
+.issue-red {background:#fff0f0; color:#c4212a;} .issue-amber {background:#fff6df; color:#a16207;} .issue-blue {background:#edf4ff; color:#1d4ed8;} .issue-purple {background:#f4efff; color:#6d28d9;} .issue-green {background:#eefaf0; color:#166534;}
+.pager {display:flex; gap:16px; justify-content:flex-end; color:#6b7280; font-size:12px; margin-top:9px;}
+.trust-status-head {display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:14px;}
+.trust-title {font-size:17px; line-height:1.2; font-weight:820; color:#111827; letter-spacing:0;}
+.trust-status-head span {display:block; color:#66727f; font-size:13px; margin-top:4px;}
+.trust-status-head b {display:inline-flex; align-items:center; justify-content:center; min-width:96px; border-radius:999px; padding:7px 12px; background:#eefaf1; color:#166534; font-size:12px; white-space:nowrap;}
+.trust-hero {display:grid; grid-template-columns:116px 1fr; gap:14px; align-items:center; border:1px solid #b7dfc4; background:linear-gradient(135deg,#eefaf1,#fbfffc); border-radius:14px; padding:14px 16px; margin-bottom:12px;}
+.trust-hero span {display:block; color:#166534; font-size:12px; font-weight:780; text-transform:uppercase; letter-spacing:.05em;}
+.trust-hero strong {display:block; color:#14532d; font-size:36px; line-height:1; font-variant-numeric:tabular-nums; margin-top:5px;}
+.trust-hero p {margin:0; color:#355342; font-size:14px; line-height:1.45;}
+.trust-mini-grid {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px;}
+.trust-mini {border:1px solid #e5e9e6; border-radius:11px; padding:10px 12px; background:#fbfcfb; min-height:82px;}
+.trust-mini span {display:block; font-size:12px; color:#24313b; font-weight:760;}
+.trust-mini b {display:block; font-size:24px; line-height:1; margin:8px 0 4px; color:#111827; font-variant-numeric:tabular-nums;}
+.trust-mini small {display:block; font-size:11px; color:#66727f;}
+.trust-mini.ok {border-color:#c7e8d0; background:#f2fbf4;}
+.trust-mini.ok b {color:#166534;}
+.trust-mini.warn {border-color:#f3dcad; background:#fff9ed;}
+.trust-mini.warn b {color:#a16207;}
+.trust-mini.bad {border-color:#f4b5b9; background:#fff5f5;}
+.trust-mini.bad b {color:#c4212a;}
+.trust-row {display:grid; grid-template-columns:minmax(0,1fr) 58px minmax(128px,.7fr); gap:12px; align-items:center; border:1px solid #e5e9e6; border-radius:11px; padding:12px 14px; margin:9px 0; background:#fbfcfb;}
+.trust-row span {font-size:13px; color:#24313b; font-weight:720;}
+.trust-row b {font-size:20px; text-align:right; color:#111827; font-variant-numeric:tabular-nums;}
+.trust-row small {font-size:12px; color:#66727f;}
+.trust-row.ok {border-color:#c7e8d0; background:#f2fbf4;}
+.trust-row.ok b {color:#166534;}
+.trust-row.warn {border-color:#f3dcad; background:#fff9ed;}
+.trust-row.warn b {color:#a16207;}
+.trust-row.bad {border-color:#f4b5b9; background:#fff5f5;}
+.trust-row.bad b {color:#c4212a;}
+.legend-swatch {display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:7px; vertical-align:-1px;}
+.right-rail .console-card {margin-bottom:14px;}
+.ask-card-centered {max-width:900px; margin-left:auto; margin-right:auto;}
+.ask-intro {background:#eaf3ec; color:#184531; border:1px solid #d4e6d8; border-radius:10px; padding:13px; font-size:13px; line-height:1.5; margin-bottom:14px;}
+.prompt-row-label {font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#66727f; font-weight:820; margin:8px 0 6px;}
+.chat-bubble {border-radius:12px; padding:13px 14px; font-size:13px; line-height:1.5; margin:10px 0;}
+.chat-user {background:linear-gradient(135deg,#16884a,#0f7040); color:#fff; margin-left:18px;}
+.chat-assistant {background:#f8faf8; border:1px solid #e3e7e4; color:#17202a; margin-right:18px;}
+.source-cite {border:1px solid #e6eaee; background:#fbfcfb; border-radius:9px; padding:10px 11px; font-size:12px; color:#374151; margin:8px 0;}
+.prompt-chip {display:block; width:100%; border:1px solid #e6eaee; background:#fbfcfb; color:#4b5563; border-radius:9px; padding:10px 12px; margin:8px 0; font-size:12px; text-align:left;}
+.review-focus-grid {display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:12px 0 18px;}
+.review-focus-card {border:1px solid #e4e8e6; border-radius:12px; background:#fbfcfb; padding:13px 14px; min-height:116px;}
+.review-focus-card span {display:block; font-size:11px; color:#66727f; font-weight:820; text-transform:uppercase; letter-spacing:.05em; margin-bottom:7px;}
+.review-focus-card b {display:block; color:#111827; font-size:15px; line-height:1.32; margin-bottom:7px; overflow-wrap:anywhere;}
+.review-focus-card small {display:block; color:#66727f; font-size:12px; line-height:1.35;}
+.review-focus-card.ok {border-color:#c7e8d0; background:#f2fbf4;}
+.review-focus-card.ok b {color:#166534;}
+.review-focus-card.warn, .review-focus-card.action {border-color:#f3dcad; background:#fff9ed;}
+.review-focus-card.warn b, .review-focus-card.action b {color:#8a5800;}
+.review-focus-card.bad {border-color:#f4b5b9; background:#fff5f5;}
+.review-focus-card.bad b {color:#c4212a;}
+.review-focus-card.neutral {background:#f6f8f7;}
+.diff-summary {border:1px solid #e3e7ea; background:#fbfcfb; border-radius:10px; padding:10px 12px; color:#374151; font-size:13px; margin:6px 0 10px;}
+.diff-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin:8px 0 14px;}
+.diff-card {border:1px solid #e5e9e6; border-radius:12px; padding:12px 13px; background:#fbfcfb; min-height:118px;}
+.diff-card.match {border-color:#c7e8d0; background:#f2fbf4;}
+.diff-card.diff {border-color:#f4b5b9; background:#fff5f5;}
+.diff-head {display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:9px;}
+.diff-head b {font-size:13px; color:#111827;}
+.diff-head span {font-size:11px; font-weight:820; border-radius:999px; padding:3px 8px; color:#111827; background:rgba(255,255,255,.72);}
+.diff-card.match .diff-head span {color:#166534; background:#e0f5e6;}
+.diff-card.diff .diff-head span {color:#c4212a; background:#ffe3e3;}
+.diff-columns {display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+.diff-columns div {border:1px solid rgba(15,23,42,.08); background:rgba(255,255,255,.68); border-radius:9px; padding:8px;}
+.diff-columns small {display:block; color:#66727f; font-size:11px; font-weight:760; margin-bottom:5px;}
+.diff-columns strong {display:block; color:#17202a; font-size:13px; line-height:1.35; word-break:break-word;}
+.repair-impact-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; margin:8px 0 16px;}
+.repair-card {border:1px solid #e5e9e6; border-radius:13px; padding:13px 14px; background:#fbfcfb; min-height:174px;}
+.repair-card.fixed {border-color:#c7e8d0; background:#f2fbf4;}
+.repair-card.ready {border-color:#9bd6af; background:#eaf8ef;}
+.repair-card.blocked {border-color:#f4b5b9; background:#fff5f5;}
+.repair-card.muted {background:#f6f8f7;}
+.repair-card-head {display:flex; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom:8px;}
+.repair-card-head b {font-size:13px; color:#111827;}
+.repair-card-head span {font-size:11px; font-weight:820; border-radius:999px; padding:3px 8px; color:#374151; background:rgba(255,255,255,.74);}
+.repair-card p {font-size:13px; line-height:1.42; color:#24313b; margin:0 0 10px;}
+.repair-columns {display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+.repair-columns div {border:1px solid rgba(15,23,42,.08); background:rgba(255,255,255,.72); border-radius:9px; padding:8px;}
+.repair-columns small {display:block; color:#66727f; font-size:11px; font-weight:760; margin-bottom:5px;}
+.repair-columns strong {display:block; color:#17202a; font-size:13px; line-height:1.35;}
+.repair-card.fixed .repair-columns div:first-child strong,
+.repair-card.ready .repair-columns div:first-child strong {color:#166534;}
+.repair-card.blocked .repair-columns div:first-child strong {color:#c4212a;}
+.repair-foot {font-size:11px; line-height:1.35; color:#66727f; margin-top:9px;}
+.repair-flow {display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:12px 0 10px;}
+.repair-flow-step {border:1px solid #e4e8e6; border-radius:12px; background:#fbfcfb; padding:13px 14px; min-height:104px;}
+.repair-flow-step span {display:block; font-size:11px; color:#66727f; font-weight:820; text-transform:uppercase; letter-spacing:.05em;}
+.repair-flow-step b {display:block; font-size:25px; line-height:1.1; color:#111827; margin:8px 0 5px; font-variant-numeric:tabular-nums;}
+.repair-flow-step small {display:block; color:#66727f; font-size:12px; line-height:1.35;}
+.repair-status-note {border:1px solid #e4e8e6; background:#f6f8f7; border-radius:10px; color:#374151; font-size:13px; line-height:1.45; padding:11px 13px; margin:0 0 18px;}
+.repair-focus-card {border:1px solid #e5e9e6; border-radius:14px; background:#fbfcfb; padding:16px; margin:10px 0 18px;}
+.repair-focus-card.fixed {border-color:#c7e8d0; background:#f2fbf4;}
+.repair-focus-card.ready {border-color:#9bd6af; background:#eaf8ef;}
+.repair-focus-card.blocked {border-color:#f4b5b9; background:#fff5f5;}
+.repair-focus-head {display:flex; justify-content:space-between; align-items:flex-start; gap:14px; margin-bottom:10px;}
+.repair-focus-head span {display:block; font-size:11px; color:#66727f; font-weight:820; text-transform:uppercase; letter-spacing:.05em; margin-bottom:5px;}
+.repair-focus-head b {display:block; color:#111827; font-size:18px; overflow-wrap:anywhere;}
+.repair-focus-head strong {font-size:12px; font-weight:820; border-radius:999px; padding:5px 9px; background:rgba(255,255,255,.76); color:#374151; white-space:nowrap;}
+.repair-focus-card p {font-size:14px; line-height:1.45; color:#24313b; margin:0 0 12px;}
+.empty-note {border:1px solid #e3e7ea; border-radius:12px; padding:13px; color:#66727f; background:#fbfcfb;}
+.source-row {display:grid; grid-template-columns:86px 1fr; gap:8px; align-items:center; font-size:13px; margin:9px 0;}
+.source-bar {height:9px; background:#eef2f0; border-radius:999px; overflow:hidden;}
+.source-bar span {display:block; height:100%; background:#209b55; border-radius:999px;}
+.gis-flow {display:grid; gap:10px; margin-top:4px;}
+.gis-node {border:1px solid #e5e9e6; border-radius:10px; padding:11px 13px; display:flex; justify-content:space-between; align-items:center; background:#fbfcfb; font-size:13px;}
+.gis-node.ok {border-color:#b7dfc4; background:#eefaf1; color:#166534;}
+.gis-node.warn {border-color:#f4d6a3; background:#fff8eb; color:#a16207;}
+.section-spacer {height:8px;}
+@media (max-width: 1100px) {
+  .overview-grid {grid-template-columns:1fr;}
+  .right-rail {display:block;}
+  .kpi-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .review-focus-grid, .repair-flow {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .overview-left-grid {grid-template-columns:1fr;}
+  .block-container {padding-left:1.2rem; padding-right:1.2rem;}
+}
 @media (max-width: 900px) {
   .metric-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
   .hero-grid, .legend-grid {grid-template-columns:1fr 1fr;}
@@ -4169,6 +5475,17 @@ section[data-testid="stSidebar"] div[role="radiogroup"] > label > div:first-chil
   .roadmap-grid {grid-template-columns:1fr;}
   .guidance-grid, .action-grid {grid-template-columns:1fr;}
   .bar-row {grid-template-columns:1fr;}
+  .overview-titlebar, .selection-summary {display:block;}
+  .selection-summary a {display:inline-block; margin-top:10px;}
+  .kpi-grid {grid-template-columns:1fr;}
+  .decision-flow-head, .decision-note {display:block;}
+  .decision-flow-main {grid-template-columns:1fr;}
+  .decision-total {text-align:left; margin-top:0;}
+  .decision-branches {grid-template-columns:1fr;}
+  .overview-safety-strip, .next-step-grid {grid-template-columns:1fr;}
+  .review-focus-grid, .repair-flow {grid-template-columns:1fr;}
+  .repair-focus-head {display:block;}
+  .repair-focus-head strong {display:inline-block; margin-top:8px;}
 }
 </style>
 """,
