@@ -14,6 +14,22 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+# Streamlit is imported inside main() (so the module stays import-safe and `st` is
+# injected for testability). For module-level CACHE DECORATORS we also grab a
+# reference here; when Streamlit is unavailable the shim degrades to a no-op so
+# the module still imports (e.g. headless tests). Streamlit re-executes the script
+# every rerun, so plain module dicts won't persist — st.cache_* is the right tool.
+try:  # pragma: no cover - streamlit present in every real run target
+    import streamlit as _ST
+except Exception:  # pragma: no cover
+    _ST = None
+
+
+def _cache_data(**kwargs: Any):
+    if _ST is not None:
+        return _ST.cache_data(**kwargs)
+    return lambda fn: fn
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -1492,7 +1508,7 @@ def _overview_chat_panel(st: Any, data: dict[str, Any], output_dir: Path, *, cen
             submitted = st.form_submit_button("Ask", width="stretch")
     if submitted and question.strip():
         with st.spinner("Reading the bylaw…"):
-            _bylaw_chat_respond(st, question.strip(), index_path, chat_key)
+            _bylaw_chat_respond(st, question.strip(), index_path, chat_key, data)
         st.rerun()
 
     suggestions = _bylaw_suggestions(data, limit=3)
@@ -1503,18 +1519,31 @@ def _overview_chat_panel(st: Any, data: dict[str, Any], output_dir: Path, *, cen
             with prompt_columns[index]:
                 if st.button(suggestion, key=f"overview_prompt_{city_stem}_{index}", width="stretch"):
                     with st.spinner("Reading the bylaw…"):
-                        _bylaw_chat_respond(st, suggestion, index_path, chat_key)
+                        _bylaw_chat_respond(st, suggestion, index_path, chat_key, data)
                     st.rerun()
     if history:
         st.markdown("<div class='prompt-row-label'>Recent answer</div>", unsafe_allow_html=True)
         for message in history[-2:]:
             role = "chat-user" if message.get("role") == "user" else "chat-assistant"
             st.markdown(f"<div class='chat-bubble {role}'>{html.escape(str(message.get('content') or ''))}</div>", unsafe_allow_html=True)
-        sources = (history[-1].get("sources") if history and history[-1].get("role") == "assistant" else []) or []
-        if sources:
-            hit = sources[0]
-            loc = _clean_section_label(hit.get("section") or hit.get("chunk_id"), hit.get("page")) or "source section"
-            st.markdown(f"<div class='source-cite'><b>Source cited</b><br>{html.escape(str(loc))}</div>", unsafe_allow_html=True)
+        latest = history[-1] if history and history[-1].get("role") == "assistant" else None
+        if latest:
+            # Render the verification card + any embedded tables (the headline
+            # features — previously dark here because content-only bubbles + no data).
+            for card in (latest.get("rule_cards") or []):
+                _render_verification_card(st, card)
+            for table in (latest.get("tables") or []):
+                _render_chat_table(st, table)
+            sources = latest.get("sources") or []
+            if sources:
+                hit = sources[0]
+                loc = _clean_section_label(hit.get("section") or hit.get("chunk_id"), hit.get("page")) or "source section"
+                st.markdown(f"<div class='source-cite'><b>Source cited</b><br>{html.escape(str(loc))}</div>", unsafe_allow_html=True)
+            for i, (label, fq) in enumerate(_followup_chips(latest)):
+                if st.button(label, key=f"overview_fup_{city_stem}_{len(history)}_{i}", width="stretch"):
+                    with st.spinner("Reading the bylaw…"):
+                        _bylaw_chat_respond(st, fq, index_path, chat_key, data)
+                    st.rerun()
     st.caption("Advisory only. Verification decisions stay with the deterministic verifier.")
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -2881,13 +2910,11 @@ def _legal_context_expander(
         if index_path is None:
             return
         try:
-            from burnaby_prototype.bylaw_rag import load_index
-
             query = " ".join(
                 str(rule.get(field) or "")
                 for field in ("rule_object", "applies_to", "constraint_scope", "condition", "value", "unit")
             )
-            hits = load_index(index_path).ask(query, top_k=3)
+            hits = _cached_bylaw_index(index_path, st).ask(query, top_k=3, query_encoder=_query_encoder(st))
         except Exception as error:  # pragma: no cover - optional dep path
             st.caption(f"Retrieval unavailable: {error}")
             return
@@ -3648,16 +3675,31 @@ def _rag_query_terms(question: str) -> list[str]:
     return expanded
 
 
-def _dashboard_reranker(st: Any | None) -> Any | None:
-    """Return a session-cached ``OpenRouterReranker`` or ``None``.
+def _retrieval_module() -> Any | None:
+    """The package-free hybrid-retrieval module (sibling of streamlit_app.py).
 
-    Reuses the SAME ``OPENROUTER_API_KEY`` the dashboard's ``_load_dotenv``
-    already loaded (the key the extraction layer uses). Returns ``None`` when
-    there is no key or the reranker client cannot be constructed — callers must
-    treat ``None`` as "skip reranking, keep BM25/RRF order". Never raises.
+    Ships to the cloud deploy alongside ``chat_brain.py``, so BM25 + dense + rerank
+    run there WITHOUT the ``burnaby_prototype`` package. ``None`` only if missing.
+    """
+    try:
+        import bylaw_retrieval
+
+        return bylaw_retrieval
+    except Exception:
+        return None
+
+
+def _dashboard_reranker(st: Any | None) -> Any | None:
+    """Return a session-cached cross-encoder reranker or ``None``.
+
+    Reuses the SAME ``OPENROUTER_API_KEY`` the dashboard already loaded. ``None``
+    means "skip reranking, keep BM25/RRF order". Never raises.
     """
     api_key = _secret_value(st, "OPENROUTER_API_KEY")
     if not api_key:
+        return None
+    retr = _retrieval_module()
+    if retr is None:
         return None
     cache_key = "_bylaw_rag_reranker"
     if st is not None:
@@ -3668,9 +3710,7 @@ def _dashboard_reranker(st: Any | None) -> Any | None:
         except Exception:
             cached = None
     try:
-        from burnaby_prototype.native_extraction import OpenRouterReranker
-
-        reranker = OpenRouterReranker(api_key)
+        reranker = retr.OpenRouterRerank(api_key)
     except Exception:
         return None
     if st is not None:
@@ -3682,14 +3722,16 @@ def _dashboard_reranker(st: Any | None) -> Any | None:
 
 
 def _dashboard_embedding_backend(st: Any | None) -> Any | None:
-    """Return a session-cached dense-embedding backend or ``None``.
+    """Return a session-cached dense-embedding client or ``None``.
 
-    Mirrors ``_dashboard_reranker``: reuses the SAME ``OPENROUTER_API_KEY`` the
-    extraction layer already uses (``baai/bge-m3``). ``None`` means "BM25-only",
-    which is the deterministic offline default. Never raises.
+    Reuses the SAME ``OPENROUTER_API_KEY`` (``baai/bge-m3``). Held per-session
+    because it carries the API client; ``None`` means "BM25-only". Never raises.
     """
     api_key = _secret_value(st, "OPENROUTER_API_KEY")
     if not api_key:
+        return None
+    retr = _retrieval_module()
+    if retr is None:
         return None
     cache_key = "_bylaw_rag_embedder"
     if st is not None:
@@ -3700,9 +3742,7 @@ def _dashboard_embedding_backend(st: Any | None) -> Any | None:
         except Exception:
             pass
     try:
-        from burnaby_prototype.native_extraction import OpenRouterEmbeddingBackend
-
-        backend = OpenRouterEmbeddingBackend(api_key)
+        backend = retr.OpenRouterEmbeddings(api_key)
     except Exception:
         return None
     if st is not None:
@@ -3713,15 +3753,26 @@ def _dashboard_embedding_backend(st: Any | None) -> Any | None:
     return backend
 
 
-def _cached_bylaw_index(index_path: Path, st: Any | None) -> Any:
-    """Build (once) and session-cache the section ``BylawIndex``.
+def _query_encoder(st: Any | None):
+    """A callable ``(question) -> vector`` for the dense leg, or ``None``.
 
-    When an OpenRouter key is present the index gets a dense embedding leg fused
-    with BM25 via RRF — this is the semantic-understanding upgrade. The corpus is
-    embedded only on the first question and reused thereafter (cost/latency). On
-    any embedding failure it falls back to a BM25-only index. Raises only if even
-    the BM25 build fails, so ``_dashboard_rag_hits`` can fall back to the
-    standalone reader.
+    Passed into the index at SEARCH time (not stored on it) so the cached index
+    object holds no API client and is safe to share across sessions."""
+    backend = _dashboard_embedding_backend(st)
+    if backend is None:
+        return None
+    return lambda q: backend.encode([q])[0]
+
+
+def _cached_bylaw_index(index_path: Path, st: Any | None) -> Any:
+    """Build (once) and session-cache the section index — self-contained hybrid.
+
+    BM25 + dense (precomputed corpus vectors from the ``bylaw_rag_vectors.json``
+    sidecar) fused with RRF. The dense leg costs ONE query-embedding call per
+    question (no corpus embedding) and runs on the cloud deploy with no package.
+    Client-free (the query encoder is passed at search time) so it is shareable.
+    BM25-only when no vectors. Raises only if the module/chunk load fails, so
+    ``_dashboard_rag_hits`` can fall back to the standalone reader.
     """
     cache_key = f"_bylaw_section_index::{index_path}"
     if st is not None:
@@ -3731,13 +3782,20 @@ def _cached_bylaw_index(index_path: Path, st: Any | None) -> Any:
                 return cached
         except Exception:
             pass
-    from burnaby_prototype.bylaw_rag import load_index
-
-    backend = _dashboard_embedding_backend(st)
-    try:
-        index = load_index(index_path, embedding_backend=backend)
-    except Exception:
-        index = load_index(index_path)  # BM25-only fallback (e.g. embedding API down)
+    retr = _retrieval_module()
+    if retr is None:
+        raise RuntimeError("bylaw_retrieval module unavailable")
+    payload = _read_json(index_path, {})
+    chunks = payload.get("chunks", [])
+    vectors = payload.get("vectors")
+    if vectors is None:
+        sidecar = Path(index_path).with_name("bylaw_rag_vectors.json")
+        if sidecar.exists():
+            try:
+                vectors = _read_json(sidecar, {}).get("vectors")
+            except Exception:
+                vectors = None
+    index = retr.HybridBylawIndex(chunks, corpus_vectors=vectors)
     if st is not None:
         try:
             st.session_state[cache_key] = index
@@ -3805,7 +3863,8 @@ def _dashboard_rag_hits(
     """
     candidate_k = max(top_k, RAG_RERANK_CANDIDATES)
     try:
-        candidates = _cached_bylaw_index(index_path, st).ask(question, top_k=candidate_k)
+        index = _cached_bylaw_index(index_path, st)
+        candidates = index.ask(question, top_k=candidate_k, query_encoder=_query_encoder(st))
     except Exception:
         candidates = _standalone_rag_hits(index_path, question, top_k=candidate_k)
     return _rerank_rag_hits(question, candidates, top_k, st)
@@ -3925,10 +3984,10 @@ def _grounded_bylaw_prompt(question: str, hits: list[dict[str, Any]]) -> str:
         "below — read them, reason across them, and explain the answer in your own clear words. You "
         "never approve, verify, reject, or promote a rule.\n"
         "HOW TO ANSWER:\n"
-        "- Lead with the direct answer (the number or limit) in the first sentence.\n"
+        "- Lead with the direct answer (the number or limit) in the first sentence, in **bold**.\n"
         "- Then add 1-2 sentences that explain it: combine the relevant sections and note any condition, "
         "exception, or building location/type that changes the answer.\n"
-        "- Keep it tight — about 2 to 5 sentences of plain English, no bullet lists.\n"
+        "- Keep it tight — ≤4 short sentences of plain English, no bullet lists.\n"
         "- Ground every statement; cite each claim in parentheses using the bracket label shown above "
         "its section — e.g. (§541(1), p.6), or just (p.2) when only a page is shown. Never put § before "
         "a page number.\n"
@@ -4153,7 +4212,8 @@ def _cached_rule_index(data: dict[str, Any], st: Any | None, *, tag: str) -> Any
     a question like "why are the setback rules not confirmed?" can semantically
     find the relevant rules even when no exact value is named."""
     brain = _chat_brain()
-    if brain is None:
+    retr = _retrieval_module()
+    if brain is None or retr is None:
         return None
     cache_key = f"_bylaw_rule_index::{tag}"
     if st is not None:
@@ -4166,14 +4226,10 @@ def _cached_rule_index(data: dict[str, Any], st: Any | None, *, tag: str) -> Any
     corpus = brain.build_rule_corpus(data.get("verified") or [], data.get("review") or [])
     if not corpus:
         return None
-    backend = _dashboard_embedding_backend(st)
     try:
-        index = brain.build_rule_index(corpus, embedding_backend=backend)
+        index = retr.HybridBylawIndex(corpus)  # BM25-only (tiny rule corpus)
     except Exception:
-        try:
-            index = brain.build_rule_index(corpus)
-        except Exception:
-            return None
+        return None
     if st is not None:
         try:
             st.session_state[cache_key] = index
@@ -4311,7 +4367,19 @@ def _answer_definition(st: Any, question: str, query: str, data: dict[str, Any],
         "etc.), define it simply and concretely with an everyday example. Do not cite or claim anything "
         "about a specific bylaw."
     )
-    answer = _optional_bylaw_llm_answer(prompt, st, system=_CONCEPT_SYSTEM)
+    # Concept answers are ungrounded + stable, so cache them per session by the
+    # normalized question (repeated "what is a setback?" costs zero extra calls).
+    qnorm = " ".join(str(question or "").lower().split())
+    cache = None
+    try:
+        cache = st.session_state.setdefault("_concept_cache", {})
+    except Exception:
+        cache = None
+    answer = cache.get(qnorm) if isinstance(cache, dict) else None
+    if not answer:
+        answer = _optional_bylaw_llm_answer(prompt, st, system=_CONCEPT_SYSTEM)
+        if answer and isinstance(cache, dict):
+            cache[qnorm] = answer
     if not answer:
         return {"role": "assistant", "content": _CONCEPT_NO_LLM, "intent": "definition"}
     content = "Here's a general explanation (not specific legal text from this bylaw):\n\n" + _strip_internal_tokens(answer)
@@ -4469,9 +4537,9 @@ def _optional_bylaw_llm_answer(
 _BYLAW_CHAT_SYSTEM = (
     "You are an advisory zoning-bylaw assistant for human reviewers — you never approve, verify, "
     "reject, or promote a rule. Answer only from the provided bylaw excerpts, but read and reason "
-    "across them and explain in plain English: lead with the number, then a brief why (about 2-5 "
-    "sentences). Cite each claim as (§section, p.page) and never output internal ids, rule ids, or "
-    "【…】 tokens."
+    "across them and explain in plain English: lead with the number in **bold**, then a brief why "
+    "(≤4 short sentences, no bullet lists). Cite each claim as (§section, p.page) and never output "
+    "internal ids, rule ids, or 【…】 tokens."
 )
 
 
@@ -4588,6 +4656,29 @@ def _anthropic_answer(prompt: str, api_key: str, model: str, system: str | None 
     return "\n".join(str(block.get("text") or "") for block in blocks if block.get("type") == "text").strip() or "The LLM returned no text."
 
 
+def _followup_chips(message: dict[str, Any]) -> list[tuple[str, str]]:
+    """Context-aware next-step chips for the latest answer (label, question).
+
+    Clicking one re-asks via the same ``pending`` mechanism as the suggestion
+    chips, so multi-turn stays robust."""
+    if not message or message.get("role") != "assistant":
+        return []
+    intent = message.get("intent")
+    if intent == "why_verification":
+        chips = [("📋 See all rules as a table", "List all the rules as a table"),
+                 ("✅ Which rules are verified?", "List the verified rules as a table")]
+    elif intent == "specific_rule":
+        chips = [("❓ Why are some rules in review?", "Why are some rules still in review?"),
+                 ("📋 See all rules as a table", "List all the rules as a table")]
+    elif intent == "list_table":
+        chips = [("❓ Why are some still in review?", "Why are some rules still in review?")]
+    elif intent == "definition":
+        chips = [("📐 What does this bylaw require?", "List all the rules as a table")]
+    else:
+        chips = []
+    return chips[:3]
+
+
 def _ask_the_bylaw_panel(st: Any, output_dir: Path, data: dict[str, Any] | None = None) -> None:
     """Conversational, source-grounded bylaw assistant — a real LLM chat that
     answers ONLY from retrieved bylaw sections. ADVISORY: it never verifies,
@@ -4653,6 +4744,13 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path, data: dict[str, Any] | None 
     # supports as many turns as you like in one conversation.
     for message in history:
         _render_bylaw_chat_message(st, message)
+    if history and history[-1].get("role") == "assistant":
+        followups = _followup_chips(history[-1])
+        if followups:
+            fcols = st.columns(len(followups))
+            for i, (label, fq) in enumerate(followups):
+                if fcols[i].button(label, key=f"fup_{city_stem}_{len(history)}_{i}", width="stretch"):
+                    pending = fq
     st.caption("I find the relevant bylaw sections, then read and explain them — every answer cites its section. Advisory only; I can't approve or change a rule.")
 
     typed = st.chat_input("Ask about the bylaw…", key=f"rag_chat_input_{city_stem}")
@@ -6306,10 +6404,35 @@ def _display_value(value: Any) -> str:
     return str(value)
 
 
+@_cache_data(show_spinner=False)
+def _read_json_cached(path_str: str, mtime: int) -> Any:
+    """Parse a JSON file, cached across reruns + sessions and keyed by mtime so a
+    redeploy (new mtime) invalidates. Returns a sentinel-free value or None."""
+    try:
+        return json.loads(Path(path_str).read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
 def _read_json(path: Path, default: Any) -> Any:
+    """Cached JSON read. ``load_output_data`` reads ~20 files (incl. a 1.5 MB
+    verified_rules.json) every rerun; caching here is the biggest per-rerun win."""
+    path = Path(path)
     if not path.exists():
         return default
-    return json.loads(path.read_text(encoding="utf-8"))
+    try:
+        mtime = path.stat().st_mtime_ns
+    except Exception:
+        mtime = 0
+    try:
+        value = _read_json_cached(str(path), mtime)
+    except Exception:
+        # No Streamlit runtime (bare import / tests) or cache error -> direct read.
+        try:
+            value = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            return default
+    return default if value is None else value
 
 
 if __name__ == "__main__":
