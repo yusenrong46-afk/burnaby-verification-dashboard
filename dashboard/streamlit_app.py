@@ -3681,6 +3681,71 @@ def _dashboard_reranker(st: Any | None) -> Any | None:
     return reranker
 
 
+def _dashboard_embedding_backend(st: Any | None) -> Any | None:
+    """Return a session-cached dense-embedding backend or ``None``.
+
+    Mirrors ``_dashboard_reranker``: reuses the SAME ``OPENROUTER_API_KEY`` the
+    extraction layer already uses (``baai/bge-m3``). ``None`` means "BM25-only",
+    which is the deterministic offline default. Never raises.
+    """
+    api_key = _secret_value(st, "OPENROUTER_API_KEY")
+    if not api_key:
+        return None
+    cache_key = "_bylaw_rag_embedder"
+    if st is not None:
+        try:
+            cached = st.session_state.get(cache_key)
+            if cached is not None:
+                return cached
+        except Exception:
+            pass
+    try:
+        from burnaby_prototype.native_extraction import OpenRouterEmbeddingBackend
+
+        backend = OpenRouterEmbeddingBackend(api_key)
+    except Exception:
+        return None
+    if st is not None:
+        try:
+            st.session_state[cache_key] = backend
+        except Exception:
+            pass
+    return backend
+
+
+def _cached_bylaw_index(index_path: Path, st: Any | None) -> Any:
+    """Build (once) and session-cache the section ``BylawIndex``.
+
+    When an OpenRouter key is present the index gets a dense embedding leg fused
+    with BM25 via RRF — this is the semantic-understanding upgrade. The corpus is
+    embedded only on the first question and reused thereafter (cost/latency). On
+    any embedding failure it falls back to a BM25-only index. Raises only if even
+    the BM25 build fails, so ``_dashboard_rag_hits`` can fall back to the
+    standalone reader.
+    """
+    cache_key = f"_bylaw_section_index::{index_path}"
+    if st is not None:
+        try:
+            cached = st.session_state.get(cache_key)
+            if cached is not None:
+                return cached
+        except Exception:
+            pass
+    from burnaby_prototype.bylaw_rag import load_index
+
+    backend = _dashboard_embedding_backend(st)
+    try:
+        index = load_index(index_path, embedding_backend=backend)
+    except Exception:
+        index = load_index(index_path)  # BM25-only fallback (e.g. embedding API down)
+    if st is not None:
+        try:
+            st.session_state[cache_key] = index
+        except Exception:
+            pass
+    return index
+
+
 def _rerank_rag_hits(question: str, hits: list[dict[str, Any]], top_k: int, st: Any | None) -> list[dict[str, Any]]:
     """Cross-encoder rerank a broad candidate shortlist down to ``top_k``.
 
@@ -3740,9 +3805,7 @@ def _dashboard_rag_hits(
     """
     candidate_k = max(top_k, RAG_RERANK_CANDIDATES)
     try:
-        from burnaby_prototype.bylaw_rag import load_index
-
-        candidates = load_index(index_path).ask(question, top_k=candidate_k)
+        candidates = _cached_bylaw_index(index_path, st).ask(question, top_k=candidate_k)
     except Exception:
         candidates = _standalone_rag_hits(index_path, question, top_k=candidate_k)
     return _rerank_rag_hits(question, candidates, top_k, st)
@@ -3884,9 +3947,85 @@ def _retrieval_only_bylaw_answer(question: str, hits: list[dict[str, Any]]) -> s
     )
 
 
+_CARD_TONE = {"verified": "verified", "in_review": "review", "rejected": "review", "not_used": "neutral"}
+_CARD_BADGE = {
+    "verified": "✓ Verified",
+    "in_review": "● In review",
+    "rejected": "✗ Rejected",
+    "not_used": "— Not used",
+}
+
+
+def _render_verification_card(st: Any, card: dict[str, Any]) -> None:
+    """Render one plain-language verification explanation (status, why, where to look)."""
+    rule = card.get("rule") or {}
+    status = str(card.get("status") or "in_review")
+    tone = _CARD_TONE.get(status, "review")
+    badge = _CARD_BADGE.get(status, "● In review")
+    sentence_html = _review_sentence_html(rule) if status in {"in_review", "rejected"} else f"<div class='rule-text'>{html.escape(_rule_sentence(rule))}</div>"
+    st.markdown(
+        f"<div class='sentence-card sentence-{tone}'><div class='sentence-title'>{html.escape(badge)}</div>{sentence_html}</div>",
+        unsafe_allow_html=True,
+    )
+    if card.get("verdict_sentence"):
+        st.markdown(str(card["verdict_sentence"]))
+    why = card.get("why") or []
+    if why:
+        header = "**Why it was rejected:**" if status == "rejected" else "**Why it's held for review:**"
+        st.markdown(header + "\n" + "\n".join(f"- {w}" for w in why))
+    if card.get("likely_missing"):
+        st.markdown(f"**What would likely clear it:** {card['likely_missing']}")
+    wtl = card.get("where_to_look") or {}
+    if wtl.get("quote") or wtl.get("page") not in (None, ""):
+        loc_parts = []
+        if wtl.get("section"):
+            loc_parts.append(f"§{wtl['section']}")
+        if wtl.get("page") not in (None, ""):
+            loc_parts.append(f"p.{wtl['page']}")
+        loc_text = ", ".join(loc_parts) or "source"
+        quote = str(wtl.get("quote") or "")
+        st.markdown(
+            f"<div class='citation'><span class='loc'>📍 Where to look — {html.escape(loc_text)}</span><br>{html.escape(quote)}</div>",
+            unsafe_allow_html=True,
+        )
+        if wtl.get("url"):
+            st.markdown(f"[Open the source bylaw (PDF) ↗]({wtl['url']})")
+    rep = card.get("repair_hint")
+    if rep and rep.get("quote"):
+        conf = rep.get("confidence")
+        conf_txt = f" (match confidence {conf:.0%})" if isinstance(conf, (int, float)) else ""
+        page_txt = f" — p.{rep['page']}" if rep.get("page") not in (None, "") else ""
+        st.markdown(f"**A stronger source may be{conf_txt}:** “{rep['quote']}”{page_txt}")
+    sim = card.get("similar_verified")
+    if sim and sim.get("rule"):
+        st.markdown(f"**A verified companion rule:** {_rule_sentence(sim['rule'])}")
+    if card.get("next_step"):
+        st.caption(f"Reviewer next step: {card['next_step']}")
+    if card.get("advisory_note"):
+        st.caption(card["advisory_note"])
+
+
+def _render_chat_table(st: Any, table: dict[str, Any]) -> None:
+    """Render an embedded data table (rule list or reconstructed dimensional table)."""
+    title = str(table.get("title") or "")
+    columns = table.get("columns") or []
+    rows = table.get("rows") or []
+    if not rows:
+        return
+    display = [{str(col): str(row.get(col, "")) for col in columns} for row in rows]
+    st.dataframe(display, width="stretch", hide_index=True)
+    if title:
+        st.caption(title)
+
+
 def _render_bylaw_chat_message(st: Any, message: dict[str, Any]) -> None:
     with st.chat_message(message.get("role", "assistant")):
-        st.markdown(message.get("content") or "")
+        if message.get("content"):
+            st.markdown(message["content"])
+        for card in (message.get("rule_cards") or []):
+            _render_verification_card(st, card)
+        for table in (message.get("tables") or []):
+            _render_chat_table(st, table)
         sources = message.get("sources") or []
         if sources:
             with st.expander(f"Sources ({len(sources)})"):
@@ -3950,30 +4089,253 @@ def _bylaw_suggestions(data: dict[str, Any], limit: int = 6) -> list[str]:
     return questions
 
 
-def _bylaw_chat_respond(st: Any, question: str, index_path: Path, chat_key: str) -> None:
-    """Run one retrieval -> grounded-prompt -> answer turn and APPEND it to the
-    transcript. It does not render inline; the caller reruns so the new turn
-    appears in the transcript above the input box (a normal chat layout)."""
-    user_message = {"role": "user", "content": question}
-    st.session_state[chat_key].append(user_message)
+_CHAT_OUT_OF_SCOPE = (
+    "I can only help with this zoning bylaw. Try asking about a specific rule — lot area, "
+    "setbacks, height, lot coverage, or dwelling units — or ask why a particular rule is in review."
+)
+_CHAT_NO_HITS = (
+    "I couldn't find a bylaw section for that. Try the bylaw's own terms — setback, height, storey, "
+    "lot area, coverage, or suite — or ask why a specific rule is in review."
+)
+
+
+def _chat_brain() -> Any | None:
+    """The advisory chat brain (intent routing + verification explanations).
+
+    Tries the installed package first (full features locally, incl. the dense
+    rule-corpus index); on the dashboard-only cloud deploy, where the package is
+    not installed, it falls back to the byte-identical ``dashboard/chat_brain.py``
+    sibling, which is self-contained (no ``burnaby_prototype`` imports) so intent
+    routing, verification cards, and tables still work from the deployed JSON.
+    Returns ``None`` only if neither is importable (then the chat uses the basic
+    retrieval+LLM answer — today's behavior)."""
+    try:
+        from burnaby_prototype import bylaw_chat
+
+        return bylaw_chat
+    except Exception:
+        pass
+    try:
+        import chat_brain  # sibling of streamlit_app.py; on sys.path under `streamlit run`
+
+        return chat_brain
+    except Exception:
+        return None
+
+
+def _chat_llm_call(st: Any | None) -> Any | None:
+    """A plain ``callable(prompt) -> str`` for the intent router, or ``None``."""
+    if not _bylaw_llm_status(st).get("available"):
+        return None
+
+    def _call(prompt: str) -> str:
+        try:
+            return _optional_bylaw_llm_answer(prompt, st, history=None) or ""
+        except Exception:
+            return ""
+
+    return _call
+
+
+def _find_by_rule_id(items: Any, rule_id: Any) -> dict[str, Any] | None:
+    if not rule_id or not items:
+        return None
+    for item in items:
+        if isinstance(item, dict) and item.get("rule_id") == rule_id:
+            return item
+    return None
+
+
+def _cached_rule_index(data: dict[str, Any], st: Any | None, *, tag: str) -> Any | None:
+    """Build + session-cache a retrievable index over the verified/review RULES.
+
+    This is the second retrievable source (alongside the bylaw-section index) so
+    a question like "why are the setback rules not confirmed?" can semantically
+    find the relevant rules even when no exact value is named."""
+    brain = _chat_brain()
+    if brain is None:
+        return None
+    cache_key = f"_bylaw_rule_index::{tag}"
+    if st is not None:
+        try:
+            cached = st.session_state.get(cache_key)
+            if cached is not None:
+                return cached
+        except Exception:
+            pass
+    corpus = brain.build_rule_corpus(data.get("verified") or [], data.get("review") or [])
+    if not corpus:
+        return None
+    backend = _dashboard_embedding_backend(st)
+    try:
+        index = brain.build_rule_index(corpus, embedding_backend=backend)
+    except Exception:
+        try:
+            index = brain.build_rule_index(corpus)
+        except Exception:
+            return None
+    if st is not None:
+        try:
+            st.session_state[cache_key] = index
+        except Exception:
+            pass
+    return index
+
+
+def _answer_grounded(
+    st: Any, question: str, query: str, data: dict[str, Any], brain: Any,
+    index_path: Path, history: list[dict[str, Any]], intent: str,
+) -> dict[str, Any]:
+    """Section-grounded LLM answer (specific_rule / definition), with an optional
+    verified/review status card when the question names a concrete rule."""
+    hits = _dashboard_rag_hits(index_path, query, top_k=RAG_CHAT_TOP_K, st=st)
+    if not hits:
+        rule = brain.detect_rule_reference(question, data.get("verified") or [], data.get("review") or [])
+        if rule is not None:
+            return {"role": "assistant", "content": "Here's what I have on that rule:",
+                    "rule_cards": [_explain_rule(brain, data, rule)], "intent": intent}
+        return {"role": "assistant", "content": _CHAT_NO_HITS, "sources": [], "intent": intent}
+    bounded = _bounded_rag_hits(hits)
+    prompt = _grounded_bylaw_prompt(question, bounded)
+    answer = _optional_bylaw_llm_answer(prompt, st, history=history[-4:]) or _retrieval_only_bylaw_answer(question, bounded)
+    message: dict[str, Any] = {"role": "assistant", "content": _strip_internal_tokens(answer), "sources": bounded, "intent": intent}
+    if intent == "specific_rule":
+        rule = brain.detect_rule_reference(question, data.get("verified") or [], data.get("review") or [])
+        if rule is not None:
+            message["rule_cards"] = [_explain_rule(brain, data, rule)]
+    return message
+
+
+def _explain_rule(brain: Any, data: dict[str, Any], rule: dict[str, Any]) -> dict[str, Any]:
+    """Compose a verification card for one rule, wiring in router/repair/similar context."""
+    rid = rule.get("rule_id")
+    router_item = _find_by_rule_id((data.get("router") or {}).get("items"), rid)
+    repair = _find_by_rule_id((data.get("repair") or {}).get("suggestions"), rid)
+    similar_id = (router_item or {}).get("similar_verified_rule_id")
+    similar = brain.index_rules_by_id(data.get("verified") or []).get(similar_id) if similar_id else None
+    return brain.explain_verification(rule, router_item=router_item, repair_suggestion=repair, similar_verified=similar)
+
+
+def _answer_why_verification(
+    st: Any, question: str, query: str, data: dict[str, Any], brain: Any,
+    index_path: Path, history: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Explain a rule's verification status in plain language (the headline feature)."""
+    verified = data.get("verified") or []
+    review = data.get("review") or []
+    rule = brain.detect_rule_reference(question, verified, review, prefer="in_review")
+    if rule is None:
+        index = _cached_rule_index(data, st, tag=str(index_path))
+        if index is not None:
+            try:
+                hits = index.ask(query, top_k=1)
+            except Exception:
+                hits = []
+            if hits and hits[0].get("rule_ref"):
+                rule = hits[0]["rule_ref"]
+    if rule is None:
+        return _answer_grounded(st, question, query, data, brain, index_path, history, "why_verification")
+    card = _explain_rule(brain, data, rule)
+    if card.get("status") == "verified":
+        content = "Good news — that rule is **verified**. Here's the rule and the exact evidence behind it:"
+    else:
+        content = "Here's the status of that rule, in plain language:"
+    return {"role": "assistant", "content": content, "rule_cards": [card], "intent": "why_verification"}
+
+
+def _answer_list_table(query: str, families: list[str], data: dict[str, Any], brain: Any) -> dict[str, Any]:
+    """Embed a table: a reconstructed dimensional bylaw table, or a rule list."""
+    verified = data.get("verified") or []
+    review = data.get("review") or []
+    low = query.lower()
+    wants_dim = any(token in low for token in ("dimension", "matrix", "grid", "table of"))
+    tables: list[dict[str, Any]] = []
+    content = ""
+    if wants_dim:
+        row_filter = None
+        if families:
+            fam_words: set[str] = set()
+            for fam in families:
+                fam_words.update(fam.replace("_", " ").split())
+            row_filter = lambda label, fw=fam_words: bool(set(re.findall(r"[a-z]+", label.lower())) & fw)
+        tables = brain.reconstruct_dimensional_tables(data.get("evidence_units") or [], row_filter=row_filter)
+        if tables:
+            content = "Here are the dimensional rules, reconstructed from the bylaw's own tables:"
+    if not tables:
+        rules = list(verified) + list(review)
+        if families:
+            fams = set(families)
+            filtered = [r for r in rules if str(r.get("rule_object")) in fams]
+            rules = filtered or rules
+        tables = [brain.rule_list_table(rules)]
+        if families:
+            label = ", ".join(fam.replace("_", " ") for fam in families)
+            content = f"Here are the {label} rules I have for this bylaw (✓ verified and ● in review):"
+        else:
+            content = "Here are the rules I have for this bylaw (✓ verified and ● in review):"
+    return {"role": "assistant", "content": content, "tables": tables, "intent": "list_table"}
+
+
+def _build_brain_answer(
+    st: Any, question: str, index_path: Path, data: dict[str, Any],
+    history: list[dict[str, Any]], brain: Any,
+) -> dict[str, Any]:
+    """Route the question to an intent and build the matching answer payload."""
+    verified = data.get("verified") or []
+    review = data.get("review") or []
+    pre = brain._keyword_route(question, history)
+    # Call the LLM router only when it adds value: follow-ups (need pronoun
+    # resolution) or an ambiguous/out-of-scope first read. Clear first-turn
+    # questions are routed by the deterministic keyword router (cheaper, instant).
+    use_llm = bool(history) or pre.get("intent") == "out_of_scope"
+    route = brain.reformulate_and_route(
+        question, history, llm_call=(_chat_llm_call(st) if use_llm else None)
+    )
+    intent = route.get("intent")
+    query = route.get("standalone_query") or question
+    families = route.get("families") or []
+
+    if intent == "out_of_scope":
+        return {"role": "assistant", "content": _CHAT_OUT_OF_SCOPE, "intent": intent}
+    if intent == "why_verification" and (verified or review):
+        return _answer_why_verification(st, question, query, data, brain, index_path, history)
+    if intent == "list_table" and (verified or review or data.get("evidence_units")):
+        return _answer_list_table(query, families, data, brain)
+    return _answer_grounded(st, question, query, data, brain, index_path, history, intent)
+
+
+def _build_basic_answer(st: Any, question: str, index_path: Path, history: list[dict[str, Any]]) -> dict[str, Any]:
+    """Fallback when the chat brain is unavailable: today's retrieve -> ground -> answer."""
     hits = _dashboard_rag_hits(index_path, question, top_k=RAG_CHAT_TOP_K, st=st)
     if not hits:
-        answer = (
-            "I could not find a related bylaw section for that question. Try the bylaw's own terms, "
-            "such as setback, height, storey, parcel, coverage, or suite."
-        )
-        assistant_message = {"role": "assistant", "content": answer, "sources": [], "question": question}
-    else:
-        bounded_hits = _bounded_rag_hits(hits)
-        prompt = _grounded_bylaw_prompt(question, bounded_hits)
-        # Prior turns (exclude the just-appended current question) give the LLM
-        # conversational context for follow-ups; the grounded prompt stays the
-        # final, source-anchored user message inside _optional_bylaw_llm_answer.
-        prior_turns = st.session_state[chat_key][-5:-1]
-        answer = _optional_bylaw_llm_answer(prompt, st, history=prior_turns) or _retrieval_only_bylaw_answer(question, bounded_hits)
-        answer = _strip_internal_tokens(answer)
-        assistant_message = {"role": "assistant", "content": answer, "sources": bounded_hits, "question": question}
-    st.session_state[chat_key].append(assistant_message)
+        return {"role": "assistant", "content": _CHAT_NO_HITS, "sources": []}
+    bounded = _bounded_rag_hits(hits)
+    prompt = _grounded_bylaw_prompt(question, bounded)
+    answer = _optional_bylaw_llm_answer(prompt, st, history=history[-4:]) or _retrieval_only_bylaw_answer(question, bounded)
+    return {"role": "assistant", "content": _strip_internal_tokens(answer), "sources": bounded}
+
+
+def _bylaw_chat_respond(st: Any, question: str, index_path: Path, chat_key: str, data: dict[str, Any] | None = None) -> None:
+    """Run one chat turn and APPEND it to the transcript.
+
+    Routes the question to an intent (knowledge / verification-explanation /
+    list-table / out-of-scope) and builds a rich answer (plain text + optional
+    rule cards + tables). Falls back to the basic retrieval answer if the brain
+    or a branch fails. ADVISORY: never verifies, approves, rejects, or writes."""
+    data = data or {}
+    st.session_state[chat_key].append({"role": "user", "content": question})
+    history = list(st.session_state[chat_key][:-1])
+    message: dict[str, Any] | None = None
+    brain = _chat_brain()
+    if brain is not None:
+        try:
+            message = _build_brain_answer(st, question, index_path, data, history, brain)
+        except Exception:
+            message = None
+    if message is None:
+        message = _build_basic_answer(st, question, index_path, history)
+    message["question"] = question
+    st.session_state[chat_key].append(message)
 
 
 def _secret_value(st: Any | None, name: str) -> str:
@@ -4246,7 +4608,7 @@ def _ask_the_bylaw_panel(st: Any, output_dir: Path, data: dict[str, Any] | None 
         # reads the sections, then the answer — so it's clear it's working.
         _render_bylaw_chat_message(st, {"role": "user", "content": q})
         with st.spinner("Reading the bylaw…"):
-            _bylaw_chat_respond(st, q, index_path, chat_key)
+            _bylaw_chat_respond(st, q, index_path, chat_key, data)
         if history:
             _render_bylaw_chat_message(st, history[-1])
     st.markdown("</div>", unsafe_allow_html=True)
